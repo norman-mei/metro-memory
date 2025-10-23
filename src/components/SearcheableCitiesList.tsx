@@ -119,7 +119,7 @@ const SearcheableCitiesList = () => {
           {visibleGroups.map(({ continent, cities }, index) => (
             <section key={continent} className="space-y-6">
               <div>
-                <h3 className="mb-4 text-xl font-semibold text-zinc-800">
+                <h3 className="mb-4 text-xl font-semibold text-black dark:text-white">
                   {continent}
                 </h3>
                 <div className="mx-auto grid max-w-full grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
