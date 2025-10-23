@@ -124,10 +124,14 @@ export default function GamePage({
   const normalizeString = useNormalizeString()
   const featureCollection = useMemo(() => {
     const enhancedFeatures = fc.features.map((feature) => {
+      const propertiesWithAlternates = feature.properties as typeof feature.properties & {
+        alternate_names?: string[]
+      }
+
       const existingAlternates = Array.isArray(
-        feature.properties.alternate_names,
+        propertiesWithAlternates.alternate_names,
       )
-        ? feature.properties.alternate_names
+        ? propertiesWithAlternates.alternate_names
         : []
 
       const generatedAlternates = generateAlternateNames(feature.properties.name)
@@ -151,7 +155,7 @@ export default function GamePage({
           ...feature.properties,
           alternate_names: mergedAlternates,
         },
-      }
+      } as DataFeature
     })
 
     return {
