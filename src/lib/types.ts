@@ -12,6 +12,7 @@ export type DataFeatureCollection = FeatureCollection<
     long_name?: string
     short_name?: string
     line?: string
+    alternate_names?: string[]
   }
 >
 
