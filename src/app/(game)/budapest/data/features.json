@@ -1,0 +1,2314 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.0501274,
+          47.4966148
+        ]
+      },
+      "properties": {
+        "id": 183,
+        "name": "Vörösmarty tér",
+        "line": "BudapestMetro1",
+        "order": 6
+      },
+      "id": 183
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.0535241,
+          47.4976885
+        ]
+      },
+      "properties": {
+        "id": 184,
+        "name": "Deák Ferenc tér",
+        "line": "BudapestMetro1",
+        "order": 6
+      },
+      "id": 184
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.0552234,
+          47.4998353
+        ]
+      },
+      "properties": {
+        "id": 185,
+        "name": "Bajcsy-Zsilinszky út",
+        "line": "BudapestMetro1",
+        "order": 6
+      },
+      "id": 185
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.0587907,
+          47.5022225
+        ]
+      },
+      "properties": {
+        "id": 186,
+        "name": "Opera",
+        "line": "BudapestMetro1",
+        "order": 6
+      },
+      "id": 186
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.0627723,
+          47.5048756
+        ]
+      },
+      "properties": {
+        "id": 187,
+        "name": "Oktogon",
+        "line": "BudapestMetro1",
+        "order": 6
+      },
+      "id": 187
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.0662323,
+          47.5071795
+        ]
+      },
+      "properties": {
+        "id": 188,
+        "name": "Vörösmarty utca",
+        "line": "BudapestMetro1",
+        "order": 6
+      },
+      "id": 188
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.069217,
+          47.5091902
+        ]
+      },
+      "properties": {
+        "id": 189,
+        "name": "Kodály körönd",
+        "line": "BudapestMetro1",
+        "order": 6
+      },
+      "id": 189
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.072409,
+          47.5113209
+        ]
+      },
+      "properties": {
+        "id": 190,
+        "name": "Bajza utca",
+        "line": "BudapestMetro1",
+        "order": 6
+      },
+      "id": 190
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.0766684,
+          47.5141673
+        ]
+      },
+      "properties": {
+        "id": 191,
+        "name": "Hősök tere",
+        "line": "BudapestMetro1",
+        "order": 6
+      },
+      "id": 191
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.0814835,
+          47.5174582
+        ]
+      },
+      "properties": {
+        "id": 192,
+        "name": "Széchenyi fürdő",
+        "line": "BudapestMetro1",
+        "order": 6
+      },
+      "id": 192
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.0908867,
+          47.5195829
+        ]
+      },
+      "properties": {
+        "id": 193,
+        "name": "Mexikói út",
+        "line": "BudapestMetro1",
+        "order": 6
+      },
+      "id": 193
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.024583,
+          47.5005761
+        ]
+      },
+      "properties": {
+        "id": 194,
+        "name": "Déli pályaudvar",
+        "line": "BudapestMetro2",
+        "order": 7
+      },
+      "id": 194
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.0256603,
+          47.5074511
+        ]
+      },
+      "properties": {
+        "id": 195,
+        "name": "Széll Kálmán tér",
+        "alternate_names": [
+          "Széll Kálmán tér",
+          "Moszkva tér"
+        ],
+        "line": "BudapestMetro2",
+        "order": 7
+      },
+      "id": 195
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.0383814,
+          47.5065894
+        ]
+      },
+      "properties": {
+        "id": 196,
+        "name": "Batthyány tér",
+        "line": "BudapestMetro2",
+        "order": 7
+      },
+      "id": 196
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.0457255,
+          47.5055752
+        ]
+      },
+      "properties": {
+        "id": 197,
+        "name": "Kossuth Lajos tér",
+        "line": "BudapestMetro2",
+        "order": 7
+      },
+      "id": 197
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.0536468,
+          47.4978514
+        ]
+      },
+      "properties": {
+        "id": 198,
+        "name": "Deák Ferenc tér",
+        "line": "BudapestMetro2",
+        "order": 7
+      },
+      "id": 198
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.0611312,
+          47.4947043
+        ]
+      },
+      "properties": {
+        "id": 199,
+        "name": "Astoria",
+        "line": "BudapestMetro2",
+        "order": 7
+      },
+      "id": 199
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.0691136,
+          47.4967125
+        ]
+      },
+      "properties": {
+        "id": 200,
+        "name": "Blaha Lujza tér",
+        "line": "BudapestMetro2",
+        "order": 7
+      },
+      "id": 200
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.0829638,
+          47.499554
+        ]
+      },
+      "properties": {
+        "id": 201,
+        "name": "Keleti pályaudvar",
+        "line": "BudapestMetro2",
+        "order": 7
+      },
+      "id": 201
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.1064937,
+          47.5001875
+        ]
+      },
+      "properties": {
+        "id": 202,
+        "name": "Puskás Ferenc Stadion",
+        "alternate_names": [
+          "Puskás Ferenc Stadion",
+          "Stadionok"
+        ],
+        "line": "BudapestMetro2",
+        "order": 7
+      },
+      "id": 202
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.1192725,
+          47.5011283
+        ]
+      },
+      "properties": {
+        "id": 203,
+        "name": "Pillangó utca",
+        "line": "BudapestMetro2",
+        "order": 7
+      },
+      "id": 203
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.1353212,
+          47.5027556
+        ]
+      },
+      "properties": {
+        "id": 204,
+        "name": "Örs vezér tere",
+        "line": "BudapestMetro2",
+        "order": 7
+      },
+      "id": 204
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.1486296,
+          47.4634875
+        ]
+      },
+      "properties": {
+        "id": 224,
+        "name": "Kőbánya-Kispest",
+        "line": "BudapestMetro3",
+        "order": 8
+      },
+      "id": 224
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.126615,
+          47.4656575
+        ]
+      },
+      "properties": {
+        "id": 223,
+        "name": "Határ út",
+        "line": "BudapestMetro3",
+        "order": 8
+      },
+      "id": 223
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.118696,
+          47.4679114
+        ]
+      },
+      "properties": {
+        "id": 222,
+        "name": "Pöttyös utca",
+        "line": "BudapestMetro3",
+        "order": 8
+      },
+      "id": 222
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.1114308,
+          47.4705828
+        ]
+      },
+      "properties": {
+        "id": 221,
+        "name": "Ecseri út",
+        "line": "BudapestMetro3",
+        "order": 8
+      },
+      "id": 221
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.1006457,
+          47.4749997
+        ]
+      },
+      "properties": {
+        "id": 220,
+        "name": "Népliget",
+        "line": "BudapestMetro3",
+        "order": 8
+      },
+      "id": 220
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.0910621,
+          47.4783532
+        ]
+      },
+      "properties": {
+        "id": 219,
+        "name": "Nagyvárad tér",
+        "line": "BudapestMetro3",
+        "order": 8
+      },
+      "id": 219
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.0785209,
+          47.4827681
+        ]
+      },
+      "properties": {
+        "id": 218,
+        "name": "Semmelweis Klinikák",
+        "alternate_names": [
+          "Semmelweis Klinikák",
+          "Klinikák"
+        ],
+        "line": "BudapestMetro3",
+        "order": 8
+      },
+      "id": 218
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.0722081,
+          47.4848861
+        ]
+      },
+      "properties": {
+        "id": 217,
+        "name": "Corvin-negyed",
+        "line": "BudapestMetro3",
+        "order": 8
+      },
+      "id": 217
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.0619555,
+          47.4895404
+        ]
+      },
+      "properties": {
+        "id": 216,
+        "name": "Kálvin tér",
+        "line": "BudapestMetro3",
+        "order": 8
+      },
+      "id": 216
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.0568126,
+          47.4921232
+        ]
+      },
+      "properties": {
+        "id": 215,
+        "name": "Ferenciek tere",
+        "line": "BudapestMetro3",
+        "order": 8
+      },
+      "id": 215
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.0540926,
+          47.4974822
+        ]
+      },
+      "properties": {
+        "id": 214,
+        "name": "Deák Ferenc tér",
+        "line": "BudapestMetro3",
+        "order": 8
+      },
+      "id": 214
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.0544399,
+          47.5035189
+        ]
+      },
+      "properties": {
+        "id": 213,
+        "name": "Arany János utca",
+        "line": "BudapestMetro3",
+        "order": 8
+      },
+      "id": 213
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.0559807,
+          47.5107684
+        ]
+      },
+      "properties": {
+        "id": 212,
+        "name": "Nyugati pályaudvar",
+        "line": "BudapestMetro3",
+        "order": 8
+      },
+      "id": 212
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.0602118,
+          47.5176595
+        ]
+      },
+      "properties": {
+        "id": 211,
+        "name": "Lehel tér",
+        "line": "BudapestMetro3",
+        "order": 8
+      },
+      "id": 211
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.0631686,
+          47.524445
+        ]
+      },
+      "properties": {
+        "id": 210,
+        "name": "Dózsa György út",
+        "line": "BudapestMetro3",
+        "order": 8
+      },
+      "id": 210
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.0664756,
+          47.5320885
+        ]
+      },
+      "properties": {
+        "id": 209,
+        "name": "Göncz Árpád városközpont",
+        "alternate_names": [
+          "Göncz Árpád városközpont",
+          "Árpád híd"
+        ],
+        "line": "BudapestMetro3",
+        "order": 8
+      },
+      "id": 209
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.0690928,
+          47.5382422
+        ]
+      },
+      "properties": {
+        "id": 208,
+        "name": "Forgách utca",
+        "line": "BudapestMetro3",
+        "order": 8
+      },
+      "id": 208
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.0731257,
+          47.548538
+        ]
+      },
+      "properties": {
+        "id": 207,
+        "name": "Gyöngyösi utca",
+        "line": "BudapestMetro3",
+        "order": 8
+      },
+      "id": 207
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.0798077,
+          47.5591282
+        ]
+      },
+      "properties": {
+        "id": 206,
+        "name": "Újpest-városkapu",
+        "line": "BudapestMetro3",
+        "order": 8
+      },
+      "id": 206
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.0913917,
+          47.5602002
+        ]
+      },
+      "properties": {
+        "id": 205,
+        "name": "Újpest-központ",
+        "line": "BudapestMetro3",
+        "order": 8
+      },
+      "id": 205
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.0206349,
+          47.4642486
+        ]
+      },
+      "properties": {
+        "id": 225,
+        "name": "Kelenföld vasútállomás",
+        "line": "BudapestMetro4",
+        "order": 9
+      },
+      "id": 225
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.0323996,
+          47.4649438
+        ]
+      },
+      "properties": {
+        "id": 226,
+        "name": "Bikás park",
+        "line": "BudapestMetro4",
+        "order": 9
+      },
+      "id": 226
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.0459836,
+          47.4728946
+        ]
+      },
+      "properties": {
+        "id": 227,
+        "name": "Újbuda-központ",
+        "line": "BudapestMetro4",
+        "order": 9
+      },
+      "id": 227
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.0472593,
+          47.4766126
+        ]
+      },
+      "properties": {
+        "id": 228,
+        "name": "Móricz Zsigmond körtér",
+        "line": "BudapestMetro4",
+        "order": 9
+      },
+      "id": 228
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.0540405,
+          47.4827076
+        ]
+      },
+      "properties": {
+        "id": 229,
+        "name": "Szent Gellért tér – Műegyetem",
+        "line": "BudapestMetro4",
+        "order": 9
+      },
+      "id": 229
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.0573075,
+          47.485883
+        ]
+      },
+      "properties": {
+        "id": 230,
+        "name": "Fővám tér",
+        "line": "BudapestMetro4",
+        "order": 9
+      },
+      "id": 230
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.0609103,
+          47.4889365
+        ]
+      },
+      "properties": {
+        "id": 231,
+        "name": "Kálvin tér",
+        "line": "BudapestMetro4",
+        "order": 9
+      },
+      "id": 231
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.0714014,
+          47.4926904
+        ]
+      },
+      "properties": {
+        "id": 232,
+        "name": "Rákóczi tér",
+        "line": "BudapestMetro4",
+        "order": 9
+      },
+      "id": 232
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.0772964,
+          47.4955602
+        ]
+      },
+      "properties": {
+        "id": 233,
+        "name": "II. János Pál pápa tér",
+        "line": "BudapestMetro4",
+        "order": 9
+      },
+      "id": 233
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.0807974,
+          47.5000068
+        ]
+      },
+      "properties": {
+        "id": 234,
+        "name": "Keleti pályaudvar",
+        "line": "BudapestMetro4",
+        "order": 9
+      },
+      "id": 234
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.0755453,
+          47.6609363
+        ]
+      },
+      "properties": {
+        "id": 251,
+        "name": "Szentendre",
+        "line": "BudapestHEV5",
+        "order": 1
+      },
+      "id": 251
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.0646272,
+          47.6520224
+        ]
+      },
+      "properties": {
+        "id": 250,
+        "name": "Pannóniatelep",
+        "line": "BudapestHEV5",
+        "order": 1
+      },
+      "id": 250
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.0327716,
+          47.6427631
+        ]
+      },
+      "properties": {
+        "id": 249,
+        "name": "Pomáz",
+        "line": "BudapestHEV5",
+        "order": 1
+      },
+      "id": 249
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.0435028,
+          47.6283023
+        ]
+      },
+      "properties": {
+        "id": 252,
+        "name": "Szentistvántelep",
+        "line": "BudapestHEV5",
+        "order": 1
+      },
+      "id": 252
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.0468961,
+          47.6216559
+        ]
+      },
+      "properties": {
+        "id": 247,
+        "name": "Budakalász, Lenfonó",
+        "line": "BudapestHEV5",
+        "order": 1
+      },
+      "id": 247
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.0550175,
+          47.6161022
+        ]
+      },
+      "properties": {
+        "id": 246,
+        "name": "Budakalász",
+        "line": "BudapestHEV5",
+        "order": 1
+      },
+      "id": 246
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.0541733,
+          47.5976611
+        ]
+      },
+      "properties": {
+        "id": 245,
+        "name": "Békásmegyer",
+        "line": "BudapestHEV5",
+        "order": 1
+      },
+      "id": 245
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.0448983,
+          47.5859343
+        ]
+      },
+      "properties": {
+        "id": 244,
+        "name": "Csillaghegy",
+        "line": "BudapestHEV5",
+        "order": 1
+      },
+      "id": 244
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.0484556,
+          47.575202
+        ]
+      },
+      "properties": {
+        "id": 243,
+        "name": "Rómaifürdő",
+        "line": "BudapestHEV5",
+        "order": 1
+      },
+      "id": 243
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.0488195,
+          47.5669208
+        ]
+      },
+      "properties": {
+        "id": 242,
+        "name": "Aquincum",
+        "line": "BudapestHEV5",
+        "order": 1
+      },
+      "id": 242
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.0450949,
+          47.5564687
+        ]
+      },
+      "properties": {
+        "id": 241,
+        "name": "Kaszásdűlő",
+        "line": "BudapestHEV5",
+        "order": 1
+      },
+      "id": 241
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.0463788,
+          47.5517794
+        ]
+      },
+      "properties": {
+        "id": 240,
+        "name": "Filatorigát",
+        "line": "BudapestHEV5",
+        "order": 1
+      },
+      "id": 240
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.0471729,
+          47.5396645
+        ]
+      },
+      "properties": {
+        "id": 239,
+        "name": "Szentlélek tér",
+        "line": "BudapestHEV5",
+        "order": 1
+      },
+      "id": 239
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.0441765,
+          47.5335354
+        ]
+      },
+      "properties": {
+        "id": 238,
+        "name": "Tímár utca",
+        "line": "BudapestHEV5",
+        "order": 1
+      },
+      "id": 238
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.0400889,
+          47.5270464
+        ]
+      },
+      "properties": {
+        "id": 237,
+        "name": "Szépvölgyi út",
+        "line": "BudapestHEV5",
+        "order": 1
+      },
+      "id": 237
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.0393234,
+          47.5149055
+        ]
+      },
+      "properties": {
+        "id": 236,
+        "name": "Margit híd, budai hídfő",
+        "line": "BudapestHEV5",
+        "order": 1
+      },
+      "id": 236
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.0394089,
+          47.5071525
+        ]
+      },
+      "properties": {
+        "id": 235,
+        "name": "Batthyány tér",
+        "line": "BudapestHEV5",
+        "order": 1
+      },
+      "id": 235
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.0431703,
+          47.6291275
+        ]
+      },
+      "properties": {
+        "id": 248,
+        "name": "Szentisvántelep",
+        "line": "BudapestHEV5",
+        "order": 1
+      },
+      "id": 248
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.9417591,
+          47.1755954
+        ]
+      },
+      "properties": {
+        "id": 269,
+        "name": "Ráckeve",
+        "line": "BudapestHEV6",
+        "order": 2
+      },
+      "id": 269
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.944491,
+          47.1989004
+        ]
+      },
+      "properties": {
+        "id": 272,
+        "name": "Angyalisziget",
+        "line": "BudapestHEV6",
+        "order": 2
+      },
+      "id": 272
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.9529674,
+          47.2131469
+        ]
+      },
+      "properties": {
+        "id": 273,
+        "name": "Horgásztanyák",
+        "line": "BudapestHEV6",
+        "order": 2
+      },
+      "id": 273
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.9461725,
+          47.2272922
+        ]
+      },
+      "properties": {
+        "id": 270,
+        "name": "Szigetszentmárton-Szigetújfalu",
+        "line": "BudapestHEV6",
+        "order": 2
+      },
+      "id": 270
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.9559871,
+          47.2696984
+        ]
+      },
+      "properties": {
+        "id": 271,
+        "name": "Szigetcsép",
+        "line": "BudapestHEV6",
+        "order": 2
+      },
+      "id": 271
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.9739354,
+          47.3130802
+        ]
+      },
+      "properties": {
+        "id": 262,
+        "name": "Tököl",
+        "line": "BudapestHEV6",
+        "order": 2
+      },
+      "id": 262
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.9835157,
+          47.3213377
+        ]
+      },
+      "properties": {
+        "id": 263,
+        "name": "Szigethalom alsó",
+        "line": "BudapestHEV6",
+        "order": 2
+      },
+      "id": 263
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.993925,
+          47.3300709
+        ]
+      },
+      "properties": {
+        "id": 264,
+        "name": "Szigethalom",
+        "line": "BudapestHEV6",
+        "order": 2
+      },
+      "id": 264
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.0039015,
+          47.3336778
+        ]
+      },
+      "properties": {
+        "id": 265,
+        "name": "Szigetszentmiklós-Gyártelep",
+        "line": "BudapestHEV6",
+        "order": 2
+      },
+      "id": 265
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.0190095,
+          47.336435
+        ]
+      },
+      "properties": {
+        "id": 268,
+        "name": "Szigetszentmiklós alsó",
+        "line": "BudapestHEV6",
+        "order": 2
+      },
+      "id": 268
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.0340607,
+          47.3370405
+        ]
+      },
+      "properties": {
+        "id": 266,
+        "name": "József Attila-telep",
+        "line": "BudapestHEV6",
+        "order": 2
+      },
+      "id": 266
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.0502456,
+          47.344137
+        ]
+      },
+      "properties": {
+        "id": 267,
+        "name": "Szigetszentmiklós",
+        "line": "BudapestHEV6",
+        "order": 2
+      },
+      "id": 267
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.0862224,
+          47.359981
+        ]
+      },
+      "properties": {
+        "id": 261,
+        "name": "Dunaharaszti külső",
+        "line": "BudapestHEV6",
+        "order": 2
+      },
+      "id": 261
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.0925822,
+          47.3662347
+        ]
+      },
+      "properties": {
+        "id": 260,
+        "name": "Dunaharaszti felső",
+        "line": "BudapestHEV6",
+        "order": 2
+      },
+      "id": 260
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.104891,
+          47.3796653
+        ]
+      },
+      "properties": {
+        "id": 259,
+        "name": "Millenniumtelep",
+        "line": "BudapestHEV6",
+        "order": 2
+      },
+      "id": 259
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.1147893,
+          47.3914591
+        ]
+      },
+      "properties": {
+        "id": 258,
+        "name": "Szent István utca",
+        "line": "BudapestHEV6",
+        "order": 2
+      },
+      "id": 258
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.1149245,
+          47.3990317
+        ]
+      },
+      "properties": {
+        "id": 257,
+        "name": "Soroksár, Hősök tere",
+        "line": "BudapestHEV6",
+        "order": 2
+      },
+      "id": 257
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.1120236,
+          47.4094331
+        ]
+      },
+      "properties": {
+        "id": 256,
+        "name": "Soroksár felső",
+        "line": "BudapestHEV6",
+        "order": 2
+      },
+      "id": 256
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.1053471,
+          47.4230049
+        ]
+      },
+      "properties": {
+        "id": 255,
+        "name": "Torontál utca",
+        "line": "BudapestHEV6",
+        "order": 2
+      },
+      "id": 255
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.0938205,
+          47.4378657
+        ]
+      },
+      "properties": {
+        "id": 254,
+        "name": "Pesterzsébet felső",
+        "line": "BudapestHEV6",
+        "order": 2
+      },
+      "id": 254
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.0867387,
+          47.4546226
+        ]
+      },
+      "properties": {
+        "id": 274,
+        "name": "Kén utca",
+        "line": "BudapestHEV6",
+        "order": 2
+      },
+      "id": 274
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.0772407,
+          47.4660931
+        ]
+      },
+      "properties": {
+        "id": 253,
+        "name": "Közvágóhíd",
+        "line": "BudapestHEV6",
+        "order": 2
+      },
+      "id": 253
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.0665583,
+          47.4790718
+        ]
+      },
+      "properties": {
+        "id": 280,
+        "name": "Boráros tér",
+        "line": "BudapestHEV7",
+        "order": 3
+      },
+      "id": 280
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.0701065,
+          47.4692443
+        ]
+      },
+      "properties": {
+        "id": 279,
+        "name": "Müpa - Nemzeti Színház",
+        "line": "BudapestHEV7",
+        "order": 3
+      },
+      "id": 279
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.0716266,
+          47.4444476
+        ]
+      },
+      "properties": {
+        "id": 278,
+        "name": "Szabadkikötő",
+        "line": "BudapestHEV7",
+        "order": 3
+      },
+      "id": 278
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.0676356,
+          47.4309358
+        ]
+      },
+      "properties": {
+        "id": 277,
+        "name": "Szent Imre tér",
+        "line": "BudapestHEV7",
+        "order": 3
+      },
+      "id": 277
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.0673137,
+          47.4266883
+        ]
+      },
+      "properties": {
+        "id": 276,
+        "name": "Karácsony Sándor utca",
+        "line": "BudapestHEV7",
+        "order": 3
+      },
+      "id": 276
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.0663394,
+          47.4217498
+        ]
+      },
+      "properties": {
+        "id": 275,
+        "name": "Csepel",
+        "line": "BudapestHEV7",
+        "order": 3
+      },
+      "id": 275
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.357985,
+          47.5930979
+        ]
+      },
+      "properties": {
+        "id": 281,
+        "name": "Gödöllő",
+        "line": "BudapestHEV8",
+        "order": 4
+      },
+      "id": 281
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.3566423,
+          47.5984103
+        ]
+      },
+      "properties": {
+        "id": 282,
+        "name": "Gödöllő, Palotakert",
+        "line": "BudapestHEV8",
+        "order": 4
+      },
+      "id": 282
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.3475444,
+          47.5974431
+        ]
+      },
+      "properties": {
+        "id": 283,
+        "name": "Gödöllő, Szabadság tér",
+        "line": "BudapestHEV8",
+        "order": 4
+      },
+      "id": 283
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.340124,
+          47.5949389
+        ]
+      },
+      "properties": {
+        "id": 284,
+        "name": "Gödöllő, Erzsébet park",
+        "line": "BudapestHEV8",
+        "order": 4
+      },
+      "id": 284
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.2906914,
+          47.5972136
+        ]
+      },
+      "properties": {
+        "id": 285,
+        "name": "Szentjakab",
+        "line": "BudapestHEV8",
+        "order": 4
+      },
+      "id": 285
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.2716241,
+          47.5961989
+        ]
+      },
+      "properties": {
+        "id": 286,
+        "name": "Mogyoród",
+        "line": "BudapestHEV8",
+        "order": 4
+      },
+      "id": 286
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.2746023,
+          47.5680742
+        ]
+      },
+      "properties": {
+        "id": 287,
+        "name": "Szilasliget",
+        "line": "BudapestHEV8",
+        "order": 4
+      },
+      "id": 287
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.2704087,
+          47.5527591
+        ]
+      },
+      "properties": {
+        "id": 288,
+        "name": "Kerepes",
+        "line": "BudapestHEV8",
+        "order": 4
+      },
+      "id": 288
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.2639718,
+          47.5483881
+        ]
+      },
+      "properties": {
+        "id": 289,
+        "name": "Zsófialiget",
+        "line": "BudapestHEV8",
+        "order": 4
+      },
+      "id": 289
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.2596879,
+          47.5457649
+        ]
+      },
+      "properties": {
+        "id": 290,
+        "name": "Kistarcsa",
+        "line": "BudapestHEV8",
+        "order": 4
+      },
+      "id": 290
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.248482,
+          47.5386768
+        ]
+      },
+      "properties": {
+        "id": 291,
+        "name": "Kistarcsa, kórház",
+        "line": "BudapestHEV8",
+        "order": 4
+      },
+      "id": 291
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.2289656,
+          47.5263107
+        ]
+      },
+      "properties": {
+        "id": 292,
+        "name": "Ilonatelep",
+        "line": "BudapestHEV8",
+        "order": 4
+      },
+      "id": 292
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.2172596,
+          47.5193967
+        ]
+      },
+      "properties": {
+        "id": 293,
+        "name": "Cinkota",
+        "line": "BudapestHEV8",
+        "order": 4
+      },
+      "id": 293
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.2072429,
+          47.5159486
+        ]
+      },
+      "properties": {
+        "id": 294,
+        "name": "Mátyásföld alsó",
+        "line": "BudapestHEV8",
+        "order": 4
+      },
+      "id": 294
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.1989051,
+          47.5133157
+        ]
+      },
+      "properties": {
+        "id": 295,
+        "name": "Mátyásföld, Imre utca",
+        "line": "BudapestHEV8",
+        "order": 4
+      },
+      "id": 295
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.1934996,
+          47.5116727
+        ]
+      },
+      "properties": {
+        "id": 296,
+        "name": "Mátyásföld, repülőtér",
+        "line": "BudapestHEV8",
+        "order": 4
+      },
+      "id": 296
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.1780083,
+          47.5088264
+        ]
+      },
+      "properties": {
+        "id": 297,
+        "name": "Sashalom",
+        "line": "BudapestHEV8",
+        "order": 4
+      },
+      "id": 297
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.1674231,
+          47.5069725
+        ]
+      },
+      "properties": {
+        "id": 298,
+        "name": "Nagyicce",
+        "line": "BudapestHEV8",
+        "order": 4
+      },
+      "id": 298
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.1506414,
+          47.504969
+        ]
+      },
+      "properties": {
+        "id": 299,
+        "name": "Rákosfalva",
+        "line": "BudapestHEV8",
+        "order": 4
+      },
+      "id": 299
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.137917,
+          47.5036462
+        ]
+      },
+      "properties": {
+        "id": 300,
+        "name": "Örs vezér tere",
+        "line": "BudapestHEV8",
+        "order": 4
+      },
+      "id": 300
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.2247481,
+          47.5451278
+        ]
+      },
+      "properties": {
+        "id": 301,
+        "name": "Csömör",
+        "line": "BudapestHEV9",
+        "order": 5
+      },
+      "id": 301
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.2060772,
+          47.5368784
+        ]
+      },
+      "properties": {
+        "id": 302,
+        "name": "Szabadságtelep",
+        "line": "BudapestHEV9",
+        "order": 5
+      },
+      "id": 302
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.2128552,
+          47.532828
+        ]
+      },
+      "properties": {
+        "id": 303,
+        "name": "Árpádföld",
+        "line": "BudapestHEV9",
+        "order": 5
+      },
+      "id": 303
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.2210349,
+          47.5260834
+        ]
+      },
+      "properties": {
+        "id": 304,
+        "name": "Cinkota alsó",
+        "line": "BudapestHEV9",
+        "order": 5
+      },
+      "id": 304
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.2172596,
+          47.5193967
+        ]
+      },
+      "properties": {
+        "id": 305,
+        "name": "Cinkota",
+        "line": "BudapestHEV9",
+        "order": 5
+      },
+      "id": 305
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.2072429,
+          47.5159486
+        ]
+      },
+      "properties": {
+        "id": 306,
+        "name": "Mátyásföld alsó",
+        "line": "BudapestHEV9",
+        "order": 5
+      },
+      "id": 306
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.1989051,
+          47.5133157
+        ]
+      },
+      "properties": {
+        "id": 307,
+        "name": "Mátyásföld, Imre utca",
+        "line": "BudapestHEV9",
+        "order": 5
+      },
+      "id": 307
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.1934996,
+          47.5116727
+        ]
+      },
+      "properties": {
+        "id": 308,
+        "name": "Mátyásföld, repülőtér",
+        "line": "BudapestHEV9",
+        "order": 5
+      },
+      "id": 308
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.1780083,
+          47.5088264
+        ]
+      },
+      "properties": {
+        "id": 309,
+        "name": "Sashalom",
+        "line": "BudapestHEV9",
+        "order": 5
+      },
+      "id": 309
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.1674231,
+          47.5069725
+        ]
+      },
+      "properties": {
+        "id": 310,
+        "name": "Nagyicce",
+        "line": "BudapestHEV9",
+        "order": 5
+      },
+      "id": 310
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.1506414,
+          47.504969
+        ]
+      },
+      "properties": {
+        "id": 311,
+        "name": "Rákosfalva",
+        "line": "BudapestHEV9",
+        "order": 5
+      },
+      "id": 311
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.137917,
+          47.5036462
+        ]
+      },
+      "properties": {
+        "id": 312,
+        "name": "Örs vezér tere",
+        "line": "BudapestHEV9",
+        "order": 5
+      },
+      "id": 312
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.248482,
+          47.5386768
+        ]
+      },
+      "properties": {
+        "id": 313,
+        "name": "Kistarcsa, kórház",
+        "line": "BudapestHEV9",
+        "order": 5
+      },
+      "id": 313
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.2596879,
+          47.5457649
+        ]
+      },
+      "properties": {
+        "id": 314,
+        "name": "Kistarcsa",
+        "line": "BudapestHEV9",
+        "order": 5
+      },
+      "id": 314
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.2639718,
+          47.5483881
+        ]
+      },
+      "properties": {
+        "id": 315,
+        "name": "Zsófialiget",
+        "line": "BudapestHEV9",
+        "order": 5
+      },
+      "id": 315
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.2704087,
+          47.5527591
+        ]
+      },
+      "properties": {
+        "id": 316,
+        "name": "Kerepes",
+        "line": "BudapestHEV9",
+        "order": 5
+      },
+      "id": 316
+    }
+  ],
+  "properties": {
+    "totalStations": 116,
+    "stationsPerLine": {
+      "BudapestMetro1": 11,
+      "BudapestMetro2": 11,
+      "BudapestMetro3": 20,
+      "BudapestMetro4": 10,
+      "BudapestHEV5": 18,
+      "BudapestHEV6": 22,
+      "BudapestHEV7": 6,
+      "BudapestHEV8": 20,
+      "BudapestHEV9": 16
+    },
+    "nextStationId": 317
+  }
+}

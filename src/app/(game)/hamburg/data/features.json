@@ -1,0 +1,3159 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9.704945, 53.581884]
+      },
+      "properties": {
+        "id": 1,
+        "name": "Wedel",
+        "line": "HamburgSBahnS1",
+        "order": 0
+      },
+      "id": 1
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9.934604, 53.551843]
+      },
+      "properties": {
+        "id": 117,
+        "name": "Altona",
+        "line": "HamburgSBahnS2",
+        "order": 0
+      },
+      "id": 117
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9.79888, 53.654566]
+      },
+      "properties": {
+        "id": 146,
+        "name": "Pinneberg",
+        "line": "HamburgSBahnS3",
+        "order": 0
+      },
+      "id": 146
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9.893534, 53.602682]
+      },
+      "properties": {
+        "id": 223,
+        "name": "Elbgaustraße",
+        "line": "HamburgSBahnS5",
+        "order": 0
+      },
+      "id": 223
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9.992527, 53.707523]
+      },
+      "properties": {
+        "id": 345,
+        "name": "Norderstedt Mitte",
+        "line": "HamburgUBahnU1",
+        "order": 0
+      },
+      "id": 345
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9.950254, 53.640723]
+      },
+      "properties": {
+        "id": 513,
+        "name": "Niendorf Nord",
+        "line": "HamburgUBahnU2",
+        "order": 0
+      },
+      "id": 513
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.031611, 53.589108]
+      },
+      "properties": {
+        "id": 574,
+        "name": "Saarlandstraße",
+        "line": "HamburgUBahnU3",
+        "order": 0
+      },
+      "id": 574
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.02362, 53.53522]
+      },
+      "properties": {
+        "id": 682,
+        "name": "Elbbrücken",
+        "line": "HamburgUBahnU4",
+        "order": 0
+      },
+      "id": 682
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.286642, 53.662612]
+      },
+      "properties": {
+        "id": 444,
+        "name": "Großhansdorf",
+        "line": "HamburgUBahnU1",
+        "order": 1342
+      },
+      "id": 444
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.28039, 53.653052]
+      },
+      "properties": {
+        "id": 443,
+        "name": "Kiekut",
+        "line": "HamburgUBahnU1",
+        "order": 1311
+      },
+      "id": 443
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.260735, 53.653175]
+      },
+      "properties": {
+        "id": 442,
+        "name": "Schmalenbeck",
+        "line": "HamburgUBahnU1",
+        "order": 1260
+      },
+      "id": 442
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.242808, 53.661222]
+      },
+      "properties": {
+        "id": 441,
+        "name": "Ahrensburg Ost",
+        "line": "HamburgUBahnU1",
+        "order": 1225
+      },
+      "id": 441
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.220016, 53.664595]
+      },
+      "properties": {
+        "id": 440,
+        "name": "Ahrensburg West",
+        "line": "HamburgUBahnU1",
+        "order": 1211
+      },
+      "id": 440
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.13721, 53.694384]
+      },
+      "properties": {
+        "id": 485,
+        "name": "Ohlstedt",
+        "line": "HamburgUBahnU1",
+        "order": 1208
+      },
+      "id": 485
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.147663, 53.678021]
+      },
+      "properties": {
+        "id": 484,
+        "name": "Hoisbüttel",
+        "line": "HamburgUBahnU1",
+        "order": 1172
+      },
+      "id": 484
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9.477942, 53.596036]
+      },
+      "properties": {
+        "id": 198,
+        "name": "Stade",
+        "line": "HamburgSBahnS3",
+        "order": 1155
+      },
+      "id": 198
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.185579, 53.652891]
+      },
+      "properties": {
+        "id": 439,
+        "name": "Buchenkamp",
+        "line": "HamburgUBahnU1",
+        "order": 1154
+      },
+      "id": 439
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.155655, 53.6647]
+      },
+      "properties": {
+        "id": 483,
+        "name": "Buckhorn",
+        "line": "HamburgUBahnU1",
+        "order": 1146
+      },
+      "id": 483
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.163207, 53.650479]
+      },
+      "properties": {
+        "id": 438,
+        "name": "Volksdorf",
+        "line": "HamburgUBahnU1",
+        "order": 1107
+      },
+      "id": 438
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9.531255, 53.564124]
+      },
+      "properties": {
+        "id": 197,
+        "name": "Agathenburg",
+        "line": "HamburgSBahnS3",
+        "order": 1104
+      },
+      "id": 197
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9.557813, 53.545732]
+      },
+      "properties": {
+        "id": 196,
+        "name": "Dollern",
+        "line": "HamburgSBahnS3",
+        "order": 1085
+      },
+      "id": 196
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.156159, 53.638907]
+      },
+      "properties": {
+        "id": 437,
+        "name": "Meiendorfer Weg",
+        "line": "HamburgUBahnU1",
+        "order": 1069
+      },
+      "id": 437
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.139754, 53.626983]
+      },
+      "properties": {
+        "id": 436,
+        "name": "Berne",
+        "line": "HamburgUBahnU1",
+        "order": 1052
+      },
+      "id": 436
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9.57638, 53.508832]
+      },
+      "properties": {
+        "id": 195,
+        "name": "Horneburg",
+        "line": "HamburgSBahnS3",
+        "order": 1042
+      },
+      "id": 195
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9.477942, 53.596036]
+      },
+      "properties": {
+        "id": 248,
+        "name": "Stade",
+        "line": "HamburgSBahnS5",
+        "order": 1041
+      },
+      "id": 248
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.128733, 53.617564]
+      },
+      "properties": {
+        "id": 435,
+        "name": "Oldenfelde",
+        "line": "HamburgUBahnU1",
+        "order": 1040
+      },
+      "id": 435
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9.63948, 53.481316]
+      },
+      "properties": {
+        "id": 194,
+        "name": "Neukloster",
+        "line": "HamburgSBahnS3",
+        "order": 998
+      },
+      "id": 194
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.117483, 53.607105]
+      },
+      "properties": {
+        "id": 378,
+        "name": "Farmsen",
+        "line": "HamburgUBahnU1",
+        "order": 993
+      },
+      "id": 378
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9.531255, 53.564124]
+      },
+      "properties": {
+        "id": 247,
+        "name": "Agathenburg",
+        "line": "HamburgSBahnS5",
+        "order": 990
+      },
+      "id": 247
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9.557813, 53.545732]
+      },
+      "properties": {
+        "id": 246,
+        "name": "Dollern",
+        "line": "HamburgSBahnS5",
+        "order": 971
+      },
+      "id": 246
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.102141, 53.598291]
+      },
+      "properties": {
+        "id": 377,
+        "name": "Trabrennbahn",
+        "line": "HamburgUBahnU1",
+        "order": 969
+      },
+      "id": 377
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9.688313, 53.470499]
+      },
+      "properties": {
+        "id": 193,
+        "name": "Buxtehude",
+        "line": "HamburgSBahnS3",
+        "order": 968
+      },
+      "id": 193
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9.852007, 53.473989]
+      },
+      "properties": {
+        "id": 169,
+        "name": "Neugraben",
+        "line": "HamburgSBahnS3",
+        "order": 961
+      },
+      "id": 169
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.074852, 53.592538]
+      },
+      "properties": {
+        "id": 376,
+        "name": "Wandsbek-Gartenstadt",
+        "line": "HamburgUBahnU1",
+        "order": 946
+      },
+      "id": 376
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9.875861, 53.473019]
+      },
+      "properties": {
+        "id": 168,
+        "name": "Neuwiedenthal",
+        "line": "HamburgSBahnS3",
+        "order": 940
+      },
+      "id": 168
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9.788918, 53.473047]
+      },
+      "properties": {
+        "id": 192,
+        "name": "Neu Wulmstorf",
+        "line": "HamburgSBahnS3",
+        "order": 930
+      },
+      "id": 192
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9.57638, 53.508832]
+      },
+      "properties": {
+        "id": 245,
+        "name": "Horneburg",
+        "line": "HamburgSBahnS5",
+        "order": 928
+      },
+      "id": 245
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9.819347, 53.474751]
+      },
+      "properties": {
+        "id": 191,
+        "name": "Fischbek",
+        "line": "HamburgSBahnS3",
+        "order": 909
+      },
+      "id": 191
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.064528, 53.5866]
+      },
+      "properties": {
+        "id": 375,
+        "name": "Alter Teichweg",
+        "line": "HamburgUBahnU1",
+        "order": 899
+      },
+      "id": 375
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.067956, 53.581717]
+      },
+      "properties": {
+        "id": 374,
+        "name": "Straßburger Straße",
+        "line": "HamburgUBahnU1",
+        "order": 885
+      },
+      "id": 374
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9.63948, 53.481316]
+      },
+      "properties": {
+        "id": 244,
+        "name": "Neukloster",
+        "line": "HamburgSBahnS5",
+        "order": 884
+      },
+      "id": 244
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9.962865, 53.465532]
+      },
+      "properties": {
+        "id": 167,
+        "name": "Heimfeld",
+        "line": "HamburgSBahnS3",
+        "order": 882
+      },
+      "id": 167
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9.688216, 53.470412]
+      },
+      "properties": {
+        "id": 242,
+        "name": "Buxtehude",
+        "line": "HamburgSBahnS5",
+        "order": 854
+      },
+      "id": 242
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9.980431, 53.460597]
+      },
+      "properties": {
+        "id": 166,
+        "name": "Harburg Rathaus",
+        "line": "HamburgSBahnS3",
+        "order": 842
+      },
+      "id": 166
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.066768, 53.571736]
+      },
+      "properties": {
+        "id": 373,
+        "name": "Wandsbek Markt",
+        "line": "HamburgUBahnU1",
+        "order": 841
+      },
+      "id": 373
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.057607, 53.56986]
+      },
+      "properties": {
+        "id": 372,
+        "name": "Wandsbeker Chaussee",
+        "line": "HamburgUBahnU1",
+        "order": 830
+      },
+      "id": 372
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9.788918, 53.473047]
+      },
+      "properties": {
+        "id": 241,
+        "name": "Neu Wulmstorf",
+        "line": "HamburgSBahnS5",
+        "order": 814
+      },
+      "id": 241
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9.99135, 53.456872]
+      },
+      "properties": {
+        "id": 165,
+        "name": "Harburg",
+        "line": "HamburgSBahnS3",
+        "order": 812
+      },
+      "id": 165
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.074878, 53.592471]
+      },
+      "properties": {
+        "id": 632,
+        "name": "Wandsbek-Gartenstadt",
+        "line": "HamburgUBahnU3",
+        "order": 811
+      },
+      "id": 632
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.04655, 53.567673]
+      },
+      "properties": {
+        "id": 371,
+        "name": "Ritterstraße",
+        "line": "HamburgUBahnU1",
+        "order": 806
+      },
+      "id": 371
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9.819347, 53.474751]
+      },
+      "properties": {
+        "id": 240,
+        "name": "Fischbek",
+        "line": "HamburgSBahnS5",
+        "order": 793
+      },
+      "id": 240
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.035515, 53.564759]
+      },
+      "properties": {
+        "id": 370,
+        "name": "Wartenau",
+        "line": "HamburgUBahnU1",
+        "order": 782
+      },
+      "id": 370
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.052246, 53.59356]
+      },
+      "properties": {
+        "id": 631,
+        "name": "Habichtstraße",
+        "line": "HamburgUBahnU3",
+        "order": 775
+      },
+      "id": 631
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.149927, 53.528751]
+      },
+      "properties": {
+        "id": 556,
+        "name": "Mümmelmannsberg",
+        "line": "HamburgUBahnU2",
+        "order": 772
+      },
+      "id": 556
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.027283, 53.55952]
+      },
+      "properties": {
+        "id": 369,
+        "name": "Lübecker Straße",
+        "line": "HamburgUBahnU1",
+        "order": 753
+      },
+      "id": 369
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9.852007, 53.473989]
+      },
+      "properties": {
+        "id": 239,
+        "name": "Neugraben",
+        "line": "HamburgSBahnS5",
+        "order": 741
+      },
+      "id": 239
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.006844, 53.498138]
+      },
+      "properties": {
+        "id": 164,
+        "name": "Wilhelmsburg",
+        "line": "HamburgSBahnS3",
+        "order": 739
+      },
+      "id": 164
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.018955, 53.556634]
+      },
+      "properties": {
+        "id": 368,
+        "name": "Lohmühlenstraße",
+        "line": "HamburgUBahnU1",
+        "order": 731
+      },
+      "id": 368
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.139196, 53.541018]
+      },
+      "properties": {
+        "id": 555,
+        "name": "Steinfurther Allee",
+        "line": "HamburgUBahnU2",
+        "order": 721
+      },
+      "id": 555
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9.875861, 53.473019]
+      },
+      "properties": {
+        "id": 238,
+        "name": "Neuwiedenthal",
+        "line": "HamburgSBahnS5",
+        "order": 720
+      },
+      "id": 238
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.314604, 53.530036]
+      },
+      "properties": {
+        "id": 132,
+        "name": "Aumühle",
+        "line": "HamburgSBahnS2",
+        "order": 707
+      },
+      "id": 132
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.013098, 53.521135]
+      },
+      "properties": {
+        "id": 163,
+        "name": "Veddel (BallinStadt)",
+        "alternate_names": ["Veddel", "BallinStadt"],
+        "line": "HamburgSBahnS3",
+        "order": 695
+      },
+      "id": 163
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.124676, 53.538584]
+      },
+      "properties": {
+        "id": 554,
+        "name": "Merkenstraße",
+        "line": "HamburgUBahnU2",
+        "order": 690
+      },
+      "id": 554
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.009773, 53.552038]
+      },
+      "properties": {
+        "id": 367,
+        "name": "Hauptbahnhof Süd",
+        "alternate_names": ["Hauptbahnhof"],
+        "line": "HamburgUBahnU1",
+        "order": 682
+      },
+      "id": 367
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.031668, 53.620592]
+      },
+      "properties": {
+        "id": 274,
+        "name": "Ohlsdorf",
+        "line": "HamburgSBahnS5",
+        "order": 679
+      },
+      "id": 274
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.044385, 53.5872]
+      },
+      "properties": {
+        "id": 596,
+        "name": "Barmbek",
+        "line": "HamburgUBahnU3",
+        "order": 672
+      },
+      "id": 596
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9.962865, 53.465532]
+      },
+      "properties": {
+        "id": 237,
+        "name": "Heimfeld",
+        "line": "HamburgSBahnS5",
+        "order": 662
+      },
+      "id": 237
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.024788, 53.534948]
+      },
+      "properties": {
+        "id": 162,
+        "name": "Elbbrücken",
+        "line": "HamburgSBahnS3",
+        "order": 659
+      },
+      "id": 162
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.00616, 53.549252]
+      },
+      "properties": {
+        "id": 366,
+        "name": "Steinstraße",
+        "line": "HamburgUBahnU1",
+        "order": 654
+      },
+      "id": 366
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.107153, 53.54234]
+      },
+      "properties": {
+        "id": 553,
+        "name": "Billstedt",
+        "line": "HamburgUBahnU2",
+        "order": 652
+      },
+      "id": 553
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.277883, 53.520613]
+      },
+      "properties": {
+        "id": 131,
+        "name": "Wohltorf",
+        "line": "HamburgSBahnS2",
+        "order": 649
+      },
+      "id": 131
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.033047, 53.60579]
+      },
+      "properties": {
+        "id": 273,
+        "name": "Rübenkamp (City Nord)",
+        "alternate_names": ["Rübenkamp"],
+        "line": "HamburgSBahnS5",
+        "order": 638
+      },
+      "id": 273
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.096498, 53.546731]
+      },
+      "properties": {
+        "id": 552,
+        "name": "Legienstraße",
+        "line": "HamburgUBahnU2",
+        "order": 638
+      },
+      "id": 552
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.024136, 53.546112]
+      },
+      "properties": {
+        "id": 161,
+        "name": "Hammerbrook (City Süd)",
+        "alternate_names": ["Hammerbrook"],
+        "line": "HamburgSBahnS3",
+        "order": 627
+      },
+      "id": 161
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.035414, 53.597647]
+      },
+      "properties": {
+        "id": 272,
+        "name": "Alte Wöhr (Stadtpark)",
+        "alternate_names": ["Alte Wöhr"],
+        "line": "HamburgSBahnS5",
+        "order": 625
+      },
+      "id": 272
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.040912, 53.579224]
+      },
+      "properties": {
+        "id": 595,
+        "name": "Dehnhaide",
+        "line": "HamburgUBahnU3",
+        "order": 624
+      },
+      "id": 595
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9.980431, 53.460597]
+      },
+      "properties": {
+        "id": 236,
+        "name": "Harburg Rathaus",
+        "line": "HamburgSBahnS5",
+        "order": 622
+      },
+      "id": 236
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.00061, 53.547733]
+      },
+      "properties": {
+        "id": 365,
+        "name": "Meßberg",
+        "line": "HamburgUBahnU1",
+        "order": 622
+      },
+      "id": 365
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.25302, 53.508368]
+      },
+      "properties": {
+        "id": 130,
+        "name": "Reinbek",
+        "line": "HamburgSBahnS2",
+        "order": 606
+      },
+      "id": 130
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.083507, 53.553799]
+      },
+      "properties": {
+        "id": 551,
+        "name": "Horner Rennbahn",
+        "line": "HamburgUBahnU2",
+        "order": 598
+      },
+      "id": 551
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.03727, 53.574447]
+      },
+      "properties": {
+        "id": 594,
+        "name": "Hamburger Straße",
+        "line": "HamburgUBahnU3",
+        "order": 594
+      },
+      "id": 594
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9.99135, 53.456872]
+      },
+      "properties": {
+        "id": 235,
+        "name": "Harburg",
+        "line": "HamburgSBahnS5",
+        "order": 592
+      },
+      "id": 235
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9.99373, 53.552441]
+      },
+      "properties": {
+        "id": 364,
+        "name": "Jungfernstieg",
+        "line": "HamburgUBahnU1",
+        "order": 580
+      },
+      "id": 364
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.04445, 53.587397]
+      },
+      "properties": {
+        "id": 271,
+        "name": "Barmbek",
+        "line": "HamburgSBahnS5",
+        "order": 578
+      },
+      "id": 271
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.06604, 53.554203]
+      },
+      "properties": {
+        "id": 531,
+        "name": "Rauhes Haus",
+        "line": "HamburgUBahnU2",
+        "order": 572
+      },
+      "id": 531
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.027462, 53.569376]
+      },
+      "properties": {
+        "id": 593,
+        "name": "Mundsburg",
+        "line": "HamburgUBahnU3",
+        "order": 565
+      },
+      "id": 593
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.007651, 53.552823]
+      },
+      "properties": {
+        "id": 160,
+        "name": "Hamburg Hbf",
+        "alternate_names": ["Hauptbahnhof", "Hamburg Hauptbahnhof"],
+        "line": "HamburgSBahnS3",
+        "order": 560
+      },
+      "id": 160
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.055505, 53.555543]
+      },
+      "properties": {
+        "id": 530,
+        "name": "Hammer Kirche",
+        "line": "HamburgUBahnU2",
+        "order": 558
+      },
+      "id": 530
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9.989271, 53.558955]
+      },
+      "properties": {
+        "id": 363,
+        "name": "Stephansplatz (Oper/CCH)",
+        "alternate_names": ["Stephansplatz"],
+        "line": "HamburgUBahnU1",
+        "order": 550
+      },
+      "id": 363
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.041664, 53.555743]
+      },
+      "properties": {
+        "id": 529,
+        "name": "Burgstraße",
+        "line": "HamburgUBahnU2",
+        "order": 538
+      },
+      "id": 529
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.026875, 53.56448]
+      },
+      "properties": {
+        "id": 592,
+        "name": "Uhlandstraße",
+        "line": "HamburgUBahnU3",
+        "order": 538
+      },
+      "id": 592
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.205962, 53.489848]
+      },
+      "properties": {
+        "id": 129,
+        "name": "Bergedorf",
+        "line": "HamburgSBahnS2",
+        "order": 535
+      },
+      "id": 129
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.057315, 53.576333]
+      },
+      "properties": {
+        "id": 270,
+        "name": "Friedrichsberg",
+        "line": "HamburgSBahnS5",
+        "order": 529
+      },
+      "id": 270
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.006844, 53.498138]
+      },
+      "properties": {
+        "id": 234,
+        "name": "Wilhelmsburg",
+        "line": "HamburgSBahnS5",
+        "order": 519
+      },
+      "id": 234
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.028853, 53.559552]
+      },
+      "properties": {
+        "id": 591,
+        "name": "Lübecker Straße",
+        "line": "HamburgUBahnU3",
+        "order": 513
+      },
+      "id": 591
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9.989138, 53.572796]
+      },
+      "properties": {
+        "id": 362,
+        "name": "Hallerstraße",
+        "line": "HamburgUBahnU1",
+        "order": 508
+      },
+      "id": 362
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.059923, 53.569649]
+      },
+      "properties": {
+        "id": 269,
+        "name": "Wandsbeker Chaussee",
+        "line": "HamburgSBahnS5",
+        "order": 506
+      },
+      "id": 269
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.02312, 53.553382]
+      },
+      "properties": {
+        "id": 528,
+        "name": "Berliner Tor",
+        "line": "HamburgUBahnU2",
+        "order": 505
+      },
+      "id": 528
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.181111, 53.48802]
+      },
+      "properties": {
+        "id": 128,
+        "name": "Nettelnburg",
+        "line": "HamburgSBahnS2",
+        "order": 496
+      },
+      "id": 128
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9.994766, 53.552634]
+      },
+      "properties": {
+        "id": 159,
+        "name": "Jungfernstieg",
+        "line": "HamburgSBahnS3",
+        "order": 489
+      },
+      "id": 159
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.158458, 53.49048]
+      },
+      "properties": {
+        "id": 127,
+        "name": "Allermöhe",
+        "line": "HamburgSBahnS2",
+        "order": 484
+      },
+      "id": 127
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9.988129, 53.581837]
+      },
+      "properties": {
+        "id": 361,
+        "name": "Klosterstern",
+        "line": "HamburgUBahnU1",
+        "order": 476
+      },
+      "id": 361
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.013098, 53.521135]
+      },
+      "properties": {
+        "id": 233,
+        "name": "Veddel (BallinStadt)",
+        "alternate_names": ["Veddel", "BallinStadt"],
+        "line": "HamburgSBahnS5",
+        "order": 475
+      },
+      "id": 233
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.055908, 53.564785]
+      },
+      "properties": {
+        "id": 268,
+        "name": "Hasselbrook",
+        "line": "HamburgSBahnS5",
+        "order": 475
+      },
+      "id": 268
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.023131, 53.553384]
+      },
+      "properties": {
+        "id": 590,
+        "name": "Berliner Tor",
+        "line": "HamburgUBahnU3",
+        "order": 467
+      },
+      "id": 590
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.131725, 53.49789]
+      },
+      "properties": {
+        "id": 126,
+        "name": "Mittlerer Landweg",
+        "line": "HamburgSBahnS2",
+        "order": 465
+      },
+      "id": 126
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9.984574, 53.549394]
+      },
+      "properties": {
+        "id": 158,
+        "name": "Stadthausbrücke",
+        "line": "HamburgSBahnS3",
+        "order": 459
+      },
+      "id": 158
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.005191, 53.554033]
+      },
+      "properties": {
+        "id": 527,
+        "name": "Hauptbahnhof Nord",
+        "alternate_names": ["Hauptbahnhof"],
+        "line": "HamburgUBahnU2",
+        "order": 458
+      },
+      "id": 527
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.037828, 53.561217]
+      },
+      "properties": {
+        "id": 267,
+        "name": "Landwehr",
+        "line": "HamburgSBahnS5",
+        "order": 446
+      },
+      "id": 267
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.096028, 53.516127]
+      },
+      "properties": {
+        "id": 125,
+        "name": "Billwerder-Moorfleet",
+        "line": "HamburgSBahnS2",
+        "order": 443
+      },
+      "id": 125
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.009106, 53.552262]
+      },
+      "properties": {
+        "id": 589,
+        "name": "Hauptbahnhof Süd",
+        "alternate_names": ["Hauptbahnhof"],
+        "line": "HamburgUBahnU3",
+        "order": 440
+      },
+      "id": 589
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.024788, 53.534948]
+      },
+      "properties": {
+        "id": 232,
+        "name": "Elbbrücken",
+        "line": "HamburgSBahnS5",
+        "order": 439
+      },
+      "id": 232
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9.99089, 53.588868]
+      },
+      "properties": {
+        "id": 360,
+        "name": "Kellinghusenstraße",
+        "line": "HamburgUBahnU1",
+        "order": 426
+      },
+      "id": 360
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9.994445, 53.553268]
+      },
+      "properties": {
+        "id": 526,
+        "name": "Jungfernstieg",
+        "line": "HamburgUBahnU2",
+        "order": 426
+      },
+      "id": 526
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9.971425, 53.546132]
+      },
+      "properties": {
+        "id": 157,
+        "name": "Landungsbrücken",
+        "line": "HamburgSBahnS3",
+        "order": 423
+      },
+      "id": 157
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.002209, 53.551343]
+      },
+      "properties": {
+        "id": 588,
+        "name": "Mönckebergstraße",
+        "line": "HamburgUBahnU3",
+        "order": 423
+      },
+      "id": 588
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.066212, 53.531006]
+      },
+      "properties": {
+        "id": 124,
+        "name": "Tiefstack",
+        "line": "HamburgSBahnS2",
+        "order": 422
+      },
+      "id": 124
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9.994716, 53.550496]
+      },
+      "properties": {
+        "id": 587,
+        "name": "Rathaus",
+        "line": "HamburgUBahnU3",
+        "order": 408
+      },
+      "id": 587
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.024136, 53.546112]
+      },
+      "properties": {
+        "id": 231,
+        "name": "Hammerbrook (City Süd)",
+        "alternate_names": ["Hammerbrook"],
+        "line": "HamburgSBahnS5",
+        "order": 407
+      },
+      "id": 231
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.024621, 53.553038]
+      },
+      "properties": {
+        "id": 257,
+        "name": "Berliner Tor",
+        "line": "HamburgSBahnS5",
+        "order": 405
+      },
+      "id": 257
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9.986475, 53.555599]
+      },
+      "properties": {
+        "id": 525,
+        "name": "Gänsemarkt (Oper)",
+        "alternate_names": ["Gänsemarkt", "Oper"],
+        "line": "HamburgUBahnU2",
+        "order": 403
+      },
+      "id": 525
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9.996158, 53.594616]
+      },
+      "properties": {
+        "id": 359,
+        "name": "Hudtwalckerstraße",
+        "line": "HamburgUBahnU1",
+        "order": 396
+      },
+      "id": 359
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.043101, 53.538762]
+      },
+      "properties": {
+        "id": 123,
+        "name": "Rothenburgsort",
+        "line": "HamburgSBahnS2",
+        "order": 393
+      },
+      "id": 123
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9.957924, 53.549547]
+      },
+      "properties": {
+        "id": 156,
+        "name": "Reeperbahn",
+        "line": "HamburgSBahnS3",
+        "order": 389
+      },
+      "id": 156
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.107124, 53.542349]
+      },
+      "properties": {
+        "id": 693,
+        "name": "Billstedt",
+        "line": "HamburgUBahnU4",
+        "order": 373
+      },
+      "id": 693
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9.994701, 53.599996]
+      },
+      "properties": {
+        "id": 358,
+        "name": "Lattenkamp (Sporthalle)",
+        "alternate_names": ["Lattenkamp", "Sporthalle"],
+        "line": "HamburgUBahnU1",
+        "order": 370
+      },
+      "id": 358
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9.976584, 53.558159]
+      },
+      "properties": {
+        "id": 524,
+        "name": "Messehallen",
+        "line": "HamburgUBahnU2",
+        "order": 370
+      },
+      "id": 524
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.096498, 53.546731]
+      },
+      "properties": {
+        "id": 692,
+        "name": "Legienstraße",
+        "line": "HamburgUBahnU4",
+        "order": 359
+      },
+      "id": 692
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9.944026, 53.547714]
+      },
+      "properties": {
+        "id": 155,
+        "name": "Königstraße",
+        "line": "HamburgSBahnS3",
+        "order": 357
+      },
+      "id": 155
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9.986953, 53.548375]
+      },
+      "properties": {
+        "id": 586,
+        "name": "Rödingsmarkt",
+        "line": "HamburgUBahnU3",
+        "order": 342
+      },
+      "id": 586
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.007651, 53.552823]
+      },
+      "properties": {
+        "id": 230,
+        "name": "Hamburg Hbf",
+        "alternate_names": ["Hauptbahnhof", "Hamburg Hauptbahnhof"],
+        "line": "HamburgSBahnS5",
+        "order": 338
+      },
+      "id": 230
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9.969775, 53.567803]
+      },
+      "properties": {
+        "id": 523,
+        "name": "Schlump",
+        "line": "HamburgUBahnU2",
+        "order": 333
+      },
+      "id": 523
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.011582, 53.606328]
+      },
+      "properties": {
+        "id": 357,
+        "name": "Alsterdorf",
+        "line": "HamburgUBahnU1",
+        "order": 324
+      },
+      "id": 357
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.02445, 53.552559]
+      },
+      "properties": {
+        "id": 122,
+        "name": "Berliner Tor",
+        "line": "HamburgSBahnS2",
+        "order": 320
+      },
+      "id": 122
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.083507, 53.553799]
+      },
+      "properties": {
+        "id": 691,
+        "name": "Horner Rennbahn",
+        "line": "HamburgUBahnU4",
+        "order": 319
+      },
+      "id": 691
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.022041, 53.609317]
+      },
+      "properties": {
+        "id": 356,
+        "name": "Sengelmannstraße (City Nord)",
+        "alternate_names": ["Sengelmannstraße"],
+        "line": "HamburgUBahnU1",
+        "order": 313
+      },
+      "id": 356
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9.962333, 53.569594]
+      },
+      "properties": {
+        "id": 522,
+        "name": "Christuskirche",
+        "line": "HamburgUBahnU2",
+        "order": 304
+      },
+      "id": 522
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9.981293, 53.544218]
+      },
+      "properties": {
+        "id": 585,
+        "name": "Baumwall (Elbphilharmonie)",
+        "alternate_names": ["Baumwall", "Elbphilharmonie"],
+        "line": "HamburgUBahnU3",
+        "order": 303
+      },
+      "id": 585
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9.934393, 53.551854]
+      },
+      "properties": {
+        "id": 154,
+        "name": "Altona",
+        "line": "HamburgSBahnS3",
+        "order": 300
+      },
+      "id": 154
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.06604, 53.554203]
+      },
+      "properties": {
+        "id": 690,
+        "name": "Rauhes Haus",
+        "line": "HamburgUBahnU4",
+        "order": 293
+      },
+      "id": 690
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.055505, 53.555543]
+      },
+      "properties": {
+        "id": 689,
+        "name": "Hammer Kirche",
+        "line": "HamburgUBahnU4",
+        "order": 279
+      },
+      "id": 689
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9.971299, 53.54589]
+      },
+      "properties": {
+        "id": 584,
+        "name": "Landungsbrücken",
+        "line": "HamburgUBahnU3",
+        "order": 275
+      },
+      "id": 584
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.031499, 53.620459]
+      },
+      "properties": {
+        "id": 355,
+        "name": "Ohlsdorf",
+        "line": "HamburgUBahnU1",
+        "order": 271
+      },
+      "id": 355
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9.989725, 53.560962]
+      },
+      "properties": {
+        "id": 229,
+        "name": "Dammtor (Messe/CCH)",
+        "alternate_names": ["Dammtor"],
+        "line": "HamburgSBahnS5",
+        "order": 260
+      },
+      "id": 229
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9.952643, 53.571684]
+      },
+      "properties": {
+        "id": 521,
+        "name": "Emilienstraße",
+        "line": "HamburgUBahnU2",
+        "order": 259
+      },
+      "id": 521
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.041664, 53.555743]
+      },
+      "properties": {
+        "id": 688,
+        "name": "Burgstraße",
+        "line": "HamburgUBahnU4",
+        "order": 259
+      },
+      "id": 688
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.007651, 53.552823]
+      },
+      "properties": {
+        "id": 121,
+        "name": "Hamburg Hbf",
+        "alternate_names": ["Hauptbahnhof", "Hamburg Hauptbahnhof"],
+        "line": "HamburgSBahnS2",
+        "order": 256
+      },
+      "id": 121
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9.970218, 53.55051]
+      },
+      "properties": {
+        "id": 583,
+        "name": "St.Pauli",
+        "line": "HamburgUBahnU3",
+        "order": 249
+      },
+      "id": 583
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.033421, 53.627999]
+      },
+      "properties": {
+        "id": 354,
+        "name": "Klein Borstel",
+        "line": "HamburgUBahnU1",
+        "order": 248
+      },
+      "id": 354
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9.968715, 53.556936]
+      },
+      "properties": {
+        "id": 582,
+        "name": "Feldstraße (Heiligengeistfeld)",
+        "alternate_names": ["Feldstraße", "Heiligengeistfeld"],
+        "line": "HamburgUBahnU3",
+        "order": 240
+      },
+      "id": 582
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.026534, 53.632604]
+      },
+      "properties": {
+        "id": 353,
+        "name": "Fuhlsbüttel",
+        "line": "HamburgUBahnU1",
+        "order": 228
+      },
+      "id": 353
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.02312, 53.553382]
+      },
+      "properties": {
+        "id": 687,
+        "name": "Berliner Tor",
+        "line": "HamburgUBahnU4",
+        "order": 226
+      },
+      "id": 687
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9.951655, 53.576077]
+      },
+      "properties": {
+        "id": 520,
+        "name": "Osterstraße",
+        "line": "HamburgUBahnU2",
+        "order": 224
+      },
+      "id": 520
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9.966141, 53.563822]
+      },
+      "properties": {
+        "id": 228,
+        "name": "Sternschanze (Messe)",
+        "alternate_names": ["Sternschanze"],
+        "line": "HamburgSBahnS5",
+        "order": 211
+      },
+      "id": 228
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9.969296, 53.564347]
+      },
+      "properties": {
+        "id": 581,
+        "name": "Sternschanze (Messe)",
+        "alternate_names": ["Sternschanze"],
+        "line": "HamburgUBahnU3",
+        "order": 200
+      },
+      "id": 581
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.016787, 53.639651]
+      },
+      "properties": {
+        "id": 352,
+        "name": "Fuhlsbüttel Nord",
+        "line": "HamburgUBahnU1",
+        "order": 194
+      },
+      "id": 352
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9.930989, 53.579591]
+      },
+      "properties": {
+        "id": 153,
+        "name": "Langenfelde",
+        "line": "HamburgSBahnS3",
+        "order": 193
+      },
+      "id": 153
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9.947728, 53.582041]
+      },
+      "properties": {
+        "id": 519,
+        "name": "Lutterothstraße",
+        "line": "HamburgUBahnU2",
+        "order": 182
+      },
+      "id": 519
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.005191, 53.554033]
+      },
+      "properties": {
+        "id": 686,
+        "name": "Hauptbahnhof Nord",
+        "alternate_names": ["Hauptbahnhof"],
+        "line": "HamburgUBahnU4",
+        "order": 179
+      },
+      "id": 686
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9.989725, 53.560962]
+      },
+      "properties": {
+        "id": 120,
+        "name": "Dammtor (Messe/CCH)",
+        "alternate_names": ["Dammtor"],
+        "line": "HamburgSBahnS2",
+        "order": 178
+      },
+      "id": 120
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9.970098, 53.56801]
+      },
+      "properties": {
+        "id": 580,
+        "name": "Schlump",
+        "line": "HamburgUBahnU3",
+        "order": 177
+      },
+      "id": 580
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.017319, 53.649198]
+      },
+      "properties": {
+        "id": 351,
+        "name": "Langenhorn Markt",
+        "line": "HamburgUBahnU1",
+        "order": 176
+      },
+      "id": 351
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9.949367, 53.561908]
+      },
+      "properties": {
+        "id": 227,
+        "name": "Holstenstraße",
+        "line": "HamburgSBahnS5",
+        "order": 169
+      },
+      "id": 227
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9.918445, 53.589783]
+      },
+      "properties": {
+        "id": 152,
+        "name": "Stellingen (Arenen)",
+        "alternate_names": ["Stellingen"],
+        "line": "HamburgSBahnS3",
+        "order": 155
+      },
+      "id": 152
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.017663, 53.660982]
+      },
+      "properties": {
+        "id": 350,
+        "name": "Langenhorn Nord",
+        "line": "HamburgUBahnU1",
+        "order": 151
+      },
+      "id": 350
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9.944029, 53.592931]
+      },
+      "properties": {
+        "id": 518,
+        "name": "Hagenbecks Tierpark",
+        "line": "HamburgUBahnU2",
+        "order": 146
+      },
+      "id": 518
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9.994356, 53.553158]
+      },
+      "properties": {
+        "id": 685,
+        "name": "Jungfernstieg",
+        "line": "HamburgUBahnU4",
+        "order": 144
+      },
+      "id": 685
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9.97639, 53.577621]
+      },
+      "properties": {
+        "id": 579,
+        "name": "Hoheluftbrücke",
+        "line": "HamburgUBahnU3",
+        "order": 134
+      },
+      "id": 579
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9.906208, 53.596333]
+      },
+      "properties": {
+        "id": 151,
+        "name": "Eidelstedt",
+        "line": "HamburgSBahnS3",
+        "order": 130
+      },
+      "id": 151
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9.966141, 53.563822]
+      },
+      "properties": {
+        "id": 119,
+        "name": "Sternschanze (Messe)",
+        "alternate_names": ["Sternschanze"],
+        "line": "HamburgSBahnS2",
+        "order": 129
+      },
+      "id": 119
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9.945258, 53.603874]
+      },
+      "properties": {
+        "id": 517,
+        "name": "Hagendeel",
+        "line": "HamburgUBahnU2",
+        "order": 127
+      },
+      "id": 517
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.015964, 53.675213]
+      },
+      "properties": {
+        "id": 349,
+        "name": "Kiwittsmoor",
+        "line": "HamburgUBahnU1",
+        "order": 120
+      },
+      "id": 349
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9.985365, 53.583765]
+      },
+      "properties": {
+        "id": 578,
+        "name": "Eppendorfer Baum",
+        "line": "HamburgUBahnU3",
+        "order": 110
+      },
+      "id": 578
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9.893071, 53.602919]
+      },
+      "properties": {
+        "id": 150,
+        "name": "Elbgaustraße",
+        "line": "HamburgSBahnS3",
+        "order": 101
+      },
+      "id": 150
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.001455, 53.678134]
+      },
+      "properties": {
+        "id": 348,
+        "name": "Ochsenzoll",
+        "line": "HamburgUBahnU1",
+        "order": 96
+      },
+      "id": 348
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9.951822, 53.620219]
+      },
+      "properties": {
+        "id": 516,
+        "name": "Niendorf Markt",
+        "line": "HamburgUBahnU2",
+        "order": 90
+      },
+      "id": 516
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9.930989, 53.579591]
+      },
+      "properties": {
+        "id": 226,
+        "name": "Langenfelde",
+        "line": "HamburgSBahnS5",
+        "order": 88
+      },
+      "id": 226
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9.949367, 53.561908]
+      },
+      "properties": {
+        "id": 118,
+        "name": "Holstenstraße",
+        "line": "HamburgSBahnS2",
+        "order": 87
+      },
+      "id": 118
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9.991207, 53.588856]
+      },
+      "properties": {
+        "id": 577,
+        "name": "Kellinghusenstraße",
+        "line": "HamburgUBahnU3",
+        "order": 80
+      },
+      "id": 577
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9.867603, 53.615962]
+      },
+      "properties": {
+        "id": 149,
+        "name": "Krupunder",
+        "line": "HamburgSBahnS3",
+        "order": 74
+      },
+      "id": 149
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9.998442, 53.540485]
+      },
+      "properties": {
+        "id": 684,
+        "name": "Überseequartier",
+        "line": "HamburgUBahnU4",
+        "order": 63
+      },
+      "id": 684
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9.986043, 53.685441]
+      },
+      "properties": {
+        "id": 347,
+        "name": "Garstedt",
+        "line": "HamburgUBahnU1",
+        "order": 55
+      },
+      "id": 347
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9.950335, 53.628238]
+      },
+      "properties": {
+        "id": 515,
+        "name": "Joachim-Mähl-Straße",
+        "line": "HamburgUBahnU2",
+        "order": 55
+      },
+      "id": 515
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9.918445, 53.589783]
+      },
+      "properties": {
+        "id": 225,
+        "name": "Stellingen (Arenen)",
+        "alternate_names": ["Stellingen"],
+        "line": "HamburgSBahnS5",
+        "order": 50
+      },
+      "id": 225
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.00121, 53.590346]
+      },
+      "properties": {
+        "id": 576,
+        "name": "Sierichstraße",
+        "line": "HamburgUBahnU3",
+        "order": 50
+      },
+      "id": 576
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9.839158, 53.630454]
+      },
+      "properties": {
+        "id": 148,
+        "name": "Halstenbek",
+        "line": "HamburgSBahnS3",
+        "order": 49
+      },
+      "id": 148
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.007597, 53.54064]
+      },
+      "properties": {
+        "id": 683,
+        "name": "HafenCity Universität",
+        "line": "HamburgUBahnU4",
+        "order": 46
+      },
+      "id": 683
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.014861, 53.590726]
+      },
+      "properties": {
+        "id": 575,
+        "name": "Borgweg (Stadtpark)",
+        "alternate_names": ["Borgweg"],
+        "line": "HamburgUBahnU3",
+        "order": 32
+      },
+      "id": 575
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.09378, 53.651983]
+      },
+      "properties": {
+        "id": 59,
+        "name": "Poppenbüttel",
+        "line": "HamburgSBahnS1",
+        "order": 30
+      },
+      "id": 59
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.0826, 53.641239]
+      },
+      "properties": {
+        "id": 58,
+        "name": "Wellingsbüttel",
+        "line": "HamburgSBahnS1",
+        "order": 29
+      },
+      "id": 58
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.067972, 53.63562]
+      },
+      "properties": {
+        "id": 57,
+        "name": "Hoheneichen",
+        "line": "HamburgSBahnS1",
+        "order": 28
+      },
+      "id": 57
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.006697, 53.632477]
+      },
+      "properties": {
+        "id": 28,
+        "name": "Hamburg Airport (Flughafen)",
+        "alternate_names": ["Hamburg Airport", "Flughafen"],
+        "line": "HamburgSBahnS1",
+        "order": 27
+      },
+      "id": 28
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.054501, 53.632568]
+      },
+      "properties": {
+        "id": 56,
+        "name": "Kornweg (Klein Borstel)",
+        "alternate_names": ["Kornweg", "Klein Borstel"],
+        "line": "HamburgSBahnS1",
+        "order": 27
+      },
+      "id": 56
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.031689, 53.620602]
+      },
+      "properties": {
+        "id": 27,
+        "name": "Ohlsdorf",
+        "line": "HamburgSBahnS1",
+        "order": 26
+      },
+      "id": 27
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.033105, 53.605799]
+      },
+      "properties": {
+        "id": 26,
+        "name": "Rübenkamp (City Nord)",
+        "alternate_names": ["Rübenkamp"],
+        "line": "HamburgSBahnS1",
+        "order": 25
+      },
+      "id": 26
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9.906208, 53.596333]
+      },
+      "properties": {
+        "id": 224,
+        "name": "Eidelstedt",
+        "line": "HamburgSBahnS5",
+        "order": 25
+      },
+      "id": 224
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9.989728, 53.695696]
+      },
+      "properties": {
+        "id": 346,
+        "name": "Richtweg",
+        "line": "HamburgUBahnU1",
+        "order": 25
+      },
+      "id": 346
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.035415, 53.597701]
+      },
+      "properties": {
+        "id": 25,
+        "name": "Alte Wöhr (Stadtpark)",
+        "alternate_names": ["Alte Wöhr"],
+        "line": "HamburgSBahnS1",
+        "order": 24
+      },
+      "id": 25
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.044466, 53.587424]
+      },
+      "properties": {
+        "id": 24,
+        "name": "Barmbek",
+        "line": "HamburgSBahnS1",
+        "order": 23
+      },
+      "id": 24
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.057358, 53.576339]
+      },
+      "properties": {
+        "id": 23,
+        "name": "Friedrichsberg",
+        "line": "HamburgSBahnS1",
+        "order": 22
+      },
+      "id": 23
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.059925, 53.569739]
+      },
+      "properties": {
+        "id": 22,
+        "name": "Wandsbeker Chaussee",
+        "line": "HamburgSBahnS1",
+        "order": 21
+      },
+      "id": 22
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.056116, 53.564705]
+      },
+      "properties": {
+        "id": 21,
+        "name": "Hasselbrook",
+        "line": "HamburgSBahnS1",
+        "order": 20
+      },
+      "id": 21
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.037896, 53.56128]
+      },
+      "properties": {
+        "id": 20,
+        "name": "Landwehr",
+        "line": "HamburgSBahnS1",
+        "order": 19
+      },
+      "id": 20
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.025319, 53.552564]
+      },
+      "properties": {
+        "id": 19,
+        "name": "Berliner Tor",
+        "line": "HamburgSBahnS1",
+        "order": 18
+      },
+      "id": 19
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9.813916, 53.6444]
+      },
+      "properties": {
+        "id": 147,
+        "name": "Thesdorf",
+        "line": "HamburgSBahnS3",
+        "order": 18
+      },
+      "id": 147
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.006899, 53.55273]
+      },
+      "properties": {
+        "id": 18,
+        "name": "Hamburg Hbf",
+        "alternate_names": ["Hauptbahnhof", "Hamburg Hauptbahnhof"],
+        "line": "HamburgSBahnS1",
+        "order": 17
+      },
+      "id": 18
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9.99415, 53.55202]
+      },
+      "properties": {
+        "id": 17,
+        "name": "Jungfernstieg",
+        "line": "HamburgSBahnS1",
+        "order": 16
+      },
+      "id": 17
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9.984566, 53.549421]
+      },
+      "properties": {
+        "id": 16,
+        "name": "Stadthausbrücke",
+        "line": "HamburgSBahnS1",
+        "order": 15
+      },
+      "id": 16
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9.971471, 53.546158]
+      },
+      "properties": {
+        "id": 15,
+        "name": "Landungsbrücken",
+        "line": "HamburgSBahnS1",
+        "order": 14
+      },
+      "id": 15
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9.95794, 53.549565]
+      },
+      "properties": {
+        "id": 14,
+        "name": "Reeperbahn",
+        "line": "HamburgSBahnS1",
+        "order": 13
+      },
+      "id": 14
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9.944003, 53.547735]
+      },
+      "properties": {
+        "id": 13,
+        "name": "Königstraße",
+        "line": "HamburgSBahnS1",
+        "order": 12
+      },
+      "id": 13
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9.934604, 53.551843]
+      },
+      "properties": {
+        "id": 12,
+        "name": "Altona",
+        "line": "HamburgSBahnS1",
+        "order": 11
+      },
+      "id": 12
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9.952733, 53.634782]
+      },
+      "properties": {
+        "id": 514,
+        "name": "Schippelsweg",
+        "line": "HamburgUBahnU2",
+        "order": 11
+      },
+      "id": 514
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9.927636, 53.559535]
+      },
+      "properties": {
+        "id": 11,
+        "name": "Ottensen",
+        "line": "HamburgSBahnS1",
+        "order": 10
+      },
+      "id": 11
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9.911045, 53.560013]
+      },
+      "properties": {
+        "id": 10,
+        "name": "Bahrenfeld",
+        "line": "HamburgSBahnS1",
+        "order": 9
+      },
+      "id": 10
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9.885281, 53.559111]
+      },
+      "properties": {
+        "id": 9,
+        "name": "Othmarschen",
+        "line": "HamburgSBahnS1",
+        "order": 8
+      },
+      "id": 9
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9.860496, 53.558106]
+      },
+      "properties": {
+        "id": 8,
+        "name": "Klein Flottbek (Botanischer Garten)",
+        "alternate_names": ["Klein Flottbek", "Botanischer Garten"],
+        "line": "HamburgSBahnS1",
+        "order": 7
+      },
+      "id": 8
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9.842118, 53.561274]
+      },
+      "properties": {
+        "id": 7,
+        "name": "Hochkamp",
+        "line": "HamburgSBahnS1",
+        "order": 6
+      },
+      "id": 7
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9.815194, 53.564398]
+      },
+      "properties": {
+        "id": 5,
+        "name": "Blankenese",
+        "line": "HamburgSBahnS1",
+        "order": 4
+      },
+      "id": 5
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9.814311, 53.576579]
+      },
+      "properties": {
+        "id": 4,
+        "name": "Iserbrook",
+        "line": "HamburgSBahnS1",
+        "order": 3
+      },
+      "id": 4
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9.797261, 53.581106]
+      },
+      "properties": {
+        "id": 3,
+        "name": "Sülldorf",
+        "line": "HamburgSBahnS1",
+        "order": 2
+      },
+      "id": 3
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9.757316, 53.583145]
+      },
+      "properties": {
+        "id": 2,
+        "name": "Rissen",
+        "line": "HamburgSBahnS1",
+        "order": 1
+      },
+      "id": 2
+    }
+  ],
+  "properties": {
+    "totalStations": 222,
+    "stationsPerLine": {
+      "HamburgSBahnS1": 31,
+      "HamburgSBahnS2": 16,
+      "HamburgSBahnS3": 32,
+      "HamburgSBahnS5": 34,
+      "HamburgUBahnU1": 47,
+      "HamburgUBahnU2": 25,
+      "HamburgUBahnU3": 25,
+      "HamburgUBahnU4": 12
+    }
+  }
+}

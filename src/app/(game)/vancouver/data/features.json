@@ -1,0 +1,1154 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.136372,
+          49.167943
+        ]
+      },
+      "properties": {
+        "id": 1,
+        "name": "Richmond-Brighouse",
+        "line": "VancouverSkytrainCanadaLine",
+        "order": 0
+      },
+      "id": 1
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.178269,
+          49.194174
+        ]
+      },
+      "properties": {
+        "id": 14,
+        "name": "YVR-Airport",
+        "line": "VancouverSkytrainCanadaLine",
+        "order": 0
+      },
+      "id": 14
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.112304,
+          49.286153
+        ]
+      },
+      "properties": {
+        "id": 27,
+        "name": "Waterfront",
+        "line": "VancouverSkytrainExpoLine",
+        "order": 0
+      },
+      "id": 27
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.079053,
+          49.265802
+        ]
+      },
+      "properties": {
+        "id": 67,
+        "name": "VCC-Clark",
+        "line": "VancouverSkytrainMillenniumLine",
+        "order": 0
+      },
+      "id": 67
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.10865,
+          49.287147
+        ]
+      },
+      "properties": {
+        "id": 84,
+        "name": "Waterfront Seabus Terminal",
+        "line": "VancouverSeabusSeabus",
+        "order": 0
+      },
+      "id": 84
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.111184,
+          49.28621
+        ]
+      },
+      "properties": {
+        "id": 86,
+        "name": "Waterfront",
+        "line": "VancouverWestCoastExpressWce",
+        "order": 0
+      },
+      "id": 86
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.304897,
+          49.133726
+        ]
+      },
+      "properties": {
+        "id": 96,
+        "name": "Mission City",
+        "line": "VancouverWestCoastExpressWce",
+        "order": 654
+      },
+      "id": 96
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.605267,
+          49.212154
+        ]
+      },
+      "properties": {
+        "id": 95,
+        "name": "Port Haney",
+        "line": "VancouverWestCoastExpressWce",
+        "order": 300
+      },
+      "id": 95
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.918222,
+          49.253418
+        ]
+      },
+      "properties": {
+        "id": 46,
+        "name": "Production Way-University",
+        "line": "VancouverSkytrainExpoLine",
+        "order": 277
+      },
+      "id": 46
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.844736,
+          49.182791
+        ]
+      },
+      "properties": {
+        "id": 66,
+        "name": "King George",
+        "line": "VancouverSkytrainExpoLine",
+        "order": 270
+      },
+      "id": 66
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.666308,
+          49.216501
+        ]
+      },
+      "properties": {
+        "id": 94,
+        "name": "Maple Meadows",
+        "line": "VancouverWestCoastExpressWce",
+        "order": 270
+      },
+      "id": 94
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.896845,
+          49.248482
+        ]
+      },
+      "properties": {
+        "id": 45,
+        "name": "Lougheed Town Centre",
+        "line": "VancouverSkytrainExpoLine",
+        "order": 264
+      },
+      "id": 45
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.688319,
+          49.225856
+        ]
+      },
+      "properties": {
+        "id": 93,
+        "name": "Pitt Meadows",
+        "line": "VancouverWestCoastExpressWce",
+        "order": 264
+      },
+      "id": 93
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.847869,
+          49.189562
+        ]
+      },
+      "properties": {
+        "id": 65,
+        "name": "Surrey Central",
+        "line": "VancouverSkytrainExpoLine",
+        "order": 256
+      },
+      "id": 65
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.850601,
+          49.198955
+        ]
+      },
+      "properties": {
+        "id": 64,
+        "name": "Gateway",
+        "line": "VancouverSkytrainExpoLine",
+        "order": 246
+      },
+      "id": 64
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.882794,
+          49.23324
+        ]
+      },
+      "properties": {
+        "id": 44,
+        "name": "Braid",
+        "line": "VancouverSkytrainExpoLine",
+        "order": 241
+      },
+      "id": 44
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.773989,
+          49.261503
+        ]
+      },
+      "properties": {
+        "id": 92,
+        "name": "Port Coquitlam",
+        "line": "VancouverWestCoastExpressWce",
+        "order": 240
+      },
+      "id": 92
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.889388,
+          49.22466
+        ]
+      },
+      "properties": {
+        "id": 43,
+        "name": "Sapperton",
+        "line": "VancouverSkytrainExpoLine",
+        "order": 231
+      },
+      "id": 43
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.80052,
+          49.274259
+        ]
+      },
+      "properties": {
+        "id": 90,
+        "name": "Coquitlam Central",
+        "line": "VancouverWestCoastExpressWce",
+        "order": 226
+      },
+      "id": 90
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.874199,
+          49.204428
+        ]
+      },
+      "properties": {
+        "id": 63,
+        "name": "Scott Road",
+        "line": "VancouverSkytrainExpoLine",
+        "order": 223
+      },
+      "id": 63
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.906137,
+          49.204794
+        ]
+      },
+      "properties": {
+        "id": 42,
+        "name": "Columbia",
+        "line": "VancouverSkytrainExpoLine",
+        "order": 207
+      },
+      "id": 42
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.84603,
+          49.278111
+        ]
+      },
+      "properties": {
+        "id": 88,
+        "name": "Moody Centre",
+        "line": "VancouverWestCoastExpressWce",
+        "order": 207
+      },
+      "id": 88
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.791567,
+          49.285724
+        ]
+      },
+      "properties": {
+        "id": 83,
+        "name": "Lafarge Lake-Douglas",
+        "line": "VancouverSkytrainMillenniumLine",
+        "order": 206
+      },
+      "id": 83
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.912612,
+          49.201435
+        ]
+      },
+      "properties": {
+        "id": 41,
+        "name": "New Westminster",
+        "line": "VancouverSkytrainExpoLine",
+        "order": 205
+      },
+      "id": 41
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.793963,
+          49.280439
+        ]
+      },
+      "properties": {
+        "id": 82,
+        "name": "Lincoln",
+        "line": "VancouverSkytrainMillenniumLine",
+        "order": 198
+      },
+      "id": 82
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.800271,
+          49.274538
+        ]
+      },
+      "properties": {
+        "id": 81,
+        "name": "Coquitlam Central",
+        "line": "VancouverSkytrainMillenniumLine",
+        "order": 188
+      },
+      "id": 81
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.828194,
+          49.27719
+        ]
+      },
+      "properties": {
+        "id": 80,
+        "name": "Inlet Centre",
+        "line": "VancouverSkytrainMillenniumLine",
+        "order": 174
+      },
+      "id": 80
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.948974,
+          49.200049
+        ]
+      },
+      "properties": {
+        "id": 40,
+        "name": "22nd Street",
+        "line": "VancouverSkytrainExpoLine",
+        "order": 170
+      },
+      "id": 40
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.846034,
+          49.278014
+        ]
+      },
+      "properties": {
+        "id": 79,
+        "name": "Moody Centre",
+        "line": "VancouverSkytrainMillenniumLine",
+        "order": 162
+      },
+      "id": 79
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.959095,
+          49.211939
+        ]
+      },
+      "properties": {
+        "id": 39,
+        "name": "Edmonds",
+        "line": "VancouverSkytrainExpoLine",
+        "order": 133
+      },
+      "id": 39
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.889821,
+          49.261394
+        ]
+      },
+      "properties": {
+        "id": 78,
+        "name": "Burquitlam",
+        "line": "VancouverSkytrainMillenniumLine",
+        "order": 133
+      },
+      "id": 78
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.896856,
+          49.248573
+        ]
+      },
+      "properties": {
+        "id": 77,
+        "name": "Lougheed Town Centre",
+        "line": "VancouverSkytrainMillenniumLine",
+        "order": 118
+      },
+      "id": 77
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.988477,
+          49.220074
+        ]
+      },
+      "properties": {
+        "id": 38,
+        "name": "Royal Oak",
+        "line": "VancouverSkytrainExpoLine",
+        "order": 109
+      },
+      "id": 38
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.918224,
+          49.253413
+        ]
+      },
+      "properties": {
+        "id": 76,
+        "name": "Production Way-University",
+        "line": "VancouverSkytrainMillenniumLine",
+        "order": 106
+      },
+      "id": 76
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.003926,
+          49.22582
+        ]
+      },
+      "properties": {
+        "id": 37,
+        "name": "Metrotown",
+        "line": "VancouverSkytrainExpoLine",
+        "order": 101
+      },
+      "id": 37
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.012671,
+          49.229761
+        ]
+      },
+      "properties": {
+        "id": 36,
+        "name": "Patterson",
+        "line": "VancouverSkytrainExpoLine",
+        "order": 96
+      },
+      "id": 36
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.939193,
+          49.254631
+        ]
+      },
+      "properties": {
+        "id": 75,
+        "name": "Lake City Way",
+        "line": "VancouverSkytrainMillenniumLine",
+        "order": 95
+      },
+      "id": 75
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.031808,
+          49.238401
+        ]
+      },
+      "properties": {
+        "id": 35,
+        "name": "Joyce-Collingwood",
+        "line": "VancouverSkytrainExpoLine",
+        "order": 88
+      },
+      "id": 35
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.046118,
+          49.244278
+        ]
+      },
+      "properties": {
+        "id": 34,
+        "name": "29th Avenue",
+        "line": "VancouverSkytrainExpoLine",
+        "order": 84
+      },
+      "id": 34
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.964002,
+          49.259176
+        ]
+      },
+      "properties": {
+        "id": 74,
+        "name": "Sperling-Burnaby Lake",
+        "line": "VancouverSkytrainMillenniumLine",
+        "order": 83
+      },
+      "id": 74
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.055908,
+          49.248321
+        ]
+      },
+      "properties": {
+        "id": 33,
+        "name": "Nanaimo",
+        "line": "VancouverSkytrainExpoLine",
+        "order": 82
+      },
+      "id": 33
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.069115,
+          49.262317
+        ]
+      },
+      "properties": {
+        "id": 32,
+        "name": "Commercial-Broadway",
+        "line": "VancouverSkytrainExpoLine",
+        "order": 69
+      },
+      "id": 32
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.98217,
+          49.264727
+        ]
+      },
+      "properties": {
+        "id": 73,
+        "name": "Holdom",
+        "line": "VancouverSkytrainMillenniumLine",
+        "order": 69
+      },
+      "id": 73
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.00183,
+          49.266382
+        ]
+      },
+      "properties": {
+        "id": 72,
+        "name": "Brentwood Town Centre",
+        "line": "VancouverSkytrainMillenniumLine",
+        "order": 58
+      },
+      "id": 72
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.013518,
+          49.264945
+        ]
+      },
+      "properties": {
+        "id": 71,
+        "name": "Gilmore",
+        "line": "VancouverSkytrainMillenniumLine",
+        "order": 48
+      },
+      "id": 71
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.100381,
+          49.273164
+        ]
+      },
+      "properties": {
+        "id": 31,
+        "name": "Main Street-Science World",
+        "line": "VancouverSkytrainExpoLine",
+        "order": 44
+      },
+      "id": 31
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.032855,
+          49.260766
+        ]
+      },
+      "properties": {
+        "id": 70,
+        "name": "Rupert",
+        "line": "VancouverSkytrainMillenniumLine",
+        "order": 29
+      },
+      "id": 70
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.109125,
+          49.27926
+        ]
+      },
+      "properties": {
+        "id": 30,
+        "name": "Stadium-Chinatown",
+        "line": "VancouverSkytrainExpoLine",
+        "order": 25
+      },
+      "id": 30
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.045382,
+          49.258922
+        ]
+      },
+      "properties": {
+        "id": 69,
+        "name": "Renfrew",
+        "line": "VancouverSkytrainMillenniumLine",
+        "order": 23
+      },
+      "id": 69
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.115703,
+          49.283185
+        ]
+      },
+      "properties": {
+        "id": 29,
+        "name": "Granville",
+        "line": "VancouverSkytrainExpoLine",
+        "order": 17
+      },
+      "id": 29
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.111655,
+          49.285673
+        ]
+      },
+      "properties": {
+        "id": 13,
+        "name": "Waterfront",
+        "line": "VancouverSkytrainCanadaLine",
+        "order": 12
+      },
+      "id": 13
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.118227,
+          49.282415
+        ]
+      },
+      "properties": {
+        "id": 12,
+        "name": "Vancouver City Centre",
+        "line": "VancouverSkytrainCanadaLine",
+        "order": 11
+      },
+      "id": 12
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.119386,
+          49.285675
+        ]
+      },
+      "properties": {
+        "id": 28,
+        "name": "Burrard",
+        "line": "VancouverSkytrainExpoLine",
+        "order": 11
+      },
+      "id": 28
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.122079,
+          49.274492
+        ]
+      },
+      "properties": {
+        "id": 11,
+        "name": "Yaletown-Roundhouse",
+        "line": "VancouverSkytrainCanadaLine",
+        "order": 10
+      },
+      "id": 11
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.083883,
+          49.309536
+        ]
+      },
+      "properties": {
+        "id": 85,
+        "name": "Lonsdale Quay",
+        "line": "VancouverSeabusSeabus",
+        "order": 10
+      },
+      "id": 85
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.115348,
+          49.266596
+        ]
+      },
+      "properties": {
+        "id": 10,
+        "name": "Olympic Village",
+        "line": "VancouverSkytrainCanadaLine",
+        "order": 9
+      },
+      "id": 10
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.114822,
+          49.262717
+        ]
+      },
+      "properties": {
+        "id": 9,
+        "name": "Broadway-City Hall",
+        "line": "VancouverSkytrainCanadaLine",
+        "order": 8
+      },
+      "id": 9
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.068476,
+          49.262958
+        ]
+      },
+      "properties": {
+        "id": 68,
+        "name": "Commercial-Broadway",
+        "line": "VancouverSkytrainMillenniumLine",
+        "order": 8
+      },
+      "id": 68
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.11545,
+          49.249175
+        ]
+      },
+      "properties": {
+        "id": 8,
+        "name": "King Edward",
+        "line": "VancouverSkytrainCanadaLine",
+        "order": 7
+      },
+      "id": 8
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.116295,
+          49.233739
+        ]
+      },
+      "properties": {
+        "id": 7,
+        "name": "Oakridge-41st Avenue",
+        "line": "VancouverSkytrainCanadaLine",
+        "order": 6
+      },
+      "id": 7
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.116523,
+          49.22573
+        ]
+      },
+      "properties": {
+        "id": 6,
+        "name": "Langara-49th Avenue",
+        "line": "VancouverSkytrainCanadaLine",
+        "order": 5
+      },
+      "id": 6
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.117015,
+          49.209666
+        ]
+      },
+      "properties": {
+        "id": 5,
+        "name": "Marine Drive",
+        "line": "VancouverSkytrainCanadaLine",
+        "order": 4
+      },
+      "id": 5
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.126062,
+          49.195538
+        ]
+      },
+      "properties": {
+        "id": 4,
+        "name": "Bridgeport",
+        "line": "VancouverSkytrainCanadaLine",
+        "order": 3
+      },
+      "id": 4
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.136325,
+          49.184
+        ]
+      },
+      "properties": {
+        "id": 3,
+        "name": "Aberdeen",
+        "line": "VancouverSkytrainCanadaLine",
+        "order": 2
+      },
+      "id": 3
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.146337,
+          49.196688
+        ]
+      },
+      "properties": {
+        "id": 16,
+        "name": "Templeton",
+        "line": "VancouverSkytrainCanadaLine",
+        "order": 2
+      },
+      "id": 16
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.136475,
+          49.174665
+        ]
+      },
+      "properties": {
+        "id": 2,
+        "name": "Lansdowne",
+        "line": "VancouverSkytrainCanadaLine",
+        "order": 1
+      },
+      "id": 2
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.157887,
+          49.192986
+        ]
+      },
+      "properties": {
+        "id": 15,
+        "name": "Sea Island Centre",
+        "line": "VancouverSkytrainCanadaLine",
+        "order": 1
+      },
+      "id": 15
+    }
+  ],
+  "properties": {
+    "totalStations": 67,
+    "stationsPerLine": {
+      "VancouverSkytrainCanadaLine": 16,
+      "VancouverSkytrainExpoLine": 24,
+      "VancouverSkytrainMillenniumLine": 17,
+      "VancouverSeabusSeabus": 2,
+      "VancouverWestCoastExpressWce": 8
+    }
+  }
+}

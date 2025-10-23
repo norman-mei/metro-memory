@@ -1,0 +1,3184 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0111531,
+          52.3740737
+        ]
+      },
+      "properties": {
+        "id": 1,
+        "name": "Bahnhof Pirschheide",
+        "line": "PotsdamTram91",
+        "order": 1
+      },
+      "id": 1
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0166315,
+          52.3805913
+        ]
+      },
+      "properties": {
+        "id": 2,
+        "name": "Luftschiffhafen",
+        "line": "PotsdamTram91",
+        "order": 1
+      },
+      "id": 2
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0220337,
+          52.384361
+        ]
+      },
+      "properties": {
+        "id": 3,
+        "name": "Im Bogen/Zeppelinstraße",
+        "line": "PotsdamTram91",
+        "order": 1
+      },
+      "id": 3
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0282616,
+          52.3884835
+        ]
+      },
+      "properties": {
+        "id": 4,
+        "name": "Kastanienallee/Zeppelinstraße",
+        "line": "PotsdamTram91",
+        "order": 1
+      },
+      "id": 4
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.033065,
+          52.3912775
+        ]
+      },
+      "properties": {
+        "id": 5,
+        "name": "Schillerplatz/Schafgraben",
+        "line": "PotsdamTram91",
+        "order": 1
+      },
+      "id": 5
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0366232,
+          52.3932339
+        ]
+      },
+      "properties": {
+        "id": 6,
+        "name": "Bahnhof Charlottenhof",
+        "line": "PotsdamTram91",
+        "order": 1
+      },
+      "id": 6
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0381588,
+          52.3945936
+        ]
+      },
+      "properties": {
+        "id": 7,
+        "name": "Auf dem Kiewitt",
+        "line": "PotsdamTram91",
+        "order": 1
+      },
+      "id": 7
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0424573,
+          52.396281
+        ]
+      },
+      "properties": {
+        "id": 8,
+        "name": "Feuerbachstraße",
+        "line": "PotsdamTram91",
+        "order": 1
+      },
+      "id": 8
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.047011,
+          52.3984463
+        ]
+      },
+      "properties": {
+        "id": 9,
+        "name": "Luisenplatz-Süd/Park Sanssouci",
+        "line": "PotsdamTram91",
+        "order": 1
+      },
+      "id": 9
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0529334,
+          52.3991454
+        ]
+      },
+      "properties": {
+        "id": 10,
+        "name": "Dortustraße",
+        "line": "PotsdamTram91",
+        "order": 1
+      },
+      "id": 10
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0580226,
+          52.3984529
+        ]
+      },
+      "properties": {
+        "id": 11,
+        "name": "Platz der Einheit/West",
+        "line": "PotsdamTram91",
+        "order": 1
+      },
+      "id": 11
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0592664,
+          52.3947793
+        ]
+      },
+      "properties": {
+        "id": 12,
+        "name": "Alter Markt/Landtag",
+        "line": "PotsdamTram91",
+        "order": 1
+      },
+      "id": 12
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0637419,
+          52.3920044
+        ]
+      },
+      "properties": {
+        "id": 13,
+        "name": "Lange Brücke",
+        "line": "PotsdamTram91",
+        "order": 1
+      },
+      "id": 13
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0663907,
+          52.3909268
+        ]
+      },
+      "properties": {
+        "id": 14,
+        "name": "S Potsdam Hauptbahnhof",
+        "alternate_names": [
+          "Potsdam Hauptbahnhof",
+          "Potsdam Hbf",
+          "Hauptbahnhof",
+          "Hbf",
+          "S Hauptbahnhof",
+          "S Hbf"
+        ],
+        "line": "PotsdamTram91",
+        "order": 1
+      },
+      "id": 14
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.071955,
+          52.3857579
+        ]
+      },
+      "properties": {
+        "id": 15,
+        "name": "Friedhöfe",
+        "line": "PotsdamTram91",
+        "order": 1
+      },
+      "id": 15
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0756035,
+          52.3824837
+        ]
+      },
+      "properties": {
+        "id": 16,
+        "name": "Sporthalle",
+        "line": "PotsdamTram91",
+        "order": 1
+      },
+      "id": 16
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0784388,
+          52.3805485
+        ]
+      },
+      "properties": {
+        "id": 17,
+        "name": "Kunersdorfer Straße",
+        "line": "PotsdamTram91",
+        "order": 1
+      },
+      "id": 17
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0829446,
+          52.377522
+        ]
+      },
+      "properties": {
+        "id": 18,
+        "name": "Waldstraße/Horstweg",
+        "line": "PotsdamTram91",
+        "order": 1
+      },
+      "id": 18
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.088157,
+          52.3730978
+        ]
+      },
+      "properties": {
+        "id": 19,
+        "name": "Eduard-Claudius-Straße/Heinrich-Mann-Allee",
+        "line": "PotsdamTram91",
+        "order": 1
+      },
+      "id": 19
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0917917,
+          52.368211
+        ]
+      },
+      "properties": {
+        "id": 20,
+        "name": "Zum Kahleberg",
+        "line": "PotsdamTram91",
+        "order": 1
+      },
+      "id": 20
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0935246,
+          52.3658201
+        ]
+      },
+      "properties": {
+        "id": 21,
+        "name": "Friedrich-Wolf-Straße",
+        "line": "PotsdamTram91",
+        "order": 1
+      },
+      "id": 21
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0949834,
+          52.3635709
+        ]
+      },
+      "properties": {
+        "id": 22,
+        "name": "Am Moosfenn",
+        "line": "PotsdamTram91",
+        "order": 1
+      },
+      "id": 22
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0974061,
+          52.359294
+        ]
+      },
+      "properties": {
+        "id": 23,
+        "name": "Bahnhof Rehbrücke",
+        "line": "PotsdamTram91",
+        "order": 1
+      },
+      "id": 23
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0346093,
+          52.3936426
+        ]
+      },
+      "properties": {
+        "id": 26,
+        "name": "Bahnhof Charlottenhof/Geschwister-Scholl-Straße",
+        "line": "PotsdamTram91",
+        "order": 1
+      },
+      "id": 26
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0285991,
+          52.3936206
+        ]
+      },
+      "properties": {
+        "id": 27,
+        "name": "Schloss Charlottenhof",
+        "line": "PotsdamTram91",
+        "order": 1
+      },
+      "id": 27
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0919953,
+          52.3749267
+        ]
+      },
+      "properties": {
+        "id": 24,
+        "name": "Magnus-Zeller-Platz",
+        "line": "PotsdamTram91",
+        "order": 1
+      },
+      "id": 24
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.1011966,
+          52.3733498
+        ]
+      },
+      "properties": {
+        "id": 25,
+        "name": "Bisamkiez",
+        "line": "PotsdamTram91",
+        "order": 1
+      },
+      "id": 25
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0586149,
+          52.3991779
+        ]
+      },
+      "properties": {
+        "id": 28,
+        "name": "Platz der Einheit/Nord",
+        "line": "PotsdamTram91",
+        "order": 1
+      },
+      "id": 28
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.059502,
+          52.3975673
+        ]
+      },
+      "properties": {
+        "id": 29,
+        "name": "Platz der Einheit/Bildungsforum",
+        "line": "PotsdamTram91",
+        "order": 1
+      },
+      "id": 29
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.1372236,
+          52.3582571
+        ]
+      },
+      "properties": {
+        "id": 58,
+        "name": "Marie-Juchacz-Straße",
+        "line": "PotsdamTram92",
+        "order": 2
+      },
+      "id": 58
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.1370913,
+          52.3619684
+        ]
+      },
+      "properties": {
+        "id": 57,
+        "name": "Am Hirtengraben",
+        "line": "PotsdamTram92",
+        "order": 2
+      },
+      "id": 57
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.1359042,
+          52.3643766
+        ]
+      },
+      "properties": {
+        "id": 56,
+        "name": "Priesterweg",
+        "line": "PotsdamTram92",
+        "order": 2
+      },
+      "id": 56
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.1363025,
+          52.3669744
+        ]
+      },
+      "properties": {
+        "id": 55,
+        "name": "Robert-Baberske-Straße",
+        "line": "PotsdamTram92",
+        "order": 2
+      },
+      "id": 55
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.1399499,
+          52.3692386
+        ]
+      },
+      "properties": {
+        "id": 54,
+        "name": "Hans-Albers-Straße",
+        "line": "PotsdamTram92",
+        "order": 2
+      },
+      "id": 54
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.1418691,
+          52.3745624
+        ]
+      },
+      "properties": {
+        "id": 53,
+        "name": "Gaußstraße",
+        "line": "PotsdamTram92",
+        "order": 2
+      },
+      "id": 53
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.1378846,
+          52.3755464
+        ]
+      },
+      "properties": {
+        "id": 52,
+        "name": "Max-Born-Straße",
+        "line": "PotsdamTram92",
+        "order": 2
+      },
+      "id": 52
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.1295158,
+          52.3754658
+        ]
+      },
+      "properties": {
+        "id": 51,
+        "name": "Johannes-Kepler-Platz",
+        "line": "PotsdamTram92",
+        "order": 2
+      },
+      "id": 51
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.1232704,
+          52.3746899
+        ]
+      },
+      "properties": {
+        "id": 50,
+        "name": "Turmstraße",
+        "line": "PotsdamTram92",
+        "order": 2
+      },
+      "id": 50
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.1115649,
+          52.3733116
+        ]
+      },
+      "properties": {
+        "id": 49,
+        "name": "Abzweig Betriebshof ViP",
+        "line": "PotsdamTram92",
+        "order": 2
+      },
+      "id": 49
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.1011966,
+          52.3733498
+        ]
+      },
+      "properties": {
+        "id": 48,
+        "name": "Bisamkiez",
+        "line": "PotsdamTram92",
+        "order": 2
+      },
+      "id": 48
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0919953,
+          52.3749267
+        ]
+      },
+      "properties": {
+        "id": 47,
+        "name": "Magnus-Zeller-Platz",
+        "line": "PotsdamTram92",
+        "order": 2
+      },
+      "id": 47
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0829446,
+          52.377522
+        ]
+      },
+      "properties": {
+        "id": 46,
+        "name": "Waldstraße/Horstweg",
+        "line": "PotsdamTram92",
+        "order": 2
+      },
+      "id": 46
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0784388,
+          52.3805485
+        ]
+      },
+      "properties": {
+        "id": 45,
+        "name": "Kunersdorfer Straße",
+        "line": "PotsdamTram92",
+        "order": 2
+      },
+      "id": 45
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0756035,
+          52.3824837
+        ]
+      },
+      "properties": {
+        "id": 44,
+        "name": "Sporthalle",
+        "line": "PotsdamTram92",
+        "order": 2
+      },
+      "id": 44
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.071955,
+          52.3857579
+        ]
+      },
+      "properties": {
+        "id": 43,
+        "name": "Friedhöfe",
+        "line": "PotsdamTram92",
+        "order": 2
+      },
+      "id": 43
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0663907,
+          52.3909268
+        ]
+      },
+      "properties": {
+        "id": 42,
+        "name": "S Potsdam Hauptbahnhof",
+        "alternate_names": [
+          "Potsdam Hauptbahnhof",
+          "Potsdam Hbf",
+          "Hauptbahnhof",
+          "Hbf",
+          "S Hauptbahnhof",
+          "S Hbf"
+        ],
+        "line": "PotsdamTram92",
+        "order": 2
+      },
+      "id": 42
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0637419,
+          52.3920044
+        ]
+      },
+      "properties": {
+        "id": 41,
+        "name": "Lange Brücke",
+        "line": "PotsdamTram92",
+        "order": 2
+      },
+      "id": 41
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0592664,
+          52.3947793
+        ]
+      },
+      "properties": {
+        "id": 59,
+        "name": "Alter Markt/Landtag",
+        "line": "PotsdamTram92",
+        "order": 2
+      },
+      "id": 59
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0580226,
+          52.3984529
+        ]
+      },
+      "properties": {
+        "id": 40,
+        "name": "Platz der Einheit/West",
+        "line": "PotsdamTram92",
+        "order": 2
+      },
+      "id": 40
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0577771,
+          52.4006321
+        ]
+      },
+      "properties": {
+        "id": 39,
+        "name": "Brandenburger Straße",
+        "line": "PotsdamTram92",
+        "order": 2
+      },
+      "id": 39
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0578542,
+          52.4028209
+        ]
+      },
+      "properties": {
+        "id": 38,
+        "name": "Nauener Tor",
+        "line": "PotsdamTram92",
+        "order": 2
+      },
+      "id": 38
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0580803,
+          52.405221
+        ]
+      },
+      "properties": {
+        "id": 37,
+        "name": "Rathaus",
+        "line": "PotsdamTram92",
+        "order": 2
+      },
+      "id": 37
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0589723,
+          52.411488
+        ]
+      },
+      "properties": {
+        "id": 36,
+        "name": "Puschkinallee",
+        "line": "PotsdamTram92",
+        "order": 2
+      },
+      "id": 36
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0547365,
+          52.4129461
+        ]
+      },
+      "properties": {
+        "id": 35,
+        "name": "Am Schragen",
+        "line": "PotsdamTram92",
+        "order": 2
+      },
+      "id": 35
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.051071,
+          52.4140129
+        ]
+      },
+      "properties": {
+        "id": 34,
+        "name": "Campus Fachhochschule",
+        "line": "PotsdamTram92",
+        "order": 2
+      },
+      "id": 34
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0458971,
+          52.4149464
+        ]
+      },
+      "properties": {
+        "id": 33,
+        "name": "Wiesenpark",
+        "line": "PotsdamTram92",
+        "order": 2
+      },
+      "id": 33
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0403509,
+          52.4153444
+        ]
+      },
+      "properties": {
+        "id": 32,
+        "name": "Hannes-Meyer-Straße",
+        "line": "PotsdamTram92",
+        "order": 2
+      },
+      "id": 32
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.038552,
+          52.4134988
+        ]
+      },
+      "properties": {
+        "id": 31,
+        "name": "Johan-Bouman-Platz",
+        "line": "PotsdamTram92",
+        "order": 2
+      },
+      "id": 31
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0333963,
+          52.4136139
+        ]
+      },
+      "properties": {
+        "id": 30,
+        "name": "Kirschallee",
+        "line": "PotsdamTram92",
+        "order": 2
+      },
+      "id": 30
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0585619,
+          52.4084
+        ]
+      },
+      "properties": {
+        "id": 60,
+        "name": "Reiterweg/Alleestraße",
+        "line": "PotsdamTram92",
+        "order": 2
+      },
+      "id": 60
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0659347,
+          52.390378
+        ]
+      },
+      "properties": {
+        "id": 61,
+        "name": "S Potsdam Hauptbahnhof/Friedrich-Engels-Straße",
+        "alternate_names": [
+          "Potsdam Hauptbahnhof/Friedrich-Engels-Straße",
+          "Potsdam Hbf/Friedrich-Engels-Straße",
+          "Hauptbahnhof/Friedrich-Engels-Straße",
+          "Hbf/Friedrich-Engels-Straße"
+        ],
+        "line": "PotsdamTram92",
+        "order": 2
+      },
+      "id": 61
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0974061,
+          52.359294
+        ]
+      },
+      "properties": {
+        "id": 80,
+        "name": "Bahnhof Rehbrücke",
+        "line": "PotsdamTram93",
+        "order": 3
+      },
+      "id": 80
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0949834,
+          52.3635709
+        ]
+      },
+      "properties": {
+        "id": 79,
+        "name": "Am Moosfenn",
+        "line": "PotsdamTram93",
+        "order": 3
+      },
+      "id": 79
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0935246,
+          52.3658201
+        ]
+      },
+      "properties": {
+        "id": 78,
+        "name": "Friedrich-Wolf-Straße",
+        "line": "PotsdamTram93",
+        "order": 3
+      },
+      "id": 78
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0917917,
+          52.368211
+        ]
+      },
+      "properties": {
+        "id": 77,
+        "name": "Zum Kahleberg",
+        "line": "PotsdamTram93",
+        "order": 3
+      },
+      "id": 77
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.088157,
+          52.3730978
+        ]
+      },
+      "properties": {
+        "id": 76,
+        "name": "Eduard-Claudius-Straße/Heinrich-Mann-Allee",
+        "line": "PotsdamTram93",
+        "order": 3
+      },
+      "id": 76
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0829446,
+          52.377522
+        ]
+      },
+      "properties": {
+        "id": 75,
+        "name": "Waldstraße/Horstweg",
+        "line": "PotsdamTram93",
+        "order": 3
+      },
+      "id": 75
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0784388,
+          52.3805485
+        ]
+      },
+      "properties": {
+        "id": 74,
+        "name": "Kunersdorfer Straße",
+        "line": "PotsdamTram93",
+        "order": 3
+      },
+      "id": 74
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0756035,
+          52.3824837
+        ]
+      },
+      "properties": {
+        "id": 73,
+        "name": "Sporthalle",
+        "line": "PotsdamTram93",
+        "order": 3
+      },
+      "id": 73
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.071955,
+          52.3857579
+        ]
+      },
+      "properties": {
+        "id": 72,
+        "name": "Friedhöfe",
+        "line": "PotsdamTram93",
+        "order": 3
+      },
+      "id": 72
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0663907,
+          52.3909268
+        ]
+      },
+      "properties": {
+        "id": 71,
+        "name": "S Potsdam Hauptbahnhof",
+        "alternate_names": [
+          "Potsdam Hauptbahnhof",
+          "Potsdam Hbf",
+          "Hauptbahnhof",
+          "Hbf",
+          "S Hauptbahnhof",
+          "S Hbf"
+        ],
+        "line": "PotsdamTram93",
+        "order": 3
+      },
+      "id": 71
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0637419,
+          52.3920044
+        ]
+      },
+      "properties": {
+        "id": 70,
+        "name": "Lange Brücke",
+        "line": "PotsdamTram93",
+        "order": 3
+      },
+      "id": 70
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0592664,
+          52.3947793
+        ]
+      },
+      "properties": {
+        "id": 69,
+        "name": "Alter Markt/Landtag",
+        "line": "PotsdamTram93",
+        "order": 3
+      },
+      "id": 69
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.059502,
+          52.3975673
+        ]
+      },
+      "properties": {
+        "id": 68,
+        "name": "Platz der Einheit/Bildungsforum",
+        "line": "PotsdamTram93",
+        "order": 3
+      },
+      "id": 68
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0646683,
+          52.3983425
+        ]
+      },
+      "properties": {
+        "id": 67,
+        "name": "Burgstraße/Klinikum",
+        "line": "PotsdamTram93",
+        "order": 3
+      },
+      "id": 67
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0688025,
+          52.4012687
+        ]
+      },
+      "properties": {
+        "id": 66,
+        "name": "Holzmarktstraße",
+        "line": "PotsdamTram93",
+        "order": 3
+      },
+      "id": 66
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0721823,
+          52.4045771
+        ]
+      },
+      "properties": {
+        "id": 65,
+        "name": "Schiffbauergasse/Berliner Straße",
+        "line": "PotsdamTram93",
+        "order": 3
+      },
+      "id": 65
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0754265,
+          52.407715
+        ]
+      },
+      "properties": {
+        "id": 64,
+        "name": "Mangerstraße",
+        "line": "PotsdamTram93",
+        "order": 3
+      },
+      "id": 64
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0798647,
+          52.4099188
+        ]
+      },
+      "properties": {
+        "id": 63,
+        "name": "Leonardo-da-Vinci-Straße",
+        "line": "PotsdamTram93",
+        "order": 3
+      },
+      "id": 63
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0845469,
+          52.4112358
+        ]
+      },
+      "properties": {
+        "id": 62,
+        "name": "Glienicker Brücke",
+        "line": "PotsdamTram93",
+        "order": 3
+      },
+      "id": 62
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.1011966,
+          52.3733498
+        ]
+      },
+      "properties": {
+        "id": 82,
+        "name": "Bisamkiez",
+        "line": "PotsdamTram93",
+        "order": 3
+      },
+      "id": 82
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0919953,
+          52.3749267
+        ]
+      },
+      "properties": {
+        "id": 83,
+        "name": "Magnus-Zeller-Platz",
+        "line": "PotsdamTram93",
+        "order": 3
+      },
+      "id": 83
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0586149,
+          52.3991779
+        ]
+      },
+      "properties": {
+        "id": 81,
+        "name": "Platz der Einheit/Nord",
+        "line": "PotsdamTram93",
+        "order": 3
+      },
+      "id": 81
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0580226,
+          52.3984529
+        ]
+      },
+      "properties": {
+        "id": 84,
+        "name": "Platz der Einheit/West",
+        "line": "PotsdamTram93",
+        "order": 3
+      },
+      "id": 84
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0659347,
+          52.390378
+        ]
+      },
+      "properties": {
+        "id": 85,
+        "name": "S Potsdam Hauptbahnhof/Friedrich-Engels-Straße",
+        "alternate_names": [
+          "Potsdam Hauptbahnhof/Friedrich-Engels-Straße",
+          "Potsdam Hbf/Friedrich-Engels-Straße",
+          "Hauptbahnhof/Friedrich-Engels-Straße",
+          "Hbf/Friedrich-Engels-Straße"
+        ],
+        "line": "PotsdamTram93",
+        "order": 3
+      },
+      "id": 85
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.1086908,
+          52.3931434
+        ]
+      },
+      "properties": {
+        "id": 107,
+        "name": "Fontanestraße",
+        "line": "PotsdamTram94",
+        "order": 4
+      },
+      "id": 107
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.1032624,
+          52.3923595
+        ]
+      },
+      "properties": {
+        "id": 106,
+        "name": "Plantagenstraße",
+        "line": "PotsdamTram94",
+        "order": 4
+      },
+      "id": 106
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0995775,
+          52.3920511
+        ]
+      },
+      "properties": {
+        "id": 105,
+        "name": "Anhaltstraße",
+        "line": "PotsdamTram94",
+        "order": 4
+      },
+      "id": 105
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.094171,
+          52.3915896
+        ]
+      },
+      "properties": {
+        "id": 104,
+        "name": "S Babelsberg/Wattstraße",
+        "alternate_names": [
+          "Babelsberg/Wattstraße"
+        ],
+        "line": "PotsdamTram94",
+        "order": 4
+      },
+      "id": 104
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0917965,
+          52.3920027
+        ]
+      },
+      "properties": {
+        "id": 103,
+        "name": "Rathaus Babelsberg",
+        "line": "PotsdamTram94",
+        "order": 4
+      },
+      "id": 103
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0845282,
+          52.3934487
+        ]
+      },
+      "properties": {
+        "id": 102,
+        "name": "Alt Nowawes",
+        "line": "PotsdamTram94",
+        "order": 4
+      },
+      "id": 102
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0787904,
+          52.3978408
+        ]
+      },
+      "properties": {
+        "id": 101,
+        "name": "Humboldtring/Nuthestraße",
+        "line": "PotsdamTram94",
+        "order": 4
+      },
+      "id": 101
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0716928,
+          52.4014991
+        ]
+      },
+      "properties": {
+        "id": 100,
+        "name": "Schiffbauergasse/Uferweg",
+        "line": "PotsdamTram94",
+        "order": 4
+      },
+      "id": 100
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0688025,
+          52.4012687
+        ]
+      },
+      "properties": {
+        "id": 99,
+        "name": "Holzmarktstraße",
+        "line": "PotsdamTram94",
+        "order": 4
+      },
+      "id": 99
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0646683,
+          52.3983425
+        ]
+      },
+      "properties": {
+        "id": 98,
+        "name": "Burgstraße/Klinikum",
+        "line": "PotsdamTram94",
+        "order": 4
+      },
+      "id": 98
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.059502,
+          52.3975673
+        ]
+      },
+      "properties": {
+        "id": 97,
+        "name": "Platz der Einheit/Bildungsforum",
+        "line": "PotsdamTram94",
+        "order": 4
+      },
+      "id": 97
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0580226,
+          52.3984529
+        ]
+      },
+      "properties": {
+        "id": 96,
+        "name": "Platz der Einheit/West",
+        "line": "PotsdamTram94",
+        "order": 4
+      },
+      "id": 96
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0529334,
+          52.3991454
+        ]
+      },
+      "properties": {
+        "id": 95,
+        "name": "Dortustraße",
+        "line": "PotsdamTram94",
+        "order": 4
+      },
+      "id": 95
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.047011,
+          52.3984463
+        ]
+      },
+      "properties": {
+        "id": 94,
+        "name": "Luisenplatz-Süd/Park Sanssouci",
+        "line": "PotsdamTram94",
+        "order": 4
+      },
+      "id": 94
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0424573,
+          52.396281
+        ]
+      },
+      "properties": {
+        "id": 93,
+        "name": "Feuerbachstraße",
+        "line": "PotsdamTram94",
+        "order": 4
+      },
+      "id": 93
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0381588,
+          52.3945936
+        ]
+      },
+      "properties": {
+        "id": 92,
+        "name": "Auf dem Kiewitt",
+        "line": "PotsdamTram94",
+        "order": 4
+      },
+      "id": 92
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0346093,
+          52.3936426
+        ]
+      },
+      "properties": {
+        "id": 109,
+        "name": "Bahnhof Charlottenhof/Geschwister-Scholl-Straße",
+        "line": "PotsdamTram94",
+        "order": 4
+      },
+      "id": 109
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0285991,
+          52.3936206
+        ]
+      },
+      "properties": {
+        "id": 108,
+        "name": "Schloss Charlottenhof",
+        "line": "PotsdamTram94",
+        "order": 4
+      },
+      "id": 108
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0282616,
+          52.3884835
+        ]
+      },
+      "properties": {
+        "id": 89,
+        "name": "Kastanienallee/Zeppelinstraße",
+        "line": "PotsdamTram94",
+        "order": 4
+      },
+      "id": 89
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0220337,
+          52.384361
+        ]
+      },
+      "properties": {
+        "id": 88,
+        "name": "Im Bogen/Zeppelinstraße",
+        "line": "PotsdamTram94",
+        "order": 4
+      },
+      "id": 88
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0166315,
+          52.3805913
+        ]
+      },
+      "properties": {
+        "id": 87,
+        "name": "Luftschiffhafen",
+        "line": "PotsdamTram94",
+        "order": 4
+      },
+      "id": 87
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0111531,
+          52.3740737
+        ]
+      },
+      "properties": {
+        "id": 86,
+        "name": "Bahnhof Pirschheide",
+        "line": "PotsdamTram94",
+        "order": 4
+      },
+      "id": 86
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.033065,
+          52.3912775
+        ]
+      },
+      "properties": {
+        "id": 90,
+        "name": "Schillerplatz/Schafgraben",
+        "line": "PotsdamTram94",
+        "order": 4
+      },
+      "id": 90
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0366232,
+          52.3932339
+        ]
+      },
+      "properties": {
+        "id": 91,
+        "name": "Bahnhof Charlottenhof",
+        "line": "PotsdamTram94",
+        "order": 4
+      },
+      "id": 91
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0548499,
+          52.4318526
+        ]
+      },
+      "properties": {
+        "id": 110,
+        "name": "Campus Jungfernsee",
+        "line": "PotsdamTram96",
+        "order": 5
+      },
+      "id": 110
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0536159,
+          52.4249228
+        ]
+      },
+      "properties": {
+        "id": 111,
+        "name": "Rote Kaserne",
+        "line": "PotsdamTram96",
+        "order": 5
+      },
+      "id": 111
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0505428,
+          52.4223669
+        ]
+      },
+      "properties": {
+        "id": 112,
+        "name": "Erich-Arendt-Straße",
+        "line": "PotsdamTram96",
+        "order": 5
+      },
+      "id": 112
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0503933,
+          52.4186584
+        ]
+      },
+      "properties": {
+        "id": 113,
+        "name": "Volkspark",
+        "line": "PotsdamTram96",
+        "order": 5
+      },
+      "id": 113
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.051071,
+          52.4140129
+        ]
+      },
+      "properties": {
+        "id": 114,
+        "name": "Campus Fachhochschule",
+        "line": "PotsdamTram96",
+        "order": 5
+      },
+      "id": 114
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0547365,
+          52.4129461
+        ]
+      },
+      "properties": {
+        "id": 115,
+        "name": "Am Schragen",
+        "line": "PotsdamTram96",
+        "order": 5
+      },
+      "id": 115
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0589723,
+          52.411488
+        ]
+      },
+      "properties": {
+        "id": 116,
+        "name": "Puschkinallee",
+        "line": "PotsdamTram96",
+        "order": 5
+      },
+      "id": 116
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0585619,
+          52.4084
+        ]
+      },
+      "properties": {
+        "id": 117,
+        "name": "Reiterweg/Alleestraße",
+        "line": "PotsdamTram96",
+        "order": 5
+      },
+      "id": 117
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0580803,
+          52.405221
+        ]
+      },
+      "properties": {
+        "id": 118,
+        "name": "Rathaus",
+        "line": "PotsdamTram96",
+        "order": 5
+      },
+      "id": 118
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0578542,
+          52.4028209
+        ]
+      },
+      "properties": {
+        "id": 119,
+        "name": "Nauener Tor",
+        "line": "PotsdamTram96",
+        "order": 5
+      },
+      "id": 119
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0577771,
+          52.4006321
+        ]
+      },
+      "properties": {
+        "id": 120,
+        "name": "Brandenburger Straße",
+        "line": "PotsdamTram96",
+        "order": 5
+      },
+      "id": 120
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0580226,
+          52.3984529
+        ]
+      },
+      "properties": {
+        "id": 121,
+        "name": "Platz der Einheit/West",
+        "line": "PotsdamTram96",
+        "order": 5
+      },
+      "id": 121
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0592664,
+          52.3947793
+        ]
+      },
+      "properties": {
+        "id": 122,
+        "name": "Alter Markt/Landtag",
+        "line": "PotsdamTram96",
+        "order": 5
+      },
+      "id": 122
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0637419,
+          52.3920044
+        ]
+      },
+      "properties": {
+        "id": 123,
+        "name": "Lange Brücke",
+        "line": "PotsdamTram96",
+        "order": 5
+      },
+      "id": 123
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0663907,
+          52.3909268
+        ]
+      },
+      "properties": {
+        "id": 124,
+        "name": "S Potsdam Hauptbahnhof",
+        "alternate_names": [
+          "Potsdam Hauptbahnhof",
+          "Potsdam Hbf",
+          "Hauptbahnhof",
+          "Hbf",
+          "S Hauptbahnhof",
+          "S Hbf"
+        ],
+        "line": "PotsdamTram96",
+        "order": 5
+      },
+      "id": 124
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.071955,
+          52.3857579
+        ]
+      },
+      "properties": {
+        "id": 125,
+        "name": "Friedhöfe",
+        "line": "PotsdamTram96",
+        "order": 5
+      },
+      "id": 125
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0756035,
+          52.3824837
+        ]
+      },
+      "properties": {
+        "id": 126,
+        "name": "Sporthalle",
+        "line": "PotsdamTram96",
+        "order": 5
+      },
+      "id": 126
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0784388,
+          52.3805485
+        ]
+      },
+      "properties": {
+        "id": 127,
+        "name": "Kunersdorfer Straße",
+        "line": "PotsdamTram96",
+        "order": 5
+      },
+      "id": 127
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0829446,
+          52.377522
+        ]
+      },
+      "properties": {
+        "id": 128,
+        "name": "Waldstraße/Horstweg",
+        "line": "PotsdamTram96",
+        "order": 5
+      },
+      "id": 128
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0919953,
+          52.3749267
+        ]
+      },
+      "properties": {
+        "id": 129,
+        "name": "Magnus-Zeller-Platz",
+        "line": "PotsdamTram96",
+        "order": 5
+      },
+      "id": 129
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.1011966,
+          52.3733498
+        ]
+      },
+      "properties": {
+        "id": 130,
+        "name": "Bisamkiez",
+        "line": "PotsdamTram96",
+        "order": 5
+      },
+      "id": 130
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.1115649,
+          52.3733116
+        ]
+      },
+      "properties": {
+        "id": 131,
+        "name": "Abzweig Betriebshof ViP",
+        "line": "PotsdamTram96",
+        "order": 5
+      },
+      "id": 131
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.1232704,
+          52.3746899
+        ]
+      },
+      "properties": {
+        "id": 132,
+        "name": "Turmstraße",
+        "line": "PotsdamTram96",
+        "order": 5
+      },
+      "id": 132
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.1295158,
+          52.3754658
+        ]
+      },
+      "properties": {
+        "id": 133,
+        "name": "Johannes-Kepler-Platz",
+        "line": "PotsdamTram96",
+        "order": 5
+      },
+      "id": 133
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.1378846,
+          52.3755464
+        ]
+      },
+      "properties": {
+        "id": 134,
+        "name": "Max-Born-Straße",
+        "line": "PotsdamTram96",
+        "order": 5
+      },
+      "id": 134
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.1418691,
+          52.3745624
+        ]
+      },
+      "properties": {
+        "id": 135,
+        "name": "Gaußstraße",
+        "line": "PotsdamTram96",
+        "order": 5
+      },
+      "id": 135
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.1399499,
+          52.3692386
+        ]
+      },
+      "properties": {
+        "id": 136,
+        "name": "Hans-Albers-Straße",
+        "line": "PotsdamTram96",
+        "order": 5
+      },
+      "id": 136
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.1363025,
+          52.3669744
+        ]
+      },
+      "properties": {
+        "id": 137,
+        "name": "Robert-Baberske-Straße",
+        "line": "PotsdamTram96",
+        "order": 5
+      },
+      "id": 137
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.1359042,
+          52.3643766
+        ]
+      },
+      "properties": {
+        "id": 138,
+        "name": "Priesterweg",
+        "line": "PotsdamTram96",
+        "order": 5
+      },
+      "id": 138
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.1370913,
+          52.3619684
+        ]
+      },
+      "properties": {
+        "id": 139,
+        "name": "Am Hirtengraben",
+        "line": "PotsdamTram96",
+        "order": 5
+      },
+      "id": 139
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.1372236,
+          52.3582571
+        ]
+      },
+      "properties": {
+        "id": 140,
+        "name": "Marie-Juchacz-Straße",
+        "line": "PotsdamTram96",
+        "order": 5
+      },
+      "id": 140
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.059502,
+          52.3975673
+        ]
+      },
+      "properties": {
+        "id": 142,
+        "name": "Platz der Einheit/Bildungsforum",
+        "line": "PotsdamTram96",
+        "order": 5
+      },
+      "id": 142
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0586149,
+          52.3991779
+        ]
+      },
+      "properties": {
+        "id": 141,
+        "name": "Platz der Einheit/Nord",
+        "line": "PotsdamTram96",
+        "order": 5
+      },
+      "id": 141
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0586149,
+          52.3991779
+        ]
+      },
+      "properties": {
+        "id": 143,
+        "name": "Platz der Einheit/Nord",
+        "line": "PotsdamTram98",
+        "order": 6
+      },
+      "id": 143
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0580226,
+          52.3984529
+        ]
+      },
+      "properties": {
+        "id": 144,
+        "name": "Platz der Einheit/West",
+        "line": "PotsdamTram98",
+        "order": 6
+      },
+      "id": 144
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0592664,
+          52.3947793
+        ]
+      },
+      "properties": {
+        "id": 145,
+        "name": "Alter Markt/Landtag",
+        "line": "PotsdamTram98",
+        "order": 6
+      },
+      "id": 145
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0637419,
+          52.3920044
+        ]
+      },
+      "properties": {
+        "id": 146,
+        "name": "Lange Brücke",
+        "line": "PotsdamTram98",
+        "order": 6
+      },
+      "id": 146
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0663907,
+          52.3909268
+        ]
+      },
+      "properties": {
+        "id": 147,
+        "name": "S Potsdam Hauptbahnhof",
+        "alternate_names": [
+          "Potsdam Hauptbahnhof",
+          "Potsdam Hbf",
+          "Hauptbahnhof",
+          "Hbf",
+          "S Hauptbahnhof",
+          "S Hbf"
+        ],
+        "line": "PotsdamTram98",
+        "order": 6
+      },
+      "id": 147
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.071955,
+          52.3857579
+        ]
+      },
+      "properties": {
+        "id": 148,
+        "name": "Friedhöfe",
+        "line": "PotsdamTram98",
+        "order": 6
+      },
+      "id": 148
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0756035,
+          52.3824837
+        ]
+      },
+      "properties": {
+        "id": 149,
+        "name": "Sporthalle",
+        "line": "PotsdamTram98",
+        "order": 6
+      },
+      "id": 149
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0784388,
+          52.3805485
+        ]
+      },
+      "properties": {
+        "id": 150,
+        "name": "Kunersdorfer Straße",
+        "line": "PotsdamTram98",
+        "order": 6
+      },
+      "id": 150
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0829446,
+          52.377522
+        ]
+      },
+      "properties": {
+        "id": 151,
+        "name": "Waldstraße/Horstweg",
+        "line": "PotsdamTram98",
+        "order": 6
+      },
+      "id": 151
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.088157,
+          52.3730978
+        ]
+      },
+      "properties": {
+        "id": 152,
+        "name": "Eduard-Claudius-Straße/Heinrich-Mann-Allee",
+        "line": "PotsdamTram98",
+        "order": 6
+      },
+      "id": 152
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0917917,
+          52.368211
+        ]
+      },
+      "properties": {
+        "id": 153,
+        "name": "Zum Kahleberg",
+        "line": "PotsdamTram98",
+        "order": 6
+      },
+      "id": 153
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0935246,
+          52.3658201
+        ]
+      },
+      "properties": {
+        "id": 154,
+        "name": "Friedrich-Wolf-Straße",
+        "line": "PotsdamTram98",
+        "order": 6
+      },
+      "id": 154
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0949834,
+          52.3635709
+        ]
+      },
+      "properties": {
+        "id": 155,
+        "name": "Am Moosfenn",
+        "line": "PotsdamTram98",
+        "order": 6
+      },
+      "id": 155
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0974061,
+          52.359294
+        ]
+      },
+      "properties": {
+        "id": 156,
+        "name": "Bahnhof Rehbrücke",
+        "line": "PotsdamTram98",
+        "order": 6
+      },
+      "id": 156
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.1011966,
+          52.3733498
+        ]
+      },
+      "properties": {
+        "id": 157,
+        "name": "Bisamkiez",
+        "line": "PotsdamTram98",
+        "order": 6
+      },
+      "id": 157
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0919953,
+          52.3749267
+        ]
+      },
+      "properties": {
+        "id": 158,
+        "name": "Magnus-Zeller-Platz",
+        "line": "PotsdamTram98",
+        "order": 6
+      },
+      "id": 158
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.059502,
+          52.3975673
+        ]
+      },
+      "properties": {
+        "id": 159,
+        "name": "Platz der Einheit/Bildungsforum",
+        "line": "PotsdamTram98",
+        "order": 6
+      },
+      "id": 159
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.1011966,
+          52.3733498
+        ]
+      },
+      "properties": {
+        "id": 180,
+        "name": "Bisamkiez",
+        "line": "PotsdamTram99",
+        "order": 7
+      },
+      "id": 180
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0919953,
+          52.3749267
+        ]
+      },
+      "properties": {
+        "id": 179,
+        "name": "Magnus-Zeller-Platz",
+        "line": "PotsdamTram99",
+        "order": 7
+      },
+      "id": 179
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0829446,
+          52.377522
+        ]
+      },
+      "properties": {
+        "id": 178,
+        "name": "Waldstraße/Horstweg",
+        "line": "PotsdamTram99",
+        "order": 7
+      },
+      "id": 178
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0784388,
+          52.3805485
+        ]
+      },
+      "properties": {
+        "id": 177,
+        "name": "Kunersdorfer Straße",
+        "line": "PotsdamTram99",
+        "order": 7
+      },
+      "id": 177
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0756035,
+          52.3824837
+        ]
+      },
+      "properties": {
+        "id": 176,
+        "name": "Sporthalle",
+        "line": "PotsdamTram99",
+        "order": 7
+      },
+      "id": 176
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.071955,
+          52.3857579
+        ]
+      },
+      "properties": {
+        "id": 175,
+        "name": "Friedhöfe",
+        "line": "PotsdamTram99",
+        "order": 7
+      },
+      "id": 175
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0663907,
+          52.3909268
+        ]
+      },
+      "properties": {
+        "id": 174,
+        "name": "S Potsdam Hauptbahnhof",
+        "alternate_names": [
+          "Potsdam Hauptbahnhof",
+          "Potsdam Hbf",
+          "Hauptbahnhof",
+          "Hbf",
+          "S Hauptbahnhof",
+          "S Hbf"
+        ],
+        "line": "PotsdamTram99",
+        "order": 7
+      },
+      "id": 174
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0637419,
+          52.3920044
+        ]
+      },
+      "properties": {
+        "id": 173,
+        "name": "Lange Brücke",
+        "line": "PotsdamTram99",
+        "order": 7
+      },
+      "id": 173
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0592664,
+          52.3947793
+        ]
+      },
+      "properties": {
+        "id": 172,
+        "name": "Alter Markt/Landtag",
+        "line": "PotsdamTram99",
+        "order": 7
+      },
+      "id": 172
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.059502,
+          52.3975673
+        ]
+      },
+      "properties": {
+        "id": 171,
+        "name": "Platz der Einheit/Bildungsforum",
+        "line": "PotsdamTram99",
+        "order": 7
+      },
+      "id": 171
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0646683,
+          52.3983425
+        ]
+      },
+      "properties": {
+        "id": 169,
+        "name": "Burgstraße/Klinikum",
+        "line": "PotsdamTram99",
+        "order": 7
+      },
+      "id": 169
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0688025,
+          52.4012687
+        ]
+      },
+      "properties": {
+        "id": 168,
+        "name": "Holzmarktstraße",
+        "line": "PotsdamTram99",
+        "order": 7
+      },
+      "id": 168
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0716928,
+          52.4014991
+        ]
+      },
+      "properties": {
+        "id": 167,
+        "name": "Schiffbauergasse/Uferweg",
+        "line": "PotsdamTram99",
+        "order": 7
+      },
+      "id": 167
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0787904,
+          52.3978408
+        ]
+      },
+      "properties": {
+        "id": 166,
+        "name": "Humboldtring/Nuthestraße",
+        "line": "PotsdamTram99",
+        "order": 7
+      },
+      "id": 166
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0845282,
+          52.3934487
+        ]
+      },
+      "properties": {
+        "id": 165,
+        "name": "Alt Nowawes",
+        "line": "PotsdamTram99",
+        "order": 7
+      },
+      "id": 165
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0917965,
+          52.3920027
+        ]
+      },
+      "properties": {
+        "id": 164,
+        "name": "Rathaus Babelsberg",
+        "line": "PotsdamTram99",
+        "order": 7
+      },
+      "id": 164
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.094171,
+          52.3915896
+        ]
+      },
+      "properties": {
+        "id": 163,
+        "name": "S Babelsberg/Wattstraße",
+        "alternate_names": [
+          "Babelsberg/Wattstraße"
+        ],
+        "line": "PotsdamTram99",
+        "order": 7
+      },
+      "id": 163
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0995775,
+          52.3920511
+        ]
+      },
+      "properties": {
+        "id": 162,
+        "name": "Anhaltstraße",
+        "line": "PotsdamTram99",
+        "order": 7
+      },
+      "id": 162
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.1032624,
+          52.3923595
+        ]
+      },
+      "properties": {
+        "id": 161,
+        "name": "Plantagenstraße",
+        "line": "PotsdamTram99",
+        "order": 7
+      },
+      "id": 161
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.1086908,
+          52.3931434
+        ]
+      },
+      "properties": {
+        "id": 160,
+        "name": "Fontanestraße",
+        "line": "PotsdamTram99",
+        "order": 7
+      },
+      "id": 160
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0586149,
+          52.3991779
+        ]
+      },
+      "properties": {
+        "id": 170,
+        "name": "Platz der Einheit/Nord",
+        "line": "PotsdamTram99",
+        "order": 7
+      },
+      "id": 170
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0580226,
+          52.3984529
+        ]
+      },
+      "properties": {
+        "id": 181,
+        "name": "Platz der Einheit/West",
+        "line": "PotsdamTram99",
+        "order": 7
+      },
+      "id": 181
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0659347,
+          52.390378
+        ]
+      },
+      "properties": {
+        "id": 182,
+        "name": "S Potsdam Hauptbahnhof/Friedrich-Engels-Straße",
+        "alternate_names": [
+          "Potsdam Hauptbahnhof/Friedrich-Engels-Straße",
+          "Potsdam Hbf/Friedrich-Engels-Straße",
+          "Hauptbahnhof/Friedrich-Engels-Straße",
+          "Hbf/Friedrich-Engels-Straße"
+        ],
+        "line": "PotsdamTram99",
+        "order": 7
+      },
+      "id": 182
+    }
+  ],
+  "properties": {
+    "totalStations": 69,
+    "stationsPerLine": {
+      "PotsdamTram91": 29,
+      "PotsdamTram92": 32,
+      "PotsdamTram93": 24,
+      "PotsdamTram94": 24,
+      "PotsdamTram96": 33,
+      "PotsdamTram98": 17,
+      "PotsdamTram99": 23
+    },
+    "nextStationId": 183
+  }
+}

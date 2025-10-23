@@ -1,0 +1,2614 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.655357, 39.202332]
+      },
+      "properties": {
+        "id": 1,
+        "name": "Linthicum",
+        "line": "MarylandLightRailLightRaillink"
+      },
+      "id": 1
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.02192, 38.90658]
+      },
+      "properties": {
+        "id": 2,
+        "name": "Mt Vernon Sq",
+        "long_name": "Mount Vernon Square/7th Street Convention Center",
+        "line": "WMATAMetroGreen"
+      },
+      "id": 2
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.02192, 38.90658]
+      },
+      "properties": {
+        "id": 3,
+        "name": "Mt Vernon Sq",
+        "long_name": "Mount Vernon Square/7th Street Convention Center",
+        "line": "WMATAMetroYellow"
+      },
+      "id": 3
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.460685, 38.99204]
+      },
+      "properties": {
+        "id": 4,
+        "name": "Loudoun Gateway",
+        "line": "WMATAMetroSilver"
+      },
+      "id": 4
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.995559, 38.863287]
+      },
+      "properties": {
+        "id": 5,
+        "name": "Anacostia",
+        "line": "WMATAMetroGreen"
+      },
+      "id": 5
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.871871, 38.948028]
+      },
+      "properties": {
+        "id": 6,
+        "name": "New Carrollton",
+        "line": "WMATAMetroOrange"
+      },
+      "id": 6
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.619904, 39.278946]
+      },
+      "properties": {
+        "id": 7,
+        "name": "Hamburg Street",
+        "line": "MarylandLightRailLightRaillink"
+      },
+      "id": 7
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.360185, 38.952768]
+      },
+      "properties": {
+        "id": 8,
+        "name": "Reston Town Center",
+        "line": "WMATAMetroSilver"
+      },
+      "id": 8
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.634933, 39.256016]
+      },
+      "properties": {
+        "id": 9,
+        "name": "Cherry Hill",
+        "line": "MarylandLightRailLightRaillink"
+      },
+      "id": 9
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.046494, 38.833199]
+      },
+      "properties": {
+        "id": 10,
+        "name": "Potomac Yard",
+        "line": "WMATAMetroBlue"
+      },
+      "id": 10
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.046494, 38.833199]
+      },
+      "properties": {
+        "id": 11,
+        "name": "Potomac Yard",
+        "line": "WMATAMetroYellow"
+      },
+      "id": 11
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.911817, 38.826718]
+      },
+      "properties": {
+        "id": 12,
+        "name": "Branch Ave",
+        "line": "WMATAMetroGreen"
+      },
+      "id": 12
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.92834, 38.978303]
+      },
+      "properties": {
+        "id": 13,
+        "name": "College Park-U Of Md",
+        "short_name": "College Park",
+        "long_name": "College Park–University of Maryland",
+        "line": "WMATAMetroGreen"
+      },
+      "id": 13
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.935163, 38.908224]
+      },
+      "properties": {
+        "id": 14,
+        "name": "Deanwood",
+        "line": "WMATAMetroOrange"
+      },
+      "id": 14
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.022802, 38.89838]
+      },
+      "properties": {
+        "id": 15,
+        "name": "Gallery Place",
+        "long_name": "Gallery Place–Chinatown",
+        "short_name": "Chinatown",
+        "line": "WMATAMetroGreen"
+      },
+      "id": 15
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.022802, 38.89838]
+      },
+      "properties": {
+        "id": 16,
+        "name": "Gallery Place",
+        "long_name": "Gallery Place–Chinatown",
+        "short_name": "Chinatown",
+        "line": "WMATAMetroRed"
+      },
+      "id": 16
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.022802, 38.89838]
+      },
+      "properties": {
+        "id": 17,
+        "name": "Gallery Place",
+        "long_name": "Gallery Place–Chinatown",
+        "short_name": "Chinatown",
+        "line": "WMATAMetroYellow"
+      },
+      "id": 17
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.05011, 39.037543]
+      },
+      "properties": {
+        "id": 18,
+        "name": "Wheaton",
+        "line": "WMATAMetroRed"
+      },
+      "id": 18
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.241891, 38.929212]
+      },
+      "properties": {
+        "id": 19,
+        "name": "Spring Hill",
+        "line": "WMATAMetroSilver"
+      },
+      "id": 19
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.706095, 39.352589]
+      },
+      "properties": {
+        "id": 20,
+        "name": "Reisterstown Plaza",
+        "line": "MarylandMetroMetroSubwaylink"
+      },
+      "id": 20
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.780768, 39.407642]
+      },
+      "properties": {
+        "id": 21,
+        "name": "Owings Mills",
+        "line": "MarylandMetroMetroSubwaylink"
+      },
+      "id": 21
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.632927, 39.235123]
+      },
+      "properties": {
+        "id": 22,
+        "name": "Baltimore Highlands",
+        "line": "MarylandLightRailLightRaillink"
+      },
+      "id": 22
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.661728, 39.482162]
+      },
+      "properties": {
+        "id": 23,
+        "name": "Gilroy Road",
+        "line": "MarylandLightRailLightRaillink"
+      },
+      "id": 23
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.156944, 38.886026]
+      },
+      "properties": {
+        "id": 24,
+        "name": "East Falls Church",
+        "line": "WMATAMetroOrange"
+      },
+      "id": 24
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.156944, 38.886026]
+      },
+      "properties": {
+        "id": 25,
+        "name": "East Falls Church",
+        "line": "WMATAMetroSilver"
+      },
+      "id": 25
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.977074, 38.886927]
+      },
+      "properties": {
+        "id": 26,
+        "name": "Stadium-Armory",
+        "line": "WMATAMetroBlue"
+      },
+      "id": 26
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.977074, 38.886927]
+      },
+      "properties": {
+        "id": 27,
+        "name": "Stadium-Armory",
+        "line": "WMATAMetroOrange"
+      },
+      "id": 27
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.977074, 38.886927]
+      },
+      "properties": {
+        "id": 28,
+        "name": "Stadium-Armory",
+        "line": "WMATAMetroSilver"
+      },
+      "id": 28
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.059516, 38.861852]
+      },
+      "properties": {
+        "id": 29,
+        "name": "Pentagon City",
+        "line": "WMATAMetroBlue"
+      },
+      "id": 29
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.059516, 38.861852]
+      },
+      "properties": {
+        "id": 30,
+        "name": "Pentagon City",
+        "line": "WMATAMetroYellow"
+      },
+      "id": 30
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.003311, 38.906617]
+      },
+      "properties": {
+        "id": 31,
+        "name": "Noma-Gallaudet U",
+        "short_name": "Noma",
+        "line": "WMATAMetroRed"
+      },
+      "id": 31
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.053548, 39.061767]
+      },
+      "properties": {
+        "id": 32,
+        "name": "Glenmont",
+        "line": "WMATAMetroRed"
+      },
+      "id": 32
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.340316, 38.947832]
+      },
+      "properties": {
+        "id": 33,
+        "name": "Wiehle-Reston East",
+        "line": "WMATAMetroSilver"
+      },
+      "id": 33
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.63308, 39.172092]
+      },
+      "properties": {
+        "id": 34,
+        "name": "Glen Burnie (Cromwell)",
+        "short_name": "Glen Burnie",
+        "line": "MarylandLightRailLightRaillink"
+      },
+      "id": 34
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.891265, 38.933504]
+      },
+      "properties": {
+        "id": 35,
+        "name": "Landover",
+        "line": "WMATAMetroOrange"
+      },
+      "id": 35
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.028132, 38.893834]
+      },
+      "properties": {
+        "id": 36,
+        "name": "Federal Triangle",
+        "line": "WMATAMetroBlue"
+      },
+      "id": 36
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.028132, 38.893834]
+      },
+      "properties": {
+        "id": 37,
+        "name": "Federal Triangle",
+        "line": "WMATAMetroOrange"
+      },
+      "id": 37
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.028132, 38.893834]
+      },
+      "properties": {
+        "id": 38,
+        "name": "Federal Triangle",
+        "line": "WMATAMetroSilver"
+      },
+      "id": 38
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.988439, 38.845695]
+      },
+      "properties": {
+        "id": 39,
+        "name": "Congress Heights",
+        "line": "WMATAMetroGreen"
+      },
+      "id": 39
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.641403, 39.221573]
+      },
+      "properties": {
+        "id": 40,
+        "name": "Nursery Road",
+        "line": "MarylandLightRailLightRaillink"
+      },
+      "id": 40
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.98558, 38.881271]
+      },
+      "properties": {
+        "id": 41,
+        "name": "Potomac Ave",
+        "line": "WMATAMetroBlue"
+      },
+      "id": 41
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.98558, 38.881271]
+      },
+      "properties": {
+        "id": 42,
+        "name": "Potomac Ave",
+        "line": "WMATAMetroOrange"
+      },
+      "id": 42
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.98558, 38.881271]
+      },
+      "properties": {
+        "id": 43,
+        "name": "Potomac Ave",
+        "line": "WMATAMetroSilver"
+      },
+      "id": 43
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.415295, 38.960758]
+      },
+      "properties": {
+        "id": 44,
+        "name": "Innovation Center",
+        "line": "WMATAMetroSilver"
+      },
+      "id": 44
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.385178, 38.952821]
+      },
+      "properties": {
+        "id": 45,
+        "name": "Herndon",
+        "line": "WMATAMetroSilver"
+      },
+      "id": 45
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.996075, 38.884632]
+      },
+      "properties": {
+        "id": 46,
+        "name": "Eastern Market",
+        "line": "WMATAMetroBlue"
+      },
+      "id": 46
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.996075, 38.884632]
+      },
+      "properties": {
+        "id": 47,
+        "name": "Eastern Market",
+        "line": "WMATAMetroOrange"
+      },
+      "id": 47
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.996075, 38.884632]
+      },
+      "properties": {
+        "id": 48,
+        "name": "Eastern Market",
+        "line": "WMATAMetroSilver"
+      },
+      "id": 48
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.0753, 38.79383]
+      },
+      "properties": {
+        "id": 49,
+        "name": "Huntington",
+        "line": "WMATAMetroYellow"
+      },
+      "id": 49
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.031307, 38.993799]
+      },
+      "properties": {
+        "id": 50,
+        "name": "Silver Spring",
+        "line": "WMATAMetroRed"
+      },
+      "id": 50
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.616275, 39.289452]
+      },
+      "properties": {
+        "id": 51,
+        "name": "Charles Center",
+        "line": "MarylandMetroMetroSubwaylink"
+      },
+      "id": 51
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.053722, 38.814087]
+      },
+      "properties": {
+        "id": 52,
+        "name": "Braddock Rd",
+        "line": "WMATAMetroBlue"
+      },
+      "id": 52
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.053722, 38.814087]
+      },
+      "properties": {
+        "id": 53,
+        "name": "Braddock Rd",
+        "line": "WMATAMetroYellow"
+      },
+      "id": 53
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.649727, 39.37664]
+      },
+      "properties": {
+        "id": 54,
+        "name": "Falls Road",
+        "line": "MarylandLightRailLightRaillink"
+      },
+      "id": 54
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.975211, 38.840954]
+      },
+      "properties": {
+        "id": 55,
+        "name": "Southern Ave",
+        "line": "WMATAMetroGreen"
+      },
+      "id": 55
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.071156, 38.800354]
+      },
+      "properties": {
+        "id": 56,
+        "name": "Eisenhower Ave",
+        "line": "WMATAMetroYellow"
+      },
+      "id": 56
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.622589, 39.311878]
+      },
+      "properties": {
+        "id": 57,
+        "name": "North Avenue",
+        "line": "MarylandLightRailLightRaillink"
+      },
+      "id": 57
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.916662, 38.916641]
+      },
+      "properties": {
+        "id": 58,
+        "name": "Cheverly",
+        "line": "WMATAMetroOrange"
+      },
+      "id": 58
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.002296, 38.951786]
+      },
+      "properties": {
+        "id": 59,
+        "name": "Fort Totten",
+        "line": "WMATAMetroGreen"
+      },
+      "id": 59
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.002296, 38.951786]
+      },
+      "properties": {
+        "id": 60,
+        "name": "Fort Totten",
+        "line": "WMATAMetroRed"
+      },
+      "id": 60
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.087144, 38.890153]
+      },
+      "properties": {
+        "id": 61,
+        "name": "Court House",
+        "line": "WMATAMetroOrange"
+      },
+      "id": 61
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.087144, 38.890153]
+      },
+      "properties": {
+        "id": 62,
+        "name": "Court House",
+        "line": "WMATAMetroSilver"
+      },
+      "id": 62
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.221589, 38.920685]
+      },
+      "properties": {
+        "id": 63,
+        "name": "Tysons",
+        "line": "WMATAMetroSilver"
+      },
+      "id": 63
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.058127, 38.934912]
+      },
+      "properties": {
+        "id": 64,
+        "name": "Cleveland Park",
+        "line": "WMATAMetroRed"
+      },
+      "id": 64
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.040464, 38.901342]
+      },
+      "properties": {
+        "id": 65,
+        "name": "Farragut West",
+        "line": "WMATAMetroBlue"
+      },
+      "id": 65
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.040464, 38.901342]
+      },
+      "properties": {
+        "id": 66,
+        "name": "Farragut West",
+        "line": "WMATAMetroOrange"
+      },
+      "id": 66
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.040464, 38.901342]
+      },
+      "properties": {
+        "id": 67,
+        "name": "Farragut West",
+        "line": "WMATAMetroSilver"
+      },
+      "id": 67
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.743665, 39.371003]
+      },
+      "properties": {
+        "id": 68,
+        "name": "Old Court",
+        "line": "MarylandMetroMetroSubwaylink"
+      },
+      "id": 68
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.658943, 39.489548]
+      },
+      "properties": {
+        "id": 69,
+        "name": "Mccormick Road",
+        "line": "MarylandLightRailLightRaillink"
+      },
+      "id": 69
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.039668, 38.903147]
+      },
+      "properties": {
+        "id": 70,
+        "name": "Farragut North",
+        "line": "WMATAMetroRed"
+      },
+      "id": 70
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.67321, 39.191429]
+      },
+      "properties": {
+        "id": 71,
+        "name": "BWI Business District",
+        "line": "MarylandLightRailLightRaillink"
+      },
+      "id": 71
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.64608, 39.214344]
+      },
+      "properties": {
+        "id": 72,
+        "name": "North Linthicum",
+        "line": "MarylandLightRailLightRaillink"
+      },
+      "id": 72
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.02752, 38.917009]
+      },
+      "properties": {
+        "id": 73,
+        "name": "U St",
+        "long_name": "U Street/African-Amer Civil War Memorial/Cardozo",
+        "line": "WMATAMetroGreen"
+      },
+      "id": 73
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.619527, 39.283157]
+      },
+      "properties": {
+        "id": 74,
+        "name": "Camden Station Marc",
+        "line": "MarylandLightRailLightRaillink"
+      },
+      "id": 74
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.032521, 38.927502]
+      },
+      "properties": {
+        "id": 76,
+        "name": "Columbia Heights",
+        "line": "WMATAMetroGreen"
+      },
+      "id": 76
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.096758, 38.998225]
+      },
+      "properties": {
+        "id": 77,
+        "name": "Medical Center",
+        "line": "WMATAMetroRed"
+      },
+      "id": 77
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.672632, 39.336464]
+      },
+      "properties": {
+        "id": 78,
+        "name": "West Cold Spring",
+        "line": "MarylandMetroMetroSubwaylink"
+      },
+      "id": 78
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.652759, 39.318211]
+      },
+      "properties": {
+        "id": 79,
+        "name": "Mondawmin",
+        "line": "MarylandMetroMetroSubwaylink"
+      },
+      "id": 79
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.005215, 38.885073]
+      },
+      "properties": {
+        "id": 80,
+        "name": "Capitol South",
+        "line": "WMATAMetroBlue"
+      },
+      "id": 80
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.005215, 38.885073]
+      },
+      "properties": {
+        "id": 81,
+        "name": "Capitol South",
+        "line": "WMATAMetroOrange"
+      },
+      "id": 81
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.005215, 38.885073]
+      },
+      "properties": {
+        "id": 82,
+        "name": "Capitol South",
+        "line": "WMATAMetroSilver"
+      },
+      "id": 82
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.994546, 38.933126]
+      },
+      "properties": {
+        "id": 83,
+        "name": "Brookland–CUA",
+        "short_name": "Brookland",
+        "long_name": "Brookland-Catholic University of America",
+        "line": "WMATAMetroRed"
+      },
+      "id": 83
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.079672, 38.948886]
+      },
+      "properties": {
+        "id": 84,
+        "name": "Tenleytown-AU",
+        "long_name": "Tenleytown-American University",
+        "short_name": "Tenleytown",
+        "line": "WMATAMetroRed"
+      },
+      "id": 84
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.062953, 38.943211]
+      },
+      "properties": {
+        "id": 85,
+        "name": "Van Ness-UDC",
+        "long_name": "Van Ness-University of the District of Columbia",
+        "short_name": "Van Ness",
+        "line": "WMATAMetroRed"
+      },
+      "id": 85
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.629974, 39.241997]
+      },
+      "properties": {
+        "id": 86,
+        "name": "Patapsco",
+        "line": "MarylandLightRailLightRaillink"
+      },
+      "id": 86
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.167991, 38.766505]
+      },
+      "properties": {
+        "id": 87,
+        "name": "Franconia-Springfield",
+        "line": "WMATAMetroBlue"
+      },
+      "id": 87
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.028631, 38.888506]
+      },
+      "properties": {
+        "id": 88,
+        "name": "Smithsonian",
+        "line": "WMATAMetroBlue"
+      },
+      "id": 88
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.028631, 38.888506]
+      },
+      "properties": {
+        "id": 89,
+        "name": "Smithsonian",
+        "line": "WMATAMetroOrange"
+      },
+      "id": 89
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.028631, 38.888506]
+      },
+      "properties": {
+        "id": 90,
+        "name": "Smithsonian",
+        "line": "WMATAMetroSilver"
+      },
+      "id": 90
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.654289, 39.496288]
+      },
+      "properties": {
+        "id": 91,
+        "name": "Hunt Valley",
+        "line": "MarylandLightRailLightRaillink"
+      },
+      "id": 91
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.054113, 38.869195]
+      },
+      "properties": {
+        "id": 92,
+        "name": "Pentagon",
+        "line": "WMATAMetroBlue"
+      },
+      "id": 92
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.054113, 38.869195]
+      },
+      "properties": {
+        "id": 93,
+        "name": "Pentagon",
+        "line": "WMATAMetroYellow"
+      },
+      "id": 93
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.050104, 38.9007]
+      },
+      "properties": {
+        "id": 94,
+        "name": "Foggy Bottom-GWU",
+        "short_name": "Foggy Bottom",
+        "line": "WMATAMetroBlue"
+      },
+      "id": 94
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.050104, 38.9007]
+      },
+      "properties": {
+        "id": 95,
+        "name": "Foggy Bottom-GWU",
+        "short_name": "Foggy Bottom",
+        "line": "WMATAMetroOrange"
+      },
+      "id": 95
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.050104, 38.9007]
+      },
+      "properties": {
+        "id": 96,
+        "name": "Foggy Bottom-GWU",
+        "short_name": "Foggy Bottom",
+        "line": "WMATAMetroSilver"
+      },
+      "id": 96
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.227243, 38.883649]
+      },
+      "properties": {
+        "id": 97,
+        "name": "Dunn Loring",
+        "long_name": "Dunn Loring-Merrifield",
+        "line": "WMATAMetroOrange"
+      },
+      "id": 97
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.015937, 38.885076]
+      },
+      "properties": {
+        "id": 98,
+        "name": "Federal Center SW",
+        "line": "WMATAMetroBlue"
+      },
+      "id": 98
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.015937, 38.885076]
+      },
+      "properties": {
+        "id": 99,
+        "name": "Federal Center SW",
+        "line": "WMATAMetroOrange"
+      },
+      "id": 99
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.015937, 38.885076]
+      },
+      "properties": {
+        "id": 100,
+        "name": "Federal Center SW",
+        "line": "WMATAMetroSilver"
+      },
+      "id": 100
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.189221, 38.900788]
+      },
+      "properties": {
+        "id": 101,
+        "name": "West Falls Church",
+        "line": "WMATAMetroOrange"
+      },
+      "id": 101
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.095442, 38.886739]
+      },
+      "properties": {
+        "id": 102,
+        "name": "Clarendon",
+        "line": "WMATAMetroOrange"
+      },
+      "id": 102
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.095442, 38.886739]
+      },
+      "properties": {
+        "id": 103,
+        "name": "Clarendon",
+        "line": "WMATAMetroSilver"
+      },
+      "id": 103
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.121216, 39.062696]
+      },
+      "properties": {
+        "id": 104,
+        "name": "Twinbrook",
+        "line": "WMATAMetroRed"
+      },
+      "id": 104
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.64016, 39.183651]
+      },
+      "properties": {
+        "id": 105,
+        "name": "Ferndale",
+        "line": "MarylandLightRailLightRaillink"
+      },
+      "id": 105
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.623166, 39.301515]
+      },
+      "properties": {
+        "id": 106,
+        "name": "State Center",
+        "line": "MarylandMetroMetroSubwaylink"
+      },
+      "id": 106
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.628181, 39.433868]
+      },
+      "properties": {
+        "id": 107,
+        "name": "Timonium",
+        "line": "MarylandLightRailLightRaillink"
+      },
+      "id": 107
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.647903, 39.344097]
+      },
+      "properties": {
+        "id": 108,
+        "name": "Cold Spring Lane",
+        "line": "MarylandLightRailLightRaillink"
+      },
+      "id": 108
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.017559, 38.876456]
+      },
+      "properties": {
+        "id": 109,
+        "name": "Waterfront",
+        "line": "WMATAMetroGreen"
+      },
+      "id": 109
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.64259, 39.310195]
+      },
+      "properties": {
+        "id": 110,
+        "name": "Penn North",
+        "line": "MarylandMetroMetroSubwaylink"
+      },
+      "id": 110
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.605583, 39.289915]
+      },
+      "properties": {
+        "id": 111,
+        "name": "Shot Tower",
+        "line": "MarylandMetroMetroSubwaylink"
+      },
+      "id": 111
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.627144, 39.428959]
+      },
+      "properties": {
+        "id": 112,
+        "name": "Lutherville",
+        "line": "MarylandLightRailLightRaillink"
+      },
+      "id": 112
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.911197, 39.011093]
+      },
+      "properties": {
+        "id": 113,
+        "name": "Greenbelt",
+        "line": "WMATAMetroGreen"
+      },
+      "id": 113
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.619461, 39.288818]
+      },
+      "properties": {
+        "id": 114,
+        "name": "Baltimore Arena (University Center)",
+        "short_name": "Baltimore Arena",
+        "line": "MarylandLightRailLightRaillink"
+      },
+      "id": 114
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.021923, 38.913518]
+      },
+      "properties": {
+        "id": 115,
+        "name": "Shaw-Howard U",
+        "short_name": "Shaw",
+        "line": "WMATAMetroGreen"
+      },
+      "id": 115
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.448148, 38.955784]
+      },
+      "properties": {
+        "id": 116,
+        "name": "Washington Dulles International Airport",
+        "short_name": "Dulles Airport",
+        "long_name": "Dulles International Airport",
+        "line": "WMATAMetroSilver"
+      },
+      "id": 116
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.491537, 39.005283]
+      },
+      "properties": {
+        "id": 117,
+        "name": "Ashburn",
+        "line": "WMATAMetroSilver"
+      },
+      "id": 117
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.11322, 38.88226]
+      },
+      "properties": {
+        "id": 118,
+        "name": "Ballston-MU",
+        "short_name": "Ballston",
+        "long_name": "Ballston-Marymount University",
+        "line": "WMATAMetroOrange"
+      },
+      "id": 118
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.11322, 38.88226]
+      },
+      "properties": {
+        "id": 119,
+        "name": "Ballston-MU",
+        "short_name": "Ballston",
+        "long_name": "Ballston-Marymount University",
+        "line": "WMATAMetroSilver"
+      },
+      "id": 119
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.023537, 38.937367]
+      },
+      "properties": {
+        "id": 120,
+        "name": "Georgia Ave-Petworth",
+        "line": "WMATAMetroGreen"
+      },
+      "id": 120
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.621236, 39.292731]
+      },
+      "properties": {
+        "id": 121,
+        "name": "Lexington Market",
+        "line": "MarylandLightRailLightRaillink"
+      },
+      "id": 121
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.669823, 39.182827]
+      },
+      "properties": {
+        "id": 122,
+        "name": "BWI Airport",
+        "line": "MarylandLightRailLightRaillink"
+      },
+      "id": 122
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.016804, 38.896218]
+      },
+      "properties": {
+        "id": 123,
+        "name": "Judiciary Sq",
+        "line": "WMATAMetroRed"
+      },
+      "id": 123
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.894135, 38.886731]
+      },
+      "properties": {
+        "id": 124,
+        "name": "Addison Rd",
+        "long_name": "Addison Road-Seat Pleasant",
+        "line": "WMATAMetroBlue"
+      },
+      "id": 124
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.894135, 38.886731]
+      },
+      "properties": {
+        "id": 125,
+        "name": "Addison Rd",
+        "long_name": "Addison Road-Seat Pleasant",
+        "line": "WMATAMetroSilver"
+      },
+      "id": 125
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.021913, 38.884893]
+      },
+      "properties": {
+        "id": 126,
+        "name": "L'Enfant Plaza",
+        "line": "WMATAMetroBlue"
+      },
+      "id": 126
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.021913, 38.884893]
+      },
+      "properties": {
+        "id": 127,
+        "name": "L'Enfant Plaza",
+        "line": "WMATAMetroGreen"
+      },
+      "id": 127
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.021913, 38.884893]
+      },
+      "properties": {
+        "id": 128,
+        "name": "L'Enfant Plaza",
+        "line": "WMATAMetroOrange"
+      },
+      "id": 128
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.021913, 38.884893]
+      },
+      "properties": {
+        "id": 129,
+        "name": "L'Enfant Plaza",
+        "line": "WMATAMetroSilver"
+      },
+      "id": 129
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.021913, 38.884893]
+      },
+      "properties": {
+        "id": 130,
+        "name": "L'Enfant Plaza",
+        "line": "WMATAMetroYellow"
+      },
+      "id": 130
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.007467, 38.897495]
+      },
+      "properties": {
+        "id": 131,
+        "name": "Union Station",
+        "line": "WMATAMetroRed"
+      },
+      "id": 131
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.043597, 38.909909]
+      },
+      "properties": {
+        "id": 132,
+        "name": "Dupont Circle",
+        "line": "WMATAMetroRed"
+      },
+      "id": 132
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.63672, 39.305318]
+      },
+      "properties": {
+        "id": 133,
+        "name": "Upton",
+        "line": "MarylandMetroMetroSubwaylink"
+      },
+      "id": 133
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.005877, 38.876473]
+      },
+      "properties": {
+        "id": 134,
+        "name": "Navy Yard-Ballpark",
+        "short_name": "Navy Yard",
+        "line": "WMATAMetroGreen"
+      },
+      "id": 134
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.021909, 38.893224]
+      },
+      "properties": {
+        "id": 135,
+        "name": "Archives",
+        "long_name": "Archives–Navy Memorial–Penn Quarter",
+        "line": "WMATAMetroGreen"
+      },
+      "id": 135
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.021909, 38.893224]
+      },
+      "properties": {
+        "id": 136,
+        "name": "Archives",
+        "long_name": "Archives–Navy Memorial–Penn Quarter",
+        "line": "WMATAMetroYellow"
+      },
+      "id": 136
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.093654, 38.983275]
+      },
+      "properties": {
+        "id": 137,
+        "name": "Bethesda",
+        "line": "WMATAMetroRed"
+      },
+      "id": 137
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.625885, 39.315395]
+      },
+      "properties": {
+        "id": 138,
+        "name": "Mta Light Rail Division",
+        "line": "MarylandLightRailLightRaillink"
+      },
+      "id": 138
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.619392, 39.285789]
+      },
+      "properties": {
+        "id": 139,
+        "name": "Convention Center",
+        "line": "MarylandLightRailLightRaillink"
+      },
+      "id": 139
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.653755, 39.475903]
+      },
+      "properties": {
+        "id": 140,
+        "name": "Warren Road",
+        "line": "MarylandLightRailLightRaillink"
+      },
+      "id": 140
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.632126, 39.261829]
+      },
+      "properties": {
+        "id": 141,
+        "name": "Westport",
+        "line": "MarylandLightRailLightRaillink"
+      },
+      "id": 141
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.694382, 39.346336]
+      },
+      "properties": {
+        "id": 142,
+        "name": "Rogers Ave",
+        "line": "MarylandMetroMetroSubwaylink"
+      },
+      "id": 142
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.028088, 38.898321]
+      },
+      "properties": {
+        "id": 143,
+        "name": "Metro Center",
+        "line": "WMATAMetroBlue"
+      },
+      "id": 143
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.028088, 38.898321]
+      },
+      "properties": {
+        "id": 144,
+        "name": "Metro Center",
+        "line": "WMATAMetroOrange"
+      },
+      "id": 144
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.028088, 38.898321]
+      },
+      "properties": {
+        "id": 145,
+        "name": "Metro Center",
+        "line": "WMATAMetroRed"
+      },
+      "id": 145
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.028088, 38.898321]
+      },
+      "properties": {
+        "id": 146,
+        "name": "Metro Center",
+        "line": "WMATAMetroSilver"
+      },
+      "id": 146
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.042927, 39.014946]
+      },
+      "properties": {
+        "id": 147,
+        "name": "Forest Glen",
+        "line": "WMATAMetroRed"
+      },
+      "id": 147
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.234162, 38.921269]
+      },
+      "properties": {
+        "id": 148,
+        "name": "Greensboro",
+        "line": "WMATAMetroSilver"
+      },
+      "id": 148
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.085022, 38.959384]
+      },
+      "properties": {
+        "id": 149,
+        "name": "Friendship Heights",
+        "line": "WMATAMetroRed"
+      },
+      "id": 149
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.164669, 39.119927]
+      },
+      "properties": {
+        "id": 150,
+        "name": "Shady Grove",
+        "line": "WMATAMetroRed"
+      },
+      "id": 150
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.619888, 39.307499]
+      },
+      "properties": {
+        "id": 151,
+        "name": "Mt. Royal / Mica",
+        "line": "MarylandLightRailLightRaillink"
+      },
+      "id": 151
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.956605, 38.851121]
+      },
+      "properties": {
+        "id": 152,
+        "name": "Naylor Rd",
+        "line": "WMATAMetroGreen"
+      },
+      "id": 152
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.956422, 38.965292]
+      },
+      "properties": {
+        "id": 153,
+        "name": "Hyattsville Crossing",
+        "line": "WMATAMetroGreen"
+      },
+      "id": 153
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.9695, 38.955276]
+      },
+      "properties": {
+        "id": 154,
+        "name": "West Hyattsville",
+        "line": "WMATAMetroGreen"
+      },
+      "id": 154
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.938619, 38.891069]
+      },
+      "properties": {
+        "id": 155,
+        "name": "Benning Rd",
+        "line": "WMATAMetroBlue"
+      },
+      "id": 155
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.938619, 38.891069]
+      },
+      "properties": {
+        "id": 156,
+        "name": "Benning Rd",
+        "line": "WMATAMetroSilver"
+      },
+      "id": 156
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.844654, 38.900511]
+      },
+      "properties": {
+        "id": 157,
+        "name": "Downtown Largo",
+        "short_name": "Largo",
+        "line": "WMATAMetroBlue"
+      },
+      "id": 157
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.844654, 38.900511]
+      },
+      "properties": {
+        "id": 158,
+        "name": "Downtown Largo",
+        "short_name": "Largo",
+        "line": "WMATAMetroSilver"
+      },
+      "id": 158
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.044048, 38.853505]
+      },
+      "properties": {
+        "id": 159,
+        "name": "Ronald Reagan Washington National Airport",
+        "short_name": "Reagan Airport",
+        "long_name": "Ronald Reagan National Airport",
+        "line": "WMATAMetroBlue"
+      },
+      "id": 159
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.044048, 38.853505]
+      },
+      "properties": {
+        "id": 160,
+        "name": "Ronald Reagan Washington National Airport",
+        "short_name": "Reagan Airport",
+        "long_name": "Ronald Reagan National Airport",
+        "line": "WMATAMetroYellow"
+      },
+      "id": 160
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.104117, 39.029732]
+      },
+      "properties": {
+        "id": 161,
+        "name": "Grosvenor-Strathmore",
+        "line": "WMATAMetroRed"
+      },
+      "id": 161
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.594107, 39.298289]
+      },
+      "properties": {
+        "id": 162,
+        "name": "Johns Hopkins",
+        "line": "MarylandMetroMetroSubwaylink"
+      },
+      "id": 162
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.033433, 38.901342]
+      },
+      "properties": {
+        "id": 163,
+        "name": "McPherson Sq",
+        "line": "WMATAMetroBlue"
+      },
+      "id": 163
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.033433, 38.901342]
+      },
+      "properties": {
+        "id": 164,
+        "name": "McPherson Sq",
+        "line": "WMATAMetroOrange"
+      },
+      "id": 164
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.033433, 38.901342]
+      },
+      "properties": {
+        "id": 165,
+        "name": "McPherson Sq",
+        "line": "WMATAMetroSilver"
+      },
+      "id": 165
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.643417, 39.3312]
+      },
+      "properties": {
+        "id": 166,
+        "name": "Woodberry",
+        "line": "MarylandLightRailLightRaillink"
+      },
+      "id": 166
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.21053, 38.924339]
+      },
+      "properties": {
+        "id": 167,
+        "name": "McLean",
+        "line": "WMATAMetroSilver"
+      },
+      "id": 167
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.634926, 39.448555]
+      },
+      "properties": {
+        "id": 168,
+        "name": "Fairgrounds",
+        "line": "MarylandLightRailLightRaillink"
+      },
+      "id": 168
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.946743, 38.899168]
+      },
+      "properties": {
+        "id": 169,
+        "name": "Minnesota Ave",
+        "line": "WMATAMetroOrange"
+      },
+      "id": 169
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.867707, 38.894001]
+      },
+      "properties": {
+        "id": 170,
+        "name": "Morgan Blvd",
+        "line": "WMATAMetroBlue"
+      },
+      "id": 170
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.867707, 38.894001]
+      },
+      "properties": {
+        "id": 171,
+        "name": "Morgan Blvd",
+        "line": "WMATAMetroSilver"
+      },
+      "id": 171
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.103024, 38.883433]
+      },
+      "properties": {
+        "id": 172,
+        "name": "Virginia Sq-GMU",
+        "short_name": "Virginia Square",
+        "line": "WMATAMetroOrange"
+      },
+      "id": 172
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.103024, 38.883433]
+      },
+      "properties": {
+        "id": 173,
+        "name": "Virginia Sq-GMU",
+        "short_name": "Virginia Square",
+        "line": "WMATAMetroSilver"
+      },
+      "id": 173
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.0631, 38.884588]
+      },
+      "properties": {
+        "id": 174,
+        "name": "Arlington Cemetery",
+        "line": "WMATAMetroBlue"
+      },
+      "id": 174
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.620914, 39.29173]
+      },
+      "properties": {
+        "id": 175,
+        "name": "Lexington Market",
+        "line": "MarylandMetroMetroSubwaylink"
+      },
+      "id": 175
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.656273, 39.492107]
+      },
+      "properties": {
+        "id": 176,
+        "name": "Pepper Road",
+        "line": "MarylandLightRailLightRaillink"
+      },
+      "id": 176
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.932869, 38.844668]
+      },
+      "properties": {
+        "id": 177,
+        "name": "Suitland",
+        "line": "WMATAMetroGreen"
+      },
+      "id": 177
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.652176, 39.368462]
+      },
+      "properties": {
+        "id": 178,
+        "name": "Mt. Washington",
+        "line": "MarylandLightRailLightRaillink"
+      },
+      "id": 178
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.050572, 38.857846]
+      },
+      "properties": {
+        "id": 179,
+        "name": "Crystal City",
+        "line": "WMATAMetroBlue"
+      },
+      "id": 179
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.050572, 38.857846]
+      },
+      "properties": {
+        "id": 180,
+        "name": "Crystal City",
+        "line": "WMATAMetroYellow"
+      },
+      "id": 180
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.113076, 39.048539]
+      },
+      "properties": {
+        "id": 181,
+        "name": "North Bethesda",
+        "long_name": "White Flint",
+        "line": "WMATAMetroRed"
+      },
+      "id": 181
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.052692, 38.925562]
+      },
+      "properties": {
+        "id": 182,
+        "name": "Woodley Park",
+        "long_name": "Woodley Park-Zoo/Adams Morgan",
+        "line": "WMATAMetroRed"
+      },
+      "id": 182
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.146193, 39.084272]
+      },
+      "properties": {
+        "id": 183,
+        "name": "Rockville",
+        "line": "WMATAMetroRed"
+      },
+      "id": 183
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.070838, 38.896034]
+      },
+      "properties": {
+        "id": 184,
+        "name": "Rosslyn",
+        "line": "WMATAMetroBlue"
+      },
+      "id": 184
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.070838, 38.896034]
+      },
+      "properties": {
+        "id": 185,
+        "name": "Rosslyn",
+        "line": "WMATAMetroOrange"
+      },
+      "id": 185
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.070838, 38.896034]
+      },
+      "properties": {
+        "id": 186,
+        "name": "Rosslyn",
+        "line": "WMATAMetroSilver"
+      },
+      "id": 186
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.620453, 39.30368]
+      },
+      "properties": {
+        "id": 187,
+        "name": "Cultural Center / State Center",
+        "line": "MarylandLightRailLightRaillink"
+      },
+      "id": 187
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.272459, 38.877578]
+      },
+      "properties": {
+        "id": 188,
+        "name": "Vienna",
+        "long_name": "Vienna/Fairfax-GMU",
+        "line": "WMATAMetroOrange"
+      },
+      "id": 188
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.060974, 38.806609]
+      },
+      "properties": {
+        "id": 189,
+        "name": "King St-Old Town",
+        "line": "WMATAMetroBlue"
+      },
+      "id": 189
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.060974, 38.806609]
+      },
+      "properties": {
+        "id": 190,
+        "name": "King St-Old Town",
+        "line": "WMATAMetroYellow"
+      },
+      "id": 190
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.721459, 39.362777]
+      },
+      "properties": {
+        "id": 191,
+        "name": "Milford Mill",
+        "line": "MarylandMetroMetroSubwaylink"
+      },
+      "id": 191
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.018126, 38.976022]
+      },
+      "properties": {
+        "id": 192,
+        "name": "Takoma",
+        "line": "WMATAMetroRed"
+      },
+      "id": 192
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.995942, 38.920916]
+      },
+      "properties": {
+        "id": 193,
+        "name": "Rhode Island Ave",
+        "long_name": "Rhode Island Avenue-Brentwood",
+        "line": "WMATAMetroRed"
+      },
+      "id": 193
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.911833, 38.889429]
+      },
+      "properties": {
+        "id": 194,
+        "name": "Capitol Heights",
+        "line": "WMATAMetroBlue"
+      },
+      "id": 194
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.911833, 38.889429]
+      },
+      "properties": {
+        "id": 195,
+        "name": "Capitol Heights",
+        "line": "WMATAMetroSilver"
+      },
+      "id": 195
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.619957, 39.296818]
+      },
+      "properties": {
+        "id": 196,
+        "name": "Mt. Vernon (Centre Street)",
+        "line": "MarylandLightRailLightRaillink"
+      },
+      "id": 196
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.12927, 38.799292]
+      },
+      "properties": {
+        "id": 197,
+        "name": "Van Dorn St",
+        "line": "WMATAMetroBlue"
+      },
+      "id": 197
+    }
+  ],
+  "properties": {
+    "totalStations": 196,
+    "stationsPerLine": {
+      "MarylandLightRailLightRaillink": 33,
+      "WMATAMetroGreen": 21,
+      "WMATAMetroYellow": 13,
+      "WMATAMetroSilver": 34,
+      "WMATAMetroOrange": 26,
+      "WMATAMetroBlue": 28,
+      "WMATAMetroRed": 27,
+      "MarylandMetroMetroSubwaylink": 14
+    }
+  }
+}

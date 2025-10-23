@@ -1,0 +1,2655 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.904223, 41.977665]
+      },
+      "properties": {
+        "id": 1,
+        "name": "O'Hare",
+        "line": "CTAMetroBlueLine",
+        "order": 0
+      },
+      "id": 1
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.633854, 41.882695]
+      },
+      "properties": {
+        "id": 34,
+        "name": "Washington/Wells",
+        "line": "CTAMetroBrownLine",
+        "order": 0
+      },
+      "id": 34
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.803176, 41.886848]
+      },
+      "properties": {
+        "id": 61,
+        "name": "Harlem/Lake",
+        "line": "CTAMetroGreenLine",
+        "order": 0
+      },
+      "id": 61
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.628198, 41.876912]
+      },
+      "properties": {
+        "id": 117,
+        "name": "Harold Washington Library",
+        "line": "CTAMetroOrangeLine",
+        "order": 0
+      },
+      "id": 117
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.630886, 41.885731]
+      },
+      "properties": {
+        "id": 133,
+        "name": "Clark/Lake",
+        "line": "CTAMetroPinkLine",
+        "order": 0
+      },
+      "id": 133
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.630886, 41.88573]
+      },
+      "properties": {
+        "id": 155,
+        "name": "Clark/Lake",
+        "line": "CTAMetroPurpleLine",
+        "order": 0
+      },
+      "id": 155
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.672892, 42.019063]
+      },
+      "properties": {
+        "id": 190,
+        "name": "Howard",
+        "line": "CTAMetroRedLine",
+        "order": 0
+      },
+      "id": 190
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.672892, 42.019063]
+      },
+      "properties": {
+        "id": 251,
+        "name": "Howard",
+        "line": "CTAMetroYellowLine",
+        "order": 0
+      },
+      "id": 251
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.817318, 41.874257]
+      },
+      "properties": {
+        "id": 33,
+        "name": "Forest Park",
+        "line": "CTAMetroBlueLine",
+        "order": 240
+      },
+      "id": 33
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.791604, 41.872098]
+      },
+      "properties": {
+        "id": 31,
+        "name": "Oak Park",
+        "line": "CTAMetroBlueLine",
+        "order": 228
+      },
+      "id": 31
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.776808, 41.870891]
+      },
+      "properties": {
+        "id": 30,
+        "name": "Austin",
+        "line": "CTAMetroBlueLine",
+        "order": 225
+      },
+      "id": 30
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.745154, 41.871601]
+      },
+      "properties": {
+        "id": 29,
+        "name": "Cicero",
+        "line": "CTAMetroBlueLine",
+        "order": 210
+      },
+      "id": 29
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.69073, 42.073153]
+      },
+      "properties": {
+        "id": 180,
+        "name": "Linden",
+        "line": "CTAMetroPurpleLine",
+        "order": 203
+      },
+      "id": 180
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.725665, 41.873897]
+      },
+      "properties": {
+        "id": 28,
+        "name": "Pulaski",
+        "line": "CTAMetroBlueLine",
+        "order": 197
+      },
+      "id": 28
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.685617, 42.063987]
+      },
+      "properties": {
+        "id": 179,
+        "name": "Central",
+        "line": "CTAMetroPurpleLine",
+        "order": 196
+      },
+      "id": 179
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.708358, 41.874129]
+      },
+      "properties": {
+        "id": 27,
+        "name": "Kedzie-Homan",
+        "line": "CTAMetroBlueLine",
+        "order": 194
+      },
+      "id": 27
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.683339, 42.058282]
+      },
+      "properties": {
+        "id": 178,
+        "name": "Noyes",
+        "line": "CTAMetroPurpleLine",
+        "order": 189
+      },
+      "id": 178
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.624415, 41.722376]
+      },
+      "properties": {
+        "id": 220,
+        "name": "95th/Dan Ryan",
+        "line": "CTAMetroRedLine",
+        "order": 186
+      },
+      "id": 220
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.673929, 41.875635]
+      },
+      "properties": {
+        "id": 25,
+        "name": "Illinois Medical District",
+        "line": "CTAMetroBlueLine",
+        "order": 185
+      },
+      "id": 25
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.659457, 41.87588]
+      },
+      "properties": {
+        "id": 24,
+        "name": "Racine",
+        "line": "CTAMetroBlueLine",
+        "order": 183
+      },
+      "id": 24
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.68356, 42.05416]
+      },
+      "properties": {
+        "id": 177,
+        "name": "Foster",
+        "line": "CTAMetroPurpleLine",
+        "order": 183
+      },
+      "id": 177
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.624755, 41.735371]
+      },
+      "properties": {
+        "id": 219,
+        "name": "87th",
+        "line": "CTAMetroRedLine",
+        "order": 183
+      },
+      "id": 219
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.625166, 41.750418]
+      },
+      "properties": {
+        "id": 218,
+        "name": "79th",
+        "line": "CTAMetroRedLine",
+        "order": 179
+      },
+      "id": 218
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.683543, 42.04771]
+      },
+      "properties": {
+        "id": 176,
+        "name": "Davis",
+        "line": "CTAMetroPurpleLine",
+        "order": 178
+      },
+      "id": 176
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.649642, 41.875516]
+      },
+      "properties": {
+        "id": 23,
+        "name": "UIC-Halsted",
+        "line": "CTAMetroBlueLine",
+        "order": 176
+      },
+      "id": 23
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.640984, 41.875531]
+      },
+      "properties": {
+        "id": 22,
+        "name": "Clinton",
+        "line": "CTAMetroBlueLine",
+        "order": 174
+      },
+      "id": 22
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.6816, 42.041655]
+      },
+      "properties": {
+        "id": 175,
+        "name": "Dempster",
+        "line": "CTAMetroPurpleLine",
+        "order": 172
+      },
+      "id": 175
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.631722, 41.875568]
+      },
+      "properties": {
+        "id": 21,
+        "name": "LaSalle",
+        "line": "CTAMetroBlueLine",
+        "order": 171
+      },
+      "id": 21
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.625809, 41.768368]
+      },
+      "properties": {
+        "id": 217,
+        "name": "69th",
+        "line": "CTAMetroRedLine",
+        "order": 171
+      },
+      "id": 217
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.629294, 41.878183]
+      },
+      "properties": {
+        "id": 20,
+        "name": "Jackson",
+        "line": "CTAMetroBlueLine",
+        "order": 165
+      },
+      "id": 20
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.629377, 41.880703]
+      },
+      "properties": {
+        "id": 19,
+        "name": "Monroe",
+        "line": "CTAMetroBlueLine",
+        "order": 164
+      },
+      "id": 19
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.679538, 42.033456]
+      },
+      "properties": {
+        "id": 174,
+        "name": "Main",
+        "line": "CTAMetroPurpleLine",
+        "order": 164
+      },
+      "id": 174
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.629438, 41.883164]
+      },
+      "properties": {
+        "id": 18,
+        "name": "Washington",
+        "line": "CTAMetroBlueLine",
+        "order": 162
+      },
+      "id": 18
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.678346, 42.027611]
+      },
+      "properties": {
+        "id": 173,
+        "name": "South Boulevard",
+        "line": "CTAMetroPurpleLine",
+        "order": 161
+      },
+      "id": 173
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.630886, 41.885734]
+      },
+      "properties": {
+        "id": 17,
+        "name": "Clark/Lake",
+        "line": "CTAMetroBlueLine",
+        "order": 157
+      },
+      "id": 17
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.631, 41.780535]
+      },
+      "properties": {
+        "id": 216,
+        "name": "63rd",
+        "line": "CTAMetroRedLine",
+        "order": 155
+      },
+      "id": 216
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.672893, 42.019062]
+      },
+      "properties": {
+        "id": 172,
+        "name": "Howard",
+        "line": "CTAMetroPurpleLine",
+        "order": 153
+      },
+      "id": 172
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.647581, 41.891186]
+      },
+      "properties": {
+        "id": 16,
+        "name": "Grand",
+        "line": "CTAMetroBlueLine",
+        "order": 151
+      },
+      "id": 16
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.631169, 41.79542]
+      },
+      "properties": {
+        "id": 215,
+        "name": "Garfield",
+        "line": "CTAMetroRedLine",
+        "order": 151
+      },
+      "id": 215
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.655211, 41.896077]
+      },
+      "properties": {
+        "id": 15,
+        "name": "Chicago",
+        "line": "CTAMetroBlueLine",
+        "order": 147
+      },
+      "id": 15
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.713141, 41.9679]
+      },
+      "properties": {
+        "id": 60,
+        "name": "Kimball",
+        "line": "CTAMetroBrownLine",
+        "order": 146
+      },
+      "id": 60
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.631022, 41.810347]
+      },
+      "properties": {
+        "id": 214,
+        "name": "47th",
+        "line": "CTAMetroRedLine",
+        "order": 143
+      },
+      "id": 214
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.666496, 41.903355]
+      },
+      "properties": {
+        "id": 14,
+        "name": "Division",
+        "line": "CTAMetroBlueLine",
+        "order": 142
+      },
+      "id": 14
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.708744, 41.966095]
+      },
+      "properties": {
+        "id": 59,
+        "name": "Kedzie",
+        "line": "CTAMetroBrownLine",
+        "order": 140
+      },
+      "id": 59
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.701582, 41.966141]
+      },
+      "properties": {
+        "id": 58,
+        "name": "Francisco",
+        "line": "CTAMetroBrownLine",
+        "order": 138
+      },
+      "id": 58
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.630636, 41.831191]
+      },
+      "properties": {
+        "id": 213,
+        "name": "Sox-35th",
+        "line": "CTAMetroRedLine",
+        "order": 136
+      },
+      "id": 213
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.677437, 41.909744]
+      },
+      "properties": {
+        "id": 13,
+        "name": "Damen",
+        "line": "CTAMetroBlueLine",
+        "order": 135
+      },
+      "id": 13
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.694089, 41.966215]
+      },
+      "properties": {
+        "id": 57,
+        "name": "Rockwell",
+        "line": "CTAMetroBrownLine",
+        "order": 135
+      },
+      "id": 57
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.688503, 41.96625]
+      },
+      "properties": {
+        "id": 56,
+        "name": "Western",
+        "line": "CTAMetroBrownLine",
+        "order": 133
+      },
+      "id": 56
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.687364, 41.916157]
+      },
+      "properties": {
+        "id": 12,
+        "name": "Western",
+        "line": "CTAMetroBlueLine",
+        "order": 132
+      },
+      "id": 12
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.678772, 41.966405]
+      },
+      "properties": {
+        "id": 55,
+        "name": "Damen",
+        "line": "CTAMetroBrownLine",
+        "order": 132
+      },
+      "id": 55
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.69689, 41.921939]
+      },
+      "properties": {
+        "id": 11,
+        "name": "California",
+        "line": "CTAMetroBlueLine",
+        "order": 130
+      },
+      "id": 11
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.737956, 41.786614]
+      },
+      "properties": {
+        "id": 132,
+        "name": "Midway",
+        "line": "CTAMetroOrangeLine",
+        "order": 130
+      },
+      "id": 132
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.663769, 41.778954]
+      },
+      "properties": {
+        "id": 88,
+        "name": "Ashland/63rd",
+        "line": "CTAMetroGreenLine",
+        "order": 125
+      },
+      "id": 88
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.630982, 41.853204]
+      },
+      "properties": {
+        "id": 212,
+        "name": "Cermak-Chinatown",
+        "line": "CTAMetroRedLine",
+        "order": 125
+      },
+      "id": 212
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.708539, 41.92973]
+      },
+      "properties": {
+        "id": 10,
+        "name": "Logan Square",
+        "line": "CTAMetroBlueLine",
+        "order": 121
+      },
+      "id": 10
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.644245, 41.779037]
+      },
+      "properties": {
+        "id": 87,
+        "name": "Halsted",
+        "line": "CTAMetroGreenLine",
+        "order": 121
+      },
+      "id": 87
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.675165, 41.961752]
+      },
+      "properties": {
+        "id": 54,
+        "name": "Montrose",
+        "line": "CTAMetroBrownLine",
+        "order": 120
+      },
+      "id": 54
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.724557, 41.799846]
+      },
+      "properties": {
+        "id": 131,
+        "name": "Pulaski",
+        "line": "CTAMetroOrangeLine",
+        "order": 120
+      },
+      "id": 131
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.674955, 41.954518]
+      },
+      "properties": {
+        "id": 53,
+        "name": "Irving Park",
+        "line": "CTAMetroBrownLine",
+        "order": 118
+      },
+      "id": 53
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.674736, 41.947026]
+      },
+      "properties": {
+        "id": 52,
+        "name": "Addison",
+        "line": "CTAMetroBrownLine",
+        "order": 115
+      },
+      "id": 52
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.71236, 41.938132]
+      },
+      "properties": {
+        "id": 9,
+        "name": "Belmont",
+        "line": "CTAMetroBlueLine",
+        "order": 114
+      },
+      "id": 9
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.657588, 41.964273]
+      },
+      "properties": {
+        "id": 171,
+        "name": "Wilson",
+        "line": "CTAMetroPurpleLine",
+        "order": 111
+      },
+      "id": 171
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.704321, 41.804348]
+      },
+      "properties": {
+        "id": 130,
+        "name": "Kedzie",
+        "line": "CTAMetroOrangeLine",
+        "order": 109
+      },
+      "id": 130
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.605857, 41.780309]
+      },
+      "properties": {
+        "id": 116,
+        "name": "Cottage Grove",
+        "line": "CTAMetroGreenLine",
+        "order": 108
+      },
+      "id": 116
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.684024, 41.804686]
+      },
+      "properties": {
+        "id": 129,
+        "name": "Western",
+        "line": "CTAMetroOrangeLine",
+        "order": 106
+      },
+      "id": 129
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.6274, 41.867368]
+      },
+      "properties": {
+        "id": 211,
+        "name": "Roosevelt",
+        "line": "CTAMetroRedLine",
+        "order": 106
+      },
+      "id": 211
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.670909, 41.94371]
+      },
+      "properties": {
+        "id": 51,
+        "name": "Paulina",
+        "line": "CTAMetroBrownLine",
+        "order": 104
+      },
+      "id": 51
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.615546, 41.78013]
+      },
+      "properties": {
+        "id": 115,
+        "name": "King Drive",
+        "line": "CTAMetroGreenLine",
+        "order": 104
+      },
+      "id": 115
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.627479, 41.874039]
+      },
+      "properties": {
+        "id": 210,
+        "name": "Harrison",
+        "line": "CTAMetroRedLine",
+        "order": 103
+      },
+      "id": 210
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.66361, 41.943812]
+      },
+      "properties": {
+        "id": 50,
+        "name": "Southport",
+        "line": "CTAMetroBrownLine",
+        "order": 102
+      },
+      "id": 50
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.627612, 41.878153]
+      },
+      "properties": {
+        "id": 209,
+        "name": "Jackson",
+        "line": "CTAMetroRedLine",
+        "order": 102
+      },
+      "id": 209
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.627696, 41.880745]
+      },
+      "properties": {
+        "id": 208,
+        "name": "Monroe",
+        "line": "CTAMetroRedLine",
+        "order": 100
+      },
+      "id": 208
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.627801, 41.884809]
+      },
+      "properties": {
+        "id": 207,
+        "name": "Lake",
+        "line": "CTAMetroRedLine",
+        "order": 99
+      },
+      "id": 207
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.719095, 41.947357]
+      },
+      "properties": {
+        "id": 8,
+        "name": "Addison",
+        "line": "CTAMetroBlueLine",
+        "order": 96
+      },
+      "id": 8
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.62803, 41.891665]
+      },
+      "properties": {
+        "id": 206,
+        "name": "Grand",
+        "line": "CTAMetroRedLine",
+        "order": 96
+      },
+      "id": 206
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.628164, 41.896671]
+      },
+      "properties": {
+        "id": 205,
+        "name": "Chicago",
+        "line": "CTAMetroRedLine",
+        "order": 94
+      },
+      "id": 205
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.618318, 41.795172]
+      },
+      "properties": {
+        "id": 86,
+        "name": "Garfield",
+        "line": "CTAMetroGreenLine",
+        "order": 91
+      },
+      "id": 86
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.7292, 41.952954]
+      },
+      "properties": {
+        "id": 7,
+        "name": "Irving Park",
+        "line": "CTAMetroBlueLine",
+        "order": 90
+      },
+      "id": 7
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.653392, 41.939751]
+      },
+      "properties": {
+        "id": 49,
+        "name": "Belmont",
+        "line": "CTAMetroBrownLine",
+        "order": 90
+      },
+      "id": 49
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.653266, 41.936033]
+      },
+      "properties": {
+        "id": 48,
+        "name": "Wellington",
+        "line": "CTAMetroBrownLine",
+        "order": 87
+      },
+      "id": 48
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.618502, 41.802092]
+      },
+      "properties": {
+        "id": 85,
+        "name": "51st",
+        "line": "CTAMetroGreenLine",
+        "order": 87
+      },
+      "id": 85
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.653392, 41.939751]
+      },
+      "properties": {
+        "id": 170,
+        "name": "Belmont",
+        "line": "CTAMetroPurpleLine",
+        "order": 87
+      },
+      "id": 170
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.631412, 41.90392]
+      },
+      "properties": {
+        "id": 204,
+        "name": "Clark/Division",
+        "line": "CTAMetroRedLine",
+        "order": 87
+      },
+      "id": 204
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.65312, 41.932732]
+      },
+      "properties": {
+        "id": 47,
+        "name": "Diversey",
+        "line": "CTAMetroBrownLine",
+        "order": 86
+      },
+      "id": 47
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.756692, 41.851773]
+      },
+      "properties": {
+        "id": 154,
+        "name": "54th/Cermak",
+        "line": "CTAMetroPinkLine",
+        "order": 84
+      },
+      "id": 154
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.653266, 41.936033]
+      },
+      "properties": {
+        "id": 169,
+        "name": "Wellington",
+        "line": "CTAMetroPurpleLine",
+        "order": 84
+      },
+      "id": 169
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.743631, 41.961498]
+      },
+      "properties": {
+        "id": 6,
+        "name": "Montrose",
+        "line": "CTAMetroBlueLine",
+        "order": 83
+      },
+      "id": 6
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.65312, 41.932732]
+      },
+      "properties": {
+        "id": 168,
+        "name": "Diversey",
+        "line": "CTAMetroPurpleLine",
+        "order": 83
+      },
+      "id": 168
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.618834, 41.809209]
+      },
+      "properties": {
+        "id": 84,
+        "name": "47th",
+        "line": "CTAMetroGreenLine",
+        "order": 82
+      },
+      "id": 84
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.652866, 41.925051]
+      },
+      "properties": {
+        "id": 46,
+        "name": "Fullerton",
+        "line": "CTAMetroBrownLine",
+        "order": 81
+      },
+      "id": 46
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.61903, 41.816462]
+      },
+      "properties": {
+        "id": 83,
+        "name": "43rd",
+        "line": "CTAMetroGreenLine",
+        "order": 81
+      },
+      "id": 83
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.745338, 41.851927]
+      },
+      "properties": {
+        "id": 153,
+        "name": "Cicero",
+        "line": "CTAMetroPinkLine",
+        "order": 81
+      },
+      "id": 153
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.649177, 41.910655]
+      },
+      "properties": {
+        "id": 203,
+        "name": "North/Clybourn",
+        "line": "CTAMetroRedLine",
+        "order": 80
+      },
+      "id": 203
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.652642, 41.918217]
+      },
+      "properties": {
+        "id": 45,
+        "name": "Armitage",
+        "line": "CTAMetroBrownLine",
+        "order": 79
+      },
+      "id": 45
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.652866, 41.925051]
+      },
+      "properties": {
+        "id": 167,
+        "name": "Fullerton",
+        "line": "CTAMetroPurpleLine",
+        "order": 78
+      },
+      "id": 167
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.652642, 41.918217]
+      },
+      "properties": {
+        "id": 166,
+        "name": "Armitage",
+        "line": "CTAMetroPurpleLine",
+        "order": 76
+      },
+      "id": 166
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.65285, 41.925051]
+      },
+      "properties": {
+        "id": 202,
+        "name": "Fullerton",
+        "line": "CTAMetroRedLine",
+        "order": 76
+      },
+      "id": 202
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.621374, 41.821818]
+      },
+      "properties": {
+        "id": 82,
+        "name": "Indiana",
+        "line": "CTAMetroGreenLine",
+        "order": 74
+      },
+      "id": 82
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.680744, 41.829468]
+      },
+      "properties": {
+        "id": 128,
+        "name": "35th/Archer",
+        "line": "CTAMetroOrangeLine",
+        "order": 74
+      },
+      "id": 128
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.653381, 41.939751]
+      },
+      "properties": {
+        "id": 201,
+        "name": "Belmont",
+        "line": "CTAMetroRedLine",
+        "order": 72
+      },
+      "id": 201
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.760896, 41.970629]
+      },
+      "properties": {
+        "id": 5,
+        "name": "Jefferson Park Transit Center",
+        "alternate_names": ["Jefferson Park"],
+        "line": "CTAMetroBlueLine",
+        "order": 69
+      },
+      "id": 5
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.733258, 41.853757]
+      },
+      "properties": {
+        "id": 152,
+        "name": "Kostner",
+        "line": "CTAMetroPinkLine",
+        "order": 69
+      },
+      "id": 152
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.625889, 41.831676]
+      },
+      "properties": {
+        "id": 81,
+        "name": "35-Bronzeville-IIT",
+        "line": "CTAMetroGreenLine",
+        "order": 66
+      },
+      "id": 81
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.724314, 41.853857]
+      },
+      "properties": {
+        "id": 151,
+        "name": "Pulaski",
+        "line": "CTAMetroPinkLine",
+        "order": 66
+      },
+      "id": 151
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.626402, 41.853115]
+      },
+      "properties": {
+        "id": 80,
+        "name": "Cermak-McCormick Place",
+        "line": "CTAMetroGreenLine",
+        "order": 65
+      },
+      "id": 80
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.665312, 41.839356]
+      },
+      "properties": {
+        "id": 127,
+        "name": "Ashland",
+        "line": "CTAMetroOrangeLine",
+        "order": 65
+      },
+      "id": 127
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.715074, 41.853987]
+      },
+      "properties": {
+        "id": 150,
+        "name": "Central Park",
+        "line": "CTAMetroPinkLine",
+        "order": 64
+      },
+      "id": 150
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.653624, 41.947428]
+      },
+      "properties": {
+        "id": 200,
+        "name": "Addison",
+        "line": "CTAMetroRedLine",
+        "order": 64
+      },
+      "id": 200
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.751919, 42.038951]
+      },
+      "properties": {
+        "id": 253,
+        "name": "Dempster-Skokie",
+        "line": "CTAMetroYellowLine",
+        "order": 62
+      },
+      "id": 253
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.705867, 41.854115]
+      },
+      "properties": {
+        "id": 149,
+        "name": "Kedzie",
+        "line": "CTAMetroPinkLine",
+        "order": 61
+      },
+      "id": 149
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.638844, 41.910414]
+      },
+      "properties": {
+        "id": 44,
+        "name": "Sedgwick",
+        "line": "CTAMetroBrownLine",
+        "order": 59
+      },
+      "id": 44
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.626593, 41.867477]
+      },
+      "properties": {
+        "id": 79,
+        "name": "Roosevelt",
+        "line": "CTAMetroGreenLine",
+        "order": 59
+      },
+      "id": 79
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.694921, 41.854279]
+      },
+      "properties": {
+        "id": 148,
+        "name": "California",
+        "line": "CTAMetroPinkLine",
+        "order": 59
+      },
+      "id": 148
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.64817, 41.846872]
+      },
+      "properties": {
+        "id": 126,
+        "name": "Halsted",
+        "line": "CTAMetroOrangeLine",
+        "order": 56
+      },
+      "id": 126
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.638844, 41.910414]
+      },
+      "properties": {
+        "id": 165,
+        "name": "Sedgwick",
+        "line": "CTAMetroPurpleLine",
+        "order": 56
+      },
+      "id": 165
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.68507, 41.854398]
+      },
+      "properties": {
+        "id": 147,
+        "name": "Western",
+        "line": "CTAMetroPinkLine",
+        "order": 55
+      },
+      "id": 147
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.654929, 41.953775]
+      },
+      "properties": {
+        "id": 199,
+        "name": "Sheridan",
+        "line": "CTAMetroRedLine",
+        "order": 55
+      },
+      "id": 199
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.808901, 41.982318]
+      },
+      "properties": {
+        "id": 4,
+        "name": "Harlem",
+        "line": "CTAMetroBlueLine",
+        "order": 53
+      },
+      "id": 4
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.675974, 41.854515]
+      },
+      "properties": {
+        "id": 146,
+        "name": "Damen",
+        "line": "CTAMetroPinkLine",
+        "order": 53
+      },
+      "id": 146
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.747226, 42.026242]
+      },
+      "properties": {
+        "id": 252,
+        "name": "Oakton-Skokie",
+        "line": "CTAMetroYellowLine",
+        "order": 52
+      },
+      "id": 252
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.626099, 41.879506]
+      },
+      "properties": {
+        "id": 78,
+        "name": "Adams/Wabash",
+        "line": "CTAMetroGreenLine",
+        "order": 49
+      },
+      "id": 78
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.626172, 41.88237]
+      },
+      "properties": {
+        "id": 77,
+        "name": "Washington/Wabash",
+        "line": "CTAMetroGreenLine",
+        "order": 48
+      },
+      "id": 77
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.657588, 41.964273]
+      },
+      "properties": {
+        "id": 198,
+        "name": "Wilson",
+        "line": "CTAMetroRedLine",
+        "order": 47
+      },
+      "id": 198
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.669162, 41.857908]
+      },
+      "properties": {
+        "id": 145,
+        "name": "18th",
+        "line": "CTAMetroPinkLine",
+        "order": 46
+      },
+      "id": 145
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.669541, 41.871551]
+      },
+      "properties": {
+        "id": 144,
+        "name": "Polk",
+        "line": "CTAMetroPinkLine",
+        "order": 44
+      },
+      "id": 144
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.627835, 41.885737]
+      },
+      "properties": {
+        "id": 76,
+        "name": "State/Lake",
+        "line": "CTAMetroGreenLine",
+        "order": 43
+      },
+      "id": 76
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.630886, 41.885731]
+      },
+      "properties": {
+        "id": 75,
+        "name": "Clark/Lake",
+        "line": "CTAMetroGreenLine",
+        "order": 42
+      },
+      "id": 75
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.641782, 41.885711]
+      },
+      "properties": {
+        "id": 74,
+        "name": "Clinton",
+        "line": "CTAMetroGreenLine",
+        "order": 41
+      },
+      "id": 74
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.65213, 41.885586]
+      },
+      "properties": {
+        "id": 73,
+        "name": "Morgan",
+        "line": "CTAMetroGreenLine",
+        "order": 39
+      },
+      "id": 73
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.65853, 41.973453]
+      },
+      "properties": {
+        "id": 197,
+        "name": "Argyle",
+        "line": "CTAMetroRedLine",
+        "order": 39
+      },
+      "id": 197
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.6586741879951, 41.97799186164995, 0]
+      },
+      "properties": {
+        "id": 1971,
+        "name": "Berwyn",
+        "line": "CTAMetroRedLine",
+        "order": 39.5
+      },
+      "id": 1971
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.65849872909713, 41.96914680841935, 0]
+      },
+      "properties": {
+        "id": 1972,
+        "name": "Lawrence",
+        "line": "CTAMetroRedLine",
+        "order": 39.7
+      },
+      "id": 1972
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.838032, 41.984291]
+      },
+      "properties": {
+        "id": 3,
+        "name": "Cumberland",
+        "line": "CTAMetroBlueLine",
+        "order": 38
+      },
+      "id": 3
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.658841, 41.983504]
+      },
+      "properties": {
+        "id": 196,
+        "name": "Bryn Mawr",
+        "line": "CTAMetroRedLine",
+        "order": 37
+      },
+      "id": 196
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.666971, 41.885304]
+      },
+      "properties": {
+        "id": 72,
+        "name": "Ashland",
+        "line": "CTAMetroGreenLine",
+        "order": 36
+      },
+      "id": 72
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.659062, 41.990259]
+      },
+      "properties": {
+        "id": 195,
+        "name": "Thorndale",
+        "line": "CTAMetroRedLine",
+        "order": 36
+      },
+      "id": 195
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.635672, 41.895965]
+      },
+      "properties": {
+        "id": 43,
+        "name": "Chicago",
+        "line": "CTAMetroBrownLine",
+        "order": 34
+      },
+      "id": 43
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.659202, 41.993664]
+      },
+      "properties": {
+        "id": 194,
+        "name": "Granville",
+        "line": "CTAMetroRedLine",
+        "order": 34
+      },
+      "id": 194
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.635672, 41.895965]
+      },
+      "properties": {
+        "id": 164,
+        "name": "Chicago",
+        "line": "CTAMetroPurpleLine",
+        "order": 31
+      },
+      "id": 164
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.859388, 41.983507]
+      },
+      "properties": {
+        "id": 2,
+        "name": "Rosemont",
+        "line": "CTAMetroBlueLine",
+        "order": 30
+      },
+      "id": 2
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.696234, 41.88422]
+      },
+      "properties": {
+        "id": 71,
+        "name": "California",
+        "line": "CTAMetroGreenLine",
+        "order": 30
+      },
+      "id": 71
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.626593, 41.867477]
+      },
+      "properties": {
+        "id": 125,
+        "name": "Roosevelt",
+        "line": "CTAMetroOrangeLine",
+        "order": 29
+      },
+      "id": 125
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.666951, 41.885311]
+      },
+      "properties": {
+        "id": 143,
+        "name": "Ashland",
+        "line": "CTAMetroPinkLine",
+        "order": 29
+      },
+      "id": 143
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.706155, 41.884317]
+      },
+      "properties": {
+        "id": 70,
+        "name": "Kedzie",
+        "line": "CTAMetroGreenLine",
+        "order": 27
+      },
+      "id": 70
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.65213, 41.885579]
+      },
+      "properties": {
+        "id": 142,
+        "name": "Morgan",
+        "line": "CTAMetroPinkLine",
+        "order": 26
+      },
+      "id": 142
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.716523, 41.884901]
+      },
+      "properties": {
+        "id": 69,
+        "name": "Conservatory-Central Park Drive",
+        "line": "CTAMetroGreenLine",
+        "order": 24
+      },
+      "id": 69
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.726855, 41.885491]
+      },
+      "properties": {
+        "id": 68,
+        "name": "Pulaski",
+        "line": "CTAMetroGreenLine",
+        "order": 23
+      },
+      "id": 68
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.661054, 42.001078]
+      },
+      "properties": {
+        "id": 193,
+        "name": "Loyola",
+        "line": "CTAMetroRedLine",
+        "order": 23
+      },
+      "id": 193
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.633973, 41.888968]
+      },
+      "properties": {
+        "id": 42,
+        "name": "Merchandise Mart",
+        "line": "CTAMetroBrownLine",
+        "order": 20
+      },
+      "id": 42
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.744698, 41.886519]
+      },
+      "properties": {
+        "id": 67,
+        "name": "Cicero",
+        "line": "CTAMetroGreenLine",
+        "order": 20
+      },
+      "id": 67
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.626099, 41.879506]
+      },
+      "properties": {
+        "id": 124,
+        "name": "Adams/Wabash",
+        "line": "CTAMetroOrangeLine",
+        "order": 19
+      },
+      "id": 124
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.641782, 41.885711]
+      },
+      "properties": {
+        "id": 141,
+        "name": "Clinton",
+        "line": "CTAMetroPinkLine",
+        "order": 19
+      },
+      "id": 141
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.630886, 41.88573]
+      },
+      "properties": {
+        "id": 41,
+        "name": "Clark/Lake",
+        "line": "CTAMetroBrownLine",
+        "order": 18
+      },
+      "id": 41
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.626171, 41.88237]
+      },
+      "properties": {
+        "id": 123,
+        "name": "Washington/Wabash",
+        "line": "CTAMetroOrangeLine",
+        "order": 18
+      },
+      "id": 123
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.633985, 41.888968]
+      },
+      "properties": {
+        "id": 163,
+        "name": "Merchandise Mart",
+        "line": "CTAMetroPurpleLine",
+        "order": 18
+      },
+      "id": 163
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.627835, 41.885736]
+      },
+      "properties": {
+        "id": 40,
+        "name": "State/Lake",
+        "line": "CTAMetroBrownLine",
+        "order": 17
+      },
+      "id": 40
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.633865, 41.882694]
+      },
+      "properties": {
+        "id": 140,
+        "name": "Washington/Wells",
+        "line": "CTAMetroPinkLine",
+        "order": 17
+      },
+      "id": 140
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.633868, 41.882694]
+      },
+      "properties": {
+        "id": 162,
+        "name": "Washington/Wells",
+        "line": "CTAMetroPurpleLine",
+        "order": 17
+      },
+      "id": 162
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.754987, 41.887155]
+      },
+      "properties": {
+        "id": 66,
+        "name": "Laramie",
+        "line": "CTAMetroGreenLine",
+        "order": 16
+      },
+      "id": 66
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.633751, 41.878723]
+      },
+      "properties": {
+        "id": 139,
+        "name": "Quincy/Wells",
+        "alternate_names": ["Quincy"],
+        "line": "CTAMetroPinkLine",
+        "order": 15
+      },
+      "id": 139
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.633751, 41.878723]
+      },
+      "properties": {
+        "id": 161,
+        "name": "Quincy/Wells",
+        "alternate_names": ["Quincy"],
+        "line": "CTAMetroPurpleLine",
+        "order": 15
+      },
+      "id": 161
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.62618, 41.88237]
+      },
+      "properties": {
+        "id": 39,
+        "name": "Washington/Wabash",
+        "line": "CTAMetroBrownLine",
+        "order": 13
+      },
+      "id": 39
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.626103, 41.879506]
+      },
+      "properties": {
+        "id": 38,
+        "name": "Adams/Wabash",
+        "line": "CTAMetroBrownLine",
+        "order": 12
+      },
+      "id": 38
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.627835, 41.885736]
+      },
+      "properties": {
+        "id": 122,
+        "name": "State/Lake",
+        "line": "CTAMetroOrangeLine",
+        "order": 12
+      },
+      "id": 122
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.630886, 41.88573]
+      },
+      "properties": {
+        "id": 121,
+        "name": "Clark/Lake",
+        "line": "CTAMetroOrangeLine",
+        "order": 11
+      },
+      "id": 121
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.628198, 41.876912]
+      },
+      "properties": {
+        "id": 37,
+        "name": "Harold Washington Library",
+        "line": "CTAMetroBrownLine",
+        "order": 10
+      },
+      "id": 37
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.63174, 41.876862]
+      },
+      "properties": {
+        "id": 138,
+        "name": "LaSalle/Van Buren",
+        "line": "CTAMetroPinkLine",
+        "order": 10
+      },
+      "id": 138
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.63174, 41.876862]
+      },
+      "properties": {
+        "id": 160,
+        "name": "LaSalle/Van Buren",
+        "line": "CTAMetroPurpleLine",
+        "order": 10
+      },
+      "id": 160
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.665909, 42.008362]
+      },
+      "properties": {
+        "id": 192,
+        "name": "Morse",
+        "line": "CTAMetroRedLine",
+        "order": 10
+      },
+      "id": 192
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.633865, 41.882694]
+      },
+      "properties": {
+        "id": 120,
+        "name": "Washington/Wells",
+        "line": "CTAMetroOrangeLine",
+        "order": 9
+      },
+      "id": 120
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.63174, 41.876862]
+      },
+      "properties": {
+        "id": 36,
+        "name": "LaSalle/Van Buren",
+        "line": "CTAMetroBrownLine",
+        "order": 8
+      },
+      "id": 36
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.76565, 41.887383]
+      },
+      "properties": {
+        "id": 65,
+        "name": "Central",
+        "line": "CTAMetroGreenLine",
+        "order": 8
+      },
+      "id": 65
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.628198, 41.876912]
+      },
+      "properties": {
+        "id": 137,
+        "name": "Harold Washington Library",
+        "line": "CTAMetroPinkLine",
+        "order": 8
+      },
+      "id": 137
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.628198, 41.876912]
+      },
+      "properties": {
+        "id": 159,
+        "name": "Harold Washington Library",
+        "line": "CTAMetroPurpleLine",
+        "order": 8
+      },
+      "id": 159
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.633751, 41.878723]
+      },
+      "properties": {
+        "id": 119,
+        "name": "Quincy/Wells",
+        "alternate_names": ["Quincy"],
+        "line": "CTAMetroOrangeLine",
+        "order": 7
+      },
+      "id": 119
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.774135, 41.887304]
+      },
+      "properties": {
+        "id": 64,
+        "name": "Austin",
+        "line": "CTAMetroGreenLine",
+        "order": 6
+      },
+      "id": 64
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.626103, 41.879506]
+      },
+      "properties": {
+        "id": 136,
+        "name": "Adams/Wabash",
+        "line": "CTAMetroPinkLine",
+        "order": 6
+      },
+      "id": 136
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.626103, 41.879506]
+      },
+      "properties": {
+        "id": 158,
+        "name": "Adams/Wabash",
+        "line": "CTAMetroPurpleLine",
+        "order": 6
+      },
+      "id": 158
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.62618, 41.88237]
+      },
+      "properties": {
+        "id": 135,
+        "name": "Washington/Wabash",
+        "line": "CTAMetroPinkLine",
+        "order": 5
+      },
+      "id": 135
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.62618, 41.88237]
+      },
+      "properties": {
+        "id": 157,
+        "name": "Washington/Wabash",
+        "line": "CTAMetroPurpleLine",
+        "order": 5
+      },
+      "id": 157
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.783661, 41.887172]
+      },
+      "properties": {
+        "id": 63,
+        "name": "Ridgeland",
+        "line": "CTAMetroGreenLine",
+        "order": 4
+      },
+      "id": 63
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.633751, 41.878723]
+      },
+      "properties": {
+        "id": 35,
+        "name": "Quincy/Wells",
+        "alternate_names": ["Quincy"],
+        "line": "CTAMetroBrownLine",
+        "order": 3
+      },
+      "id": 35
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.793783, 41.886987]
+      },
+      "properties": {
+        "id": 62,
+        "name": "Oak Park",
+        "line": "CTAMetroGreenLine",
+        "order": 3
+      },
+      "id": 62
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.669086, 42.01588]
+      },
+      "properties": {
+        "id": 191,
+        "name": "Jarvis",
+        "line": "CTAMetroRedLine",
+        "order": 3
+      },
+      "id": 191
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.63174, 41.876862]
+      },
+      "properties": {
+        "id": 118,
+        "name": "LaSalle/Van Buren",
+        "line": "CTAMetroOrangeLine",
+        "order": 2
+      },
+      "id": 118
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.627835, 41.885736]
+      },
+      "properties": {
+        "id": 134,
+        "name": "State/Lake",
+        "line": "CTAMetroPinkLine",
+        "order": 1
+      },
+      "id": 134
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.627835, 41.885736]
+      },
+      "properties": {
+        "id": 156,
+        "name": "State/Lake",
+        "line": "CTAMetroPurpleLine",
+        "order": 1
+      },
+      "id": 156
+    }
+  ],
+  "properties": {
+    "totalStations": 186,
+    "stationsPerLine": {
+      "CTAMetroBlueLine": 31,
+      "CTAMetroBrownLine": 27,
+      "CTAMetroGreenLine": 30,
+      "CTAMetroOrangeLine": 16,
+      "CTAMetroPinkLine": 22,
+      "CTAMetroPurpleLine": 26,
+      "CTAMetroRedLine": 31,
+      "CTAMetroYellowLine": 3
+    }
+  }
+}

@@ -1,0 +1,142 @@
+{
+  "Tunnelbana10": {
+    "name": "T10",
+    "color": "#0066B7",
+    "backgroundColor": "#00335C",
+    "textColor": "#FFFFFF",
+    "order": 0
+  },
+  "Tunnelbana11": {
+    "name": "T11",
+    "color": "#0066B7",
+    "backgroundColor": "#00335C",
+    "textColor": "#FFFFFF",
+    "order": 1
+  },
+  "Tunnelbana13": {
+    "name": "T13",
+    "color": "#D90011",
+    "backgroundColor": "#6D0008",
+    "textColor": "#FFFFFF",
+    "order": 2
+  },
+  "Tunnelbana14": {
+    "name": "T14",
+    "color": "#D90011",
+    "backgroundColor": "#6D0008",
+    "textColor": "#FFFFFF",
+    "order": 3
+  },
+  "Tunnelbana17": {
+    "name": "T17",
+    "color": "#44A326",
+    "backgroundColor": "#225213",
+    "textColor": "#FFFFFF",
+    "order": 4
+  },
+  "Tunnelbana18": {
+    "name": "T18",
+    "color": "#44A326",
+    "backgroundColor": "#225213",
+    "textColor": "#FFFFFF",
+    "order": 5
+  },
+  "Tunnelbana19": {
+    "name": "T19",
+    "color": "#44A326",
+    "backgroundColor": "#225213",
+    "textColor": "#FFFFFF",
+    "order": 6
+  },
+  "Lokalbana30": {
+    "name": "30",
+    "color": "#D77E00",
+    "backgroundColor": "#6C3F00",
+    "textColor": "#FFFFFF",
+    "order": 7
+  },
+  "Lokalbana31": {
+    "name": "31",
+    "color": "#D77E00",
+    "backgroundColor": "#6C3F00",
+    "textColor": "#FFFFFF",
+    "order": 8
+  },
+  "LokalbanaL12": {
+    "name": "L12",
+    "color": "#ff9000",
+    "backgroundColor": "#804800",
+    "textColor": "#FFFFFF",
+    "order": 9
+  },
+  "LokalbanaL21": {
+    "name": "L21",
+    "color": "#BA7F32",
+    "backgroundColor": "#5D4019",
+    "textColor": "#FFFFFF",
+    "order": 10
+  },
+  "LokalbanaL27": {
+    "name": "L27",
+    "color": "#A05EA6",
+    "backgroundColor": "#512E54",
+    "textColor": "#FFFFFF",
+    "order": 11
+  },
+  "LokalbanaL28": {
+    "name": "L28",
+    "color": "#A05EA6",
+    "backgroundColor": "#512E54",
+    "textColor": "#FFFFFF",
+    "order": 12
+  },
+  "LokalbanaL29": {
+    "name": "L29",
+    "color": "#A05EA6",
+    "backgroundColor": "#512E54",
+    "textColor": "#FFFFFF",
+    "order": 13
+  },
+  "Pendeltag40": {
+    "name": "40",
+    "color": "#000000",
+    "backgroundColor": "#000000",
+    "textColor": "#FFFFFF",
+    "order": 14
+  },
+  "Pendeltag41": {
+    "name": "41",
+    "color": "#000000",
+    "backgroundColor": "#000000",
+    "textColor": "#FFFFFF",
+    "order": 15
+  },
+  "Pendeltag42X": {
+    "name": "42X",
+    "color": "#000000",
+    "backgroundColor": "#000000",
+    "textColor": "#FFFFFF",
+    "order": 16
+  },
+  "Pendeltag43": {
+    "name": "43",
+    "color": "#000000",
+    "backgroundColor": "#000000",
+    "textColor": "#FFFFFF",
+    "order": 17
+  },
+  "Pendeltag43X": {
+    "name": "43X",
+    "color": "#000000",
+    "backgroundColor": "#000000",
+    "textColor": "#FFFFFF",
+    "order": 18
+  },
+  "Pendeltag48": {
+    "name": "48",
+    "color": "#000000",
+    "backgroundColor": "#000000",
+    "textColor": "#FFFFFF",
+    "order": 19
+  }
+}

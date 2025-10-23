@@ -1,0 +1,107 @@
+{
+  "MadridMetroL1": {
+    "name": "1",
+    "color": "#009CE1",
+    "backgroundColor": "#004E71",
+    "textColor": "#FFFFFF",
+    "order": 0
+  },
+  "MadridMetroL2": {
+    "name": "2",
+    "color": "#E20A16",
+    "backgroundColor": "#71050B",
+    "textColor": "#FFFFFF",
+    "order": 1
+  },
+  "MadridMetroL3": {
+    "name": "3",
+    "color": "#FFBC00",
+    "backgroundColor": "#805E00",
+    "textColor": "#FFFFFF",
+    "order": 2
+  },
+  "MadridMetroL4": {
+    "name": "4",
+    "color": "#BE5316",
+    "backgroundColor": "#5F290B",
+    "textColor": "#FFFFFF",
+    "order": 3
+  },
+  "MadridMetroL5": {
+    "name": "5",
+    "color": "#6EAB23",
+    "backgroundColor": "#375612",
+    "textColor": "#FFFFFF",
+    "order": 4
+  },
+  "MadridMetroL6": {
+    "name": "6",
+    "color": "#716F6E",
+    "backgroundColor": "#393837",
+    "textColor": "#FFFFFF",
+    "order": 5
+  },
+  "MadridMetroL7": {
+    "name": "7",
+    "color": "#F45C23",
+    "backgroundColor": "#852907",
+    "textColor": "#FFFFFF",
+    "order": 6
+  },
+  "MadridMetroL8": {
+    "name": "8",
+    "color": "#EA5F95",
+    "backgroundColor": "#911344",
+    "textColor": "#FFFFFF",
+    "order": 7
+  },
+  "MadridMetroL9": {
+    "name": "9",
+    "color": "#7A1364",
+    "backgroundColor": "#3D0A32",
+    "textColor": "#FFFFFF",
+    "order": 8
+  },
+  "MadridMetroL10": {
+    "name": "10",
+    "color": "#004186",
+    "backgroundColor": "#002143",
+    "textColor": "#FFFFFF",
+    "order": 9
+  },
+  "MadridMetroL11": {
+    "name": "11",
+    "color": "#00693C",
+    "backgroundColor": "#00351E",
+    "textColor": "#FFFFFF",
+    "order": 10
+  },
+  "MadridMetroL12": {
+    "name": "12",
+    "color": "#AA9507",
+    "backgroundColor": "#554B04",
+    "textColor": "#FFFFFF",
+    "order": 11
+  },
+  "MetroLigeroMl1": {
+    "name": "ML1",
+    "color": "#0C61A0",
+    "backgroundColor": "#063150",
+    "textColor": "#FFFFFF",
+    "order": 12
+  },
+  "MetroLigeroMl2": {
+    "name": "ML2",
+    "color": "#7A1364",
+    "backgroundColor": "#3D0A32",
+    "textColor": "#FFFFFF",
+    "order": 13
+  },
+  "MetroLigeroMl3": {
+    "name": "ML3",
+    "color": "#E20A16",
+    "backgroundColor": "#71050B",
+    "textColor": "#FFFFFF",
+    "order": 14
+  }
+}

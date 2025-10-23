@@ -1,0 +1,51 @@
+{
+  "ViennaUBahnU1": {
+    "name": "U1",
+    "color": "#E20512",
+    "backgroundColor": "#710309",
+    "textColor": "#FFFFFF",
+    "order": 1000
+  },
+  "ViennaUBahnU2": {
+    "name": "U2",
+    "color": "#A762A3",
+    "backgroundColor": "#553053",
+    "textColor": "#FFFFFF",
+    "order": 1000
+  },
+  "ViennaUBahnU3": {
+    "name": "U3",
+    "color": "#EE7D00",
+    "backgroundColor": "#773E00",
+    "textColor": "#FFFFFF",
+    "order": 1000
+  },
+  "ViennaUBahnU4": {
+    "name": "U4",
+    "color": "#009540",
+    "backgroundColor": "#004B20",
+    "textColor": "#FFFFFF",
+    "order": 1000
+  },
+  "ViennaUBahnU6": {
+    "name": "U6",
+    "color": "#9D6930",
+    "backgroundColor": "#4F3418",
+    "textColor": "#FFFFFF",
+    "order": 1000
+  },
+  "ViennaStrassenbahn38": {
+    "name": "38",
+    "color": "#D3312C",
+    "backgroundColor": "#6A1916",
+    "textColor": "#FFFFFF",
+    "order": 1000
+  },
+  "ViennaStrassenbahn44": {
+    "name": "44",
+    "color": "#D3312C",
+    "backgroundColor": "#6A1916",
+    "textColor": "#FFFFFF",
+    "order": 1000
+  }
+}

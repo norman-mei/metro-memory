@@ -1,0 +1,65 @@
+{
+  "BudapestMetro1": {
+    "name": "M1",
+    "color": "#feda04",
+    "backgroundColor": "#806E01",
+    "textColor": "#FFFFFF",
+    "order": 0
+  },
+  "BudapestMetro2": {
+    "name": "M2",
+    "color": "#ca161c",
+    "backgroundColor": "#650B0E",
+    "textColor": "#FFFFFF",
+    "order": 1
+  },
+  "BudapestMetro3": {
+    "name": "M3",
+    "color": "#025694",
+    "backgroundColor": "#012B4A",
+    "textColor": "#FFFFFF",
+    "order": 2
+  },
+  "BudapestMetro4": {
+    "name": "M4",
+    "color": "#44aa44",
+    "backgroundColor": "#225522",
+    "textColor": "#FFFFFF",
+    "order": 3
+  },
+  "BudapestHEV5": {
+    "name": "H5",
+    "color": "#8A226C",
+    "backgroundColor": "#451136",
+    "textColor": "#FFFFFF",
+    "order": 4
+  },
+  "BudapestHEV6": {
+    "name": "H6",
+    "color": "#815319",
+    "backgroundColor": "#41290C",
+    "textColor": "#FFFFFF",
+    "order": 5
+  },
+  "BudapestHEV7": {
+    "name": "H7",
+    "color": "#F29315",
+    "backgroundColor": "#7D4A07",
+    "textColor": "#FFFFFF",
+    "order": 6
+  },
+  "BudapestHEV8": {
+    "name": "H8",
+    "color": "#EC766F",
+    "backgroundColor": "#991C14",
+    "textColor": "#FFFFFF",
+    "order": 7
+  },
+  "BudapestHEV9": {
+    "name": "H9",
+    "color": "#EC766F",
+    "backgroundColor": "#991C14",
+    "textColor": "#FFFFFF",
+    "order": 8
+  }
+}

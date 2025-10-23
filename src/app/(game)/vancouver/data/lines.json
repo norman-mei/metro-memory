@@ -1,0 +1,37 @@
+{
+  "VancouverSkytrainCanadaLine": {
+    "name": "Canada Line",
+    "color": "#009BC8",
+    "backgroundColor": "#004E64",
+    "textColor": "#ffffff",
+    "order": 0
+  },
+  "VancouverSkytrainExpoLine": {
+    "name": "Expo Line",
+    "color": "#015DAB",
+    "backgroundColor": "#002E55",
+    "textColor": "#ffffff",
+    "order": 1
+  },
+  "VancouverSkytrainMillenniumLine": {
+    "name": "Millennium Line",
+    "color": "#FED105",
+    "backgroundColor": "#816A01",
+    "textColor": "#000000",
+    "order": 2
+  },
+  "VancouverSeabusSeabus": {
+    "name": "Seabus",
+    "color": "#746661",
+    "backgroundColor": "#3A3331",
+    "textColor": "#FFFFFF",
+    "order": 3
+  },
+  "VancouverWestCoastExpressWce": {
+    "name": "WCE",
+    "color": "#77278D",
+    "backgroundColor": "#3B1447",
+    "textColor": "#ffffff",
+    "order": 4
+  }
+}

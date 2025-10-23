@@ -1,0 +1,2034 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.052473, 42.320637]
+      },
+      "properties": {
+        "id": 0,
+        "name": "JFK/UMass",
+        "line": "MBTATMetroRedLine"
+      },
+      "id": 0
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.053612, 42.310591]
+      },
+      "properties": {
+        "id": 1,
+        "name": "Savin Hill",
+        "line": "MBTATMetroRedLine"
+      },
+      "id": 1
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.061945, 42.299935]
+      },
+      "properties": {
+        "id": 2,
+        "name": "Fields Corner",
+        "line": "MBTATMetroRedLine"
+      },
+      "id": 2
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.065738, 42.293126]
+      },
+      "properties": {
+        "id": 3,
+        "name": "Shawmut",
+        "line": "MBTATMetroRedLine"
+      },
+      "id": 3
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.063725, 42.28453]
+      },
+      "properties": {
+        "id": 4,
+        "name": "Ashmont",
+        "line": "MBTATMetroRedLine"
+      },
+      "id": 4
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.121815, 42.39674]
+      },
+      "properties": {
+        "id": 5,
+        "name": "Davis",
+        "line": "MBTATMetroRedLine"
+      },
+      "id": 5
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.119149, 42.3884]
+      },
+      "properties": {
+        "id": 6,
+        "name": "Porter",
+        "line": "MBTATMetroRedLine"
+      },
+      "id": 6
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.118956, 42.373362]
+      },
+      "properties": {
+        "id": 7,
+        "name": "Harvard",
+        "line": "MBTATMetroRedLine"
+      },
+      "id": 7
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.103554, 42.365379]
+      },
+      "properties": {
+        "id": 8,
+        "name": "Central",
+        "line": "MBTATMetroRedLine"
+      },
+      "id": 8
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.085591, 42.362434]
+      },
+      "properties": {
+        "id": 9,
+        "name": "Kendall/MIT",
+        "line": "MBTATMetroRedLine"
+      },
+      "id": 9
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.071602, 42.361263]
+      },
+      "properties": {
+        "id": 10,
+        "name": "Charles/MGH",
+        "line": "MBTATMetroRedLine"
+      },
+      "id": 10
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.062424, 42.356395]
+      },
+      "properties": {
+        "id": 11,
+        "name": "Park Street",
+        "line": "MBTATMetroRedLine"
+      },
+      "id": 11
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.060225, 42.355518]
+      },
+      "properties": {
+        "id": 12,
+        "name": "Downtown Crossing",
+        "line": "MBTATMetroRedLine"
+      },
+      "id": 12
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.055242, 42.352271]
+      },
+      "properties": {
+        "id": 13,
+        "name": "South Station",
+        "line": "MBTATMetroRedLine"
+      },
+      "id": 13
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.056967, 42.342622]
+      },
+      "properties": {
+        "id": 14,
+        "name": "Broadway",
+        "line": "MBTATMetroRedLine"
+      },
+      "id": 14
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.057655, 42.330154]
+      },
+      "properties": {
+        "id": 15,
+        "name": "Andrew",
+        "line": "MBTATMetroRedLine"
+      },
+      "id": 15
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.030144, 42.275802]
+      },
+      "properties": {
+        "id": 17,
+        "name": "North Quincy",
+        "line": "MBTATMetroRedLine"
+      },
+      "id": 17
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.020457, 42.266788]
+      },
+      "properties": {
+        "id": 18,
+        "name": "Wollaston",
+        "line": "MBTATMetroRedLine"
+      },
+      "id": 18
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.005409, 42.251809]
+      },
+      "properties": {
+        "id": 19,
+        "name": "Quincy Center",
+        "line": "MBTATMetroRedLine"
+      },
+      "id": 19
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.007153, 42.233391]
+      },
+      "properties": {
+        "id": 20,
+        "name": "Quincy Adams",
+        "line": "MBTATMetroRedLine"
+      },
+      "id": 20
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.001645, 42.207424]
+      },
+      "properties": {
+        "id": 26,
+        "name": "Braintree",
+        "line": "MBTATMetroRedLine"
+      },
+      "id": 26
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.139971, 42.396158]
+      },
+      "properties": {
+        "id": 43,
+        "name": "Alewife",
+        "line": "MBTATMetroRedLine"
+      },
+      "id": 43
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.059215, 42.359705]
+      },
+      "properties": {
+        "id": 44,
+        "name": "Government Center",
+        "line": "MBTATGreenCLine"
+      },
+      "id": 44
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.062424, 42.356395]
+      },
+      "properties": {
+        "id": 45,
+        "name": "Park Street",
+        "line": "MBTATGreenCLine"
+      },
+      "id": 45
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.064682, 42.352531]
+      },
+      "properties": {
+        "id": 46,
+        "name": "Boylston",
+        "line": "MBTATGreenCLine"
+      },
+      "id": 46
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.070893, 42.351902]
+      },
+      "properties": {
+        "id": 47,
+        "name": "Arlington",
+        "line": "MBTATGreenCLine"
+      },
+      "id": 47
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.078049, 42.349871]
+      },
+      "properties": {
+        "id": 48,
+        "name": "Copley",
+        "line": "MBTATGreenCLine"
+      },
+      "id": 48
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.087903, 42.347888]
+      },
+      "properties": {
+        "id": 49,
+        "name": "Hynes Convention Center",
+        "line": "MBTATGreenCLine"
+      },
+      "id": 49
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.095169, 42.348949]
+      },
+      "properties": {
+        "id": 50,
+        "name": "Kenmore",
+        "line": "MBTATGreenCLine"
+      },
+      "id": 50
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.107166, 42.346007]
+      },
+      "properties": {
+        "id": 51,
+        "name": "Saint Mary's Street",
+        "line": "MBTATGreenCLine"
+      },
+      "id": 51
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.111157, 42.344867]
+      },
+      "properties": {
+        "id": 52,
+        "name": "Hawes Street",
+        "line": "MBTATGreenCLine"
+      },
+      "id": 52
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.114569, 42.343927]
+      },
+      "properties": {
+        "id": 53,
+        "name": "Kent Street",
+        "line": "MBTATGreenCLine"
+      },
+      "id": 53
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.117498, 42.343118]
+      },
+      "properties": {
+        "id": 54,
+        "name": "Saint Paul Street",
+        "line": "MBTATGreenCLine"
+      },
+      "id": 54
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.121685, 42.342028]
+      },
+      "properties": {
+        "id": 55,
+        "name": "Coolidge Corner",
+        "line": "MBTATGreenCLine"
+      },
+      "id": 55
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.125759, 42.341027]
+      },
+      "properties": {
+        "id": 56,
+        "name": "Summit Avenue",
+        "line": "MBTATGreenCLine"
+      },
+      "id": 56
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.12866, 42.340038]
+      },
+      "properties": {
+        "id": 57,
+        "name": "Brandon Hall",
+        "line": "MBTATGreenCLine"
+      },
+      "id": 57
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.131078, 42.339644]
+      },
+      "properties": {
+        "id": 58,
+        "name": "Fairbanks Street",
+        "line": "MBTATGreenCLine"
+      },
+      "id": 58
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.134587, 42.339519]
+      },
+      "properties": {
+        "id": 59,
+        "name": "Washington Square",
+        "line": "MBTATGreenCLine"
+      },
+      "id": 59
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.13819, 42.338567]
+      },
+      "properties": {
+        "id": 60,
+        "name": "Tappan Street",
+        "line": "MBTATGreenCLine"
+      },
+      "id": 60
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.142309, 42.337628]
+      },
+      "properties": {
+        "id": 61,
+        "name": "Dean Road",
+        "line": "MBTATGreenCLine"
+      },
+      "id": 61
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.145368, 42.337011]
+      },
+      "properties": {
+        "id": 62,
+        "name": "Englewood Avenue",
+        "line": "MBTATGreenCLine"
+      },
+      "id": 62
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.148774, 42.336252]
+      },
+      "properties": {
+        "id": 63,
+        "name": "Cleveland Circle",
+        "line": "MBTATGreenCLine"
+      },
+      "id": 63
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.074314, 42.426662]
+      },
+      "properties": {
+        "id": 84,
+        "name": "Malden Center",
+        "line": "MBTATMetroOrangeLine"
+      },
+      "id": 84
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.07715, 42.401507]
+      },
+      "properties": {
+        "id": 85,
+        "name": "Wellington",
+        "line": "MBTATMetroOrangeLine"
+      },
+      "id": 85
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.07718, 42.392336]
+      },
+      "properties": {
+        "id": 86,
+        "name": "Assembly",
+        "line": "MBTATMetroOrangeLine"
+      },
+      "id": 86
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.076994, 42.383975]
+      },
+      "properties": {
+        "id": 87,
+        "name": "Sullivan Square",
+        "line": "MBTATMetroOrangeLine"
+      },
+      "id": 87
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.069533, 42.373622]
+      },
+      "properties": {
+        "id": 88,
+        "name": "Community College",
+        "line": "MBTATMetroOrangeLine"
+      },
+      "id": 88
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.060205, 42.36528]
+      },
+      "properties": {
+        "id": 89,
+        "name": "North Station",
+        "line": "MBTATMetroOrangeLine"
+      },
+      "id": 89
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.05829, 42.363021]
+      },
+      "properties": {
+        "id": 90,
+        "name": "Haymarket",
+        "line": "MBTATMetroOrangeLine"
+      },
+      "id": 90
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.057598, 42.358978]
+      },
+      "properties": {
+        "id": 91,
+        "name": "State",
+        "line": "MBTATMetroOrangeLine"
+      },
+      "id": 91
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.060225, 42.355518]
+      },
+      "properties": {
+        "id": 92,
+        "name": "Downtown Crossing",
+        "line": "MBTATMetroOrangeLine"
+      },
+      "id": 92
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.062752, 42.352547]
+      },
+      "properties": {
+        "id": 93,
+        "name": "Chinatown",
+        "line": "MBTATMetroOrangeLine"
+      },
+      "id": 93
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.063917, 42.349662]
+      },
+      "properties": {
+        "id": 94,
+        "name": "Tufts Medical Center",
+        "line": "MBTATMetroOrangeLine"
+      },
+      "id": 94
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.075727, 42.34735]
+      },
+      "properties": {
+        "id": 95,
+        "name": "Back Bay",
+        "line": "MBTATMetroOrangeLine"
+      },
+      "id": 95
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.084124, 42.340892]
+      },
+      "properties": {
+        "id": 96,
+        "name": "Massachusetts Avenue",
+        "line": "MBTATMetroOrangeLine"
+      },
+      "id": 96
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.089635, 42.336451]
+      },
+      "properties": {
+        "id": 97,
+        "name": "Ruggles",
+        "line": "MBTATMetroOrangeLine"
+      },
+      "id": 97
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.09604, 42.33064]
+      },
+      "properties": {
+        "id": 98,
+        "name": "Roxbury Crossing",
+        "line": "MBTATMetroOrangeLine"
+      },
+      "id": 98
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.099592, 42.323132]
+      },
+      "properties": {
+        "id": 99,
+        "name": "Jackson Square",
+        "line": "MBTATMetroOrangeLine"
+      },
+      "id": 99
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.104248, 42.317062]
+      },
+      "properties": {
+        "id": 100,
+        "name": "Stony Brook",
+        "line": "MBTATMetroOrangeLine"
+      },
+      "id": 100
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.107988, 42.309796]
+      },
+      "properties": {
+        "id": 101,
+        "name": "Green Street",
+        "line": "MBTATMetroOrangeLine"
+      },
+      "id": 101
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.114129, 42.300926]
+      },
+      "properties": {
+        "id": 102,
+        "name": "Forest Hills",
+        "line": "MBTATMetroOrangeLine"
+      },
+      "id": 102
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.070875, 42.437735]
+      },
+      "properties": {
+        "id": 121,
+        "name": "Oak Grove",
+        "line": "MBTATMetroOrangeLine"
+      },
+      "id": 121
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.093964, 42.377024]
+      },
+      "properties": {
+        "id": 122,
+        "name": "Union Square",
+        "line": "MBTATGreenDLine"
+      },
+      "id": 122
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.076457, 42.371566]
+      },
+      "properties": {
+        "id": 123,
+        "name": "Lechmere",
+        "line": "MBTATGreenDLine"
+      },
+      "id": 123
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.067666, 42.366664]
+      },
+      "properties": {
+        "id": 124,
+        "name": "Science Park/West End",
+        "line": "MBTATGreenDLine"
+      },
+      "id": 124
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.060205, 42.36528]
+      },
+      "properties": {
+        "id": 125,
+        "name": "North Station",
+        "line": "MBTATGreenDLine"
+      },
+      "id": 125
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.05829, 42.363021]
+      },
+      "properties": {
+        "id": 126,
+        "name": "Haymarket",
+        "line": "MBTATGreenDLine"
+      },
+      "id": 126
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.059215, 42.359705]
+      },
+      "properties": {
+        "id": 127,
+        "name": "Government Center",
+        "line": "MBTATGreenDLine"
+      },
+      "id": 127
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.062424, 42.356395]
+      },
+      "properties": {
+        "id": 128,
+        "name": "Park Street",
+        "line": "MBTATGreenDLine"
+      },
+      "id": 128
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.064682, 42.352531]
+      },
+      "properties": {
+        "id": 129,
+        "name": "Boylston",
+        "line": "MBTATGreenDLine"
+      },
+      "id": 129
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.070893, 42.351902]
+      },
+      "properties": {
+        "id": 130,
+        "name": "Arlington",
+        "line": "MBTATGreenDLine"
+      },
+      "id": 130
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.078049, 42.349871]
+      },
+      "properties": {
+        "id": 131,
+        "name": "Copley",
+        "line": "MBTATGreenDLine"
+      },
+      "id": 131
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.087903, 42.347888]
+      },
+      "properties": {
+        "id": 132,
+        "name": "Hynes Convention Center",
+        "line": "MBTATGreenDLine"
+      },
+      "id": 132
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.095169, 42.348949]
+      },
+      "properties": {
+        "id": 133,
+        "name": "Kenmore",
+        "line": "MBTATGreenDLine"
+      },
+      "id": 133
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.104269, 42.345328]
+      },
+      "properties": {
+        "id": 134,
+        "name": "Fenway",
+        "line": "MBTATGreenDLine"
+      },
+      "id": 134
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.109777, 42.341808]
+      },
+      "properties": {
+        "id": 135,
+        "name": "Longwood",
+        "line": "MBTATGreenDLine"
+      },
+      "id": 135
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.116751, 42.332614]
+      },
+      "properties": {
+        "id": 136,
+        "name": "Brookline Village",
+        "line": "MBTATGreenDLine"
+      },
+      "id": 136
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.126406, 42.331293]
+      },
+      "properties": {
+        "id": 137,
+        "name": "Brookline Hills",
+        "line": "MBTATGreenDLine"
+      },
+      "id": 137
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.140112, 42.335625]
+      },
+      "properties": {
+        "id": 138,
+        "name": "Beaconsfield",
+        "line": "MBTATGreenDLine"
+      },
+      "id": 138
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.147879, 42.335181]
+      },
+      "properties": {
+        "id": 139,
+        "name": "Reservoir",
+        "line": "MBTATGreenDLine"
+      },
+      "id": 139
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.164146, 42.326799]
+      },
+      "properties": {
+        "id": 140,
+        "name": "Chestnut Hill",
+        "line": "MBTATGreenDLine"
+      },
+      "id": 140
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.192024, 42.329552]
+      },
+      "properties": {
+        "id": 141,
+        "name": "Newton Centre",
+        "line": "MBTATGreenDLine"
+      },
+      "id": 141
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.205082, 42.322738]
+      },
+      "properties": {
+        "id": 142,
+        "name": "Newton Highlands",
+        "line": "MBTATGreenDLine"
+      },
+      "id": 142
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.21642, 42.318871]
+      },
+      "properties": {
+        "id": 143,
+        "name": "Eliot",
+        "line": "MBTATGreenDLine"
+      },
+      "id": 143
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.230476, 42.325695]
+      },
+      "properties": {
+        "id": 144,
+        "name": "Waban",
+        "line": "MBTATGreenDLine"
+      },
+      "id": 144
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.243055, 42.332703]
+      },
+      "properties": {
+        "id": 145,
+        "name": "Woodland",
+        "line": "MBTATGreenDLine"
+      },
+      "id": 145
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.252256, 42.337317]
+      },
+      "properties": {
+        "id": 146,
+        "name": "Riverside",
+        "line": "MBTATGreenDLine"
+      },
+      "id": 146
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.11728, 42.408306]
+      },
+      "properties": {
+        "id": 172,
+        "name": "Medford/Tufts",
+        "line": "MBTATGreenELine"
+      },
+      "id": 172
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.111331, 42.40038]
+      },
+      "properties": {
+        "id": 173,
+        "name": "Ball Square",
+        "line": "MBTATGreenELine"
+      },
+      "id": 173
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.106824, 42.394357]
+      },
+      "properties": {
+        "id": 174,
+        "name": "Magoun Square",
+        "line": "MBTATGreenELine"
+      },
+      "id": 174
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.096956, 42.388043]
+      },
+      "properties": {
+        "id": 175,
+        "name": "Gilman Square",
+        "line": "MBTATGreenELine"
+      },
+      "id": 175
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.087032, 42.379881]
+      },
+      "properties": {
+        "id": 176,
+        "name": "East Somerville",
+        "line": "MBTATGreenELine"
+      },
+      "id": 176
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.076457, 42.371566]
+      },
+      "properties": {
+        "id": 177,
+        "name": "Lechmere",
+        "line": "MBTATGreenELine"
+      },
+      "id": 177
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.067666, 42.366664]
+      },
+      "properties": {
+        "id": 178,
+        "name": "Science Park/West End",
+        "line": "MBTATGreenELine"
+      },
+      "id": 178
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.060205, 42.36528]
+      },
+      "properties": {
+        "id": 179,
+        "name": "North Station",
+        "line": "MBTATGreenELine"
+      },
+      "id": 179
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.05829, 42.363021]
+      },
+      "properties": {
+        "id": 180,
+        "name": "Haymarket",
+        "line": "MBTATGreenELine"
+      },
+      "id": 180
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.059215, 42.359705]
+      },
+      "properties": {
+        "id": 181,
+        "name": "Government Center",
+        "line": "MBTATGreenELine"
+      },
+      "id": 181
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.062424, 42.356395]
+      },
+      "properties": {
+        "id": 182,
+        "name": "Park Street",
+        "line": "MBTATGreenELine"
+      },
+      "id": 182
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.064682, 42.352531]
+      },
+      "properties": {
+        "id": 183,
+        "name": "Boylston",
+        "line": "MBTATGreenELine"
+      },
+      "id": 183
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.070893, 42.351902]
+      },
+      "properties": {
+        "id": 184,
+        "name": "Arlington",
+        "line": "MBTATGreenELine"
+      },
+      "id": 184
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.078049, 42.349871]
+      },
+      "properties": {
+        "id": 185,
+        "name": "Copley",
+        "line": "MBTATGreenELine"
+      },
+      "id": 185
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.081696, 42.34557]
+      },
+      "properties": {
+        "id": 186,
+        "name": "Prudential",
+        "line": "MBTATGreenELine"
+      },
+      "id": 186
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.085056, 42.342687]
+      },
+      "properties": {
+        "id": 187,
+        "name": "Symphony",
+        "line": "MBTATGreenELine"
+      },
+      "id": 187
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.0892, 42.340222]
+      },
+      "properties": {
+        "id": 188,
+        "name": "Northeastern University",
+        "alternate_names": ["Northeastern"],
+        "line": "MBTATGreenELine"
+      },
+      "id": 188
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.094682, 42.338017]
+      },
+      "properties": {
+        "id": 189,
+        "name": "Museum of Fine Arts",
+        "line": "MBTATGreenELine"
+      },
+      "id": 189
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.099328, 42.336217]
+      },
+      "properties": {
+        "id": 190,
+        "name": "Longwood Medical Area",
+        "line": "MBTATGreenELine"
+      },
+      "id": 190
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.103017, 42.334846]
+      },
+      "properties": {
+        "id": 191,
+        "name": "Brigham Circle",
+        "line": "MBTATGreenELine"
+      },
+      "id": 191
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.105583, 42.333706]
+      },
+      "properties": {
+        "id": 192,
+        "name": "Fenwood Road",
+        "line": "MBTATGreenELine"
+      },
+      "id": 192
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.10968, 42.333092]
+      },
+      "properties": {
+        "id": 193,
+        "name": "Mission Park",
+        "line": "MBTATGreenELine"
+      },
+      "id": 193
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.111961, 42.331871]
+      },
+      "properties": {
+        "id": 194,
+        "name": "Riverway",
+        "line": "MBTATGreenELine"
+      },
+      "id": 194
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.110931, 42.329399]
+      },
+      "properties": {
+        "id": 195,
+        "name": "Back of the Hill",
+        "line": "MBTATGreenELine"
+      },
+      "id": 195
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.110252, 42.328316]
+      },
+      "properties": {
+        "id": 196,
+        "name": "Heath Street",
+        "line": "MBTATGreenELine"
+      },
+      "id": 196
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.060381, 42.279693]
+      },
+      "properties": {
+        "id": 221,
+        "name": "Cedar Grove",
+        "line": "MBTATMetroRedMLine"
+      },
+      "id": 221
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.062438, 42.272477]
+      },
+      "properties": {
+        "id": 222,
+        "name": "Butler",
+        "line": "MBTATMetroRedMLine"
+      },
+      "id": 222
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.067289, 42.270308]
+      },
+      "properties": {
+        "id": 223,
+        "name": "Milton",
+        "line": "MBTATMetroRedMLine"
+      },
+      "id": 223
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.073358, 42.270001]
+      },
+      "properties": {
+        "id": 224,
+        "name": "Central Avenue",
+        "line": "MBTATMetroRedMLine"
+      },
+      "id": 224
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.081343, 42.268347]
+      },
+      "properties": {
+        "id": 225,
+        "name": "Valley Road",
+        "line": "MBTATMetroRedMLine"
+      },
+      "id": 225
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.087338, 42.267563]
+      },
+      "properties": {
+        "id": 226,
+        "name": "Capen Street",
+        "line": "MBTATMetroRedMLine"
+      },
+      "id": 226
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.092233, 42.267559]
+      },
+      "properties": {
+        "id": 227,
+        "name": "Mattapan",
+        "line": "MBTATMetroRedMLine"
+      },
+      "id": 227
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.063191, 42.283768]
+      },
+      "properties": {
+        "id": 235,
+        "name": "Ashmont",
+        "line": "MBTATMetroRedMLine"
+      },
+      "id": 235
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.059215, 42.359705]
+      },
+      "properties": {
+        "id": 236,
+        "name": "Government Center",
+        "line": "MBTATMetroGreenBLine"
+      },
+      "id": 236
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.062424, 42.356395]
+      },
+      "properties": {
+        "id": 237,
+        "name": "Park Street",
+        "line": "MBTATMetroGreenBLine"
+      },
+      "id": 237
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.064682, 42.352531]
+      },
+      "properties": {
+        "id": 238,
+        "name": "Boylston",
+        "line": "MBTATMetroGreenBLine"
+      },
+      "id": 238
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.070893, 42.351902]
+      },
+      "properties": {
+        "id": 239,
+        "name": "Arlington",
+        "line": "MBTATMetroGreenBLine"
+      },
+      "id": 239
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.078049, 42.349871]
+      },
+      "properties": {
+        "id": 240,
+        "name": "Copley",
+        "line": "MBTATMetroGreenBLine"
+      },
+      "id": 240
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.087903, 42.347888]
+      },
+      "properties": {
+        "id": 241,
+        "name": "Hynes Convention Center",
+        "line": "MBTATMetroGreenBLine"
+      },
+      "id": 241
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.095169, 42.348949]
+      },
+      "properties": {
+        "id": 242,
+        "name": "Kenmore",
+        "line": "MBTATMetroGreenBLine"
+      },
+      "id": 242
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.099821, 42.349165]
+      },
+      "properties": {
+        "id": 243,
+        "name": "Blandford Street",
+        "line": "MBTATMetroGreenBLine"
+      },
+      "id": 243
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.103989, 42.349659]
+      },
+      "properties": {
+        "id": 244,
+        "name": "Boston University East",
+        "line": "MBTATMetroGreenBLine"
+      },
+      "id": 244
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.106902, 42.350013]
+      },
+      "properties": {
+        "id": 245,
+        "name": "Boston University Central",
+        "line": "MBTATMetroGreenBLine"
+      },
+      "id": 245
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.114318, 42.350901]
+      },
+      "properties": {
+        "id": 246,
+        "name": "Amory Street",
+        "line": "MBTATMetroGreenBLine"
+      },
+      "id": 246
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.119553, 42.351538]
+      },
+      "properties": {
+        "id": 247,
+        "name": "Babcock Street",
+        "line": "MBTATMetroGreenBLine"
+      },
+      "id": 247
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.125067, 42.351891]
+      },
+      "properties": {
+        "id": 248,
+        "name": "Packard's Corner",
+        "line": "MBTATMetroGreenBLine"
+      },
+      "id": 248
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.131298, 42.350263]
+      },
+      "properties": {
+        "id": 249,
+        "name": "Harvard Avenue",
+        "line": "MBTATMetroGreenBLine"
+      },
+      "id": 249
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.1345, 42.348747]
+      },
+      "properties": {
+        "id": 250,
+        "name": "Griggs Street",
+        "line": "MBTATMetroGreenBLine"
+      },
+      "id": 250
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.137881, 42.348649]
+      },
+      "properties": {
+        "id": 251,
+        "name": "Allston Street",
+        "line": "MBTATMetroGreenBLine"
+      },
+      "id": 251
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.140436, 42.348285]
+      },
+      "properties": {
+        "id": 252,
+        "name": "Warren Street",
+        "line": "MBTATMetroGreenBLine"
+      },
+      "id": 252
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.142385, 42.344329]
+      },
+      "properties": {
+        "id": 253,
+        "name": "Washington Street",
+        "line": "MBTATMetroGreenBLine"
+      },
+      "id": 253
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.146089, 42.341589]
+      },
+      "properties": {
+        "id": 254,
+        "name": "Sutherland Road",
+        "line": "MBTATMetroGreenBLine"
+      },
+      "id": 254
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.150633, 42.340808]
+      },
+      "properties": {
+        "id": 255,
+        "name": "Chiswick Road",
+        "line": "MBTATMetroGreenBLine"
+      },
+      "id": 255
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.152526, 42.33873]
+      },
+      "properties": {
+        "id": 256,
+        "name": "Chestnut Hill Avenue",
+        "line": "MBTATMetroGreenBLine"
+      },
+      "id": 256
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.157057, 42.339371]
+      },
+      "properties": {
+        "id": 257,
+        "name": "South Street",
+        "line": "MBTATMetroGreenBLine"
+      },
+      "id": 257
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.167029, 42.340149]
+      },
+      "properties": {
+        "id": 258,
+        "name": "Boston College",
+        "line": "MBTATMetroGreenBLine"
+      },
+      "id": 258
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-70.991685, 42.413361]
+      },
+      "properties": {
+        "id": 282,
+        "name": "Wonderland",
+        "line": "MBTATMetroBlueLine"
+      },
+      "id": 282
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-70.992497, 42.407874]
+      },
+      "properties": {
+        "id": 283,
+        "name": "Revere Beach",
+        "line": "MBTATMetroBlueLine"
+      },
+      "id": 283
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-70.992551, 42.397204]
+      },
+      "properties": {
+        "id": 284,
+        "name": "Beachmont",
+        "line": "MBTATMetroBlueLine"
+      },
+      "id": 284
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-70.99703, 42.39061]
+      },
+      "properties": {
+        "id": 285,
+        "name": "Suffolk Downs",
+        "line": "MBTATMetroBlueLine"
+      },
+      "id": 285
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.004767, 42.386842]
+      },
+      "properties": {
+        "id": 286,
+        "name": "Orient Heights",
+        "line": "MBTATMetroBlueLine"
+      },
+      "id": 286
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.022783, 42.379671]
+      },
+      "properties": {
+        "id": 287,
+        "name": "Wood Island",
+        "line": "MBTATMetroBlueLine"
+      },
+      "id": 287
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.030395, 42.374262]
+      },
+      "properties": {
+        "id": 288,
+        "name": "Airport",
+        "line": "MBTATMetroBlueLine"
+      },
+      "id": 288
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.03953, 42.369119]
+      },
+      "properties": {
+        "id": 289,
+        "name": "Maverick",
+        "line": "MBTATMetroBlueLine"
+      },
+      "id": 289
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.051652, 42.359784]
+      },
+      "properties": {
+        "id": 290,
+        "name": "Aquarium",
+        "line": "MBTATMetroBlueLine"
+      },
+      "id": 290
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.057598, 42.358978]
+      },
+      "properties": {
+        "id": 291,
+        "name": "State",
+        "line": "MBTATMetroBlueLine"
+      },
+      "id": 291
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.059215, 42.359705]
+      },
+      "properties": {
+        "id": 292,
+        "name": "Government Center",
+        "line": "MBTATMetroBlueLine"
+      },
+      "id": 292
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.062037, 42.361365]
+      },
+      "properties": {
+        "id": 293,
+        "name": "Bowdoin",
+        "line": "MBTATMetroBlueLine"
+      },
+      "id": 293
+    }
+  ],
+  "properties": {
+    "totalStations": 155,
+    "stationsPerLine": {
+      "MBTATMetroRedLine": 22,
+      "MBTATGreenCLine": 20,
+      "MBTATMetroOrangeLine": 20,
+      "MBTATGreenDLine": 25,
+      "MBTATGreenELine": 25,
+      "MBTATMetroRedMLine": 8,
+      "MBTATMetroGreenBLine": 23,
+      "MBTATMetroBlueLine": 12
+    }
+  }
+}

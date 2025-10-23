@@ -1,0 +1,51 @@
+{
+  "MBTATMetroBlueLine": {
+    "name": "Blue Line",
+    "color": "#007CC3",
+    "backgroundColor": "#003E62",
+    "textColor": "#FFFFFF",
+    "order": 0
+  },
+  "MBTATMetroGreenBLine": {
+    "name": "Green B",
+    "color": "#009b67",
+    "backgroundColor": "#004E34",
+    "textColor": "#FFFFFF",
+    "order": 1
+  },
+  "MBTATGreenCLine": {
+    "name": "Green C",
+    "color": "#009b67",
+    "backgroundColor": "#004E34",
+    "textColor": "#FFFFFF",
+    "order": 2
+  },
+  "MBTATGreenDLine": {
+    "name": "Green D",
+    "color": "#009b67",
+    "backgroundColor": "#004E34",
+    "textColor": "#FFFFFF",
+    "order": 3
+  },
+  "MBTATGreenELine": {
+    "name": "Green E",
+    "color": "#009b67",
+    "backgroundColor": "#004E34",
+    "textColor": "#FFFFFF",
+    "order": 4
+  },
+  "MBTATMetroOrangeLine": {
+    "name": "Orange Line",
+    "color": "#E87424",
+    "backgroundColor": "#79390D",
+    "textColor": "#FFFFFF",
+    "order": 5
+  },
+  "MBTATMetroRedLine": {
+    "name": "Red Line",
+    "color": "#EF3E42",
+    "backgroundColor": "#8B0C0E",
+    "textColor": "#FFFFFF",
+    "order": 6
+  }
+}

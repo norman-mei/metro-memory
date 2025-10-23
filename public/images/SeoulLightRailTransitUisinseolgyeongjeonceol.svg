@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   id="레이어_1"
+   x="0px"
+   y="0px"
+   width="450px"
+   height="450px"
+   viewBox="0 0 450 450"
+   style="enable-background:new 0 0 450 450;"
+   xml:space="preserve"
+   sodipodi:docname="Seoul_Metro_Line_Ui_Line.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"><metadata
+   id="metadata25"><rdf:RDF><cc:Work
+       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title /></cc:Work></rdf:RDF></metadata><defs
+   id="defs23" /><sodipodi:namedview
+   pagecolor="#ffffff"
+   bordercolor="#666666"
+   borderopacity="1"
+   objecttolerance="10"
+   gridtolerance="10"
+   guidetolerance="10"
+   inkscape:pageopacity="0"
+   inkscape:pageshadow="2"
+   inkscape:window-width="1077"
+   inkscape:window-height="658"
+   id="namedview21"
+   showgrid="false"
+   inkscape:zoom="0.52444444"
+   inkscape:cx="227.15391"
+   inkscape:cy="225"
+   inkscape:window-x="236"
+   inkscape:window-y="49"
+   inkscape:window-maximized="0"
+   inkscape:current-layer="레이어_1" />
+<style
+   type="text/css"
+   id="style2">
+	.st0{fill:#FDA600;}
+	.st1{fill:#FFFFFF;}
+</style>
+<circle
+   class="st0"
+   cx="225"
+   cy="225"
+   r="225"
+   id="circle4"
+   style="fill:#b7c452;fill-opacity:1" />
+
+<text
+   xml:space="preserve"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:53.33333206px;line-height:1.25;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+   x="225.51903"
+   y="413.77121"
+   id="text834"><tspan
+     sodipodi:role="line"
+     id="tspan832"
+     x="225.51903"
+     y="413.77121"
+     style="text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:1">Ui LRT</tspan></text>
+
+<g
+   aria-label="
+신설선"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:133.33332825px;line-height:1.25;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none"
+   id="text838"><path
+     d="m 122.74345,311.71323 v -89.84375 h 16.01562 v 89.84375 z m -21.15886,-16.66667 q -18.098953,-8.59375 -28.710932,-25.19531 -3.059896,6.57552 -12.109375,15.95052 -8.984374,9.3099 -15.885416,13.02083 L 33.029909,287.03875 q 13.736979,-5.98958 22.526041,-17.70833 8.789062,-11.78386 8.789062,-23.89323 v -18.22917 h 16.40625 v 17.70834 q 0,12.10937 9.049479,22.78645 9.114583,10.61198 22.135419,14.32292 z M 57.704388,343.09344 V 300.2549 h 16.406249 v 29.10156 h 67.057293 v 13.73698 z"
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Pristina;-inkscape-font-specification:'Pristina Bold';text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:1"
+     id="path4523"
+     inkscape:connector-curvature="0" /><path
+     d="m 257.9648,284.95542 v -30.40365 h -26.69271 v -13.21614 h 26.69271 v -19.46615 h 16.01562 v 63.08594 z m -25.58594,-1.36719 q -19.14062,-10.15625 -28.125,-23.4375 -3.64583,6.96615 -11.91406,14.84375 -8.26823,7.8776 -16.79688,11.91406 l -10.93749,-11.19791 q 14.64843,-6.31511 22.91666,-16.66667 8.33333,-10.41667 8.33333,-22.65625 v -11.84896 h 15.69011 v 11.84896 q 0,11.45833 8.85416,21.22396 8.91927,9.76562 21.67969,13.60677 z m -39.64844,61.84896 V 311.1924 h 65.23438 v -7.61719 h -65.23438 v -13.73698 h 81.25 v 33.91927 h -65.10416 v 8.00781 h 68.29427 v 13.67188 z"
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Pristina;-inkscape-font-specification:'Pristina Bold';text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:1"
+     id="path4525"
+     inkscape:connector-curvature="0" /><path
+     d="m 391.29812,311.71323 v -48.5026 h -26.43229 v -13.86719 h 26.43229 v -27.47396 h 16.01563 v 89.84375 z m -25.0651,-16.66667 q -17.83854,-8.52864 -28.64583,-25.71614 -3.71094,7.35677 -12.69531,16.73177 -8.91927,9.375 -15.29948,12.76041 l -11.91406,-11.32812 q 13.73698,-6.11979 22.52604,-18.03385 8.85416,-11.97917 8.85416,-24.02344 v -18.22917 h 16.21094 v 17.70834 q 0,12.23958 9.24479,23.04687 9.24479,10.80729 22.13542,14.45313 z m -39.97396,48.04688 V 300.2549 h 16.34115 v 29.10156 h 67.12239 v 13.73698 z"
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Pristina;-inkscape-font-specification:'Pristina Bold';text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:1"
+     id="path4527"
+     inkscape:connector-curvature="0" /></g>
+<g
+   aria-label="우이"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:133.33332825px;line-height:1.25;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none"
+   id="text848"><path
+     d="m 168.19209,145.65458 q -19.33594,0 -30.59896,-7.94271 -11.26302,-7.94271 -11.26302,-21.09375 0,-12.76041 11.19791,-20.50781 11.26302,-7.747396 30.40365,-7.747396 19.53125,0 30.66406,7.682292 11.19792,7.682294 11.19792,20.572914 0,13.08594 -11.06771,21.09375 -11.06771,7.94271 -30.53385,7.94271 z m -0.26042,-44.27083 q -12.30469,0 -18.61979,4.10156 -6.31511,4.03646 -6.31511,11.13281 0,7.03125 6.31511,11.13281 6.38021,4.03646 18.61979,4.03646 12.10937,0 18.48958,-4.03646 6.44531,-4.03645 6.44531,-11.13281 0,-7.09635 -6.44531,-11.13281 -6.38021,-4.10156 -18.48958,-4.10156 z m 8.39844,68.03385 v 42.51302 H 159.92386 V 169.4176 h -50 v -13.86719 h 116.53645 v 13.86719 z"
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Arial;-inkscape-font-specification:'Arial Bold';fill:#ffffff;fill-opacity:1"
+     id="path4530"
+     inkscape:connector-curvature="0" /><path
+     d="M 332.5801,211.93062 V 86.344685 h 16.14583 V 211.93062 Z m -51.82291,-30.53386 q -14.97396,0 -24.02344,-11.78385 -9.04948,-11.78385 -9.04948,-31.77083 0,-20.3125 8.98437,-31.90104 9.04948,-11.588543 24.08855,-11.588543 14.97395,0 23.89322,11.718753 8.98438,11.65364 8.98438,31.77083 0,20.18229 -8.91927,31.90104 -8.91927,11.65364 -23.95833,11.65364 z m 0,-73.17708 q -7.48698,0 -12.30469,8.00782 -4.81771,8.00781 -4.81771,21.74479 0,13.54166 4.94792,21.61458 4.94791,8.07292 12.17448,8.07292 7.16145,0 12.10937,-7.94271 4.94792,-8.00781 4.94792,-21.74479 0,-13.73698 -4.81771,-21.74479 -4.75261,-8.00782 -12.23958,-8.00782 z"
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Arial;-inkscape-font-specification:'Arial Bold';fill:#ffffff;fill-opacity:1"
+     id="path4532"
+     inkscape:connector-curvature="0" /></g>
+</svg>

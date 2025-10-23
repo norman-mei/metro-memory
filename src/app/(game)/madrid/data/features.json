@@ -1,0 +1,3615 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.592117, 40.359987] },
+      "properties": {
+        "id": 1,
+        "name": "Valdecarros",
+        "line": "MadridMetroL1",
+        "order": 0
+      },
+      "id": 1
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.70398, 40.445859] },
+      "properties": {
+        "id": 34,
+        "name": "Cuatro Caminos",
+        "line": "MadridMetroL2",
+        "order": 0
+      },
+      "id": 34
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.719268, 40.435244] },
+      "properties": {
+        "id": 54,
+        "name": "Moncloa",
+        "line": "MadridMetroL3",
+        "order": 0
+      },
+      "id": 54
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.715134, 40.430546] },
+      "properties": {
+        "id": 72,
+        "name": "Argüelles",
+        "line": "MadridMetroL4",
+        "order": 0
+      },
+      "id": 72
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.76166, 40.402949] },
+      "properties": {
+        "id": 95,
+        "name": "Casa de Campo",
+        "line": "MadridMetroL5",
+        "order": 0
+      },
+      "id": 95
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.744584, 40.399262] },
+      "properties": {
+        "id": 127,
+        "name": "Laguna",
+        "line": "MadridMetroL6",
+        "order": 0
+      },
+      "id": 127
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.601031, 40.434187] },
+      "properties": {
+        "id": 156,
+        "name": "Estadio Metropolitano",
+        "line": "MadridMetroL7",
+        "order": 0
+      },
+      "id": 156
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.691274, 40.446595] },
+      "properties": {
+        "id": 188,
+        "name": "Nuevos Ministerios",
+        "line": "MadridMetroL8",
+        "order": 0
+      },
+      "id": 188
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.447473, 40.303661] },
+      "properties": {
+        "id": 196,
+        "name": "Arganda del Rey",
+        "line": "MadridMetroL9",
+        "order": 0
+      },
+      "id": 196
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.811931, 40.345325] },
+      "properties": {
+        "id": 226,
+        "name": "Puerta del Sur",
+        "line": "MadridMetroL10",
+        "order": 0
+      },
+      "id": 226
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.71878, 40.384774] },
+      "properties": {
+        "id": 258,
+        "name": "Plaza Elíptica",
+        "line": "MadridMetroL11",
+        "order": 0
+      },
+      "id": 258
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.812021, 40.345172] },
+      "properties": {
+        "id": 265,
+        "name": "Puerta del Sur",
+        "line": "MadridMetroL12",
+        "order": 0
+      },
+      "id": 265
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.667069, 40.48] },
+      "properties": {
+        "id": 294,
+        "name": "Pinar de Chamartín",
+        "line": "MetroLigeroMl1",
+        "order": 0
+      },
+      "id": 294
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.774749, 40.396861] },
+      "properties": {
+        "id": 303,
+        "name": "Colonia Jardín",
+        "line": "MetroLigeroMl2",
+        "order": 0
+      },
+      "id": 303
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.903977, 40.407828] },
+      "properties": {
+        "id": 316,
+        "name": "Puerta de Boadilla",
+        "line": "MetroLigeroMl3",
+        "order": 0
+      },
+      "id": 316
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.775992, 40.336085] },
+      "properties": {
+        "id": 292,
+        "name": "San Nicasio",
+        "line": "MadridMetroL12",
+        "order": 449
+      },
+      "id": 292
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.771778, 40.328947] },
+      "properties": {
+        "id": 291,
+        "name": "Leganes",
+        "line": "MadridMetroL12",
+        "order": 437
+      },
+      "id": 291
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.768553, 40.321751] },
+      "properties": {
+        "id": 290,
+        "name": "Hospital Severo Ochoa",
+        "line": "MadridMetroL12",
+        "order": 421
+      },
+      "id": 290
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.759585, 40.326597] },
+      "properties": {
+        "id": 289,
+        "name": "Casa del Reloj",
+        "line": "MadridMetroL12",
+        "order": 412
+      },
+      "id": 289
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.752382, 40.33464] },
+      "properties": {
+        "id": 288,
+        "name": "Julián Besteiro",
+        "line": "MadridMetroL12",
+        "order": 388
+      },
+      "id": 288
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.740371, 40.336504] },
+      "properties": {
+        "id": 287,
+        "name": "El Carrascal",
+        "line": "MadridMetroL12",
+        "order": 382
+      },
+      "id": 287
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.729988, 40.329429] },
+      "properties": {
+        "id": 286,
+        "name": "El Bercial",
+        "line": "MadridMetroL12",
+        "order": 364
+      },
+      "id": 286
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.718388, 40.324294] },
+      "properties": {
+        "id": 285,
+        "name": "Los Espartales",
+        "line": "MadridMetroL12",
+        "order": 353
+      },
+      "id": 285
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.710265, 40.318467] },
+      "properties": {
+        "id": 284,
+        "name": "El Casar",
+        "line": "MadridMetroL12",
+        "order": 346
+      },
+      "id": 284
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.709338, 40.499614] },
+      "properties": {
+        "id": 225,
+        "name": "Paco de Lucía",
+        "line": "MadridMetroL9",
+        "order": 337
+      },
+      "id": 225
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.721681, 40.312628] },
+      "properties": {
+        "id": 283,
+        "name": "Juan de la Cierva",
+        "line": "MadridMetroL12",
+        "order": 317
+      },
+      "id": 283
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.595694, 40.40124] },
+      "properties": {
+        "id": 201,
+        "name": "Puerta de Arganda",
+        "line": "MadridMetroL9",
+        "order": 306
+      },
+      "id": 201
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.716661, 40.491261] },
+      "properties": {
+        "id": 224,
+        "name": "Mirasierra",
+        "line": "MadridMetroL9",
+        "order": 306
+      },
+      "id": 224
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.73401, 40.309956] },
+      "properties": {
+        "id": 282,
+        "name": "Getafe Centro",
+        "alternate_names": ["Getafe Central", "Getafe"],
+        "line": "MadridMetroL12",
+        "order": 302
+      },
+      "id": 282
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.70791, 40.48466] },
+      "properties": {
+        "id": 223,
+        "name": "Herrera Oria",
+        "line": "MadridMetroL9",
+        "order": 290
+      },
+      "id": 223
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.703427, 40.477109] },
+      "properties": {
+        "id": 222,
+        "name": "Barrio del Pilar",
+        "line": "MadridMetroL9",
+        "order": 277
+      },
+      "id": 222
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.736992, 40.300828] },
+      "properties": {
+        "id": 281,
+        "name": "Alonso de Mendoza",
+        "line": "MadridMetroL12",
+        "order": 277
+      },
+      "id": 281
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.547632, 40.367153] },
+      "properties": {
+        "id": 200,
+        "name": "Rivas Urbanizaciones",
+        "line": "MadridMetroL9",
+        "order": 269
+      },
+      "id": 200
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.745769, 40.293247] },
+      "properties": {
+        "id": 280,
+        "name": "Conservatorio",
+        "line": "MadridMetroL12",
+        "order": 259
+      },
+      "id": 280
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.696192, 40.46988] },
+      "properties": {
+        "id": 221,
+        "name": "Ventilla",
+        "line": "MadridMetroL9",
+        "order": 257
+      },
+      "id": 221
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.756702, 40.288657] },
+      "properties": {
+        "id": 279,
+        "name": "Arroyo Culebro",
+        "line": "MadridMetroL12",
+        "order": 247
+      },
+      "id": 279
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.689181, 40.466116] },
+      "properties": {
+        "id": 220,
+        "name": "Plaza de Castilla",
+        "line": "MadridMetroL9",
+        "order": 241
+      },
+      "id": 220
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.679137, 40.467621] },
+      "properties": {
+        "id": 219,
+        "name": "Duque de Pastrana",
+        "line": "MadridMetroL9",
+        "order": 231
+      },
+      "id": 219
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.787126, 40.286687] },
+      "properties": {
+        "id": 278,
+        "name": "Parque de Los Estados",
+        "line": "MadridMetroL12",
+        "order": 223
+      },
+      "id": 278
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.676056, 40.46357] },
+      "properties": {
+        "id": 218,
+        "name": "Pío XII",
+        "line": "MadridMetroL9",
+        "order": 218
+      },
+      "id": 218
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.725562, 40.495099] },
+      "properties": {
+        "id": 179,
+        "name": "Pitis",
+        "line": "MadridMetroL7",
+        "order": 217
+      },
+      "id": 179
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.676943, 40.457136] },
+      "properties": {
+        "id": 217,
+        "name": "Colombia",
+        "line": "MadridMetroL9",
+        "order": 214
+      },
+      "id": 217
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.587916, 40.457548] },
+      "properties": {
+        "id": 126,
+        "name": "Alameda de Osuna",
+        "line": "MadridMetroL5",
+        "order": 213
+      },
+      "id": 126
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.677517, 40.451997] },
+      "properties": {
+        "id": 216,
+        "name": "Concha Espina",
+        "line": "MadridMetroL9",
+        "order": 211
+      },
+      "id": 216
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.59483, 40.453234] },
+      "properties": {
+        "id": 125,
+        "name": "El Capricho",
+        "line": "MadridMetroL5",
+        "order": 210
+      },
+      "id": 125
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.7258, 40.49036] },
+      "properties": {
+        "id": 178,
+        "name": "Arroyofresno",
+        "line": "MadridMetroL7",
+        "order": 209
+      },
+      "id": 178
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.67836, 40.444582] },
+      "properties": {
+        "id": 215,
+        "name": "Cruz del Rayo",
+        "line": "MadridMetroL9",
+        "order": 209
+      },
+      "id": 215
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.723134, 40.485087] },
+      "properties": {
+        "id": 177,
+        "name": "Lacoma",
+        "line": "MadridMetroL7",
+        "order": 207
+      },
+      "id": 177
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.798945, 40.282514] },
+      "properties": {
+        "id": 277,
+        "name": "Fuenlabrada",
+        "line": "MadridMetroL12",
+        "order": 204
+      },
+      "id": 277
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.679071, 40.437923] },
+      "properties": {
+        "id": 214,
+        "name": "Avenida de América",
+        "line": "MadridMetroL9",
+        "order": 203
+      },
+      "id": 214
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.524971, 40.341719] },
+      "properties": {
+        "id": 199,
+        "name": "Rivas Futura",
+        "line": "MadridMetroL9",
+        "order": 202
+      },
+      "id": 199
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.679641, 40.431497] },
+      "properties": {
+        "id": 213,
+        "name": "Núñez de Balboa",
+        "line": "MadridMetroL9",
+        "order": 200
+      },
+      "id": 213
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.608194, 40.449344] },
+      "properties": {
+        "id": 124,
+        "name": "Canillejas",
+        "line": "MadridMetroL5",
+        "order": 199
+      },
+      "id": 124
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.718364, 40.480013] },
+      "properties": {
+        "id": 176,
+        "name": "Avenida de la Ilustración",
+        "line": "MadridMetroL7",
+        "order": 197
+      },
+      "id": 176
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.617389, 40.443513] },
+      "properties": {
+        "id": 123,
+        "name": "Torre Arias",
+        "line": "MadridMetroL5",
+        "order": 194
+      },
+      "id": 123
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.627281, 40.440796] },
+      "properties": {
+        "id": 122,
+        "name": "Suanzes",
+        "line": "MadridMetroL5",
+        "order": 192
+      },
+      "id": 122
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.71596, 40.475905] },
+      "properties": {
+        "id": 175,
+        "name": "Peñagrande",
+        "line": "MadridMetroL7",
+        "order": 192
+      },
+      "id": 175
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.805887, 40.285188] },
+      "properties": {
+        "id": 276,
+        "name": "Parque Europa",
+        "line": "MadridMetroL12",
+        "order": 192
+      },
+      "id": 276
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.638289, 40.437796] },
+      "properties": {
+        "id": 121,
+        "name": "Ciudad Lineal",
+        "line": "MadridMetroL5",
+        "order": 191
+      },
+      "id": 121
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.667175, 40.480312] },
+      "properties": {
+        "id": 33,
+        "name": "Pinar de Chamartín",
+        "line": "MadridMetroL1",
+        "order": 189
+      },
+      "id": 33
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.774749, 40.396861] },
+      "properties": {
+        "id": 331,
+        "name": "Colonia Jardín",
+        "line": "MetroLigeroMl3",
+        "order": 189
+      },
+      "id": 331
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.642853, 40.43565] },
+      "properties": {
+        "id": 120,
+        "name": "Pueblo Nuevo",
+        "line": "MadridMetroL5",
+        "order": 188
+      },
+      "id": 120
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.680362, 40.422739] },
+      "properties": {
+        "id": 212,
+        "name": "Príncipe de Vergara",
+        "line": "MadridMetroL9",
+        "order": 187
+      },
+      "id": 212
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.816585, 40.285922] },
+      "properties": {
+        "id": 275,
+        "name": "Hospital de Fuenlabrada",
+        "line": "MadridMetroL12",
+        "order": 187
+      },
+      "id": 275
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.648182, 40.433172] },
+      "properties": {
+        "id": 119,
+        "name": "Quintana",
+        "line": "MadridMetroL5",
+        "order": 185
+      },
+      "id": 119
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.717874, 40.470214] },
+      "properties": {
+        "id": 174,
+        "name": "Antonio Machado",
+        "line": "MadridMetroL7",
+        "order": 183
+      },
+      "id": 174
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.656208, 40.431985] },
+      "properties": {
+        "id": 118,
+        "name": "El Carmen",
+        "line": "MadridMetroL5",
+        "order": 182
+      },
+      "id": 118
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.676293, 40.476796] },
+      "properties": {
+        "id": 32,
+        "name": "Bambú",
+        "line": "MadridMetroL1",
+        "order": 181
+      },
+      "id": 32
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.783956, 40.397088] },
+      "properties": {
+        "id": 330,
+        "name": "Ciudad de la Imagen",
+        "line": "MetroLigeroMl3",
+        "order": 178
+      },
+      "id": 330
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.66321, 40.431275] },
+      "properties": {
+        "id": 117,
+        "name": "Ventas",
+        "line": "MadridMetroL5",
+        "order": 177
+      },
+      "id": 117
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.681883, 40.473426] },
+      "properties": {
+        "id": 31,
+        "name": "Chamartín",
+        "line": "MadridMetroL1",
+        "order": 174
+      },
+      "id": 31
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.666973, 40.480083] },
+      "properties": {
+        "id": 94,
+        "name": "Pinar de Chamartín",
+        "line": "MadridMetroL4",
+        "order": 173
+      },
+      "id": 94
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.662707, 40.476674] },
+      "properties": {
+        "id": 93,
+        "name": "Manoteras",
+        "line": "MadridMetroL4",
+        "order": 170
+      },
+      "id": 93
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.520425, 40.328104] },
+      "properties": {
+        "id": 198,
+        "name": "Rivas Vaciamadrid",
+        "line": "MadridMetroL9",
+        "order": 170
+      },
+      "id": 198
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.78992, 40.395246] },
+      "properties": {
+        "id": 329,
+        "name": "José Isbert",
+        "line": "MetroLigeroMl3",
+        "order": 168
+      },
+      "id": 329
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.716512, 40.464873] },
+      "properties": {
+        "id": 173,
+        "name": "Valdezarza",
+        "line": "MadridMetroL7",
+        "order": 167
+      },
+      "id": 173
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.689955, 40.466268] },
+      "properties": {
+        "id": 30,
+        "name": "Plaza de Castilla",
+        "line": "MadridMetroL1",
+        "order": 165
+      },
+      "id": 30
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.675142, 40.432443] },
+      "properties": {
+        "id": 116,
+        "name": "Diego de León",
+        "line": "MadridMetroL5",
+        "order": 164
+      },
+      "id": 116
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.795549, 40.394535] },
+      "properties": {
+        "id": 328,
+        "name": "Ciudad del Cine",
+        "line": "MetroLigeroMl3",
+        "order": 164
+      },
+      "id": 328
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.68139, 40.432749] },
+      "properties": {
+        "id": 115,
+        "name": "Núñez de Balboa",
+        "line": "MadridMetroL5",
+        "order": 163
+      },
+      "id": 115
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.651977, 40.475209] },
+      "properties": {
+        "id": 92,
+        "name": "Hortaleza",
+        "line": "MadridMetroL4",
+        "order": 162
+      },
+      "id": 92
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.679123, 40.418264] },
+      "properties": {
+        "id": 211,
+        "name": "Ibiza",
+        "line": "MadridMetroL9",
+        "order": 162
+      },
+      "id": 211
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.689838, 40.433028] },
+      "properties": {
+        "id": 114,
+        "name": "Rubén Darío",
+        "line": "MadridMetroL5",
+        "order": 160
+      },
+      "id": 114
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.83766, 40.296751] },
+      "properties": {
+        "id": 274,
+        "name": "Loranca",
+        "line": "MadridMetroL12",
+        "order": 160
+      },
+      "id": 274
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.695494, 40.464347] },
+      "properties": {
+        "id": 29,
+        "name": "Valdeacederas",
+        "line": "MadridMetroL1",
+        "order": 156
+      },
+      "id": 29
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.803878, 40.396877] },
+      "properties": {
+        "id": 327,
+        "name": "Cocheras",
+        "line": "MetroLigeroMl3",
+        "order": 152
+      },
+      "id": 327
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.696109, 40.427316] },
+      "properties": {
+        "id": 113,
+        "name": "Alonso Martínez",
+        "line": "MadridMetroL5",
+        "order": 151
+      },
+      "id": 113
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.645718, 40.477062] },
+      "properties": {
+        "id": 91,
+        "name": "Parque de Santa María",
+        "line": "MadridMetroL4",
+        "order": 150
+      },
+      "id": 91
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.711724, 40.457248] },
+      "properties": {
+        "id": 172,
+        "name": "Francos Rodríguez",
+        "line": "MadridMetroL7",
+        "order": 149
+      },
+      "id": 172
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.69829, 40.460879] },
+      "properties": {
+        "id": 28,
+        "name": "Tetuán",
+        "line": "MadridMetroL1",
+        "order": 148
+      },
+      "id": 28
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.697663, 40.422666] },
+      "properties": {
+        "id": 112,
+        "name": "Chueca",
+        "line": "MadridMetroL5",
+        "order": 143
+      },
+      "id": 112
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.702739, 40.454695] },
+      "properties": {
+        "id": 27,
+        "name": "Estrecho",
+        "line": "MadridMetroL1",
+        "order": 141
+      },
+      "id": 27
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.703504, 40.449991] },
+      "properties": {
+        "id": 26,
+        "name": "Alvarado",
+        "line": "MadridMetroL1",
+        "order": 137
+      },
+      "id": 26
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.713556, 40.446575] },
+      "properties": {
+        "id": 171,
+        "name": "Guzmán el Bueno",
+        "line": "MadridMetroL7",
+        "order": 137
+      },
+      "id": 171
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.639537, 40.474563] },
+      "properties": {
+        "id": 90,
+        "name": "San Lorenzo",
+        "line": "MadridMetroL4",
+        "order": 136
+      },
+      "id": 90
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.864476, 40.309092] },
+      "properties": {
+        "id": 273,
+        "name": "Manuela Malasaña",
+        "line": "MadridMetroL12",
+        "order": 136
+      },
+      "id": 273
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.701591, 40.420022] },
+      "properties": {
+        "id": 111,
+        "name": "Gran Vía",
+        "line": "MadridMetroL5",
+        "order": 134
+      },
+      "id": 111
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.705732, 40.420244] },
+      "properties": {
+        "id": 110,
+        "name": "Callao",
+        "line": "MadridMetroL5",
+        "order": 131
+      },
+      "id": 110
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.816655, 40.398713] },
+      "properties": {
+        "id": 326,
+        "name": "Retamares",
+        "line": "MetroLigeroMl3",
+        "order": 131
+      },
+      "id": 326
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.703961, 40.446781] },
+      "properties": {
+        "id": 25,
+        "name": "Cuatro Caminos",
+        "line": "MadridMetroL1",
+        "order": 130
+      },
+      "id": 25
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.786313, 40.448283] },
+      "properties": {
+        "id": 315,
+        "name": "Aravaca",
+        "line": "MetroLigeroMl2",
+        "order": 130
+      },
+      "id": 315
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.638463, 40.469607] },
+      "properties": {
+        "id": 89,
+        "name": "Mar de Cristal",
+        "line": "MadridMetroL4",
+        "order": 129
+      },
+      "id": 89
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.701561, 40.441619] },
+      "properties": {
+        "id": 24,
+        "name": "Ríos Rosas",
+        "line": "MadridMetroL1",
+        "order": 127
+      },
+      "id": 24
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.698837, 40.435303] },
+      "properties": {
+        "id": 23,
+        "name": "Iglesia",
+        "line": "MadridMetroL1",
+        "order": 126
+      },
+      "id": 23
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.635411, 40.463659] },
+      "properties": {
+        "id": 88,
+        "name": "Canillas",
+        "line": "MadridMetroL4",
+        "order": 123
+      },
+      "id": 88
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.745408, 40.404796] },
+      "properties": {
+        "id": 154,
+        "name": "Lucero",
+        "line": "MadridMetroL6",
+        "order": 123
+      },
+      "id": 154
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.711774, 40.340943] },
+      "properties": {
+        "id": 71,
+        "name": "Villaverde Alto",
+        "line": "MadridMetroL3",
+        "order": 121
+      },
+      "id": 71
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.709498, 40.418004] },
+      "properties": {
+        "id": 109,
+        "name": "Ópera",
+        "line": "MadridMetroL5",
+        "order": 118
+      },
+      "id": 109
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.701844, 40.429221] },
+      "properties": {
+        "id": 22,
+        "name": "Bilbao",
+        "line": "MadridMetroL1",
+        "order": 117
+      },
+      "id": 22
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.791238, 40.444818] },
+      "properties": {
+        "id": 314,
+        "name": "Berna",
+        "line": "MetroLigeroMl2",
+        "order": 117
+      },
+      "id": 314
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.738449, 40.409945] },
+      "properties": {
+        "id": 153,
+        "name": "Alto de Extremadura",
+        "line": "MadridMetroL6",
+        "order": 116
+      },
+      "id": 153
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.874403, 40.316292] },
+      "properties": {
+        "id": 272,
+        "name": "Hospital de Móstoles",
+        "line": "MadridMetroL12",
+        "order": 116
+      },
+      "id": 272
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.727182, 40.41376] },
+      "properties": {
+        "id": 152,
+        "name": "Puerta del Ángel",
+        "line": "MadridMetroL6",
+        "order": 114
+      },
+      "id": 152
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.602817, 40.423605] },
+      "properties": {
+        "id": 53,
+        "name": "Las Rosas",
+        "line": "MadridMetroL2",
+        "order": 112
+      },
+      "id": 53
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.835722, 40.397933] },
+      "properties": {
+        "id": 325,
+        "name": "Monteprincipe",
+        "line": "MetroLigeroMl3",
+        "order": 111
+      },
+      "id": 325
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.692937, 40.342113] },
+      "properties": {
+        "id": 70,
+        "name": "San Cristóbal",
+        "line": "MadridMetroL3",
+        "order": 110
+      },
+      "id": 70
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.59314, 40.491374] },
+      "properties": {
+        "id": 195,
+        "name": "Aeropuerto T4",
+        "line": "MadridMetroL8",
+        "order": 110
+      },
+      "id": 195
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.793034, 40.439088] },
+      "properties": {
+        "id": 313,
+        "name": "Avenida de Europa",
+        "line": "MetroLigeroMl2",
+        "order": 110
+      },
+      "id": 313
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.70111, 40.425844] },
+      "properties": {
+        "id": 21,
+        "name": "Tribunal",
+        "line": "MadridMetroL1",
+        "order": 109
+      },
+      "id": 21
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.713995, 40.439051] },
+      "properties": {
+        "id": 170,
+        "name": "Islas Filipinas",
+        "line": "MadridMetroL7",
+        "order": 109
+      },
+      "id": 170
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.704522, 40.438665] },
+      "properties": {
+        "id": 169,
+        "name": "Canal",
+        "line": "MadridMetroL7",
+        "order": 107
+      },
+      "id": 169
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.69273, 40.351015] },
+      "properties": {
+        "id": 69,
+        "name": "Villaverde Bajo - Cruce",
+        "line": "MadridMetroL3",
+        "order": 106
+      },
+      "id": 69
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.611495, 40.422732] },
+      "properties": {
+        "id": 52,
+        "name": "Avenida de Guadalajara",
+        "line": "MadridMetroL2",
+        "order": 105
+      },
+      "id": 52
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.693441, 40.360177] },
+      "properties": {
+        "id": 68,
+        "name": "Ciudad de Los Ángeles",
+        "line": "MadridMetroL3",
+        "order": 105
+      },
+      "id": 68
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.64561, 40.459041] },
+      "properties": {
+        "id": 87,
+        "name": "Esperanza",
+        "line": "MadridMetroL4",
+        "order": 105
+      },
+      "id": 87
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.70823, 40.411573] },
+      "properties": {
+        "id": 108,
+        "name": "La Latina",
+        "line": "MadridMetroL5",
+        "order": 105
+      },
+      "id": 108
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.719968, 40.420531] },
+      "properties": {
+        "id": 151,
+        "name": "Príncipe Pío",
+        "line": "MadridMetroL6",
+        "order": 105
+      },
+      "id": 151
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.699092, 40.438404] },
+      "properties": {
+        "id": 168,
+        "name": "Alonso Cano",
+        "line": "MadridMetroL7",
+        "order": 105
+      },
+      "id": 168
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.58263, 40.475784] },
+      "properties": {
+        "id": 194,
+        "name": "Barajas",
+        "line": "MadridMetroL8",
+        "order": 104
+      },
+      "id": 194
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.62343, 40.418386] },
+      "properties": {
+        "id": 51,
+        "name": "Alsacia",
+        "line": "MadridMetroL2",
+        "order": 103
+      },
+      "id": 51
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.694242, 40.500194] },
+      "properties": {
+        "id": 246,
+        "name": "Tres Olivos",
+        "line": "MadridMetroL10",
+        "order": 103
+      },
+      "id": 246
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.694409, 40.369967] },
+      "properties": {
+        "id": 67,
+        "name": "San Fermín-Orcasur",
+        "line": "MadridMetroL3",
+        "order": 102
+      },
+      "id": 67
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.691419, 40.438053] },
+      "properties": {
+        "id": 167,
+        "name": "Gregorio Marañón",
+        "line": "MadridMetroL7",
+        "order": 102
+      },
+      "id": 167
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.693035, 40.494746] },
+      "properties": {
+        "id": 245,
+        "name": "Fuencarral",
+        "line": "MadridMetroL10",
+        "order": 102
+      },
+      "id": 245
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.83807, 40.394186] },
+      "properties": {
+        "id": 324,
+        "name": "Ventorro del Cano",
+        "line": "MetroLigeroMl3",
+        "order": 101
+      },
+      "id": 324
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.70174, 40.419921] },
+      "properties": {
+        "id": 20,
+        "name": "Gran Vía",
+        "line": "MadridMetroL1",
+        "order": 100
+      },
+      "id": 20
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.695957, 40.375451] },
+      "properties": {
+        "id": 66,
+        "name": "Hospital 12 de Octubre",
+        "line": "MadridMetroL3",
+        "order": 100
+      },
+      "id": 66
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.864843, 40.321679] },
+      "properties": {
+        "id": 271,
+        "name": "Pradillo",
+        "line": "MadridMetroL12",
+        "order": 100
+      },
+      "id": 271
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.795149, 40.433475] },
+      "properties": {
+        "id": 312,
+        "name": "Campus de Somosaguas",
+        "line": "MetroLigeroMl2",
+        "order": 100
+      },
+      "id": 312
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.698647, 40.38604] },
+      "properties": {
+        "id": 65,
+        "name": "Almendrales",
+        "line": "MadridMetroL3",
+        "order": 98
+      },
+      "id": 65
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.656206, 40.455965] },
+      "properties": {
+        "id": 86,
+        "name": "Arturo Soria",
+        "line": "MadridMetroL4",
+        "order": 97
+      },
+      "id": 86
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.661412, 40.453325] },
+      "properties": {
+        "id": 85,
+        "name": "Avenida de la Paz",
+        "line": "MadridMetroL4",
+        "order": 96
+      },
+      "id": 85
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.71092, 40.406805] },
+      "properties": {
+        "id": 107,
+        "name": "Puerta de Toledo",
+        "line": "MadridMetroL5",
+        "order": 96
+      },
+      "id": 107
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.685897, 40.480102] },
+      "properties": {
+        "id": 244,
+        "name": "Begoña",
+        "line": "MadridMetroL10",
+        "order": 96
+      },
+      "id": 244
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.847677, 40.395014] },
+      "properties": {
+        "id": 323,
+        "name": "Prado del Espino",
+        "line": "MetroLigeroMl3",
+        "order": 95
+      },
+      "id": 323
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.703229, 40.416828] },
+      "properties": {
+        "id": 19,
+        "name": "Sol",
+        "line": "MadridMetroL1",
+        "order": 94
+      },
+      "id": 19
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.639169, 40.423741] },
+      "properties": {
+        "id": 50,
+        "name": "La Almudena",
+        "line": "MadridMetroL2",
+        "order": 94
+      },
+      "id": 50
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.71634, 40.43063] },
+      "properties": {
+        "id": 150,
+        "name": "Argüelles",
+        "line": "MadridMetroL6",
+        "order": 94
+      },
+      "id": 150
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.57177, 40.468312] },
+      "properties": {
+        "id": 193,
+        "name": "Aeropuerto T1-T2-T3",
+        "short_name": "Aeropuerto",
+        "line": "MadridMetroL8",
+        "order": 94
+      },
+      "id": 193
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.719562, 40.435091] },
+      "properties": {
+        "id": 149,
+        "name": "Moncloa",
+        "line": "MadridMetroL6",
+        "order": 92
+      },
+      "id": 149
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.695249, 40.391254] },
+      "properties": {
+        "id": 64,
+        "name": "Legazpi",
+        "line": "MadridMetroL3",
+        "order": 91
+      },
+      "id": 64
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.669595, 40.41438] },
+      "properties": {
+        "id": 210,
+        "name": "Sainz de Baranda",
+        "line": "MadridMetroL9",
+        "order": 91
+      },
+      "id": 210
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.676992, 40.437591] },
+      "properties": {
+        "id": 166,
+        "name": "Avenida de América",
+        "line": "MadridMetroL7",
+        "order": 90
+      },
+      "id": 166
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.863308, 40.328533] },
+      "properties": {
+        "id": 270,
+        "name": "Móstoles",
+        "line": "MadridMetroL12",
+        "order": 89
+      },
+      "id": 270
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.649689, 40.427146] },
+      "properties": {
+        "id": 49,
+        "name": "La Elipa",
+        "line": "MadridMetroL2",
+        "order": 86
+      },
+      "id": 49
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.672051, 40.439383] },
+      "properties": {
+        "id": 165,
+        "name": "Cartagena",
+        "line": "MadridMetroL7",
+        "order": 86
+      },
+      "id": 165
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.477787, 40.31905] },
+      "properties": {
+        "id": 197,
+        "name": "La Poveda",
+        "line": "MadridMetroL9",
+        "order": 86
+      },
+      "id": 197
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.683357, 40.472334] },
+      "properties": {
+        "id": 243,
+        "name": "Chamartín",
+        "line": "MadridMetroL10",
+        "order": 86
+      },
+      "id": 243
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.694041, 40.399759] },
+      "properties": {
+        "id": 63,
+        "name": "Delicias",
+        "line": "MadridMetroL3",
+        "order": 84
+      },
+      "id": 63
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.668087, 40.448259] },
+      "properties": {
+        "id": 84,
+        "name": "Alfonso Xiii",
+        "line": "MadridMetroL4",
+        "order": 84
+      },
+      "id": 84
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.801653, 40.43251] },
+      "properties": {
+        "id": 311,
+        "name": "Dos Castillas",
+        "line": "MetroLigeroMl2",
+        "order": 84
+      },
+      "id": 311
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.807494, 40.430581] },
+      "properties": {
+        "id": 310,
+        "name": "Bélgica",
+        "line": "MetroLigeroMl2",
+        "order": 83
+      },
+      "id": 310
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.726245, 40.443486] },
+      "properties": {
+        "id": 148,
+        "name": "Ciudad Universitaria",
+        "line": "MadridMetroL6",
+        "order": 81
+      },
+      "id": 148
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.864316, 40.395277] },
+      "properties": {
+        "id": 322,
+        "name": "Cantabria",
+        "line": "MetroLigeroMl3",
+        "order": 80
+      },
+      "id": 322
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.674406, 40.44401] },
+      "properties": {
+        "id": 83,
+        "name": "Prosperidad",
+        "line": "MadridMetroL4",
+        "order": 79
+      },
+      "id": 83
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.689426, 40.465894] },
+      "properties": {
+        "id": 242,
+        "name": "Plaza de Castilla",
+        "line": "MadridMetroL10",
+        "order": 78
+      },
+      "id": 242
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.704577, 40.412447] },
+      "properties": {
+        "id": 18,
+        "name": "Tirso de Molina",
+        "line": "MadridMetroL1",
+        "order": 77
+      },
+      "id": 18
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.66312, 40.438967] },
+      "properties": {
+        "id": 164,
+        "name": "Parque de Las Avenidas",
+        "line": "MadridMetroL7",
+        "order": 77
+      },
+      "id": 164
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.719219, 40.446376] },
+      "properties": {
+        "id": 147,
+        "name": "Vicente Aleixandre",
+        "line": "MadridMetroL6",
+        "order": 76
+      },
+      "id": 147
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.777794, 40.35792] },
+      "properties": {
+        "id": 264,
+        "name": "La Fortuna",
+        "line": "MadridMetroL11",
+        "order": 76
+      },
+      "id": 264
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.669062, 40.507923] },
+      "properties": {
+        "id": 302,
+        "name": "Las Tablas",
+        "line": "MetroLigeroMl1",
+        "order": 76
+      },
+      "id": 302
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.706691, 40.403895] },
+      "properties": {
+        "id": 106,
+        "name": "Acacias",
+        "line": "MadridMetroL5",
+        "order": 75
+      },
+      "id": 106
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.663305, 40.430684] },
+      "properties": {
+        "id": 48,
+        "name": "Ventas",
+        "line": "MadridMetroL2",
+        "order": 74
+      },
+      "id": 48
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.66134, 40.411322] },
+      "properties": {
+        "id": 209,
+        "name": "Estrella",
+        "line": "MadridMetroL9",
+        "order": 74
+      },
+      "id": 209
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.694514, 40.403069] },
+      "properties": {
+        "id": 62,
+        "name": "Palos de la Frontera",
+        "line": "MadridMetroL3",
+        "order": 73
+      },
+      "id": 62
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.665067, 40.505458] },
+      "properties": {
+        "id": 301,
+        "name": "Palas de Rey",
+        "line": "MetroLigeroMl1",
+        "order": 72
+      },
+      "id": 301
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.6991, 40.412277] },
+      "properties": {
+        "id": 17,
+        "name": "Antón Martín",
+        "line": "MadridMetroL1",
+        "order": 71
+      },
+      "id": 17
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.668706, 40.428162] },
+      "properties": {
+        "id": 47,
+        "name": "Manuel Becerra",
+        "line": "MadridMetroL2",
+        "order": 70
+      },
+      "id": 47
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.711272, 40.4024] },
+      "properties": {
+        "id": 105,
+        "name": "Pirámides",
+        "line": "MadridMetroL5",
+        "order": 70
+      },
+      "id": 105
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.712307, 40.44637] },
+      "properties": {
+        "id": 146,
+        "name": "Guzmán el Bueno",
+        "line": "MadridMetroL6",
+        "order": 70
+      },
+      "id": 146
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.690096, 40.458115] },
+      "properties": {
+        "id": 241,
+        "name": "Cuzco",
+        "line": "MadridMetroL10",
+        "order": 70
+      },
+      "id": 241
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.616168, 40.463924] },
+      "properties": {
+        "id": 192,
+        "name": "Feria de Madrid",
+        "line": "MadridMetroL8",
+        "order": 68
+      },
+      "id": 192
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.690693, 40.452002] },
+      "properties": {
+        "id": 240,
+        "name": "Santiago Bernabéu",
+        "line": "MadridMetroL10",
+        "order": 68
+      },
+      "id": 240
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.872147, 40.334855] },
+      "properties": {
+        "id": 269,
+        "name": "Universidad Rey Juan Carlos",
+        "line": "MadridMetroL12",
+        "order": 68
+      },
+      "id": 269
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.692331, 40.409247] },
+      "properties": {
+        "id": 16,
+        "name": "Estación del Arte",
+        "line": "MadridMetroL1",
+        "order": 66
+      },
+      "id": 16
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.675677, 40.424762] },
+      "properties": {
+        "id": 46,
+        "name": "Goya",
+        "line": "MadridMetroL2",
+        "order": 66
+      },
+      "id": 46
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.703948, 40.446845] },
+      "properties": {
+        "id": 145,
+        "name": "Cuatro Caminos",
+        "line": "MadridMetroL6",
+        "order": 66
+      },
+      "id": 145
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.677707, 40.43766] },
+      "properties": {
+        "id": 82,
+        "name": "Avenida de América",
+        "line": "MadridMetroL4",
+        "order": 65
+      },
+      "id": 82
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.691086, 40.446589] },
+      "properties": {
+        "id": 239,
+        "name": "Nuevos Ministerios",
+        "line": "MadridMetroL10",
+        "order": 65
+      },
+      "id": 239
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.680248, 40.42272] },
+      "properties": {
+        "id": 45,
+        "name": "Príncipe de Vergara",
+        "line": "MadridMetroL2",
+        "order": 64
+      },
+      "id": 45
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.691088, 40.446089] },
+      "properties": {
+        "id": 144,
+        "name": "Nuevos Ministerios",
+        "line": "MadridMetroL6",
+        "order": 64
+      },
+      "id": 144
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.652246, 40.439719] },
+      "properties": {
+        "id": 163,
+        "name": "Barrio de la Concepción",
+        "line": "MadridMetroL7",
+        "order": 64
+      },
+      "id": 163
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.688768, 40.407058] },
+      "properties": {
+        "id": 15,
+        "name": "Atocha",
+        "line": "MadridMetroL1",
+        "order": 63
+      },
+      "id": 15
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.652498, 40.410357] },
+      "properties": {
+        "id": 208,
+        "name": "Vinateros",
+        "line": "MadridMetroL9",
+        "order": 63
+      },
+      "id": 208
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.611478, 40.559837] },
+      "properties": {
+        "id": 257,
+        "name": "Hospital Infanta Sofía",
+        "line": "MadridMetroL10",
+        "order": 63
+      },
+      "id": 257
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.716343, 40.397518] },
+      "properties": {
+        "id": 104,
+        "name": "Marqués de Vadillo",
+        "line": "MadridMetroL5",
+        "order": 62
+      },
+      "id": 104
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.757728, 40.363256] },
+      "properties": {
+        "id": 263,
+        "name": "La Peseta",
+        "line": "MadridMetroL11",
+        "order": 62
+      },
+      "id": 263
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.686828, 40.420366] },
+      "properties": {
+        "id": 44,
+        "name": "Retiro",
+        "line": "MadridMetroL2",
+        "order": 60
+      },
+      "id": 44
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.725355, 40.392557] },
+      "properties": {
+        "id": 103,
+        "name": "Urgel",
+        "line": "MadridMetroL5",
+        "order": 60
+      },
+      "id": 103
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.658455, 40.497518] },
+      "properties": {
+        "id": 300,
+        "name": "María Tudor",
+        "line": "MetroLigeroMl1",
+        "order": 60
+      },
+      "id": 300
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.804585, 40.423068] },
+      "properties": {
+        "id": 309,
+        "name": "Pozuelo Oeste",
+        "line": "MetroLigeroMl2",
+        "order": 59
+      },
+      "id": 309
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.685496, 40.445137] },
+      "properties": {
+        "id": 143,
+        "name": "República Argentina",
+        "line": "MadridMetroL6",
+        "order": 58
+      },
+      "id": 143
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.691448, 40.43771] },
+      "properties": {
+        "id": 238,
+        "name": "Gregorio Marañón",
+        "line": "MadridMetroL10",
+        "order": 58
+      },
+      "id": 238
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.702253, 40.405145] },
+      "properties": {
+        "id": 61,
+        "name": "Embajadores",
+        "line": "MadridMetroL3",
+        "order": 57
+      },
+      "id": 61
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.675095, 40.433461] },
+      "properties": {
+        "id": 81,
+        "name": "Diego de León",
+        "line": "MadridMetroL4",
+        "order": 57
+      },
+      "id": 81
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.680783, 40.404133] },
+      "properties": {
+        "id": 14,
+        "name": "Menéndez Pelayo",
+        "line": "MadridMetroL1",
+        "order": 56
+      },
+      "id": 14
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.694048, 40.419269] },
+      "properties": {
+        "id": 43,
+        "name": "Banco de España",
+        "line": "MadridMetroL2",
+        "order": 55
+      },
+      "id": 43
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.675365, 40.42978] },
+      "properties": {
+        "id": 80,
+        "name": "Lista",
+        "line": "MadridMetroL4",
+        "order": 54
+      },
+      "id": 80
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.534464, 40.417677] },
+      "properties": {
+        "id": 187,
+        "name": "Hospital del Henares",
+        "line": "MadridMetroL7",
+        "order": 54
+      },
+      "id": 187
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.64184, 40.405286] },
+      "properties": {
+        "id": 207,
+        "name": "Artilleros",
+        "line": "MadridMetroL9",
+        "order": 54
+      },
+      "id": 207
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.67486, 40.401202] },
+      "properties": {
+        "id": 13,
+        "name": "Pacífico",
+        "line": "MadridMetroL1",
+        "order": 53
+      },
+      "id": 13
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.731692, 40.388772] },
+      "properties": {
+        "id": 102,
+        "name": "Oporto",
+        "line": "MadridMetroL5",
+        "order": 53
+      },
+      "id": 102
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.677879, 40.437511] },
+      "properties": {
+        "id": 142,
+        "name": "Avenida de América",
+        "line": "MadridMetroL6",
+        "order": 53
+      },
+      "id": 142
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.638429, 40.46989] },
+      "properties": {
+        "id": 191,
+        "name": "Mar de Cristal",
+        "line": "MadridMetroL8",
+        "order": 53
+      },
+      "id": 191
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.655864, 40.493502] },
+      "properties": {
+        "id": 299,
+        "name": "Blasco Ibáñez",
+        "line": "MetroLigeroMl1",
+        "order": 52
+      },
+      "id": 299
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.798752, 40.41929] },
+      "properties": {
+        "id": 308,
+        "name": "Somosaguas Centro",
+        "alternate_names": ["Somosaguas Central", "Somosaguas"],
+        "line": "MetroLigeroMl2",
+        "order": 52
+      },
+      "id": 308
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.699765, 40.417839] },
+      "properties": {
+        "id": 42,
+        "name": "Sevilla",
+        "line": "MadridMetroL2",
+        "order": 51
+      },
+      "id": 42
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.623311, 40.55069] },
+      "properties": {
+        "id": 256,
+        "name": "Reyes Católicos",
+        "line": "MadridMetroL10",
+        "order": 51
+      },
+      "id": 256
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.668916, 40.39815] },
+      "properties": {
+        "id": 12,
+        "name": "Puente de Vallecas",
+        "line": "MadridMetroL1",
+        "order": 50
+      },
+      "id": 12
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.674741, 40.434851] },
+      "properties": {
+        "id": 141,
+        "name": "Diego de León",
+        "line": "MadridMetroL6",
+        "order": 50
+      },
+      "id": 141
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.695923, 40.427245] },
+      "properties": {
+        "id": 237,
+        "name": "Alonso Martínez",
+        "line": "MadridMetroL10",
+        "order": 50
+      },
+      "id": 237
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.879381, 40.401993] },
+      "properties": {
+        "id": 321,
+        "name": "Ferial de Boadilla",
+        "line": "MetroLigeroMl3",
+        "order": 50
+      },
+      "id": 321
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.70085, 40.408414] },
+      "properties": {
+        "id": 60,
+        "name": "Lavapiés",
+        "line": "MadridMetroL3",
+        "order": 48
+      },
+      "id": 60
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.644009, 40.434757] },
+      "properties": {
+        "id": 162,
+        "name": "Pueblo Nuevo",
+        "line": "MadridMetroL7",
+        "order": 48
+      },
+      "id": 162
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.70105, 40.426232] },
+      "properties": {
+        "id": 236,
+        "name": "Tribunal",
+        "line": "MadridMetroL10",
+        "order": 48
+      },
+      "id": 236
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.70283, 40.417098] },
+      "properties": {
+        "id": 41,
+        "name": "Sol",
+        "line": "MadridMetroL2",
+        "order": 47
+      },
+      "id": 41
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.640579, 40.430424] },
+      "properties": {
+        "id": 161,
+        "name": "Ascao",
+        "line": "MadridMetroL7",
+        "order": 47
+      },
+      "id": 161
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.526854, 40.417594] },
+      "properties": {
+        "id": 186,
+        "name": "Henares",
+        "line": "MadridMetroL7",
+        "order": 47
+      },
+      "id": 186
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.7107, 40.423314] },
+      "properties": {
+        "id": 235,
+        "name": "Plaza de España",
+        "line": "MadridMetroL10",
+        "order": 47
+      },
+      "id": 235
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.751923, 40.372186] },
+      "properties": {
+        "id": 262,
+        "name": "Carabanchel Alto",
+        "line": "MadridMetroL11",
+        "order": 47
+      },
+      "id": 262
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.664737, 40.395936] },
+      "properties": {
+        "id": 11,
+        "name": "Nueva Numancia",
+        "line": "MadridMetroL1",
+        "order": 46
+      },
+      "id": 11
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.65921, 40.393014] },
+      "properties": {
+        "id": 10,
+        "name": "Portazgo",
+        "line": "MadridMetroL1",
+        "order": 45
+      },
+      "id": 10
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.675933, 40.424916] },
+      "properties": {
+        "id": 79,
+        "name": "Goya",
+        "line": "MadridMetroL4",
+        "order": 45
+      },
+      "id": 79
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.719188, 40.421071] },
+      "properties": {
+        "id": 234,
+        "name": "Príncipe Pío",
+        "line": "MadridMetroL10",
+        "order": 45
+      },
+      "id": 234
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.651384, 40.48915] },
+      "properties": {
+        "id": 298,
+        "name": "Álvarez de Villaamil",
+        "line": "MetroLigeroMl1",
+        "order": 44
+      },
+      "id": 298
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.648524, 40.467902] },
+      "properties": {
+        "id": 190,
+        "name": "Pinar del Rey",
+        "line": "MadridMetroL8",
+        "order": 43
+      },
+      "id": 190
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.734648, 40.416529] },
+      "properties": {
+        "id": 233,
+        "name": "Lago",
+        "line": "MadridMetroL10",
+        "order": 43
+      },
+      "id": 233
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.740078, 40.38886] },
+      "properties": {
+        "id": 101,
+        "name": "Vista Alegre",
+        "line": "MadridMetroL5",
+        "order": 42
+      },
+      "id": 101
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.849166, 40.345785] },
+      "properties": {
+        "id": 268,
+        "name": "Parque Oeste",
+        "line": "MadridMetroL12",
+        "order": 42
+      },
+      "id": 268
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.792609, 40.415744] },
+      "properties": {
+        "id": 307,
+        "name": "Somosaguas Sur",
+        "line": "MetroLigeroMl2",
+        "order": 42
+      },
+      "id": 307
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.880103, 40.407154] },
+      "properties": {
+        "id": 320,
+        "name": "Boadilla Centro",
+        "alternate_names": ["Boadilla Central", "Boadilla"],
+        "line": "MetroLigeroMl3",
+        "order": 41
+      },
+      "id": 320
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.65391, 40.391489] },
+      "properties": {
+        "id": 9,
+        "name": "Buenos Aires",
+        "line": "MadridMetroL1",
+        "order": 40
+      },
+      "id": 9
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.745019, 40.387902] },
+      "properties": {
+        "id": 100,
+        "name": "Carabanchel",
+        "line": "MadridMetroL5",
+        "order": 40
+      },
+      "id": 100
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.668498, 40.428118] },
+      "properties": {
+        "id": 140,
+        "name": "Manuel Becerra",
+        "line": "MadridMetroL6",
+        "order": 40
+      },
+      "id": 140
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.525428, 40.42371] },
+      "properties": {
+        "id": 185,
+        "name": "Jarama",
+        "line": "MadridMetroL7",
+        "order": 39
+      },
+      "id": 185
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.703783, 40.416753] },
+      "properties": {
+        "id": 59,
+        "name": "Sol",
+        "line": "MadridMetroL3",
+        "order": 38
+      },
+      "id": 59
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.668884, 40.423091] },
+      "properties": {
+        "id": 139,
+        "name": "O'Donnell",
+        "line": "MadridMetroL6",
+        "order": 38
+      },
+      "id": 139
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.682568, 40.425117] },
+      "properties": {
+        "id": 78,
+        "name": "Velázquez",
+        "line": "MadridMetroL4",
+        "order": 37
+      },
+      "id": 78
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.669589, 40.414798] },
+      "properties": {
+        "id": 138,
+        "name": "Sainz de Baranda",
+        "line": "MadridMetroL6",
+        "order": 36
+      },
+      "id": 138
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.751119, 40.384463] },
+      "properties": {
+        "id": 99,
+        "name": "Eugenia de Montijo",
+        "line": "MadridMetroL5",
+        "order": 35
+      },
+      "id": 99
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.670227, 40.406792] },
+      "properties": {
+        "id": 137,
+        "name": "Conde de Casal",
+        "line": "MadridMetroL6",
+        "order": 35
+      },
+      "id": 137
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.635198, 40.400585] },
+      "properties": {
+        "id": 206,
+        "name": "Pavones",
+        "line": "MadridMetroL9",
+        "order": 35
+      },
+      "id": 206
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.635364, 40.554485] },
+      "properties": {
+        "id": 255,
+        "name": "Baunatal",
+        "line": "MadridMetroL10",
+        "order": 35
+      },
+      "id": 255
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.645755, 40.390136] },
+      "properties": {
+        "id": 8,
+        "name": "Alto del Arenal",
+        "line": "MadridMetroL1",
+        "order": 34
+      },
+      "id": 8
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.709541, 40.418179] },
+      "properties": {
+        "id": 40,
+        "name": "Ópera",
+        "line": "MadridMetroL2",
+        "order": 34
+      },
+      "id": 40
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.705974, 40.420082] },
+      "properties": {
+        "id": 58,
+        "name": "Callao",
+        "line": "MadridMetroL3",
+        "order": 34
+      },
+      "id": 58
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.686909, 40.425325] },
+      "properties": {
+        "id": 77,
+        "name": "Serrano",
+        "line": "MadridMetroL4",
+        "order": 34
+      },
+      "id": 77
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.633983, 40.428194] },
+      "properties": {
+        "id": 160,
+        "name": "García Noblejas",
+        "line": "MadridMetroL7",
+        "order": 34
+      },
+      "id": 160
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.640225, 40.387646] },
+      "properties": {
+        "id": 7,
+        "name": "Miguel Hernández",
+        "line": "MadridMetroL1",
+        "order": 33
+      },
+      "id": 7
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.787549, 40.410417] },
+      "properties": {
+        "id": 306,
+        "name": "Prado del Rey",
+        "line": "MetroLigeroMl2",
+        "order": 33
+      },
+      "id": 306
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.653726, 40.485369] },
+      "properties": {
+        "id": 297,
+        "name": "Antonio Saura",
+        "line": "MetroLigeroMl1",
+        "order": 32
+      },
+      "id": 297
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.674853, 40.40128] },
+      "properties": {
+        "id": 136,
+        "name": "Pacífico",
+        "line": "MadridMetroL6",
+        "order": 31
+      },
+      "id": 136
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.739761, 40.373698] },
+      "properties": {
+        "id": 261,
+        "name": "San Francisco",
+        "line": "MadridMetroL11",
+        "order": 30
+      },
+      "id": 261
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.535337, 40.424625] },
+      "properties": {
+        "id": 184,
+        "name": "San Fernando",
+        "line": "MadridMetroL7",
+        "order": 29
+      },
+      "id": 184
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.71078, 40.42322] },
+      "properties": {
+        "id": 57,
+        "name": "Plaza de España",
+        "line": "MadridMetroL3",
+        "order": 28
+      },
+      "id": 57
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.646912, 40.550169] },
+      "properties": {
+        "id": 254,
+        "name": "Manuel de Falla",
+        "line": "MadridMetroL10",
+        "order": 27
+      },
+      "id": 254
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.784506, 40.407221] },
+      "properties": {
+        "id": 305,
+        "name": "Colonia de Los Ángeles",
+        "line": "MetroLigeroMl2",
+        "order": 26
+      },
+      "id": 305
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.623255, 40.427157] },
+      "properties": {
+        "id": 159,
+        "name": "Simancas",
+        "line": "MadridMetroL7",
+        "order": 25
+      },
+      "id": 159
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.621564, 40.399925] },
+      "properties": {
+        "id": 205,
+        "name": "Valdebernardo",
+        "line": "MadridMetroL9",
+        "order": 25
+      },
+      "id": 205
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.8857, 40.405586] },
+      "properties": {
+        "id": 319,
+        "name": "Nuevo Mundo",
+        "line": "MetroLigeroMl3",
+        "order": 25
+      },
+      "id": 319
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.708482, 40.420419] },
+      "properties": {
+        "id": 39,
+        "name": "Santo Domingo",
+        "line": "MadridMetroL2",
+        "order": 24
+      },
+      "id": 39
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.547884, 40.425245] },
+      "properties": {
+        "id": 183,
+        "name": "La Rambla",
+        "line": "MadridMetroL7",
+        "order": 24
+      },
+      "id": 183
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.67887, 40.395855] },
+      "properties": {
+        "id": 135,
+        "name": "Méndez Álvaro",
+        "line": "MadridMetroL6",
+        "order": 23
+      },
+      "id": 135
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.713471, 40.426684] },
+      "properties": {
+        "id": 56,
+        "name": "Ventura Rodríguez",
+        "line": "MadridMetroL3",
+        "order": 22
+      },
+      "id": 56
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.691898, 40.425708] },
+      "properties": {
+        "id": 76,
+        "name": "Colón",
+        "line": "MadridMetroL4",
+        "order": 22
+      },
+      "id": 76
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.638017, 40.540475] },
+      "properties": {
+        "id": 253,
+        "name": "Marqués de la Valdavia",
+        "line": "MadridMetroL10",
+        "order": 22
+      },
+      "id": 253
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.734064, 40.376098] },
+      "properties": {
+        "id": 260,
+        "name": "Pan Bendito",
+        "line": "MadridMetroL11",
+        "order": 22
+      },
+      "id": 260
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.688507, 40.3931] },
+      "properties": {
+        "id": 134,
+        "name": "Arganzuela-Planetario",
+        "line": "MadridMetroL6",
+        "order": 21
+      },
+      "id": 134
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.695729, 40.427584] },
+      "properties": {
+        "id": 75,
+        "name": "Alonso Martínez",
+        "line": "MadridMetroL4",
+        "order": 20
+      },
+      "id": 75
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.831494, 40.350112] },
+      "properties": {
+        "id": 267,
+        "name": "Alcorcón",
+        "line": "MadridMetroL12",
+        "order": 20
+      },
+      "id": 267
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.892637, 40.405121] },
+      "properties": {
+        "id": 318,
+        "name": "Siglo XXI",
+        "line": "MetroLigeroMl3",
+        "order": 20
+      },
+      "id": 318
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.760656, 40.385715] },
+      "properties": {
+        "id": 98,
+        "name": "Aluche",
+        "line": "MadridMetroL5",
+        "order": 19
+      },
+      "id": 98
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.695154, 40.391175] },
+      "properties": {
+        "id": 133,
+        "name": "Legazpi",
+        "line": "MadridMetroL6",
+        "order": 19
+      },
+      "id": 133
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.635504, 40.531563] },
+      "properties": {
+        "id": 252,
+        "name": "La Moraleja",
+        "line": "MadridMetroL10",
+        "order": 19
+      },
+      "id": 252
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.707379, 40.424256] },
+      "properties": {
+        "id": 38,
+        "name": "Noviciado",
+        "line": "MadridMetroL2",
+        "order": 18
+      },
+      "id": 38
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.716309, 40.430646] },
+      "properties": {
+        "id": 55,
+        "name": "Argüelles",
+        "line": "MadridMetroL3",
+        "order": 18
+      },
+      "id": 55
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.61602, 40.427622] },
+      "properties": {
+        "id": 158,
+        "name": "San Blas",
+        "line": "MadridMetroL7",
+        "order": 17
+      },
+      "id": 158
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.625077, 40.382678] },
+      "properties": {
+        "id": 6,
+        "name": "Sierra de Guadalupe",
+        "line": "MadridMetroL1",
+        "order": 16
+      },
+      "id": 6
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.765602, 40.390881] },
+      "properties": {
+        "id": 97,
+        "name": "Empalme",
+        "line": "MadridMetroL5",
+        "order": 16
+      },
+      "id": 97
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.676987, 40.45714] },
+      "properties": {
+        "id": 189,
+        "name": "Colombia",
+        "line": "MadridMetroL8",
+        "order": 16
+      },
+      "id": 189
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.701907, 40.428921] },
+      "properties": {
+        "id": 74,
+        "name": "Bilbao",
+        "line": "MadridMetroL4",
+        "order": 15
+      },
+      "id": 74
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.705656, 40.388068] },
+      "properties": {
+        "id": 132,
+        "name": "Usera",
+        "line": "MadridMetroL6",
+        "order": 15
+      },
+      "id": 132
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.727871, 40.380923] },
+      "properties": {
+        "id": 259,
+        "name": "Abrantes",
+        "line": "MadridMetroL11",
+        "order": 15
+      },
+      "id": 259
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.781302, 40.402281] },
+      "properties": {
+        "id": 304,
+        "name": "Prado de la Vega",
+        "line": "MetroLigeroMl2",
+        "order": 15
+      },
+      "id": 304
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.621359, 40.37938] },
+      "properties": {
+        "id": 5,
+        "name": "Villa de Vallecas",
+        "line": "MadridMetroL1",
+        "order": 14
+      },
+      "id": 5
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.661127, 40.487209] },
+      "properties": {
+        "id": 296,
+        "name": "Virgen del Cortijo",
+        "line": "MetroLigeroMl1",
+        "order": 14
+      },
+      "id": 296
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.753097, 40.407824] },
+      "properties": {
+        "id": 232,
+        "name": "Batán",
+        "line": "MadridMetroL10",
+        "order": 13
+      },
+      "id": 232
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.618772, 40.372114] },
+      "properties": {
+        "id": 4,
+        "name": "Congosto",
+        "line": "MadridMetroL1",
+        "order": 12
+      },
+      "id": 4
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.768227, 40.394638] },
+      "properties": {
+        "id": 96,
+        "name": "Campamento",
+        "line": "MadridMetroL5",
+        "order": 12
+      },
+      "id": 96
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.561685, 40.42375] },
+      "properties": {
+        "id": 182,
+        "name": "Coslada Central",
+        "line": "MadridMetroL7",
+        "order": 12
+      },
+      "id": 182
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.658462, 40.527387] },
+      "properties": {
+        "id": 251,
+        "name": "La Granja",
+        "line": "MadridMetroL10",
+        "order": 12
+      },
+      "id": 251
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.662264, 40.515116] },
+      "properties": {
+        "id": 250,
+        "name": "Ronda de la Comunicación",
+        "line": "MadridMetroL10",
+        "order": 11
+      },
+      "id": 250
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.705644, 40.429773] },
+      "properties": {
+        "id": 37,
+        "name": "San Bernardo",
+        "line": "MadridMetroL2",
+        "order": 10
+      },
+      "id": 37
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.718162, 40.385477] },
+      "properties": {
+        "id": 131,
+        "name": "Plaza Elíptica",
+        "line": "MadridMetroL6",
+        "order": 10
+      },
+      "id": 131
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.608093, 40.43265] },
+      "properties": {
+        "id": 157,
+        "name": "Las Musas",
+        "line": "MadridMetroL7",
+        "order": 9
+      },
+      "id": 157
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.608942, 40.404266] },
+      "properties": {
+        "id": 204,
+        "name": "Vicálvaro",
+        "line": "MadridMetroL9",
+        "order": 9
+      },
+      "id": 204
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.760858, 40.403536] },
+      "properties": {
+        "id": 231,
+        "name": "Casa de Campo",
+        "line": "MadridMetroL10",
+        "order": 9
+      },
+      "id": 231
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.669304, 40.508314] },
+      "properties": {
+        "id": 249,
+        "name": "Las Tablas",
+        "line": "MadridMetroL10",
+        "order": 9
+      },
+      "id": 249
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.82138, 40.349852] },
+      "properties": {
+        "id": 266,
+        "name": "Parque Lisboa",
+        "line": "MadridMetroL12",
+        "order": 9
+      },
+      "id": 266
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.897432, 40.405892] },
+      "properties": {
+        "id": 317,
+        "name": "Infante Don Luis",
+        "line": "MetroLigeroMl3",
+        "order": 9
+      },
+      "id": 317
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.706057, 40.429663] },
+      "properties": {
+        "id": 73,
+        "name": "San Bernardo",
+        "line": "MadridMetroL4",
+        "order": 8
+      },
+      "id": 73
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.72317, 40.386965] },
+      "properties": {
+        "id": 130,
+        "name": "Opañel",
+        "line": "MadridMetroL6",
+        "order": 7
+      },
+      "id": 130
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.774749, 40.396861] },
+      "properties": {
+        "id": 230,
+        "name": "Colonia Jardín",
+        "line": "MadridMetroL10",
+        "order": 7
+      },
+      "id": 230
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.704193, 40.434191] },
+      "properties": {
+        "id": 36,
+        "name": "Quevedo",
+        "line": "MadridMetroL2",
+        "order": 6
+      },
+      "id": 36
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.783957, 40.383653] },
+      "properties": {
+        "id": 229,
+        "name": "Aviación Española",
+        "line": "MadridMetroL10",
+        "order": 6
+      },
+      "id": 229
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.602371, 40.403947] },
+      "properties": {
+        "id": 203,
+        "name": "San Cipriano",
+        "line": "MadridMetroL9",
+        "order": 5
+      },
+      "id": 203
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.663014, 40.484755] },
+      "properties": {
+        "id": 295,
+        "name": "Fuente de la Mora",
+        "line": "MetroLigeroMl1",
+        "order": 5
+      },
+      "id": 295
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.611999, 40.369664] },
+      "properties": {
+        "id": 3,
+        "name": "La Gavia",
+        "line": "MadridMetroL1",
+        "order": 4
+      },
+      "id": 3
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.731781, 40.38873] },
+      "properties": {
+        "id": 129,
+        "name": "Oporto",
+        "line": "MadridMetroL6",
+        "order": 4
+      },
+      "id": 129
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.56907, 40.422715] },
+      "properties": {
+        "id": 181,
+        "name": "Barrio del Puerto",
+        "line": "MadridMetroL7",
+        "order": 4
+      },
+      "id": 181
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.791412, 40.377812] },
+      "properties": {
+        "id": 228,
+        "name": "Cuatro Vientos",
+        "line": "MadridMetroL10",
+        "order": 4
+      },
+      "id": 228
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.599186, 40.363484] },
+      "properties": {
+        "id": 2,
+        "name": "Las Suertes",
+        "line": "MadridMetroL1",
+        "order": 2
+      },
+      "id": 2
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.704254, 40.438803] },
+      "properties": {
+        "id": 35,
+        "name": "Canal",
+        "line": "MadridMetroL2",
+        "order": 2
+      },
+      "id": 35
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.741029, 40.39292] },
+      "properties": {
+        "id": 128,
+        "name": "Carpetana",
+        "line": "MadridMetroL6",
+        "order": 2
+      },
+      "id": 128
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.695764, 40.504901] },
+      "properties": {
+        "id": 248,
+        "name": "Montecarmelo",
+        "line": "MadridMetroL10",
+        "order": 2
+      },
+      "id": 248
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.807311, 40.349723] },
+      "properties": {
+        "id": 227,
+        "name": "Joaquín Vilumbrales",
+        "line": "MadridMetroL10",
+        "order": 1
+      },
+      "id": 227
+    }
+  ],
+  "properties": {
+    "totalStations": 326,
+    "stationsPerLine": {
+      "MadridMetroL1": 33,
+      "MadridMetroL2": 20,
+      "MadridMetroL3": 18,
+      "MadridMetroL4": 23,
+      "MadridMetroL5": 32,
+      "MadridMetroL6": 28,
+      "MadridMetroL7": 31,
+      "MadridMetroL8": 8,
+      "MadridMetroL9": 29,
+      "MadridMetroL10": 31,
+      "MadridMetroL11": 7,
+      "MadridMetroL12": 28,
+      "MetroLigeroMl1": 9,
+      "MetroLigeroMl2": 13,
+      "MetroLigeroMl3": 16
+    }
+  }
+}

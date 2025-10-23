@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="151.4" height="89.7" viewBox="0 0 1514 897">
+	<title>Berlin-Brandenburg transit icons - U-Bahn Linie U4</title>
+	<path fill="#f0d722" d="M0,0h1514v897H0z"/>
+	<path fill="#191919" d="M746,534q0 66-18 113t-52.5 76.5t-84.5 43.5t-113 14t-113-14t-84.5-43.5t-52.5-76.5t-18-113v-419h131v379q0 42 7 76.5t23.5 59t42.5 37.5t64 13q37 0 63-13t42-37.5t23-59t7-76.5v-379h133v419zM1373,637h-86v134h-124v-134h-284v-108l247-414h161v423h86v99zM1163,538v-288h-4l-163 288h167z"/>
+</svg>
