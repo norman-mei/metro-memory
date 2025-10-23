@@ -439,10 +439,29 @@ export default function GamePage({
       ? 0
       : foundStationKeys.size / totalUniqueStations
 
+  const mapOptions = useMemo(() => {
+    if (typeof MAP_CONFIG.style === 'string') {
+      const fallbackStyle =
+        process.env.NEXT_PUBLIC_MAPBOX_STYLE ??
+        'mapbox://styles/mapbox/light-v11'
+
+      const style = MAP_CONFIG.style.includes('mapbox://styles/benjamintd/')
+        ? fallbackStyle
+        : MAP_CONFIG.style
+
+      return {
+        ...MAP_CONFIG,
+        style,
+      }
+    }
+
+    return { ...MAP_CONFIG }
+  }, [MAP_CONFIG])
+
   useEffect(() => {
     mapboxgl.accessToken = process.env.NEXT_PUBLIC_MAPBOX_TOKEN!
 
-    const mapboxMap = new mapboxgl.Map(MAP_CONFIG)
+    const mapboxMap = new mapboxgl.Map({ ...mapOptions })
 
     mapboxMap.on('load', () => {
       const mapStyle = mapboxMap.getStyle()
@@ -688,7 +707,7 @@ export default function GamePage({
       mapboxMap.remove()
       setMap(null)
     }
-  }, [setMap, featureCollection, LINES, MAP_CONFIG, MAP_FROM_DATA, routes])
+  }, [setMap, featureCollection, LINES, mapOptions, MAP_FROM_DATA, routes])
 
   useEffect(() => {
     if (!map || !(map as any).style) {
