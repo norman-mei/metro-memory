@@ -144,7 +144,11 @@ const FoundList = ({
         return true
       }
 
-      const alternates = feature.properties.alternate_names
+      const alternates = (
+        feature.properties as typeof feature.properties & {
+          alternate_names?: string[]
+        }
+      ).alternate_names
       if (Array.isArray(alternates)) {
         return alternates.some((alias) =>
           alias.toLowerCase().includes(normalizedFilter),
