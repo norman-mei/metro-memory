@@ -38,7 +38,7 @@ export const i18n = rosetta({
       line: 'Line',
     },
     searchFoundStations: 'Search found stations…',
-    noStationsFound: ({ query }: { query?: string }) =>
+    noStationsFound: ({ query }: { query?: string }): string =>
       query && query.length > 0
         ? `No stations found for "${query}"`
         : 'No stations found',
@@ -80,7 +80,7 @@ export const i18n = rosetta({
       line: 'Ligne',
     },
     searchFoundStations: 'Rechercher des stations…',
-    noStationsFound: ({ query }: { query?: string }) =>
+    noStationsFound: ({ query }: { query?: string }): string =>
       query && query.length > 0
         ? `Aucune station trouvée pour « ${query} »`
         : 'Aucune station trouvée',
@@ -120,7 +120,7 @@ export const i18n = rosetta({
       line: 'Línea',
     },
     searchFoundStations: 'Buscar estaciones…',
-    noStationsFound: ({ query }: { query?: string }) =>
+    noStationsFound: ({ query }: { query?: string }): string =>
       query && query.length > 0
         ? `No se encontraron estaciones para "${query}"`
         : 'No se encontraron estaciones',
@@ -160,7 +160,7 @@ export const i18n = rosetta({
       line: 'Línia',
     },
     searchFoundStations: 'Cerca estacions…',
-    noStationsFound: ({ query }: { query?: string }) =>
+    noStationsFound: ({ query }: { query?: string }): string =>
       query && query.length > 0
         ? `No s’han trobat estacions per a "${query}"`
         : 'No s’han trobat estacions',
@@ -201,7 +201,7 @@ export const i18n = rosetta({
       line: 'Linie',
     },
     searchFoundStations: 'Stationen durchsuchen…',
-    noStationsFound: ({ query }: { query?: string }) =>
+    noStationsFound: ({ query }: { query?: string }): string =>
       query && query.length > 0
         ? `Keine Stationen für "${query}" gefunden`
         : 'Keine Stationen gefunden',
@@ -236,7 +236,7 @@ export const i18n = rosetta({
       line: '노선',
     },
     searchFoundStations: '역 검색…',
-    noStationsFound: ({ query }: { query?: string }) =>
+    noStationsFound: ({ query }: { query?: string }): string =>
       query && query.length > 0
         ? `"${query}"에 해당하는 역이 없습니다`
         : '일치하는 역이 없습니다',
@@ -276,7 +276,7 @@ export const i18n = rosetta({
       line: 'Hat',
     },
     searchFoundStations: 'İstasyon ara…',
-    noStationsFound: ({ query }: { query?: string }) =>
+    noStationsFound: ({ query }: { query?: string }): string =>
       query && query.length > 0
         ? `"${query}" için uygun istasyon bulunamadı`
         : 'Hiç istasyon bulunamadı',
@@ -316,7 +316,7 @@ export const i18n = rosetta({
       line: '路線',
     },
     searchFoundStations: '駅を検索…',
-    noStationsFound: ({ query }: { query?: string }) =>
+    noStationsFound: ({ query }: { query?: string }): string =>
       query && query.length > 0
         ? `"${query}" に一致する駅は見つかりません`
         : '該当する駅は見つかりません',
@@ -356,7 +356,7 @@ export const i18n = rosetta({
       line: 'Linje',
     },
     searchFoundStations: 'Sök stationer…',
-    noStationsFound: ({ query }: { query?: string }) =>
+    noStationsFound: ({ query }: { query?: string }): string =>
       query && query.length > 0
         ? `Inga stationer hittades för "${query}"`
         : 'Inga stationer hittades',
@@ -397,7 +397,7 @@ export const i18n = rosetta({
       line: 'Vonal',
     },
     searchFoundStations: 'Állomások keresése…',
-    noStationsFound: ({ query }: { query?: string }) =>
+    noStationsFound: ({ query }: { query?: string }): string =>
       query && query.length > 0
         ? `Nem található állomás erre: "${query}"`
         : 'Nem található állomás',
