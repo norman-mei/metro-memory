@@ -43962,7 +43962,7 @@
             "brands": [
                 "NewYorkSubway"
             ],
-            "name": "W 8 St - Ny Aquarium",
+            "name": "W 8 St - NY Aquarium",
             "coords": [
                 40.576127,
                 -73.975939
@@ -43981,7 +43981,7 @@
                 ],
                 "level": 0,
                 "station_id": "SubwayW8StNYAquarium",
-                "summary": "W 8 St - Ny Aquarium: Station Open"
+                "summary": "W 8 St - NY Aquarium: Station Open"
             }
         },
         "Subway96St2Av": {

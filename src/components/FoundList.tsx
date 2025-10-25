@@ -10,6 +10,7 @@ import { sortBy } from 'lodash'
 import Image from 'next/image'
 import { useConfig } from '@/lib/configContext'
 import useTranslation from '@/hooks/useTranslation'
+import { useTheme } from 'next-themes'
 
 const getStationKey = (feature: DataFeature) => {
   const name = (feature.properties.name ?? '').trim().toLowerCase()
@@ -25,6 +26,40 @@ const getStationKey = (feature: DataFeature) => {
     return `${name}|${formattedLng}|${formattedLat}`
   }
   return `${name}|${feature.id ?? ''}`
+}
+
+const getDisplayName = (feature: DataFeature) => {
+  if (!feature || !feature.properties) {
+    return '—'
+  }
+
+  const { display_name, short_name, long_name, name, id: propertyId } =
+    feature.properties as typeof feature.properties & {
+      display_name?: unknown
+      short_name?: unknown
+      long_name?: unknown
+      id?: unknown
+    }
+
+  const candidates = [
+    name,
+    long_name,
+    display_name,
+    short_name,
+    propertyId,
+    feature.id,
+  ]
+
+  for (const candidate of candidates) {
+    if (typeof candidate === 'string' || typeof candidate === 'number') {
+      const value = String(candidate).trim()
+      if (value.length > 0) {
+        return value
+      }
+    }
+  }
+
+  return '—'
 }
 const FoundList = ({
   found,
@@ -254,10 +289,13 @@ const FoundList = ({
     })
   }, [grouped, foundTimestamps, formatTimestamp])
 
+  const hasResults = groupedWithTimestamp.length > 0
+  const trimmedFilter = filter.trim()
+
   return (
     <div>
-      {grouped.length > 0 && (
-        <div className="mb-4 space-y-3">
+      <div className="mb-4 space-y-3">
+        {grouped.length > 0 && (
           <div className="flex items-center justify-between">
             <p className="text-sm uppercase text-zinc-900 dark:text-zinc-100">
               {t('stations', { count: grouped.length })}
@@ -265,33 +303,41 @@ const FoundList = ({
 
             <SortMenu sortOptions={sortOptions} sort={sort} setSort={setSort} />
           </div>
+        )}
 
-          <div>
-            <label className="sr-only" htmlFor="found-stations-search">
-              {t('searchFoundStations')}
-            </label>
-            <input
-              id="found-stations-search"
-              type="search"
-              value={filter}
-              onChange={(event) => setFilter(event.target.value)}
-              className="w-full rounded-full border border-zinc-200 px-3 py-2 text-sm text-zinc-900 shadow-sm outline-none transition focus:border-zinc-400 focus:ring-2 focus:ring-zinc-300"
-              placeholder={t('searchFoundStations')}
-            />
-          </div>
-        </div>
-      )}
-      <ol className={classNames({ 'blur-md transition-all': hideLabels })}>
-        {groupedWithTimestamp.map(({ features, timestamp }) => (
-          <GroupedLine
-            key={getStationKey(features[0])}
-            features={features}
-            zoomToFeature={zoomToFeature}
-            setHoveredId={setHoveredId}
-            hoveredId={hoveredId}
-            timestamp={timestamp}
+        <div>
+          <label className="sr-only" htmlFor="found-stations-search">
+            {t('searchFoundStations')}
+          </label>
+          <input
+            id="found-stations-search"
+            type="search"
+            value={filter}
+            onChange={(event) => setFilter(event.target.value)}
+            className="w-full rounded-full border border-zinc-200 px-3 py-2 text-sm text-zinc-900 shadow-sm outline-none transition focus:border-zinc-400 focus:ring-2 focus:ring-zinc-300 dark:border-zinc-700 dark:bg-zinc-900/60 dark:text-zinc-100 dark:focus:border-zinc-500 dark:focus:ring-zinc-600"
+            placeholder={t('searchFoundStations')}
           />
-        ))}
+        </div>
+      </div>
+      <ol className={classNames({ 'blur-md transition-all': hideLabels })}>
+        {hasResults ? (
+          groupedWithTimestamp.map(({ features, timestamp }) => (
+            <GroupedLine
+              key={getStationKey(features[0])}
+              features={features}
+              zoomToFeature={zoomToFeature}
+              setHoveredId={setHoveredId}
+              hoveredId={hoveredId}
+              timestamp={timestamp}
+            />
+          ))
+        ) : (
+          <li className="rounded border border-dashed border-zinc-300 px-4 py-3 text-sm text-zinc-600 dark:border-zinc-700 dark:text-zinc-300">
+            {t('noStationsFound', {
+              query: normalizedFilter ? trimmedFilter : undefined,
+            })}
+          </li>
+        )}
       </ol>
     </div>
   )
@@ -313,6 +359,49 @@ const GroupedLine = memo(
   }) => {
     const { LINES } = useConfig()
     const times = features.length
+    const { resolvedTheme } = useTheme()
+    const isDark = resolvedTheme === 'dark'
+    const lineIds = useMemo(() => {
+      const ids = new Set<string>()
+
+      for (const feature of features) {
+        const line = feature?.properties?.line
+        if (typeof line === 'string') {
+          const trimmed = line.trim()
+          if (trimmed) {
+            ids.add(trimmed)
+          }
+        } else if (Array.isArray(line)) {
+          for (const maybeLine of line) {
+            if (typeof maybeLine === 'string') {
+              const trimmed = maybeLine.trim()
+              if (trimmed) {
+                ids.add(trimmed)
+              }
+            }
+          }
+        }
+      }
+
+      return Array.from(ids).sort((a, b) => {
+        const aOrder = LINES[a]?.order ?? Number.MAX_SAFE_INTEGER
+        const bOrder = LINES[b]?.order ?? Number.MAX_SAFE_INTEGER
+        if (aOrder !== bOrder) {
+          return aOrder - bOrder
+        }
+        return a.localeCompare(b)
+      })
+    }, [features, LINES])
+    const isHovered = features.some((feature) => {
+      const candidateId =
+        typeof feature.id === 'number'
+          ? feature.id
+          : typeof feature.properties.id === 'number'
+          ? feature.properties.id
+          : null
+      return candidateId === hoveredId
+    })
+    const displayName = getDisplayName(features[0])
 
     return (
       <Transition
@@ -332,41 +421,43 @@ const GroupedLine = memo(
           onMouseOver={() => setHoveredId(+features[0].id!)}
           onMouseOut={() => setHoveredId(null)}
           className={classNames(
-            'flex w-full items-start gap-2 rounded px-2 py-2 text-sm',
+            'flex w-full items-start gap-3 rounded border border-zinc-200 bg-white px-3 py-2 text-sm transition-colors dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100',
             {
-              'bg-yellow-200 shadow-sm': features.some(
-                (f) => f.id === hoveredId,
-              ),
+              'bg-yellow-200 shadow-sm dark:bg-amber-300/40': isHovered,
             },
           )}
         >
-          <div className="ml-2.5 flex min-w-0 flex-col items-start gap-1 text-left">
-            <div className="flex flex-wrap items-center gap-0.5">
-              {sortBy(
-                features,
-                (f) => LINES[f.properties.line || '']?.order,
-              ).map((feature) => (
+          <div className="flex min-w-0 flex-1 flex-col items-start gap-1 text-left">
+            <div className="flex flex-wrap items-center gap-1">
+              {lineIds.map((lineId) => (
                 <Image
-                  key={feature.id!}
-                  alt={feature.properties.line || ''}
-                  src={`/images/${feature.properties.line}.svg`}
+                  key={lineId}
+                  alt={lineId}
+                  src={`/images/${lineId}.svg`}
                   width={64}
                   height={64}
                   className="h-5 w-5 flex-shrink-0 object-contain"
                 />
               ))}
             </div>
-            <span className="text-sm font-medium leading-tight">
-              {features[0].properties.name}
+            <span
+              className={classNames(
+                'min-w-0 text-sm font-medium leading-tight transition-colors',
+                isDark && isHovered
+                  ? 'text-white'
+                  : 'text-zinc-900 dark:text-zinc-100',
+              )}
+            >
+              {displayName}
             </span>
           </div>
           <div className="ml-auto flex items-baseline gap-2">
             {times > 1 && (
-              <span className="text-xs font-light text-gray-500">
+              <span className="text-xs font-light text-gray-500 dark:text-gray-300">
                 ×{times}
               </span>
             )}
-            <span className="text-xs text-gray-400 whitespace-nowrap">
+            <span className="text-xs text-gray-400 dark:text-gray-300 whitespace-nowrap">
               {timestamp}
             </span>
           </div>
