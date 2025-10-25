@@ -365,9 +365,9 @@ const GroupedLine = memo(
       const ids = new Set<string>()
 
       for (const feature of features) {
-        const { line: rawLine } = feature?.properties as typeof feature.properties & {
-          line?: unknown
-        }
+        const rawLine = (
+          feature?.properties as { line?: string | string[] | null } | undefined
+        )?.line
 
         if (typeof rawLine === 'string') {
           const trimmed = rawLine.trim()
