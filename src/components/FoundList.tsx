@@ -385,7 +385,6 @@ const GroupedLine = memo(
     timestamp: string
   }) => {
     const { LINES } = useConfig()
-    const times = features.length
     const { resolvedTheme } = useTheme()
     const isDark = resolvedTheme === 'dark'
     const lineIds = useMemo(() => {
@@ -482,11 +481,6 @@ const GroupedLine = memo(
             </span>
           </div>
           <div className="ml-auto flex items-baseline gap-2">
-            {times > 1 && (
-              <span className="text-xs font-light text-gray-500 dark:text-gray-300">
-                ×{times}
-              </span>
-            )}
             <span className="text-xs text-gray-400 dark:text-gray-300 whitespace-nowrap">
               {timestamp}
             </span>

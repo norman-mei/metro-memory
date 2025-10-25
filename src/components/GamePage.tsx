@@ -1209,16 +1209,6 @@ export default function GamePage({
       </div>
       {sidebarOpen ? (
         <div className="hidden h-full lg:flex">
-          <div className="relative h-full w-0">
-            <button
-              type="button"
-              onClick={() => setSidebarOpen(false)}
-              className="absolute -left-3 top-1/2 hidden h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full bg-white text-zinc-700 shadow-lg transition hover:bg-zinc-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:bg-zinc-800 dark:text-zinc-100 dark:hover:bg-zinc-700 lg:flex"
-              aria-label="Hide sidebar"
-            >
-              ›
-            </button>
-          </div>
           <div className="flex h-full w-96 flex-col overflow-y-auto bg-white p-6 shadow-lg dark:bg-zinc-900/95 dark:shadow-black/40 xl:w-[32rem]">
             <FoundSummary
               className="rounded-lg bg-white p-4 shadow-md dark:bg-zinc-900 dark:text-zinc-100 dark:shadow-black/40"
@@ -1244,10 +1234,10 @@ export default function GamePage({
       <button
         type="button"
         onClick={() => setSidebarOpen((open) => !open)}
-        className="fixed right-3 top-1/2 z-20 hidden h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white text-zinc-700 shadow-lg transition hover:bg-zinc-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:bg-zinc-800 dark:text-zinc-100 dark:hover:bg-zinc-700 lg:flex"
+        className="fixed left-3 top-1/2 z-20 hidden h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white text-zinc-700 shadow-lg transition hover:bg-zinc-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:bg-zinc-800 dark:text-zinc-100 dark:hover:bg-zinc-700 lg:flex"
         aria-label={sidebarOpen ? 'Hide sidebar' : 'Show sidebar'}
       >
-        {sidebarOpen ? '›' : '‹'}
+        {sidebarOpen ? '‹' : '›'}
       </button>
       <IntroModal
         inputRef={inputRef}

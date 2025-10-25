@@ -2,17 +2,25 @@ import CityStats from '@/components/CityStats'
 import { Container } from '@/components/Container'
 import { cities } from '@/lib/citiesConfig'
 import slugify from '@/lib/slugify'
-import { redirect } from 'next/navigation'
+import { notFound } from 'next/navigation'
 
 export const revalidate = 86400 // 24 hours
 export const dynamic = 'force-static'
+export const dynamicParams = false
+
+export const generateStaticParams = () =>
+  cities
+    .filter((city) => !city.hideInStats)
+    .map((city) => ({
+      slug: slugify(city),
+    }))
 
 const StatsPage = async ({ params }: { params: { slug: string } }) => {
   const { slug } = params
   const city = cities.find((city) => slugify(city) === slug)
 
   if (!city) {
-    return redirect('/404')
+    notFound()
   }
 
   return (
