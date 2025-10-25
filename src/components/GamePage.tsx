@@ -1240,15 +1240,16 @@ export default function GamePage({
             />
           </div>
         </div>
-      ) : null}
-      <button
-        type="button"
-        onClick={() => setSidebarOpen((open) => !open)}
-        className="fixed right-3 top-1/2 z-20 hidden h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white text-zinc-700 shadow-lg transition hover:bg-zinc-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:bg-zinc-800 dark:text-zinc-100 dark:hover:bg-zinc-700 lg:flex"
-        aria-label={sidebarOpen ? 'Hide sidebar' : 'Show sidebar'}
-      >
-        {sidebarOpen ? '›' : '‹'}
-      </button>
+      ) : (
+        <button
+          type="button"
+          onClick={() => setSidebarOpen(true)}
+          className="fixed right-3 top-1/2 z-20 hidden h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white text-zinc-700 shadow-lg transition hover:bg-zinc-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:bg-zinc-800 dark:text-zinc-100 dark:hover:bg-zinc-700 lg:flex"
+          aria-label="Show sidebar"
+        >
+          ‹
+        </button>
+      )}
       <IntroModal
         inputRef={inputRef}
         open={isNewPlayer}
