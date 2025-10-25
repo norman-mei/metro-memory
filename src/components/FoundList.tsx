@@ -12,17 +12,6 @@ import { useConfig } from '@/lib/configContext'
 import useTranslation from '@/hooks/useTranslation'
 
 const getStationKey = (feature: DataFeature) => {
-  const propertiesWithCluster = feature.properties as typeof feature.properties & {
-    cluster_key?: number | string
-  }
-
-  if (
-    propertiesWithCluster?.cluster_key !== undefined &&
-    propertiesWithCluster?.cluster_key !== null
-  ) {
-    return `cluster|${propertiesWithCluster.cluster_key}`
-  }
-
   const name = (feature.properties.name ?? '').trim().toLowerCase()
   if (
     feature.geometry?.type === 'Point' &&
@@ -36,17 +25,6 @@ const getStationKey = (feature: DataFeature) => {
     return `${name}|${formattedLng}|${formattedLat}`
   }
   return `${name}|${feature.id ?? ''}`
-}
-
-const getDisplayName = (feature: DataFeature) => {
-  const propertiesWithDisplay = feature.properties as typeof feature.properties & {
-    display_name?: string
-  }
-  return (
-    propertiesWithDisplay.display_name ??
-    feature.properties.name ??
-    ''
-  )
 }
 const FoundList = ({
   found,
@@ -113,15 +91,13 @@ const FoundList = ({
       case 'name':
         return sortBy(ids, (id) => {
           const feature = idMap.get(id)
-          if (!feature) return ''
-          return getDisplayName(feature).toLowerCase()
+          return feature?.properties.name?.toLowerCase() ?? ''
         })
 
       case 'name-desc':
         return sortBy(ids, (id) => {
           const feature = idMap.get(id)
-          if (!feature) return ''
-          return getDisplayName(feature).toLowerCase()
+          return feature?.properties.name?.toLowerCase() ?? ''
         }).reverse()
 
       case 'line':
@@ -137,13 +113,13 @@ const FoundList = ({
           (id) => {
             const feature = idMap.get(id)
             if (!feature) return Number.MAX_SAFE_INTEGER
-            const propertiesWithOrder = feature.properties as typeof feature.properties & {
-              order?: number
+            if (feature.geometry.type === 'Point') {
+              return (
+                100 * feature.geometry.coordinates[0] +
+                feature.geometry.coordinates[1]
+              )
             }
-            if (typeof propertiesWithOrder.order === 'number') {
-              return propertiesWithOrder.order
-            }
-            return getDisplayName(feature).toLowerCase()
+            return feature.properties.name
           },
         )
 
@@ -154,26 +130,7 @@ const FoundList = ({
 
   const normalizedFilter = filter.trim().toLowerCase()
 
-  const directionAliases = new Map<string, string[]>([
-    ['e', ['east', 'e']],
-    ['east', ['east', 'e']],
-    ['w', ['west', 'w']],
-    ['west', ['west', 'w']],
-    ['n', ['north', 'n']],
-    ['north', ['north', 'n']],
-    ['s', ['south', 's']],
-    ['south', ['south', 's']],
-  ])
-
-  const activeDirectionAliases = directionAliases.get(normalizedFilter) ?? null
-
   const filtered = useMemo(() => {
-    const tokenize = (value: string) =>
-      value
-        .split(/\s+/)
-        .map((token) => token.replace(/[^a-z0-9]/g, ''))
-        .filter(Boolean)
-
     if (!normalizedFilter) {
       return sorted
     }
@@ -182,16 +139,9 @@ const FoundList = ({
       const feature = idMap.get(id)
       if (!feature) return false
 
-      const displayName = getDisplayName(feature).toLowerCase()
-      if (displayName.includes(normalizedFilter)) {
+      const name = feature.properties.name?.toLowerCase() ?? ''
+      if (name.includes(normalizedFilter)) {
         return true
-      }
-
-      if (activeDirectionAliases) {
-        const tokens = tokenize(displayName)
-        if (tokens.some((token) => activeDirectionAliases.includes(token))) {
-          return true
-        }
       }
 
       const alternates = (
@@ -200,27 +150,14 @@ const FoundList = ({
         }
       ).alternate_names
       if (Array.isArray(alternates)) {
-        if (
-          alternates.some((alias) =>
-            alias.toLowerCase().includes(normalizedFilter),
-          )
-        ) {
-          return true
-        }
-
-        if (activeDirectionAliases) {
-          return alternates.some((alias) => {
-            const tokens = tokenize(alias.toLowerCase())
-            return tokens.some((token) =>
-              activeDirectionAliases.includes(token),
-            )
-          })
-        }
+        return alternates.some((alias) =>
+          alias.toLowerCase().includes(normalizedFilter),
+        )
       }
 
       return false
     })
-  }, [sorted, normalizedFilter, idMap, activeDirectionAliases])
+  }, [sorted, normalizedFilter, idMap])
 
   const grouped = useMemo(() => {
     const groups = new Map<string, DataFeature[]>()
@@ -317,53 +254,45 @@ const FoundList = ({
     })
   }, [grouped, foundTimestamps, formatTimestamp])
 
-  const hasStations = groupedWithTimestamp.length > 0
-
   return (
     <div>
-      <div className="mb-4 space-y-3">
-        <div className="flex items-center justify-between">
-          <p className="text-sm uppercase text-zinc-900 text-opacity-75 dark:text-zinc-200 dark:text-opacity-90">
-            {t('stations', { count: grouped.length })}
-          </p>
+      {grouped.length > 0 && (
+        <div className="mb-4 space-y-3">
+          <div className="flex items-center justify-between">
+            <p className="text-sm uppercase text-zinc-900 text-opacity-75">
+              {t('stations', { count: grouped.length })}
+            </p>
 
-          {grouped.length > 0 && (
             <SortMenu sortOptions={sortOptions} sort={sort} setSort={setSort} />
-          )}
-        </div>
+          </div>
 
-        <div>
-          <label className="sr-only" htmlFor="found-stations-search">
-            {t('searchFoundStations')}
-          </label>
-          <input
-            id="found-stations-search"
-            type="search"
-            value={filter}
-            onChange={(event) => setFilter(event.target.value)}
-            className="w-full rounded-full border border-zinc-200 px-3 py-2 text-sm text-zinc-900 shadow-sm outline-none transition focus:border-zinc-400 focus:ring-2 focus:ring-zinc-300"
-            placeholder={t('searchFoundStations')}
-          />
-        </div>
-      </div>
-      {hasStations ? (
-        <ol className={classNames({ 'blur-md transition-all': hideLabels })}>
-          {groupedWithTimestamp.map(({ features, timestamp }) => (
-            <GroupedLine
-              key={getStationKey(features[0])}
-              features={features}
-              zoomToFeature={zoomToFeature}
-              setHoveredId={setHoveredId}
-              hoveredId={hoveredId}
-              timestamp={timestamp}
+          <div>
+            <label className="sr-only" htmlFor="found-stations-search">
+              {t('searchFoundStations')}
+            </label>
+            <input
+              id="found-stations-search"
+              type="search"
+              value={filter}
+              onChange={(event) => setFilter(event.target.value)}
+              className="w-full rounded-full border border-zinc-200 px-3 py-2 text-sm text-zinc-900 shadow-sm outline-none transition focus:border-zinc-400 focus:ring-2 focus:ring-zinc-300"
+              placeholder={t('searchFoundStations')}
             />
-          ))}
-        </ol>
-      ) : (
-        <div className="rounded-lg border border-dashed border-zinc-300 px-3 py-6 text-center text-sm text-zinc-500 dark:border-zinc-700 dark:text-zinc-300">
-          {t('noStationsFound', { query: filter.trim() })}
+          </div>
         </div>
       )}
+      <ol className={classNames({ 'blur-md transition-all': hideLabels })}>
+        {groupedWithTimestamp.map(({ features, timestamp }) => (
+          <GroupedLine
+            key={getStationKey(features[0])}
+            features={features}
+            zoomToFeature={zoomToFeature}
+            setHoveredId={setHoveredId}
+            hoveredId={hoveredId}
+            timestamp={timestamp}
+          />
+        ))}
+      </ol>
     </div>
   )
 }
@@ -385,53 +314,6 @@ const GroupedLine = memo(
     const { LINES } = useConfig()
     const times = features.length
 
-    const primaryFeature = features[0]
-    const resolvedId =
-      typeof primaryFeature.id === 'number'
-        ? primaryFeature.id
-        : typeof primaryFeature.properties.id === 'number'
-        ? primaryFeature.properties.id
-        : undefined
-
-    const lineIds = Array.from(
-      new Set(
-        features
-          .map((feature) => feature.properties.line)
-          .filter((line): line is string => Boolean(line)),
-      ),
-    ).sort((a, b) => {
-      const orderA = LINES[a]?.order ?? Number.MAX_SAFE_INTEGER
-      const orderB = LINES[b]?.order ?? Number.MAX_SAFE_INTEGER
-      if (orderA !== orderB) {
-        return orderA - orderB
-      }
-      return a.localeCompare(b)
-    })
-
-    const displayName = getDisplayName(primaryFeature)
-
-    const isHovered = features.some((feature) => {
-      const candidateId =
-        typeof feature.id === 'number'
-          ? feature.id
-          : typeof feature.properties.id === 'number'
-          ? feature.properties.id
-          : undefined
-      return candidateId === hoveredId
-    })
-
-    const handleClick = () => {
-      if (resolvedId !== undefined) {
-        zoomToFeature(resolvedId)
-      }
-    }
-
-    const handleMouseOver = () => {
-      if (resolvedId !== undefined) {
-        setHoveredId(resolvedId)
-      }
-    }
-
     return (
       <Transition
         appear
@@ -446,41 +328,45 @@ const GroupedLine = memo(
         leaveTo="opacity-0 -translate-y-1"
       >
         <button
-          onClick={handleClick}
-          onMouseOver={handleMouseOver}
+          onClick={() => zoomToFeature(features[0].properties.id!)}
+          onMouseOver={() => setHoveredId(+features[0].id!)}
           onMouseOut={() => setHoveredId(null)}
           className={classNames(
-            'flex w-full items-start gap-3 rounded border border-zinc-200 px-3 py-2 text-sm transition-colors bg-white text-zinc-900 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100',
+            'flex w-full items-start gap-2 rounded px-2 py-2 text-sm',
             {
-              'bg-yellow-200 shadow-sm dark:bg-amber-300/40 dark:text-zinc-950':
-                isHovered,
+              'bg-yellow-200 shadow-sm': features.some(
+                (f) => f.id === hoveredId,
+              ),
             },
           )}
         >
-          <div className="flex min-w-0 flex-1 flex-col items-start gap-1 text-left">
-            <div className="flex flex-wrap items-center gap-1">
-              {lineIds.map((lineId) => (
+          <div className="ml-2.5 flex min-w-0 flex-col items-start gap-1 text-left">
+            <div className="flex flex-wrap items-center gap-0.5">
+              {sortBy(
+                features,
+                (f) => LINES[f.properties.line || '']?.order,
+              ).map((feature) => (
                 <Image
-                  key={lineId}
-                  alt={lineId}
-                  src={`/images/${lineId}.svg`}
+                  key={feature.id!}
+                  alt={feature.properties.line || ''}
+                  src={`/images/${feature.properties.line}.svg`}
                   width={64}
                   height={64}
                   className="h-5 w-5 flex-shrink-0 object-contain"
                 />
               ))}
             </div>
-            <span className="min-w-0 text-sm font-medium leading-tight">
-              {displayName}
+            <span className="text-sm font-medium leading-tight">
+              {features[0].properties.name}
             </span>
           </div>
-          <div className="ml-4 flex flex-none items-baseline gap-2">
+          <div className="ml-auto flex items-baseline gap-2">
             {times > 1 && (
-              <span className="text-xs font-light text-gray-500 dark:text-gray-300">
+              <span className="text-xs font-light text-gray-500">
                 ×{times}
               </span>
             )}
-            <span className="whitespace-nowrap text-xs text-gray-400 dark:text-gray-300">
+            <span className="text-xs text-gray-400 whitespace-nowrap">
               {timestamp}
             </span>
           </div>
