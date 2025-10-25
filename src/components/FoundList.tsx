@@ -13,7 +13,22 @@ import useTranslation from '@/hooks/useTranslation'
 import { useTheme } from 'next-themes'
 
 const getStationKey = (feature: DataFeature) => {
-  const name = (feature.properties.name ?? '').trim().toLowerCase()
+  const nameCandidates: unknown[] = [
+    feature.properties?.name,
+    feature.properties?.long_name,
+    feature.properties?.display_name,
+    feature.properties?.short_name,
+  ]
+
+  for (const candidate of nameCandidates) {
+    if (typeof candidate === 'string') {
+      const normalized = candidate.trim().toLowerCase()
+      if (normalized.length > 0) {
+        return `name:${normalized}`
+      }
+    }
+  }
+
   if (
     feature.geometry?.type === 'Point' &&
     Array.isArray(feature.geometry.coordinates)
@@ -23,9 +38,21 @@ const getStationKey = (feature: DataFeature) => {
       typeof lng === 'number' ? lng.toFixed(6) : String(lng)
     const formattedLat =
       typeof lat === 'number' ? lat.toFixed(6) : String(lat)
-    return `${name}|${formattedLng}|${formattedLat}`
+    return `point:${formattedLng}|${formattedLat}`
   }
-  return `${name}|${feature.id ?? ''}`
+
+  const idCandidate =
+    feature.id ??
+    (typeof feature.properties?.id === 'number' ||
+    typeof feature.properties?.id === 'string'
+      ? feature.properties?.id
+      : undefined)
+
+  if (idCandidate !== undefined && idCandidate !== null) {
+    return `id:${String(idCandidate)}`
+  }
+
+  return `feature:${JSON.stringify(feature.geometry ?? {})}`
 }
 
 const getDisplayName = (feature: DataFeature) => {
