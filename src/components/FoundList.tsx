@@ -365,14 +365,17 @@ const GroupedLine = memo(
       const ids = new Set<string>()
 
       for (const feature of features) {
-        const line = feature?.properties?.line
-        if (typeof line === 'string') {
-          const trimmed = line.trim()
+        const { line: rawLine } = feature?.properties as typeof feature.properties & {
+          line?: unknown
+        }
+
+        if (typeof rawLine === 'string') {
+          const trimmed = rawLine.trim()
           if (trimmed) {
             ids.add(trimmed)
           }
-        } else if (Array.isArray(line)) {
-          for (const maybeLine of line) {
+        } else if (Array.isArray(rawLine)) {
+          for (const maybeLine of rawLine) {
             if (typeof maybeLine === 'string') {
               const trimmed = maybeLine.trim()
               if (trimmed) {
