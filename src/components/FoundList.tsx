@@ -259,7 +259,7 @@ const FoundList = ({
       {grouped.length > 0 && (
         <div className="mb-4 space-y-3">
           <div className="flex items-center justify-between">
-            <p className="text-sm uppercase text-zinc-900 text-opacity-75">
+            <p className="text-sm uppercase text-zinc-900 dark:text-zinc-100">
               {t('stations', { count: grouped.length })}
             </p>
 

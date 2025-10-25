@@ -263,12 +263,25 @@ export default function GamePage({
   const mapContainerRef = useRef<HTMLDivElement | null>(null)
 
   const normalizeString = useNormalizeString()
-  const featureCollection = useMemo(() => {
-    const enhancedFeatures = fc.features.map((feature) => {
+  const { featureCollection, clusterGroups } = useMemo(() => {
+    const featuresWithAlternates = fc.features.map((feature) => {
+      const originalName =
+        typeof feature.properties.name === 'string'
+          ? feature.properties.name
+          : ''
+
+      const propertiesWithAlternates = feature.properties as typeof feature.properties & {
+        alternate_names?: string[]
+        display_name?: string
+      }
+
       const existingAlternates = Array.isArray(
         propertiesWithAlternates.alternate_names,
       )
-        ? feature.properties.alternate_names
+        ? propertiesWithAlternates.alternate_names.filter(
+            (alt): alt is string =>
+              typeof alt === 'string' && alt.trim().length > 0,
+          )
         : []
 
       const generatedAlternates = generateAlternateNames(originalName)
@@ -307,11 +320,197 @@ export default function GamePage({
 
       return {
         ...feature,
-        properties: {
-          ...feature.properties,
-          alternate_names: mergedAlternates,
-        },
+        properties: nextProperties,
+      } as DataFeature
+    })
+
+    type PointFeatureEntry = {
+      feature: DataFeature
+      id: number
+      lng: number
+      lat: number
+      name: string
+    }
+
+    const pointFeatures: PointFeatureEntry[] = featuresWithAlternates
+      .map((feature) => {
+        if (
+          feature.geometry?.type !== 'Point' ||
+          !Array.isArray(feature.geometry.coordinates) ||
+          typeof feature.id !== 'number'
+        ) {
+          return null
+        }
+
+        const [lng, lat] = feature.geometry.coordinates as number[]
+        return {
+          feature,
+          id: feature.id as number,
+          lng,
+          lat,
+          name: (feature.properties.name ?? '').trim(),
+        }
+      })
+      .filter((entry): entry is PointFeatureEntry => entry !== null)
+
+    const parent = new Map<number, number>()
+
+    const find = (id: number): number => {
+      const current = parent.get(id)
+      if (current === undefined) {
+        parent.set(id, id)
+        return id
       }
+      if (current === id) {
+        return id
+      }
+      const root = find(current)
+      parent.set(id, root)
+      return root
+    }
+
+    const union = (a: number, b: number) => {
+      const rootA = find(a)
+      const rootB = find(b)
+      if (rootA === rootB) {
+        return
+      }
+      if (rootA < rootB) {
+        parent.set(rootB, rootA)
+      } else {
+        parent.set(rootA, rootB)
+      }
+    }
+
+    const COMPLEX_THRESHOLD = 0.00075
+
+    for (let i = 0; i < pointFeatures.length; i++) {
+      const current = pointFeatures[i]
+      for (let j = i + 1; j < pointFeatures.length; j++) {
+        const other = pointFeatures[j]
+        const distance = Math.hypot(current.lng - other.lng, current.lat - other.lat)
+        const sameName =
+          current.name.length > 0 &&
+          other.name.length > 0 &&
+          current.name.toLowerCase() === other.name.toLowerCase()
+
+        if (sameName || distance <= COMPLEX_THRESHOLD) {
+          union(current.id, other.id)
+        }
+      }
+    }
+
+    const clusters = new Map<number, PointFeatureEntry[]>()
+    pointFeatures.forEach((entry) => {
+      const root = find(entry.id)
+      if (!clusters.has(root)) {
+        clusters.set(root, [])
+      }
+      clusters.get(root)!.push(entry)
+    })
+
+    const clusterKeyById = new Map<number, number>()
+    const additionalAlternateNames = new Map<number, Set<string>>()
+    const clusterGroups = new Map<number, number[]>()
+
+    clusters.forEach((members, root) => {
+      if (members.length <= 1) {
+        return
+      }
+
+      const clusterIds = members
+        .map((member) => member.id)
+        .filter((id): id is number => typeof id === 'number')
+      if (clusterIds.length > 1) {
+        clusterGroups.set(root, clusterIds)
+      }
+
+      const uniqueNames = Array.from(
+        new Set(
+          members
+            .map((member) => member.name)
+            .filter((name): name is string => name.length > 0),
+        ),
+      )
+
+      const globalAlias =
+        uniqueNames.length > 1 ? uniqueNames.join(' - ') : undefined
+
+      members.forEach((member) => {
+        const memberId = member.id
+        clusterKeyById.set(memberId, root)
+
+        if (uniqueNames.length <= 1) {
+          return
+        }
+
+        const additionalAlternates =
+          additionalAlternateNames.get(memberId) ?? new Set<string>()
+
+        const memberName = member.name
+        const sortedOthers = uniqueNames
+          .filter((name) => name !== memberName)
+          .sort((a, b) => a.localeCompare(b))
+
+        if (globalAlias && globalAlias !== memberName) {
+          additionalAlternates.add(globalAlias)
+        }
+
+        if (memberName && sortedOthers.length > 0) {
+          additionalAlternates.add([memberName, ...sortedOthers].join(' - '))
+        }
+
+        additionalAlternateNames.set(memberId, additionalAlternates)
+      })
+    })
+
+    const finalFeatures = featuresWithAlternates.map((feature) => {
+      const id = feature.id
+      if (typeof id !== 'number') {
+        return feature
+      }
+
+      const propertiesWithExtras = feature.properties as typeof feature.properties & {
+        alternate_names?: string[]
+        cluster_key?: number | string
+      }
+
+      const baseAlternates = Array.isArray(propertiesWithExtras.alternate_names)
+        ? propertiesWithExtras.alternate_names.filter(
+            (alt): alt is string =>
+              typeof alt === 'string' && alt.trim().length > 0,
+          )
+        : []
+
+      const extraAlternates = additionalAlternateNames.get(id)
+      const mergedAlternates = Array.from(
+        new Set([
+          ...baseAlternates,
+          ...(extraAlternates ? Array.from(extraAlternates) : []),
+        ]),
+      )
+
+      const nextProperties: typeof propertiesWithExtras = {
+        ...feature.properties,
+      }
+
+      if (mergedAlternates.length > 0) {
+        nextProperties.alternate_names = mergedAlternates
+      } else if ('alternate_names' in nextProperties) {
+        delete nextProperties.alternate_names
+      }
+
+      const clusterKey = clusterKeyById.get(id)
+      if (clusterKey !== undefined && clusterKey !== null) {
+        nextProperties.cluster_key = clusterKey
+      } else if ('cluster_key' in nextProperties) {
+        delete nextProperties.cluster_key
+      }
+
+      return {
+        ...feature,
+        properties: nextProperties,
+      } as DataFeature
     })
 
     return {
@@ -599,10 +798,48 @@ export default function GamePage({
       ? 0
       : foundStationKeys.size / totalUniqueStations
 
+  const mapOptions = useMemo(() => {
+    const fallbackLightStyle =
+      process.env.NEXT_PUBLIC_MAPBOX_STYLE ??
+      'mapbox://styles/mapbox/light-v11'
+
+    let baseStyle: string | undefined
+    if (typeof MAP_CONFIG.style === 'string') {
+      baseStyle = MAP_CONFIG.style.includes('mapbox://styles/benjamintd/')
+        ? fallbackLightStyle
+        : MAP_CONFIG.style
+    }
+
+    const darkStyle =
+      process.env.NEXT_PUBLIC_MAPBOX_STYLE_DARK ??
+      'mapbox://styles/mapbox/dark-v11'
+
+    const resolvedStyle =
+      resolvedTheme === 'dark'
+        ? darkStyle
+        : baseStyle ?? fallbackLightStyle
+
+    const { container: _ignored, ...rest } = MAP_CONFIG as typeof MAP_CONFIG & {
+      container?: unknown
+    }
+
+    return {
+      ...rest,
+      style: resolvedStyle,
+    }
+  }, [MAP_CONFIG, resolvedTheme])
+
   useEffect(() => {
     mapboxgl.accessToken = process.env.NEXT_PUBLIC_MAPBOX_TOKEN!
 
-    const mapboxMap = new mapboxgl.Map(MAP_CONFIG)
+    if (!mapContainerRef.current) {
+      return
+    }
+
+    const mapboxMap = new mapboxgl.Map({
+      ...mapOptions,
+      container: mapContainerRef.current,
+    })
 
     mapboxMap.on('load', () => {
       const isDarkTheme = resolvedTheme === 'dark'
@@ -866,7 +1103,7 @@ export default function GamePage({
       mapboxMap.remove()
       setMap(null)
     }
-  }, [setMap, featureCollection, LINES, MAP_CONFIG, MAP_FROM_DATA, routes])
+  }, [setMap, featureCollection, LINES, mapOptions, MAP_FROM_DATA, routes, resolvedTheme])
 
   useEffect(() => {
     if (!map || !(map as any).style) {
