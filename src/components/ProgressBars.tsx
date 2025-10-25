@@ -3,9 +3,9 @@
 import { useMemo } from 'react'
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar'
 import Image from 'next/image'
-import classNames from 'classnames'
 import { useConfig } from '@/lib/configContext'
 import OverflowMarquee from '@/components/OverflowMarquee'
+import { useTheme } from 'next-themes'
 
 const cleanupLineName = (name?: string) => {
   if (!name) return ''
@@ -39,6 +39,8 @@ const ProgressBars = ({
   minimized?: boolean
 }) => {
   const { LINES, GAUGE_COLORS, LINE_GROUPS } = useConfig()
+  const { resolvedTheme } = useTheme()
+  const isDark = resolvedTheme === 'dark'
   const orderedLines = useMemo(
     () =>
       Object.entries(LINES)
@@ -96,15 +98,20 @@ const ProgressBars = ({
           title={title}
           className="relative flex h-8 w-8 shrink-0 items-center justify-center"
         >
-          <div className="absolute h-full w-full rounded-full shadow">
+          <div className="absolute h-full w-full rounded-full shadow dark:shadow-black/40">
             <CircularProgressbar
               background
               backgroundPadding={2}
               styles={buildStyles({
                 backgroundColor:
-                  GAUGE_COLORS === 'inverted' ? 'white' : meta.color,
+                  GAUGE_COLORS === 'inverted'
+                    ? isDark
+                      ? '#27272a'
+                      : '#ffffff'
+                    : meta.color,
                 pathColor:
                   GAUGE_COLORS === 'inverted' ? meta.color : meta.textColor,
+                textColor: isDark ? '#e4e4e7' : '#27272a',
                 trailColor: 'transparent',
               })}
               value={(100 * found) / total}
@@ -149,7 +156,7 @@ const ProgressBars = ({
         return (
           <div key={`${group.title ?? 'group'}-${groupIndex}`} className="space-y-3">
             {group.title && (
-              <p className="text-xs font-semibold uppercase tracking-wide text-zinc-500">
+              <p className="text-xs font-semibold uppercase tracking-wide text-zinc-500 dark:text-zinc-400">
                 {group.title}
               </p>
             )}
@@ -158,7 +165,7 @@ const ProgressBars = ({
                 return (
                   <hr
                     key={`separator-${groupIndex}-${itemIndex}`}
-                    className="border-zinc-200"
+                    className="border-zinc-200 dark:border-zinc-700"
                   />
                 )
               }
@@ -168,7 +175,7 @@ const ProgressBars = ({
                 return (
                   <div
                     key={`${item.title ?? 'heading'}-${groupIndex}-${itemIndex}`}
-                    className="pt-1 text-sm font-semibold text-zinc-700"
+                    className="pt-1 text-sm font-semibold text-zinc-700 dark:text-zinc-200"
                   >
                     {item.title}
                   </div>
@@ -179,15 +186,15 @@ const ProgressBars = ({
               }
 
               return (
-                <div
-                  key={`${item.title ?? 'lines'}-${groupIndex}-${itemIndex}`}
-                  className="space-y-2"
-                >
-                  {item.title && (
-                    <p className="text-sm font-semibold text-zinc-700">
+                  <div
+                    key={`${item.title ?? 'lines'}-${groupIndex}-${itemIndex}`}
+                    className="space-y-2"
+                  >
+                    {item.title && (
+                    <p className="text-sm font-semibold text-zinc-700 dark:text-zinc-200">
                       {item.title}
                     </p>
-                  )}
+                    )}
                   <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
                     {visibleLines.map((line) => renderLine(line, false))}
                   </div>

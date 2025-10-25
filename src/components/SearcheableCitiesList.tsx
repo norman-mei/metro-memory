@@ -95,12 +95,12 @@ const SearcheableCitiesList = () => {
         <input
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          className="block w-full rounded-full border-0 px-10 py-4 pr-10 text-lg text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:leading-6"
+          className="block w-full rounded-full border-0 px-10 py-4 pr-10 text-lg text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:leading-6 dark:bg-zinc-900 dark:text-zinc-100 dark:ring-zinc-700 dark:placeholder:text-zinc-500 dark:focus:ring-indigo-400"
           type="text"
           placeholder="Search for a city..."
         />
 
-        <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3 text-gray-400">
+        <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3 text-gray-400 dark:text-zinc-400">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="32"
@@ -119,13 +119,12 @@ const SearcheableCitiesList = () => {
           {visibleGroups.map(({ continent, cities }, index) => (
             <section key={continent} className="space-y-6">
               <div>
-                <h3 className="mb-4 text-xl font-semibold text-black dark:text-white">
+                <h3 className="mb-4 text-xl font-semibold text-zinc-800 dark:text-zinc-100">
                   {continent}
                 </h3>
                 <div className="mx-auto grid max-w-full grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
                   {cities.map((city) => {
-                    const rotationClass =
-                      cardIndex % 2 ? 'rotate-1' : '-rotate-1'
+                    const rotationClass = ''
                     cardIndex += 1
 
                     return (

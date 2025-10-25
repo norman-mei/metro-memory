@@ -16,6 +16,7 @@ export const i18n = rosetta({
     showLabels: 'Show station labels',
     hideLabels: 'Hide station labels',
     about: 'Credits',
+    goToMain: 'Back to main page',
     congrats: ({ foundProportion }: { foundProportion: number }) =>
       `Well done, you reached ${
         10 * Math.floor((foundProportion * 100) / 10)
@@ -37,6 +38,10 @@ export const i18n = rosetta({
       line: 'Line',
     },
     searchFoundStations: 'Search found stations…',
+    noStationsFound: ({ query }: { query?: string }) =>
+      query && query.length > 0
+        ? `No stations found for "${query}"`
+        : 'No stations found',
   },
   fr: {
     restartWarning:
@@ -54,6 +59,7 @@ export const i18n = rosetta({
     showLabels: 'Afficher les étiquettes',
     hideLabels: 'Masquer les étiquettes',
     about: 'Crédits',
+    goToMain: 'Retour à l’accueil',
     congrats: ({ foundProportion }: { foundProportion: number }) =>
       `Bravo, vous avez atteint les ${
         10 * Math.floor((foundProportion * 100) / 10)
@@ -74,6 +80,10 @@ export const i18n = rosetta({
       line: 'Ligne',
     },
     searchFoundStations: 'Rechercher des stations…',
+    noStationsFound: ({ query }: { query?: string }) =>
+      query && query.length > 0
+        ? `Aucune station trouvée pour « ${query} »`
+        : 'Aucune station trouvée',
   },
   es: {
     restartWarning:
@@ -91,6 +101,7 @@ export const i18n = rosetta({
     showLabels: 'Mostrar etiquetas',
     hideLabels: 'Ocultar etiquetas',
     about: 'Créditos',
+    goToMain: 'Volver a la página principal',
     congrats: ({ foundProportion }: { foundProportion: number }) =>
       `¡Bien hecho, has llegado al ${Math.floor(foundProportion * 100)}%!`,
     freeGame: 'Este juego es gratuito.',
@@ -109,6 +120,10 @@ export const i18n = rosetta({
       line: 'Línea',
     },
     searchFoundStations: 'Buscar estaciones…',
+    noStationsFound: ({ query }: { query?: string }) =>
+      query && query.length > 0
+        ? `No se encontraron estaciones para "${query}"`
+        : 'No se encontraron estaciones',
   },
   ca: {
     restartWarning:
@@ -126,6 +141,7 @@ export const i18n = rosetta({
     showLabels: 'Mostra les etiquetes',
     hideLabels: 'Amaga les etiquetes',
     about: 'Crèdits',
+    goToMain: "Torna a l'inici",
     congrats: ({ foundProportion }: { foundProportion: number }) =>
       `Molt bé, has arribat al ${Math.floor(foundProportion * 100)}%!`,
     freeGame: 'Aquest joc és gratuït.',
@@ -144,6 +160,10 @@ export const i18n = rosetta({
       line: 'Línia',
     },
     searchFoundStations: 'Cerca estacions…',
+    noStationsFound: ({ query }: { query?: string }) =>
+      query && query.length > 0
+        ? `No s’han trobat estacions per a "${query}"`
+        : 'No s’han trobat estacions',
   },
   de: {
     restartWarning:
@@ -161,6 +181,7 @@ export const i18n = rosetta({
     showLabels: 'Beschriftungen anzeigen',
     hideLabels: 'Beschriftungen ausblenden',
     about: 'Credits',
+    goToMain: 'Zur Hauptseite',
     congrats: ({ foundProportion }: { foundProportion: number }) =>
       `Gut gemacht, du hast ${Math.floor(foundProportion * 100)}% erreicht!`,
     freeGame: 'Dieses Spiel ist kostenlos.',
@@ -180,6 +201,10 @@ export const i18n = rosetta({
       line: 'Linie',
     },
     searchFoundStations: 'Stationen durchsuchen…',
+    noStationsFound: ({ query }: { query?: string }) =>
+      query && query.length > 0
+        ? `Keine Stationen für "${query}" gefunden`
+        : 'Keine Stationen gefunden',
   },
   ko: {
     restartWarning: '진행한 모든 내용이 사라집니다. 계속하시겠습니까?',
@@ -195,6 +220,7 @@ export const i18n = rosetta({
     showLabels: '레이블 표시',
     hideLabels: '레이블 숨기기',
     about: '크레딧',
+    goToMain: '메인 페이지로 이동',
     congrats: ({ foundProportion }: { foundProportion: number }) =>
       `축하합니다! ${Math.floor(foundProportion * 100)}% 달성했어요!`,
     freeGame: '이 게임은 무료로 제공됩니다.',
@@ -210,6 +236,10 @@ export const i18n = rosetta({
       line: '노선',
     },
     searchFoundStations: '역 검색…',
+    noStationsFound: ({ query }: { query?: string }) =>
+      query && query.length > 0
+        ? `"${query}"에 해당하는 역이 없습니다`
+        : '일치하는 역이 없습니다',
   },
   tr: {
     restartWarning:
@@ -227,6 +257,7 @@ export const i18n = rosetta({
     showLabels: 'Etiketleri göster',
     hideLabels: 'Etiketleri gizle',
     about: 'Krediler',
+    goToMain: 'Ana sayfaya dön',
     congrats: ({ foundProportion }: { foundProportion: number }) =>
       `Tebrikler, ${Math.floor(foundProportion * 100)}%'ye ulaştınız!`,
     freeGame: 'Bu oyun ücretsizdir.',
@@ -245,6 +276,10 @@ export const i18n = rosetta({
       line: 'Hat',
     },
     searchFoundStations: 'İstasyon ara…',
+    noStationsFound: ({ query }: { query?: string }) =>
+      query && query.length > 0
+        ? `"${query}" için uygun istasyon bulunamadı`
+        : 'Hiç istasyon bulunamadı',
   },
   jp: {
     restartWarning: '進捗が失われます。本当にやり直しますか？',
@@ -260,6 +295,7 @@ export const i18n = rosetta({
     showLabels: 'ラベルを表示',
     hideLabels: 'ラベルを非表示',
     about: 'クレジット',
+    goToMain: 'メインページに戻る',
     congrats: ({ foundProportion }: { foundProportion: number }) =>
       `おめでとうございます！${Math.floor(
         foundProportion * 100,
@@ -280,6 +316,10 @@ export const i18n = rosetta({
       line: '路線',
     },
     searchFoundStations: '駅を検索…',
+    noStationsFound: ({ query }: { query?: string }) =>
+      query && query.length > 0
+        ? `"${query}" に一致する駅は見つかりません`
+        : '該当する駅は見つかりません',
   },
   sv: {
     restartWarning:
@@ -297,6 +337,7 @@ export const i18n = rosetta({
     showLabels: 'Visa etiketter',
     hideLabels: 'Dölj etiketter',
     about: 'Krediter',
+    goToMain: 'Tillbaka till huvudsidan',
     congrats: ({ foundProportion }: { foundProportion: number }) =>
       `Bra jobbat, du nådde ${Math.floor(foundProportion * 100)}%!`,
     freeGame: 'Detta spel är gratis.',
@@ -315,6 +356,10 @@ export const i18n = rosetta({
       line: 'Linje',
     },
     searchFoundStations: 'Sök stationer…',
+    noStationsFound: ({ query }: { query?: string }) =>
+      query && query.length > 0
+        ? `Inga stationer hittades för "${query}"`
+        : 'Inga stationer hittades',
   },
   hu: {
     restartWarning: 'Minden eddigi eredményed elveszik. Biztosan újrakezded?',
@@ -331,6 +376,7 @@ export const i18n = rosetta({
     showLabels: 'Címkék megjelenítése',
     hideLabels: 'Címkék elrejtése',
     about: 'Kreditek',
+    goToMain: 'Vissza a főoldalra',
     congrats: ({ foundProportion }: { foundProportion: number }) =>
       `Ügyes vagy! Az állomások ${
         10 * Math.floor((foundProportion * 100) / 10)
@@ -351,5 +397,9 @@ export const i18n = rosetta({
       line: 'Vonal',
     },
     searchFoundStations: 'Állomások keresése…',
+    noStationsFound: ({ query }: { query?: string }) =>
+      query && query.length > 0
+        ? `Nem található állomás erre: "${query}"`
+        : 'Nem található állomás',
   },
 })

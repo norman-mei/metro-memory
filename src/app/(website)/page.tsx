@@ -42,6 +42,18 @@ export default async function Home() {
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
             If you do well, there might be some{' '}
             <ConfettiButton>confetti</ConfettiButton> involved.
+            <br />
+            <br />
+            Modified fork of original Metro Memory game by Benjamin TD{' '}
+            <a
+              href="https://github.com/benjamintd/metro-memory.com"
+              target="_blank"
+              rel="noreferrer"
+              className="font-medium text-zinc-800 underline decoration-zinc-300 underline-offset-4 hover:decoration-zinc-500 dark:text-zinc-200 dark:decoration-zinc-500 dark:hover:decoration-zinc-300"
+            >
+              (https://github.com/benjamintd/metro-memory.com)
+            </a>
+            .
           </p>
         </div>
         <SearcheableCitiesList />
@@ -63,6 +75,15 @@ export default async function Home() {
             aria-label="Follow on LinkedIn"
             icon={LinkedInIcon}
           />
+        </div>
+
+        <div className="mt-8">
+          <Link
+            href="/credits"
+            className="text-sm font-medium text-indigo-600 underline decoration-indigo-300 underline-offset-4 transition hover:decoration-indigo-500 dark:text-indigo-300 dark:decoration-indigo-500 dark:hover:decoration-indigo-400"
+          >
+            View full credits
+          </Link>
         </div>
 
         <h2 className="mt-12 text-4xl font-bold">

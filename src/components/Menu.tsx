@@ -6,6 +6,7 @@ import MenuIcon from './MenuIcon'
 import classNames from 'classnames'
 import AboutModal from './AboutModal'
 import useTranslation from '@/hooks/useTranslation'
+import Link from 'next/link'
 
 export default function MenuComponent({
   onReset,
@@ -24,7 +25,7 @@ export default function MenuComponent({
   return (
     <Menu as="div" className="relative inline-block text-left">
       <div>
-        <Menu.Button className="inline-flex h-12 w-12 items-center justify-center gap-x-1.5 rounded-full bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-lg outline-none ring-zinc-800 hover:bg-gray-50 focus:ring-2">
+        <Menu.Button className="inline-flex h-12 w-12 items-center justify-center gap-x-1.5 rounded-full bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-lg outline-none ring-zinc-800 transition hover:bg-gray-50 focus:ring-2 dark:bg-zinc-800 dark:text-zinc-100 dark:hover:bg-zinc-700">
           <MenuIcon className="h-5 w-5 text-gray-400" aria-hidden="true" />
         </Menu.Button>
       </div>
@@ -38,14 +39,16 @@ export default function MenuComponent({
         leaveFrom="transform opacity-100 scale-100"
         leaveTo="transform opacity-0 scale-95"
       >
-        <Menu.Items className="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+        <Menu.Items className="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none dark:bg-zinc-800 dark:ring-white/10">
           <div className="py-1">
             <Menu.Item>
               {({ active }) => (
                 <button
                   className={classNames(
-                    active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                    'block w-full px-4 py-2 text-left text-sm',
+                    active
+                      ? 'bg-gray-100 text-gray-900 dark:bg-zinc-700 dark:text-zinc-100'
+                      : 'text-gray-700 dark:text-zinc-100',
+                    'block w-full px-4 py-2 text-left text-sm transition',
                   )}
                   onClick={onReset}
                 >
@@ -57,8 +60,10 @@ export default function MenuComponent({
               {({ active }) => (
                 <button
                   className={classNames(
-                    active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                    'block w-full px-4 py-2 text-left text-sm',
+                    active
+                      ? 'bg-gray-100 text-gray-900 dark:bg-zinc-700 dark:text-zinc-100'
+                      : 'text-gray-700 dark:text-zinc-100',
+                    'block w-full px-4 py-2 text-left text-sm transition',
                   )}
                   onClick={onRevealSolutions}
                 >
@@ -70,8 +75,10 @@ export default function MenuComponent({
               {({ active }) => (
                 <button
                   className={classNames(
-                    active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                    'block w-full px-4 py-2 text-left text-sm',
+                    active
+                      ? 'bg-gray-100 text-gray-900 dark:bg-zinc-700 dark:text-zinc-100'
+                      : 'text-gray-700 dark:text-zinc-100',
+                    'block w-full px-4 py-2 text-left text-sm transition',
                   )}
                   onClick={() => setHideLabels(!hideLabels)}
                 >
@@ -83,13 +90,30 @@ export default function MenuComponent({
               {({ active }) => (
                 <button
                   className={classNames(
-                    active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                    'block w-full px-4 py-2 text-left text-sm',
+                    active
+                      ? 'bg-gray-100 text-gray-900 dark:bg-zinc-700 dark:text-zinc-100'
+                      : 'text-gray-700 dark:text-zinc-100',
+                    'block w-full px-4 py-2 text-left text-sm transition',
                   )}
                   onClick={() => setModalOpen(true)}
                 >
                   {t('about')}
                 </button>
+              )}
+            </Menu.Item>
+            <Menu.Item>
+              {({ active }) => (
+                <Link
+                  className={classNames(
+                    active
+                      ? 'bg-gray-100 text-gray-900 dark:bg-zinc-700 dark:text-zinc-100'
+                      : 'text-gray-700 dark:text-zinc-100',
+                    'block w-full px-4 py-2 text-left text-sm transition',
+                  )}
+                  href="/"
+                >
+                  {t('goToMain')}
+                </Link>
               )}
             </Menu.Item>
           </div>

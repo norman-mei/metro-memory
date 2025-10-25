@@ -13,6 +13,8 @@ export type DataFeatureCollection = FeatureCollection<
     short_name?: string
     line?: string
     alternate_names?: string[]
+    display_name?: string
+    cluster_key?: number | string
   }
 >
 

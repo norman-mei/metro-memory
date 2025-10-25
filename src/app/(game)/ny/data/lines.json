@@ -74,28 +74,28 @@
     "color": "#2850AD",
     "backgroundColor": "#142857",
     "textColor": "#FFFFFF",
-    "order": 10
+    "order": 11
   },
   "NewYorkSubwayE": {
     "name": "E",
     "color": "#2850AD",
     "backgroundColor": "#142857",
     "textColor": "#FFFFFF",
-    "order": 11
+    "order": 13
   },
   "NewYorkSubwayB": {
     "name": "B",
     "color": "#FF6319",
     "backgroundColor": "#8C2D00",
     "textColor": "#FFFFFF",
-    "order": 12
+    "order": 10
   },
   "NewYorkSubwayD": {
     "name": "D",
     "color": "#FF6319",
     "backgroundColor": "#8C2D00",
     "textColor": "#FFFFFF",
-    "order": 13
+    "order": 12
   },
   "NewYorkSubwayF": {
     "name": "F",
@@ -116,49 +116,49 @@
     "color": "#FF6319",
     "backgroundColor": "#8C2D00",
     "textColor": "#FFFFFF",
-    "order": 16
+    "order": 19
   },
   "NewYorkSubwayG": {
     "name": "G",
     "color": "#6CBE45",
     "backgroundColor": "#366022",
     "textColor": "#FFFFFF",
-    "order": 17
+    "order": 16
   },
   "NewYorkSubwayJ": {
     "name": "J",
     "color": "#996633",
     "backgroundColor": "#4D3319",
     "textColor": "#FFFFFF",
-    "order": 18
+    "order": 17
   },
   "NewYorkSubwayZ": {
     "name": "Z",
     "color": "#996633",
     "backgroundColor": "#4D3319",
     "textColor": "#FFFFFF",
-    "order": 19
+    "order": 24
   },
   "NewYorkSubwayL": {
     "name": "L",
     "color": "#A7A9AC",
     "backgroundColor": "#525457",
     "textColor": "#FFFFFF",
-    "order": 20
+    "order": 18
   },
   "NewYorkSubwayN": {
     "name": "N",
     "color": "#FCCC0A",
     "backgroundColor": "#816802",
     "textColor": "#FFFFFF",
-    "order": 21
+    "order": 20
   },
   "NewYorkSubwayQ": {
     "name": "Q",
     "color": "#FCCC0A",
     "backgroundColor": "#816802",
     "textColor": "#FFFFFF",
-    "order": 22
+    "order": 21
   },
   "NewYorkSubwayT": {
     "name": "T",
@@ -172,14 +172,14 @@
     "color": "#FCCC0A",
     "backgroundColor": "#816802",
     "textColor": "#FFFFFF",
-    "order": 23
+    "order": 22
   },
   "NewYorkSubwayW": {
     "name": "W",
     "color": "#FCCC0A",
     "backgroundColor": "#816802",
     "textColor": "#FFFFFF",
-    "order": 24
+    "order": 23
   },
   "NewYorkSubwaySI": {
     "name": "SIR Local",
@@ -200,14 +200,14 @@
     "color": "#6D6E71",
     "backgroundColor": "#373739",
     "textColor": "#FFFFFF",
-    "order": 27
+    "order": 28
   },
   "NewYorkSubwayFS": {
     "name": "Franklin Av Shuttle",
     "color": "#6D6E71",
     "backgroundColor": "#373739",
     "textColor": "#FFFFFF",
-    "order": 28
+    "order": 27
   },
   "NewYorkSubwayPATHHob33": {
     "name": "HOB-33",
@@ -518,21 +518,21 @@
     "order": 78
   },
   "AirTrainJFKHowardBeach": {
-    "name": "AirTrain JFK \u2013 Howard Beach",
+    "name": "AirTrain JFK – Howard Beach",
     "color": "#009E58",
     "backgroundColor": "#005630",
     "textColor": "#FFFFFF",
     "order": 79
   },
   "AirTrainJFKJamaica": {
-    "name": "AirTrain JFK \u2013 Jamaica",
+    "name": "AirTrain JFK – Jamaica",
     "color": "#EF3941",
     "backgroundColor": "#831F23",
     "textColor": "#FFFFFF",
     "order": 80
   },
   "AirTrainJFKAllTerminals": {
-    "name": "AirTrain JFK \u2013 All Terminals Loop",
+    "name": "AirTrain JFK – All Terminals Loop",
     "color": "#FDB827",
     "backgroundColor": "#8B6515",
     "textColor": "#000000",

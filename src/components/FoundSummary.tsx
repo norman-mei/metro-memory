@@ -70,12 +70,16 @@ const FoundSummary = ({
       })}
     >
       <div className="mb-2">
-        <p className="mb-2">
+        <p className="mb-2 text-zinc-900 dark:text-zinc-100">
           <span className="text-lg font-bold @md:text-2xl">
             {((foundProportion || 0) * 100).toFixed(1)}
           </span>{' '}
-          <span className="mr-2 text-lg @md:text-xl">%</span>
-          <span className="text-sm">{t('stationsFound')}</span>
+          <span className="mr-2 text-lg @md:text-xl">
+            %
+          </span>
+          <span className="text-sm text-zinc-600 dark:text-zinc-200">
+            {t('stationsFound')}
+          </span>
         </p>
         <ProgressBars
           minimized={minimized}
@@ -87,7 +91,7 @@ const FoundSummary = ({
         <div className="absolute bottom-0 right-0">
           <button
             onClick={() => setMinimized(!minimized)}
-            className="mx-2 my-1 flex h-8 w-8 items-center justify-center rounded-full bg-white text-gray-500 shadow"
+            className="mx-2 my-1 flex h-8 w-8 items-center justify-center rounded-full bg-white text-gray-500 shadow dark:bg-zinc-800 dark:text-zinc-100"
           >
             {minimized ? (
               <MaximizeIcon className="h-4 w-4" />

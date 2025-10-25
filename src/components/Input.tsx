@@ -19,6 +19,7 @@ const Input = ({
   inputRef,
   map,
   idMap,
+  clusterGroups,
   autoFocus = true,
 }: {
   fuse: Fuse<DataFeature>
@@ -31,6 +32,7 @@ const Input = ({
   inputRef: React.RefObject<HTMLInputElement>
   map: mapboxgl.Map | null
   idMap: Map<number, DataFeature>
+  clusterGroups: Map<number, number[]>
   autoFocus?: boolean
 }) => {
   const { t } = useTranslation()
@@ -65,38 +67,76 @@ const Input = ({
 
       e.preventDefault()
 
-      const sanitizedSearch = normalizeString(search)
-      const results = fuse.search(sanitizedSearch)
-      let someAlreadyFound = false
-      const matches: number[] = []
-      for (let i = 0; i < results.length; i++) {
-        const result = results[i]
-        if (
-          result.matches &&
-          result.matches.length &&
-          result.matches.some(
-            (match) =>
-              match.indices[0][0] === 0 &&
-              match.value!.length - match.indices[match.indices.length - 1][1] <
-                2 &&
-              Math.abs(match.value!.length - sanitizedSearch.length) < 4,
-          )
-        ) {
-          if ((found || []).indexOf(+result.item.id!) === -1) {
-            matches.push(+result.item.id!)
-          } else {
-            someAlreadyFound = true
-            setAlreadyFound(true)
-            setTimeout(() => setAlreadyFound(false), 1200)
+      try {
+        const sanitizedSearch = normalizeString(search)
+        const results = fuse.search(sanitizedSearch)
+        const foundSet = new Set(found || [])
+        const candidateSet = new Set<number>()
+        let hasCandidate = false
+
+        for (let i = 0; i < results.length; i++) {
+          const result = results[i]
+          if (
+            result.matches &&
+            result.matches.length > 0 &&
+            result.matches.some(
+              (match) =>
+                match.indices[0][0] === 0 &&
+                match.value!.length - match.indices[match.indices.length - 1][1] <
+                  2 &&
+                Math.abs(match.value!.length - sanitizedSearch.length) < 4,
+            )
+          ) {
+            const id = Number(result.item.id)
+            if (Number.isFinite(id)) {
+              hasCandidate = true
+              candidateSet.add(id)
+            }
           }
         }
-      }
 
-      if (matches.length === 0 && !someAlreadyFound) {
-        setWrong(true)
-        setTimeout(() => setWrong(false), 500)
-        return
-      } else {
+        const expandedSet = new Set<number>()
+        candidateSet.forEach((id) => {
+          expandedSet.add(id)
+          const feature = idMap.get(id)
+          if (!feature) {
+            return
+          }
+
+          const propertiesWithCluster = feature.properties as typeof feature.properties & {
+            cluster_key?: number | string
+          }
+          const clusterKey = propertiesWithCluster?.cluster_key
+          if (clusterKey !== undefined && clusterKey !== null) {
+            const clusterMembers = clusterGroups.get(Number(clusterKey))
+            if (clusterMembers && clusterMembers.length > 0) {
+              clusterMembers.forEach((memberId) => expandedSet.add(memberId))
+            }
+          }
+        })
+
+        const finalMatches: number[] = []
+        let someAlreadyFound = false
+
+        expandedSet.forEach((id) => {
+          if (foundSet.has(id)) {
+            someAlreadyFound = true
+          } else {
+            finalMatches.push(id)
+          }
+        })
+
+        if (finalMatches.length === 0) {
+          if (someAlreadyFound || hasCandidate) {
+            setAlreadyFound(true)
+            setTimeout(() => setAlreadyFound(false), 1200)
+          } else {
+            setWrong(true)
+            setTimeout(() => setWrong(false), 500)
+          }
+          return
+        }
+
         setSuccess(true)
         setTimeout(() => setSuccess(false), 250)
         if (map && (map as any).style) {
@@ -107,7 +147,9 @@ const Input = ({
           if (hoveredSource) {
             hoveredSource.setData({
               type: 'FeatureCollection',
-              features: (matches || []).map((id) => idMap.get(id)!),
+              features: Array.from(expandedSet)
+                .map((id) => idMap.get(id))
+                .filter((feature): feature is DataFeature => Boolean(feature)),
             })
 
             setTimeout(() => {
@@ -127,12 +169,13 @@ const Input = ({
           }
         }
 
-        zoomToStation(matches[0])
-        setFound([...matches, ...(found || [])])
+        zoomToStation(finalMatches[0])
+        const nextFound = Array.from(new Set([...foundSet, ...finalMatches]))
+        setFound(nextFound)
         setFoundTimestamps((prev) => {
           const next = { ...prev }
           const timestamp = new Date().toISOString()
-          for (const id of matches) {
+          for (const id of finalMatches) {
             const key = String(id)
             if (!next[key]) {
               next[key] = timestamp
@@ -142,7 +185,11 @@ const Input = ({
         })
         setIsNewPlayer(false)
         setSearch('')
-        pushEvent(matches)
+        pushEvent(finalMatches)
+      } catch (error) {
+        console.error(error)
+        setWrong(true)
+        setTimeout(() => setWrong(false), 500)
       }
     },
     [
@@ -156,6 +203,7 @@ const Input = ({
       setIsNewPlayer,
       map,
       idMap,
+      clusterGroups,
       zoomToStation,
       normalizeString,
       pushEvent,
@@ -170,7 +218,7 @@ const Input = ({
             'animate animate-shake': wrong,
             'shadow-md !shadow-yellow-500': success,
           },
-          'relative z-40 w-full rounded-full px-4 py-2 text-lg font-bold text-zinc-900 caret-current shadow-lg outline-none ring-zinc-800 transition-shadow duration-300 focus:ring-2',
+          'relative z-40 w-full rounded-full border border-zinc-200 bg-white px-4 py-2 text-lg font-bold text-zinc-900 caret-current shadow-lg outline-none ring-zinc-800 transition-shadow duration-300 focus:ring-2 placeholder:text-zinc-500 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100 dark:placeholder:text-zinc-400',
         )}
         ref={inputRef}
         placeholder={t('inputPlaceholder')}

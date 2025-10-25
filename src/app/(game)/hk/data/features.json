@@ -1,0 +1,4275 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.16450623067786,
+          22.279451691190783
+        ]
+      },
+      "properties": {
+        "id": 1,
+        "name": "Admiralty (金鐘)",
+        "long_name": "金鐘 Admiralty",
+        "alternate_names": [
+          "Admiralty",
+          "Admiralty Station",
+          "admiralty",
+          "admiralty station",
+          "gam zung",
+          "gam-zung",
+          "gamzung",
+          "jin zhong",
+          "jin-zhong",
+          "jinzhong",
+          "金鐘",
+          "金鐘站",
+          "金钟",
+          "金钟站"
+        ],
+        "line": "EAL",
+        "order": 0
+      },
+      "id": 1
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.17539305350553,
+          22.281654585488486
+        ]
+      },
+      "properties": {
+        "id": 2,
+        "name": "Exhibition Centre (會展)",
+        "long_name": "會展 Exhibition Centre",
+        "alternate_names": [
+          "Exhibition Centre",
+          "Exhibition Centre Station",
+          "Exhibition-Centre",
+          "ExhibitionCentre",
+          "exhibition centre",
+          "exhibition centre station",
+          "hui zhan",
+          "hui-zhan",
+          "huizhan",
+          "wui zin",
+          "wui-zin",
+          "wuizin",
+          "会展",
+          "会展站",
+          "會展",
+          "會展站"
+        ],
+        "line": "EAL",
+        "order": 1
+      },
+      "id": 2
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.18212301530004,
+          22.302877464725512
+        ]
+      },
+      "properties": {
+        "id": 3,
+        "name": "Hung Hom (紅磡)",
+        "long_name": "紅磡 Hung Hom",
+        "alternate_names": [
+          "Hung Hom",
+          "Hung Hom Station",
+          "Hung-Hom",
+          "HungHom",
+          "hong kan",
+          "hong-kan",
+          "hongkan",
+          "hung ham",
+          "hung hom",
+          "hung hom station",
+          "hung-ham",
+          "hungham",
+          "紅磡",
+          "紅磡站",
+          "红磡",
+          "红磡站"
+        ],
+        "line": "EAL",
+        "order": 2
+      },
+      "id": 3
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.17253026053879,
+          22.322021065675294
+        ]
+      },
+      "properties": {
+        "id": 4,
+        "name": "Mong Kok East (旺角東)",
+        "long_name": "旺角東 Mong Kok East",
+        "alternate_names": [
+          "Mong Kok East",
+          "Mong Kok East Station",
+          "Mong-Kok-East",
+          "MongKokEast",
+          "mong kok east",
+          "mong kok east station",
+          "wang jiao dong",
+          "wang-jiao-dong",
+          "wangjiaodong",
+          "wong gok dung",
+          "wong-gok-dung",
+          "wonggokdung",
+          "旺角东",
+          "旺角东站",
+          "旺角東",
+          "旺角東站"
+        ],
+        "line": "EAL",
+        "order": 3
+      },
+      "id": 4
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.17587958143326,
+          22.336918479316058
+        ]
+      },
+      "properties": {
+        "id": 5,
+        "name": "Kowloon Tong (九龍塘)",
+        "long_name": "九龍塘 Kowloon Tong",
+        "alternate_names": [
+          "Kowloon Tong",
+          "Kowloon Tong Station",
+          "Kowloon-Tong",
+          "KowloonTong",
+          "gau lung tong",
+          "gau-lung-tong",
+          "gaulungtong",
+          "jiu long tang",
+          "jiu-long-tang",
+          "jiulongtang",
+          "kowloon tong",
+          "kowloon tong station",
+          "九龍塘",
+          "九龍塘站",
+          "九龙塘",
+          "九龙塘站"
+        ],
+        "line": "EAL",
+        "order": 4
+      },
+      "id": 5
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.17805147091714,
+          22.372858580324074
+        ]
+      },
+      "properties": {
+        "id": 6,
+        "name": "Tai Wai (大圍)",
+        "long_name": "大圍 Tai Wai",
+        "alternate_names": [
+          "Tai Wai",
+          "Tai Wai Station",
+          "Tai-Wai",
+          "TaiWai",
+          "da wei",
+          "da-wei",
+          "daai wai",
+          "daai-wai",
+          "daaiwai",
+          "dawei",
+          "tai wai",
+          "tai wai station",
+          "大围",
+          "大围站",
+          "大圍",
+          "大圍站"
+        ],
+        "line": "EAL",
+        "order": 5
+      },
+      "id": 6
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.18691296452803,
+          22.381892572701396
+        ]
+      },
+      "properties": {
+        "id": 7,
+        "name": "Sha Tin (沙田)",
+        "long_name": "沙田 Sha Tin",
+        "alternate_names": [
+          "Sha Tin",
+          "Sha Tin Station",
+          "Sha-Tin",
+          "ShaTin",
+          "saa tin",
+          "saa-tin",
+          "saatin",
+          "sha tian",
+          "sha tin",
+          "sha tin station",
+          "sha-tian",
+          "shatian",
+          "沙田",
+          "沙田站"
+        ],
+        "line": "EAL",
+        "order": 6
+      },
+      "id": 7
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.19814484466326,
+          22.395098739948953
+        ]
+      },
+      "properties": {
+        "id": 8,
+        "name": "Fo Tan (火炭)",
+        "long_name": "火炭 Fo Tan",
+        "alternate_names": [
+          "Fo Tan",
+          "Fo Tan Station",
+          "Fo-Tan",
+          "FoTan",
+          "fo taan",
+          "fo tan",
+          "fo tan station",
+          "fo-taan",
+          "fotaan",
+          "huo tan",
+          "huo-tan",
+          "huotan",
+          "火炭",
+          "火炭站"
+        ],
+        "line": "EAL",
+        "order": 7
+      },
+      "id": 8
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.20320995692808,
+          22.400940456049437
+        ]
+      },
+      "properties": {
+        "id": 9,
+        "name": "Racecourse (馬場)",
+        "long_name": "馬場 Racecourse",
+        "alternate_names": [
+          "Racecourse",
+          "Racecourse Station",
+          "ma chang",
+          "ma-chang",
+          "maa coeng",
+          "maa-coeng",
+          "maacoeng",
+          "machang",
+          "racecourse",
+          "racecourse station",
+          "馬場",
+          "馬場站",
+          "马场",
+          "马场站"
+        ],
+        "line": "EAL",
+        "order": 8
+      },
+      "id": 9
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.20993121203098,
+          22.41314764938037
+        ]
+      },
+      "properties": {
+        "id": 10,
+        "name": "University (大學)",
+        "long_name": "大學 University",
+        "alternate_names": [
+          "University",
+          "University Station",
+          "da xue",
+          "da-xue",
+          "daai hok",
+          "daai-hok",
+          "daaihok",
+          "daxue",
+          "university",
+          "university station",
+          "大学",
+          "大学站",
+          "大學",
+          "大學站"
+        ],
+        "line": "EAL",
+        "order": 9
+      },
+      "id": 10
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.17049225525707,
+          22.444565376991882
+        ]
+      },
+      "properties": {
+        "id": 11,
+        "name": "Tai Po Market (大埔墟)",
+        "long_name": "大埔墟 Tai Po Market",
+        "alternate_names": [
+          "Tai Po Market",
+          "Tai Po Market Station",
+          "Tai-Po-Market",
+          "TaiPoMarket",
+          "da bu xu",
+          "da-bu-xu",
+          "daai bou heoi",
+          "daai-bou-heoi",
+          "daaibouheoi",
+          "dabuxu",
+          "tai po market",
+          "tai po market station",
+          "大埔墟",
+          "大埔墟站"
+        ],
+        "line": "EAL",
+        "order": 10
+      },
+      "id": 11
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.16120410671844,
+          22.450989381755505
+        ]
+      },
+      "properties": {
+        "id": 12,
+        "name": "Tai Wo (太和)",
+        "long_name": "太和 Tai Wo",
+        "alternate_names": [
+          "Tai Wo",
+          "Tai Wo Station",
+          "Tai-Wo",
+          "TaiWo",
+          "taai wo",
+          "taai-wo",
+          "taaiwo",
+          "tai he",
+          "tai wo",
+          "tai wo station",
+          "tai-he",
+          "taihe",
+          "太和",
+          "太和站"
+        ],
+        "line": "EAL",
+        "order": 11
+      },
+      "id": 12
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.1386154903359,
+          22.492105232213376
+        ]
+      },
+      "properties": {
+        "id": 13,
+        "name": "Fanling (粉嶺)",
+        "long_name": "粉嶺 Fanling",
+        "alternate_names": [
+          "Fanling",
+          "Fanling Station",
+          "fan ling",
+          "fan-ling",
+          "fanling",
+          "fanling station",
+          "fen ling",
+          "fen-ling",
+          "fenling",
+          "粉岭",
+          "粉岭站",
+          "粉嶺",
+          "粉嶺站"
+        ],
+        "line": "EAL",
+        "order": 12
+      },
+      "id": 13
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.1279266861369,
+          22.501279515859835
+        ]
+      },
+      "properties": {
+        "id": 14,
+        "name": "Sheung Shui (上水)",
+        "long_name": "上水 Sheung Shui",
+        "alternate_names": [
+          "Sheung Shui",
+          "Sheung Shui Station",
+          "Sheung-Shui",
+          "SheungShui",
+          "shang shui",
+          "shang-shui",
+          "shangshui",
+          "sheung shui",
+          "sheung shui station",
+          "soeng seoi",
+          "soeng-seoi",
+          "soengseoi",
+          "上水",
+          "上水站"
+        ],
+        "line": "EAL",
+        "order": 13
+      },
+      "id": 14
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.06561824609298,
+          22.514829987805964
+        ]
+      },
+      "properties": {
+        "id": 15,
+        "name": "Lok Ma Chau (落馬洲)",
+        "long_name": "落馬洲 Lok Ma Chau",
+        "alternate_names": [
+          "Lok Ma Chau",
+          "Lok Ma Chau Station",
+          "Lok-Ma-Chau",
+          "LokMaChau",
+          "lok ma chau",
+          "lok ma chau station",
+          "lok maa zau",
+          "lok-maa-zau",
+          "lokmaazau",
+          "luo ma zhou",
+          "luo-ma-zhou",
+          "luomazhou",
+          "落馬洲",
+          "落馬洲站",
+          "落马洲",
+          "落马洲站"
+        ],
+        "line": "EAL",
+        "order": 14
+      },
+      "id": 15
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.11337715986733,
+          22.528164603772098
+        ]
+      },
+      "properties": {
+        "id": 16,
+        "name": "Lo Wu (羅湖)",
+        "long_name": "羅湖 Lo Wu",
+        "alternate_names": [
+          "Lo Wu",
+          "Lo Wu Station",
+          "Lo-Wu",
+          "LoWu",
+          "lo wu",
+          "lo wu station",
+          "lo-wu",
+          "lowu",
+          "luo hu",
+          "luo-hu",
+          "luohu",
+          "罗湖",
+          "罗湖站",
+          "羅湖",
+          "羅湖站"
+        ],
+        "line": "EAL",
+        "order": 15
+      },
+      "id": 16
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.1581328614588,
+          22.28469909663648
+        ]
+      },
+      "properties": {
+        "id": 17,
+        "name": "Hong Kong (香港)",
+        "long_name": "香港 Hong Kong",
+        "alternate_names": [
+          "Hong Kong",
+          "Hong Kong Station",
+          "Hong-Kong",
+          "HongKong",
+          "hoeng gong",
+          "hoeng-gong",
+          "hoenggong",
+          "hong kong",
+          "hong kong station",
+          "xiang gang",
+          "xiang-gang",
+          "xianggang",
+          "香港",
+          "香港站"
+        ],
+        "line": "TCL",
+        "order": 0
+      },
+      "id": 17
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.1614472967348,
+          22.30431687096305
+        ]
+      },
+      "properties": {
+        "id": 18,
+        "name": "Kowloon (九龍)",
+        "long_name": "九龍 Kowloon",
+        "alternate_names": [
+          "Kowloon",
+          "Kowloon Station",
+          "gau lung",
+          "gau-lung",
+          "gaulung",
+          "jiu long",
+          "jiu-long",
+          "jiulong",
+          "kowloon",
+          "kowloon station",
+          "九龍",
+          "九龍站",
+          "九龙",
+          "九龙站"
+        ],
+        "line": "TCL",
+        "order": 1
+      },
+      "id": 18
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.16011585957722,
+          22.31785213505149
+        ]
+      },
+      "properties": {
+        "id": 19,
+        "name": "Olympic (奧運)",
+        "long_name": "奧運 Olympic",
+        "alternate_names": [
+          "Olympic",
+          "Olympic Station",
+          "ao yun",
+          "ao-yun",
+          "aoyun",
+          "olympic",
+          "olympic station",
+          "ou wan",
+          "ou-wan",
+          "ouwan",
+          "奥运",
+          "奥运站",
+          "奧運",
+          "奧運站"
+        ],
+        "line": "TCL",
+        "order": 2
+      },
+      "id": 19
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.1536484601782,
+          22.326794330032275
+        ]
+      },
+      "properties": {
+        "id": 20,
+        "name": "Nam Cheong (南昌)",
+        "long_name": "南昌 Nam Cheong",
+        "alternate_names": [
+          "Nam Cheong",
+          "Nam Cheong Station",
+          "Nam-Cheong",
+          "NamCheong",
+          "naam coeng",
+          "naam-coeng",
+          "naamcoeng",
+          "nam cheong",
+          "nam cheong station",
+          "nan chang",
+          "nan-chang",
+          "nanchang",
+          "南昌",
+          "南昌站"
+        ],
+        "line": "TCL",
+        "order": 3
+      },
+      "id": 20
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.12611713173048,
+          22.34845562951537
+        ]
+      },
+      "properties": {
+        "id": 21,
+        "name": "Lai King (荔景)",
+        "long_name": "荔景 Lai King",
+        "alternate_names": [
+          "Lai King",
+          "Lai King Station",
+          "Lai-King",
+          "LaiKing",
+          "lai ging",
+          "lai king",
+          "lai king station",
+          "lai-ging",
+          "laiging",
+          "li jing",
+          "li-jing",
+          "lijing",
+          "荔景",
+          "荔景站"
+        ],
+        "line": "TCL",
+        "order": 4
+      },
+      "id": 21
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.10761612624462,
+          22.358559071787663
+        ]
+      },
+      "properties": {
+        "id": 22,
+        "name": "Tsing Yi (青衣)",
+        "long_name": "青衣 Tsing Yi",
+        "alternate_names": [
+          "Tsing Yi",
+          "Tsing Yi Station",
+          "Tsing-Yi",
+          "TsingYi",
+          "cing ji",
+          "cing-ji",
+          "cingji",
+          "qing yi",
+          "qing-yi",
+          "qingyi",
+          "tsing yi",
+          "tsing yi station",
+          "青衣",
+          "青衣站"
+        ],
+        "line": "TCL",
+        "order": 5
+      },
+      "id": 22
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.02886487334575,
+          22.33174232324258
+        ]
+      },
+      "properties": {
+        "id": 23,
+        "name": "Sunny Bay (欣澳)",
+        "long_name": "欣澳 Sunny Bay",
+        "alternate_names": [
+          "Sunny Bay",
+          "Sunny Bay Station",
+          "Sunny-Bay",
+          "SunnyBay",
+          "jan ou",
+          "jan-ou",
+          "janou",
+          "sunny bay",
+          "sunny bay station",
+          "xin ao",
+          "xin-ao",
+          "xinao",
+          "欣澳",
+          "欣澳站"
+        ],
+        "line": "TCL",
+        "order": 6
+      },
+      "id": 23
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.94137802709538,
+          22.28930066516548
+        ]
+      },
+      "properties": {
+        "id": 24,
+        "name": "Tung Chung (東涌)",
+        "long_name": "東涌 Tung Chung",
+        "alternate_names": [
+          "Tung Chung",
+          "Tung Chung Station",
+          "Tung-Chung",
+          "TungChung",
+          "dong chong",
+          "dong-chong",
+          "dongchong",
+          "dung cung",
+          "dung-cung",
+          "dungcung",
+          "tung chung",
+          "tung chung station",
+          "东涌",
+          "东涌站",
+          "東涌",
+          "東涌站"
+        ],
+        "line": "TCL",
+        "order": 7
+      },
+      "id": 24
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.97307945548198,
+          22.394923283180795
+        ]
+      },
+      "properties": {
+        "id": 25,
+        "name": "Tuen Mun (屯門)",
+        "long_name": "屯門 Tuen Mun",
+        "alternate_names": [
+          "Tuen Mun",
+          "Tuen Mun Station",
+          "Tuen-Mun",
+          "TuenMun",
+          "tuen mun",
+          "tuen mun station",
+          "tun men",
+          "tun-men",
+          "tunmen",
+          "tyun mun",
+          "tyun-mun",
+          "tyunmun",
+          "屯門",
+          "屯門站",
+          "屯门",
+          "屯门站"
+        ],
+        "line": "TML",
+        "order": 0
+      },
+      "id": 25
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.97900852849487,
+          22.411785542242168
+        ]
+      },
+      "properties": {
+        "id": 26,
+        "name": "Siu Hong (兆康)",
+        "long_name": "兆康 Siu Hong",
+        "alternate_names": [
+          "Siu Hong",
+          "Siu Hong Station",
+          "Siu-Hong",
+          "SiuHong",
+          "siu hong",
+          "siu hong station",
+          "siu-hong",
+          "siuhong",
+          "zhao kang",
+          "zhao-kang",
+          "zhaokang",
+          "兆康",
+          "兆康站"
+        ],
+        "line": "TML",
+        "order": 1
+      },
+      "id": 26
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.00475345696616,
+          22.4482460534469
+        ]
+      },
+      "properties": {
+        "id": 27,
+        "name": "Tin Shui Wai (天水圍)",
+        "long_name": "天水圍 Tin Shui Wai",
+        "alternate_names": [
+          "Tin Shui Wai",
+          "Tin Shui Wai Station",
+          "Tin-Shui-Wai",
+          "TinShuiWai",
+          "tian shui wei",
+          "tian-shui-wei",
+          "tianshuiwei",
+          "tin seoi wai",
+          "tin shui wai",
+          "tin shui wai station",
+          "tin-seoi-wai",
+          "tinseoiwai",
+          "天水围",
+          "天水围站",
+          "天水圍",
+          "天水圍站"
+        ],
+        "line": "TML",
+        "order": 2
+      },
+      "id": 27
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.02548579688025,
+          22.44769027872071
+        ]
+      },
+      "properties": {
+        "id": 28,
+        "name": "Long Ping (朗屏)",
+        "long_name": "朗屏 Long Ping",
+        "alternate_names": [
+          "Long Ping",
+          "Long Ping Station",
+          "Long-Ping",
+          "LongPing",
+          "lang ping",
+          "lang-ping",
+          "langping",
+          "long ping",
+          "long ping station",
+          "long-ping",
+          "longping",
+          "朗屏",
+          "朗屏站"
+        ],
+        "line": "TML",
+        "order": 3
+      },
+      "id": 28
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.03471595249161,
+          22.44611657369744
+        ]
+      },
+      "properties": {
+        "id": 29,
+        "name": "Yuen Long (元朗)",
+        "long_name": "元朗 Yuen Long",
+        "alternate_names": [
+          "Yuen Long",
+          "Yuen Long Station",
+          "Yuen-Long",
+          "YuenLong",
+          "jyun long",
+          "jyun-long",
+          "jyunlong",
+          "yuan lang",
+          "yuan-lang",
+          "yuanlang",
+          "yuen long",
+          "yuen long station",
+          "元朗",
+          "元朗站"
+        ],
+        "line": "TML",
+        "order": 4
+      },
+      "id": 29
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.063482887404,
+          22.43483358900595
+        ]
+      },
+      "properties": {
+        "id": 30,
+        "name": "Kam Sheung Road (錦上路)",
+        "long_name": "錦上路 Kam Sheung Road",
+        "alternate_names": [
+          "Kam Sheung Road",
+          "Kam Sheung Road Station",
+          "Kam-Sheung-Road",
+          "KamSheungRoad",
+          "gam soeng lou",
+          "gam-soeng-lou",
+          "gamsoenglou",
+          "jin shang lu",
+          "jin-shang-lu",
+          "jinshanglu",
+          "kam sheung road",
+          "kam sheung road station",
+          "錦上路",
+          "錦上路站",
+          "锦上路",
+          "锦上路站"
+        ],
+        "line": "TML",
+        "order": 5
+      },
+      "id": 30
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.1096452416372,
+          22.368424802552358
+        ]
+      },
+      "properties": {
+        "id": 31,
+        "name": "Tsuen Wan West (荃灣西)",
+        "long_name": "荃灣西 Tsuen Wan West",
+        "alternate_names": [
+          "Tsuen Wan West",
+          "Tsuen Wan West Station",
+          "Tsuen-Wan-West",
+          "TsuenWanWest",
+          "cyun waan sai",
+          "cyun-waan-sai",
+          "cyunwaansai",
+          "quan wan xi",
+          "quan-wan-xi",
+          "quanwanxi",
+          "tsuen wan west",
+          "tsuen wan west station",
+          "荃湾西",
+          "荃湾西站",
+          "荃灣西",
+          "荃灣西站"
+        ],
+        "line": "TML",
+        "order": 6
+      },
+      "id": 31
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.13640810965138,
+          22.33778438348702
+        ]
+      },
+      "properties": {
+        "id": 32,
+        "name": "Mei Foo (美孚)",
+        "long_name": "美孚 Mei Foo",
+        "alternate_names": [
+          "Mei Foo",
+          "Mei Foo Station",
+          "Mei-Foo",
+          "MeiFoo",
+          "mei foo",
+          "mei foo station",
+          "mei fu",
+          "mei-fu",
+          "meifu",
+          "美孚",
+          "美孚站"
+        ],
+        "line": "TML",
+        "order": 7
+      },
+      "id": 32
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.1536484601782,
+          22.326794330032275
+        ]
+      },
+      "properties": {
+        "id": 33,
+        "name": "Nam Cheong (南昌)",
+        "long_name": "南昌 Nam Cheong",
+        "alternate_names": [
+          "Nam Cheong",
+          "Nam Cheong Station",
+          "Nam-Cheong",
+          "NamCheong",
+          "naam coeng",
+          "naam-coeng",
+          "naamcoeng",
+          "nam cheong",
+          "nam cheong station",
+          "nan chang",
+          "nan-chang",
+          "nanchang",
+          "南昌",
+          "南昌站"
+        ],
+        "line": "TML",
+        "order": 8
+      },
+      "id": 33
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.16608918034778,
+          22.305288753547817
+        ]
+      },
+      "properties": {
+        "id": 34,
+        "name": "Austin (柯士甸)",
+        "long_name": "柯士甸 Austin",
+        "alternate_names": [
+          "Austin",
+          "Austin Station",
+          "austin",
+          "austin station",
+          "ke shi dian",
+          "ke-shi-dian",
+          "keshidian",
+          "o si din",
+          "o-si-din",
+          "osidin",
+          "柯士甸",
+          "柯士甸站"
+        ],
+        "line": "TML",
+        "order": 9
+      },
+      "id": 34
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.17341128517072,
+          22.29483743790022
+        ]
+      },
+      "properties": {
+        "id": 35,
+        "name": "East Tsim Sha Tsui (尖東)",
+        "long_name": "尖東 East Tsim Sha Tsui",
+        "alternate_names": [
+          "East Tsim Sha Tsui",
+          "East Tsim Sha Tsui Station",
+          "East-Tsim-Sha-Tsui",
+          "EastTsimShaTsui",
+          "east tsim sha tsui",
+          "east tsim sha tsui station",
+          "jian dong",
+          "jian-dong",
+          "jiandong",
+          "zim dung",
+          "zim-dung",
+          "zimdung",
+          "尖东",
+          "尖东站",
+          "尖東",
+          "尖東站"
+        ],
+        "line": "TML",
+        "order": 10
+      },
+      "id": 35
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.18212301530004,
+          22.302877464725512
+        ]
+      },
+      "properties": {
+        "id": 36,
+        "name": "Hung Hom (紅磡)",
+        "long_name": "紅磡 Hung Hom",
+        "alternate_names": [
+          "Hung Hom",
+          "Hung Hom Station",
+          "Hung-Hom",
+          "HungHom",
+          "hong kan",
+          "hong-kan",
+          "hongkan",
+          "hung ham",
+          "hung hom",
+          "hung hom station",
+          "hung-ham",
+          "hungham",
+          "紅磡",
+          "紅磡站",
+          "红磡",
+          "红磡站"
+        ],
+        "line": "TML",
+        "order": 11
+      },
+      "id": 36
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.18264455118644,
+          22.309435075135703
+        ]
+      },
+      "properties": {
+        "id": 37,
+        "name": "Ho Man Tin (何文田)",
+        "long_name": "何文田 Ho Man Tin",
+        "alternate_names": [
+          "Ho Man Tin",
+          "Ho Man Tin Station",
+          "Ho-Man-Tin",
+          "HoManTin",
+          "he wen tian",
+          "he-wen-tian",
+          "hewentian",
+          "ho man tin",
+          "ho man tin station",
+          "ho-man-tin",
+          "homantin",
+          "何文田",
+          "何文田站"
+        ],
+        "line": "TML",
+        "order": 12
+      },
+      "id": 37
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.1876313784972,
+          22.317318228160875
+        ]
+      },
+      "properties": {
+        "id": 38,
+        "name": "To Kwa Wan (土瓜灣)",
+        "long_name": "土瓜灣 To Kwa Wan",
+        "alternate_names": [
+          "To Kwa Wan",
+          "To Kwa Wan Station",
+          "To-Kwa-Wan",
+          "ToKwaWan",
+          "to kwa wan",
+          "to kwa wan station",
+          "tou gwaa waan",
+          "tou-gwaa-waan",
+          "tougwaawaan",
+          "tu gua wan",
+          "tu-gua-wan",
+          "tuguawan",
+          "土瓜湾",
+          "土瓜湾站",
+          "土瓜灣",
+          "土瓜灣站"
+        ],
+        "line": "TML",
+        "order": 13
+      },
+      "id": 38
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.19133534501256,
+          22.325926721984647
+        ]
+      },
+      "properties": {
+        "id": 39,
+        "name": "Sung Wong Toi (宋皇臺)",
+        "long_name": "宋皇臺 Sung Wong Toi",
+        "alternate_names": [
+          "Sung Wong Toi",
+          "Sung Wong Toi Station",
+          "Sung-Wong-Toi",
+          "SungWongToi",
+          "song huang tai",
+          "song-huang-tai",
+          "songhuangtai",
+          "sung wong toi",
+          "sung wong toi station",
+          "sung-wong-toi",
+          "sungwongtoi",
+          "宋皇台",
+          "宋皇台站",
+          "宋皇臺",
+          "宋皇臺站"
+        ],
+        "line": "TML",
+        "order": 14
+      },
+      "id": 39
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.19954912813168,
+          22.33056160220436
+        ]
+      },
+      "properties": {
+        "id": 40,
+        "name": "Kai Tak (啟德)",
+        "long_name": "啟德 Kai Tak",
+        "alternate_names": [
+          "Kai Tak",
+          "Kai Tak Station",
+          "Kai-Tak",
+          "KaiTak",
+          "kai dak",
+          "kai tak",
+          "kai tak station",
+          "kai-dak",
+          "kaidak",
+          "qi de",
+          "qi-de",
+          "qide",
+          "启德",
+          "启德站",
+          "啟德",
+          "啟德站"
+        ],
+        "line": "TML",
+        "order": 15
+      },
+      "id": 40
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.20026760050594,
+          22.340287925682947
+        ]
+      },
+      "properties": {
+        "id": 41,
+        "name": "Diamond Hill (鑽石山)",
+        "long_name": "鑽石山 Diamond Hill",
+        "alternate_names": [
+          "Diamond Hill",
+          "Diamond Hill Station",
+          "Diamond-Hill",
+          "DiamondHill",
+          "diamond hill",
+          "diamond hill station",
+          "zuan shi shan",
+          "zuan-shi-shan",
+          "zuanshishan",
+          "zyun sek saan",
+          "zyun-sek-saan",
+          "zyunseksaan",
+          "鑽石山",
+          "鑽石山站",
+          "钻石山",
+          "钻石山站"
+        ],
+        "line": "TML",
+        "order": 16
+      },
+      "id": 41
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.17073067130006,
+          22.36388253638616
+        ]
+      },
+      "properties": {
+        "id": 42,
+        "name": "Hin Keng (顯徑)",
+        "long_name": "顯徑 Hin Keng",
+        "alternate_names": [
+          "Hin Keng",
+          "Hin Keng Station",
+          "Hin-Keng",
+          "HinKeng",
+          "hin ging",
+          "hin keng",
+          "hin keng station",
+          "hin-ging",
+          "hinging",
+          "xian jing",
+          "xian-jing",
+          "xianjing",
+          "显径",
+          "显径站",
+          "顯徑",
+          "顯徑站"
+        ],
+        "line": "TML",
+        "order": 17
+      },
+      "id": 42
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.17805147091714,
+          22.372858580324074
+        ]
+      },
+      "properties": {
+        "id": 43,
+        "name": "Tai Wai (大圍)",
+        "long_name": "大圍 Tai Wai",
+        "alternate_names": [
+          "Tai Wai",
+          "Tai Wai Station",
+          "Tai-Wai",
+          "TaiWai",
+          "da wei",
+          "da-wei",
+          "daai wai",
+          "daai-wai",
+          "daaiwai",
+          "dawei",
+          "tai wai",
+          "tai wai station",
+          "大围",
+          "大围站",
+          "大圍",
+          "大圍站"
+        ],
+        "line": "TML",
+        "order": 18
+      },
+      "id": 43
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.18589726381069,
+          22.37477146109767
+        ]
+      },
+      "properties": {
+        "id": 44,
+        "name": "Che Kung Temple (車公廟)",
+        "long_name": "車公廟 Che Kung Temple",
+        "alternate_names": [
+          "Che Kung Temple",
+          "Che Kung Temple Station",
+          "Che-Kung-Temple",
+          "CheKungTemple",
+          "ce gung miu",
+          "ce-gung-miu",
+          "cegungmiu",
+          "che gong miao",
+          "che kung temple",
+          "che kung temple station",
+          "che-gong-miao",
+          "chegongmiao",
+          "車公廟",
+          "車公廟站",
+          "车公庙",
+          "车公庙站"
+        ],
+        "line": "TML",
+        "order": 19
+      },
+      "id": 44
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.19492248028678,
+          22.377077165075086
+        ]
+      },
+      "properties": {
+        "id": 45,
+        "name": "Sha Tin Wai (沙田圍)",
+        "long_name": "沙田圍 Sha Tin Wai",
+        "alternate_names": [
+          "Sha Tin Wai",
+          "Sha Tin Wai Station",
+          "Sha-Tin-Wai",
+          "ShaTinWai",
+          "saa tin wai",
+          "saa-tin-wai",
+          "saatinwai",
+          "sha tian wei",
+          "sha tin wai",
+          "sha tin wai station",
+          "sha-tian-wei",
+          "shatianwei",
+          "沙田围",
+          "沙田围站",
+          "沙田圍",
+          "沙田圍站"
+        ],
+        "line": "TML",
+        "order": 20
+      },
+      "id": 45
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.20358780143104,
+          22.38296668575128
+        ]
+      },
+      "properties": {
+        "id": 46,
+        "name": "City One (第一城)",
+        "long_name": "第一城 City One",
+        "alternate_names": [
+          "City One",
+          "City One Station",
+          "City-One",
+          "CityOne",
+          "city one",
+          "city one station",
+          "dai jat sing",
+          "dai-jat-sing",
+          "daijatsing",
+          "di yi cheng",
+          "di-yi-cheng",
+          "diyicheng",
+          "第一城",
+          "第一城站"
+        ],
+        "line": "TML",
+        "order": 21
+      },
+      "id": 46
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.20836651683648,
+          22.387772118965025
+        ]
+      },
+      "properties": {
+        "id": 47,
+        "name": "Shek Mun (石門)",
+        "long_name": "石門 Shek Mun",
+        "alternate_names": [
+          "Shek Mun",
+          "Shek Mun Station",
+          "Shek-Mun",
+          "ShekMun",
+          "sek mun",
+          "sek-mun",
+          "sekmun",
+          "shek mun",
+          "shek mun station",
+          "shi men",
+          "shi-men",
+          "shimen",
+          "石門",
+          "石門站",
+          "石门",
+          "石门站"
+        ],
+        "line": "TML",
+        "order": 22
+      },
+      "id": 47
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.22266602102428,
+          22.408428443290713
+        ]
+      },
+      "properties": {
+        "id": 48,
+        "name": "Tai Shui Hang (大水坑)",
+        "long_name": "大水坑 Tai Shui Hang",
+        "alternate_names": [
+          "Tai Shui Hang",
+          "Tai Shui Hang Station",
+          "Tai-Shui-Hang",
+          "TaiShuiHang",
+          "da shui keng",
+          "da-shui-keng",
+          "daai seoi haang",
+          "daai-seoi-haang",
+          "daaiseoihaang",
+          "dashuikeng",
+          "tai shui hang",
+          "tai shui hang station",
+          "大水坑",
+          "大水坑站"
+        ],
+        "line": "TML",
+        "order": 23
+      },
+      "id": 48
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.22568329741958,
+          22.417381451184593
+        ]
+      },
+      "properties": {
+        "id": 49,
+        "name": "Heng On (恒安)",
+        "long_name": "恒安 Heng On",
+        "alternate_names": [
+          "Heng On",
+          "Heng On Station",
+          "Heng-On",
+          "HengOn",
+          "hang on",
+          "hang-on",
+          "hangon",
+          "heng an",
+          "heng on",
+          "heng on station",
+          "heng-an",
+          "hengan",
+          "恒安",
+          "恒安站"
+        ],
+        "line": "TML",
+        "order": 24
+      },
+      "id": 49
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.23159269042091,
+          22.42483260037374
+        ]
+      },
+      "properties": {
+        "id": 50,
+        "name": "Ma On Shan (馬鞍山)",
+        "long_name": "馬鞍山 Ma On Shan",
+        "alternate_names": [
+          "Ma On Shan",
+          "Ma On Shan Station",
+          "Ma-On-Shan",
+          "MaOnShan",
+          "ma an shan",
+          "ma on shan",
+          "ma on shan station",
+          "ma-an-shan",
+          "maa on saan",
+          "maa-on-saan",
+          "maanshan",
+          "maaonsaan",
+          "馬鞍山",
+          "馬鞍山站",
+          "马鞍山",
+          "马鞍山站"
+        ],
+        "line": "TML",
+        "order": 25
+      },
+      "id": 50
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.24378428528318,
+          22.429225695682362
+        ]
+      },
+      "properties": {
+        "id": 51,
+        "name": "Wu Kai Sha (烏溪沙)",
+        "long_name": "烏溪沙 Wu Kai Sha",
+        "alternate_names": [
+          "Wu Kai Sha",
+          "Wu Kai Sha Station",
+          "Wu-Kai-Sha",
+          "WuKaiSha",
+          "wu kai saa",
+          "wu kai sha",
+          "wu kai sha station",
+          "wu xi sha",
+          "wu-kai-saa",
+          "wu-xi-sha",
+          "wukaisaa",
+          "wuxisha",
+          "乌溪沙",
+          "乌溪沙站",
+          "烏溪沙",
+          "烏溪沙站"
+        ],
+        "line": "TML",
+        "order": 26
+      },
+      "id": 51
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.1581328614588,
+          22.28469909663648
+        ]
+      },
+      "properties": {
+        "id": 52,
+        "name": "Hong Kong (香港)",
+        "long_name": "香港 Hong Kong",
+        "alternate_names": [
+          "Hong Kong",
+          "Hong Kong Station",
+          "Hong-Kong",
+          "HongKong",
+          "hoeng gong",
+          "hoeng-gong",
+          "hoenggong",
+          "hong kong",
+          "hong kong station",
+          "xiang gang",
+          "xiang-gang",
+          "xianggang",
+          "香港",
+          "香港站"
+        ],
+        "line": "AEL",
+        "order": 0
+      },
+      "id": 52
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.1614472967348,
+          22.30431687096305
+        ]
+      },
+      "properties": {
+        "id": 53,
+        "name": "Kowloon (九龍)",
+        "long_name": "九龍 Kowloon",
+        "alternate_names": [
+          "Kowloon",
+          "Kowloon Station",
+          "gau lung",
+          "gau-lung",
+          "gaulung",
+          "jiu long",
+          "jiu-long",
+          "jiulong",
+          "kowloon",
+          "kowloon station",
+          "九龍",
+          "九龍站",
+          "九龙",
+          "九龙站"
+        ],
+        "line": "AEL",
+        "order": 1
+      },
+      "id": 53
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.10761612624462,
+          22.358559071787663
+        ]
+      },
+      "properties": {
+        "id": 54,
+        "name": "Tsing Yi (青衣)",
+        "long_name": "青衣 Tsing Yi",
+        "alternate_names": [
+          "Tsing Yi",
+          "Tsing Yi Station",
+          "Tsing-Yi",
+          "TsingYi",
+          "cing ji",
+          "cing-ji",
+          "cingji",
+          "qing yi",
+          "qing-yi",
+          "qingyi",
+          "tsing yi",
+          "tsing yi station",
+          "青衣",
+          "青衣站"
+        ],
+        "line": "AEL",
+        "order": 2
+      },
+      "id": 54
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.93652342638113,
+          22.315846762478273
+        ]
+      },
+      "properties": {
+        "id": 55,
+        "name": "Airport (機場)",
+        "long_name": "機場 Airport",
+        "alternate_names": [
+          "Airport",
+          "Airport Station",
+          "airport",
+          "airport station",
+          "gei coeng",
+          "gei-coeng",
+          "geicoeng",
+          "ji chang",
+          "ji-chang",
+          "jichang",
+          "机场",
+          "机场站",
+          "機場",
+          "機場站"
+        ],
+        "line": "AEL",
+        "order": 3
+      },
+      "id": 55
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.94179214644502,
+          22.32083248493315
+        ]
+      },
+      "properties": {
+        "id": 56,
+        "name": "AsiaWorld-Expo (亞洲國際博覽館)",
+        "long_name": "亞洲國際博覽館 AsiaWorld-Expo",
+        "alternate_names": [
+          "Asia World Expo",
+          "AsiaWorld Expo",
+          "AsiaWorld-Expo",
+          "AsiaWorld-Expo Station",
+          "aa zau gwok zai bok laam gun",
+          "aa-zau-gwok-zai-bok-laam-gun",
+          "aazaugwokzaiboklaamgun",
+          "asia world expo",
+          "asiaworld expo",
+          "asiaworld-expo",
+          "asiaworld-expo station",
+          "ya zhou guo ji bo lan guan",
+          "ya-zhou-guo-ji-bo-lan-guan",
+          "yazhouguojibolanguan",
+          "亚洲国际博览馆",
+          "亚洲国际博览馆站",
+          "亞洲國際博覽館",
+          "亞洲國際博覽館站"
+        ],
+        "line": "AEL",
+        "order": 4
+      },
+      "id": 56
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.02886487334575,
+          22.33174232324258
+        ]
+      },
+      "properties": {
+        "id": 57,
+        "name": "Sunny Bay (欣澳)",
+        "long_name": "欣澳 Sunny Bay",
+        "alternate_names": [
+          "Sunny Bay",
+          "Sunny Bay Station",
+          "Sunny-Bay",
+          "SunnyBay",
+          "jan ou",
+          "jan-ou",
+          "janou",
+          "sunny bay",
+          "sunny bay station",
+          "xin ao",
+          "xin-ao",
+          "xinao",
+          "欣澳",
+          "欣澳站"
+        ],
+        "line": "DRL",
+        "order": 0
+      },
+      "id": 57
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.04510102620337,
+          22.315464112275215
+        ]
+      },
+      "properties": {
+        "id": 58,
+        "name": "Disneyland Resort (迪士尼)",
+        "long_name": "迪士尼 Disneyland Resort",
+        "alternate_names": [
+          "Disneyland",
+          "Disneyland Resort",
+          "Disneyland Resort Station",
+          "Disneyland-Resort",
+          "DisneylandResort",
+          "Hong Kong Disneyland",
+          "di shi ni",
+          "di-shi-ni",
+          "dik si nei",
+          "dik-si-nei",
+          "diksinei",
+          "dishini",
+          "disneyland",
+          "disneyland resort",
+          "disneyland resort station",
+          "hong kong disneyland",
+          "迪士尼",
+          "迪士尼站"
+        ],
+        "line": "DRL",
+        "order": 1
+      },
+      "id": 58
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.18954379086435,
+          22.305069099211504
+        ]
+      },
+      "properties": {
+        "id": 59,
+        "name": "Whampoa (黃埔)",
+        "long_name": "黃埔 Whampoa",
+        "alternate_names": [
+          "Whampoa",
+          "Whampoa Station",
+          "huang pu",
+          "huang-pu",
+          "huangpu",
+          "whampoa",
+          "whampoa station",
+          "wong bou",
+          "wong-bou",
+          "wongbou",
+          "黃埔",
+          "黃埔站",
+          "黄埔",
+          "黄埔站"
+        ],
+        "line": "KTL",
+        "order": 0
+      },
+      "id": 59
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.18264455118644,
+          22.309435075135703
+        ]
+      },
+      "properties": {
+        "id": 60,
+        "name": "Ho Man Tin (何文田)",
+        "long_name": "何文田 Ho Man Tin",
+        "alternate_names": [
+          "Ho Man Tin",
+          "Ho Man Tin Station",
+          "Ho-Man-Tin",
+          "HoManTin",
+          "he wen tian",
+          "he-wen-tian",
+          "hewentian",
+          "ho man tin",
+          "ho man tin station",
+          "ho-man-tin",
+          "homantin",
+          "何文田",
+          "何文田站"
+        ],
+        "line": "KTL",
+        "order": 1
+      },
+      "id": 60
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.17060538622357,
+          22.31287598860284
+        ]
+      },
+      "properties": {
+        "id": 61,
+        "name": "Yau Ma Tei (油麻地)",
+        "long_name": "油麻地 Yau Ma Tei",
+        "alternate_names": [
+          "Yau Ma Tei",
+          "Yau Ma Tei Station",
+          "Yau-Ma-Tei",
+          "YauMaTei",
+          "jau maa dei",
+          "jau-maa-dei",
+          "jaumaadei",
+          "yau ma tei",
+          "yau ma tei station",
+          "you ma di",
+          "you-ma-di",
+          "youmadi",
+          "油麻地",
+          "油麻地站"
+        ],
+        "line": "KTL",
+        "order": 2
+      },
+      "id": 61
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.16932094752586,
+          22.319269393084312
+        ]
+      },
+      "properties": {
+        "id": 62,
+        "name": "Mong Kok (旺角)",
+        "long_name": "旺角 Mong Kok",
+        "alternate_names": [
+          "Mong Kok",
+          "Mong Kok Station",
+          "Mong-Kok",
+          "MongKok",
+          "mong kok",
+          "mong kok station",
+          "wang jiao",
+          "wang-jiao",
+          "wangjiao",
+          "wong gok",
+          "wong-gok",
+          "wonggok",
+          "旺角",
+          "旺角站"
+        ],
+        "line": "KTL",
+        "order": 3
+      },
+      "id": 62
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.1683590387622,
+          22.325073609415977
+        ]
+      },
+      "properties": {
+        "id": 63,
+        "name": "Prince Edward (太子)",
+        "long_name": "太子 Prince Edward",
+        "alternate_names": [
+          "Prince Edward",
+          "Prince Edward Station",
+          "Prince-Edward",
+          "PrinceEdward",
+          "prince edward",
+          "prince edward station",
+          "taai zi",
+          "taai-zi",
+          "taaizi",
+          "tai zi",
+          "tai-zi",
+          "taizi",
+          "太子",
+          "太子站"
+        ],
+        "line": "KTL",
+        "order": 4
+      },
+      "id": 63
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.16876823566055,
+          22.332118323185885
+        ]
+      },
+      "properties": {
+        "id": 64,
+        "name": "Shek Kip Mei (石硤尾)",
+        "long_name": "石硤尾 Shek Kip Mei",
+        "alternate_names": [
+          "Shek Kip Mei",
+          "Shek Kip Mei Station",
+          "Shek-Kip-Mei",
+          "ShekKipMei",
+          "sek gip mei",
+          "sek-gip-mei",
+          "sekgipmei",
+          "shek kip mei",
+          "shek kip mei station",
+          "shi xia wei",
+          "shi-xia-wei",
+          "shixiawei",
+          "石硖尾",
+          "石硖尾站",
+          "石硤尾",
+          "石硤尾站"
+        ],
+        "line": "KTL",
+        "order": 5
+      },
+      "id": 64
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.17587958143326,
+          22.336918479316058
+        ]
+      },
+      "properties": {
+        "id": 65,
+        "name": "Kowloon Tong (九龍塘)",
+        "long_name": "九龍塘 Kowloon Tong",
+        "alternate_names": [
+          "Kowloon Tong",
+          "Kowloon Tong Station",
+          "Kowloon-Tong",
+          "KowloonTong",
+          "gau lung tong",
+          "gau-lung-tong",
+          "gaulungtong",
+          "jiu long tang",
+          "jiu-long-tang",
+          "jiulongtang",
+          "kowloon tong",
+          "kowloon tong station",
+          "九龍塘",
+          "九龍塘站",
+          "九龙塘",
+          "九龙塘站"
+        ],
+        "line": "KTL",
+        "order": 6
+      },
+      "id": 65
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.18699708123006,
+          22.3380572216468
+        ]
+      },
+      "properties": {
+        "id": 66,
+        "name": "Lok Fu (樂富)",
+        "long_name": "樂富 Lok Fu",
+        "alternate_names": [
+          "Lok Fu",
+          "Lok Fu Station",
+          "Lok-Fu",
+          "LokFu",
+          "le fu",
+          "le-fu",
+          "lefu",
+          "lok fu",
+          "lok fu station",
+          "lok-fu",
+          "lokfu",
+          "乐富",
+          "乐富站",
+          "樂富",
+          "樂富站"
+        ],
+        "line": "KTL",
+        "order": 7
+      },
+      "id": 66
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.19378307818303,
+          22.341698179174568
+        ]
+      },
+      "properties": {
+        "id": 67,
+        "name": "Wong Tai Sin (黃大仙)",
+        "long_name": "黃大仙 Wong Tai Sin",
+        "alternate_names": [
+          "Wong Tai Sin",
+          "Wong Tai Sin Station",
+          "Wong-Tai-Sin",
+          "WongTaiSin",
+          "huang da xian",
+          "huang-da-xian",
+          "huangdaxian",
+          "wong daai sin",
+          "wong tai sin",
+          "wong tai sin station",
+          "wong-daai-sin",
+          "wongdaaisin",
+          "黃大仙",
+          "黃大仙站",
+          "黄大仙",
+          "黄大仙站"
+        ],
+        "line": "KTL",
+        "order": 8
+      },
+      "id": 67
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.20026760050594,
+          22.340287925682947
+        ]
+      },
+      "properties": {
+        "id": 68,
+        "name": "Diamond Hill (鑽石山)",
+        "long_name": "鑽石山 Diamond Hill",
+        "alternate_names": [
+          "Diamond Hill",
+          "Diamond Hill Station",
+          "Diamond-Hill",
+          "DiamondHill",
+          "diamond hill",
+          "diamond hill station",
+          "zuan shi shan",
+          "zuan-shi-shan",
+          "zuanshishan",
+          "zyun sek saan",
+          "zyun-sek-saan",
+          "zyunseksaan",
+          "鑽石山",
+          "鑽石山站",
+          "钻石山",
+          "钻石山站"
+        ],
+        "line": "KTL",
+        "order": 9
+      },
+      "id": 68
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.20892840468169,
+          22.334918011169464
+        ]
+      },
+      "properties": {
+        "id": 69,
+        "name": "Choi Hung (彩虹)",
+        "long_name": "彩虹 Choi Hung",
+        "alternate_names": [
+          "Choi Hung",
+          "Choi Hung Station",
+          "Choi-Hung",
+          "ChoiHung",
+          "cai hong",
+          "cai-hong",
+          "caihong",
+          "choi hung",
+          "choi hung station",
+          "coi hung",
+          "coi-hung",
+          "coihung",
+          "彩虹",
+          "彩虹站"
+        ],
+        "line": "KTL",
+        "order": 10
+      },
+      "id": 69
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.21392993348461,
+          22.32323008339495
+        ]
+      },
+      "properties": {
+        "id": 70,
+        "name": "Kowloon Bay (九龍灣)",
+        "long_name": "九龍灣 Kowloon Bay",
+        "alternate_names": [
+          "Kowloon Bay",
+          "Kowloon Bay Station",
+          "Kowloon-Bay",
+          "KowloonBay",
+          "gau lung waan",
+          "gau-lung-waan",
+          "gaulungwaan",
+          "jiu long wan",
+          "jiu-long-wan",
+          "jiulongwan",
+          "kowloon bay",
+          "kowloon bay station",
+          "九龍灣",
+          "九龍灣站",
+          "九龙湾",
+          "九龙湾站"
+        ],
+        "line": "KTL",
+        "order": 11
+      },
+      "id": 70
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.21892979021685,
+          22.315542727320494
+        ]
+      },
+      "properties": {
+        "id": 71,
+        "name": "Ngau Tau Kok (牛頭角)",
+        "long_name": "牛頭角 Ngau Tau Kok",
+        "alternate_names": [
+          "Ngau Tau Kok",
+          "Ngau Tau Kok Station",
+          "Ngau-Tau-Kok",
+          "NgauTauKok",
+          "ngau tau gok",
+          "ngau tau kok",
+          "ngau tau kok station",
+          "ngau-tau-gok",
+          "ngautaugok",
+          "niu tou jiao",
+          "niu-tou-jiao",
+          "niutoujiao",
+          "牛头角",
+          "牛头角站",
+          "牛頭角",
+          "牛頭角站"
+        ],
+        "line": "KTL",
+        "order": 12
+      },
+      "id": 71
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.22634033596339,
+          22.31223517655273
+        ]
+      },
+      "properties": {
+        "id": 72,
+        "name": "Kwun Tong (觀塘)",
+        "long_name": "觀塘 Kwun Tong",
+        "alternate_names": [
+          "Kwun Tong",
+          "Kwun Tong Station",
+          "Kwun-Tong",
+          "KwunTong",
+          "guan tang",
+          "guan-tang",
+          "guantang",
+          "gwaan tong",
+          "gwaan-tong",
+          "gwaantong",
+          "kwun tong",
+          "kwun tong station",
+          "觀塘",
+          "觀塘站",
+          "观塘",
+          "观塘站"
+        ],
+        "line": "KTL",
+        "order": 13
+      },
+      "id": 72
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.23267843331601,
+          22.306843517521354
+        ]
+      },
+      "properties": {
+        "id": 73,
+        "name": "Lam Tin (藍田)",
+        "long_name": "藍田 Lam Tin",
+        "alternate_names": [
+          "Lam Tin",
+          "Lam Tin Station",
+          "Lam-Tin",
+          "LamTin",
+          "laam tin",
+          "laam-tin",
+          "laamtin",
+          "lam tin",
+          "lam tin station",
+          "lan tian",
+          "lan-tian",
+          "lantian",
+          "蓝田",
+          "蓝田站",
+          "藍田",
+          "藍田站"
+        ],
+        "line": "KTL",
+        "order": 14
+      },
+      "id": 73
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.2369492281437,
+          22.298131226582548
+        ]
+      },
+      "properties": {
+        "id": 74,
+        "name": "Yau Tong (油塘)",
+        "long_name": "油塘 Yau Tong",
+        "alternate_names": [
+          "Yau Tong",
+          "Yau Tong Station",
+          "Yau-Tong",
+          "YauTong",
+          "jau tong",
+          "jau-tong",
+          "jautong",
+          "yau tong",
+          "yau tong station",
+          "you tang",
+          "you-tang",
+          "youtang",
+          "油塘",
+          "油塘站"
+        ],
+        "line": "KTL",
+        "order": 15
+      },
+      "id": 74
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.25289048797987,
+          22.304498790816805
+        ]
+      },
+      "properties": {
+        "id": 75,
+        "name": "Tiu Keng Leng (調景嶺)",
+        "long_name": "調景嶺 Tiu Keng Leng",
+        "alternate_names": [
+          "Tiu Keng Leng",
+          "Tiu Keng Leng Station",
+          "Tiu-Keng-Leng",
+          "TiuKengLeng",
+          "diao jing ling",
+          "diao-jing-ling",
+          "diaojingling",
+          "tiu geng leng",
+          "tiu keng leng",
+          "tiu keng leng station",
+          "tiu-geng-leng",
+          "tiugengleng",
+          "調景嶺",
+          "調景嶺站",
+          "调景岭",
+          "调景岭站"
+        ],
+        "line": "KTL",
+        "order": 16
+      },
+      "id": 75
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.11767553835726,
+          22.373734009426936
+        ]
+      },
+      "properties": {
+        "id": 76,
+        "name": "Tsuen Wan (荃灣)",
+        "long_name": "荃灣 Tsuen Wan",
+        "alternate_names": [
+          "Tsuen Wan",
+          "Tsuen Wan Station",
+          "Tsuen-Wan",
+          "TsuenWan",
+          "cyun waan",
+          "cyun-waan",
+          "cyunwaan",
+          "quan wan",
+          "quan-wan",
+          "quanwan",
+          "tsuen wan",
+          "tsuen wan station",
+          "荃湾",
+          "荃湾站",
+          "荃灣",
+          "荃灣站"
+        ],
+        "line": "TWL",
+        "order": 0
+      },
+      "id": 76
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.12502581883881,
+          22.370797859951935
+        ]
+      },
+      "properties": {
+        "id": 77,
+        "name": "Tai Wo Hau (大窩口)",
+        "long_name": "大窩口 Tai Wo Hau",
+        "alternate_names": [
+          "Tai Wo Hau",
+          "Tai Wo Hau Station",
+          "Tai-Wo-Hau",
+          "TaiWoHau",
+          "da wo kou",
+          "da-wo-kou",
+          "daai wo hau",
+          "daai-wo-hau",
+          "daaiwohau",
+          "dawokou",
+          "tai wo hau",
+          "tai wo hau station",
+          "大窝口",
+          "大窝口站",
+          "大窩口",
+          "大窩口站"
+        ],
+        "line": "TWL",
+        "order": 1
+      },
+      "id": 77
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.13118944600042,
+          22.363070330730373
+        ]
+      },
+      "properties": {
+        "id": 78,
+        "name": "Kwai Hing (葵興)",
+        "long_name": "葵興 Kwai Hing",
+        "alternate_names": [
+          "Kwai Hing",
+          "Kwai Hing Station",
+          "Kwai-Hing",
+          "KwaiHing",
+          "kui xing",
+          "kui-xing",
+          "kuixing",
+          "kwai hing",
+          "kwai hing station",
+          "kwai-hing",
+          "kwaihing",
+          "葵兴",
+          "葵兴站",
+          "葵興",
+          "葵興站"
+        ],
+        "line": "TWL",
+        "order": 2
+      },
+      "id": 78
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.12772154175781,
+          22.356850046965256
+        ]
+      },
+      "properties": {
+        "id": 79,
+        "name": "Kwai Fong (葵芳)",
+        "long_name": "葵芳 Kwai Fong",
+        "alternate_names": [
+          "Kwai Fong",
+          "Kwai Fong Station",
+          "Kwai-Fong",
+          "KwaiFong",
+          "kui fang",
+          "kui-fang",
+          "kuifang",
+          "kwai fong",
+          "kwai fong station",
+          "kwai-fong",
+          "kwaifong",
+          "葵芳",
+          "葵芳站"
+        ],
+        "line": "TWL",
+        "order": 3
+      },
+      "id": 79
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.12611713173048,
+          22.34845562951537
+        ]
+      },
+      "properties": {
+        "id": 80,
+        "name": "Lai King (荔景)",
+        "long_name": "荔景 Lai King",
+        "alternate_names": [
+          "Lai King",
+          "Lai King Station",
+          "Lai-King",
+          "LaiKing",
+          "lai ging",
+          "lai king",
+          "lai king station",
+          "lai-ging",
+          "laiging",
+          "li jing",
+          "li-jing",
+          "lijing",
+          "荔景",
+          "荔景站"
+        ],
+        "line": "TWL",
+        "order": 4
+      },
+      "id": 80
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.13640810965138,
+          22.33778438348702
+        ]
+      },
+      "properties": {
+        "id": 81,
+        "name": "Mei Foo (美孚)",
+        "long_name": "美孚 Mei Foo",
+        "alternate_names": [
+          "Mei Foo",
+          "Mei Foo Station",
+          "Mei-Foo",
+          "MeiFoo",
+          "mei foo",
+          "mei foo station",
+          "mei fu",
+          "mei-fu",
+          "meifu",
+          "美孚",
+          "美孚站"
+        ],
+        "line": "TWL",
+        "order": 5
+      },
+      "id": 81
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.14797797706407,
+          22.337263836090475
+        ]
+      },
+      "properties": {
+        "id": 82,
+        "name": "Lai Chi Kok (荔枝角)",
+        "long_name": "荔枝角 Lai Chi Kok",
+        "alternate_names": [
+          "Lai Chi Kok",
+          "Lai Chi Kok Station",
+          "Lai-Chi-Kok",
+          "LaiChiKok",
+          "lai chi kok",
+          "lai chi kok station",
+          "lai zi gok",
+          "lai-zi-gok",
+          "laizigok",
+          "li zhi jiao",
+          "li-zhi-jiao",
+          "lizhijiao",
+          "荔枝角",
+          "荔枝角站"
+        ],
+        "line": "TWL",
+        "order": 6
+      },
+      "id": 82
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.15590182994366,
+          22.335663622415126
+        ]
+      },
+      "properties": {
+        "id": 83,
+        "name": "Cheung Sha Wan (長沙灣)",
+        "long_name": "長沙灣 Cheung Sha Wan",
+        "alternate_names": [
+          "Cheung Sha Wan",
+          "Cheung Sha Wan Station",
+          "Cheung-Sha-Wan",
+          "CheungShaWan",
+          "chang sha wan",
+          "chang-sha-wan",
+          "changshawan",
+          "cheung sha wan",
+          "cheung sha wan station",
+          "coeng saa waan",
+          "coeng-saa-waan",
+          "coengsaawaan",
+          "長沙灣",
+          "長沙灣站",
+          "长沙湾",
+          "长沙湾站"
+        ],
+        "line": "TWL",
+        "order": 7
+      },
+      "id": 83
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.162251166497,
+          22.330779244450383
+        ]
+      },
+      "properties": {
+        "id": 84,
+        "name": "Sham Shui Po (深水埗)",
+        "long_name": "深水埗 Sham Shui Po",
+        "alternate_names": [
+          "Sham Shui Po",
+          "Sham Shui Po Station",
+          "Sham-Shui-Po",
+          "ShamShuiPo",
+          "sam seoi bou",
+          "sam-seoi-bou",
+          "samseoibou",
+          "sham shui po",
+          "sham shui po station",
+          "shen shui bu",
+          "shen-shui-bu",
+          "shenshuibu",
+          "深水埗",
+          "深水埗站"
+        ],
+        "line": "TWL",
+        "order": 8
+      },
+      "id": 84
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.1683590387622,
+          22.325073609415977
+        ]
+      },
+      "properties": {
+        "id": 85,
+        "name": "Prince Edward (太子)",
+        "long_name": "太子 Prince Edward",
+        "alternate_names": [
+          "Prince Edward",
+          "Prince Edward Station",
+          "Prince-Edward",
+          "PrinceEdward",
+          "prince edward",
+          "prince edward station",
+          "taai zi",
+          "taai-zi",
+          "taaizi",
+          "tai zi",
+          "tai-zi",
+          "taizi",
+          "太子",
+          "太子站"
+        ],
+        "line": "TWL",
+        "order": 9
+      },
+      "id": 85
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.16932094752586,
+          22.319269393084312
+        ]
+      },
+      "properties": {
+        "id": 86,
+        "name": "Mong Kok (旺角)",
+        "long_name": "旺角 Mong Kok",
+        "alternate_names": [
+          "Mong Kok",
+          "Mong Kok Station",
+          "Mong-Kok",
+          "MongKok",
+          "mong kok",
+          "mong kok station",
+          "wang jiao",
+          "wang-jiao",
+          "wangjiao",
+          "wong gok",
+          "wong-gok",
+          "wonggok",
+          "旺角",
+          "旺角站"
+        ],
+        "line": "TWL",
+        "order": 10
+      },
+      "id": 86
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.17060538622357,
+          22.31287598860284
+        ]
+      },
+      "properties": {
+        "id": 87,
+        "name": "Yau Ma Tei (油麻地)",
+        "long_name": "油麻地 Yau Ma Tei",
+        "alternate_names": [
+          "Yau Ma Tei",
+          "Yau Ma Tei Station",
+          "Yau-Ma-Tei",
+          "YauMaTei",
+          "jau maa dei",
+          "jau-maa-dei",
+          "jaumaadei",
+          "yau ma tei",
+          "yau ma tei station",
+          "you ma di",
+          "you-ma-di",
+          "youmadi",
+          "油麻地",
+          "油麻地站"
+        ],
+        "line": "TWL",
+        "order": 11
+      },
+      "id": 87
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.17165370511839,
+          22.304813212563253
+        ]
+      },
+      "properties": {
+        "id": 88,
+        "name": "Jordan (佐敦)",
+        "long_name": "佐敦 Jordan",
+        "alternate_names": [
+          "Jordan",
+          "Jordan Station",
+          "jordan",
+          "jordan station",
+          "zo deon",
+          "zo-deon",
+          "zodeon",
+          "zuo dun",
+          "zuo-dun",
+          "zuodun",
+          "佐敦",
+          "佐敦站"
+        ],
+        "line": "TWL",
+        "order": 12
+      },
+      "id": 88
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.17220829349618,
+          22.29757487179842
+        ]
+      },
+      "properties": {
+        "id": 89,
+        "name": "Tsim Sha Tsui (尖沙咀)",
+        "long_name": "尖沙咀 Tsim Sha Tsui",
+        "alternate_names": [
+          "Tsim Sha Tsui",
+          "Tsim Sha Tsui Station",
+          "Tsim-Sha-Tsui",
+          "TsimShaTsui",
+          "jian sha zui",
+          "jian-sha-zui",
+          "jianshazui",
+          "tsim sha tsui",
+          "tsim sha tsui station",
+          "zim saa zeoi",
+          "zim-saa-zeoi",
+          "zimsaazeoi",
+          "尖沙咀",
+          "尖沙咀站"
+        ],
+        "line": "TWL",
+        "order": 13
+      },
+      "id": 89
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.16450623067786,
+          22.279451691190783
+        ]
+      },
+      "properties": {
+        "id": 90,
+        "name": "Admiralty (金鐘)",
+        "long_name": "金鐘 Admiralty",
+        "alternate_names": [
+          "Admiralty",
+          "Admiralty Station",
+          "admiralty",
+          "admiralty station",
+          "gam zung",
+          "gam-zung",
+          "gamzung",
+          "jin zhong",
+          "jin-zhong",
+          "jinzhong",
+          "金鐘",
+          "金鐘站",
+          "金钟",
+          "金钟站"
+        ],
+        "line": "TWL",
+        "order": 14
+      },
+      "id": 90
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.1582387894817,
+          22.281959995075137
+        ]
+      },
+      "properties": {
+        "id": 91,
+        "name": "Central (中環)",
+        "long_name": "中環 Central",
+        "alternate_names": [
+          "Central",
+          "Central Station",
+          "central",
+          "central station",
+          "zhong huan",
+          "zhong-huan",
+          "zhonghuan",
+          "zung waan",
+          "zung-waan",
+          "zungwaan",
+          "中环",
+          "中环站",
+          "中環",
+          "中環站"
+        ],
+        "line": "TWL",
+        "order": 15
+      },
+      "id": 91
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.12885326025452,
+          22.281230032959137
+        ]
+      },
+      "properties": {
+        "id": 92,
+        "name": "Kennedy Town (堅尼地城)",
+        "long_name": "堅尼地城 Kennedy Town",
+        "alternate_names": [
+          "Kennedy Town",
+          "Kennedy Town Station",
+          "Kennedy-Town",
+          "KennedyTown",
+          "gin nei dei sing",
+          "gin-nei-dei-sing",
+          "ginneideising",
+          "jian ni di cheng",
+          "jian-ni-di-cheng",
+          "jiannidicheng",
+          "kennedy town",
+          "kennedy town station",
+          "坚尼地城",
+          "坚尼地城站",
+          "堅尼地城",
+          "堅尼地城站"
+        ],
+        "line": "ISL",
+        "order": 0
+      },
+      "id": 92
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.13500113640396,
+          22.284011899390542
+        ]
+      },
+      "properties": {
+        "id": 93,
+        "name": "HKU (香港大學)",
+        "long_name": "香港大學 HKU",
+        "alternate_names": [
+          "HKU",
+          "HKU Station",
+          "Hong Kong University",
+          "hku",
+          "hku station",
+          "hoeng gong daai hok",
+          "hoeng-gong-daai-hok",
+          "hoenggongdaaihok",
+          "hong kong university",
+          "xiang gang da xue",
+          "xiang-gang-da-xue",
+          "xianggangdaxue",
+          "香港大学",
+          "香港大学站",
+          "香港大學",
+          "香港大學站"
+        ],
+        "line": "ISL",
+        "order": 1
+      },
+      "id": 93
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.14265285358357,
+          22.285549203477114
+        ]
+      },
+      "properties": {
+        "id": 94,
+        "name": "Sai Ying Pun (西營盤)",
+        "long_name": "西營盤 Sai Ying Pun",
+        "alternate_names": [
+          "Sai Ying Pun",
+          "Sai Ying Pun Station",
+          "Sai-Ying-Pun",
+          "SaiYingPun",
+          "sai jing pun",
+          "sai ying pun",
+          "sai ying pun station",
+          "sai-jing-pun",
+          "saijingpun",
+          "xi ying pan",
+          "xi-ying-pan",
+          "xiyingpan",
+          "西營盤",
+          "西營盤站",
+          "西营盘",
+          "西营盘站"
+        ],
+        "line": "ISL",
+        "order": 2
+      },
+      "id": 94
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.15180216340886,
+          22.286599310711583
+        ]
+      },
+      "properties": {
+        "id": 95,
+        "name": "Sheung Wan (上環)",
+        "long_name": "上環 Sheung Wan",
+        "alternate_names": [
+          "Sheung Wan",
+          "Sheung Wan Station",
+          "Sheung-Wan",
+          "SheungWan",
+          "shang huan",
+          "shang-huan",
+          "shanghuan",
+          "sheung wan",
+          "sheung wan station",
+          "soeng waan",
+          "soeng-waan",
+          "soengwaan",
+          "上环",
+          "上环站",
+          "上環",
+          "上環站"
+        ],
+        "line": "ISL",
+        "order": 3
+      },
+      "id": 95
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.1582387894817,
+          22.281959995075137
+        ]
+      },
+      "properties": {
+        "id": 96,
+        "name": "Central (中環)",
+        "long_name": "中環 Central",
+        "alternate_names": [
+          "Central",
+          "Central Station",
+          "central",
+          "central station",
+          "zhong huan",
+          "zhong-huan",
+          "zhonghuan",
+          "zung waan",
+          "zung-waan",
+          "zungwaan",
+          "中环",
+          "中环站",
+          "中環",
+          "中環站"
+        ],
+        "line": "ISL",
+        "order": 4
+      },
+      "id": 96
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.16450623067786,
+          22.279451691190783
+        ]
+      },
+      "properties": {
+        "id": 97,
+        "name": "Admiralty (金鐘)",
+        "long_name": "金鐘 Admiralty",
+        "alternate_names": [
+          "Admiralty",
+          "Admiralty Station",
+          "admiralty",
+          "admiralty station",
+          "gam zung",
+          "gam-zung",
+          "gamzung",
+          "jin zhong",
+          "jin-zhong",
+          "jinzhong",
+          "金鐘",
+          "金鐘站",
+          "金钟",
+          "金钟站"
+        ],
+        "line": "ISL",
+        "order": 5
+      },
+      "id": 97
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.17313164026983,
+          22.27760085118929
+        ]
+      },
+      "properties": {
+        "id": 98,
+        "name": "Wan Chai (灣仔)",
+        "long_name": "灣仔 Wan Chai",
+        "alternate_names": [
+          "Wan Chai",
+          "Wan Chai Station",
+          "Wan-Chai",
+          "WanChai",
+          "waan zai",
+          "waan-zai",
+          "waanzai",
+          "wan chai",
+          "wan chai station",
+          "wan zai",
+          "wan-zai",
+          "wanzai",
+          "湾仔",
+          "湾仔站",
+          "灣仔",
+          "灣仔站"
+        ],
+        "line": "ISL",
+        "order": 6
+      },
+      "id": 98
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.18501872340813,
+          22.28038327237469
+        ]
+      },
+      "properties": {
+        "id": 99,
+        "name": "Causeway Bay (銅鑼灣)",
+        "long_name": "銅鑼灣 Causeway Bay",
+        "alternate_names": [
+          "Causeway Bay",
+          "Causeway Bay Station",
+          "Causeway-Bay",
+          "CausewayBay",
+          "causeway bay",
+          "causeway bay station",
+          "tong luo wan",
+          "tong-luo-wan",
+          "tongluowan",
+          "tung lo waan",
+          "tung-lo-waan",
+          "tunglowaan",
+          "銅鑼灣",
+          "銅鑼灣站",
+          "铜锣湾",
+          "铜锣湾站"
+        ],
+        "line": "ISL",
+        "order": 7
+      },
+      "id": 99
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.19169936614944,
+          22.28242942413933
+        ]
+      },
+      "properties": {
+        "id": 100,
+        "name": "Tin Hau (天后)",
+        "long_name": "天后 Tin Hau",
+        "alternate_names": [
+          "Tin Hau",
+          "Tin Hau Station",
+          "Tin-Hau",
+          "TinHau",
+          "tian hou",
+          "tian-hou",
+          "tianhou",
+          "tin hau",
+          "tin hau station",
+          "tin-hau",
+          "tinhau",
+          "天后",
+          "天后站"
+        ],
+        "line": "ISL",
+        "order": 8
+      },
+      "id": 100
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.19349443868474,
+          22.288039878751476
+        ]
+      },
+      "properties": {
+        "id": 101,
+        "name": "Fortress Hill (炮台山)",
+        "long_name": "炮台山 Fortress Hill",
+        "alternate_names": [
+          "Fortress Hill",
+          "Fortress Hill Station",
+          "Fortress-Hill",
+          "FortressHill",
+          "fortress hill",
+          "fortress hill station",
+          "paau toi saan",
+          "paau-toi-saan",
+          "paautoisaan",
+          "pao tai shan",
+          "pao-tai-shan",
+          "paotaishan",
+          "炮台山",
+          "炮台山站"
+        ],
+        "line": "ISL",
+        "order": 9
+      },
+      "id": 101
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.20044416999906,
+          22.291298432962915
+        ]
+      },
+      "properties": {
+        "id": 102,
+        "name": "North Point (北角)",
+        "long_name": "北角 North Point",
+        "alternate_names": [
+          "North Point",
+          "North Point Station",
+          "North-Point",
+          "NorthPoint",
+          "bak gok",
+          "bak-gok",
+          "bakgok",
+          "bei jiao",
+          "bei-jiao",
+          "beijiao",
+          "north point",
+          "north point station",
+          "北角",
+          "北角站"
+        ],
+        "line": "ISL",
+        "order": 10
+      },
+      "id": 102
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.20974558114817,
+          22.287910006713926
+        ]
+      },
+      "properties": {
+        "id": 103,
+        "name": "Quarry Bay (鰂魚涌)",
+        "long_name": "鰂魚涌 Quarry Bay",
+        "alternate_names": [
+          "Quarry Bay",
+          "Quarry Bay Station",
+          "Quarry-Bay",
+          "QuarryBay",
+          "quarry bay",
+          "quarry bay station",
+          "zaap jyu cung",
+          "zaap-jyu-cung",
+          "zaapjyucung",
+          "zei yu chong",
+          "zei-yu-chong",
+          "zeiyuchong",
+          "鰂魚涌",
+          "鰂魚涌站",
+          "鲗鱼涌",
+          "鲗鱼涌站"
+        ],
+        "line": "ISL",
+        "order": 11
+      },
+      "id": 103
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.21633260715609,
+          22.28470554858333
+        ]
+      },
+      "properties": {
+        "id": 104,
+        "name": "Tai Koo (太古)",
+        "long_name": "太古 Tai Koo",
+        "alternate_names": [
+          "Tai Koo",
+          "Tai Koo Station",
+          "Tai-Koo",
+          "TaiKoo",
+          "taai gu",
+          "taai-gu",
+          "taaigu",
+          "tai gu",
+          "tai koo",
+          "tai koo station",
+          "tai-gu",
+          "taigu",
+          "太古",
+          "太古站"
+        ],
+        "line": "ISL",
+        "order": 12
+      },
+      "id": 104
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.22192515638986,
+          22.282085622995023
+        ]
+      },
+      "properties": {
+        "id": 105,
+        "name": "Sai Wan Ho (西灣河)",
+        "long_name": "西灣河 Sai Wan Ho",
+        "alternate_names": [
+          "Sai Wan Ho",
+          "Sai Wan Ho Station",
+          "Sai-Wan-Ho",
+          "SaiWanHo",
+          "sai waan ho",
+          "sai wan ho",
+          "sai wan ho station",
+          "sai-waan-ho",
+          "saiwaanho",
+          "xi wan he",
+          "xi-wan-he",
+          "xiwanhe",
+          "西湾河",
+          "西湾河站",
+          "西灣河",
+          "西灣河站"
+        ],
+        "line": "ISL",
+        "order": 13
+      },
+      "id": 105
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.22888658531598,
+          22.279281602598168
+        ]
+      },
+      "properties": {
+        "id": 106,
+        "name": "Shau Kei Wan (筲箕灣)",
+        "long_name": "筲箕灣 Shau Kei Wan",
+        "alternate_names": [
+          "Shau Kei Wan",
+          "Shau Kei Wan Station",
+          "Shau-Kei-Wan",
+          "ShauKeiWan",
+          "saau gei waan",
+          "saau-gei-waan",
+          "saaugeiwaan",
+          "shao ji wan",
+          "shao-ji-wan",
+          "shaojiwan",
+          "shau kei wan",
+          "shau kei wan station",
+          "筲箕湾",
+          "筲箕湾站",
+          "筲箕灣",
+          "筲箕灣站"
+        ],
+        "line": "ISL",
+        "order": 14
+      },
+      "id": 106
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.23987276387923,
+          22.276813148960652
+        ]
+      },
+      "properties": {
+        "id": 107,
+        "name": "Heng Fa Chuen (杏花邨)",
+        "long_name": "杏花邨 Heng Fa Chuen",
+        "alternate_names": [
+          "Heng Fa Chuen",
+          "Heng Fa Chuen Station",
+          "Heng-Fa-Chuen",
+          "HengFaChuen",
+          "hang faa cyun",
+          "hang-faa-cyun",
+          "hangfaacyun",
+          "heng fa chuen",
+          "heng fa chuen station",
+          "xing hua cun",
+          "xing-hua-cun",
+          "xinghuacun",
+          "杏花邨",
+          "杏花邨站"
+        ],
+        "line": "ISL",
+        "order": 15
+      },
+      "id": 107
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.23711372198562,
+          22.26461679088369
+        ]
+      },
+      "properties": {
+        "id": 108,
+        "name": "Chai Wan (柴灣)",
+        "long_name": "柴灣 Chai Wan",
+        "alternate_names": [
+          "Chai Wan",
+          "Chai Wan Station",
+          "Chai-Wan",
+          "ChaiWan",
+          "caai waan",
+          "caai-waan",
+          "caaiwaan",
+          "chai wan",
+          "chai wan station",
+          "chai-wan",
+          "chaiwan",
+          "柴湾",
+          "柴湾站",
+          "柴灣",
+          "柴灣站"
+        ],
+        "line": "ISL",
+        "order": 16
+      },
+      "id": 108
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.20044416999906,
+          22.291298432962915
+        ]
+      },
+      "properties": {
+        "id": 109,
+        "name": "North Point (北角)",
+        "long_name": "北角 North Point",
+        "alternate_names": [
+          "North Point",
+          "North Point Station",
+          "North-Point",
+          "NorthPoint",
+          "bak gok",
+          "bak-gok",
+          "bakgok",
+          "bei jiao",
+          "bei-jiao",
+          "beijiao",
+          "north point",
+          "north point station",
+          "北角",
+          "北角站"
+        ],
+        "line": "TKL",
+        "order": 0
+      },
+      "id": 109
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.20974558114817,
+          22.287910006713926
+        ]
+      },
+      "properties": {
+        "id": 110,
+        "name": "Quarry Bay (鰂魚涌)",
+        "long_name": "鰂魚涌 Quarry Bay",
+        "alternate_names": [
+          "Quarry Bay",
+          "Quarry Bay Station",
+          "Quarry-Bay",
+          "QuarryBay",
+          "quarry bay",
+          "quarry bay station",
+          "zaap jyu cung",
+          "zaap-jyu-cung",
+          "zaapjyucung",
+          "zei yu chong",
+          "zei-yu-chong",
+          "zeiyuchong",
+          "鰂魚涌",
+          "鰂魚涌站",
+          "鲗鱼涌",
+          "鲗鱼涌站"
+        ],
+        "line": "TKL",
+        "order": 1
+      },
+      "id": 110
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.2369492281437,
+          22.298131226582548
+        ]
+      },
+      "properties": {
+        "id": 111,
+        "name": "Yau Tong (油塘)",
+        "long_name": "油塘 Yau Tong",
+        "alternate_names": [
+          "Yau Tong",
+          "Yau Tong Station",
+          "Yau-Tong",
+          "YauTong",
+          "jau tong",
+          "jau-tong",
+          "jautong",
+          "yau tong",
+          "yau tong station",
+          "you tang",
+          "you-tang",
+          "youtang",
+          "油塘",
+          "油塘站"
+        ],
+        "line": "TKL",
+        "order": 2
+      },
+      "id": 111
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.25289048797987,
+          22.304498790816805
+        ]
+      },
+      "properties": {
+        "id": 112,
+        "name": "Tiu Keng Leng (調景嶺)",
+        "long_name": "調景嶺 Tiu Keng Leng",
+        "alternate_names": [
+          "Tiu Keng Leng",
+          "Tiu Keng Leng Station",
+          "Tiu-Keng-Leng",
+          "TiuKengLeng",
+          "diao jing ling",
+          "diao-jing-ling",
+          "diaojingling",
+          "tiu geng leng",
+          "tiu keng leng",
+          "tiu keng leng station",
+          "tiu-geng-leng",
+          "tiugengleng",
+          "調景嶺",
+          "調景嶺站",
+          "调景岭",
+          "调景岭站"
+        ],
+        "line": "TKL",
+        "order": 3
+      },
+      "id": 112
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.2600783195476,
+          22.307514854135597
+        ]
+      },
+      "properties": {
+        "id": 113,
+        "name": "Tseung Kwan O (將軍澳)",
+        "long_name": "將軍澳 Tseung Kwan O",
+        "alternate_names": [
+          "Tseung Kwan O",
+          "Tseung Kwan O Station",
+          "Tseung-Kwan-O",
+          "TseungKwanO",
+          "jiang jun ao",
+          "jiang-jun-ao",
+          "jiangjunao",
+          "tseung kwan o",
+          "tseung kwan o station",
+          "zoeng gwan ou",
+          "zoeng-gwan-ou",
+          "zoenggwanou",
+          "将军澳",
+          "将军澳站",
+          "將軍澳",
+          "將軍澳站"
+        ],
+        "line": "TKL",
+        "order": 4
+      },
+      "id": 113
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.264327356923,
+          22.31557654069371
+        ]
+      },
+      "properties": {
+        "id": 114,
+        "name": "Hang Hau (坑口)",
+        "long_name": "坑口 Hang Hau",
+        "alternate_names": [
+          "Hang Hau",
+          "Hang Hau Station",
+          "Hang-Hau",
+          "HangHau",
+          "haang hau",
+          "haang-hau",
+          "haanghau",
+          "hang hau",
+          "hang hau station",
+          "keng kou",
+          "keng-kou",
+          "kengkou",
+          "坑口",
+          "坑口站"
+        ],
+        "line": "TKL",
+        "order": 5
+      },
+      "id": 114
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.25783336734466,
+          22.322510476624217
+        ]
+      },
+      "properties": {
+        "id": 115,
+        "name": "Po Lam (寶琳)",
+        "long_name": "寶琳 Po Lam",
+        "alternate_names": [
+          "Po Lam",
+          "Po Lam Station",
+          "Po-Lam",
+          "PoLam",
+          "bao lin",
+          "bao-lin",
+          "baolin",
+          "bou lam",
+          "bou-lam",
+          "boulam",
+          "po lam",
+          "po lam station",
+          "宝琳",
+          "宝琳站",
+          "寶琳",
+          "寶琳站"
+        ],
+        "line": "TKL",
+        "order": 6
+      },
+      "id": 115
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.26960117408298,
+          22.296363961613412
+        ]
+      },
+      "properties": {
+        "id": 116,
+        "name": "LOHAS Park (康城)",
+        "long_name": "康城 LOHAS Park",
+        "alternate_names": [
+          "LOHAS Park",
+          "LOHAS Park Station",
+          "LOHAS-Park",
+          "LOHASPark",
+          "hong sing",
+          "hong-sing",
+          "hongsing",
+          "kang cheng",
+          "kang-cheng",
+          "kangcheng",
+          "lohas park",
+          "lohas park station",
+          "康城",
+          "康城站"
+        ],
+        "line": "TKL",
+        "order": 7
+      },
+      "id": 116
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.16450623067786,
+          22.279451691190783
+        ]
+      },
+      "properties": {
+        "id": 117,
+        "name": "Admiralty (金鐘)",
+        "long_name": "金鐘 Admiralty",
+        "alternate_names": [
+          "Admiralty",
+          "Admiralty Station",
+          "admiralty",
+          "admiralty station",
+          "gam zung",
+          "gam-zung",
+          "gamzung",
+          "jin zhong",
+          "jin-zhong",
+          "jinzhong",
+          "金鐘",
+          "金鐘站",
+          "金钟",
+          "金钟站"
+        ],
+        "line": "SIL",
+        "order": 0
+      },
+      "id": 117
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.1743805735968,
+          22.24872671920398
+        ]
+      },
+      "properties": {
+        "id": 118,
+        "name": "Ocean Park (海洋公園)",
+        "long_name": "海洋公園 Ocean Park",
+        "alternate_names": [
+          "Ocean Park",
+          "Ocean Park Station",
+          "Ocean-Park",
+          "OceanPark",
+          "hai yang gong yuan",
+          "hai-yang-gong-yuan",
+          "haiyanggongyuan",
+          "hoi joeng gung jyun",
+          "hoi-joeng-gung-jyun",
+          "hoijoenggungjyun",
+          "ocean park",
+          "ocean park station",
+          "海洋公园",
+          "海洋公园站",
+          "海洋公園",
+          "海洋公園站"
+        ],
+        "line": "SIL",
+        "order": 1
+      },
+      "id": 118
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.16800016186689,
+          22.24800532433389
+        ]
+      },
+      "properties": {
+        "id": 119,
+        "name": "Wong Chuk Hang (黃竹坑)",
+        "long_name": "黃竹坑 Wong Chuk Hang",
+        "alternate_names": [
+          "Wong Chuk Hang",
+          "Wong Chuk Hang Station",
+          "Wong-Chuk-Hang",
+          "WongChukHang",
+          "huang zhu keng",
+          "huang-zhu-keng",
+          "huangzhukeng",
+          "wong chuk hang",
+          "wong chuk hang station",
+          "wong zuk haang",
+          "wong-zuk-haang",
+          "wongzukhaang",
+          "黃竹坑",
+          "黃竹坑站",
+          "黄竹坑",
+          "黄竹坑站"
+        ],
+        "line": "SIL",
+        "order": 2
+      },
+      "id": 119
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.15610732349629,
+          22.24194942467918
+        ]
+      },
+      "properties": {
+        "id": 120,
+        "name": "Lei Tung (利東)",
+        "long_name": "利東 Lei Tung",
+        "alternate_names": [
+          "Lei Tung",
+          "Lei Tung Station",
+          "Lei-Tung",
+          "LeiTung",
+          "lei dung",
+          "lei tung",
+          "lei tung station",
+          "lei-dung",
+          "leidung",
+          "li dong",
+          "li-dong",
+          "lidong",
+          "利东",
+          "利东站",
+          "利東",
+          "利東站"
+        ],
+        "line": "SIL",
+        "order": 3
+      },
+      "id": 120
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.14868639554415,
+          22.242868288477673
+        ]
+      },
+      "properties": {
+        "id": 121,
+        "name": "South Horizons (海怡半島)",
+        "long_name": "海怡半島 South Horizons",
+        "alternate_names": [
+          "South Horizons",
+          "South Horizons Station",
+          "South-Horizons",
+          "SouthHorizons",
+          "hai yi ban dao",
+          "hai-yi-ban-dao",
+          "haiyibandao",
+          "hoi ji bun dou",
+          "hoi-ji-bun-dou",
+          "hoijibundou",
+          "south horizons",
+          "south horizons station",
+          "海怡半岛",
+          "海怡半岛站",
+          "海怡半島",
+          "海怡半島站"
+        ],
+        "line": "SIL",
+        "order": 4
+      },
+      "id": 121
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.16464643004569,
+          22.304326729979785
+        ]
+      },
+      "properties": {
+        "id": 122,
+        "name": "Hong Kong West Kowloon (香港西九龍)",
+        "long_name": "香港西九龍 Hong Kong West Kowloon",
+        "alternate_names": [
+          "Hong Kong West Kowloon",
+          "Hong Kong West Kowloon Station",
+          "Hong-Kong-West-Kowloon",
+          "HongKongWestKowloon",
+          "West Kowloon",
+          "West Kowloon Station",
+          "hoeng gong sai gau lung",
+          "hoeng-gong-sai-gau-lung",
+          "hoenggongsaigaulung",
+          "hong kong west kowloon",
+          "hong kong west kowloon station",
+          "west kowloon",
+          "west kowloon station",
+          "xiang gang xi jiu long",
+          "xiang-gang-xi-jiu-long",
+          "xianggangxijiulong",
+          "香港西九龍",
+          "香港西九龍站",
+          "香港西九龙",
+          "香港西九龙站"
+        ],
+        "line": "XRL",
+        "order": 0
+      },
+      "id": 122
+    }
+  ],
+  "properties": {
+    "totalStations": 122,
+    "stationsPerLine": {
+      "EAL": 16,
+      "TCL": 8,
+      "TML": 27,
+      "AEL": 5,
+      "DRL": 2,
+      "KTL": 17,
+      "TWL": 16,
+      "ISL": 17,
+      "TKL": 8,
+      "SIL": 5,
+      "XRL": 1
+    }
+  }
+}

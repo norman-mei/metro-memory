@@ -780,7 +780,7 @@
         "line": "NewYorkSubwayM",
         "name": "M",
         "color": "#FF6319",
-        "order": 16
+        "order": 14
       }
     },
     {
@@ -10432,7 +10432,7 @@
         "line": "NewYorkSubwayF",
         "name": "F",
         "color": "#FF6319",
-        "order": 14
+        "order": 16
       }
     },
     {
@@ -19239,6 +19239,10 @@
           [
             -74.001877,
             40.755958
+          ],
+          [
+            -73.99595460026903,
+            40.75900808933514
           ],
           [
             -73.999379,
@@ -31106,7 +31110,7 @@
       },
       "properties": {
         "line": "AirTrainJFKHowardBeach",
-        "name": "AirTrain JFK \u2013 Howard Beach",
+        "name": "AirTrain JFK – Howard Beach",
         "color": "#009E58",
         "order": 79
       }
@@ -31152,7 +31156,7 @@
       },
       "properties": {
         "line": "AirTrainJFKJamaica",
-        "name": "AirTrain JFK \u2013 Jamaica",
+        "name": "AirTrain JFK – Jamaica",
         "color": "#EF3941",
         "order": 80
       }
@@ -31190,7 +31194,7 @@
       },
       "properties": {
         "line": "AirTrainJFKAllTerminals",
-        "name": "AirTrain JFK \u2013 All Terminals Loop",
+        "name": "AirTrain JFK – All Terminals Loop",
         "color": "#FDB827",
         "order": 81
       }

@@ -1,0 +1,79 @@
+{
+  "EAL": {
+    "name": "East Rail Line (EAL)",
+    "color": "#53B7E8",
+    "backgroundColor": "#2D647F",
+    "textColor": "#FFFFFF",
+    "order": 0
+  },
+  "TCL": {
+    "name": "Tung Chung Line (TCL)",
+    "color": "#F7943E",
+    "backgroundColor": "#875122",
+    "textColor": "#FFFFFF",
+    "order": 1
+  },
+  "TML": {
+    "name": "Tuen Ma Line (TML)",
+    "color": "#923011",
+    "backgroundColor": "#501A09",
+    "textColor": "#FFFFFF",
+    "order": 2
+  },
+  "AEL": {
+    "name": "Airport Express (AEL)",
+    "color": "#00888A",
+    "backgroundColor": "#004A4B",
+    "textColor": "#FFFFFF",
+    "order": 3
+  },
+  "DRL": {
+    "name": "Disneyland Resort Line (DRL)",
+    "color": "#F173AC",
+    "backgroundColor": "#843F5E",
+    "textColor": "#FFFFFF",
+    "order": 4
+  },
+  "KTL": {
+    "name": "Kwun Tong Line (KTL)",
+    "color": "#00AB4E",
+    "backgroundColor": "#005E2A",
+    "textColor": "#FFFFFF",
+    "order": 5
+  },
+  "TWL": {
+    "name": "Tsuen Wan Line (TWL)",
+    "color": "#ED1D24",
+    "backgroundColor": "#820F13",
+    "textColor": "#FFFFFF",
+    "order": 6
+  },
+  "ISL": {
+    "name": "Island Line (ISL)",
+    "color": "#007DC5",
+    "backgroundColor": "#00446C",
+    "textColor": "#FFFFFF",
+    "order": 7
+  },
+  "TKL": {
+    "name": "Tseung Kwan O Line (TKL)",
+    "color": "#7D499D",
+    "backgroundColor": "#442856",
+    "textColor": "#FFFFFF",
+    "order": 8
+  },
+  "SIL": {
+    "name": "South Island Line (SIL)",
+    "color": "#BAC429",
+    "backgroundColor": "#666B16",
+    "textColor": "#000000",
+    "order": 9
+  },
+  "XRL": {
+    "name": "Express Rail Link (XRL)",
+    "color": "#BBB0A3",
+    "backgroundColor": "#666059",
+    "textColor": "#FFFFFF",
+    "order": 10
+  }
+}

@@ -4211,7 +4211,7 @@
       },
       "properties": {
         "id": 381,
-        "name": "E 143 St - St Mary'S St",
+        "name": "E 143 St - St Mary's St",
         "line": "NewYorkSubway6",
         "order": 66
       },
@@ -7248,7 +7248,7 @@
       },
       "properties": {
         "id": 668,
-        "name": "Briarwood - Van Wyck Blvd",
+        "name": "Briarwood",
         "line": "NewYorkSubwayE",
         "order": 22
       },
@@ -8843,7 +8843,7 @@
       },
       "properties": {
         "id": 823,
-        "name": "W 8 St - Ny Aquarium",
+        "name": "W 8 St - NY Aquarium",
         "line": "NewYorkSubwayF",
         "order": 11
       },
@@ -9378,8 +9378,8 @@
       "properties": {
         "id": 854,
         "name": "57 St",
-        "line": "NewYorkSubwayF",
-        "order": 169
+        "line": "NewYorkSubwayM",
+        "order": 97
       },
       "id": 854
     },
@@ -9395,8 +9395,8 @@
       "properties": {
         "id": 855,
         "name": "Lexington Av/63 St",
-        "line": "NewYorkSubwayF",
-        "order": 181
+        "line": "NewYorkSubwayM",
+        "order": 90
       },
       "id": 855
     },
@@ -9412,8 +9412,8 @@
       "properties": {
         "id": 856,
         "name": "Roosevelt Island",
-        "line": "NewYorkSubwayF",
-        "order": 183
+        "line": "NewYorkSubwayM",
+        "order": 82
       },
       "id": 856
     },
@@ -9429,8 +9429,8 @@
       "properties": {
         "id": 857,
         "name": "21 St - Queensbridge",
-        "line": "NewYorkSubwayF",
-        "order": 185
+        "line": "NewYorkSubwayM",
+        "order": 80
       },
       "id": 857
     },
@@ -9615,7 +9615,7 @@
       },
       "properties": {
         "id": 911,
-        "name": "W 8 St - Ny Aquarium",
+        "name": "W 8 St - NY Aquarium",
         "line": "NewYorkSubwayFX",
         "order": 11
       },
@@ -10436,8 +10436,8 @@
       "properties": {
         "id": 998,
         "name": "Queens Plaza",
-        "line": "NewYorkSubwayM",
-        "order": 75
+        "line": "NewYorkSubwayF",
+        "order": 190
       },
       "id": 998
     },
@@ -10453,8 +10453,8 @@
       "properties": {
         "id": 999,
         "name": "Court Sq",
-        "line": "NewYorkSubwayM",
-        "order": 80
+        "line": "NewYorkSubwayF",
+        "order": 185
       },
       "id": 999
     },
@@ -10470,8 +10470,8 @@
       "properties": {
         "id": 1000,
         "name": "Lexington Av/53 St",
-        "line": "NewYorkSubwayM",
-        "order": 93
+        "line": "NewYorkSubwayF",
+        "order": 175
       },
       "id": 1000
     },
@@ -10487,8 +10487,8 @@
       "properties": {
         "id": 1001,
         "name": "5 Av/53 St",
-        "line": "NewYorkSubwayM",
-        "order": 94
+        "line": "NewYorkSubwayF",
+        "order": 170
       },
       "id": 1001
     },
@@ -13720,7 +13720,7 @@
       },
       "properties": {
         "id": 1190,
-        "name": "W 8 St - Ny Aquarium",
+        "name": "W 8 St - NY Aquarium",
         "line": "NewYorkSubwayQ",
         "order": 122
       },
@@ -15796,8 +15796,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -73.8347,
-          40.6721
+          -73.83593506128234,
+          40.67215764159245
         ]
       },
       "properties": {
@@ -20929,8 +20929,8 @@
         "line": "NJTBergenCounty",
         "order": 600,
         "alternate_names": [
-          "Ramsey Route 17",
-          "Route 17 Ramsey"
+          "Ramsey Rte 17",
+          "Rte 17 Ramsey"
         ]
       },
       "id": 1643
@@ -21303,7 +21303,7 @@
       },
       "properties": {
         "id": 1665,
-        "name": "Wayne Route 23 Transit Center",
+        "name": "Wayne Rte 23 Transit Center",
         "line": "NJTMontclairBoonton",
         "order": 600
       },
@@ -23190,7 +23190,7 @@
       },
       "properties": {
         "id": 1799,
-        "name": "Pennsauken/Route 73",
+        "name": "Pennsauken/Rte 73",
         "line": "NJTLRRiverLine",
         "order": 610
       },
@@ -23363,7 +23363,7 @@
       },
       "properties": {
         "id": 1810,
-        "name": "P3 Station",
+        "name": "P3",
         "line": "AirTrainEWR",
         "order": 700,
         "alternate_names": [
@@ -23383,7 +23383,7 @@
       },
       "properties": {
         "id": 1811,
-        "name": "P4 Station",
+        "name": "P4",
         "line": "AirTrainEWR",
         "order": 700,
         "alternate_names": [
@@ -26707,8 +26707,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -73.8347,
-          40.6721
+          -73.83593506128234,
+          40.67215764159245
         ]
       },
       "properties": {
@@ -27176,8 +27176,8 @@
         "line": "NJTMainLine",
         "order": 600,
         "alternate_names": [
-          "Ramsey Route 17",
-          "Route 17 Ramsey"
+          "Ramsey Rte 17",
+          "Rte 17 Ramsey"
         ]
       },
       "id": 2038
@@ -27885,6 +27885,91 @@
         ]
       },
       "id": 2078
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.810711,
+          40.705465
+        ]
+      },
+      "properties": {
+        "id": 2079,
+        "name": "Sutphin Blvd",
+        "line": "NewYorkSubwayE",
+        "order": 24
+      },
+      "id": 2079
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.803326,
+          40.707564
+        ]
+      },
+      "properties": {
+        "id": 2080,
+        "name": "Parsons Blvd",
+        "line": "NewYorkSubwayE",
+        "order": 26
+      },
+      "id": 2080
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.793599,
+          40.710462
+        ]
+      },
+      "properties": {
+        "id": 2081,
+        "name": "169 St",
+        "line": "NewYorkSubwayE",
+        "order": 28
+      },
+      "id": 2081
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.783817,
+          40.712646
+        ]
+      },
+      "properties": {
+        "id": 2082,
+        "name": "Jamaica - 179 St",
+        "line": "NewYorkSubwayE",
+        "order": 29
+      },
+      "id": 2082
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.99595460026903,
+          40.75900808933514
+        ]
+      },
+      "properties": {
+        "id": 2083,
+        "name": "10 Av",
+        "line": "NewYorkSubway7",
+        "order": 3
+      },
+      "id": 2083
     }
   ],
   "properties": {
