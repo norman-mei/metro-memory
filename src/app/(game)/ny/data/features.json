@@ -1508,213 +1508,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -74.006886,
-          40.719318
-        ]
-      },
-      "properties": {
-        "id": 108,
-        "name": "Franklin St",
-        "line": "NewYorkSubway2",
-        "order": 81
-      },
-      "id": 108
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -74.006288,
-          40.722855
-        ]
-      },
-      "properties": {
-        "id": 109,
-        "name": "Canal St",
-        "line": "NewYorkSubway2",
-        "order": 83
-      },
-      "id": 109
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -74.005376,
-          40.728252
-        ]
-      },
-      "properties": {
-        "id": 110,
-        "name": "Houston St",
-        "line": "NewYorkSubway2",
-        "order": 84
-      },
-      "id": 110
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -74.00291,
-          40.733423
-        ]
-      },
-      "properties": {
-        "id": 111,
-        "name": "Christopher St - Stonewall",
-        "line": "NewYorkSubway2",
-        "order": 88,
-        "alternate_names": [
-          "Christopher St - Sheridan Sq"
-        ]
-      },
-      "id": 111
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -73.99786,
-          40.741035
-        ]
-      },
-      "properties": {
-        "id": 113,
-        "name": "18 St",
-        "line": "NewYorkSubway2",
-        "order": 92
-      },
-      "id": 113
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -73.995645,
-          40.744076
-        ]
-      },
-      "properties": {
-        "id": 114,
-        "name": "23 St",
-        "line": "NewYorkSubway2",
-        "order": 93
-      },
-      "id": 114
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -73.993359,
-          40.747213
-        ]
-      },
-      "properties": {
-        "id": 115,
-        "name": "28 St",
-        "line": "NewYorkSubway2",
-        "order": 94
-      },
-      "id": 115
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -73.983846,
-          40.761727
-        ]
-      },
-      "properties": {
-        "id": 118,
-        "name": "50 St",
-        "line": "NewYorkSubway2",
-        "order": 103
-      },
-      "id": 118
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -73.981933,
-          40.768246
-        ]
-      },
-      "properties": {
-        "id": 119,
-        "name": "59 St - Columbus Circle",
-        "line": "NewYorkSubway2",
-        "order": 111
-      },
-      "id": 119
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -73.982195,
-          40.77344
-        ]
-      },
-      "properties": {
-        "id": 120,
-        "name": "66 St - Lincoln Center",
-        "line": "NewYorkSubway2",
-        "order": 114
-      },
-      "id": 120
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -73.979917,
-          40.783934
-        ]
-      },
-      "properties": {
-        "id": 122,
-        "name": "79 St",
-        "line": "NewYorkSubway2",
-        "order": 123
-      },
-      "id": 122
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -73.976212,
-          40.788641
-        ]
-      },
-      "properties": {
-        "id": 123,
-        "name": "86 St",
-        "line": "NewYorkSubway2",
-        "order": 126
-      },
-      "id": 123
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -73.93647,
           40.82388
         ]
@@ -2561,74 +2354,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -73.941614,
-          40.798628
-        ]
-      },
-      "properties": {
-        "id": 198,
-        "name": "116 St",
-        "line": "NewYorkSubway4",
-        "order": 57
-      },
-      "id": 198
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -73.944249,
-          40.795019
-        ]
-      },
-      "properties": {
-        "id": 199,
-        "name": "110 St",
-        "line": "NewYorkSubway4",
-        "order": 58
-      },
-      "id": 199
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -73.947476,
-          40.790599
-        ]
-      },
-      "properties": {
-        "id": 200,
-        "name": "103 St",
-        "line": "NewYorkSubway4",
-        "order": 59
-      },
-      "id": 200
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -73.951072,
-          40.785673
-        ]
-      },
-      "properties": {
-        "id": 201,
-        "name": "96 St",
-        "line": "NewYorkSubway4",
-        "order": 60
-      },
-      "id": 201
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -73.955585,
           40.77949
         ]
@@ -2640,40 +2365,6 @@
         "order": 61
       },
       "id": 202
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -73.95987,
-          40.773618
-        ]
-      },
-      "properties": {
-        "id": 203,
-        "name": "77 St",
-        "line": "NewYorkSubway4",
-        "order": 62
-      },
-      "id": 203
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -73.963868,
-          40.76814
-        ]
-      },
-      "properties": {
-        "id": 204,
-        "name": "68 St - Hunter College",
-        "line": "NewYorkSubway4",
-        "order": 63
-      },
-      "id": 204
     },
     {
       "type": "Feature",
@@ -2697,23 +2388,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -73.97192,
-          40.757107
-        ]
-      },
-      "properties": {
-        "id": 206,
-        "name": "51 St",
-        "line": "NewYorkSubway4",
-        "order": 66
-      },
-      "id": 206
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -73.976851,
           40.751783
         ]
@@ -2731,57 +2405,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -73.982069,
-          40.746078
-        ]
-      },
-      "properties": {
-        "id": 208,
-        "name": "33 St",
-        "line": "NewYorkSubway4",
-        "order": 74
-      },
-      "id": 208
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -73.984262,
-          40.743069
-        ]
-      },
-      "properties": {
-        "id": 209,
-        "name": "28 St",
-        "line": "NewYorkSubway4",
-        "order": 75
-      },
-      "id": 209
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -73.986598,
-          40.739864
-        ]
-      },
-      "properties": {
-        "id": 210,
-        "name": "23 St",
-        "line": "NewYorkSubway4",
-        "order": 76
-      },
-      "id": 210
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -73.989938,
           40.734674
         ]
@@ -2793,74 +2416,6 @@
         "order": 80
       },
       "id": 211
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -73.991073,
-          40.730057
-        ]
-      },
-      "properties": {
-        "id": 212,
-        "name": "Astor Pl",
-        "line": "NewYorkSubway4",
-        "order": 87
-      },
-      "id": 212
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -73.994659,
-          40.725915
-        ]
-      },
-      "properties": {
-        "id": 213,
-        "name": "Bleecker St",
-        "line": "NewYorkSubway4",
-        "order": 91
-      },
-      "id": 213
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -73.997148,
-          40.722304
-        ]
-      },
-      "properties": {
-        "id": 214,
-        "name": "Spring St",
-        "line": "NewYorkSubway4",
-        "order": 96
-      },
-      "id": 214
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -74.000182,
-          40.718797
-        ]
-      },
-      "properties": {
-        "id": 215,
-        "name": "Canal St",
-        "line": "NewYorkSubway4",
-        "order": 99
-      },
-      "id": 215
     },
     {
       "type": "Feature",
@@ -3102,125 +2657,6 @@
         "order": 159
       },
       "id": 229
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -73.922608,
-          40.664719
-        ]
-      },
-      "properties": {
-        "id": 230,
-        "name": "Sutter Av - Rutland Rd",
-        "line": "NewYorkSubway4",
-        "order": 168
-      },
-      "id": 230
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -73.916326,
-          40.661451
-        ]
-      },
-      "properties": {
-        "id": 231,
-        "name": "Saratoga Av",
-        "line": "NewYorkSubway4",
-        "order": 175
-      },
-      "id": 231
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -73.908945,
-          40.662546
-        ]
-      },
-      "properties": {
-        "id": 232,
-        "name": "Rockaway Av",
-        "line": "NewYorkSubway4",
-        "order": 176
-      },
-      "id": 232
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -73.902446,
-          40.66351
-        ]
-      },
-      "properties": {
-        "id": 233,
-        "name": "Junius St",
-        "line": "NewYorkSubway4",
-        "order": 177
-      },
-      "id": 233
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -73.894894,
-          40.664631
-        ]
-      },
-      "properties": {
-        "id": 234,
-        "name": "Pennsylvania Av",
-        "line": "NewYorkSubway4",
-        "order": 178
-      },
-      "id": 234
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -73.889394,
-          40.665446
-        ]
-      },
-      "properties": {
-        "id": 235,
-        "name": "Van Siclen Av",
-        "line": "NewYorkSubway4",
-        "order": 179
-      },
-      "id": 235
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -73.884079,
-          40.666235
-        ]
-      },
-      "properties": {
-        "id": 236,
-        "name": "New Lots Av",
-        "line": "NewYorkSubway4",
-        "order": 180
-      },
-      "id": 236
     },
     {
       "type": "Feature",
@@ -11311,7 +10747,10 @@
         "id": 1049,
         "name": "85 St - Forest Pkwy",
         "line": "NewYorkSubwayJ",
-        "order": 55
+        "order": 55,
+        "alternate_names": [
+          "85 St"
+        ]
       },
       "id": 1049
     },
@@ -11326,9 +10765,12 @@
       },
       "properties": {
         "id": 1050,
-        "name": "75 St",
+        "name": "75 St - Elderts Ln",
         "line": "NewYorkSubwayJ",
-        "order": 58
+        "order": 58,
+        "alternate_names": [
+          "75 St"
+        ]
       },
       "id": 1050
     },
@@ -11980,9 +11422,12 @@
       },
       "properties": {
         "id": 1088,
-        "name": "75 St",
+        "name": "75 St - Elderts Ln",
         "line": "NewYorkSubwayZ",
-        "order": 69
+        "order": 69,
+        "alternate_names": [
+          "75 St"
+        ]
       },
       "id": 1088
     },
@@ -12708,40 +12153,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -73.988698,
-          40.745495
-        ]
-      },
-      "properties": {
-        "id": 1131,
-        "name": "28 St",
-        "line": "NewYorkSubwayN",
-        "order": 53
-      },
-      "id": 1131
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -73.989344,
-          40.741303
-        ]
-      },
-      "properties": {
-        "id": 1132,
-        "name": "23 St",
-        "line": "NewYorkSubwayN",
-        "order": 55
-      },
-      "id": 1132
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -73.990572,
           40.735736
         ]
@@ -12753,40 +12164,6 @@
         "order": 59
       },
       "id": 1133
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -73.992628,
-          40.730328
-        ]
-      },
-      "properties": {
-        "id": 1134,
-        "name": "8 St - NYU",
-        "line": "NewYorkSubwayN",
-        "order": 63
-      },
-      "id": 1134
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -73.997702,
-          40.724329
-        ]
-      },
-      "properties": {
-        "id": 1135,
-        "name": "Prince St",
-        "line": "NewYorkSubwayN",
-        "order": 64
-      },
-      "id": 1135
     },
     {
       "type": "Feature",
@@ -12810,23 +12187,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -74.00698,
-          40.713283
-        ]
-      },
-      "properties": {
-        "id": 1137,
-        "name": "City Hall",
-        "line": "NewYorkSubwayN",
-        "order": 83
-      },
-      "id": 1137
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -74.01097,
           40.710761
         ]
@@ -12838,91 +12198,6 @@
         "order": 95
       },
       "id": 1138
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -74.013345,
-          40.707221
-        ]
-      },
-      "properties": {
-        "id": 1139,
-        "name": "Rector St",
-        "line": "NewYorkSubwayN",
-        "order": 97
-      },
-      "id": 1139
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -74.012981,
-          40.703089
-        ]
-      },
-      "properties": {
-        "id": 1140,
-        "name": "Whitehall St",
-        "line": "NewYorkSubwayN",
-        "order": 107
-      },
-      "id": 1140
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -73.99178,
-          40.694093
-        ]
-      },
-      "properties": {
-        "id": 1141,
-        "name": "Court St",
-        "line": "NewYorkSubwayN",
-        "order": 117
-      },
-      "id": 1141
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -73.985942,
-          40.692181
-        ]
-      },
-      "properties": {
-        "id": 1142,
-        "name": "Jay St - Metrotech",
-        "line": "NewYorkSubwayN",
-        "order": 128
-      },
-      "id": 1142
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -73.981833,
-          40.690632
-        ]
-      },
-      "properties": {
-        "id": 1143,
-        "name": "Dekalb Av",
-        "line": "NewYorkSubwayN",
-        "order": 134
-      },
-      "id": 1143
     },
     {
       "type": "Feature",
@@ -12946,74 +12221,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -73.983117,
-          40.677319
-        ]
-      },
-      "properties": {
-        "id": 1145,
-        "name": "Union St",
-        "line": "NewYorkSubwayN",
-        "order": 146
-      },
-      "id": 1145
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -73.988308,
-          40.67085
-        ]
-      },
-      "properties": {
-        "id": 1146,
-        "name": "4 Av - 9 St",
-        "line": "NewYorkSubwayN",
-        "order": 148
-      },
-      "id": 1146
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -73.992872,
-          40.665414
-        ]
-      },
-      "properties": {
-        "id": 1147,
-        "name": "Prospect Av",
-        "line": "NewYorkSubwayN",
-        "order": 150
-      },
-      "id": 1147
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -73.99809,
-          40.660397
-        ]
-      },
-      "properties": {
-        "id": 1148,
-        "name": "25 St",
-        "line": "NewYorkSubwayN",
-        "order": 152
-      },
-      "id": 1148
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -74.003552,
           40.655146
         ]
@@ -13025,40 +12232,6 @@
         "order": 153
       },
       "id": 1149
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -74.010006,
-          40.648939
-        ]
-      },
-      "properties": {
-        "id": 1150,
-        "name": "45 St",
-        "line": "NewYorkSubwayN",
-        "order": 154
-      },
-      "id": 1150
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -74.014031,
-          40.645067
-        ]
-      },
-      "properties": {
-        "id": 1151,
-        "name": "53 St",
-        "line": "NewYorkSubwayN",
-        "order": 155
-      },
-      "id": 1151
     },
     {
       "type": "Feature",
@@ -19114,15 +18287,18 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -72.91585513,
-          40.82561542
+          -72.86723117811046,
+          40.847981856312074
         ]
       },
       "properties": {
         "id": 1537,
-        "name": "Yaphank",
+        "name": "East Yaphank",
         "line": "LIRRGreenport",
-        "order": 400
+        "order": 400,
+        "alternate_names": [
+          "Yaphank"
+        ]
       },
       "id": 1537
     },
@@ -22070,7 +21246,13 @@
         "id": 1710,
         "name": "Newark Airport",
         "line": "NJTNorthEastCorridor",
-        "order": 600
+        "order": 600,
+        "alternate_names": [
+          "EWR",
+          "Newark Liberty International Airport",
+          "Newark Liberty Airport",
+          "Newark Liberty Intl Airport"
+        ]
       },
       "id": 1710
     },
@@ -23303,8 +22485,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -74.18264,
-          40.6875
+          -74.1907811870664,
+          40.68737598093012
         ]
       },
       "properties": {
@@ -23313,7 +22495,10 @@
         "line": "AirTrainEWR",
         "order": 700,
         "alternate_names": [
-          "Terminal Av"
+          "EWR Terminal A",
+          "Newark Terminal A",
+          "Newark Airport Terminal A",
+          "Newark Liberty Terminal A"
         ]
       },
       "id": 1807
@@ -23331,7 +22516,13 @@
         "id": 1808,
         "name": "Terminal B",
         "line": "AirTrainEWR",
-        "order": 700
+        "order": 700,
+        "alternate_names": [
+          "EWR Terminal B",
+          "Newark Terminal B",
+          "Newark Airport Terminal B",
+          "Newark Liberty Terminal B"
+        ]
       },
       "id": 1808
     },
@@ -23348,29 +22539,15 @@
         "id": 1809,
         "name": "Terminal C",
         "line": "AirTrainEWR",
-        "order": 700
-      },
-      "id": 1809
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -74.18737,
-          40.689625
-        ]
-      },
-      "properties": {
-        "id": 1810,
-        "name": "P3",
-        "line": "AirTrainEWR",
         "order": 700,
         "alternate_names": [
-          "P3"
+          "EWR Terminal C",
+          "Newark Terminal C",
+          "Newark Airport Terminal C",
+          "Newark Liberty Terminal C"
         ]
       },
-      "id": 1810
+      "id": 1809
     },
     {
       "type": "Feature",
@@ -23493,7 +22670,10 @@
         "id": 1817,
         "name": "Terminal 5",
         "line": "AirTrainJFKAllTerminals",
-        "order": 710
+        "order": 710,
+        "alternate_names": [
+          "JFK Terminal 5"
+        ]
       },
       "id": 1817
     },
@@ -23510,7 +22690,10 @@
         "id": 1818,
         "name": "Terminal 4",
         "line": "AirTrainJFKAllTerminals",
-        "order": 710
+        "order": 710,
+        "alternate_names": [
+          "JFK Terminal 4"
+        ]
       },
       "id": 1818
     },
@@ -23527,7 +22710,10 @@
         "id": 1819,
         "name": "Terminal 8",
         "line": "AirTrainJFKAllTerminals",
-        "order": 710
+        "order": 710,
+        "alternate_names": [
+          "JFK Terminal 8"
+        ]
       },
       "id": 1819
     },
@@ -23544,7 +22730,10 @@
         "id": 1820,
         "name": "Terminal 1",
         "line": "AirTrainJFKAllTerminals",
-        "order": 710
+        "order": 710,
+        "alternate_names": [
+          "JFK Terminal 1"
+        ]
       },
       "id": 1820
     },
@@ -23561,26 +22750,12 @@
         "id": 1821,
         "name": "Terminal 7",
         "line": "AirTrainJFKAllTerminals",
-        "order": 710
-      },
-      "id": 1821
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -73.787291,
-          40.642004
+        "order": 710,
+        "alternate_names": [
+          "JFK Terminal 7"
         ]
       },
-      "properties": {
-        "id": 1822,
-        "name": "Terminal 2",
-        "line": "AirTrainJFKAllTerminals",
-        "order": 710
-      },
-      "id": 1822
+      "id": 1821
     },
     {
       "type": "Feature",
@@ -25967,7 +25142,10 @@
         "id": 1967,
         "name": "Terminal 5",
         "line": "AirTrainJFKHowardBeach",
-        "order": 710
+        "order": 710,
+        "alternate_names": [
+          "JFK Terminal 5"
+        ]
       },
       "id": 1967
     },
@@ -25984,7 +25162,10 @@
         "id": 1968,
         "name": "Terminal 4",
         "line": "AirTrainJFKHowardBeach",
-        "order": 710
+        "order": 710,
+        "alternate_names": [
+          "JFK Terminal 4"
+        ]
       },
       "id": 1968
     },
@@ -26001,7 +25182,10 @@
         "id": 1969,
         "name": "Terminal 8",
         "line": "AirTrainJFKHowardBeach",
-        "order": 710
+        "order": 710,
+        "alternate_names": [
+          "JFK Terminal 8"
+        ]
       },
       "id": 1969
     },
@@ -26018,7 +25202,10 @@
         "id": 1970,
         "name": "Terminal 1",
         "line": "AirTrainJFKHowardBeach",
-        "order": 710
+        "order": 710,
+        "alternate_names": [
+          "JFK Terminal 1"
+        ]
       },
       "id": 1970
     },
@@ -26035,26 +25222,12 @@
         "id": 1971,
         "name": "Terminal 7",
         "line": "AirTrainJFKHowardBeach",
-        "order": 710
-      },
-      "id": 1971
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -73.787291,
-          40.642004
+        "order": 710,
+        "alternate_names": [
+          "JFK Terminal 7"
         ]
       },
-      "properties": {
-        "id": 1972,
-        "name": "Terminal 2",
-        "line": "AirTrainJFKHowardBeach",
-        "order": 710
-      },
-      "id": 1972
+      "id": 1971
     },
     {
       "type": "Feature",
@@ -26086,7 +25259,10 @@
         "id": 1974,
         "name": "Terminal 5",
         "line": "AirTrainJFKJamaica",
-        "order": 710
+        "order": 710,
+        "alternate_names": [
+          "JFK Terminal 5"
+        ]
       },
       "id": 1974
     },
@@ -26103,7 +25279,10 @@
         "id": 1975,
         "name": "Terminal 4",
         "line": "AirTrainJFKJamaica",
-        "order": 710
+        "order": 710,
+        "alternate_names": [
+          "JFK Terminal 4"
+        ]
       },
       "id": 1975
     },
@@ -26120,7 +25299,10 @@
         "id": 1976,
         "name": "Terminal 8",
         "line": "AirTrainJFKJamaica",
-        "order": 710
+        "order": 710,
+        "alternate_names": [
+          "JFK Terminal 8"
+        ]
       },
       "id": 1976
     },
@@ -26137,7 +25319,10 @@
         "id": 1977,
         "name": "Terminal 1",
         "line": "AirTrainJFKJamaica",
-        "order": 710
+        "order": 710,
+        "alternate_names": [
+          "JFK Terminal 1"
+        ]
       },
       "id": 1977
     },
@@ -26154,26 +25339,12 @@
         "id": 1978,
         "name": "Terminal 7",
         "line": "AirTrainJFKJamaica",
-        "order": 710
-      },
-      "id": 1978
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -73.787291,
-          40.642004
+        "order": 710,
+        "alternate_names": [
+          "JFK Terminal 7"
         ]
       },
-      "properties": {
-        "id": 1979,
-        "name": "Terminal 2",
-        "line": "AirTrainJFKJamaica",
-        "order": 710
-      },
-      "id": 1979
+      "id": 1978
     },
     {
       "type": "Feature",
@@ -27891,74 +27062,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -73.810711,
-          40.705465
-        ]
-      },
-      "properties": {
-        "id": 2079,
-        "name": "Sutphin Blvd",
-        "line": "NewYorkSubwayE",
-        "order": 24
-      },
-      "id": 2079
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -73.803326,
-          40.707564
-        ]
-      },
-      "properties": {
-        "id": 2080,
-        "name": "Parsons Blvd",
-        "line": "NewYorkSubwayE",
-        "order": 26
-      },
-      "id": 2080
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -73.793599,
-          40.710462
-        ]
-      },
-      "properties": {
-        "id": 2081,
-        "name": "169 St",
-        "line": "NewYorkSubwayE",
-        "order": 28
-      },
-      "id": 2081
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -73.783817,
-          40.712646
-        ]
-      },
-      "properties": {
-        "id": 2082,
-        "name": "Jamaica - 179 St",
-        "line": "NewYorkSubwayE",
-        "order": 29
-      },
-      "id": 2082
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -73.99595460026903,
           40.75900808933514
         ]
@@ -27970,94 +27073,129 @@
         "order": 3
       },
       "id": 2083
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.96422186789042,
+          40.761222859403325
+        ]
+      },
+      "properties": {
+        "id": 2084,
+        "name": "Manhattan",
+        "line": "RIOCRooseveltIslandTram",
+        "order": 0
+      },
+      "id": 2084
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.95409525664131,
+          40.75733425307765
+        ]
+      },
+      "properties": {
+        "id": 2085,
+        "name": "Roosevelt Island",
+        "line": "RIOCRooseveltIslandTram",
+        "order": 1
+      },
+      "id": 2085
     }
   ],
   "properties": {
-    "totalStations": 1624,
+    "totalStations": 1574,
     "stationsPerLine": {
-      "AirTrainEWR": 6,
-      "AirTrainJFKAllTerminals": 6,
-      "AirTrainJFKHowardBeach": 9,
-      "AirTrainJFKJamaica": 8,
-      "CTRailHartfordLine": 12,
-      "CTRailShoreLineEast": 24,
-      "IBX": 19,
-      "LIRRBabylon": 14,
-      "LIRRBelmont": 2,
-      "LIRRCityTerminalZone": 12,
-      "LIRRFarRockaway": 12,
-      "LIRRGreenport": 7,
-      "LIRRHempstead": 11,
-      "LIRRLongBeach": 7,
-      "LIRRMontauk": 17,
-      "LIRROysterBay": 11,
-      "LIRRPortJefferson": 17,
-      "LIRRPortWashington": 12,
-      "LIRRRonkonkoma": 9,
-      "LIRRWestHempstead": 7,
-      "MNRRDanbury": 7,
-      "MNRRHarlem": 38,
-      "MNRRHudson": 33,
-      "MNRRHudsonPSA": 3,
-      "MNRRNewCanaan": 4,
-      "MNRRNewHaven": 31,
-      "MNRRNewHavenPSA": 5,
-      "MNRRWaterbury": 6,
-      "NJTAtlanticCity": 9,
-      "NJTBergenCounty": 17,
-      "NJTGladstone": 27,
-      "NJTLR8thStHoboken": 18,
-      "NJTLRBayonneFlyer": 10,
-      "NJTLRHobokenTonnelle": 7,
-      "NJTLRNewark": 12,
-      "NJTLRNewarkBroad": 7,
-      "NJTLRRiverLine": 21,
-      "NJTLRWestSideTonnelle": 18,
-      "NJTLackawannaCutOff": 10,
-      "NJTMainLine": 17,
-      "NJTMeadowlands": 3,
-      "NJTMontclairBoonton": 27,
-      "NJTMorrisEssex": 9,
-      "NJTNorthEastCorridor": 14,
-      "NJTNorthJerseyCoast": 22,
-      "NJTPascackValley": 18,
-      "NJTPortJervis": 7,
-      "NJTPrinceton": 2,
-      "NJTRaritanValley": 22,
       "NewYorkSubway1": 38,
-      "NewYorkSubway2": 61,
+      "NewYorkSubway2": 49,
       "NewYorkSubway3": 34,
-      "NewYorkSubway4": 54,
+      "NewYorkSubway4": 33,
       "NewYorkSubway5": 43,
       "NewYorkSubway6": 39,
       "NewYorkSubway6X": 33,
-      "NewYorkSubway7": 22,
+      "NewYorkSubway7": 23,
       "NewYorkSubway7X": 12,
       "NewYorkSubwayA": 40,
-      "NewYorkSubwayB": 37,
       "NewYorkSubwayC": 40,
-      "NewYorkSubwayD": 36,
       "NewYorkSubwayE": 22,
+      "NewYorkSubwayB": 37,
+      "NewYorkSubwayD": 36,
       "NewYorkSubwayF": 45,
-      "NewYorkSubwayFS": 4,
+      "NewYorkSubwayM": 45,
       "NewYorkSubwayFX": 39,
       "NewYorkSubwayG": 34,
-      "NewYorkSubwayGS": 2,
       "NewYorkSubwayJ": 30,
+      "NewYorkSubwayZ": 21,
       "NewYorkSubwayL": 24,
-      "NewYorkSubwayM": 45,
-      "NewYorkSubwayN": 45,
+      "NewYorkSubwayN": 29,
+      "NewYorkSubwayQ": 36,
+      "NewYorkSubwayR": 44,
+      "NewYorkSubwayW": 23,
+      "NewYorkSubwaySI": 21,
+      "NewYorkSubwayGS": 2,
+      "NewYorkSubwayFS": 4,
       "NewYorkSubwayPATHHob33": 6,
       "NewYorkSubwayPATHHobwtc": 4,
       "NewYorkSubwayPATHJsq33": 8,
       "NewYorkSubwayPATHNwkwtc": 6,
-      "NewYorkSubwayQ": 36,
-      "NewYorkSubwayR": 44,
-      "NewYorkSubwaySI": 21,
+      "MNRRHarlem": 38,
+      "LIRRFarRockaway": 12,
+      "LIRRHempstead": 11,
+      "MNRRNewHaven": 31,
+      "MNRRHudson": 33,
+      "LIRRCityTerminalZone": 12,
+      "LIRRPortWashington": 12,
+      "MNRRWaterbury": 6,
+      "LIRRPortJefferson": 17,
+      "LIRRRonkonkoma": 9,
+      "LIRRLongBeach": 7,
+      "LIRRBabylon": 14,
+      "MNRRDanbury": 7,
+      "LIRRBelmont": 2,
+      "LIRRMontauk": 17,
+      "LIRRGreenport": 7,
+      "LIRROysterBay": 11,
+      "LIRRWestHempstead": 7,
+      "MNRRNewCanaan": 4,
+      "NJTNorthJerseyCoast": 22,
+      "NJTGladstone": 27,
+      "NJTMontclairBoonton": 27,
+      "NJTAtlanticCity": 9,
+      "NJTBergenCounty": 17,
+      "NJTMainLine": 17,
+      "NJTPascackValley": 18,
+      "NJTNorthEastCorridor": 14,
+      "NJTPortJervis": 7,
+      "NJTRaritanValley": 22,
+      "NJTPrinceton": 2,
+      "NJTMeadowlands": 3,
+      "NJTMorrisEssex": 9,
+      "NJTLRNewark": 12,
+      "NJTLRNewarkBroad": 7,
+      "NJTLRRiverLine": 21,
+      "AirTrainEWR": 5,
+      "AirTrainJFKHowardBeach": 8,
+      "AirTrainJFKJamaica": 7,
+      "AirTrainJFKAllTerminals": 5,
+      "IBX": 19,
+      "MNRRNewHavenPSA": 5,
+      "NJTLR8thStHoboken": 18,
+      "NJTLRWestSideTonnelle": 18,
+      "NJTLRHobokenTonnelle": 7,
+      "NJTLRBayonneFlyer": 10,
+      "CTRailShoreLineEast": 24,
+      "CTRailHartfordLine": 12,
       "NewYorkSubwaySIExpress": 10,
+      "MNRRHudsonPSA": 3,
+      "NJTLackawannaCutOff": 10,
       "NewYorkSubwayT": 20,
-      "NewYorkSubwayW": 23,
-      "NewYorkSubwayZ": 21
+      "RIOCRooseveltIslandTram": 2
     }
   }
 }

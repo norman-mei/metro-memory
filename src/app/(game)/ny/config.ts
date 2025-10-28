@@ -198,6 +198,18 @@ export const LINE_GROUPS: LineGroup[] = [
     items: [{ type: 'separator' }],
   },
   {
+    title: 'Roosevelt Island Operating Corporation (RIOC)',
+    items: [
+      {
+        type: 'lines',
+        lines: ['RIOCRooseveltIslandTram'],
+      },
+    ],
+  },
+  {
+    items: [{ type: 'separator' }],
+  },
+  {
     title: 'New Jersey Transit (NJT)',
     items: [
       {

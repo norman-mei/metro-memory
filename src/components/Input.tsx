@@ -9,6 +9,7 @@ import { Feature, Point } from 'geojson'
 import useTranslation from '@/hooks/useTranslation'
 import useNormalizeString from '@/hooks/useNormalizeString'
 import usePushEvent from '@/hooks/usePushEvent'
+import { useConfig } from '@/lib/configContext'
 
 const Input = ({
   fuse,
@@ -37,6 +38,7 @@ const Input = ({
 }) => {
   const { t } = useTranslation()
   const normalizeString = useNormalizeString()
+  const { CITY_NAME } = useConfig()
   const [search, setSearch] = useState<string>('')
   const [wrong, setWrong] = useState<boolean>(false)
   const [success, setSuccess] = useState<boolean>(false)
@@ -60,6 +62,45 @@ const Input = ({
     [map, idMap],
   )
 
+  const stripOptionalPrefixes = useCallback(
+    (value: string) => {
+      if (CITY_NAME !== 'ny') {
+        return value
+      }
+      const prefixes = [
+        'astoria',
+        'norwood',
+        'harlem',
+        'union sq',
+        'union square',
+        'nyu',
+        'coney island',
+      ]
+
+      let result = value.trim()
+      let changed = true
+
+      while (changed) {
+        changed = false
+
+        for (const prefix of prefixes) {
+          const candidate = `${prefix} `
+          if (
+            result.startsWith(candidate) &&
+            result.length > candidate.length
+          ) {
+            result = result.slice(candidate.length).trim()
+            changed = true
+            break
+          }
+        }
+      }
+
+      return result
+    },
+    [CITY_NAME],
+  )
+
   const onKeyDown: KeyboardEventHandler<HTMLInputElement> = useCallback(
     (e) => {
       if (e.key !== 'Enter') return
@@ -68,7 +109,9 @@ const Input = ({
       e.preventDefault()
 
       try {
-        const sanitizedSearch = normalizeString(search)
+        const sanitizedSearch = stripOptionalPrefixes(
+          normalizeString(search),
+        )
         const results = fuse.search(sanitizedSearch)
         const foundSet = new Set(found || [])
         const candidateSet = new Set<number>()
@@ -207,6 +250,7 @@ const Input = ({
       zoomToStation,
       normalizeString,
       pushEvent,
+      stripOptionalPrefixes,
     ],
   )
 

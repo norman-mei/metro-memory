@@ -56,6 +56,15 @@ const MANUAL_ALTERNATE_NAMES: Record<string, string[]> = {
     'NY Penn Station',
     'NY Penn',
   ],
+  'Newark Airport': [
+    'EWR',
+    'Newark Liberty International Airport',
+    'Newark Liberty Airport',
+    'Newark Liberty Intl Airport',
+  ],
+  'Newark Penn Station': ['Newark Penn'],
+  'Grand Central - 42 St': ['Grand Central'],
+  'Grand Central': ['Grand Central - 42 St'],
   'Bedford Park Blvd - Lehman College': [
     'Bedford Park Blvd',
     'Bedford Pk Blvd',
@@ -81,20 +90,197 @@ const MANUAL_ALTERNATE_NAMES: Record<string, string[]> = {
   'Parsons Blvd': ['Parsons Boulevard'],
   'Jamaica - 179 St': ['179 St', '179 Street', 'Jamaica 179 St'],
   'P4': ['P4 Station'],
-  'P3': ['P3 Station'],
   "E 143 St - St Mary's St": ["E 143 St - St Marys St"],
   'Jackson Hts - Roosevelt Av': [
     'Jackson Heights - Roosevelt Av',
     'Jackson Heights - Roosevelt Avenue',
   ],
   '74 St - Broadway': ['74 Street - Broadway'],
+  '4 Av - 9 St': ['4 Av', '4 Ave', '4 Av 9 St', '4 Ave 9 St', '9 St'],
+  'Sutphin Blvd - Archer Av - JFK Airport': ['Jamaica Station'],
+  '110 St - Malcolm X Plaza': ['110 St Central Park North'],
+  'Terminal A': [
+    'EWR Terminal A',
+    'Newark Terminal A',
+    'Newark Airport Terminal A',
+    'Newark Liberty Terminal A',
+  ],
+  'Terminal B': [
+    'EWR Terminal B',
+    'Newark Terminal B',
+    'Newark Airport Terminal B',
+    'Newark Liberty Terminal B',
+  ],
+  'Terminal C': [
+    'EWR Terminal C',
+    'Newark Terminal C',
+    'Newark Airport Terminal C',
+    'Newark Liberty Terminal C',
+  ],
+  'Terminal 1': ['JFK Terminal 1'],
+  'Terminal 4': ['JFK Terminal 4'],
+  'Terminal 5': ['JFK Terminal 5'],
+  'Terminal 7': ['JFK Terminal 7'],
+  'Terminal 8': ['JFK Terminal 8'],
 }
+
+type ManualComplexSelector = {
+  name: string
+  line?: string
+  linePrefix?: string
+}
+
+const MANUAL_COMPLEX_GROUPS: ManualComplexSelector[][] = [
+  [
+    { name: 'Metropolitan Av', line: 'IBX' },
+    { name: 'Middle Village - Metropolitan Av', line: 'NewYorkSubwayM' },
+  ],
+  [
+    { name: 'Metropolitan Av', line: 'NewYorkSubwayG' },
+    { name: 'Lorimer St', line: 'NewYorkSubwayL' },
+  ],
+  [
+    { name: 'Hunterspoint Av', line: 'LIRRCityTerminalZone' },
+    { name: 'Hunters Point Av', line: 'NewYorkSubway7' },
+    { name: 'Hunters Point Av', line: 'NewYorkSubway7X' },
+  ],
+  [
+    { name: 'Marble Hill', line: 'MNRRHudson' },
+    { name: 'Marble Hill - 225 St', line: 'NewYorkSubway1' },
+  ],
+  [
+    { name: 'Harlem-125 St', line: 'MNRRHarlem' },
+    { name: '125 St', line: 'NewYorkSubway4' },
+    { name: '125 St', line: 'NewYorkSubway5' },
+    { name: '125 St', line: 'NewYorkSubway6' },
+    { name: '125 St', line: 'NewYorkSubway6X' },
+    { name: '125 St', line: 'NewYorkSubwayQ' },
+    { name: '125 St', line: 'NewYorkSubwayT' },
+  ],
+  [
+    { name: 'Times Sq - 42 St' },
+    { name: '42 St - Port Authority Bus Terminal' },
+    { name: '42 St - Bryant Pk' },
+    { name: '5 Av', line: 'NewYorkSubway7' },
+    { name: '5 Av', line: 'NewYorkSubway7X' },
+  ],
+  [
+    { name: '34 St - Penn Station' },
+    { name: 'New York Penn Station' },
+  ],
+  [
+    { name: 'Sutphin Blvd - Archer Av - JFK Airport' },
+    { name: 'Jamaica', linePrefix: 'LIRR' },
+    { name: 'Jamaica', linePrefix: 'AirTrainJFK' },
+  ],
+  [
+    { name: 'Franklin Av - Medgar Evers College' },
+    { name: 'Botanic Garden', line: 'NewYorkSubwayFS' },
+  ],
+  [
+    { name: 'Court St', line: 'NewYorkSubwayR' },
+    { name: 'Borough Hall' },
+  ],
+  [
+    { name: 'Whitehall St' },
+    { name: 'South Ferry' },
+  ],
+  [
+    { name: 'Broadway-Lafayette St' },
+    { name: 'Bleecker St', line: 'NewYorkSubway6' },
+    { name: 'Bleecker St', line: 'NewYorkSubway6X' },
+  ],
+  [
+    { name: 'Lexington Av/53 St' },
+    { name: '51 St', line: 'NewYorkSubway6' },
+  ],
+  [
+    { name: '59 St', line: 'NewYorkSubway4' },
+    { name: '59 St', line: 'NewYorkSubway5' },
+    { name: '59 St', line: 'NewYorkSubway6' },
+    { name: 'Lexington Av/59 St' },
+  ],
+  [
+    { name: '33 St', line: 'NewYorkSubway6' },
+    { name: '34 St - Herald Sq' },
+  ],
+  [
+    { name: 'Chambers St', line: 'NewYorkSubway1' },
+    { name: 'Chambers St', line: 'NewYorkSubway2' },
+    { name: 'Chambers St', line: 'NewYorkSubway3' },
+    { name: 'Chambers St', line: 'NewYorkSubwayA' },
+    { name: 'Chambers St', line: 'NewYorkSubwayC' },
+    { name: 'Park Pl', line: 'NewYorkSubway2' },
+    { name: 'Park Pl', line: 'NewYorkSubway3' },
+    { name: 'World Trade Center', line: 'NewYorkSubwayE' },
+    { name: 'World Trade Center', line: 'NewYorkSubwayPATHHobwtc' },
+    { name: 'World Trade Center', line: 'NewYorkSubwayPATHNwkwtc' },
+    { name: 'Cortlandt St', line: 'NewYorkSubwayN' },
+    { name: 'Cortlandt St', line: 'NewYorkSubwayR' },
+    { name: 'Cortlandt St', line: 'NewYorkSubwayW' },
+    { name: 'WTC Cortlandt', line: 'NewYorkSubway1' },
+  ],
+]
 
 const DIRECTIONAL_ABBREVIATIONS: Record<string, string> = {
   east: 'E',
   west: 'W',
   north: 'N',
   south: 'S',
+}
+
+const STREET_SEGMENT_KEYWORDS = [
+  ' st',
+  ' street',
+  ' av',
+  ' ave',
+  ' avenue',
+  ' blvd',
+  ' boulevard',
+  ' rd',
+  ' road',
+  ' dr',
+  ' drive',
+  ' pkwy',
+  ' parkway',
+  ' way',
+  ' wy',
+  ' lane',
+  ' ln',
+  ' court',
+  ' ct',
+  ' place',
+  ' pl',
+  ' plaza',
+  ' plz',
+  ' terrace',
+  ' ter',
+  ' circle',
+  ' cir',
+  ' ferry',
+  ' highway',
+  ' hwy',
+  ' expressway',
+  ' expwy',
+  ' center',
+  ' centre',
+  ' ctr',
+  ' mall',
+  ' bridge',
+  ' broadway',
+]
+
+const shouldIncludeStandaloneSegment = (value: string) => {
+  const normalized = value.trim().toLowerCase()
+  if (!normalized) {
+    return false
+  }
+  if (/\d/.test(normalized)) {
+    return true
+  }
+  return STREET_SEGMENT_KEYWORDS.some((keyword) =>
+    normalized.includes(keyword),
+  )
 }
 
 const applyDirectionalAbbreviation = (value?: string) => {
@@ -140,6 +326,12 @@ const generateAlternateNames = (name?: string): string[] => {
         alternates.add(reversed.join(joiner))
         alternates.add(parts.join(' '))
         alternates.add(reversed.join(' '))
+
+        parts.forEach((part) => {
+          if (shouldIncludeStandaloneSegment(part)) {
+            alternates.add(part)
+          }
+        })
       }
     }
   }
@@ -272,7 +464,6 @@ export default function GamePage({
 
       const propertiesWithAlternates = feature.properties as typeof feature.properties & {
         alternate_names?: string[]
-        display_name?: string
       }
 
       const existingAlternates = Array.isArray(
@@ -297,7 +488,6 @@ export default function GamePage({
 
       const nextProperties: typeof feature.properties & {
         alternate_names?: string[]
-        display_name?: string
       } = {
         ...feature.properties,
       }
@@ -306,16 +496,6 @@ export default function GamePage({
         nextProperties.alternate_names = mergedAlternates
       } else if ('alternate_names' in nextProperties) {
         delete nextProperties.alternate_names
-      }
-
-      const displayNameCandidate = applyDirectionalAbbreviation(originalName)
-      if (
-        displayNameCandidate &&
-        displayNameCandidate !== originalName.trim()
-      ) {
-        nextProperties.display_name = displayNameCandidate
-      } else if ('display_name' in nextProperties) {
-        delete nextProperties.display_name
       }
 
       return {
@@ -399,6 +579,46 @@ export default function GamePage({
         }
       }
     }
+
+    const pointFeaturesByName = new Map<string, PointFeatureEntry[]>()
+    pointFeatures.forEach((entry) => {
+      const key = entry.name.trim().toLowerCase()
+      if (!key) {
+        return
+      }
+      if (!pointFeaturesByName.has(key)) {
+        pointFeaturesByName.set(key, [])
+      }
+      pointFeaturesByName.get(key)!.push(entry)
+    })
+
+    const collectMatches = (selector: ManualComplexSelector) => {
+      const key = selector.name.trim().toLowerCase()
+      const candidates = pointFeaturesByName.get(key) ?? []
+      return candidates.filter((entry) => {
+        const line = entry.feature.properties?.line
+        if (selector.line && line !== selector.line) {
+          return false
+        }
+        if (selector.linePrefix && !(line && line.startsWith(selector.linePrefix))) {
+          return false
+        }
+        return true
+      })
+    }
+
+    MANUAL_COMPLEX_GROUPS.forEach((group) => {
+      const memberIds = new Set<number>()
+      group.forEach((selector) => {
+        collectMatches(selector).forEach((entry) => memberIds.add(entry.id))
+      })
+      const ids = Array.from(memberIds)
+      if (ids.length <= 1) {
+        return
+      }
+      const [first, ...rest] = ids
+      rest.forEach((id) => union(first, id))
+    })
 
     const clusters = new Map<number, PointFeatureEntry[]>()
     pointFeatures.forEach((entry) => {
@@ -1005,13 +1225,13 @@ export default function GamePage({
               ]),
               'rgba(255, 255, 255, 0.8)',
             ],
-            'rgba(255, 255, 255, 0.8)',
+            'rgba(120, 120, 120, 0.6)',
           ],
           'circle-stroke-width': [
             'case',
             ['to-boolean', ['feature-state', 'found']],
             1,
-            0,
+            0.75,
           ],
         },
         layout: {

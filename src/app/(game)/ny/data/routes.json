@@ -31664,6 +31664,28 @@
         "color": "#00AFD1",
         "order": 23
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.96422186789042,
+            40.761222859403325
+          ],
+          [
+            -73.95409525664131,
+            40.75733425307765
+          ]
+        ]
+      },
+      "properties": {
+        "line": "RIOCRooseveltIslandTram",
+        "name": "Roosevelt Island Tram",
+        "color": "#FF0000",
+        "order": 96
+      }
     }
   ]
 }

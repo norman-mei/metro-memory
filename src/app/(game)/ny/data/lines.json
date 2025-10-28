@@ -559,6 +559,13 @@
     "textColor": "#000000",
     "order": 84
   },
+  "RIOCRooseveltIslandTram": {
+    "name": "Roosevelt Island Tram",
+    "color": "#FF0000",
+    "backgroundColor": "#800000",
+    "textColor": "#000000",
+    "order": 85
+  },
   "MNRRNewHavenPSA": {
     "name": "MNRR New Haven (PSA)",
     "color": "#EE0034",
