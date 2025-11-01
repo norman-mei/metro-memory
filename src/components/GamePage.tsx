@@ -1117,6 +1117,8 @@ export default function GamePage({
       container: mapContainerRef.current,
     })
 
+    let ensureRouteLayers: (() => void) | null = null
+
     const hideBaseSymbolLayers = () => {
       const mapStyle = mapboxMap.getStyle()
       if (!mapStyle || !Array.isArray(mapStyle.layers)) {
@@ -1160,36 +1162,68 @@ export default function GamePage({
         },
       })
 
-      if (MAP_FROM_DATA && routes) {
-        mapboxMap.addSource('lines', {
+      const ROUTES_SOURCE_ID = 'game-routes'
+      const ROUTES_LAYER_ID = 'game-routes-line'
+
+      ensureRouteLayers = () => {
+        if (!MAP_FROM_DATA || !routes) {
+          return
+        }
+
+        const routeData = JSON.parse(JSON.stringify(routes))
+
+        if (mapboxMap.getLayer(ROUTES_LAYER_ID)) {
+          mapboxMap.removeLayer(ROUTES_LAYER_ID)
+        }
+        if (mapboxMap.getSource(ROUTES_SOURCE_ID)) {
+          mapboxMap.removeSource(ROUTES_SOURCE_ID)
+        }
+
+        mapboxMap.addSource(ROUTES_SOURCE_ID, {
           type: 'geojson',
-          data: routes,
+          data: routeData,
         })
 
-        mapboxMap.addLayer({
-          id: 'lines',
-          type: 'line',
-          paint: {
-            'line-width': [
-              'interpolate',
-              ['linear'],
-              ['zoom'],
-              8.763,
-              1.5,
-              15,
-              3,
-              22,
-              3,
-            ],
-            'line-color': ['get', 'color'],
-            'line-offset': ['match', ['get', 'line'], '', 2, 0],
-          },
-          source: 'lines',
-          layout: {
-            'line-sort-key': ['-', 100, ['get', 'order']],
-          },
-        })
+        try {
+          mapboxMap.addLayer({
+            id: ROUTES_LAYER_ID,
+            type: 'line',
+            paint: {
+              'line-width': [
+                'interpolate',
+                ['linear'],
+                ['zoom'],
+                9,
+                2.5,
+                16,
+                6,
+                22,
+                8,
+              ],
+              'line-color': [
+                'case',
+                ['has', 'color'],
+                ['to-color', ['get', 'color']],
+                '#1d2835',
+              ],
+              'line-opacity': 0.9,
+              'line-offset': ['match', ['get', 'line'], '', 2, 0],
+            },
+            layout: {
+              'line-sort-key': ['-', 100, ['get', 'order']],
+              'line-cap': 'round',
+              'line-join': 'round',
+            },
+            source: ROUTES_SOURCE_ID,
+          })
+        } catch (error) {
+          console.error('Failed to add route layer', error)
+        }
+      }
 
+      ensureRouteLayers()
+
+      if (MAP_FROM_DATA && routes) {
         mapboxMap.addLayer({
           type: 'circle',
           source: 'features',
@@ -1232,6 +1266,10 @@ export default function GamePage({
           [box[0] - 1, box[1] - 1],
           [box[2] + 1, box[3] + 1],
         ])
+      }
+
+      if (ensureRouteLayers) {
+        mapboxMap.on('styledata', ensureRouteLayers)
       }
 
       mapboxMap.addLayer({
@@ -1386,6 +1424,9 @@ export default function GamePage({
     return () => {
       mapboxMap.off('styledata', hideBaseSymbolLayers)
       mapboxMap.off('style.load', hideBaseSymbolLayers)
+      if (ensureRouteLayers) {
+        mapboxMap.off('styledata', ensureRouteLayers)
+      }
       mapboxMap.remove()
       setMap(null)
     }
