@@ -3,7 +3,7 @@
 import { Transition } from '@headlessui/react'
 import classNames from 'classnames'
 import SortMenu from '@/components/SortMenu'
-import { memo, useCallback, useMemo, useState } from 'react'
+import { memo, useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { SortOption, DataFeature, SortOptionType } from '@/lib/types'
 import { DateAddedIcon } from './DateAddedIcon'
 import { sortBy } from 'lodash'
@@ -88,6 +88,19 @@ const getDisplayName = (feature: DataFeature) => {
 
   return '—'
 }
+
+const getFeatureNumericId = (feature: DataFeature) => {
+  if (typeof feature.id === 'number') {
+    return feature.id
+  }
+
+  const propertyId = feature.properties?.id
+  if (typeof propertyId === 'number') {
+    return propertyId
+  }
+
+  return null
+}
 const FoundList = ({
   found,
   idMap,
@@ -96,6 +109,9 @@ const FoundList = ({
   hideLabels,
   zoomToFeature,
   foundTimestamps,
+  onStationFocus,
+  activeStationId,
+  disabled = false,
 }: {
   found: number[]
   idMap: Map<number, DataFeature>
@@ -104,6 +120,9 @@ const FoundList = ({
   hideLabels?: boolean
   zoomToFeature: (id: number) => void
   foundTimestamps: Record<string, string>
+  onStationFocus?: (id: number) => void
+  activeStationId: number | null
+  disabled?: boolean
 }) => {
   const { LINES } = useConfig()
   const { t } = useTranslation()
@@ -328,7 +347,12 @@ const FoundList = ({
               {t('stations', { count: grouped.length })}
             </p>
 
-            <SortMenu sortOptions={sortOptions} sort={sort} setSort={setSort} />
+            <SortMenu
+              sortOptions={sortOptions}
+              sort={sort}
+              setSort={setSort}
+              disabled={disabled}
+            />
           </div>
         )}
 
@@ -341,7 +365,8 @@ const FoundList = ({
             type="search"
             value={filter}
             onChange={(event) => setFilter(event.target.value)}
-            className="w-full rounded-full border border-zinc-200 px-3 py-2 text-sm text-zinc-900 shadow-sm outline-none transition focus:border-zinc-400 focus:ring-2 focus:ring-zinc-300 dark:border-zinc-700 dark:bg-zinc-900/60 dark:text-zinc-100 dark:focus:border-zinc-500 dark:focus:ring-zinc-600"
+            disabled={disabled}
+            className="w-full rounded-full border border-zinc-200 px-3 py-2 text-sm text-zinc-900 shadow-sm outline-none transition focus:border-zinc-400 focus:ring-2 focus:ring-zinc-300 disabled:cursor-not-allowed disabled:bg-zinc-100 disabled:text-zinc-400 dark:border-zinc-700 dark:bg-zinc-900/60 dark:text-zinc-100 dark:focus:border-zinc-500 dark:focus:ring-zinc-600 dark:disabled:bg-zinc-800 dark:disabled:text-zinc-500"
             placeholder={t('searchFoundStations')}
           />
         </div>
@@ -356,6 +381,9 @@ const FoundList = ({
               setHoveredId={setHoveredId}
               hoveredId={hoveredId}
               timestamp={timestamp}
+              onStationFocus={onStationFocus}
+              activeStationId={activeStationId}
+              disabled={disabled}
             />
           ))
         ) : (
@@ -377,16 +405,32 @@ const GroupedLine = memo(
     setHoveredId,
     hoveredId,
     timestamp,
+    onStationFocus,
+    activeStationId,
+    disabled,
   }: {
     features: DataFeature[]
     zoomToFeature: (id: number) => void
     setHoveredId: (id: number | null) => void
     hoveredId: number | null
     timestamp: string
+    onStationFocus?: (id: number) => void
+    activeStationId: number | null
+    disabled?: boolean
   }) => {
     const { LINES } = useConfig()
     const { resolvedTheme } = useTheme()
     const isDark = resolvedTheme === 'dark'
+    const buttonRef = useRef<HTMLButtonElement | null>(null)
+
+    const featureIds = useMemo(() => {
+      return features
+        .map((feature) => getFeatureNumericId(feature))
+        .filter((id): id is number => typeof id === 'number')
+    }, [features])
+
+    const primaryId = featureIds[0] ?? null
+
     const lineIds = useMemo(() => {
       const ids = new Set<string>()
 
@@ -421,16 +465,17 @@ const GroupedLine = memo(
         return a.localeCompare(b)
       })
     }, [features, LINES])
-    const isHovered = features.some((feature) => {
-      const candidateId =
-        typeof feature.id === 'number'
-          ? feature.id
-          : typeof feature.properties.id === 'number'
-          ? feature.properties.id
-          : null
-      return candidateId === hoveredId
-    })
+
+    const isHovered = hoveredId !== null && featureIds.includes(hoveredId)
+    const isActive =
+      activeStationId !== null && featureIds.includes(activeStationId)
     const displayName = getDisplayName(features[0])
+
+    useEffect(() => {
+      if (isActive && buttonRef.current) {
+        buttonRef.current.scrollIntoView({ block: 'center', behavior: 'smooth' })
+      }
+    }, [isActive])
 
     return (
       <Transition
@@ -446,18 +491,28 @@ const GroupedLine = memo(
         leaveTo="opacity-0 -translate-y-1"
       >
         <button
-          onClick={() => zoomToFeature(features[0].properties.id!)}
-          onMouseOver={() => setHoveredId(+features[0].id!)}
+          ref={buttonRef}
+          type="button"
+          onClick={() => {
+            if (typeof primaryId !== 'number') return
+            zoomToFeature(primaryId)
+            onStationFocus?.(primaryId)
+          }}
+          onMouseOver={() => setHoveredId(primaryId ?? null)}
           onMouseOut={() => setHoveredId(null)}
+          disabled={disabled}
           className={classNames(
             'flex w-full items-start gap-3 rounded border border-zinc-200 bg-white px-3 py-2 text-sm transition-colors dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100',
             {
               'bg-yellow-200 shadow-sm dark:bg-amber-300/40': isHovered,
+              'ring-2 ring-indigo-400 shadow-lg dark:ring-indigo-300/80': isActive,
+              'cursor-not-allowed opacity-60': disabled,
             },
           )}
+          aria-pressed={isActive}
         >
           <div className="flex min-w-0 flex-1 flex-col items-start gap-1 text-left">
-            <div className="flex flex-wrap items-center gap-0.5">
+            <div className="flex flex-wrap items-center gap-[0.5px]">
               {lineIds.map((lineId) => (
                 <Image
                   key={lineId}
@@ -465,7 +520,7 @@ const GroupedLine = memo(
                   src={`/images/${lineId}.svg`}
                   width={64}
                   height={64}
-                  className="h-5 w-5 flex-shrink-0 object-contain"
+                  className="h-6 w-6 flex-shrink-0 object-contain"
                 />
               ))}
             </div>
@@ -481,7 +536,7 @@ const GroupedLine = memo(
             </span>
           </div>
           <div className="ml-auto flex items-baseline gap-2">
-            <span className="text-xs text-gray-400 dark:text-gray-300 whitespace-nowrap">
+            <span className="whitespace-nowrap text-xs text-gray-400 dark:text-gray-300">
               {timestamp}
             </span>
           </div>

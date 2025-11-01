@@ -8,6 +8,7 @@ import {
   useRef,
   FormEvent,
   ChangeEvent,
+  CSSProperties,
 } from 'react'
 import Fuse from 'fuse.js'
 import { useLocalStorageValue } from '@react-hookz/web'
@@ -122,6 +123,7 @@ const MANUAL_ALTERNATE_NAMES: Record<string, string[]> = {
   'Terminal 5': ['JFK Terminal 5'],
   'Terminal 7': ['JFK Terminal 7'],
   'Terminal 8': ['JFK Terminal 8'],
+  'Glen Rock-Boro Hall': ['Boro Hall - Glen Rock'],
 }
 
 type ManualComplexSelector = {
@@ -757,7 +759,34 @@ export default function GamePage({
   const [solutionsPassword, setSolutionsPassword] = useState('')
   const [solutionsError, setSolutionsError] = useState(false)
   const [solutionsUnlocked, setSolutionsUnlocked] = useState(false)
-  const [sidebarOpen, setSidebarOpen] = useState(true)
+  const { value: storedSidebarOpen, set: setStoredSidebarOpen } =
+    useLocalStorageValue<boolean>(`${CITY_NAME}-sidebar-open`, {
+      defaultValue: true,
+      initializeWithValue: false,
+    })
+  const [sidebarOpenState, setSidebarOpenState] = useState(true)
+  const [mobileSidebarOpen, setMobileSidebarOpen] = useState(false)
+  const [activeFoundId, setActiveFoundId] = useState<number | null>(null)
+
+  useEffect(() => {
+    if (typeof storedSidebarOpen === 'boolean') {
+      setSidebarOpenState(storedSidebarOpen)
+    }
+  }, [storedSidebarOpen])
+
+  const setSidebarOpen = useCallback(
+    (next: boolean | ((prev: boolean) => boolean)) => {
+      setSidebarOpenState((prev) => {
+        const resolved =
+          typeof next === 'function' ? (next as (prev: boolean) => boolean)(prev) : next
+        setStoredSidebarOpen(resolved)
+        return resolved
+      })
+    },
+    [setStoredSidebarOpen],
+  )
+
+  const sidebarOpen = sidebarOpenState
 
   const idMap = useMemo(() => {
     const map = new Map<number, DataFeature>()
@@ -847,11 +876,38 @@ export default function GamePage({
 
   const onReset = useCallback(() => {
     if (confirm(t('restartWarning'))) {
+      if (map && map.getSource('features')) {
+        map.removeFeatureState({ source: 'features' })
+      }
       setFound([])
       setIsNewPlayer(true)
       setFoundTimestamps(() => ({}))
+      setSolutionsUnlocked(false)
+      setSolutionsPromptOpen(false)
+      setSolutionsPassword('')
+      setSolutionsError(false)
+      setMobileSidebarOpen(false)
+      setHoveredId(null)
+      setActiveFoundId(null)
+      setTimeout(() => {
+        inputRef.current?.focus()
+      }, 0)
     }
-  }, [setFound, setIsNewPlayer, setFoundTimestamps, t])
+  }, [
+    t,
+    map,
+    setFound,
+    setIsNewPlayer,
+    setFoundTimestamps,
+    setSolutionsUnlocked,
+    setSolutionsPromptOpen,
+    setSolutionsPassword,
+    setSolutionsError,
+    setMobileSidebarOpen,
+    setHoveredId,
+    setActiveFoundId,
+    inputRef,
+  ])
 
   const foundStationsPerLine = useMemo(() => {
     const lineMap = new Map<string, Set<string>>()
@@ -1061,7 +1117,20 @@ export default function GamePage({
       container: mapContainerRef.current,
     })
 
+    const hideBaseSymbolLayers = () => {
+      const mapStyle = mapboxMap.getStyle()
+      if (!mapStyle || !Array.isArray(mapStyle.layers)) {
+        return
+      }
+      for (const layer of mapStyle.layers) {
+        if (layer.type === 'symbol' && mapboxMap.getLayer(layer.id)) {
+          mapboxMap.setLayoutProperty(layer.id, 'visibility', 'none')
+        }
+      }
+    }
+
     mapboxMap.on('load', () => {
+      mapboxMap.doubleClickZoom.disable()
       const isDarkTheme = resolvedTheme === 'dark'
       const foundTextColor = isDarkTheme
         ? 'rgb(255, 255, 255)'
@@ -1074,14 +1143,9 @@ export default function GamePage({
         ? 'rgba(0, 0, 0, 0.85)'
         : 'rgb(255, 255, 255)'
 
-      const mapStyle = mapboxMap.getStyle()
-      if (mapStyle && Array.isArray(mapStyle.layers)) {
-        mapStyle.layers.forEach((layer) => {
-          if (layer.type === 'symbol') {
-            mapboxMap.setLayoutProperty(layer.id, 'visibility', 'none')
-          }
-        })
-      }
+      hideBaseSymbolLayers()
+      mapboxMap.on('styledata', hideBaseSymbolLayers)
+      mapboxMap.on('style.load', hideBaseSymbolLayers)
 
       mapboxMap.addSource('features', {
         type: 'geojson',
@@ -1320,6 +1384,8 @@ export default function GamePage({
     })
 
     return () => {
+      mapboxMap.off('styledata', hideBaseSymbolLayers)
+      mapboxMap.off('style.load', hideBaseSymbolLayers)
       mapboxMap.remove()
       setMap(null)
     }
@@ -1358,6 +1424,47 @@ export default function GamePage({
     }
   }, [found, map])
 
+  useEffect(() => {
+    if (!map) {
+      return
+    }
+
+    const handleDoubleClick = (event: mapboxgl.MapLayerMouseEvent) => {
+      if (typeof event.preventDefault === 'function') {
+        event.preventDefault()
+      }
+
+      const feature = event.features?.find(
+        (candidate) => typeof candidate.id === 'number',
+      )
+
+      if (!feature || typeof feature.id !== 'number') {
+        return
+      }
+
+      const featureId = feature.id as number
+
+      if (!found.includes(featureId)) {
+        return
+      }
+
+      setSidebarOpen(true)
+
+      if (typeof window !== 'undefined' && window.innerWidth < 1024) {
+        setMobileSidebarOpen(true)
+      }
+
+      setActiveFoundId(featureId)
+      setHoveredId(featureId)
+    }
+
+    map.on('dblclick', 'stations-circles', handleDoubleClick)
+
+    return () => {
+      map.off('dblclick', 'stations-circles', handleDoubleClick)
+    }
+  }, [map, found, setSidebarOpen, setMobileSidebarOpen, setActiveFoundId, setHoveredId])
+
   const zoomToFeature = useCallback(
     (id: number) => {
       if (!map) return
@@ -1382,13 +1489,38 @@ export default function GamePage({
   )
 
   useEffect(() => {
-    if (map) {
-      map.resize()
+    if (!map) {
+      return
+    }
+
+    map.resize()
+
+    if (typeof window !== 'undefined') {
+      const raf = window.requestAnimationFrame(() => {
+        map.resize()
+      })
+
+      return () => {
+        window.cancelAnimationFrame(raf)
+      }
     }
   }, [map, sidebarOpen])
 
+  useEffect(() => {
+    if (activeFoundId !== null && !found.includes(activeFoundId)) {
+      setActiveFoundId(null)
+    }
+  }, [activeFoundId, found])
+
+  const sidebarStyle = useMemo<CSSProperties | undefined>(() => {
+    if (sidebarOpen) {
+      return undefined
+    }
+    return { width: 0, flexBasis: 0 }
+  }, [sidebarOpen])
+
   return (
-    <div className="relative flex h-screen flex-row items-top justify-between bg-zinc-50 text-zinc-900 dark:bg-zinc-950 dark:text-zinc-100">
+    <div className="relative flex h-screen flex-row items-start justify-start bg-zinc-50 text-zinc-900 dark:bg-zinc-950 dark:text-zinc-100">
       <div className="absolute right-4 top-4 z-[100]">
         <ThemeToggleButton />
       </div>
@@ -1401,10 +1533,25 @@ export default function GamePage({
               foundProportion={foundProportion}
               foundStationsPerLine={foundStationsPerLine}
               stationsPerLine={stationsPerLine}
-              defaultMinimized
               minimizable
             />
             <div className="flex items-center gap-2 lg:gap-3">
+              <button
+                type="button"
+                onClick={() => setMobileSidebarOpen((open) => !open)}
+                className="inline-flex h-12 items-center gap-2 rounded-full bg-white px-4 text-sm font-semibold text-zinc-700 shadow-lg transition hover:bg-zinc-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:bg-zinc-800 dark:text-zinc-100 dark:hover:bg-zinc-700 lg:hidden"
+                aria-label={`${mobileSidebarOpen ? 'Hide sidebar' : 'Show sidebar'} (${foundStationKeys.size} found)`}
+              >
+                <span className="flex flex-col items-start leading-none">
+                  <span className="text-base font-bold">{foundStationKeys.size}</span>
+                  <span className="text-[10px] uppercase tracking-wide text-zinc-500 dark:text-zinc-300">
+                    {t('stationsFound')}
+                  </span>
+                </span>
+                <span className="text-base font-semibold">
+                  {mobileSidebarOpen ? '<' : '>'}
+                </span>
+              </button>
               <Input
                 fuse={fuse}
                 found={found}
@@ -1416,20 +1563,35 @@ export default function GamePage({
                 idMap={idMap}
                 clusterGroups={clusterGroups}
                 autoFocus={!solutionsPromptOpen}
+                disabled={solutionsPromptOpen}
               />
               <MenuComponent
                 onReset={onReset}
                 hideLabels={hideLabels}
                 setHideLabels={setHideLabels}
                 onRevealSolutions={handleRevealSolutions}
+                foundProportion={foundProportion}
               />
             </div>
           </div>
         </div>
       </div>
-      {sidebarOpen ? (
-        <div className="hidden h-full lg:flex">
-          <div className="flex h-full w-96 flex-col overflow-y-auto bg-white p-6 shadow-lg dark:bg-zinc-900/95 dark:shadow-black/40 xl:w-[32rem]">
+      <div
+        className={`relative hidden h-full min-w-0 overflow-visible lg:flex ${
+          sidebarOpen ? 'w-96 xl:w-[32rem]' : 'w-0'
+        }`}
+        style={sidebarStyle}
+      >
+        <button
+          type="button"
+          onClick={() => setSidebarOpen((open) => !open)}
+          className="absolute left-0 top-1/2 z-20 flex h-10 w-10 -translate-y-1/2 -translate-x-[65%] items-center justify-center rounded-full bg-white text-zinc-700 shadow-lg transition hover:bg-zinc-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:bg-zinc-800 dark:text-zinc-100 dark:hover:bg-zinc-700"
+          aria-label={sidebarOpen ? 'Hide sidebar' : 'Show sidebar'}
+        >
+          {sidebarOpen ? '<' : '>'}
+        </button>
+        {sidebarOpen ? (
+          <div className="flex h-full w-full flex-col overflow-y-auto bg-white p-6 shadow-lg dark:bg-zinc-900/95 dark:shadow-black/40">
             <FoundSummary
               className="rounded-lg bg-white p-4 shadow-md dark:bg-zinc-900 dark:text-zinc-100 dark:shadow-black/40"
               foundProportion={foundProportion}
@@ -1447,18 +1609,59 @@ export default function GamePage({
               hideLabels={hideLabels}
               foundTimestamps={foundTimestamps}
               zoomToFeature={zoomToFeature}
+              onStationFocus={setActiveFoundId}
+              activeStationId={activeFoundId}
+              disabled={solutionsPromptOpen}
             />
           </div>
+        ) : null}
+      </div>
+      {mobileSidebarOpen && (
+        <div
+          className="fixed inset-0 z-30 flex flex-col bg-zinc-900/50 backdrop-blur-sm lg:hidden"
+          onClick={() => setMobileSidebarOpen(false)}
+          role="presentation"
+        >
+          <div
+            className="mt-auto max-h-[90vh] w-full rounded-t-3xl bg-white p-5 shadow-2xl dark:bg-zinc-900 dark:text-zinc-100"
+            onClick={(event) => event.stopPropagation()}
+          >
+            <div className="mb-4 flex items-center justify-between">
+              <h2 className="text-base font-semibold text-zinc-900 dark:text-zinc-100">
+                {t('stationsFound')}
+              </h2>
+              <button
+                type="button"
+                onClick={() => setMobileSidebarOpen(false)}
+                className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-zinc-100 text-zinc-700 shadow hover:bg-zinc-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:bg-zinc-800 dark:text-zinc-100 dark:hover:bg-zinc-700"
+                aria-label="Hide sidebar"
+              >
+                {'<'}
+              </button>
+            </div>
+            <FoundSummary
+              className="rounded-xl border border-zinc-100 bg-white p-4 shadow-sm dark:border-zinc-700 dark:bg-zinc-800/80"
+              foundProportion={foundProportion}
+              foundStationsPerLine={foundStationsPerLine}
+              stationsPerLine={stationsPerLine}
+            />
+            <div className="mt-4 max-h-[60vh] overflow-y-auto pr-1">
+              <FoundList
+                found={found}
+                idMap={idMap}
+                setHoveredId={setHoveredId}
+                hoveredId={hoveredId}
+                hideLabels={hideLabels}
+                foundTimestamps={foundTimestamps}
+                zoomToFeature={zoomToFeature}
+                onStationFocus={setActiveFoundId}
+                activeStationId={activeFoundId}
+                disabled={solutionsPromptOpen}
+              />
+            </div>
+          </div>
         </div>
-      ) : null}
-      <button
-        type="button"
-        onClick={() => setSidebarOpen((open) => !open)}
-        className="fixed left-3 top-1/2 z-20 hidden h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white text-zinc-700 shadow-lg transition hover:bg-zinc-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:bg-zinc-800 dark:text-zinc-100 dark:hover:bg-zinc-700 lg:flex"
-        aria-label={sidebarOpen ? 'Hide sidebar' : 'Show sidebar'}
-      >
-        {sidebarOpen ? '‹' : '›'}
-      </button>
+      )}
       <IntroModal
         inputRef={inputRef}
         open={isNewPlayer}

@@ -13,14 +13,17 @@ export default function MenuComponent({
   setHideLabels,
   hideLabels,
   onRevealSolutions,
+  foundProportion,
 }: {
   onReset: () => void
   hideLabels: boolean
   setHideLabels: (hide: boolean) => void
   onRevealSolutions: () => void
+  foundProportion: number
 }) {
   const [modalOpen, setModalOpen] = useState(false)
   const { t } = useTranslation()
+  const showSolutionsDisabled = foundProportion >= 1
 
   return (
     <Menu as="div" className="relative inline-block text-left">
@@ -56,19 +59,37 @@ export default function MenuComponent({
                 </button>
               )}
             </Menu.Item>
-            <Menu.Item>
-              {({ active }) => (
-                <button
+            <Menu.Item disabled={showSolutionsDisabled}>
+              {({ active, disabled }) => (
+                <span
                   className={classNames(
-                    active
-                      ? 'bg-gray-100 text-gray-900 dark:bg-zinc-700 dark:text-zinc-100'
-                      : 'text-gray-700 dark:text-zinc-100',
-                    'block w-full px-4 py-2 text-left text-sm transition',
+                    'block w-full cursor-pointer px-4 py-2 text-gray-700 transition dark:text-zinc-100',
+                    disabled && 'cursor-not-allowed opacity-60 text-gray-500 dark:text-zinc-400',
+                    active &&
+                      !disabled &&
+                      'bg-gray-100 text-gray-900 dark:bg-zinc-700 dark:text-zinc-100',
                   )}
-                  onClick={onRevealSolutions}
+                  title={
+                    disabled
+                      ? 'You already found all the solutions!'
+                      : undefined
+                  }
                 >
-                  {t('showSolutions')}
-                </button>
+                  <button
+                    type="button"
+                    className={classNames(
+                      'w-full text-left text-sm',
+                    )}
+                    onClick={() => {
+                      if (!disabled) {
+                        onRevealSolutions()
+                      }
+                    }}
+                    disabled={disabled}
+                  >
+                    {t('showSolutions')}
+                  </button>
+                </span>
               )}
             </Menu.Item>
             <Menu.Item>

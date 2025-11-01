@@ -2379,7 +2379,10 @@
         "id": 205,
         "name": "Lexington Av/59 St",
         "line": "NewYorkSubway4",
-        "order": 64
+        "order": 64,
+        "alternate_names": [
+          "59 St Lexington Av"
+        ]
       },
       "id": 205
     },
@@ -2980,7 +2983,10 @@
         "id": 255,
         "name": "Lexington Av/59 St",
         "line": "NewYorkSubway5",
-        "order": 104
+        "order": 104,
+        "alternate_names": [
+          "59 St Lexington Av"
+        ]
       },
       "id": 255
     },
@@ -3853,7 +3859,10 @@
         "id": 393,
         "name": "Lexington Av/59 St",
         "line": "NewYorkSubway6",
-        "order": 100
+        "order": 100,
+        "alternate_names": [
+          "59 St Lexington Av"
+        ]
       },
       "id": 393
     },
@@ -4270,7 +4279,10 @@
         "id": 437,
         "name": "Lexington Av/59 St",
         "line": "NewYorkSubway6X",
-        "order": 42
+        "order": 42,
+        "alternate_names": [
+          "59 St Lexington Av"
+        ]
       },
       "id": 437
     },
@@ -8832,7 +8844,10 @@
         "id": 855,
         "name": "Lexington Av/63 St",
         "line": "NewYorkSubwayM",
-        "order": 90
+        "order": 90,
+        "alternate_names": [
+          "63 St Lexington Av"
+        ]
       },
       "id": 855
     },
@@ -9499,7 +9514,10 @@
         "id": 937,
         "name": "Lexington Av/63 St",
         "line": "NewYorkSubwayFX",
-        "order": 166
+        "order": 166,
+        "alternate_names": [
+          "63 St Lexington Av"
+        ]
       },
       "id": 937
     },
@@ -12059,7 +12077,10 @@
         "id": 1125,
         "name": "Lexington Av/59 St",
         "line": "NewYorkSubwayN",
-        "order": 30
+        "order": 30,
+        "alternate_names": [
+          "59 St Lexington Av"
+        ]
       },
       "id": 1125
     },
@@ -12487,7 +12508,10 @@
         "id": 1166,
         "name": "Lexington Av/63 St",
         "line": "NewYorkSubwayQ",
-        "order": 9
+        "order": 9,
+        "alternate_names": [
+          "63 St Lexington Av"
+        ]
       },
       "id": 1166
     },
@@ -13456,7 +13480,10 @@
         "id": 1223,
         "name": "Lexington Av/59 St",
         "line": "NewYorkSubwayR",
-        "order": 125
+        "order": 125,
+        "alternate_names": [
+          "59 St Lexington Av"
+        ]
       },
       "id": 1223
     },
@@ -13799,7 +13826,10 @@
         "id": 1261,
         "name": "Lexington Av/59 St",
         "line": "NewYorkSubwayW",
-        "order": 30
+        "order": 30,
+        "alternate_names": [
+          "59 St Lexington Av"
+        ]
       },
       "id": 1261
     },
@@ -15078,7 +15108,7 @@
       "properties": {
         "id": 1348,
         "name": "Jamaica",
-        "line": "LIRRCityTerminalZone",
+        "line": "LIRRAtlantic",
         "order": 400
       },
       "id": 1348
@@ -16458,7 +16488,7 @@
       "properties": {
         "id": 1429,
         "name": "Nostrand Av",
-        "line": "LIRRCityTerminalZone",
+        "line": "LIRRAtlantic",
         "order": 400
       },
       "id": 1429
@@ -18790,7 +18820,7 @@
       "properties": {
         "id": 1566,
         "name": "Atlantic Terminal",
-        "line": "LIRRCityTerminalZone",
+        "line": "LIRRAtlantic",
         "order": 400
       },
       "id": 1566
@@ -18824,7 +18854,7 @@
       "properties": {
         "id": 1568,
         "name": "East New York",
-        "line": "LIRRCityTerminalZone",
+        "line": "LIRRAtlantic",
         "order": 400
       },
       "id": 1568
@@ -20078,6 +20108,23 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          -74.49782269224067,
+          40.4379650688567
+        ]
+      },
+      "properties": {
+        "id": 27181,
+        "name": "North Brunswick",
+        "line": "NJTNorthEastCorridor",
+        "order": 600
+      },
+      "id": 27181
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -74.7539197000125,
           40.2185233951337
         ]
@@ -20983,8 +21030,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -74.1227480602141,
-          40.8141307682372
+          -74.12414541718285,
+          40.81642695001407
         ]
       },
       "properties": {
@@ -22085,7 +22132,10 @@
         "id": 1782,
         "name": "Harriet Tubman Square",
         "line": "NJTLRNewarkBroad",
-        "order": 722
+        "order": 722,
+        "alternate_names": [
+          "Washington Park"
+        ]
       },
       "id": 1782
     },
@@ -22485,6 +22535,244 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          -75.1203287911785,
+          39.9431642666975
+        ]
+      },
+      "properties": {
+        "id": 27182,
+        "name": "Walter Rand Transportation Center",
+        "line": "NJTLRGlassboroCamden",
+        "order": 630
+      },
+      "id": 27182
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.1115891568455,
+          39.93724436143725
+        ]
+      },
+      "properties": {
+        "id": 27183,
+        "name": "Lanning Square",
+        "line": "NJTLRGlassboroCamden",
+        "order": 631
+      },
+      "id": 27183
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.11690540079039,
+          39.92268777986422
+        ]
+      },
+      "properties": {
+        "id": 27184,
+        "name": "South Camden",
+        "line": "NJTLRGlassboroCamden",
+        "order": 632
+      },
+      "id": 27184
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.11916866900083,
+          39.892378808255614
+        ]
+      },
+      "properties": {
+        "id": 27185,
+        "name": "Gloucester City",
+        "line": "NJTLRGlassboroCamden",
+        "order": 633
+      },
+      "id": 27185
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.12940281666685,
+          39.86952772529301
+        ]
+      },
+      "properties": {
+        "id": 27186,
+        "name": "Crown Point Rd",
+        "line": "NJTLRGlassboroCamden",
+        "order": 634
+      },
+      "id": 27186
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.14642140565009,
+          39.84349438399985
+        ]
+      },
+      "properties": {
+        "id": 27187,
+        "name": "Red Bank Av",
+        "line": "NJTLRGlassboroCamden",
+        "order": 635
+      },
+      "id": 27187
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.14991521155659,
+          39.836337145781215
+        ]
+      },
+      "properties": {
+        "id": 27188,
+        "name": "Woodbury",
+        "line": "NJTLRGlassboroCamden",
+        "order": 636
+      },
+      "id": 27188
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.15188815636522,
+          39.81706233111123
+        ]
+      },
+      "properties": {
+        "id": 27189,
+        "name": "Woodbury Heights",
+        "line": "NJTLRGlassboroCamden",
+        "order": 637
+      },
+      "id": 27189
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.14959413572815,
+          39.77499323353284
+        ]
+      },
+      "properties": {
+        "id": 27190,
+        "name": "Mantua",
+        "line": "NJTLRGlassboroCamden",
+        "order": 638
+      },
+      "id": 27190
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.1442980437645,
+          39.76623776607471
+        ]
+      },
+      "properties": {
+        "id": 27191,
+        "name": "Sewell",
+        "line": "NJTLRGlassboroCamden",
+        "order": 639
+      },
+      "id": 27191
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.1325218240992,
+          39.74558749680319
+        ]
+      },
+      "properties": {
+        "id": 27192,
+        "name": "Mantua/Pitman",
+        "line": "NJTLRGlassboroCamden",
+        "order": 640
+      },
+      "id": 27192
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.12929772548144,
+          39.733217442466916
+        ]
+      },
+      "properties": {
+        "id": 27193,
+        "name": "Pitman",
+        "line": "NJTLRGlassboroCamden",
+        "order": 641
+      },
+      "id": 27193
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.12440970552768,
+          39.710262973450995
+        ]
+      },
+      "properties": {
+        "id": 27194,
+        "name": "North Glassboro",
+        "line": "NJTLRGlassboroCamden",
+        "order": 642
+      },
+      "id": 27194
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.11123016200996,
+          39.70087456200194
+        ]
+      },
+      "properties": {
+        "id": 27195,
+        "name": "Glassboro",
+        "line": "NJTLRGlassboroCamden",
+        "order": 643
+      },
+      "id": 27195
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -74.1907811870664,
           40.68737598093012
         ]
@@ -22498,7 +22786,12 @@
           "EWR Terminal A",
           "Newark Terminal A",
           "Newark Airport Terminal A",
-          "Newark Liberty Terminal A"
+          "Newark Liberty Terminal A",
+          "Terminal 1",
+          "EWR Terminal 1",
+          "Newark Terminal 1",
+          "Newark Airport Terminal 1",
+          "Newark Liberty Terminal 1"
         ]
       },
       "id": 1807
@@ -22521,7 +22814,12 @@
           "EWR Terminal B",
           "Newark Terminal B",
           "Newark Airport Terminal B",
-          "Newark Liberty Terminal B"
+          "Newark Liberty Terminal B",
+          "Terminal 2",
+          "EWR Terminal 2",
+          "Newark Terminal 2",
+          "Newark Airport Terminal 2",
+          "Newark Liberty Terminal 2"
         ]
       },
       "id": 1808
@@ -22544,7 +22842,12 @@
           "EWR Terminal C",
           "Newark Terminal C",
           "Newark Airport Terminal C",
-          "Newark Liberty Terminal C"
+          "Newark Liberty Terminal C",
+          "Terminal 3",
+          "EWR Terminal 3",
+          "Newark Terminal 3",
+          "Newark Airport Terminal 3",
+          "Newark Liberty Terminal 3"
         ]
       },
       "id": 1809
@@ -23092,7 +23395,7 @@
       "properties": {
         "id": 1842,
         "name": "Hunts Point",
-        "line": "MNRRNewHavenPSA",
+        "line": "MNRRNewHaven",
         "order": 520
       },
       "id": 1842
@@ -23109,7 +23412,7 @@
       "properties": {
         "id": 1843,
         "name": "Parkchester/Van Nest",
-        "line": "MNRRNewHavenPSA",
+        "line": "MNRRNewHaven",
         "order": 521
       },
       "id": 1843
@@ -23126,7 +23429,7 @@
       "properties": {
         "id": 1844,
         "name": "Morris Park",
-        "line": "MNRRNewHavenPSA",
+        "line": "MNRRNewHaven",
         "order": 522
       },
       "id": 1844
@@ -23143,7 +23446,7 @@
       "properties": {
         "id": 1845,
         "name": "Co-Op City",
-        "line": "MNRRNewHavenPSA",
+        "line": "MNRRNewHaven",
         "order": 523
       },
       "id": 1845
@@ -24564,8 +24867,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -72.6259738852173,
-          41.91396274606493
+          -72.62727256323728,
+          41.9297794606618
         ]
       },
       "properties": {
@@ -24700,6 +25003,23 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          -72.87836158568527,
+          41.37756494195675
+        ]
+      },
+      "properties": {
+        "id": 27180,
+        "name": "North Haven",
+        "line": "CTRailHartfordLine",
+        "order": 710
+      },
+      "id": 27180
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -72.921768,
           41.304993
         ]
@@ -24708,7 +25028,7 @@
         "id": 1942,
         "name": "New Haven State St",
         "line": "CTRailHartfordLine",
-        "order": 710
+        "order": 711
       },
       "id": 1942
     },
@@ -24725,7 +25045,7 @@
         "id": 1943,
         "name": "New Haven Union Station",
         "line": "CTRailHartfordLine",
-        "order": 711
+        "order": 712
       },
       "id": 1943
     },
@@ -24913,9 +25233,12 @@
       },
       "properties": {
         "id": 1954,
-        "name": "Washington Park",
+        "name": "Harriet Tubman Square",
         "line": "NJTLRNewarkBroad",
-        "order": 723
+        "order": 723,
+        "alternate_names": [
+          "Washington Park"
+        ]
       },
       "id": 1954
     },
@@ -24931,7 +25254,7 @@
       "properties": {
         "id": 1955,
         "name": "W 125 St",
-        "line": "MNRRHudsonPSA",
+        "line": "MNRRHudson",
         "order": 524
       },
       "id": 1955
@@ -24948,7 +25271,7 @@
       "properties": {
         "id": 1956,
         "name": "W 62 St",
-        "line": "MNRRHudsonPSA",
+        "line": "MNRRHudson",
         "order": 525
       },
       "id": 1956
@@ -24965,7 +25288,7 @@
       "properties": {
         "id": 1957,
         "name": "New York Penn Station",
-        "line": "MNRRNewHavenPSA",
+        "line": "MNRRNewHaven",
         "order": 526
       },
       "id": 1957
@@ -25375,7 +25698,7 @@
       "properties": {
         "id": 1981,
         "name": "New York Penn Station",
-        "line": "MNRRHudsonPSA",
+        "line": "MNRRHudson",
         "order": 526
       },
       "id": 1981
@@ -26642,23 +26965,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -73.9415435,
-          40.8059455
-        ]
-      },
-      "properties": {
-        "id": 2055,
-        "name": "125 St - Crosstown",
-        "line": "NewYorkSubwayQ",
-        "order": -14
-      },
-      "id": 2055
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -73.937592,
           40.804137
         ]
@@ -26982,23 +27288,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -73.9415435,
-          40.8059455
-        ]
-      },
-      "properties": {
-        "id": 2075,
-        "name": "125 St - Crosstown",
-        "line": "NewYorkSubwayT",
-        "order": 160
-      },
-      "id": 2075
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -73.945495,
           40.807754
         ]
@@ -27147,9 +27436,10 @@
       "MNRRHarlem": 38,
       "LIRRFarRockaway": 12,
       "LIRRHempstead": 11,
-      "MNRRNewHaven": 31,
-      "MNRRHudson": 33,
-      "LIRRCityTerminalZone": 12,
+      "MNRRNewHaven": 36,
+      "MNRRHudson": 36,
+      "LIRRCityTerminalZone": 8,
+      "LIRRAtlantic": 4,
       "LIRRPortWashington": 12,
       "MNRRWaterbury": 6,
       "LIRRPortJefferson": 17,
@@ -27170,7 +27460,7 @@
       "NJTBergenCounty": 17,
       "NJTMainLine": 17,
       "NJTPascackValley": 18,
-      "NJTNorthEastCorridor": 14,
+      "NJTNorthEastCorridor": 15,
       "NJTPortJervis": 7,
       "NJTRaritanValley": 22,
       "NJTPrinceton": 2,
@@ -27179,20 +27469,19 @@
       "NJTLRNewark": 12,
       "NJTLRNewarkBroad": 7,
       "NJTLRRiverLine": 21,
+      "NJTLRGlassboroCamden": 14,
       "AirTrainEWR": 5,
       "AirTrainJFKHowardBeach": 8,
       "AirTrainJFKJamaica": 7,
       "AirTrainJFKAllTerminals": 5,
       "IBX": 19,
-      "MNRRNewHavenPSA": 5,
       "NJTLR8thStHoboken": 18,
       "NJTLRWestSideTonnelle": 18,
       "NJTLRHobokenTonnelle": 7,
       "NJTLRBayonneFlyer": 10,
       "CTRailShoreLineEast": 24,
-      "CTRailHartfordLine": 12,
+      "CTRailHartfordLine": 13,
       "NewYorkSubwaySIExpress": 10,
-      "MNRRHudsonPSA": 3,
       "NJTLackawannaCutOff": 10,
       "NewYorkSubwayT": 20,
       "RIOCRooseveltIslandTram": 2

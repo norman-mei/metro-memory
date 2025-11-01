@@ -1,7 +1,7 @@
 'use client'
 
 import classNames from 'classnames'
-import { useState, KeyboardEventHandler, useCallback } from 'react'
+import { useState, KeyboardEventHandler, useCallback, useRef } from 'react'
 import Fuse from 'fuse.js'
 import { DataFeature } from '@/lib/types'
 import { Transition } from '@headlessui/react'
@@ -22,6 +22,7 @@ const Input = ({
   idMap,
   clusterGroups,
   autoFocus = true,
+  disabled = false,
 }: {
   fuse: Fuse<DataFeature>
   found: number[]
@@ -35,15 +36,35 @@ const Input = ({
   idMap: Map<number, DataFeature>
   clusterGroups: Map<number, number[]>
   autoFocus?: boolean
+  disabled?: boolean
 }) => {
   const { t } = useTranslation()
   const normalizeString = useNormalizeString()
   const { CITY_NAME } = useConfig()
   const [search, setSearch] = useState<string>('')
+  const [history, setHistory] = useState<string[]>([])
+  const [historyIndex, setHistoryIndex] = useState<number | null>(null)
   const [wrong, setWrong] = useState<boolean>(false)
   const [success, setSuccess] = useState<boolean>(false)
   const [alreadyFound, setAlreadyFound] = useState<boolean>(false)
   const pushEvent = usePushEvent()
+  const lastSearchRef = useRef<string>('')
+
+  const pushHistory = useCallback((value: string) => {
+    const trimmed = value.trim()
+    if (!trimmed) {
+      return
+    }
+
+    setHistory((prev) => {
+      const next = [...prev, trimmed]
+      if (next.length > 100) {
+        next.shift()
+      }
+      return next
+    })
+    setHistoryIndex(null)
+  }, [])
 
   const zoomToStation = useCallback(
     (id: number) => {
@@ -103,6 +124,53 @@ const Input = ({
 
   const onKeyDown: KeyboardEventHandler<HTMLInputElement> = useCallback(
     (e) => {
+      if (disabled) {
+        return
+      }
+
+      if (e.key === 'ArrowUp') {
+        if (history.length === 0) {
+          return
+        }
+
+        e.preventDefault()
+        setHistoryIndex((prev) => {
+          const nextIndex =
+            prev === null ? history.length - 1 : Math.max(prev - 1, 0)
+          const nextValue = history[nextIndex]
+          setSearch(nextValue)
+          lastSearchRef.current = nextValue
+          return nextIndex
+        })
+        return
+      }
+
+      if (e.key === 'ArrowDown') {
+        if (history.length === 0) {
+          return
+        }
+
+        e.preventDefault()
+        setHistoryIndex((prev) => {
+          if (prev === null) {
+            return null
+          }
+
+          if (prev === history.length - 1) {
+            setSearch('')
+            lastSearchRef.current = ''
+            return null
+          }
+
+          const nextIndex = Math.min(prev + 1, history.length - 1)
+          const nextValue = history[nextIndex]
+          setSearch(nextValue)
+          lastSearchRef.current = nextValue
+          return nextIndex
+        })
+        return
+      }
+
       if (e.key !== 'Enter') return
       if (!search) return
 
@@ -227,7 +295,9 @@ const Input = ({
           return next
         })
         setIsNewPlayer(false)
+        pushHistory(search)
         setSearch('')
+        lastSearchRef.current = ''
         pushEvent(finalMatches)
       } catch (error) {
         console.error(error)
@@ -236,6 +306,7 @@ const Input = ({
       }
     },
     [
+      disabled,
       search,
       setSearch,
       fuse,
@@ -244,6 +315,7 @@ const Input = ({
       setFoundTimestamps,
       setWrong,
       setIsNewPlayer,
+      history,
       map,
       idMap,
       clusterGroups,
@@ -251,6 +323,7 @@ const Input = ({
       normalizeString,
       pushEvent,
       stripOptionalPrefixes,
+      pushHistory,
     ],
   )
 
@@ -262,16 +335,25 @@ const Input = ({
             'animate animate-shake': wrong,
             'shadow-md !shadow-yellow-500': success,
           },
-          'relative z-40 w-full rounded-full border border-zinc-200 bg-white px-4 py-2 text-lg font-bold text-zinc-900 caret-current shadow-lg outline-none ring-zinc-800 transition-shadow duration-300 focus:ring-2 placeholder:text-zinc-500 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100 dark:placeholder:text-zinc-400',
+          'relative z-40 w-full rounded-full border border-zinc-200 bg-white px-4 py-2 text-lg font-bold text-zinc-900 caret-current shadow-lg outline-none ring-zinc-800 transition-shadow duration-300 focus:ring-2 placeholder:text-zinc-500 disabled:cursor-not-allowed disabled:bg-zinc-100 disabled:text-zinc-400 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100 dark:placeholder:text-zinc-400 dark:disabled:bg-zinc-800 dark:disabled:text-zinc-500',
         )}
         ref={inputRef}
         placeholder={t('inputPlaceholder')}
         value={search}
-        onChange={(e) => setSearch((e.target as HTMLInputElement).value)}
+        onChange={(e) => {
+          const value = (e.target as HTMLInputElement).value
+          if (value === '' && lastSearchRef.current.trim().length > 0) {
+            pushHistory(lastSearchRef.current)
+          }
+          setHistoryIndex(null)
+          setSearch(value)
+          lastSearchRef.current = value
+        }}
         id="input"
         type="text"
-        autoFocus={autoFocus}
+        autoFocus={autoFocus && !disabled}
         onKeyDown={onKeyDown}
+        disabled={disabled}
       ></input>
       <Transition
         show={alreadyFound}

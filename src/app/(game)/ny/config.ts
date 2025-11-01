@@ -46,7 +46,7 @@ export const STRIPE_LINK = 'https://buy.stripe.com/28o14B9Yic6m73adQT'
 
 export const LINE_GROUPS: LineGroup[] = [
   {
-    title: 'Metropolitan Transit Authority (MTA)',
+    title: 'New York City Transit Authority (NYCTA)',
     items: [
       {
         type: 'lines',
@@ -113,6 +113,7 @@ export const LINE_GROUPS: LineGroup[] = [
           'LIRRBabylon',
           'LIRRBelmont',
           'LIRRCityTerminalZone',
+          'LIRRAtlantic',
           'LIRRFarRockaway',
           'LIRRHempstead',
           'LIRRLongBeach',
@@ -137,19 +138,18 @@ export const LINE_GROUPS: LineGroup[] = [
     items: [{ type: 'separator' }],
   },
   {
-    title: 'Metro-North Railroad (MNRR)',
+    title: 'Metro-North Railroad (MNR)',
     items: [
       {
         type: 'lines',
         title: 'East of Hudson – Hudson & Harlem',
-        lines: ['MNRRHudson', 'MNRRHudsonPSA', 'MNRRHarlem'],
+        lines: ['MNRRHudson', 'MNRRHarlem'],
       },
       {
         type: 'lines',
         title: 'East of Hudson – New Haven',
         lines: [
           'MNRRNewHaven',
-          'MNRRNewHavenPSA',
           'MNRRNewCanaan',
           'MNRRDanbury',
           'MNRRWaterbury',
@@ -159,6 +159,18 @@ export const LINE_GROUPS: LineGroup[] = [
         type: 'lines',
         title: 'West of Hudson',
         lines: ['NJTPascackValley', 'NJTPortJervis'],
+      },
+    ],
+  },
+  {
+    items: [{ type: 'separator' }],
+  },
+  {
+    title: 'Roosevelt Island Operating Corporation (RIOC)',
+    items: [
+      {
+        type: 'lines',
+        lines: ['RIOCRooseveltIslandTram'],
       },
     ],
   },
@@ -198,25 +210,8 @@ export const LINE_GROUPS: LineGroup[] = [
     items: [{ type: 'separator' }],
   },
   {
-    title: 'Roosevelt Island Operating Corporation (RIOC)',
+    title: 'New Jersey Transit Rail (NJTR)',
     items: [
-      {
-        type: 'lines',
-        lines: ['RIOCRooseveltIslandTram'],
-      },
-    ],
-  },
-  {
-    items: [{ type: 'separator' }],
-  },
-  {
-    title: 'New Jersey Transit (NJT)',
-    items: [
-      {
-        type: 'lines',
-        title: 'NJT Rail',
-        lines: [],
-      },
       {
         type: 'lines',
         title: 'Newark Division',
@@ -243,11 +238,14 @@ export const LINE_GROUPS: LineGroup[] = [
           'NJTLackawannaCutOff',
         ],
       },
-      {
-        type: 'lines',
-        title: 'NJT Light Rail',
-        lines: [],
-      },
+    ],
+  },
+  {
+    items: [{ type: 'separator' }],
+  },
+  {
+    title: 'New Jersey Transit Light Rail (NJTLR)',
+    items: [
       {
         type: 'lines',
         title: 'Hudson Bergen Light Rail (HBLR)',
@@ -267,6 +265,11 @@ export const LINE_GROUPS: LineGroup[] = [
         type: 'lines',
         title: 'River Line',
         lines: ['NJTLRRiverLine'],
+      },
+      {
+        type: 'lines',
+        title: 'Glassboro Camden Line',
+        lines: ['NJTLRGlassboroCamden'],
       },
     ],
   },

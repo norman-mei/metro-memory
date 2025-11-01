@@ -258,6 +258,13 @@
     "textColor": "#FFFFFF",
     "order": 37
   },
+  "LIRRAtlantic": {
+    "name": "LIRR Atlantic",
+    "color": "#999999",
+    "backgroundColor": "#999999",
+    "textColor": "#FFFFFF",
+    "order": 37.5
+  },
   "LIRRFarRockaway": {
     "name": "LIRR Far Rockaway",
     "color": "#8C5F47",
@@ -385,7 +392,7 @@
     "order": 58
   },
   "NJTGladstone": {
-    "name": "NJT Gladstone Branch",
+    "name": "Gladstone",
     "color": "#A2D5AE",
     "backgroundColor": "#59755F",
     "textColor": "#000000",
@@ -510,6 +517,13 @@
     "textColor": "#FFFFFF",
     "order": 76
   },
+  "NJTLRGlassboroCamden": {
+    "name": "Glassboro Camden Line",
+    "color": "#A2BD55",
+    "backgroundColor": "#A2BD55",
+    "textColor": "#006194",
+    "order": 77
+  },
   "AirTrainEWR": {
     "name": "EWR Airtrain",
     "color": "#CB074E",
@@ -565,20 +579,6 @@
     "backgroundColor": "#800000",
     "textColor": "#000000",
     "order": 85
-  },
-  "MNRRNewHavenPSA": {
-    "name": "MNRR New Haven (PSA)",
-    "color": "#EE0034",
-    "backgroundColor": "#82001C",
-    "textColor": "#FFFFFF",
-    "order": 51.5
-  },
-  "MNRRHudsonPSA": {
-    "name": "MNRR Hudson (PSA)",
-    "color": "#009B3A",
-    "backgroundColor": "#00551F",
-    "textColor": "#FFFFFF",
-    "order": 50.5
   },
   "NJTLackawannaCutOff": {
     "name": "NJT Lackawanna Cut-Off",
