@@ -63,6 +63,13 @@ const MANUAL_ALTERNATE_NAMES: Record<string, string[]> = {
     'Newark Liberty Airport',
     'Newark Liberty Intl Airport',
   ],
+  'South Station': ['Boston South Station'],
+  'North Station': ['Boston North Station'],
+  Airport: [
+    'Boston Logan International Airport',
+    'Logan Airport',
+    'Boston Airport',
+  ],
   'Newark Penn Station': ['Newark Penn'],
   'Grand Central - 42 St': ['Grand Central'],
   'Grand Central': ['Grand Central - 42 St'],
@@ -142,7 +149,9 @@ const MANUAL_COMPLEX_GROUPS: ManualComplexSelector[][] = [
     { name: 'Lorimer St', line: 'NewYorkSubwayL' },
   ],
   [
-    { name: 'Hunterspoint Av', line: 'LIRRCityTerminalZone' },
+    { name: 'Hunterspoint Av', line: 'LIRRPortJefferson' },
+    { name: 'Hunterspoint Av', line: 'LIRROysterBay' },
+    { name: 'Hunterspoint Av', line: 'LIRRMontauk' },
     { name: 'Hunters Point Av', line: 'NewYorkSubway7' },
     { name: 'Hunters Point Av', line: 'NewYorkSubway7X' },
   ],
@@ -1406,9 +1415,12 @@ export default function GamePage({
         setMap((map) => (map === null ? mapboxMap : map))
         mapboxMap.on('mousemove', ['stations-circles'], (e) => {
           if (e.features && e.features.length > 0) {
-            const feature = e.features.find((f) => f.state.found && f.id)
-            if (feature && feature.id) {
-              return setHoveredId(feature.id as number)
+            const feature = e.features.find(
+              (candidate) => typeof candidate.id === 'number',
+            )
+            if (feature && typeof feature.id === 'number') {
+              setHoveredId(feature.id as number)
+              return
             }
           }
 

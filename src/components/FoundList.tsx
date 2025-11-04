@@ -418,7 +418,7 @@ const GroupedLine = memo(
     activeStationId: number | null
     disabled?: boolean
   }) => {
-    const { LINES } = useConfig()
+    const { LINES, CITY_NAME } = useConfig()
     const { resolvedTheme } = useTheme()
     const isDark = resolvedTheme === 'dark'
     const buttonRef = useRef<HTMLButtonElement | null>(null)
@@ -512,7 +512,12 @@ const GroupedLine = memo(
           aria-pressed={isActive}
         >
           <div className="flex min-w-0 flex-1 flex-col items-start gap-1 text-left">
-            <div className="flex flex-wrap items-center gap-[0.5px]">
+            <div
+              className={classNames(
+                'flex flex-wrap items-center',
+                CITY_NAME === 'ny' ? 'gap-[0.001rem]' : 'gap-1',
+              )}
+            >
               {lineIds.map((lineId) => (
                 <Image
                   key={lineId}
@@ -520,7 +525,7 @@ const GroupedLine = memo(
                   src={`/images/${lineId}.svg`}
                   width={64}
                   height={64}
-                  className="h-6 w-6 flex-shrink-0 object-contain"
+                  className="h-6 w-6 flex-shrink-0 rounded-full object-cover"
                 />
               ))}
             </div>

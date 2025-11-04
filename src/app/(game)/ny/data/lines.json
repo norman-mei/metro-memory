@@ -251,13 +251,6 @@
     "textColor": "#FFFFFF",
     "order": 36
   },
-  "LIRRCityTerminalZone": {
-    "name": "LIRR City Terminal",
-    "color": "#858485",
-    "backgroundColor": "#494849",
-    "textColor": "#FFFFFF",
-    "order": 37
-  },
   "LIRRAtlantic": {
     "name": "LIRR Atlantic",
     "color": "#999999",

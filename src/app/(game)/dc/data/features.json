@@ -5,7 +5,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-76.655357, 39.202332]
+        "coordinates": [
+          -76.655357,
+          39.202332
+        ]
       },
       "properties": {
         "id": 1,
@@ -18,7 +21,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.02192, 38.90658]
+        "coordinates": [
+          -77.02192,
+          38.90658
+        ]
       },
       "properties": {
         "id": 2,
@@ -32,7 +38,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.02192, 38.90658]
+        "coordinates": [
+          -77.02192,
+          38.90658
+        ]
       },
       "properties": {
         "id": 3,
@@ -46,7 +55,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.460685, 38.99204]
+        "coordinates": [
+          -77.460685,
+          38.99204
+        ]
       },
       "properties": {
         "id": 4,
@@ -59,7 +71,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-76.995559, 38.863287]
+        "coordinates": [
+          -76.995559,
+          38.863287
+        ]
       },
       "properties": {
         "id": 5,
@@ -72,7 +87,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-76.871871, 38.948028]
+        "coordinates": [
+          -76.871871,
+          38.948028
+        ]
       },
       "properties": {
         "id": 6,
@@ -85,7 +103,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-76.619904, 39.278946]
+        "coordinates": [
+          -76.619904,
+          39.278946
+        ]
       },
       "properties": {
         "id": 7,
@@ -98,7 +119,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.360185, 38.952768]
+        "coordinates": [
+          -77.360185,
+          38.952768
+        ]
       },
       "properties": {
         "id": 8,
@@ -111,7 +135,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-76.634933, 39.256016]
+        "coordinates": [
+          -76.634933,
+          39.256016
+        ]
       },
       "properties": {
         "id": 9,
@@ -124,7 +151,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.046494, 38.833199]
+        "coordinates": [
+          -77.046494,
+          38.833199
+        ]
       },
       "properties": {
         "id": 10,
@@ -137,7 +167,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.046494, 38.833199]
+        "coordinates": [
+          -77.046494,
+          38.833199
+        ]
       },
       "properties": {
         "id": 11,
@@ -150,7 +183,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-76.911817, 38.826718]
+        "coordinates": [
+          -76.911817,
+          38.826718
+        ]
       },
       "properties": {
         "id": 12,
@@ -163,13 +199,16 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-76.92834, 38.978303]
+        "coordinates": [
+          -76.92834,
+          38.978303
+        ]
       },
       "properties": {
         "id": 13,
         "name": "College Park-U Of Md",
         "short_name": "College Park",
-        "long_name": "College Park–University of Maryland",
+        "long_name": "College Park\u2013University of Maryland",
         "line": "WMATAMetroGreen"
       },
       "id": 13
@@ -178,7 +217,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-76.935163, 38.908224]
+        "coordinates": [
+          -76.935163,
+          38.908224
+        ]
       },
       "properties": {
         "id": 14,
@@ -191,12 +233,15 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.022802, 38.89838]
+        "coordinates": [
+          -77.022802,
+          38.89838
+        ]
       },
       "properties": {
         "id": 15,
         "name": "Gallery Place",
-        "long_name": "Gallery Place–Chinatown",
+        "long_name": "Gallery Place\u2013Chinatown",
         "short_name": "Chinatown",
         "line": "WMATAMetroGreen"
       },
@@ -206,12 +251,15 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.022802, 38.89838]
+        "coordinates": [
+          -77.022802,
+          38.89838
+        ]
       },
       "properties": {
         "id": 16,
         "name": "Gallery Place",
-        "long_name": "Gallery Place–Chinatown",
+        "long_name": "Gallery Place\u2013Chinatown",
         "short_name": "Chinatown",
         "line": "WMATAMetroRed"
       },
@@ -221,12 +269,15 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.022802, 38.89838]
+        "coordinates": [
+          -77.022802,
+          38.89838
+        ]
       },
       "properties": {
         "id": 17,
         "name": "Gallery Place",
-        "long_name": "Gallery Place–Chinatown",
+        "long_name": "Gallery Place\u2013Chinatown",
         "short_name": "Chinatown",
         "line": "WMATAMetroYellow"
       },
@@ -236,7 +287,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.05011, 39.037543]
+        "coordinates": [
+          -77.05011,
+          39.037543
+        ]
       },
       "properties": {
         "id": 18,
@@ -249,7 +303,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.241891, 38.929212]
+        "coordinates": [
+          -77.241891,
+          38.929212
+        ]
       },
       "properties": {
         "id": 19,
@@ -262,7 +319,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-76.706095, 39.352589]
+        "coordinates": [
+          -76.706095,
+          39.352589
+        ]
       },
       "properties": {
         "id": 20,
@@ -275,7 +335,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-76.780768, 39.407642]
+        "coordinates": [
+          -76.780768,
+          39.407642
+        ]
       },
       "properties": {
         "id": 21,
@@ -288,7 +351,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-76.632927, 39.235123]
+        "coordinates": [
+          -76.632927,
+          39.235123
+        ]
       },
       "properties": {
         "id": 22,
@@ -301,7 +367,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-76.661728, 39.482162]
+        "coordinates": [
+          -76.661728,
+          39.482162
+        ]
       },
       "properties": {
         "id": 23,
@@ -314,7 +383,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.156944, 38.886026]
+        "coordinates": [
+          -77.156944,
+          38.886026
+        ]
       },
       "properties": {
         "id": 24,
@@ -327,7 +399,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.156944, 38.886026]
+        "coordinates": [
+          -77.156944,
+          38.886026
+        ]
       },
       "properties": {
         "id": 25,
@@ -340,7 +415,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-76.977074, 38.886927]
+        "coordinates": [
+          -76.977074,
+          38.886927
+        ]
       },
       "properties": {
         "id": 26,
@@ -353,7 +431,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-76.977074, 38.886927]
+        "coordinates": [
+          -76.977074,
+          38.886927
+        ]
       },
       "properties": {
         "id": 27,
@@ -366,7 +447,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-76.977074, 38.886927]
+        "coordinates": [
+          -76.977074,
+          38.886927
+        ]
       },
       "properties": {
         "id": 28,
@@ -379,7 +463,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.059516, 38.861852]
+        "coordinates": [
+          -77.059516,
+          38.861852
+        ]
       },
       "properties": {
         "id": 29,
@@ -392,7 +479,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.059516, 38.861852]
+        "coordinates": [
+          -77.059516,
+          38.861852
+        ]
       },
       "properties": {
         "id": 30,
@@ -405,7 +495,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.003311, 38.906617]
+        "coordinates": [
+          -77.003311,
+          38.906617
+        ]
       },
       "properties": {
         "id": 31,
@@ -419,7 +512,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.053548, 39.061767]
+        "coordinates": [
+          -77.053548,
+          39.061767
+        ]
       },
       "properties": {
         "id": 32,
@@ -432,7 +528,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.340316, 38.947832]
+        "coordinates": [
+          -77.340316,
+          38.947832
+        ]
       },
       "properties": {
         "id": 33,
@@ -445,13 +544,21 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-76.63308, 39.172092]
+        "coordinates": [
+          -76.63308,
+          39.172092
+        ]
       },
       "properties": {
         "id": 34,
-        "name": "Glen Burnie (Cromwell)",
+        "name": "Glen Burnie",
         "short_name": "Glen Burnie",
-        "line": "MarylandLightRailLightRaillink"
+        "line": "MarylandLightRailLightRaillink",
+        "alternate_names": [
+          "Glen Burnie (Cromwell)",
+          "Cromwell",
+          "Cromwell/Glen Burnie"
+        ]
       },
       "id": 34
     },
@@ -459,7 +566,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-76.891265, 38.933504]
+        "coordinates": [
+          -76.891265,
+          38.933504
+        ]
       },
       "properties": {
         "id": 35,
@@ -472,7 +582,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.028132, 38.893834]
+        "coordinates": [
+          -77.028132,
+          38.893834
+        ]
       },
       "properties": {
         "id": 36,
@@ -485,7 +598,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.028132, 38.893834]
+        "coordinates": [
+          -77.028132,
+          38.893834
+        ]
       },
       "properties": {
         "id": 37,
@@ -498,7 +614,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.028132, 38.893834]
+        "coordinates": [
+          -77.028132,
+          38.893834
+        ]
       },
       "properties": {
         "id": 38,
@@ -511,7 +630,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-76.988439, 38.845695]
+        "coordinates": [
+          -76.988439,
+          38.845695
+        ]
       },
       "properties": {
         "id": 39,
@@ -524,7 +646,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-76.641403, 39.221573]
+        "coordinates": [
+          -76.641403,
+          39.221573
+        ]
       },
       "properties": {
         "id": 40,
@@ -537,7 +662,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-76.98558, 38.881271]
+        "coordinates": [
+          -76.98558,
+          38.881271
+        ]
       },
       "properties": {
         "id": 41,
@@ -550,7 +678,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-76.98558, 38.881271]
+        "coordinates": [
+          -76.98558,
+          38.881271
+        ]
       },
       "properties": {
         "id": 42,
@@ -563,7 +694,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-76.98558, 38.881271]
+        "coordinates": [
+          -76.98558,
+          38.881271
+        ]
       },
       "properties": {
         "id": 43,
@@ -576,7 +710,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.415295, 38.960758]
+        "coordinates": [
+          -77.415295,
+          38.960758
+        ]
       },
       "properties": {
         "id": 44,
@@ -589,7 +726,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.385178, 38.952821]
+        "coordinates": [
+          -77.385178,
+          38.952821
+        ]
       },
       "properties": {
         "id": 45,
@@ -602,7 +742,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-76.996075, 38.884632]
+        "coordinates": [
+          -76.996075,
+          38.884632
+        ]
       },
       "properties": {
         "id": 46,
@@ -615,7 +758,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-76.996075, 38.884632]
+        "coordinates": [
+          -76.996075,
+          38.884632
+        ]
       },
       "properties": {
         "id": 47,
@@ -628,7 +774,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-76.996075, 38.884632]
+        "coordinates": [
+          -76.996075,
+          38.884632
+        ]
       },
       "properties": {
         "id": 48,
@@ -641,7 +790,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.0753, 38.79383]
+        "coordinates": [
+          -77.0753,
+          38.79383
+        ]
       },
       "properties": {
         "id": 49,
@@ -654,7 +806,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.031307, 38.993799]
+        "coordinates": [
+          -77.031307,
+          38.993799
+        ]
       },
       "properties": {
         "id": 50,
@@ -667,7 +822,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-76.616275, 39.289452]
+        "coordinates": [
+          -76.616275,
+          39.289452
+        ]
       },
       "properties": {
         "id": 51,
@@ -680,7 +838,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.053722, 38.814087]
+        "coordinates": [
+          -77.053722,
+          38.814087
+        ]
       },
       "properties": {
         "id": 52,
@@ -693,7 +854,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.053722, 38.814087]
+        "coordinates": [
+          -77.053722,
+          38.814087
+        ]
       },
       "properties": {
         "id": 53,
@@ -706,7 +870,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-76.649727, 39.37664]
+        "coordinates": [
+          -76.649727,
+          39.37664
+        ]
       },
       "properties": {
         "id": 54,
@@ -719,7 +886,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-76.975211, 38.840954]
+        "coordinates": [
+          -76.975211,
+          38.840954
+        ]
       },
       "properties": {
         "id": 55,
@@ -732,7 +902,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.071156, 38.800354]
+        "coordinates": [
+          -77.071156,
+          38.800354
+        ]
       },
       "properties": {
         "id": 56,
@@ -745,7 +918,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-76.622589, 39.311878]
+        "coordinates": [
+          -76.622589,
+          39.311878
+        ]
       },
       "properties": {
         "id": 57,
@@ -758,7 +934,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-76.916662, 38.916641]
+        "coordinates": [
+          -76.916662,
+          38.916641
+        ]
       },
       "properties": {
         "id": 58,
@@ -771,7 +950,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.002296, 38.951786]
+        "coordinates": [
+          -77.002296,
+          38.951786
+        ]
       },
       "properties": {
         "id": 59,
@@ -784,7 +966,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.002296, 38.951786]
+        "coordinates": [
+          -77.002296,
+          38.951786
+        ]
       },
       "properties": {
         "id": 60,
@@ -797,7 +982,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.087144, 38.890153]
+        "coordinates": [
+          -77.087144,
+          38.890153
+        ]
       },
       "properties": {
         "id": 61,
@@ -810,7 +998,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.087144, 38.890153]
+        "coordinates": [
+          -77.087144,
+          38.890153
+        ]
       },
       "properties": {
         "id": 62,
@@ -823,7 +1014,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.221589, 38.920685]
+        "coordinates": [
+          -77.221589,
+          38.920685
+        ]
       },
       "properties": {
         "id": 63,
@@ -836,7 +1030,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.058127, 38.934912]
+        "coordinates": [
+          -77.058127,
+          38.934912
+        ]
       },
       "properties": {
         "id": 64,
@@ -849,7 +1046,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.040464, 38.901342]
+        "coordinates": [
+          -77.040464,
+          38.901342
+        ]
       },
       "properties": {
         "id": 65,
@@ -862,7 +1062,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.040464, 38.901342]
+        "coordinates": [
+          -77.040464,
+          38.901342
+        ]
       },
       "properties": {
         "id": 66,
@@ -875,7 +1078,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.040464, 38.901342]
+        "coordinates": [
+          -77.040464,
+          38.901342
+        ]
       },
       "properties": {
         "id": 67,
@@ -888,7 +1094,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-76.743665, 39.371003]
+        "coordinates": [
+          -76.743665,
+          39.371003
+        ]
       },
       "properties": {
         "id": 68,
@@ -901,7 +1110,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-76.658943, 39.489548]
+        "coordinates": [
+          -76.658943,
+          39.489548
+        ]
       },
       "properties": {
         "id": 69,
@@ -914,7 +1126,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.039668, 38.903147]
+        "coordinates": [
+          -77.039668,
+          38.903147
+        ]
       },
       "properties": {
         "id": 70,
@@ -927,7 +1142,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-76.67321, 39.191429]
+        "coordinates": [
+          -76.67321,
+          39.191429
+        ]
       },
       "properties": {
         "id": 71,
@@ -940,7 +1158,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-76.64608, 39.214344]
+        "coordinates": [
+          -76.64608,
+          39.214344
+        ]
       },
       "properties": {
         "id": 72,
@@ -953,7 +1174,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.02752, 38.917009]
+        "coordinates": [
+          -77.02752,
+          38.917009
+        ]
       },
       "properties": {
         "id": 73,
@@ -967,7 +1191,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-76.619527, 39.283157]
+        "coordinates": [
+          -76.619527,
+          39.283157
+        ]
       },
       "properties": {
         "id": 74,
@@ -980,7 +1207,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.032521, 38.927502]
+        "coordinates": [
+          -77.032521,
+          38.927502
+        ]
       },
       "properties": {
         "id": 76,
@@ -993,7 +1223,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.096758, 38.998225]
+        "coordinates": [
+          -77.096758,
+          38.998225
+        ]
       },
       "properties": {
         "id": 77,
@@ -1006,7 +1239,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-76.672632, 39.336464]
+        "coordinates": [
+          -76.672632,
+          39.336464
+        ]
       },
       "properties": {
         "id": 78,
@@ -1019,7 +1255,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-76.652759, 39.318211]
+        "coordinates": [
+          -76.652759,
+          39.318211
+        ]
       },
       "properties": {
         "id": 79,
@@ -1032,7 +1271,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.005215, 38.885073]
+        "coordinates": [
+          -77.005215,
+          38.885073
+        ]
       },
       "properties": {
         "id": 80,
@@ -1045,7 +1287,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.005215, 38.885073]
+        "coordinates": [
+          -77.005215,
+          38.885073
+        ]
       },
       "properties": {
         "id": 81,
@@ -1058,7 +1303,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.005215, 38.885073]
+        "coordinates": [
+          -77.005215,
+          38.885073
+        ]
       },
       "properties": {
         "id": 82,
@@ -1071,11 +1319,14 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-76.994546, 38.933126]
+        "coordinates": [
+          -76.994546,
+          38.933126
+        ]
       },
       "properties": {
         "id": 83,
-        "name": "Brookland–CUA",
+        "name": "Brookland\u2013CUA",
         "short_name": "Brookland",
         "long_name": "Brookland-Catholic University of America",
         "line": "WMATAMetroRed"
@@ -1086,7 +1337,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.079672, 38.948886]
+        "coordinates": [
+          -77.079672,
+          38.948886
+        ]
       },
       "properties": {
         "id": 84,
@@ -1101,7 +1355,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.062953, 38.943211]
+        "coordinates": [
+          -77.062953,
+          38.943211
+        ]
       },
       "properties": {
         "id": 85,
@@ -1116,7 +1373,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-76.629974, 39.241997]
+        "coordinates": [
+          -76.629974,
+          39.241997
+        ]
       },
       "properties": {
         "id": 86,
@@ -1129,7 +1389,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.167991, 38.766505]
+        "coordinates": [
+          -77.167991,
+          38.766505
+        ]
       },
       "properties": {
         "id": 87,
@@ -1142,7 +1405,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.028631, 38.888506]
+        "coordinates": [
+          -77.028631,
+          38.888506
+        ]
       },
       "properties": {
         "id": 88,
@@ -1155,7 +1421,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.028631, 38.888506]
+        "coordinates": [
+          -77.028631,
+          38.888506
+        ]
       },
       "properties": {
         "id": 89,
@@ -1168,7 +1437,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.028631, 38.888506]
+        "coordinates": [
+          -77.028631,
+          38.888506
+        ]
       },
       "properties": {
         "id": 90,
@@ -1181,7 +1453,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-76.654289, 39.496288]
+        "coordinates": [
+          -76.654289,
+          39.496288
+        ]
       },
       "properties": {
         "id": 91,
@@ -1194,7 +1469,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.054113, 38.869195]
+        "coordinates": [
+          -77.054113,
+          38.869195
+        ]
       },
       "properties": {
         "id": 92,
@@ -1207,7 +1485,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.054113, 38.869195]
+        "coordinates": [
+          -77.054113,
+          38.869195
+        ]
       },
       "properties": {
         "id": 93,
@@ -1220,7 +1501,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.050104, 38.9007]
+        "coordinates": [
+          -77.050104,
+          38.9007
+        ]
       },
       "properties": {
         "id": 94,
@@ -1234,7 +1518,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.050104, 38.9007]
+        "coordinates": [
+          -77.050104,
+          38.9007
+        ]
       },
       "properties": {
         "id": 95,
@@ -1248,7 +1535,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.050104, 38.9007]
+        "coordinates": [
+          -77.050104,
+          38.9007
+        ]
       },
       "properties": {
         "id": 96,
@@ -1262,7 +1552,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.227243, 38.883649]
+        "coordinates": [
+          -77.227243,
+          38.883649
+        ]
       },
       "properties": {
         "id": 97,
@@ -1276,7 +1569,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.015937, 38.885076]
+        "coordinates": [
+          -77.015937,
+          38.885076
+        ]
       },
       "properties": {
         "id": 98,
@@ -1289,7 +1585,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.015937, 38.885076]
+        "coordinates": [
+          -77.015937,
+          38.885076
+        ]
       },
       "properties": {
         "id": 99,
@@ -1302,7 +1601,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.015937, 38.885076]
+        "coordinates": [
+          -77.015937,
+          38.885076
+        ]
       },
       "properties": {
         "id": 100,
@@ -1315,7 +1617,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.189221, 38.900788]
+        "coordinates": [
+          -77.189221,
+          38.900788
+        ]
       },
       "properties": {
         "id": 101,
@@ -1328,7 +1633,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.095442, 38.886739]
+        "coordinates": [
+          -77.095442,
+          38.886739
+        ]
       },
       "properties": {
         "id": 102,
@@ -1341,7 +1649,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.095442, 38.886739]
+        "coordinates": [
+          -77.095442,
+          38.886739
+        ]
       },
       "properties": {
         "id": 103,
@@ -1354,7 +1665,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.121216, 39.062696]
+        "coordinates": [
+          -77.121216,
+          39.062696
+        ]
       },
       "properties": {
         "id": 104,
@@ -1367,7 +1681,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-76.64016, 39.183651]
+        "coordinates": [
+          -76.64016,
+          39.183651
+        ]
       },
       "properties": {
         "id": 105,
@@ -1380,7 +1697,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-76.623166, 39.301515]
+        "coordinates": [
+          -76.623166,
+          39.301515
+        ]
       },
       "properties": {
         "id": 106,
@@ -1393,7 +1713,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-76.628181, 39.433868]
+        "coordinates": [
+          -76.628181,
+          39.433868
+        ]
       },
       "properties": {
         "id": 107,
@@ -1406,7 +1729,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-76.647903, 39.344097]
+        "coordinates": [
+          -76.647903,
+          39.344097
+        ]
       },
       "properties": {
         "id": 108,
@@ -1419,7 +1745,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.017559, 38.876456]
+        "coordinates": [
+          -77.017559,
+          38.876456
+        ]
       },
       "properties": {
         "id": 109,
@@ -1432,7 +1761,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-76.64259, 39.310195]
+        "coordinates": [
+          -76.64259,
+          39.310195
+        ]
       },
       "properties": {
         "id": 110,
@@ -1445,7 +1777,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-76.605583, 39.289915]
+        "coordinates": [
+          -76.605583,
+          39.289915
+        ]
       },
       "properties": {
         "id": 111,
@@ -1458,7 +1793,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-76.627144, 39.428959]
+        "coordinates": [
+          -76.627144,
+          39.428959
+        ]
       },
       "properties": {
         "id": 112,
@@ -1471,7 +1809,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-76.911197, 39.011093]
+        "coordinates": [
+          -76.911197,
+          39.011093
+        ]
       },
       "properties": {
         "id": 113,
@@ -1484,13 +1825,23 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-76.619461, 39.288818]
+        "coordinates": [
+          -76.619461,
+          39.288818
+        ]
       },
       "properties": {
         "id": 114,
-        "name": "Baltimore Arena (University Center)",
+        "name": "Baltimore Arena",
         "short_name": "Baltimore Arena",
-        "line": "MarylandLightRailLightRaillink"
+        "line": "MarylandLightRailLightRaillink",
+        "alternate_names": [
+          "Baltimore Arena (University Center)",
+          "University Center/Baltimore Street",
+          "University Center",
+          "Baltimore Street",
+          "Baltimore St"
+        ]
       },
       "id": 114
     },
@@ -1498,7 +1849,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.021923, 38.913518]
+        "coordinates": [
+          -77.021923,
+          38.913518
+        ]
       },
       "properties": {
         "id": 115,
@@ -1512,7 +1866,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.448148, 38.955784]
+        "coordinates": [
+          -77.448148,
+          38.955784
+        ]
       },
       "properties": {
         "id": 116,
@@ -1527,7 +1884,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.491537, 39.005283]
+        "coordinates": [
+          -77.491537,
+          39.005283
+        ]
       },
       "properties": {
         "id": 117,
@@ -1540,7 +1900,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.11322, 38.88226]
+        "coordinates": [
+          -77.11322,
+          38.88226
+        ]
       },
       "properties": {
         "id": 118,
@@ -1555,7 +1918,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.11322, 38.88226]
+        "coordinates": [
+          -77.11322,
+          38.88226
+        ]
       },
       "properties": {
         "id": 119,
@@ -1570,7 +1936,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.023537, 38.937367]
+        "coordinates": [
+          -77.023537,
+          38.937367
+        ]
       },
       "properties": {
         "id": 120,
@@ -1583,7 +1952,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-76.621236, 39.292731]
+        "coordinates": [
+          -76.621236,
+          39.292731
+        ]
       },
       "properties": {
         "id": 121,
@@ -1596,7 +1968,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-76.669823, 39.182827]
+        "coordinates": [
+          -76.669823,
+          39.182827
+        ]
       },
       "properties": {
         "id": 122,
@@ -1609,7 +1984,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.016804, 38.896218]
+        "coordinates": [
+          -77.016804,
+          38.896218
+        ]
       },
       "properties": {
         "id": 123,
@@ -1622,7 +2000,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-76.894135, 38.886731]
+        "coordinates": [
+          -76.894135,
+          38.886731
+        ]
       },
       "properties": {
         "id": 124,
@@ -1636,7 +2017,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-76.894135, 38.886731]
+        "coordinates": [
+          -76.894135,
+          38.886731
+        ]
       },
       "properties": {
         "id": 125,
@@ -1650,7 +2034,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.021913, 38.884893]
+        "coordinates": [
+          -77.021913,
+          38.884893
+        ]
       },
       "properties": {
         "id": 126,
@@ -1663,7 +2050,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.021913, 38.884893]
+        "coordinates": [
+          -77.021913,
+          38.884893
+        ]
       },
       "properties": {
         "id": 127,
@@ -1676,7 +2066,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.021913, 38.884893]
+        "coordinates": [
+          -77.021913,
+          38.884893
+        ]
       },
       "properties": {
         "id": 128,
@@ -1689,7 +2082,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.021913, 38.884893]
+        "coordinates": [
+          -77.021913,
+          38.884893
+        ]
       },
       "properties": {
         "id": 129,
@@ -1702,7 +2098,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.021913, 38.884893]
+        "coordinates": [
+          -77.021913,
+          38.884893
+        ]
       },
       "properties": {
         "id": 130,
@@ -1715,7 +2114,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.007467, 38.897495]
+        "coordinates": [
+          -77.007467,
+          38.897495
+        ]
       },
       "properties": {
         "id": 131,
@@ -1728,7 +2130,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.043597, 38.909909]
+        "coordinates": [
+          -77.043597,
+          38.909909
+        ]
       },
       "properties": {
         "id": 132,
@@ -1741,7 +2146,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-76.63672, 39.305318]
+        "coordinates": [
+          -76.63672,
+          39.305318
+        ]
       },
       "properties": {
         "id": 133,
@@ -1754,7 +2162,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.005877, 38.876473]
+        "coordinates": [
+          -77.005877,
+          38.876473
+        ]
       },
       "properties": {
         "id": 134,
@@ -1768,12 +2179,15 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.021909, 38.893224]
+        "coordinates": [
+          -77.021909,
+          38.893224
+        ]
       },
       "properties": {
         "id": 135,
         "name": "Archives",
-        "long_name": "Archives–Navy Memorial–Penn Quarter",
+        "long_name": "Archives\u2013Navy Memorial\u2013Penn Quarter",
         "line": "WMATAMetroGreen"
       },
       "id": 135
@@ -1782,12 +2196,15 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.021909, 38.893224]
+        "coordinates": [
+          -77.021909,
+          38.893224
+        ]
       },
       "properties": {
         "id": 136,
         "name": "Archives",
-        "long_name": "Archives–Navy Memorial–Penn Quarter",
+        "long_name": "Archives\u2013Navy Memorial\u2013Penn Quarter",
         "line": "WMATAMetroYellow"
       },
       "id": 136
@@ -1796,7 +2213,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.093654, 38.983275]
+        "coordinates": [
+          -77.093654,
+          38.983275
+        ]
       },
       "properties": {
         "id": 137,
@@ -1809,20 +2229,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-76.625885, 39.315395]
-      },
-      "properties": {
-        "id": 138,
-        "name": "Mta Light Rail Division",
-        "line": "MarylandLightRailLightRaillink"
-      },
-      "id": 138
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-76.619392, 39.285789]
+        "coordinates": [
+          -76.619392,
+          39.285789
+        ]
       },
       "properties": {
         "id": 139,
@@ -1835,7 +2245,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-76.653755, 39.475903]
+        "coordinates": [
+          -76.653755,
+          39.475903
+        ]
       },
       "properties": {
         "id": 140,
@@ -1848,7 +2261,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-76.632126, 39.261829]
+        "coordinates": [
+          -76.632126,
+          39.261829
+        ]
       },
       "properties": {
         "id": 141,
@@ -1861,7 +2277,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-76.694382, 39.346336]
+        "coordinates": [
+          -76.694382,
+          39.346336
+        ]
       },
       "properties": {
         "id": 142,
@@ -1874,7 +2293,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.028088, 38.898321]
+        "coordinates": [
+          -77.028088,
+          38.898321
+        ]
       },
       "properties": {
         "id": 143,
@@ -1887,7 +2309,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.028088, 38.898321]
+        "coordinates": [
+          -77.028088,
+          38.898321
+        ]
       },
       "properties": {
         "id": 144,
@@ -1900,7 +2325,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.028088, 38.898321]
+        "coordinates": [
+          -77.028088,
+          38.898321
+        ]
       },
       "properties": {
         "id": 145,
@@ -1913,7 +2341,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.028088, 38.898321]
+        "coordinates": [
+          -77.028088,
+          38.898321
+        ]
       },
       "properties": {
         "id": 146,
@@ -1926,7 +2357,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.042927, 39.014946]
+        "coordinates": [
+          -77.042927,
+          39.014946
+        ]
       },
       "properties": {
         "id": 147,
@@ -1939,7 +2373,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.234162, 38.921269]
+        "coordinates": [
+          -77.234162,
+          38.921269
+        ]
       },
       "properties": {
         "id": 148,
@@ -1952,7 +2389,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.085022, 38.959384]
+        "coordinates": [
+          -77.085022,
+          38.959384
+        ]
       },
       "properties": {
         "id": 149,
@@ -1965,7 +2405,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.164669, 39.119927]
+        "coordinates": [
+          -77.164669,
+          39.119927
+        ]
       },
       "properties": {
         "id": 150,
@@ -1978,7 +2421,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-76.619888, 39.307499]
+        "coordinates": [
+          -76.619888,
+          39.307499
+        ]
       },
       "properties": {
         "id": 151,
@@ -1991,7 +2437,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-76.956605, 38.851121]
+        "coordinates": [
+          -76.956605,
+          38.851121
+        ]
       },
       "properties": {
         "id": 152,
@@ -2004,7 +2453,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-76.956422, 38.965292]
+        "coordinates": [
+          -76.956422,
+          38.965292
+        ]
       },
       "properties": {
         "id": 153,
@@ -2017,7 +2469,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-76.9695, 38.955276]
+        "coordinates": [
+          -76.9695,
+          38.955276
+        ]
       },
       "properties": {
         "id": 154,
@@ -2030,7 +2485,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-76.938619, 38.891069]
+        "coordinates": [
+          -76.938619,
+          38.891069
+        ]
       },
       "properties": {
         "id": 155,
@@ -2043,7 +2501,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-76.938619, 38.891069]
+        "coordinates": [
+          -76.938619,
+          38.891069
+        ]
       },
       "properties": {
         "id": 156,
@@ -2056,7 +2517,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-76.844654, 38.900511]
+        "coordinates": [
+          -76.844654,
+          38.900511
+        ]
       },
       "properties": {
         "id": 157,
@@ -2070,7 +2534,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-76.844654, 38.900511]
+        "coordinates": [
+          -76.844654,
+          38.900511
+        ]
       },
       "properties": {
         "id": 158,
@@ -2084,7 +2551,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.044048, 38.853505]
+        "coordinates": [
+          -77.044048,
+          38.853505
+        ]
       },
       "properties": {
         "id": 159,
@@ -2099,7 +2569,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.044048, 38.853505]
+        "coordinates": [
+          -77.044048,
+          38.853505
+        ]
       },
       "properties": {
         "id": 160,
@@ -2114,7 +2587,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.104117, 39.029732]
+        "coordinates": [
+          -77.104117,
+          39.029732
+        ]
       },
       "properties": {
         "id": 161,
@@ -2127,7 +2603,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-76.594107, 39.298289]
+        "coordinates": [
+          -76.594107,
+          39.298289
+        ]
       },
       "properties": {
         "id": 162,
@@ -2140,7 +2619,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.033433, 38.901342]
+        "coordinates": [
+          -77.033433,
+          38.901342
+        ]
       },
       "properties": {
         "id": 163,
@@ -2153,7 +2635,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.033433, 38.901342]
+        "coordinates": [
+          -77.033433,
+          38.901342
+        ]
       },
       "properties": {
         "id": 164,
@@ -2166,7 +2651,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.033433, 38.901342]
+        "coordinates": [
+          -77.033433,
+          38.901342
+        ]
       },
       "properties": {
         "id": 165,
@@ -2179,7 +2667,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-76.643417, 39.3312]
+        "coordinates": [
+          -76.643417,
+          39.3312
+        ]
       },
       "properties": {
         "id": 166,
@@ -2192,7 +2683,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.21053, 38.924339]
+        "coordinates": [
+          -77.21053,
+          38.924339
+        ]
       },
       "properties": {
         "id": 167,
@@ -2205,7 +2699,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-76.634926, 39.448555]
+        "coordinates": [
+          -76.634926,
+          39.448555
+        ]
       },
       "properties": {
         "id": 168,
@@ -2218,7 +2715,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-76.946743, 38.899168]
+        "coordinates": [
+          -76.946743,
+          38.899168
+        ]
       },
       "properties": {
         "id": 169,
@@ -2231,7 +2731,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-76.867707, 38.894001]
+        "coordinates": [
+          -76.867707,
+          38.894001
+        ]
       },
       "properties": {
         "id": 170,
@@ -2244,7 +2747,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-76.867707, 38.894001]
+        "coordinates": [
+          -76.867707,
+          38.894001
+        ]
       },
       "properties": {
         "id": 171,
@@ -2257,7 +2763,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.103024, 38.883433]
+        "coordinates": [
+          -77.103024,
+          38.883433
+        ]
       },
       "properties": {
         "id": 172,
@@ -2271,7 +2780,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.103024, 38.883433]
+        "coordinates": [
+          -77.103024,
+          38.883433
+        ]
       },
       "properties": {
         "id": 173,
@@ -2285,7 +2797,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.0631, 38.884588]
+        "coordinates": [
+          -77.0631,
+          38.884588
+        ]
       },
       "properties": {
         "id": 174,
@@ -2298,7 +2813,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-76.620914, 39.29173]
+        "coordinates": [
+          -76.620914,
+          39.29173
+        ]
       },
       "properties": {
         "id": 175,
@@ -2311,7 +2829,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-76.656273, 39.492107]
+        "coordinates": [
+          -76.656273,
+          39.492107
+        ]
       },
       "properties": {
         "id": 176,
@@ -2324,7 +2845,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-76.932869, 38.844668]
+        "coordinates": [
+          -76.932869,
+          38.844668
+        ]
       },
       "properties": {
         "id": 177,
@@ -2337,7 +2861,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-76.652176, 39.368462]
+        "coordinates": [
+          -76.652176,
+          39.368462
+        ]
       },
       "properties": {
         "id": 178,
@@ -2350,7 +2877,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.050572, 38.857846]
+        "coordinates": [
+          -77.050572,
+          38.857846
+        ]
       },
       "properties": {
         "id": 179,
@@ -2363,7 +2893,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.050572, 38.857846]
+        "coordinates": [
+          -77.050572,
+          38.857846
+        ]
       },
       "properties": {
         "id": 180,
@@ -2376,7 +2909,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.113076, 39.048539]
+        "coordinates": [
+          -77.113076,
+          39.048539
+        ]
       },
       "properties": {
         "id": 181,
@@ -2390,7 +2926,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.052692, 38.925562]
+        "coordinates": [
+          -77.052692,
+          38.925562
+        ]
       },
       "properties": {
         "id": 182,
@@ -2404,7 +2943,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.146193, 39.084272]
+        "coordinates": [
+          -77.146193,
+          39.084272
+        ]
       },
       "properties": {
         "id": 183,
@@ -2417,7 +2959,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.070838, 38.896034]
+        "coordinates": [
+          -77.070838,
+          38.896034
+        ]
       },
       "properties": {
         "id": 184,
@@ -2430,7 +2975,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.070838, 38.896034]
+        "coordinates": [
+          -77.070838,
+          38.896034
+        ]
       },
       "properties": {
         "id": 185,
@@ -2443,7 +2991,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.070838, 38.896034]
+        "coordinates": [
+          -77.070838,
+          38.896034
+        ]
       },
       "properties": {
         "id": 186,
@@ -2456,7 +3007,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-76.620453, 39.30368]
+        "coordinates": [
+          -76.620453,
+          39.30368
+        ]
       },
       "properties": {
         "id": 187,
@@ -2469,7 +3023,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.272459, 38.877578]
+        "coordinates": [
+          -77.272459,
+          38.877578
+        ]
       },
       "properties": {
         "id": 188,
@@ -2483,7 +3040,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.060974, 38.806609]
+        "coordinates": [
+          -77.060974,
+          38.806609
+        ]
       },
       "properties": {
         "id": 189,
@@ -2496,7 +3056,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.060974, 38.806609]
+        "coordinates": [
+          -77.060974,
+          38.806609
+        ]
       },
       "properties": {
         "id": 190,
@@ -2509,7 +3072,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-76.721459, 39.362777]
+        "coordinates": [
+          -76.721459,
+          39.362777
+        ]
       },
       "properties": {
         "id": 191,
@@ -2522,7 +3088,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.018126, 38.976022]
+        "coordinates": [
+          -77.018126,
+          38.976022
+        ]
       },
       "properties": {
         "id": 192,
@@ -2535,7 +3104,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-76.995942, 38.920916]
+        "coordinates": [
+          -76.995942,
+          38.920916
+        ]
       },
       "properties": {
         "id": 193,
@@ -2549,7 +3121,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-76.911833, 38.889429]
+        "coordinates": [
+          -76.911833,
+          38.889429
+        ]
       },
       "properties": {
         "id": 194,
@@ -2562,7 +3137,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-76.911833, 38.889429]
+        "coordinates": [
+          -76.911833,
+          38.889429
+        ]
       },
       "properties": {
         "id": 195,
@@ -2575,12 +3153,21 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-76.619957, 39.296818]
+        "coordinates": [
+          -76.619957,
+          39.296818
+        ]
       },
       "properties": {
         "id": 196,
-        "name": "Mt. Vernon (Centre Street)",
-        "line": "MarylandLightRailLightRaillink"
+        "name": "Mt. Vernon",
+        "line": "MarylandLightRailLightRaillink",
+        "alternate_names": [
+          "Mt. Vernon (Centre Street)",
+          "Mt. Vernon (Centre St)",
+          "Centre Street",
+          "Centre St"
+        ]
       },
       "id": 196
     },
@@ -2588,7 +3175,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-77.12927, 38.799292]
+        "coordinates": [
+          -77.12927,
+          38.799292
+        ]
       },
       "properties": {
         "id": 197,
@@ -2596,19 +3186,1551 @@
         "line": "WMATAMetroBlue"
       },
       "id": 197
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.946743,
+          38.899168
+        ]
+      },
+      "properties": {
+        "id": 198,
+        "name": "Minnesota Ave",
+        "line": "WMATAMetroSilver"
+      },
+      "id": 198
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.935163,
+          38.908224
+        ]
+      },
+      "properties": {
+        "id": 199,
+        "name": "Deanwood",
+        "line": "WMATAMetroSilver"
+      },
+      "id": 199
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.916662,
+          38.916641
+        ]
+      },
+      "properties": {
+        "id": 200,
+        "name": "Cheverly",
+        "line": "WMATAMetroSilver"
+      },
+      "id": 200
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.891265,
+          38.933504
+        ]
+      },
+      "properties": {
+        "id": 201,
+        "name": "Landover",
+        "line": "WMATAMetroSilver"
+      },
+      "id": 201
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.871871,
+          38.948028
+        ]
+      },
+      "properties": {
+        "id": 202,
+        "name": "New Carrollton",
+        "line": "WMATAMetroSilver"
+      },
+      "id": 202
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.00659824990007,
+          38.898068502427726
+        ]
+      },
+      "properties": {
+        "id": 203,
+        "name": "Union Station",
+        "line": "VREManassasLine"
+      },
+      "id": 203
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.02233733921759,
+          38.885998044203056
+        ]
+      },
+      "properties": {
+        "id": 204,
+        "name": "L'Enfant Plaza",
+        "line": "VREManassasLine"
+      },
+      "id": 204
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.04856734399115,
+          38.85917738539553
+        ]
+      },
+      "properties": {
+        "id": 205,
+        "name": "Crystal City",
+        "line": "VREManassasLine"
+      },
+      "id": 205
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.06144945342807,
+          38.80629017087424
+        ]
+      },
+      "properties": {
+        "id": 206,
+        "name": "Alexandria",
+        "line": "VREManassasLine"
+      },
+      "id": 206
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.18403698284634,
+          38.79694891050215
+        ]
+      },
+      "properties": {
+        "id": 207,
+        "name": "Backlick Road",
+        "line": "VREManassasLine"
+      },
+      "id": 207
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.25856585596526,
+          38.79459921032952
+        ]
+      },
+      "properties": {
+        "id": 208,
+        "name": "Rolling Road",
+        "line": "VREManassasLine"
+      },
+      "id": 208
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.29870880042627,
+          38.797407879415346
+        ]
+      },
+      "properties": {
+        "id": 209,
+        "name": "Burke Centre",
+        "line": "VREManassasLine"
+      },
+      "id": 209
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.44062289359292,
+          38.76481358441525
+        ]
+      },
+      "properties": {
+        "id": 210,
+        "name": "Manassas Park",
+        "line": "VREManassasLine"
+      },
+      "id": 210
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.47267544412134,
+          38.749953090645185
+        ]
+      },
+      "properties": {
+        "id": 211,
+        "name": "Manassas",
+        "line": "VREManassasLine"
+      },
+      "id": 211
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.52829615759839,
+          38.72709234107275
+        ]
+      },
+      "properties": {
+        "id": 212,
+        "name": "Broad Run / Airport",
+        "line": "VREManassasLine"
+      },
+      "id": 212
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.00659824990007,
+          38.898068502427726
+        ]
+      },
+      "properties": {
+        "id": 213,
+        "name": "Union Station",
+        "line": "VREFredericksburgLine"
+      },
+      "id": 213
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.02233733921759,
+          38.885998044203056
+        ]
+      },
+      "properties": {
+        "id": 214,
+        "name": "L'Enfant Plaza",
+        "line": "VREFredericksburgLine"
+      },
+      "id": 214
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.04856734399115,
+          38.85917738539553
+        ]
+      },
+      "properties": {
+        "id": 215,
+        "name": "Crystal City",
+        "line": "VREFredericksburgLine"
+      },
+      "id": 215
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.06144945342807,
+          38.80629017087424
+        ]
+      },
+      "properties": {
+        "id": 216,
+        "name": "Alexandria",
+        "line": "VREFredericksburgLine"
+      },
+      "id": 216
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.16843973067697,
+          38.76598744978053
+        ]
+      },
+      "properties": {
+        "id": 217,
+        "name": "Franconia-Springfield",
+        "line": "VREFredericksburgLine"
+      },
+      "id": 217
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.21455520354422,
+          38.71503877385101
+        ]
+      },
+      "properties": {
+        "id": 218,
+        "name": "Lorton",
+        "line": "VREFredericksburgLine"
+      },
+      "id": 218
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.24756239166707,
+          38.65889844595316
+        ]
+      },
+      "properties": {
+        "id": 219,
+        "name": "Woodbridge",
+        "line": "VREFredericksburgLine"
+      },
+      "id": 219
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.25461232588297,
+          38.614053771862054
+        ]
+      },
+      "properties": {
+        "id": 220,
+        "name": "Rippon",
+        "line": "VREFredericksburgLine"
+      },
+      "id": 220
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.2929338366811,
+          38.52187438707916
+        ]
+      },
+      "properties": {
+        "id": 221,
+        "name": "Quantico",
+        "line": "VREFredericksburgLine"
+      },
+      "id": 221
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.38257877604745,
+          38.386532761567885
+        ]
+      },
+      "properties": {
+        "id": 222,
+        "name": "Brooke",
+        "line": "VREFredericksburgLine"
+      },
+      "id": 222
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.43708375299163,
+          38.34701080471698
+        ]
+      },
+      "properties": {
+        "id": 223,
+        "name": "Leeland Road",
+        "line": "VREFredericksburgLine"
+      },
+      "id": 223
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.45704378086239,
+          38.298076542371476
+        ]
+      },
+      "properties": {
+        "id": 224,
+        "name": "Fredericksburg",
+        "line": "VREFredericksburgLine"
+      },
+      "id": 224
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.44031460901309,
+          38.220397355406334
+        ]
+      },
+      "properties": {
+        "id": 225,
+        "name": "Spotsylvania",
+        "line": "VREFredericksburgLine"
+      },
+      "id": 225
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.00617344399996,
+          38.897810642000024
+        ]
+      },
+      "properties": {
+        "id": 226,
+        "name": "Union Station",
+        "line": "MARCPennLine"
+      },
+      "id": 226
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.87230881099998,
+          38.948139241000035
+        ]
+      },
+      "properties": {
+        "id": 227,
+        "name": "New Carrollton",
+        "line": "MARCPennLine"
+      },
+      "id": 227
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.84351893599995,
+          38.973058872000024
+        ]
+      },
+      "properties": {
+        "id": 228,
+        "name": "Seabrook",
+        "line": "MARCPennLine"
+      },
+      "id": 228
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.76498246299997,
+          39.01778577700003
+        ]
+      },
+      "properties": {
+        "id": 229,
+        "name": "Bowie State University",
+        "line": "MARCPennLine"
+      },
+      "id": 229
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.70628369999997,
+          39.08714271100007
+        ]
+      },
+      "properties": {
+        "id": 230,
+        "name": "Odenton",
+        "line": "MARCPennLine"
+      },
+      "id": 230
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.69453879499997,
+          39.192306701000064
+        ]
+      },
+      "properties": {
+        "id": 231,
+        "name": "BWI Airport",
+        "line": "MARCPennLine"
+      },
+      "id": 231
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.69124494599998,
+          39.238569839000036
+        ]
+      },
+      "properties": {
+        "id": 232,
+        "name": "Halethorpe",
+        "line": "MARCPennLine"
+      },
+      "id": 232
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.65326854299997,
+          39.29330594900006
+        ]
+      },
+      "properties": {
+        "id": 233,
+        "name": "West Baltimore",
+        "line": "MARCPennLine"
+      },
+      "id": 233
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.61557770599995,
+          39.30746155000003
+        ]
+      },
+      "properties": {
+        "id": 234,
+        "name": "Baltimore Penn Station",
+        "line": "MARCPennLine"
+      },
+      "id": 234
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.41934282099999,
+          39.33844956200005
+        ]
+      },
+      "properties": {
+        "id": 235,
+        "name": "Martin State Airport",
+        "line": "MARCPennLine"
+      },
+      "id": 235
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.29272386199995,
+          39.41593701700003
+        ]
+      },
+      "properties": {
+        "id": 236,
+        "name": "Edgewood",
+        "line": "MARCPennLine"
+      },
+      "id": 236
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.16320116499998,
+          39.50841246600004
+        ]
+      },
+      "properties": {
+        "id": 237,
+        "name": "Aberdeen",
+        "line": "MARCPennLine"
+      },
+      "id": 237
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.07374686799994,
+          39.55798124100005
+        ]
+      },
+      "properties": {
+        "id": 238,
+        "name": "Perryville",
+        "line": "MARCPennLine"
+      },
+      "id": 238
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.00617344399996,
+          38.897810642000024
+        ]
+      },
+      "properties": {
+        "id": 239,
+        "name": "Union Station",
+        "line": "MARCCamdenLine"
+      },
+      "id": 239
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.93494379299995,
+          38.962996055000076
+        ]
+      },
+      "properties": {
+        "id": 240,
+        "name": "Riverdale",
+        "line": "MARCCamdenLine"
+      },
+      "id": 240
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.92874250699998,
+          38.97793746200006
+        ]
+      },
+      "properties": {
+        "id": 241,
+        "name": "College Park",
+        "line": "MARCCamdenLine"
+      },
+      "id": 241
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.91258713299999,
+          39.009937593000075
+        ]
+      },
+      "properties": {
+        "id": 242,
+        "name": "Greenbelt",
+        "line": "MARCCamdenLine"
+      },
+      "id": 242
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.88420395799994,
+          39.062860976000024
+        ]
+      },
+      "properties": {
+        "id": 243,
+        "name": "Muirkirk",
+        "line": "MARCCamdenLine"
+      },
+      "id": 243
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.84181210499997,
+          39.10220199100007
+        ]
+      },
+      "properties": {
+        "id": 244,
+        "name": "Laurel",
+        "line": "MARCCamdenLine"
+      },
+      "id": 244
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.83400359699993,
+          39.10564935100007
+        ]
+      },
+      "properties": {
+        "id": 245,
+        "name": "Laurel Racetrack",
+        "line": "MARCCamdenLine"
+      },
+      "id": 245
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.79632536999998,
+          39.12292185300004
+        ]
+      },
+      "properties": {
+        "id": 246,
+        "name": "Savage",
+        "line": "MARCCamdenLine"
+      },
+      "id": 246
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.77640368999994,
+          39.151522304000025
+        ]
+      },
+      "properties": {
+        "id": 247,
+        "name": "Jessup",
+        "line": "MARCCamdenLine"
+      },
+      "id": 247
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.74548022299996,
+          39.18098607500008
+        ]
+      },
+      "properties": {
+        "id": 248,
+        "name": "Dorsey",
+        "line": "MARCCamdenLine"
+      },
+      "id": 248
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.70394483099994,
+          39.22429720700006
+        ]
+      },
+      "properties": {
+        "id": 249,
+        "name": "St. Denis",
+        "line": "MARCCamdenLine"
+      },
+      "id": 249
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.61953088599995,
+          39.283163597000055
+        ]
+      },
+      "properties": {
+        "id": 250,
+        "name": "Camden",
+        "line": "MARCCamdenLine",
+        "alternate_names": [
+          "Camden Station"
+        ]
+      },
+      "id": 250
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.00617344399996,
+          38.897810642000024
+        ]
+      },
+      "properties": {
+        "id": 251,
+        "name": "Union Station",
+        "line": "MARCBrunswickLine"
+      },
+      "id": 251
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.03043429799999,
+          38.99318904100005
+        ]
+      },
+      "properties": {
+        "id": 252,
+        "name": "Silver Spring",
+        "line": "MARCBrunswickLine"
+      },
+      "id": 252
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.07175338399998,
+          39.026876396000034
+        ]
+      },
+      "properties": {
+        "id": 253,
+        "name": "Kensington",
+        "line": "MARCBrunswickLine"
+      },
+      "id": 253
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.09350963199995,
+          39.03896687200006
+        ]
+      },
+      "properties": {
+        "id": 254,
+        "name": "Garrett Park",
+        "line": "MARCBrunswickLine"
+      },
+      "id": 254
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.14610072099998,
+          39.08431192100005
+        ]
+      },
+      "properties": {
+        "id": 255,
+        "name": "Rockville",
+        "line": "MARCBrunswickLine"
+      },
+      "id": 255
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.22673361399995,
+          39.149677102000055
+        ]
+      },
+      "properties": {
+        "id": 256,
+        "name": "Metropolitan Grove",
+        "line": "MARCBrunswickLine"
+      },
+      "id": 256
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.19294122299993,
+          39.141530200000034
+        ]
+      },
+      "properties": {
+        "id": 257,
+        "name": "Gaithersburg",
+        "line": "MARCBrunswickLine"
+      },
+      "id": 257
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.17773063399994,
+          39.13645238200007
+        ]
+      },
+      "properties": {
+        "id": 258,
+        "name": "Washington Grove",
+        "line": "MARCBrunswickLine"
+      },
+      "id": 258
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.27062442899995,
+          39.173325582000075
+        ]
+      },
+      "properties": {
+        "id": 259,
+        "name": "Germantown",
+        "line": "MARCBrunswickLine"
+      },
+      "id": 259
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.31427632999998,
+          39.18424670700006
+        ]
+      },
+      "properties": {
+        "id": 260,
+        "name": "Boyds",
+        "line": "MARCBrunswickLine"
+      },
+      "id": 260
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.38262678499996,
+          39.20978858800004
+        ]
+      },
+      "properties": {
+        "id": 261,
+        "name": "Barnesville",
+        "line": "MARCBrunswickLine"
+      },
+      "id": 261
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.42217353199999,
+          39.21999888000005
+        ]
+      },
+      "properties": {
+        "id": 262,
+        "name": "Dickerson",
+        "line": "MARCBrunswickLine"
+      },
+      "id": 262
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.53338065499997,
+          39.27345820900007
+        ]
+      },
+      "properties": {
+        "id": 263,
+        "name": "Point of Rocks",
+        "line": "MARCBrunswickLine"
+      },
+      "id": 263
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.62797927199995,
+          39.31149233100007
+        ]
+      },
+      "properties": {
+        "id": 264,
+        "name": "Brunswick",
+        "line": "MARCBrunswickLine"
+      },
+      "id": 264
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.73116538299996,
+          39.32464965100007
+        ]
+      },
+      "properties": {
+        "id": 265,
+        "name": "Harpers Ferry",
+        "line": "MARCBrunswickLine"
+      },
+      "id": 265
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.82791513899997,
+          39.36206896500005
+        ]
+      },
+      "properties": {
+        "id": 266,
+        "name": "Duffields",
+        "line": "MARCBrunswickLine"
+      },
+      "id": 266
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.96059496499998,
+          39.45863596200007
+        ]
+      },
+      "properties": {
+        "id": 267,
+        "name": "Martinsburg",
+        "line": "MARCBrunswickLine"
+      },
+      "id": 267
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.39458400799998,
+          39.38187510200004
+        ]
+      },
+      "properties": {
+        "id": 268,
+        "name": "Monocacy",
+        "line": "MARCBrunswickLine"
+      },
+      "id": 268
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.40497535799994,
+          39.41148490300003
+        ]
+      },
+      "properties": {
+        "id": 269,
+        "name": "Frederick",
+        "line": "MARCBrunswickLine"
+      },
+      "id": 269
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0946354296433,
+          38.9818751859285
+        ]
+      },
+      "properties": {
+        "id": 270,
+        "name": "Bethesda",
+        "line": "MTAPurpleLine"
+      },
+      "id": 270
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0766204566157,
+          38.9946653343035
+        ]
+      },
+      "properties": {
+        "id": 271,
+        "name": "Chevy Chase Lake / Connecticut Ave",
+        "line": "MTAPurpleLine"
+      },
+      "id": 271
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0535097377825,
+          39.0008161540738
+        ]
+      },
+      "properties": {
+        "id": 272,
+        "name": "Lyttonsville",
+        "line": "MTAPurpleLine"
+      },
+      "id": 272
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0375663796719,
+          38.9980893789433
+        ]
+      },
+      "properties": {
+        "id": 273,
+        "name": "Woodside / 16th Street",
+        "line": "MTAPurpleLine"
+      },
+      "id": 273
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0297927944565,
+          38.9938385012637
+        ]
+      },
+      "properties": {
+        "id": 274,
+        "name": "Silver Spring",
+        "line": "MTAPurpleLine",
+        "alternate_names": [
+          "Silver Spring Transit Center"
+        ]
+      },
+      "id": 274
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.024514537229,
+          38.9947804687079
+        ]
+      },
+      "properties": {
+        "id": 275,
+        "name": "Silver Spring Library",
+        "line": "MTAPurpleLine"
+      },
+      "id": 275
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0165105014655,
+          38.9993357749857
+        ]
+      },
+      "properties": {
+        "id": 276,
+        "name": "Dale Drive",
+        "line": "MTAPurpleLine"
+      },
+      "id": 276
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0075862953681,
+          39.0011492103678
+        ]
+      },
+      "properties": {
+        "id": 277,
+        "name": "Manchester Place",
+        "line": "MTAPurpleLine"
+      },
+      "id": 277
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0011627786716,
+          38.9989197969272
+        ]
+      },
+      "properties": {
+        "id": 278,
+        "name": "Long Branch",
+        "line": "MTAPurpleLine"
+      },
+      "id": 278
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.9949847219002,
+          38.9989133751694
+        ]
+      },
+      "properties": {
+        "id": 279,
+        "name": "Piney Branch Road",
+        "line": "MTAPurpleLine"
+      },
+      "id": 279
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.9884120315223,
+          38.9896562010479
+        ]
+      },
+      "properties": {
+        "id": 280,
+        "name": "Takoma / Langley Transit Center",
+        "line": "MTAPurpleLine"
+      },
+      "id": 280
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.9800543372412,
+          38.9842898587747
+        ]
+      },
+      "properties": {
+        "id": 281,
+        "name": "Riggs Road",
+        "line": "MTAPurpleLine"
+      },
+      "id": 281
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.9547993887366,
+          38.98541892492
+        ]
+      },
+      "properties": {
+        "id": 282,
+        "name": "Adelphi Road / West Campus",
+        "line": "MTAPurpleLine"
+      },
+      "id": 282
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.9460007726949,
+          38.987221610809
+        ]
+      },
+      "properties": {
+        "id": 283,
+        "name": "UM Campus Center",
+        "line": "MTAPurpleLine"
+      },
+      "id": 283
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.936513632925,
+          38.985470200809
+        ]
+      },
+      "properties": {
+        "id": 284,
+        "name": "East Campus",
+        "line": "MTAPurpleLine"
+      },
+      "id": 284
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.9281661346242,
+          38.9783635010682
+        ]
+      },
+      "properties": {
+        "id": 285,
+        "name": "College Park",
+        "line": "MTAPurpleLine"
+      },
+      "id": 285
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.9242131136192,
+          38.9683549658788
+        ]
+      },
+      "properties": {
+        "id": 286,
+        "name": "M Square / Riverdale Park North",
+        "line": "MTAPurpleLine"
+      },
+      "id": 286
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.9186217414369,
+          38.9600461310702
+        ]
+      },
+      "properties": {
+        "id": 287,
+        "name": "Riverdale Park",
+        "line": "MTAPurpleLine"
+      },
+      "id": 287
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.9020565266852,
+          38.9619581122425
+        ]
+      },
+      "properties": {
+        "id": 288,
+        "name": "Beacon Heights",
+        "line": "MTAPurpleLine"
+      },
+      "id": 288
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.8851062944483,
+          38.9509359771492
+        ]
+      },
+      "properties": {
+        "id": 289,
+        "name": "Annapolis Road / Glenridge",
+        "line": "MTAPurpleLine"
+      },
+      "id": 289
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.872361194456,
+          38.9491867931312
+        ]
+      },
+      "properties": {
+        "id": 290,
+        "name": "New Carrollton",
+        "line": "MTAPurpleLine"
+      },
+      "id": 290
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.38633512587352,
+          38.78123845410693
+        ]
+      },
+      "properties": {
+        "id": 291,
+        "name": "Clifton",
+        "line": "VREManassasLine"
+      },
+      "id": 291
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.26348926826876,
+          38.57283694457471
+        ]
+      },
+      "properties": {
+        "id": 292,
+        "name": "Potomac Shores",
+        "line": "VREFredericksburgLine"
+      },
+      "id": 292
     }
   ],
   "properties": {
-    "totalStations": 196,
+    "totalStations": 290,
     "stationsPerLine": {
-      "MarylandLightRailLightRaillink": 33,
-      "WMATAMetroGreen": 21,
-      "WMATAMetroYellow": 13,
-      "WMATAMetroSilver": 34,
-      "WMATAMetroOrange": 26,
+      "MARCBrunswickLine": 19,
+      "MARCCamdenLine": 12,
+      "MARCPennLine": 13,
+      "MTAPurpleLine": 21,
+      "MarylandLightRailLightRaillink": 32,
+      "MarylandMetroMetroSubwaylink": 14,
+      "VREFredericksburgLine": 14,
+      "VREManassasLine": 11,
       "WMATAMetroBlue": 28,
+      "WMATAMetroGreen": 21,
+      "WMATAMetroOrange": 26,
       "WMATAMetroRed": 27,
-      "MarylandMetroMetroSubwaylink": 14
+      "WMATAMetroSilver": 39,
+      "WMATAMetroYellow": 13
     }
   }
 }

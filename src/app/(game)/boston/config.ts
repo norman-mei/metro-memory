@@ -1,69 +1,82 @@
 import { Metadata } from 'next'
 import { MapboxOptions } from 'mapbox-gl'
-import { Config, Line } from '@/lib/types'
+import { Config, Line, LineGroup } from '@/lib/types'
+import linesData from './data/lines.json'
 
 export const BEG_THRESHOLD = 0.5
 
-export const LINES: {
-  [name: string]: Line
-} = {
-  MBTATMetroBlueLine: {
-    name: 'Blue Line',
-    color: '#007CC3',
-    backgroundColor: '#003E62',
-    textColor: '#FFFFFF',
-    order: 0,
+export const LINES = linesData as { [name: string]: Line }
+
+export const LINE_GROUPS: LineGroup[] = [
+  {
+    title: 'Subway',
+    items: [
+      {
+        type: 'lines',
+        lines: [
+          'MBTATMetroRedLine',
+          'MBTATMetroBlueLine',
+          'MBTATMetroOrangeLine',
+        ],
+      },
+    ],
   },
-  MBTATMetroGreenBLine: {
-    name: 'Green B',
-    color: '#009b67',
-    backgroundColor: '#004E34',
-    textColor: '#FFFFFF',
-    order: 1,
+  {
+    items: [{ type: 'separator' }],
   },
-  MBTATGreenCLine: {
-    name: 'Green C',
-    color: '#009b67',
-    backgroundColor: '#004E34',
-    textColor: '#FFFFFF',
-    order: 2,
+  {
+    title: 'Light Rail',
+    items: [
+      {
+        type: 'lines',
+        lines: [
+          'MBTATMetroGreenBLine',
+          'MBTATGreenCLine',
+          'MBTATGreenDLine',
+          'MBTATGreenELine',
+          'MBTATMetroRedMLine',
+        ],
+      },
+    ],
   },
-  MBTATGreenDLine: {
-    name: 'Green D',
-    color: '#009b67',
-    backgroundColor: '#004E34',
-    textColor: '#FFFFFF',
-    order: 3,
+  {
+    items: [{ type: 'separator' }],
   },
-  MBTATGreenELine: {
-    name: 'Green E',
-    color: '#009b67',
-    backgroundColor: '#004E34',
-    textColor: '#FFFFFF',
-    order: 4,
+  {
+    title: 'Commuter Rail',
+    items: [
+      {
+        type: 'lines',
+        lines: [
+          'Fa',
+          'Fb',
+          'Fr',
+          'H',
+          'L',
+          'Ne',
+          'Nr',
+          'GB',
+          'KT',
+          'FB',
+          'P',
+          'W',
+        ],
+      },
+    ],
   },
-  MBTATMetroOrangeLine: {
-    name: 'Orange Line',
-    color: '#E87424',
-    backgroundColor: '#79390D',
-    textColor: '#FFFFFF',
-    order: 5,
+  {
+    items: [{ type: 'separator' }],
   },
-  MBTATMetroRedLine: {
-    name: 'Red Line',
-    color: '#EF3E42',
-    backgroundColor: '#8B0C0E',
-    textColor: '#FFFFFF',
-    order: 6,
+  {
+    title: 'CapeFLYER',
+    items: [
+      {
+        type: 'lines',
+        lines: ['CapeFlyer'],
+      },
+    ],
   },
-  MBTATMetroRedMLine: {
-    name: 'Mattapan Trolley',
-    color: '#EF3E42',
-    backgroundColor: '#8B0C0E',
-    textColor: '#FFFFFF',
-    order: 7,
-  },
-}
+]
 
 export const METADATA: Metadata = {
   title: 'Boston Metro Memory',
@@ -110,6 +123,7 @@ const config: Config = {
   MAP_CONFIG,
   METADATA,
   LINES,
+  LINE_GROUPS,
   BEG_THRESHOLD,
 }
 

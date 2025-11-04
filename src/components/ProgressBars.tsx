@@ -122,7 +122,7 @@ const ProgressBars = ({
             src={`/images/${line}.svg`}
             width={64}
             height={64}
-            className="z-20 h-6 w-6 rounded-full object-cover"
+            className="z-20 h-6 w-6 flex-shrink-0 rounded-full object-cover"
           />
         </div>
         {!compact && (

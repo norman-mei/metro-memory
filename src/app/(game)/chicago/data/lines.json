@@ -54,5 +54,117 @@
     "backgroundColor": "#755F00",
     "textColor": "#FFFFFF",
     "order": 7
+  },
+  "Metra_BNSF": {
+    "name": "BNSF",
+    "color": "#43b02a",
+    "backgroundColor": "#FFFFFF",
+    "textColor": "#FFFFFF",
+    "order": 8
+  },
+  "Metra_HC": {
+    "name": "Heritage Corridor",
+    "color": "#862041",
+    "backgroundColor": "#431021",
+    "textColor": "#FFFFFF",
+    "order": 9
+  },
+  "Metra_ME": {
+    "name": "Metra Electric (University Park)",
+    "color": "#fe5000",
+    "backgroundColor": "#7F2800",
+    "textColor": "#FFFFFF",
+    "order": 10
+  },
+  "Metra_ME_BI": {
+    "name": "Metra Electric (Blue Island Branch)",
+    "color": "#c5e9ea",
+    "backgroundColor": "#399B9E",
+    "textColor": "#111827",
+    "order": 11
+  },
+  "Metra_ME_SC": {
+    "name": "Metra Electric (South Chicago Branch)",
+    "color": "#dfdcd4",
+    "backgroundColor": "#7D745D",
+    "textColor": "#111827",
+    "order": 12
+  },
+  "Metra_MDW": {
+    "name": "Milwaukee District West",
+    "color": "#f1be48",
+    "backgroundColor": "#91690B",
+    "textColor": "#111827",
+    "order": 13
+  },
+  "Metra_MDN": {
+    "name": "Milwaukee District North",
+    "color": "#e57200",
+    "backgroundColor": "#FFFFFF",
+    "textColor": "#FFFFFF",
+    "order": 14
+  },
+  "Metra_NCS": {
+    "name": "North Central Service",
+    "color": "#9063cd",
+    "backgroundColor": "#462573",
+    "textColor": "#FFFFFF",
+    "order": 15
+  },
+  "Metra_RI": {
+    "name": "Rock Island District",
+    "color": "#da291c",
+    "backgroundColor": "#6D140E",
+    "textColor": "#FFFFFF",
+    "order": 16
+  },
+  "Metra_RI_Bev": {
+    "name": "Rock Island (Beverly Branch)",
+    "color": "#717c7d",
+    "backgroundColor": "#383E3F",
+    "textColor": "#FFFFFF",
+    "order": 17
+  },
+  "Metra_SWS": {
+    "name": "SouthWest Service",
+    "color": "#005eb8",
+    "backgroundColor": "#002F5C",
+    "textColor": "#FFFFFF",
+    "order": 18
+  },
+  "Metra_UPN": {
+    "name": "Union Pacific North",
+    "color": "#00843d",
+    "backgroundColor": "#00421F",
+    "textColor": "#FFFFFF",
+    "order": 19
+  },
+  "Metra_UPNW": {
+    "name": "Union Pacific Northwest",
+    "color": "#fedd00",
+    "backgroundColor": "#7F6F00",
+    "textColor": "#111827",
+    "order": 20
+  },
+  "Metra_UPW": {
+    "name": "Union Pacific West",
+    "color": "#ffb1bb",
+    "backgroundColor": "#D8001C",
+    "textColor": "#111827",
+    "order": 21
+  },
+  "NICTD_SSL": {
+    "name": "South Shore Line (SSL)",
+    "color": "#6A1311",
+    "backgroundColor": "#350908",
+    "textColor": "#FFFFFF",
+    "order": 22
+  },
+  "NICTD_MCL": {
+    "name": "Monon Corridor Line (MCL)",
+    "color": "#DC1A21",
+    "backgroundColor": "#6E0D11",
+    "textColor": "#FFFFFF",
+    "order": 23
   }
 }

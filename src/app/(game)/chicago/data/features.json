@@ -5,7 +5,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.904223, 41.977665]
+        "coordinates": [
+          -87.904223,
+          41.977665
+        ]
       },
       "properties": {
         "id": 1,
@@ -19,7 +22,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.633854, 41.882695]
+        "coordinates": [
+          -87.633854,
+          41.882695
+        ]
       },
       "properties": {
         "id": 34,
@@ -33,7 +39,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.803176, 41.886848]
+        "coordinates": [
+          -87.803176,
+          41.886848
+        ]
       },
       "properties": {
         "id": 61,
@@ -47,7 +56,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.628198, 41.876912]
+        "coordinates": [
+          -87.628198,
+          41.876912
+        ]
       },
       "properties": {
         "id": 117,
@@ -61,7 +73,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.630886, 41.885731]
+        "coordinates": [
+          -87.630886,
+          41.885731
+        ]
       },
       "properties": {
         "id": 133,
@@ -75,7 +90,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.630886, 41.88573]
+        "coordinates": [
+          -87.630886,
+          41.88573
+        ]
       },
       "properties": {
         "id": 155,
@@ -89,7 +107,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.672892, 42.019063]
+        "coordinates": [
+          -87.672892,
+          42.019063
+        ]
       },
       "properties": {
         "id": 190,
@@ -103,7 +124,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.672892, 42.019063]
+        "coordinates": [
+          -87.672892,
+          42.019063
+        ]
       },
       "properties": {
         "id": 251,
@@ -117,7 +141,4060 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.817318, 41.874257]
+        "coordinates": [
+          -87.77282855,
+          42.152986393
+        ]
+      },
+      "properties": {
+        "id": 254,
+        "name": "Braeside",
+        "line": "Metra_UPN"
+      },
+      "id": 254
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.71673772,
+          42.0862220270001
+        ]
+      },
+      "properties": {
+        "id": 255,
+        "name": "Kenilworth",
+        "line": "Metra_UPN"
+      },
+      "id": 255
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.79328621,
+          41.8332883900001
+        ]
+      },
+      "properties": {
+        "id": 256,
+        "name": "Berwyn",
+        "line": "Metra_BNSF"
+      },
+      "id": 256
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.7451727,
+          41.844161692
+        ]
+      },
+      "properties": {
+        "id": 257,
+        "name": "Cicero",
+        "line": "Metra_BNSF"
+      },
+      "id": 257
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.95440502,
+          41.797064946
+        ]
+      },
+      "properties": {
+        "id": 258,
+        "name": "Clarendon Hills",
+        "line": "Metra_BNSF"
+      },
+      "id": 258
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.61021465,
+          41.693097069
+        ]
+      },
+      "properties": {
+        "id": 259,
+        "name": "111th Street",
+        "line": "Metra_ME"
+      },
+      "id": 259
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6070066999999,
+          41.706967052
+        ]
+      },
+      "properties": {
+        "id": 260,
+        "name": "103rd Street (Rosemoor)",
+        "line": "Metra_ME"
+      },
+      "id": 260
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.59995177,
+          41.737414775
+        ]
+      },
+      "properties": {
+        "id": 261,
+        "name": "87th Street (Woodruff)",
+        "line": "Metra_ME"
+      },
+      "id": 261
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.59833262,
+          41.7443170700001
+        ]
+      },
+      "properties": {
+        "id": 262,
+        "name": "83rd Street (Avalon Park)",
+        "line": "Metra_ME"
+      },
+      "id": 262
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.59698666,
+          41.7508267690001
+        ]
+      },
+      "properties": {
+        "id": 263,
+        "name": "79th Street (Chatham)",
+        "line": "Metra_ME"
+      },
+      "id": 263
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.5528517,
+          41.7523205200001
+        ]
+      },
+      "properties": {
+        "id": 264,
+        "name": "Cheltenham (79th Street)",
+        "line": "Metra_ME_SC"
+      },
+      "id": 264
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.59515929,
+          41.758911799
+        ]
+      },
+      "properties": {
+        "id": 265,
+        "name": "75th Street (Grand Crossing)",
+        "line": "Metra_ME"
+      },
+      "id": 265
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.59040404,
+          41.7798830340001
+        ]
+      },
+      "properties": {
+        "id": 266,
+        "name": "63rd Street",
+        "line": "Metra_ME"
+      },
+      "id": 266
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.58876565,
+          41.787002634
+        ]
+      },
+      "properties": {
+        "id": 267,
+        "name": "59th Street (University of Chicago)",
+        "line": "Metra_ME"
+      },
+      "id": 267
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.58749792,
+          41.792842196
+        ]
+      },
+      "properties": {
+        "id": 268,
+        "name": "55th-56th-57th Street",
+        "line": "Metra_ME"
+      },
+      "id": 268
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.58678688,
+          41.7999172
+        ]
+      },
+      "properties": {
+        "id": 269,
+        "name": "53rd Street (Hyde Park)",
+        "line": "Metra_ME"
+      },
+      "id": 269
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.5908503699999,
+          41.809524599
+        ]
+      },
+      "properties": {
+        "id": 270,
+        "name": "47th Street (Kenwood)",
+        "line": "Metra_ME"
+      },
+      "id": 270
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6134364599999,
+          41.8442629570001
+        ]
+      },
+      "properties": {
+        "id": 271,
+        "name": "27th Street",
+        "line": "Metra_ME"
+      },
+      "id": 271
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6180342,
+          41.8577310420001
+        ]
+      },
+      "properties": {
+        "id": 272,
+        "name": "18th Street",
+        "line": "Metra_ME"
+      },
+      "id": 272
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.66975458,
+          41.698917909
+        ]
+      },
+      "properties": {
+        "id": 273,
+        "name": "107th Street (Beverly Hills)",
+        "line": "Metra_RI_Bev"
+      },
+      "id": 273
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.667287,
+          41.7136345600001
+        ]
+      },
+      "properties": {
+        "id": 274,
+        "name": "99th Street (Beverly Hills)",
+        "line": "Metra_RI_Bev"
+      },
+      "id": 274
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6675476999999,
+          41.721536337
+        ]
+      },
+      "properties": {
+        "id": 275,
+        "name": "95th Street (Beverly Hills)",
+        "line": "Metra_RI_Bev"
+      },
+      "id": 275
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -88.18628251,
+          41.992575206
+        ]
+      },
+      "properties": {
+        "id": 276,
+        "name": "Bartlett",
+        "line": "Metra_MDW"
+      },
+      "id": 276
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6118335999999,
+          41.686030095
+        ]
+      },
+      "properties": {
+        "id": 277,
+        "name": "Kensington (115th Street)",
+        "line": "Metra_ME"
+      },
+      "id": 277
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6118335999999,
+          41.686030095
+        ]
+      },
+      "properties": {
+        "id": 278,
+        "name": "Kensington (115th Street)",
+        "line": "Metra_ME_BI"
+      },
+      "id": 278
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.60175423,
+          41.7297521080001
+        ]
+      },
+      "properties": {
+        "id": 279,
+        "name": "91st Street (Chesterfield)",
+        "line": "Metra_ME"
+      },
+      "id": 279
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -88.09217253,
+          42.48072081
+        ]
+      },
+      "properties": {
+        "id": 280,
+        "name": "Antioch",
+        "line": "Metra_NCS"
+      },
+      "id": 280
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.69810101,
+          42.0639874300001
+        ]
+      },
+      "properties": {
+        "id": 281,
+        "name": "Central Street (Evanston)",
+        "line": "Metra_UPN"
+      },
+      "id": 281
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.87111222,
+          41.815879658
+        ]
+      },
+      "properties": {
+        "id": 282,
+        "name": "LaGrange Road",
+        "line": "Metra_BNSF"
+      },
+      "id": 282
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.85757689,
+          41.8189108770001
+        ]
+      },
+      "properties": {
+        "id": 283,
+        "name": "Congress Park",
+        "line": "Metra_BNSF"
+      },
+      "id": 283
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.8431074,
+          41.822154605
+        ]
+      },
+      "properties": {
+        "id": 284,
+        "name": "Brookfield",
+        "line": "Metra_BNSF"
+      },
+      "id": 284
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.98218244,
+          42.083375367
+        ]
+      },
+      "properties": {
+        "id": 285,
+        "name": "Arlington Heights",
+        "line": "Metra_UPNW"
+      },
+      "id": 285
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -88.46374618,
+          41.8907116170001
+        ]
+      },
+      "properties": {
+        "id": 286,
+        "name": "Elburn",
+        "line": "Metra_UPW"
+      },
+      "id": 286
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.85978848,
+          41.937151019
+        ]
+      },
+      "properties": {
+        "id": 287,
+        "name": "Belmont Ave. (Franklin Park)",
+        "line": "Metra_MDW"
+      },
+      "id": 287
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.5474468199999,
+          41.7273084240001
+        ]
+      },
+      "properties": {
+        "id": 288,
+        "name": "93rd Street (South Chicago)",
+        "line": "Metra_ME_SC"
+      },
+      "id": 288
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.57699667,
+          41.7661151450001
+        ]
+      },
+      "properties": {
+        "id": 289,
+        "name": "Bryn Mawr",
+        "line": "Metra_ME_SC"
+      },
+      "id": 289
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.80954002,
+          41.564380984
+        ]
+      },
+      "properties": {
+        "id": 290,
+        "name": "80th Avenue (Tinley Park)",
+        "line": "Metra_RI"
+      },
+      "id": 290
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.67785349,
+          41.654436553
+        ]
+      },
+      "properties": {
+        "id": 291,
+        "name": "Blue Island (Vermont Street)",
+        "line": "Metra_RI_Bev"
+      },
+      "id": 291
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6736240499999,
+          41.670287753
+        ]
+      },
+      "properties": {
+        "id": 292,
+        "name": "123rd Street",
+        "line": "Metra_RI_Bev"
+      },
+      "id": 292
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.67258006,
+          41.6763715970001
+        ]
+      },
+      "properties": {
+        "id": 293,
+        "name": "119th Street",
+        "line": "Metra_RI_Bev"
+      },
+      "id": 293
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.67145693,
+          41.6849930230001
+        ]
+      },
+      "properties": {
+        "id": 294,
+        "name": "115th Street (Morgan Park)",
+        "line": "Metra_RI_Bev"
+      },
+      "id": 294
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.94112818,
+          42.16847712
+        ]
+      },
+      "properties": {
+        "id": 295,
+        "name": "Buffalo Grove",
+        "line": "Metra_NCS"
+      },
+      "id": 295
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6981157399999,
+          41.5064377030001
+        ]
+      },
+      "properties": {
+        "id": 296,
+        "name": "211th Street (Lincoln Highway)",
+        "line": "Metra_ME"
+      },
+      "id": 296
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6628303799999,
+          41.572739384
+        ]
+      },
+      "properties": {
+        "id": 297,
+        "name": "Calumet",
+        "line": "Metra_ME"
+      },
+      "id": 297
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6359404,
+          41.6230059800001
+        ]
+      },
+      "properties": {
+        "id": 298,
+        "name": "147th Street (Sibley Boulevard)",
+        "line": "Metra_ME"
+      },
+      "id": 298
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.90282038,
+          41.563663487
+        ]
+      },
+      "properties": {
+        "id": 299,
+        "name": "179th Street (Orland Park)",
+        "line": "Metra_SWS"
+      },
+      "id": 299
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.8736746499999,
+          41.6095722480001
+        ]
+      },
+      "properties": {
+        "id": 300,
+        "name": "153rd Street (Orland Park)",
+        "line": "Metra_SWS"
+      },
+      "id": 300
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.85957425,
+          41.6306530730001
+        ]
+      },
+      "properties": {
+        "id": 301,
+        "name": "143rd Street (Orland Park)",
+        "line": "Metra_SWS"
+      },
+      "id": 301
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.65755834,
+          41.732240188
+        ]
+      },
+      "properties": {
+        "id": 302,
+        "name": "Brainerd",
+        "line": "Metra_RI_Bev"
+      },
+      "id": 302
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.94093639,
+          41.899702801
+        ]
+      },
+      "properties": {
+        "id": 303,
+        "name": "Elmhurst",
+        "line": "Metra_UPW"
+      },
+      "id": 303
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.91601795,
+          41.8962657050001
+        ]
+      },
+      "properties": {
+        "id": 304,
+        "name": "Berkeley",
+        "line": "Metra_UPW"
+      },
+      "id": 304
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.88273967,
+          41.8914078500001
+        ]
+      },
+      "properties": {
+        "id": 305,
+        "name": "Bellwood",
+        "line": "Metra_UPW"
+      },
+      "id": 305
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.70657947,
+          41.888256578
+        ]
+      },
+      "properties": {
+        "id": 306,
+        "name": "Kedzie",
+        "line": "Metra_UPW"
+      },
+      "id": 306
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.8498962199999,
+          42.1681277260001
+        ]
+      },
+      "properties": {
+        "id": 307,
+        "name": "Deerfield",
+        "line": "Metra_MDN"
+      },
+      "id": 307
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6687865499999,
+          41.6623256190001
+        ]
+      },
+      "properties": {
+        "id": 308,
+        "name": "Burr Oak",
+        "line": "Metra_ME_BI"
+      },
+      "id": 308
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.66062334,
+          41.6694335230001
+        ]
+      },
+      "properties": {
+        "id": 309,
+        "name": "Ashland Avenue",
+        "line": "Metra_ME_BI"
+      },
+      "id": 309
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.68004782,
+          42.03332307
+        ]
+      },
+      "properties": {
+        "id": 310,
+        "name": "Main Street (Evanston)",
+        "line": "Metra_UPN"
+      },
+      "id": 310
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -88.3170609699999,
+          42.2441500130001
+        ]
+      },
+      "properties": {
+        "id": 311,
+        "name": "Crystal Lake",
+        "line": "Metra_UPNW"
+      },
+      "id": 311
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -88.2414119199999,
+          42.209163641
+        ]
+      },
+      "properties": {
+        "id": 312,
+        "name": "Cary",
+        "line": "Metra_UPNW"
+      },
+      "id": 312
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -88.13210584,
+          42.15289697
+        ]
+      },
+      "properties": {
+        "id": 313,
+        "name": "Barrington",
+        "line": "Metra_UPNW"
+      },
+      "id": 313
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -88.00955982,
+          42.095667522
+        ]
+      },
+      "properties": {
+        "id": 314,
+        "name": "Arlington Park",
+        "line": "Metra_UPNW"
+      },
+      "id": 314
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.912305,
+          42.052190287
+        ]
+      },
+      "properties": {
+        "id": 315,
+        "name": "Cumberland",
+        "line": "Metra_UPNW"
+      },
+      "id": 315
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.88675705,
+          42.040793062
+        ]
+      },
+      "properties": {
+        "id": 316,
+        "name": "Des Plaines",
+        "line": "Metra_UPNW"
+      },
+      "id": 316
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.85489001,
+          42.023269908
+        ]
+      },
+      "properties": {
+        "id": 317,
+        "name": "Dee Road",
+        "line": "Metra_UPNW"
+      },
+      "id": 317
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.8177070999999,
+          42.0022307080001
+        ]
+      },
+      "properties": {
+        "id": 318,
+        "name": "Edison Park",
+        "line": "Metra_UPNW"
+      },
+      "id": 318
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.76562051,
+          41.997627992
+        ]
+      },
+      "properties": {
+        "id": 319,
+        "name": "Edgebrook",
+        "line": "Metra_MDN"
+      },
+      "id": 319
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -88.4110077399999,
+          41.886672822
+        ]
+      },
+      "properties": {
+        "id": 320,
+        "name": "La Fox",
+        "line": "Metra_UPW"
+      },
+      "id": 320
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -88.0888124099999,
+          41.8690381000001
+        ]
+      },
+      "properties": {
+        "id": 321,
+        "name": "College Avenue",
+        "line": "Metra_UPW"
+      },
+      "id": 321
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.68482157,
+          42.0480643770001
+        ]
+      },
+      "properties": {
+        "id": 322,
+        "name": "Davis Street (Evanston)",
+        "line": "Metra_UPN"
+      },
+      "id": 322
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6681603599999,
+          41.9168458830001
+        ]
+      },
+      "properties": {
+        "id": 323,
+        "name": "Clybourn",
+        "line": "Metra_UPN"
+      },
+      "id": 323
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.83971489,
+          42.25235869
+        ]
+      },
+      "properties": {
+        "id": 324,
+        "name": "Lake Forest",
+        "line": "Metra_UPN"
+      },
+      "id": 324
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.65610721,
+          41.7055829880001
+        ]
+      },
+      "properties": {
+        "id": 325,
+        "name": "103rd St. - Washington Heights",
+        "line": "Metra_RI"
+      },
+      "id": 325
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.7797788299999,
+          41.703948788
+        ]
+      },
+      "properties": {
+        "id": 326,
+        "name": "Chicago Ridge",
+        "line": "Metra_SWS"
+      },
+      "id": 326
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.7125185999999,
+          41.7418149160001
+        ]
+      },
+      "properties": {
+        "id": 327,
+        "name": "Ashburn",
+        "line": "Metra_SWS"
+      },
+      "id": 327
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -88.01448866,
+          42.320533939
+        ]
+      },
+      "properties": {
+        "id": 328,
+        "name": "Prairie Crossing",
+        "line": "Metra_NCS"
+      },
+      "id": 328
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.83372894,
+          41.824241004
+        ]
+      },
+      "properties": {
+        "id": 329,
+        "name": "Hollywood",
+        "line": "Metra_BNSF"
+      },
+      "id": 329
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.82023493,
+          41.827205849
+        ]
+      },
+      "properties": {
+        "id": 330,
+        "name": "Riverside",
+        "line": "Metra_BNSF"
+      },
+      "id": 330
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6230873499999,
+          41.884365614
+        ]
+      },
+      "properties": {
+        "id": 331,
+        "name": "Millennium Station",
+        "line": "Metra_ME"
+      },
+      "id": 331
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.62141967,
+          41.868392374
+        ]
+      },
+      "properties": {
+        "id": 332,
+        "name": "Museum Campus / 11th St.",
+        "line": "Metra_ME"
+      },
+      "id": 332
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -88.07949876,
+          41.523992787
+        ]
+      },
+      "properties": {
+        "id": 333,
+        "name": "Joliet",
+        "line": "Metra_HC"
+      },
+      "id": 333
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.98811275,
+          41.4201611780001
+        ]
+      },
+      "properties": {
+        "id": 334,
+        "name": "Manhattan",
+        "line": "Metra_SWS"
+      },
+      "id": 334
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.74592369,
+          41.914365613
+        ]
+      },
+      "properties": {
+        "id": 335,
+        "name": "Grand / Cicero",
+        "line": "Metra_MDW"
+      },
+      "id": 335
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.8162557699999,
+          42.4826188530001
+        ]
+      },
+      "properties": {
+        "id": 336,
+        "name": "Winthrop Harbor",
+        "line": "Metra_UPN"
+      },
+      "id": 336
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.81812858,
+          42.44951316
+        ]
+      },
+      "properties": {
+        "id": 337,
+        "name": "Zion",
+        "line": "Metra_UPN"
+      },
+      "id": 337
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.8279525199999,
+          42.3606360580001
+        ]
+      },
+      "properties": {
+        "id": 338,
+        "name": "Waukegan",
+        "line": "Metra_UPN"
+      },
+      "id": 338
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.8370432,
+          42.32892382
+        ]
+      },
+      "properties": {
+        "id": 339,
+        "name": "North Chicago",
+        "line": "Metra_UPN"
+      },
+      "id": 339
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.94181851,
+          41.957000795
+        ]
+      },
+      "properties": {
+        "id": 340,
+        "name": "Bensenville",
+        "line": "Metra_MDW"
+      },
+      "id": 340
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.8147835199999,
+          41.924944941
+        ]
+      },
+      "properties": {
+        "id": 341,
+        "name": "Elmwood Park",
+        "line": "Metra_MDW"
+      },
+      "id": 341
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6883145199999,
+          41.8891050940001
+        ]
+      },
+      "properties": {
+        "id": 342,
+        "name": "Western Avenue (Grand)",
+        "line": "Metra_MDW"
+      },
+      "id": 342
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -88.32842887,
+          42.058673914
+        ]
+      },
+      "properties": {
+        "id": 343,
+        "name": "Big Timber Road",
+        "line": "Metra_MDW"
+      },
+      "id": 343
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -88.28616793,
+          42.036256079
+        ]
+      },
+      "properties": {
+        "id": 344,
+        "name": "Elgin",
+        "line": "Metra_MDW"
+      },
+      "id": 344
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -88.30767675,
+          41.761209998
+        ]
+      },
+      "properties": {
+        "id": 345,
+        "name": "Aurora",
+        "line": "Metra_BNSF"
+      },
+      "id": 345
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -88.03808206,
+          41.7954875830001
+        ]
+      },
+      "properties": {
+        "id": 346,
+        "name": "Belmont",
+        "line": "Metra_BNSF"
+      },
+      "id": 346
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.84663465,
+          42.3083429590001
+        ]
+      },
+      "properties": {
+        "id": 347,
+        "name": "Great Lakes",
+        "line": "Metra_UPN"
+      },
+      "id": 347
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.8467631299999,
+          42.2795887400001
+        ]
+      },
+      "properties": {
+        "id": 348,
+        "name": "Lake Bluff",
+        "line": "Metra_UPN"
+      },
+      "id": 348
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.8211477199999,
+          42.2174198920001
+        ]
+      },
+      "properties": {
+        "id": 349,
+        "name": "Fort Sheridan",
+        "line": "Metra_UPN"
+      },
+      "id": 349
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.80999751,
+          42.202419638
+        ]
+      },
+      "properties": {
+        "id": 350,
+        "name": "Highwood",
+        "line": "Metra_UPN"
+      },
+      "id": 350
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.79771345,
+          42.183512917
+        ]
+      },
+      "properties": {
+        "id": 351,
+        "name": "Highland Park",
+        "line": "Metra_UPN"
+      },
+      "id": 351
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.78322754,
+          42.1653800030001
+        ]
+      },
+      "properties": {
+        "id": 352,
+        "name": "Ravinia",
+        "line": "Metra_UPN"
+      },
+      "id": 352
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.75815404,
+          42.135525203
+        ]
+      },
+      "properties": {
+        "id": 353,
+        "name": "Glencoe",
+        "line": "Metra_UPN"
+      },
+      "id": 353
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.7434413,
+          42.118184075
+        ]
+      },
+      "properties": {
+        "id": 354,
+        "name": "Hubbard Woods",
+        "line": "Metra_UPN"
+      },
+      "id": 354
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.73259011,
+          42.1052891910001
+        ]
+      },
+      "properties": {
+        "id": 355,
+        "name": "Winnetka",
+        "line": "Metra_UPN"
+      },
+      "id": 355
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.72372891,
+          42.0946221460001
+        ]
+      },
+      "properties": {
+        "id": 356,
+        "name": "Indian Hill",
+        "line": "Metra_UPN"
+      },
+      "id": 356
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.63006923,
+          41.6337448560001
+        ]
+      },
+      "properties": {
+        "id": 357,
+        "name": "Ivanhoe",
+        "line": "Metra_ME_BI"
+      },
+      "id": 357
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6232950199999,
+          41.646329087
+        ]
+      },
+      "properties": {
+        "id": 358,
+        "name": "Riverdale",
+        "line": "Metra_ME_BI"
+      },
+      "id": 358
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.88691671,
+          41.5309621330001
+        ]
+      },
+      "properties": {
+        "id": 359,
+        "name": "Mokena",
+        "line": "Metra_RI"
+      },
+      "id": 359
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.65055513,
+          41.7207094180001
+        ]
+      },
+      "properties": {
+        "id": 360,
+        "name": "Longwood (95th Street)",
+        "line": "Metra_RI"
+      },
+      "id": 360
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6446134,
+          41.736642896
+        ]
+      },
+      "properties": {
+        "id": 361,
+        "name": "Gresham",
+        "line": "Metra_RI"
+      },
+      "id": 361
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.7849657,
+          42.0350502150001
+        ]
+      },
+      "properties": {
+        "id": 362,
+        "name": "Morton Grove",
+        "line": "Metra_MDN"
+      },
+      "id": 362
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.75616325,
+          41.9795372130001
+        ]
+      },
+      "properties": {
+        "id": 363,
+        "name": "Forest Glen",
+        "line": "Metra_MDN"
+      },
+      "id": 363
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.7461717,
+          41.960138057
+        ]
+      },
+      "properties": {
+        "id": 364,
+        "name": "Mayfair",
+        "line": "Metra_MDN"
+      },
+      "id": 364
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.7401227299999,
+          41.9485208780001
+        ]
+      },
+      "properties": {
+        "id": 365,
+        "name": "Grayland",
+        "line": "Metra_MDN"
+      },
+      "id": 365
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.72791223,
+          41.924855479
+        ]
+      },
+      "properties": {
+        "id": 366,
+        "name": "Healy",
+        "line": "Metra_MDN"
+      },
+      "id": 366
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -88.04332448,
+          42.3335414900001
+        ]
+      },
+      "properties": {
+        "id": 367,
+        "name": "Grayslake",
+        "line": "Metra_MDN"
+      },
+      "id": 367
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6321374299999,
+          41.8750482460001
+        ]
+      },
+      "properties": {
+        "id": 368,
+        "name": "LaSalle Street",
+        "line": "Metra_RI"
+      },
+      "id": 368
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6321374299999,
+          41.8750482460001
+        ]
+      },
+      "properties": {
+        "id": 369,
+        "name": "LaSalle Street",
+        "line": "Metra_RI_Bev"
+      },
+      "id": 369
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -88.18207174,
+          42.398302189
+        ]
+      },
+      "properties": {
+        "id": 370,
+        "name": "Fox Lake",
+        "line": "Metra_MDN"
+      },
+      "id": 370
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -88.01855017,
+          41.8864935220001
+        ]
+      },
+      "properties": {
+        "id": 371,
+        "name": "Lombard",
+        "line": "Metra_UPW"
+      },
+      "id": 371
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.7834630999999,
+          41.8354990020001
+        ]
+      },
+      "properties": {
+        "id": 372,
+        "name": "LaVergne",
+        "line": "Metra_BNSF"
+      },
+      "id": 372
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.68496946,
+          41.857568916
+        ]
+      },
+      "properties": {
+        "id": 373,
+        "name": "Western Avenue (18th)",
+        "line": "Metra_BNSF"
+      },
+      "id": 373
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.87462407,
+          42.2235286310001
+        ]
+      },
+      "properties": {
+        "id": 374,
+        "name": "Lake Forest (West)",
+        "line": "Metra_MDN"
+      },
+      "id": 374
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -88.06031006,
+          41.585384155
+        ]
+      },
+      "properties": {
+        "id": 375,
+        "name": "Lockport",
+        "line": "Metra_HC"
+      },
+      "id": 375
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -88.003663,
+          41.6736851520001
+        ]
+      },
+      "properties": {
+        "id": 376,
+        "name": "Lemont",
+        "line": "Metra_HC"
+      },
+      "id": 376
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.87848331,
+          41.733257047
+        ]
+      },
+      "properties": {
+        "id": 377,
+        "name": "Willow Springs",
+        "line": "Metra_HC"
+      },
+      "id": 377
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.80992071,
+          41.7949687880001
+        ]
+      },
+      "properties": {
+        "id": 378,
+        "name": "Summit",
+        "line": "Metra_HC"
+      },
+      "id": 378
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -88.01773292,
+          42.318546708
+        ]
+      },
+      "properties": {
+        "id": 379,
+        "name": "Prairie Crossing (Libertyville)",
+        "line": "Metra_MDN"
+      },
+      "id": 379
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.9939698599999,
+          41.7955863710001
+        ]
+      },
+      "properties": {
+        "id": 380,
+        "name": "Fairview Avenue (Downers Grove)",
+        "line": "Metra_BNSF"
+      },
+      "id": 380
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.9767842799999,
+          41.7956127140001
+        ]
+      },
+      "properties": {
+        "id": 381,
+        "name": "Westmont",
+        "line": "Metra_BNSF"
+      },
+      "id": 381
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.92823681,
+          41.802986919
+        ]
+      },
+      "properties": {
+        "id": 382,
+        "name": "Hinsdale",
+        "line": "Metra_BNSF"
+      },
+      "id": 382
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.9185732299999,
+          41.805195978
+        ]
+      },
+      "properties": {
+        "id": 383,
+        "name": "Highlands",
+        "line": "Metra_BNSF"
+      },
+      "id": 383
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.9014096499999,
+          41.8090788750001
+        ]
+      },
+      "properties": {
+        "id": 384,
+        "name": "Western Springs",
+        "line": "Metra_BNSF"
+      },
+      "id": 384
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.79905906,
+          41.9917499800001
+        ]
+      },
+      "properties": {
+        "id": 385,
+        "name": "Norwood Park",
+        "line": "Metra_UPNW"
+      },
+      "id": 385
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6704948299999,
+          41.692762407
+        ]
+      },
+      "properties": {
+        "id": 386,
+        "name": "111th Street (Morgan Park)",
+        "line": "Metra_RI_Bev"
+      },
+      "id": 386
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.54816784,
+          41.737748004
+        ]
+      },
+      "properties": {
+        "id": 387,
+        "name": "87th Street",
+        "line": "Metra_ME_SC"
+      },
+      "id": 387
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.66721063,
+          41.7279788910001
+        ]
+      },
+      "properties": {
+        "id": 388,
+        "name": "91st Street (Beverly Hills)",
+        "line": "Metra_RI_Bev"
+      },
+      "id": 388
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.55155612,
+          41.7450132980001
+        ]
+      },
+      "properties": {
+        "id": 389,
+        "name": "83rd Street",
+        "line": "Metra_ME_SC"
+      },
+      "id": 389
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -88.0098331,
+          41.7955418290001
+        ]
+      },
+      "properties": {
+        "id": 390,
+        "name": "Main Street (Downers Grove)",
+        "line": "Metra_BNSF"
+      },
+      "id": 390
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6161421799999,
+          41.850942344
+        ]
+      },
+      "properties": {
+        "id": 391,
+        "name": "McCormick Place",
+        "line": "Metra_ME"
+      },
+      "id": 391
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.62281176,
+          41.87699838
+        ]
+      },
+      "properties": {
+        "id": 392,
+        "name": "Van Buren Street",
+        "line": "Metra_ME"
+      },
+      "id": 392
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6744442199999,
+          41.9681534490001
+        ]
+      },
+      "properties": {
+        "id": 393,
+        "name": "Ravenswood",
+        "line": "Metra_UPN"
+      },
+      "id": 393
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.60865832,
+          41.699839808
+        ]
+      },
+      "properties": {
+        "id": 394,
+        "name": "107th Street",
+        "line": "Metra_ME"
+      },
+      "id": 394
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.60367533,
+          41.72141743
+        ]
+      },
+      "properties": {
+        "id": 395,
+        "name": "95th Street (Chicago State University)",
+        "line": "Metra_ME"
+      },
+      "id": 395
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.86872847,
+          41.962294098
+        ]
+      },
+      "properties": {
+        "id": 396,
+        "name": "Schiller Park",
+        "line": "Metra_NCS"
+      },
+      "id": 396
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.8735175799999,
+          41.9759217530001
+        ]
+      },
+      "properties": {
+        "id": 397,
+        "name": "Rosemont",
+        "line": "Metra_NCS"
+      },
+      "id": 397
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.9599162,
+          41.486053483
+        ]
+      },
+      "properties": {
+        "id": 398,
+        "name": "Laraway Rd",
+        "line": "Metra_RI"
+      },
+      "id": 398
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6689047999999,
+          41.706216284
+        ]
+      },
+      "properties": {
+        "id": 399,
+        "name": "103rd Street (Beverly Hills)",
+        "line": "Metra_RI_Bev"
+      },
+      "id": 399
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.64724774,
+          41.8602554820001
+        ]
+      },
+      "properties": {
+        "id": 400,
+        "name": "Halsted Street",
+        "line": "Metra_BNSF"
+      },
+      "id": 400
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.8409908,
+          42.151648519
+        ]
+      },
+      "properties": {
+        "id": 401,
+        "name": "Lake Cook Road",
+        "line": "Metra_MDN"
+      },
+      "id": 401
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.62942516,
+          41.831669705
+        ]
+      },
+      "properties": {
+        "id": 402,
+        "name": "35th Street / 'Lou' Jones / Bronzevil*",
+        "line": "Metra_RI"
+      },
+      "id": 402
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.77669449,
+          42.1576098460001
+        ]
+      },
+      "properties": {
+        "id": 403,
+        "name": "Ravinia Park",
+        "line": "Metra_UPN"
+      },
+      "id": 403
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.5462363299999,
+          41.6482721360001
+        ]
+      },
+      "properties": {
+        "id": 404,
+        "name": "Hegewisch",
+        "line": "Metra_ME_SC"
+      },
+      "id": 404
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.70927655,
+          42.077338281
+        ]
+      },
+      "properties": {
+        "id": 405,
+        "name": "Wilmette",
+        "line": "Metra_UPN"
+      },
+      "id": 405
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.87857274,
+          41.814210831
+        ]
+      },
+      "properties": {
+        "id": 406,
+        "name": "Stone Avenue (LaGrange)",
+        "line": "Metra_BNSF"
+      },
+      "id": 406
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.77788772,
+          41.979752272
+        ]
+      },
+      "properties": {
+        "id": 407,
+        "name": "Gladstone Park",
+        "line": "Metra_UPNW"
+      },
+      "id": 407
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.7633444099999,
+          41.9715060570001
+        ]
+      },
+      "properties": {
+        "id": 408,
+        "name": "Jefferson Park",
+        "line": "Metra_UPNW"
+      },
+      "id": 408
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.7311637399999,
+          41.953169539
+        ]
+      },
+      "properties": {
+        "id": 409,
+        "name": "Irving Park",
+        "line": "Metra_UPNW"
+      },
+      "id": 409
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.64076897,
+          41.8830493570001
+        ]
+      },
+      "properties": {
+        "id": 410,
+        "name": "Ogilvie Transportation Center",
+        "line": "Metra_UPN"
+      },
+      "id": 410
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.64076897,
+          41.8830493570001
+        ]
+      },
+      "properties": {
+        "id": 411,
+        "name": "Ogilvie Transportation Center",
+        "line": "Metra_UPNW"
+      },
+      "id": 411
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.64076897,
+          41.8830493570001
+        ]
+      },
+      "properties": {
+        "id": 412,
+        "name": "Ogilvie Transportation Center",
+        "line": "Metra_UPW"
+      },
+      "id": 412
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.82090641,
+          41.668478517
+        ]
+      },
+      "properties": {
+        "id": 413,
+        "name": "Palos Park",
+        "line": "Metra_SWS"
+      },
+      "id": 413
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.8071867799999,
+          41.6819522230001
+        ]
+      },
+      "properties": {
+        "id": 414,
+        "name": "Palos Heights",
+        "line": "Metra_SWS"
+      },
+      "id": 414
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.79568875,
+          41.6916536050001
+        ]
+      },
+      "properties": {
+        "id": 415,
+        "name": "Worth",
+        "line": "Metra_SWS"
+      },
+      "id": 415
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.7491498799999,
+          41.719397099
+        ]
+      },
+      "properties": {
+        "id": 416,
+        "name": "Oak Lawn",
+        "line": "Metra_SWS"
+      },
+      "id": 416
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.70146075,
+          41.7500797110001
+        ]
+      },
+      "properties": {
+        "id": 417,
+        "name": "Wrightwood",
+        "line": "Metra_SWS"
+      },
+      "id": 417
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -88.12805051,
+          42.3678965780001
+        ]
+      },
+      "properties": {
+        "id": 418,
+        "name": "Long Lake",
+        "line": "Metra_MDN"
+      },
+      "id": 418
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.8558718899999,
+          41.8902718240001
+        ]
+      },
+      "properties": {
+        "id": 419,
+        "name": "Melrose Park",
+        "line": "Metra_UPW"
+      },
+      "id": 419
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.92715852,
+          42.136446892
+        ]
+      },
+      "properties": {
+        "id": 420,
+        "name": "Wheeling",
+        "line": "Metra_NCS"
+      },
+      "id": 420
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.90806385,
+          42.092910884
+        ]
+      },
+      "properties": {
+        "id": 421,
+        "name": "Prospect Heights",
+        "line": "Metra_NCS"
+      },
+      "id": 421
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.8803170099999,
+          41.995211963
+        ]
+      },
+      "properties": {
+        "id": 422,
+        "name": "O'Hare Transfer",
+        "line": "Metra_NCS"
+      },
+      "id": 422
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.83632462,
+          41.9310037340001
+        ]
+      },
+      "properties": {
+        "id": 423,
+        "name": "River Grove",
+        "line": "Metra_MDW"
+      },
+      "id": 423
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -88.07929201,
+          42.4175866510001
+        ]
+      },
+      "properties": {
+        "id": 424,
+        "name": "Lake Villa",
+        "line": "Metra_NCS"
+      },
+      "id": 424
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -88.0651670999999,
+          42.384752587
+        ]
+      },
+      "properties": {
+        "id": 425,
+        "name": "Round Lake Beach",
+        "line": "Metra_NCS"
+      },
+      "id": 425
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -88.04985755,
+          42.3589864620001
+        ]
+      },
+      "properties": {
+        "id": 426,
+        "name": "Washington St. (Grayslake)",
+        "line": "Metra_NCS"
+      },
+      "id": 426
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.63161092,
+          41.6743229150001
+        ]
+      },
+      "properties": {
+        "id": 427,
+        "name": "Stewart Ridge",
+        "line": "Metra_ME_BI"
+      },
+      "id": 427
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6216063699999,
+          41.6744341460001
+        ]
+      },
+      "properties": {
+        "id": 428,
+        "name": "State Street",
+        "line": "Metra_ME_BI"
+      },
+      "id": 428
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.55962887,
+          41.758508146
+        ]
+      },
+      "properties": {
+        "id": 429,
+        "name": "Windsor Park",
+        "line": "Metra_ME_SC"
+      },
+      "id": 429
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.5657141999999,
+          41.765242836
+        ]
+      },
+      "properties": {
+        "id": 430,
+        "name": "South Shore",
+        "line": "Metra_ME_SC"
+      },
+      "id": 430
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -88.1989164299999,
+          41.8810686950001
+        ]
+      },
+      "properties": {
+        "id": 431,
+        "name": "West Chicago",
+        "line": "Metra_UPW"
+      },
+      "id": 431
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -88.05092924,
+          41.978315863
+        ]
+      },
+      "properties": {
+        "id": 432,
+        "name": "Medinah",
+        "line": "Metra_MDW"
+      },
+      "id": 432
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -88.01391602,
+          41.9716318160001
+        ]
+      },
+      "properties": {
+        "id": 433,
+        "name": "Itasca",
+        "line": "Metra_MDW"
+      },
+      "id": 433
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.97487209,
+          41.962368342
+        ]
+      },
+      "properties": {
+        "id": 434,
+        "name": "Wood Dale",
+        "line": "Metra_MDW"
+      },
+      "id": 434
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.88334017,
+          41.941506056
+        ]
+      },
+      "properties": {
+        "id": 435,
+        "name": "Mannheim",
+        "line": "Metra_MDW"
+      },
+      "id": 435
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.86658579,
+          41.9365319730001
+        ]
+      },
+      "properties": {
+        "id": 436,
+        "name": "Franklin Park",
+        "line": "Metra_MDW"
+      },
+      "id": 436
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.80115482,
+          41.9216362650001
+        ]
+      },
+      "properties": {
+        "id": 437,
+        "name": "Mont Clare",
+        "line": "Metra_MDW"
+      },
+      "id": 437
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.76762805,
+          41.9165621490001
+        ]
+      },
+      "properties": {
+        "id": 438,
+        "name": "Hanson Park",
+        "line": "Metra_MDW"
+      },
+      "id": 438
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6388527399999,
+          41.878787661
+        ]
+      },
+      "properties": {
+        "id": 439,
+        "name": "Union Station",
+        "line": "Metra_BNSF"
+      },
+      "id": 439
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6388527399999,
+          41.878787661
+        ]
+      },
+      "properties": {
+        "id": 440,
+        "name": "Union Station",
+        "line": "Metra_HC"
+      },
+      "id": 440
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6388527399999,
+          41.878787661
+        ]
+      },
+      "properties": {
+        "id": 441,
+        "name": "Union Station",
+        "line": "Metra_MDW"
+      },
+      "id": 441
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6388527399999,
+          41.878787661
+        ]
+      },
+      "properties": {
+        "id": 442,
+        "name": "Union Station",
+        "line": "Metra_MDN"
+      },
+      "id": 442
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6388527399999,
+          41.878787661
+        ]
+      },
+      "properties": {
+        "id": 443,
+        "name": "Union Station",
+        "line": "Metra_NCS"
+      },
+      "id": 443
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6388527399999,
+          41.878787661
+        ]
+      },
+      "properties": {
+        "id": 444,
+        "name": "Union Station",
+        "line": "Metra_SWS"
+      },
+      "id": 444
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -88.20852179,
+          41.7781301040001
+        ]
+      },
+      "properties": {
+        "id": 445,
+        "name": "Route 59",
+        "line": "Metra_BNSF"
+      },
+      "id": 445
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -88.0725639899999,
+          41.797808219
+        ]
+      },
+      "properties": {
+        "id": 446,
+        "name": "Lisle",
+        "line": "Metra_BNSF"
+      },
+      "id": 446
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.97782789,
+          41.8963042410001
+        ]
+      },
+      "properties": {
+        "id": 447,
+        "name": "Villa Park",
+        "line": "Metra_UPW"
+      },
+      "id": 447
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.5868503899999,
+          41.766010505
+        ]
+      },
+      "properties": {
+        "id": 448,
+        "name": "Stony Island",
+        "line": "Metra_ME_SC"
+      },
+      "id": 448
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.72331868,
+          41.458960577
+        ]
+      },
+      "properties": {
+        "id": 449,
+        "name": "University Park",
+        "line": "Metra_ME"
+      },
+      "id": 449
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.7089840899999,
+          41.4855922240001
+        ]
+      },
+      "properties": {
+        "id": 450,
+        "name": "Richton Park",
+        "line": "Metra_ME"
+      },
+      "id": 450
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.70191105,
+          41.498677027
+        ]
+      },
+      "properties": {
+        "id": 451,
+        "name": "Matteson",
+        "line": "Metra_ME"
+      },
+      "id": 451
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.69041146,
+          41.5210432540001
+        ]
+      },
+      "properties": {
+        "id": 452,
+        "name": "Olympia Fields",
+        "line": "Metra_ME"
+      },
+      "id": 452
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.67852005,
+          41.543301049
+        ]
+      },
+      "properties": {
+        "id": 453,
+        "name": "Flossmoor",
+        "line": "Metra_ME"
+      },
+      "id": 453
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6683551299999,
+          41.5623732770001
+        ]
+      },
+      "properties": {
+        "id": 454,
+        "name": "Homewood",
+        "line": "Metra_ME"
+      },
+      "id": 454
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.65850499,
+          41.580838263
+        ]
+      },
+      "properties": {
+        "id": 455,
+        "name": "Hazel Crest",
+        "line": "Metra_ME"
+      },
+      "id": 455
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.64353498,
+          41.608926598
+        ]
+      },
+      "properties": {
+        "id": 456,
+        "name": "Harvey",
+        "line": "Metra_ME"
+      },
+      "id": 456
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -88.2799681399999,
+          42.0291325690001
+        ]
+      },
+      "properties": {
+        "id": 457,
+        "name": "National Street",
+        "line": "Metra_MDW"
+      },
+      "id": 457
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -88.14928166,
+          41.988127526
+        ]
+      },
+      "properties": {
+        "id": 458,
+        "name": "Hanover Park",
+        "line": "Metra_MDW"
+      },
+      "id": 458
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -88.1183526899999,
+          41.989234965
+        ]
+      },
+      "properties": {
+        "id": 459,
+        "name": "Schaumburg",
+        "line": "Metra_MDW"
+      },
+      "id": 459
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -88.06706736,
+          41.9815779580001
+        ]
+      },
+      "properties": {
+        "id": 460,
+        "name": "Roselle",
+        "line": "Metra_MDW"
+      },
+      "id": 460
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.96523015,
+          41.514560884
+        ]
+      },
+      "properties": {
+        "id": 461,
+        "name": "New Lenox",
+        "line": "Metra_RI"
+      },
+      "id": 461
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.8476227199999,
+          41.5479705110001
+        ]
+      },
+      "properties": {
+        "id": 462,
+        "name": "Hickory Creek",
+        "line": "Metra_RI"
+      },
+      "id": 462
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.78357691,
+          41.5756112810001
+        ]
+      },
+      "properties": {
+        "id": 463,
+        "name": "Tinley Park",
+        "line": "Metra_RI"
+      },
+      "id": 463
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.7381887,
+          41.604636032
+        ]
+      },
+      "properties": {
+        "id": 464,
+        "name": "Oak Forest",
+        "line": "Metra_RI"
+      },
+      "id": 464
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.7124066,
+          41.6259807100001
+        ]
+      },
+      "properties": {
+        "id": 465,
+        "name": "Midlothian",
+        "line": "Metra_RI"
+      },
+      "id": 465
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6945564,
+          41.640771811
+        ]
+      },
+      "properties": {
+        "id": 466,
+        "name": "Robbins",
+        "line": "Metra_RI"
+      },
+      "id": 466
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.67510286,
+          41.6622625970001
+        ]
+      },
+      "properties": {
+        "id": 467,
+        "name": "Prairie Street",
+        "line": "Metra_RI_Bev"
+      },
+      "id": 467
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -88.15748629,
+          41.870014591
+        ]
+      },
+      "properties": {
+        "id": 468,
+        "name": "Winfield",
+        "line": "Metra_UPW"
+      },
+      "id": 468
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.83877807,
+          41.8883332780001
+        ]
+      },
+      "properties": {
+        "id": 469,
+        "name": "Maywood",
+        "line": "Metra_UPW"
+      },
+      "id": 469
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.82490609,
+          41.886806709
+        ]
+      },
+      "properties": {
+        "id": 470,
+        "name": "River Forest",
+        "line": "Metra_UPW"
+      },
+      "id": 470
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.80145473,
+          41.8869675030001
+        ]
+      },
+      "properties": {
+        "id": 471,
+        "name": "Oak Park (Marion Street)",
+        "line": "Metra_UPW"
+      },
+      "id": 471
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.67612597,
+          41.65569614
+        ]
+      },
+      "properties": {
+        "id": 472,
+        "name": "Blue Island",
+        "line": "Metra_ME_BI"
+      },
+      "id": 472
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.9976958999999,
+          42.2667073590001
+        ]
+      },
+      "properties": {
+        "id": 473,
+        "name": "Mundelein",
+        "line": "Metra_NCS"
+      },
+      "id": 473
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.96482329,
+          42.2155713920001
+        ]
+      },
+      "properties": {
+        "id": 474,
+        "name": "Vernon Hills",
+        "line": "Metra_NCS"
+      },
+      "id": 474
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.95557868,
+          42.197975576
+        ]
+      },
+      "properties": {
+        "id": 475,
+        "name": "Prairie View",
+        "line": "Metra_NCS"
+      },
+      "id": 475
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -88.1549805499999,
+          42.384144135
+        ]
+      },
+      "properties": {
+        "id": 476,
+        "name": "Ingleside",
+        "line": "Metra_MDN"
+      },
+      "id": 476
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.67552626,
+          42.00964911
+        ]
+      },
+      "properties": {
+        "id": 477,
+        "name": "Rogers Park",
+        "line": "Metra_UPN"
+      },
+      "id": 477
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -88.61711967,
+          42.419351143
+        ]
+      },
+      "properties": {
+        "id": 478,
+        "name": "Harvard",
+        "line": "Metra_UPNW"
+      },
+      "id": 478
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -88.44728141,
+          42.316836564
+        ]
+      },
+      "properties": {
+        "id": 479,
+        "name": "Woodstock",
+        "line": "Metra_UPNW"
+      },
+      "id": 479
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -88.29710226,
+          42.233654028
+        ]
+      },
+      "properties": {
+        "id": 480,
+        "name": "Pingree Road",
+        "line": "Metra_UPNW"
+      },
+      "id": 480
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -88.21886342,
+          42.197518883
+        ]
+      },
+      "properties": {
+        "id": 481,
+        "name": "Fox River Grove",
+        "line": "Metra_UPNW"
+      },
+      "id": 481
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -88.04840524,
+          42.112926326
+        ]
+      },
+      "properties": {
+        "id": 482,
+        "name": "Palatine",
+        "line": "Metra_UPNW"
+      },
+      "id": 482
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.93618001,
+          42.062935574
+        ]
+      },
+      "properties": {
+        "id": 483,
+        "name": "Mount Prospect",
+        "line": "Metra_UPNW"
+      },
+      "id": 483
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -88.0939289199999,
+          42.354563925
+        ]
+      },
+      "properties": {
+        "id": 484,
+        "name": "Round Lake",
+        "line": "Metra_MDN"
+      },
+      "id": 484
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.83174948,
+          42.0102089260001
+        ]
+      },
+      "properties": {
+        "id": 485,
+        "name": "Park Ridge",
+        "line": "Metra_UPNW"
+      },
+      "id": 485
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -88.27614719,
+          42.3432958650001
+        ]
+      },
+      "properties": {
+        "id": 486,
+        "name": "McHenry",
+        "line": "Metra_UPNW"
+      },
+      "id": 486
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.9564450999999,
+          42.2910832580001
+        ]
+      },
+      "properties": {
+        "id": 487,
+        "name": "Libertyville",
+        "line": "Metra_MDN"
+      },
+      "id": 487
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.8281375,
+          42.127629582
+        ]
+      },
+      "properties": {
+        "id": 488,
+        "name": "Northbrook",
+        "line": "Metra_MDN"
+      },
+      "id": 488
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.81548811,
+          42.0968970600001
+        ]
+      },
+      "properties": {
+        "id": 489,
+        "name": "North Glenview",
+        "line": "Metra_MDN"
+      },
+      "id": 489
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6521567199999,
+          41.6741141800001
+        ]
+      },
+      "properties": {
+        "id": 490,
+        "name": "Racine Avenue",
+        "line": "Metra_ME_BI"
+      },
+      "id": 490
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.64224674,
+          41.6742150700001
+        ]
+      },
+      "properties": {
+        "id": 491,
+        "name": "West Pullman",
+        "line": "Metra_ME_BI"
+      },
+      "id": 491
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.94567323,
+          41.7990347840001
+        ]
+      },
+      "properties": {
+        "id": 492,
+        "name": "West Hinsdale",
+        "line": "Metra_BNSF"
+      },
+      "id": 492
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.8055704599999,
+          42.0746181760001
+        ]
+      },
+      "properties": {
+        "id": 493,
+        "name": "Glenview",
+        "line": "Metra_MDN"
+      },
+      "id": 493
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.79715371,
+          42.0583263940001
+        ]
+      },
+      "properties": {
+        "id": 494,
+        "name": "Golf",
+        "line": "Metra_MDN"
+      },
+      "id": 494
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -88.31020828,
+          41.881501411
+        ]
+      },
+      "properties": {
+        "id": 495,
+        "name": "Geneva",
+        "line": "Metra_UPW"
+      },
+      "id": 495
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -88.10872654,
+          41.8644525550001
+        ]
+      },
+      "properties": {
+        "id": 496,
+        "name": "Wheaton",
+        "line": "Metra_UPW"
+      },
+      "id": 496
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -88.0646071399999,
+          41.8764590550001
+        ]
+      },
+      "properties": {
+        "id": 497,
+        "name": "Glen Ellyn",
+        "line": "Metra_UPW"
+      },
+      "id": 497
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.8018997299999,
+          41.8313399690001
+        ]
+      },
+      "properties": {
+        "id": 498,
+        "name": "Harlem Avenue",
+        "line": "Metra_BNSF"
+      },
+      "id": 498
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.79453334,
+          41.91925274
+        ]
+      },
+      "properties": {
+        "id": 499,
+        "name": "Mars",
+        "line": "Metra_NCS"
+      },
+      "id": 499
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.78473389,
+          41.916397725
+        ]
+      },
+      "properties": {
+        "id": 500,
+        "name": "Galewood",
+        "line": "Metra_MDW"
+      },
+      "id": 500
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -88.14519375,
+          41.7798092450001
+        ]
+      },
+      "properties": {
+        "id": 501,
+        "name": "Naperville",
+        "line": "Metra_BNSF"
+      },
+      "id": 501
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -88.0492101999999,
+          41.6372219080001
+        ]
+      },
+      "properties": {
+        "id": 502,
+        "name": "Romeoville",
+        "line": "Metra_HC"
+      },
+      "id": 502
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6750137146173,
+          41.99111045534389
+        ]
+      },
+      "properties": {
+        "id": 503,
+        "name": "Peterson/Ridge",
+        "line": "Metra_UPN"
+      },
+      "id": 503
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.63963126229456,
+          41.7500388247871
+        ]
+      },
+      "properties": {
+        "id": 504,
+        "name": "Auburn Park",
+        "line": "Metra_RI"
+      },
+      "id": 504
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6230873499999,
+          41.884365614
+        ]
+      },
+      "properties": {
+        "id": 510,
+        "name": "Millennium Station",
+        "line": "NICTD_SSL",
+        "order": 0
+      },
+      "id": 510
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.51655196823756,
+          41.63106074045832
+        ]
+      },
+      "properties": {
+        "id": 530,
+        "name": "Hammond Gateway",
+        "line": "NICTD_MCL",
+        "order": 0
+      },
+      "id": 530
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.817318,
+          41.874257
+        ]
       },
       "properties": {
         "id": 33,
@@ -131,7 +4208,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.791604, 41.872098]
+        "coordinates": [
+          -87.791604,
+          41.872098
+        ]
       },
       "properties": {
         "id": 31,
@@ -145,7 +4225,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.776808, 41.870891]
+        "coordinates": [
+          -87.776808,
+          41.870891
+        ]
       },
       "properties": {
         "id": 30,
@@ -159,7 +4242,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.745154, 41.871601]
+        "coordinates": [
+          -87.745154,
+          41.871601
+        ]
       },
       "properties": {
         "id": 29,
@@ -173,7 +4259,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.69073, 42.073153]
+        "coordinates": [
+          -87.69073,
+          42.073153
+        ]
       },
       "properties": {
         "id": 180,
@@ -187,7 +4276,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.725665, 41.873897]
+        "coordinates": [
+          -87.725665,
+          41.873897
+        ]
       },
       "properties": {
         "id": 28,
@@ -201,7 +4293,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.685617, 42.063987]
+        "coordinates": [
+          -87.685617,
+          42.063987
+        ]
       },
       "properties": {
         "id": 179,
@@ -215,7 +4310,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.708358, 41.874129]
+        "coordinates": [
+          -87.708358,
+          41.874129
+        ]
       },
       "properties": {
         "id": 27,
@@ -229,7 +4327,27 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.683339, 42.058282]
+        "coordinates": [
+          -87.59424997715394,
+          41.66000990188678
+        ]
+      },
+      "properties": {
+        "id": 509,
+        "name": "130th",
+        "line": "CTAMetroRedLine",
+        "order": 190
+      },
+      "id": 509
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.683339,
+          42.058282
+        ]
       },
       "properties": {
         "id": 178,
@@ -243,7 +4361,61 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.624415, 41.722376]
+        "coordinates": [
+          -87.62067069868462,
+          41.68302711259891
+        ]
+      },
+      "properties": {
+        "id": 508,
+        "name": "Michigan",
+        "line": "CTAMetroRedLine",
+        "order": 189
+      },
+      "id": 508
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.63273137479318,
+          41.69251245039428
+        ]
+      },
+      "properties": {
+        "id": 507,
+        "name": "111th",
+        "line": "CTAMetroRedLine",
+        "order": 188
+      },
+      "id": 507
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.63314308448497,
+          41.70706284087208
+        ]
+      },
+      "properties": {
+        "id": 506,
+        "name": "103rd",
+        "line": "CTAMetroRedLine",
+        "order": 187
+      },
+      "id": 506
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.624415,
+          41.722376
+        ]
       },
       "properties": {
         "id": 220,
@@ -257,7 +4429,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.673929, 41.875635]
+        "coordinates": [
+          -87.673929,
+          41.875635
+        ]
       },
       "properties": {
         "id": 25,
@@ -271,7 +4446,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.659457, 41.87588]
+        "coordinates": [
+          -87.659457,
+          41.87588
+        ]
       },
       "properties": {
         "id": 24,
@@ -285,7 +4463,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.68356, 42.05416]
+        "coordinates": [
+          -87.68356,
+          42.05416
+        ]
       },
       "properties": {
         "id": 177,
@@ -299,7 +4480,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.624755, 41.735371]
+        "coordinates": [
+          -87.624755,
+          41.735371
+        ]
       },
       "properties": {
         "id": 219,
@@ -313,7 +4497,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.625166, 41.750418]
+        "coordinates": [
+          -87.625166,
+          41.750418
+        ]
       },
       "properties": {
         "id": 218,
@@ -327,7 +4514,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.683543, 42.04771]
+        "coordinates": [
+          -87.683543,
+          42.04771
+        ]
       },
       "properties": {
         "id": 176,
@@ -341,7 +4531,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.649642, 41.875516]
+        "coordinates": [
+          -87.649642,
+          41.875516
+        ]
       },
       "properties": {
         "id": 23,
@@ -355,7 +4548,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.640984, 41.875531]
+        "coordinates": [
+          -87.640984,
+          41.875531
+        ]
       },
       "properties": {
         "id": 22,
@@ -369,7 +4565,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.6816, 42.041655]
+        "coordinates": [
+          -87.6816,
+          42.041655
+        ]
       },
       "properties": {
         "id": 175,
@@ -383,7 +4582,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.631722, 41.875568]
+        "coordinates": [
+          -87.631722,
+          41.875568
+        ]
       },
       "properties": {
         "id": 21,
@@ -397,7 +4599,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.625809, 41.768368]
+        "coordinates": [
+          -87.625809,
+          41.768368
+        ]
       },
       "properties": {
         "id": 217,
@@ -411,7 +4616,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.629294, 41.878183]
+        "coordinates": [
+          -87.629294,
+          41.878183
+        ]
       },
       "properties": {
         "id": 20,
@@ -425,7 +4633,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.629377, 41.880703]
+        "coordinates": [
+          -87.629377,
+          41.880703
+        ]
       },
       "properties": {
         "id": 19,
@@ -439,7 +4650,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.679538, 42.033456]
+        "coordinates": [
+          -87.679538,
+          42.033456
+        ]
       },
       "properties": {
         "id": 174,
@@ -453,7 +4667,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.629438, 41.883164]
+        "coordinates": [
+          -87.629438,
+          41.883164
+        ]
       },
       "properties": {
         "id": 18,
@@ -467,7 +4684,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.678346, 42.027611]
+        "coordinates": [
+          -87.678346,
+          42.027611
+        ]
       },
       "properties": {
         "id": 173,
@@ -481,7 +4701,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.630886, 41.885734]
+        "coordinates": [
+          -87.630886,
+          41.885734
+        ]
       },
       "properties": {
         "id": 17,
@@ -495,7 +4718,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.631, 41.780535]
+        "coordinates": [
+          -87.631,
+          41.780535
+        ]
       },
       "properties": {
         "id": 216,
@@ -509,7 +4735,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.672893, 42.019062]
+        "coordinates": [
+          -87.672893,
+          42.019062
+        ]
       },
       "properties": {
         "id": 172,
@@ -523,7 +4752,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.647581, 41.891186]
+        "coordinates": [
+          -87.647581,
+          41.891186
+        ]
       },
       "properties": {
         "id": 16,
@@ -537,7 +4769,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.631169, 41.79542]
+        "coordinates": [
+          -87.631169,
+          41.79542
+        ]
       },
       "properties": {
         "id": 215,
@@ -551,7 +4786,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.655211, 41.896077]
+        "coordinates": [
+          -87.655211,
+          41.896077
+        ]
       },
       "properties": {
         "id": 15,
@@ -565,7 +4803,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.713141, 41.9679]
+        "coordinates": [
+          -87.713141,
+          41.9679
+        ]
       },
       "properties": {
         "id": 60,
@@ -579,7 +4820,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.631022, 41.810347]
+        "coordinates": [
+          -87.631022,
+          41.810347
+        ]
       },
       "properties": {
         "id": 214,
@@ -593,7 +4837,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.666496, 41.903355]
+        "coordinates": [
+          -87.666496,
+          41.903355
+        ]
       },
       "properties": {
         "id": 14,
@@ -607,7 +4854,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.708744, 41.966095]
+        "coordinates": [
+          -87.708744,
+          41.966095
+        ]
       },
       "properties": {
         "id": 59,
@@ -621,7 +4871,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.701582, 41.966141]
+        "coordinates": [
+          -87.701582,
+          41.966141
+        ]
       },
       "properties": {
         "id": 58,
@@ -635,7 +4888,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.630636, 41.831191]
+        "coordinates": [
+          -87.630636,
+          41.831191
+        ]
       },
       "properties": {
         "id": 213,
@@ -649,7 +4905,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.677437, 41.909744]
+        "coordinates": [
+          -87.677437,
+          41.909744
+        ]
       },
       "properties": {
         "id": 13,
@@ -663,7 +4922,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.694089, 41.966215]
+        "coordinates": [
+          -87.694089,
+          41.966215
+        ]
       },
       "properties": {
         "id": 57,
@@ -677,7 +4939,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.688503, 41.96625]
+        "coordinates": [
+          -87.688503,
+          41.96625
+        ]
       },
       "properties": {
         "id": 56,
@@ -691,7 +4956,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.687364, 41.916157]
+        "coordinates": [
+          -87.687364,
+          41.916157
+        ]
       },
       "properties": {
         "id": 12,
@@ -705,7 +4973,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.678772, 41.966405]
+        "coordinates": [
+          -87.678772,
+          41.966405
+        ]
       },
       "properties": {
         "id": 55,
@@ -719,7 +4990,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.69689, 41.921939]
+        "coordinates": [
+          -87.69689,
+          41.921939
+        ]
       },
       "properties": {
         "id": 11,
@@ -733,7 +5007,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.737956, 41.786614]
+        "coordinates": [
+          -87.737956,
+          41.786614
+        ]
       },
       "properties": {
         "id": 132,
@@ -747,7 +5024,27 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.663769, 41.778954]
+        "coordinates": [
+          -87.67689402343791,
+          41.884996093594495
+        ]
+      },
+      "properties": {
+        "id": 505,
+        "name": "Damen",
+        "line": "CTAMetroGreenLine",
+        "order": 126
+      },
+      "id": 505
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.663769,
+          41.778954
+        ]
       },
       "properties": {
         "id": 88,
@@ -761,7 +5058,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.630982, 41.853204]
+        "coordinates": [
+          -87.630982,
+          41.853204
+        ]
       },
       "properties": {
         "id": 212,
@@ -775,7 +5075,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.708539, 41.92973]
+        "coordinates": [
+          -87.708539,
+          41.92973
+        ]
       },
       "properties": {
         "id": 10,
@@ -789,7 +5092,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.644245, 41.779037]
+        "coordinates": [
+          -87.644245,
+          41.779037
+        ]
       },
       "properties": {
         "id": 87,
@@ -803,7 +5109,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.675165, 41.961752]
+        "coordinates": [
+          -87.675165,
+          41.961752
+        ]
       },
       "properties": {
         "id": 54,
@@ -817,7 +5126,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.724557, 41.799846]
+        "coordinates": [
+          -87.724557,
+          41.799846
+        ]
       },
       "properties": {
         "id": 131,
@@ -831,7 +5143,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.674955, 41.954518]
+        "coordinates": [
+          -87.674955,
+          41.954518
+        ]
       },
       "properties": {
         "id": 53,
@@ -845,7 +5160,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.674736, 41.947026]
+        "coordinates": [
+          -87.674736,
+          41.947026
+        ]
       },
       "properties": {
         "id": 52,
@@ -859,7 +5177,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.71236, 41.938132]
+        "coordinates": [
+          -87.71236,
+          41.938132
+        ]
       },
       "properties": {
         "id": 9,
@@ -873,7 +5194,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.657588, 41.964273]
+        "coordinates": [
+          -87.657588,
+          41.964273
+        ]
       },
       "properties": {
         "id": 171,
@@ -887,7 +5211,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.704321, 41.804348]
+        "coordinates": [
+          -87.704321,
+          41.804348
+        ]
       },
       "properties": {
         "id": 130,
@@ -901,7 +5228,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.605857, 41.780309]
+        "coordinates": [
+          -87.605857,
+          41.780309
+        ]
       },
       "properties": {
         "id": 116,
@@ -915,7 +5245,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.684024, 41.804686]
+        "coordinates": [
+          -87.684024,
+          41.804686
+        ]
       },
       "properties": {
         "id": 129,
@@ -929,7 +5262,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.6274, 41.867368]
+        "coordinates": [
+          -87.6274,
+          41.867368
+        ]
       },
       "properties": {
         "id": 211,
@@ -943,7 +5279,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.670909, 41.94371]
+        "coordinates": [
+          -87.670909,
+          41.94371
+        ]
       },
       "properties": {
         "id": 51,
@@ -957,7 +5296,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.615546, 41.78013]
+        "coordinates": [
+          -87.615546,
+          41.78013
+        ]
       },
       "properties": {
         "id": 115,
@@ -971,7 +5313,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.627479, 41.874039]
+        "coordinates": [
+          -87.627479,
+          41.874039
+        ]
       },
       "properties": {
         "id": 210,
@@ -985,7 +5330,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.66361, 41.943812]
+        "coordinates": [
+          -87.66361,
+          41.943812
+        ]
       },
       "properties": {
         "id": 50,
@@ -999,7 +5347,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.627612, 41.878153]
+        "coordinates": [
+          -87.627612,
+          41.878153
+        ]
       },
       "properties": {
         "id": 209,
@@ -1013,7 +5364,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.627696, 41.880745]
+        "coordinates": [
+          -87.627696,
+          41.880745
+        ]
       },
       "properties": {
         "id": 208,
@@ -1027,7 +5381,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.627801, 41.884809]
+        "coordinates": [
+          -87.627801,
+          41.884809
+        ]
       },
       "properties": {
         "id": 207,
@@ -1041,7 +5398,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.719095, 41.947357]
+        "coordinates": [
+          -87.719095,
+          41.947357
+        ]
       },
       "properties": {
         "id": 8,
@@ -1055,7 +5415,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.62803, 41.891665]
+        "coordinates": [
+          -87.62803,
+          41.891665
+        ]
       },
       "properties": {
         "id": 206,
@@ -1069,7 +5432,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.628164, 41.896671]
+        "coordinates": [
+          -87.628164,
+          41.896671
+        ]
       },
       "properties": {
         "id": 205,
@@ -1083,7 +5449,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.618318, 41.795172]
+        "coordinates": [
+          -87.618318,
+          41.795172
+        ]
       },
       "properties": {
         "id": 86,
@@ -1097,7 +5466,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.7292, 41.952954]
+        "coordinates": [
+          -87.7292,
+          41.952954
+        ]
       },
       "properties": {
         "id": 7,
@@ -1111,7 +5483,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.653392, 41.939751]
+        "coordinates": [
+          -87.653392,
+          41.939751
+        ]
       },
       "properties": {
         "id": 49,
@@ -1125,7 +5500,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.653266, 41.936033]
+        "coordinates": [
+          -87.653266,
+          41.936033
+        ]
       },
       "properties": {
         "id": 48,
@@ -1139,7 +5517,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.618502, 41.802092]
+        "coordinates": [
+          -87.618502,
+          41.802092
+        ]
       },
       "properties": {
         "id": 85,
@@ -1153,7 +5534,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.653392, 41.939751]
+        "coordinates": [
+          -87.653392,
+          41.939751
+        ]
       },
       "properties": {
         "id": 170,
@@ -1167,7 +5551,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.631412, 41.90392]
+        "coordinates": [
+          -87.631412,
+          41.90392
+        ]
       },
       "properties": {
         "id": 204,
@@ -1181,7 +5568,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.65312, 41.932732]
+        "coordinates": [
+          -87.65312,
+          41.932732
+        ]
       },
       "properties": {
         "id": 47,
@@ -1195,7 +5585,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.756692, 41.851773]
+        "coordinates": [
+          -87.756692,
+          41.851773
+        ]
       },
       "properties": {
         "id": 154,
@@ -1209,7 +5602,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.653266, 41.936033]
+        "coordinates": [
+          -87.653266,
+          41.936033
+        ]
       },
       "properties": {
         "id": 169,
@@ -1223,7 +5619,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.743631, 41.961498]
+        "coordinates": [
+          -87.743631,
+          41.961498
+        ]
       },
       "properties": {
         "id": 6,
@@ -1237,7 +5636,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.65312, 41.932732]
+        "coordinates": [
+          -87.65312,
+          41.932732
+        ]
       },
       "properties": {
         "id": 168,
@@ -1251,7 +5653,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.618834, 41.809209]
+        "coordinates": [
+          -87.618834,
+          41.809209
+        ]
       },
       "properties": {
         "id": 84,
@@ -1265,7 +5670,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.652866, 41.925051]
+        "coordinates": [
+          -87.652866,
+          41.925051
+        ]
       },
       "properties": {
         "id": 46,
@@ -1279,7 +5687,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.61903, 41.816462]
+        "coordinates": [
+          -87.61903,
+          41.816462
+        ]
       },
       "properties": {
         "id": 83,
@@ -1293,7 +5704,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.745338, 41.851927]
+        "coordinates": [
+          -87.745338,
+          41.851927
+        ]
       },
       "properties": {
         "id": 153,
@@ -1307,7 +5721,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.649177, 41.910655]
+        "coordinates": [
+          -87.649177,
+          41.910655
+        ]
       },
       "properties": {
         "id": 203,
@@ -1321,7 +5738,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.652642, 41.918217]
+        "coordinates": [
+          -87.652642,
+          41.918217
+        ]
       },
       "properties": {
         "id": 45,
@@ -1335,7 +5755,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.652866, 41.925051]
+        "coordinates": [
+          -87.652866,
+          41.925051
+        ]
       },
       "properties": {
         "id": 167,
@@ -1349,7 +5772,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.652642, 41.918217]
+        "coordinates": [
+          -87.652642,
+          41.918217
+        ]
       },
       "properties": {
         "id": 166,
@@ -1363,7 +5789,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.65285, 41.925051]
+        "coordinates": [
+          -87.65285,
+          41.925051
+        ]
       },
       "properties": {
         "id": 202,
@@ -1377,7 +5806,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.621374, 41.821818]
+        "coordinates": [
+          -87.621374,
+          41.821818
+        ]
       },
       "properties": {
         "id": 82,
@@ -1391,7 +5823,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.680744, 41.829468]
+        "coordinates": [
+          -87.680744,
+          41.829468
+        ]
       },
       "properties": {
         "id": 128,
@@ -1405,7 +5840,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.653381, 41.939751]
+        "coordinates": [
+          -87.653381,
+          41.939751
+        ]
       },
       "properties": {
         "id": 201,
@@ -1419,12 +5857,14 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.760896, 41.970629]
+        "coordinates": [
+          -87.760896,
+          41.970629
+        ]
       },
       "properties": {
         "id": 5,
         "name": "Jefferson Park Transit Center",
-        "alternate_names": ["Jefferson Park"],
         "line": "CTAMetroBlueLine",
         "order": 69
       },
@@ -1434,7 +5874,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.733258, 41.853757]
+        "coordinates": [
+          -87.733258,
+          41.853757
+        ]
       },
       "properties": {
         "id": 152,
@@ -1448,7 +5891,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.625889, 41.831676]
+        "coordinates": [
+          -87.625889,
+          41.831676
+        ]
       },
       "properties": {
         "id": 81,
@@ -1462,7 +5908,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.724314, 41.853857]
+        "coordinates": [
+          -87.724314,
+          41.853857
+        ]
       },
       "properties": {
         "id": 151,
@@ -1476,7 +5925,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.626402, 41.853115]
+        "coordinates": [
+          -87.626402,
+          41.853115
+        ]
       },
       "properties": {
         "id": 80,
@@ -1490,7 +5942,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.665312, 41.839356]
+        "coordinates": [
+          -87.665312,
+          41.839356
+        ]
       },
       "properties": {
         "id": 127,
@@ -1504,7 +5959,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.715074, 41.853987]
+        "coordinates": [
+          -87.715074,
+          41.853987
+        ]
       },
       "properties": {
         "id": 150,
@@ -1518,7 +5976,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.653624, 41.947428]
+        "coordinates": [
+          -87.653624,
+          41.947428
+        ]
       },
       "properties": {
         "id": 200,
@@ -1532,7 +5993,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.751919, 42.038951]
+        "coordinates": [
+          -87.751919,
+          42.038951
+        ]
       },
       "properties": {
         "id": 253,
@@ -1546,7 +6010,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.705867, 41.854115]
+        "coordinates": [
+          -87.705867,
+          41.854115
+        ]
       },
       "properties": {
         "id": 149,
@@ -1560,7 +6027,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.638844, 41.910414]
+        "coordinates": [
+          -87.638844,
+          41.910414
+        ]
       },
       "properties": {
         "id": 44,
@@ -1574,7 +6044,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.626593, 41.867477]
+        "coordinates": [
+          -87.626593,
+          41.867477
+        ]
       },
       "properties": {
         "id": 79,
@@ -1588,7 +6061,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.694921, 41.854279]
+        "coordinates": [
+          -87.694921,
+          41.854279
+        ]
       },
       "properties": {
         "id": 148,
@@ -1602,7 +6078,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.64817, 41.846872]
+        "coordinates": [
+          -87.64817,
+          41.846872
+        ]
       },
       "properties": {
         "id": 126,
@@ -1616,7 +6095,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.638844, 41.910414]
+        "coordinates": [
+          -87.638844,
+          41.910414
+        ]
       },
       "properties": {
         "id": 165,
@@ -1630,7 +6112,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.68507, 41.854398]
+        "coordinates": [
+          -87.68507,
+          41.854398
+        ]
       },
       "properties": {
         "id": 147,
@@ -1644,7 +6129,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.654929, 41.953775]
+        "coordinates": [
+          -87.654929,
+          41.953775
+        ]
       },
       "properties": {
         "id": 199,
@@ -1658,7 +6146,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.808901, 41.982318]
+        "coordinates": [
+          -87.808901,
+          41.982318
+        ]
       },
       "properties": {
         "id": 4,
@@ -1672,7 +6163,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.675974, 41.854515]
+        "coordinates": [
+          -87.675974,
+          41.854515
+        ]
       },
       "properties": {
         "id": 146,
@@ -1686,7 +6180,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.747226, 42.026242]
+        "coordinates": [
+          -87.747226,
+          42.026242
+        ]
       },
       "properties": {
         "id": 252,
@@ -1700,7 +6197,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.626099, 41.879506]
+        "coordinates": [
+          -87.626099,
+          41.879506
+        ]
       },
       "properties": {
         "id": 78,
@@ -1714,7 +6214,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.626172, 41.88237]
+        "coordinates": [
+          -87.626172,
+          41.88237
+        ]
       },
       "properties": {
         "id": 77,
@@ -1728,7 +6231,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.657588, 41.964273]
+        "coordinates": [
+          -87.657588,
+          41.964273
+        ]
       },
       "properties": {
         "id": 198,
@@ -1742,7 +6248,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.669162, 41.857908]
+        "coordinates": [
+          -87.669162,
+          41.857908
+        ]
       },
       "properties": {
         "id": 145,
@@ -1756,7 +6265,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.669541, 41.871551]
+        "coordinates": [
+          -87.669541,
+          41.871551
+        ]
       },
       "properties": {
         "id": 144,
@@ -1770,7 +6282,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.627835, 41.885737]
+        "coordinates": [
+          -87.627835,
+          41.885737
+        ]
       },
       "properties": {
         "id": 76,
@@ -1784,7 +6299,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.630886, 41.885731]
+        "coordinates": [
+          -87.630886,
+          41.885731
+        ]
       },
       "properties": {
         "id": 75,
@@ -1798,7 +6316,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.641782, 41.885711]
+        "coordinates": [
+          -87.641782,
+          41.885711
+        ]
       },
       "properties": {
         "id": 74,
@@ -1812,7 +6333,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.65213, 41.885586]
+        "coordinates": [
+          -87.65213,
+          41.885586
+        ]
       },
       "properties": {
         "id": 73,
@@ -1826,7 +6350,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.65853, 41.973453]
+        "coordinates": [
+          -87.65853,
+          41.973453
+        ]
       },
       "properties": {
         "id": 197,
@@ -1840,35 +6367,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.6586741879951, 41.97799186164995, 0]
-      },
-      "properties": {
-        "id": 1971,
-        "name": "Berwyn",
-        "line": "CTAMetroRedLine",
-        "order": 39.5
-      },
-      "id": 1971
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-87.65849872909713, 41.96914680841935, 0]
-      },
-      "properties": {
-        "id": 1972,
-        "name": "Lawrence",
-        "line": "CTAMetroRedLine",
-        "order": 39.7
-      },
-      "id": 1972
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-87.838032, 41.984291]
+        "coordinates": [
+          -87.838032,
+          41.984291
+        ]
       },
       "properties": {
         "id": 3,
@@ -1882,7 +6384,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.658841, 41.983504]
+        "coordinates": [
+          -87.658841,
+          41.983504
+        ]
       },
       "properties": {
         "id": 196,
@@ -1896,7 +6401,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.666971, 41.885304]
+        "coordinates": [
+          -87.666971,
+          41.885304
+        ]
       },
       "properties": {
         "id": 72,
@@ -1910,7 +6418,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.659062, 41.990259]
+        "coordinates": [
+          -87.659062,
+          41.990259
+        ]
       },
       "properties": {
         "id": 195,
@@ -1924,7 +6435,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.635672, 41.895965]
+        "coordinates": [
+          -87.635672,
+          41.895965
+        ]
       },
       "properties": {
         "id": 43,
@@ -1938,7 +6452,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.659202, 41.993664]
+        "coordinates": [
+          -87.659202,
+          41.993664
+        ]
       },
       "properties": {
         "id": 194,
@@ -1952,7 +6469,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.635672, 41.895965]
+        "coordinates": [
+          -87.635672,
+          41.895965
+        ]
       },
       "properties": {
         "id": 164,
@@ -1966,7 +6486,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.859388, 41.983507]
+        "coordinates": [
+          -87.859388,
+          41.983507
+        ]
       },
       "properties": {
         "id": 2,
@@ -1980,7 +6503,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.696234, 41.88422]
+        "coordinates": [
+          -87.696234,
+          41.88422
+        ]
       },
       "properties": {
         "id": 71,
@@ -1994,7 +6520,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.626593, 41.867477]
+        "coordinates": [
+          -87.626593,
+          41.867477
+        ]
       },
       "properties": {
         "id": 125,
@@ -2008,7 +6537,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.666951, 41.885311]
+        "coordinates": [
+          -87.666951,
+          41.885311
+        ]
       },
       "properties": {
         "id": 143,
@@ -2022,7 +6554,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.706155, 41.884317]
+        "coordinates": [
+          -87.706155,
+          41.884317
+        ]
       },
       "properties": {
         "id": 70,
@@ -2036,7 +6571,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.65213, 41.885579]
+        "coordinates": [
+          -87.65213,
+          41.885579
+        ]
       },
       "properties": {
         "id": 142,
@@ -2050,7 +6588,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.716523, 41.884901]
+        "coordinates": [
+          -87.716523,
+          41.884901
+        ]
       },
       "properties": {
         "id": 69,
@@ -2064,7 +6605,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.726855, 41.885491]
+        "coordinates": [
+          -87.726855,
+          41.885491
+        ]
       },
       "properties": {
         "id": 68,
@@ -2078,7 +6622,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.661054, 42.001078]
+        "coordinates": [
+          -87.661054,
+          42.001078
+        ]
       },
       "properties": {
         "id": 193,
@@ -2092,7 +6639,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.633973, 41.888968]
+        "coordinates": [
+          -87.633973,
+          41.888968
+        ]
       },
       "properties": {
         "id": 42,
@@ -2106,7 +6656,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.744698, 41.886519]
+        "coordinates": [
+          -87.744698,
+          41.886519
+        ]
       },
       "properties": {
         "id": 67,
@@ -2120,7 +6673,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.626099, 41.879506]
+        "coordinates": [
+          -87.626099,
+          41.879506
+        ]
       },
       "properties": {
         "id": 124,
@@ -2134,7 +6690,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.641782, 41.885711]
+        "coordinates": [
+          -87.641782,
+          41.885711
+        ]
       },
       "properties": {
         "id": 141,
@@ -2148,7 +6707,27 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.630886, 41.88573]
+        "coordinates": [
+          -86.310981093857,
+          41.70075016104912
+        ]
+      },
+      "properties": {
+        "id": 529,
+        "name": "South Bend International Airport",
+        "line": "NICTD_SSL",
+        "order": 19
+      },
+      "id": 529
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.630886,
+          41.88573
+        ]
       },
       "properties": {
         "id": 41,
@@ -2162,7 +6741,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.626171, 41.88237]
+        "coordinates": [
+          -87.626171,
+          41.88237
+        ]
       },
       "properties": {
         "id": 123,
@@ -2176,7 +6758,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.633985, 41.888968]
+        "coordinates": [
+          -87.633985,
+          41.888968
+        ]
       },
       "properties": {
         "id": 163,
@@ -2190,7 +6775,27 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.627835, 41.885736]
+        "coordinates": [
+          -86.53766799634032,
+          41.7094797647858
+        ]
+      },
+      "properties": {
+        "id": 528,
+        "name": "Hudson Lake",
+        "line": "NICTD_SSL",
+        "order": 18
+      },
+      "id": 528
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.627835,
+          41.885736
+        ]
       },
       "properties": {
         "id": 40,
@@ -2204,7 +6809,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.633865, 41.882694]
+        "coordinates": [
+          -87.633865,
+          41.882694
+        ]
       },
       "properties": {
         "id": 140,
@@ -2218,7 +6826,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.633868, 41.882694]
+        "coordinates": [
+          -87.633868,
+          41.882694
+        ]
       },
       "properties": {
         "id": 162,
@@ -2232,7 +6843,27 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.754987, 41.887155]
+        "coordinates": [
+          -86.86776118563161,
+          41.71331204245998
+        ]
+      },
+      "properties": {
+        "id": 527,
+        "name": "Carroll Avenue",
+        "line": "NICTD_SSL",
+        "order": 17
+      },
+      "id": 527
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.754987,
+          41.887155
+        ]
       },
       "properties": {
         "id": 66,
@@ -2246,12 +6877,31 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.633751, 41.878723]
+        "coordinates": [
+          -86.89747808169903,
+          41.711849655595536
+        ]
+      },
+      "properties": {
+        "id": 526,
+        "name": "Michigan City - 11th Street",
+        "line": "NICTD_SSL",
+        "order": 16
+      },
+      "id": 526
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.633751,
+          41.878723
+        ]
       },
       "properties": {
         "id": 139,
         "name": "Quincy/Wells",
-        "alternate_names": ["Quincy"],
         "line": "CTAMetroPinkLine",
         "order": 15
       },
@@ -2261,12 +6911,14 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.633751, 41.878723]
+        "coordinates": [
+          -87.633751,
+          41.878723
+        ]
       },
       "properties": {
         "id": 161,
         "name": "Quincy/Wells",
-        "alternate_names": ["Quincy"],
         "line": "CTAMetroPurpleLine",
         "order": 15
       },
@@ -2276,7 +6928,44 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.62618, 41.88237]
+        "coordinates": [
+          -86.98546877588838,
+          41.673158181949624
+        ]
+      },
+      "properties": {
+        "id": 525,
+        "name": "Beverly Shores",
+        "line": "NICTD_SSL",
+        "order": 15
+      },
+      "id": 525
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.06091190482577,
+          41.64494116551673
+        ]
+      },
+      "properties": {
+        "id": 524,
+        "name": "Dune Park",
+        "line": "NICTD_SSL",
+        "order": 14
+      },
+      "id": 524
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.62618,
+          41.88237
+        ]
       },
       "properties": {
         "id": 39,
@@ -2290,7 +6979,27 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.626103, 41.879506]
+        "coordinates": [
+          -87.18671433308832,
+          41.61744123760935
+        ]
+      },
+      "properties": {
+        "id": 523,
+        "name": "Portage/Ogden Dunes",
+        "line": "NICTD_SSL",
+        "order": 13
+      },
+      "id": 523
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.626103,
+          41.879506
+        ]
       },
       "properties": {
         "id": 38,
@@ -2304,7 +7013,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.627835, 41.885736]
+        "coordinates": [
+          -87.627835,
+          41.885736
+        ]
       },
       "properties": {
         "id": 122,
@@ -2318,7 +7030,27 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.630886, 41.88573]
+        "coordinates": [
+          -87.26839847971016,
+          41.59791534669417
+        ]
+      },
+      "properties": {
+        "id": 522,
+        "name": "Miller",
+        "line": "NICTD_SSL",
+        "order": 12
+      },
+      "id": 522
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.630886,
+          41.88573
+        ]
       },
       "properties": {
         "id": 121,
@@ -2332,7 +7064,27 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.628198, 41.876912]
+        "coordinates": [
+          -87.33717615116895,
+          41.60466560292818
+        ]
+      },
+      "properties": {
+        "id": 521,
+        "name": "Gary Metro Center",
+        "line": "NICTD_SSL",
+        "order": 11
+      },
+      "id": 521
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.628198,
+          41.876912
+        ]
       },
       "properties": {
         "id": 37,
@@ -2346,7 +7098,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.63174, 41.876862]
+        "coordinates": [
+          -87.63174,
+          41.876862
+        ]
       },
       "properties": {
         "id": 138,
@@ -2360,7 +7115,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.63174, 41.876862]
+        "coordinates": [
+          -87.63174,
+          41.876862
+        ]
       },
       "properties": {
         "id": 160,
@@ -2374,7 +7132,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.665909, 42.008362]
+        "coordinates": [
+          -87.665909,
+          42.008362
+        ]
       },
       "properties": {
         "id": 192,
@@ -2388,7 +7149,27 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.633865, 41.882694]
+        "coordinates": [
+          -87.3945133353459,
+          41.605535339826105
+        ]
+      },
+      "properties": {
+        "id": 520,
+        "name": "Gary/Chicago Airport - Clark Road",
+        "line": "NICTD_SSL",
+        "order": 10
+      },
+      "id": 520
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.633865,
+          41.882694
+        ]
       },
       "properties": {
         "id": 120,
@@ -2402,7 +7183,27 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.63174, 41.876862]
+        "coordinates": [
+          -87.47897551435258,
+          41.611616963425874
+        ]
+      },
+      "properties": {
+        "id": 519,
+        "name": "East Chicago",
+        "line": "NICTD_SSL",
+        "order": 9
+      },
+      "id": 519
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.63174,
+          41.876862
+        ]
       },
       "properties": {
         "id": 36,
@@ -2416,7 +7217,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.76565, 41.887383]
+        "coordinates": [
+          -87.76565,
+          41.887383
+        ]
       },
       "properties": {
         "id": 65,
@@ -2430,7 +7234,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.628198, 41.876912]
+        "coordinates": [
+          -87.628198,
+          41.876912
+        ]
       },
       "properties": {
         "id": 137,
@@ -2444,7 +7251,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.628198, 41.876912]
+        "coordinates": [
+          -87.628198,
+          41.876912
+        ]
       },
       "properties": {
         "id": 159,
@@ -2458,12 +7268,31 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.633751, 41.878723]
+        "coordinates": [
+          -87.51655196823756,
+          41.63106074045832
+        ]
+      },
+      "properties": {
+        "id": 518,
+        "name": "Hammond Gateway",
+        "line": "NICTD_SSL",
+        "order": 8
+      },
+      "id": 518
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.633751,
+          41.878723
+        ]
       },
       "properties": {
         "id": 119,
         "name": "Quincy/Wells",
-        "alternate_names": ["Quincy"],
         "line": "CTAMetroOrangeLine",
         "order": 7
       },
@@ -2473,7 +7302,27 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.774135, 41.887304]
+        "coordinates": [
+          -87.5462363299999,
+          41.6482721360001
+        ]
+      },
+      "properties": {
+        "id": 517,
+        "name": "Hegewisch",
+        "line": "NICTD_SSL",
+        "order": 7
+      },
+      "id": 517
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.774135,
+          41.887304
+        ]
       },
       "properties": {
         "id": 64,
@@ -2487,7 +7336,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.626103, 41.879506]
+        "coordinates": [
+          -87.626103,
+          41.879506
+        ]
       },
       "properties": {
         "id": 136,
@@ -2501,7 +7353,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.626103, 41.879506]
+        "coordinates": [
+          -87.626103,
+          41.879506
+        ]
       },
       "properties": {
         "id": 158,
@@ -2515,7 +7370,27 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.62618, 41.88237]
+        "coordinates": [
+          -87.59040404,
+          41.7798830340001
+        ]
+      },
+      "properties": {
+        "id": 516,
+        "name": "63rd Street",
+        "line": "NICTD_SSL",
+        "order": 6
+      },
+      "id": 516
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.62618,
+          41.88237
+        ]
       },
       "properties": {
         "id": 135,
@@ -2529,7 +7404,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.62618, 41.88237]
+        "coordinates": [
+          -87.62618,
+          41.88237
+        ]
       },
       "properties": {
         "id": 157,
@@ -2543,7 +7421,27 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.783661, 41.887172]
+        "coordinates": [
+          -87.58749792,
+          41.792842196
+        ]
+      },
+      "properties": {
+        "id": 515,
+        "name": "55th-56th-57th Street",
+        "line": "NICTD_SSL",
+        "order": 5
+      },
+      "id": 515
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.783661,
+          41.887172
+        ]
       },
       "properties": {
         "id": 63,
@@ -2557,12 +7455,31 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.633751, 41.878723]
+        "coordinates": [
+          -87.6180342,
+          41.8577310420001
+        ]
+      },
+      "properties": {
+        "id": 514,
+        "name": "18th Street",
+        "line": "NICTD_SSL",
+        "order": 4
+      },
+      "id": 514
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.633751,
+          41.878723
+        ]
       },
       "properties": {
         "id": 35,
         "name": "Quincy/Wells",
-        "alternate_names": ["Quincy"],
         "line": "CTAMetroBrownLine",
         "order": 3
       },
@@ -2572,7 +7489,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.793783, 41.886987]
+        "coordinates": [
+          -87.793783,
+          41.886987
+        ]
       },
       "properties": {
         "id": 62,
@@ -2586,7 +7506,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.669086, 42.01588]
+        "coordinates": [
+          -87.669086,
+          42.01588
+        ]
       },
       "properties": {
         "id": 191,
@@ -2600,7 +7523,44 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.63174, 41.876862]
+        "coordinates": [
+          -87.6161421799999,
+          41.850942344
+        ]
+      },
+      "properties": {
+        "id": 513,
+        "name": "McCormick Place",
+        "line": "NICTD_SSL",
+        "order": 3
+      },
+      "id": 513
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.51805783712922,
+          41.52405243314766
+        ]
+      },
+      "properties": {
+        "id": 533,
+        "name": "Munster/Dyer Main Street",
+        "line": "NICTD_MCL",
+        "order": 3
+      },
+      "id": 533
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.63174,
+          41.876862
+        ]
       },
       "properties": {
         "id": 118,
@@ -2614,7 +7574,44 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.627835, 41.885736]
+        "coordinates": [
+          -87.62141967,
+          41.868392374
+        ]
+      },
+      "properties": {
+        "id": 512,
+        "name": "Museum Campus / 11th St.",
+        "line": "NICTD_SSL",
+        "order": 2
+      },
+      "id": 512
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.51853689447364,
+          41.56280395100034
+        ]
+      },
+      "properties": {
+        "id": 532,
+        "name": "Munster Ridge Road",
+        "line": "NICTD_MCL",
+        "order": 2
+      },
+      "id": 532
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.627835,
+          41.885736
+        ]
       },
       "properties": {
         "id": 134,
@@ -2628,7 +7625,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-87.627835, 41.885736]
+        "coordinates": [
+          -87.627835,
+          41.885736
+        ]
       },
       "properties": {
         "id": 156,
@@ -2637,19 +7637,69 @@
         "order": 1
       },
       "id": 156
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.62281176,
+          41.87699838
+        ]
+      },
+      "properties": {
+        "id": 511,
+        "name": "Van Buren Street",
+        "line": "NICTD_SSL",
+        "order": 1
+      },
+      "id": 511
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.51851223519256,
+          41.58130747967339
+        ]
+      },
+      "properties": {
+        "id": 531,
+        "name": "South Hammond",
+        "line": "NICTD_MCL",
+        "order": 1
+      },
+      "id": 531
     }
   ],
   "properties": {
-    "totalStations": 186,
+    "totalStations": 466,
     "stationsPerLine": {
       "CTAMetroBlueLine": 31,
       "CTAMetroBrownLine": 27,
-      "CTAMetroGreenLine": 30,
+      "CTAMetroGreenLine": 31,
       "CTAMetroOrangeLine": 16,
       "CTAMetroPinkLine": 22,
       "CTAMetroPurpleLine": 26,
-      "CTAMetroRedLine": 31,
-      "CTAMetroYellowLine": 3
+      "CTAMetroRedLine": 35,
+      "CTAMetroYellowLine": 3,
+      "Metra_UPN": 27,
+      "Metra_BNSF": 26,
+      "Metra_ME": 32,
+      "Metra_ME_SC": 9,
+      "Metra_RI_Bev": 13,
+      "Metra_MDW": 22,
+      "Metra_ME_BI": 10,
+      "Metra_NCS": 16,
+      "Metra_UPNW": 22,
+      "Metra_UPW": 19,
+      "Metra_RI": 15,
+      "Metra_SWS": 12,
+      "Metra_MDN": 21,
+      "Metra_HC": 7,
+      "NICTD_SSL": 20,
+      "NICTD_MCL": 4
     }
   }
 }

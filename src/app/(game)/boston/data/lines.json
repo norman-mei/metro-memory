@@ -47,5 +47,103 @@
     "backgroundColor": "#8B0C0E",
     "textColor": "#FFFFFF",
     "order": 6
+  },
+  "MBTATMetroRedMLine": {
+    "name": "Mattapan",
+    "color": "#EF3E42",
+    "backgroundColor": "#8B0C0E",
+    "textColor": "#FFFFFF",
+    "order": 7
+  },
+  "Fa": {
+    "name": "Fairmount Line",
+    "color": "#7B388C",
+    "backgroundColor": "#7B388C",
+    "textColor": "#FFFFFF",
+    "order": 8
+  },
+  "Fb": {
+    "name": "Fitchburg Line",
+    "color": "#7B388C",
+    "backgroundColor": "#7B388C",
+    "textColor": "#FFFFFF",
+    "order": 9
+  },
+  "Fr": {
+    "name": "Franklin/Foxboro Line",
+    "color": "#7B388C",
+    "backgroundColor": "#7B388C",
+    "textColor": "#FFFFFF",
+    "order": 10
+  },
+  "H": {
+    "name": "Haverhill Line",
+    "color": "#7B388C",
+    "backgroundColor": "#7B388C",
+    "textColor": "#FFFFFF",
+    "order": 11
+  },
+  "L": {
+    "name": "Lowell Line",
+    "color": "#7B388C",
+    "backgroundColor": "#7B388C",
+    "textColor": "#FFFFFF",
+    "order": 12
+  },
+  "Ne": {
+    "name": "Needham Line",
+    "color": "#7B388C",
+    "backgroundColor": "#7B388C",
+    "textColor": "#FFFFFF",
+    "order": 13
+  },
+  "Nr": {
+    "name": "Newburyport/Rockport Lines",
+    "color": "#7B388C",
+    "backgroundColor": "#7B388C",
+    "textColor": "#FFFFFF",
+    "order": 14
+  },
+  "P": {
+    "name": "Providence/Stoughton Line",
+    "color": "#7B388C",
+    "backgroundColor": "#7B388C",
+    "textColor": "#FFFFFF",
+    "order": 18
+  },
+  "W": {
+    "name": "Framingham/Worcester Line",
+    "color": "#7B388C",
+    "backgroundColor": "#7B388C",
+    "textColor": "#FFFFFF",
+    "order": 19
+  },
+  "CapeFlyer": {
+    "name": "CapeFLYER",
+    "color": "#82BB23",
+    "backgroundColor": "#0074AD",
+    "textColor": "#FFFFFF",
+    "order": 20
+  },
+  "GB": {
+    "name": "Greenbush Line",
+    "color": "#7B388C",
+    "backgroundColor": "#7B388C",
+    "textColor": "#FFFFFF",
+    "order": 15
+  },
+  "KT": {
+    "name": "Kingston Line",
+    "color": "#7B388C",
+    "backgroundColor": "#7B388C",
+    "textColor": "#FFFFFF",
+    "order": 16
+  },
+  "FB": {
+    "name": "Fall River/New Bedford Line",
+    "color": "#7B388C",
+    "backgroundColor": "#7B388C",
+    "textColor": "#FFFFFF",
+    "order": 17
   }
 }

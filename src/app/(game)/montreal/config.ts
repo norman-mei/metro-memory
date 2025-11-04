@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 import { MapboxOptions } from 'mapbox-gl'
-import { Config, Line } from '@/lib/types'
+import { Config, Line, LineGroup } from '@/lib/types'
 
 export const BEG_THRESHOLD = 0.5
 
@@ -70,18 +70,24 @@ export const LINES: {
     textColor: '#FFFFFF',
     order: 8,
   },
+  MontrealREM: {
+    name: 'REM',
+    color: '#80C23B',
+    backgroundColor: '#3A7A24',
+    textColor: '#FFFFFF',
+    order: 9,
+  },
 }
 
 export const METADATA: Metadata = {
-  title: 'Montreal Metro Memory',
-  description:
-    'Combien des stations du métro de Montréal pouvez-vous citer de tête ?',
+  title: 'Montreal Metro Memory Game',
+  description: 'How many of the Montreal metro stations can you name from memory?',
   openGraph: {
-    title: 'Montreal Metro Memory',
+    title: 'Montreal Metro Memory Game',
     description:
-      'Combien des stations du métro de Montréal pouvez-vous citer de tête ?',
+      'How many of the Montreal metro stations can you name from memory?',
     type: 'website',
-    locale: 'fr_CA',
+    locale: 'en_CA',
     url: 'https://metro-memory.com/montreal',
   },
 }
@@ -105,9 +111,39 @@ export const STRIPE_LINK = 'https://buy.stripe.com/fZe14B4DY8Ua9bi6oC'
 
 export const CITY_NAME = 'montreal'
 
-export const LOCALE = 'fr'
+export const LOCALE = 'en'
 
 export const GAUGE_COLORS = 'inverted'
+
+export const LINE_GROUPS: LineGroup[] = [
+  {
+    title: 'Montreal Metro',
+    items: [
+      {
+        type: 'lines',
+        lines: ['STMMetroVerte', 'STMMetroOrange', 'STMMetroJaune', 'STMMetroBleue'],
+      },
+    ],
+  },
+  {
+    title: 'Exo Commuter Rail',
+    items: [
+      {
+        type: 'lines',
+        lines: ['AMTRailExo1', 'AMTRailExo2', 'AMTRailExo3', 'AMTRailExo4', 'AMTRailExo5'],
+      },
+    ],
+  },
+  {
+    title: 'Réseau express métropolitain (REM)',
+    items: [
+      {
+        type: 'lines',
+        lines: ['MontrealREM'],
+      },
+    ],
+  },
+]
 
 const config: Config = {
   GAUGE_COLORS,
@@ -117,6 +153,7 @@ const config: Config = {
   MAP_CONFIG,
   METADATA,
   LINES,
+  LINE_GROUPS,
   BEG_THRESHOLD,
 }
 

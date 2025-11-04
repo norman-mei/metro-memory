@@ -112,7 +112,6 @@ export const LINE_GROUPS: LineGroup[] = [
         lines: [
           'LIRRBabylon',
           'LIRRBelmont',
-          'LIRRCityTerminalZone',
           'LIRRAtlantic',
           'LIRRFarRockaway',
           'LIRRHempstead',

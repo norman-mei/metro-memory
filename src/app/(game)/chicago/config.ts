@@ -1,69 +1,71 @@
 import { Metadata } from 'next'
 import { MapboxOptions } from 'mapbox-gl'
-import { Config, Line } from '@/lib/types'
+import { Config, Line, LineGroup } from '@/lib/types'
+import linesData from './data/lines.json'
 
 export const BEG_THRESHOLD = 0.5
 
-export const LINES: {
-  [name: string]: Line
-} = {
-  CTAMetroBlueLine: {
-    name: 'Blue Line',
-    color: '#009EDE',
-    backgroundColor: '#004F6F',
-    textColor: '#FFFFFF',
-    order: 0,
+export const LINES = linesData as { [name: string]: Line }
+
+export const LINE_GROUPS: LineGroup[] = [
+  {
+    title: 'Chicago Transit Authority (CTA)',
+    items: [
+      {
+        type: 'lines',
+        lines: [
+          'CTAMetroBlueLine',
+          'CTAMetroBrownLine',
+          'CTAMetroGreenLine',
+          'CTAMetroOrangeLine',
+          'CTAMetroPinkLine',
+          'CTAMetroPurpleLine',
+          'CTAMetroRedLine',
+          'CTAMetroYellowLine',
+        ],
+      },
+    ],
   },
-  CTAMetroBrownLine: {
-    name: 'Brown Line',
-    color: '#633619',
-    backgroundColor: '#311B0D',
-    textColor: '#FFFFFF',
-    order: 1,
+  {
+    items: [{ type: 'separator' }],
   },
-  CTAMetroGreenLine: {
-    name: 'Green Line',
-    color: '#00A747',
-    backgroundColor: '#005324',
-    textColor: '#FFFFFF',
-    order: 2,
+  {
+    title: 'Metra',
+    items: [
+      {
+        type: 'lines',
+        lines: [
+          'Metra_BNSF',
+          'Metra_HC',
+          'Metra_ME',
+          'Metra_ME_BI',
+          'Metra_ME_SC',
+          'Metra_MDN',
+          'Metra_MDW',
+          'Metra_NCS',
+          'Metra_RI',
+          'Metra_RI_Bev',
+          'Metra_SWS',
+          'Metra_UPN',
+          'Metra_UPNW',
+          'Metra_UPW',
+        ],
+      },
+    ],
   },
-  CTAMetroOrangeLine: {
-    name: 'Orange Line',
-    color: '#F57832',
-    backgroundColor: '#8D3707',
-    textColor: '#FFFFFF',
-    order: 3,
+  {
+    items: [{ type: 'separator' }],
   },
-  CTAMetroPinkLine: {
-    name: 'Pink Line',
-    color: '#E480A7',
-    backgroundColor: '#931F4C',
-    textColor: '#FFFFFF',
-    order: 4,
+  {
+    title: 'Northern Indiana Commuter Transportation District (NICTD)',
+    items: [
+      {
+        type: 'lines',
+        lines: ['NICTD_SSL', 'NICTD_MCL'],
+      },
+    ],
   },
-  CTAMetroPurpleLine: {
-    name: 'Purple Line',
-    color: '#522398',
-    backgroundColor: '#29124C',
-    textColor: '#FFFFFF',
-    order: 5,
-  },
-  CTAMetroRedLine: {
-    name: 'Red Line',
-    color: '#E72137',
-    backgroundColor: '#770D19',
-    textColor: '#FFFFFF',
-    order: 6,
-  },
-  CTAMetroYellowLine: {
-    name: 'Yellow Line',
-    color: '#EABE01',
-    backgroundColor: '#755F00',
-    textColor: '#FFFFFF',
-    order: 7,
-  },
-}
+]
 
 export const METADATA: Metadata = {
   title: 'Chicago Metro Memory',
@@ -107,6 +109,7 @@ const config: Config = {
   MAP_CONFIG,
   METADATA,
   LINES,
+  LINE_GROUPS,
   BEG_THRESHOLD,
 }
 
