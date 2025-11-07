@@ -1,0 +1,9 @@
+{
+  "LVM": {
+    "name": "Las Vegas Monorail",
+    "color": "#0B3B8D",
+    "backgroundColor": "#0B3B8D",
+    "textColor": "#FFFFFF",
+    "order": 0
+  }
+}

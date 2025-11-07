@@ -50,35 +50,35 @@ export const LINES: {
     order: 1000,
   },
   VREManassasLine: {
-    name: 'Manassas Line',
+    name: 'Manassas',
     color: '#3C6FC6',
     backgroundColor: '#1A458B',
     textColor: '#FFFFFF',
     order: 2000,
   },
   VREFredericksburgLine: {
-    name: 'Fredericksburg Line',
+    name: 'Fredericksburg',
     color: '#FF7075',
     backgroundColor: '#EB1B23',
     textColor: '#FFFFFF',
     order: 2001,
   },
   MARCBrunswickLine: {
-    name: 'Brunswick Line',
+    name: 'Brunswick',
     color: '#FFBE52',
     backgroundColor: '#FEA92E',
     textColor: '#000000',
     order: 3000,
   },
   MARCCamdenLine: {
-    name: 'Camden Line',
+    name: 'Camden',
     color: '#FF865F',
     backgroundColor: '#FF5624',
     textColor: '#FFFFFF',
     order: 3001,
   },
   MARCPennLine: {
-    name: 'Penn Line',
+    name: 'Penn',
     color: '#F05B68',
     backgroundColor: '#DA2A38',
     textColor: '#FFFFFF',
@@ -99,11 +99,18 @@ export const LINES: {
     order: 4001,
   },
   MTAPurpleLine: {
-    name: 'Purple Line',
+    name: 'Purple',
     color: '#9062D4',
     backgroundColor: '#612C95',
     textColor: '#FFFFFF',
     order: 4002,
+  },
+  MWAAAeroTrain: {
+    name: 'AeroTrain (AT)',
+    color: '#2C6DBD',
+    backgroundColor: '#00468E',
+    textColor: '#FFFFFF',
+    order: 5000,
   },
 }
 
@@ -156,6 +163,15 @@ export const LINE_GROUPS: LineGroup[] = [
           'WMATAMetroSilver',
           'WMATAMetroYellow',
         ],
+      },
+    ],
+  },
+  {
+    title: 'Metropolitan Washington Airports Authority (MWAA)',
+    items: [
+      {
+        type: 'lines',
+        lines: ['MWAAAeroTrain'],
       },
     ],
   },

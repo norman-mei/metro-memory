@@ -1,0 +1,9 @@
+{
+  "SKY": {
+    "name": "Skyline",
+    "color": "#00AD83",
+    "backgroundColor": "#00AD83",
+    "textColor": "#FFFFFF",
+    "order": 0
+  }
+}

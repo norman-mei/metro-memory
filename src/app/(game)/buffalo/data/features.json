@@ -1,0 +1,317 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-78.87298968907938, 42.87298106139886]
+      },
+      "properties": {
+        "name": "DL&W",
+        "line": "MR",
+        "id": 0
+      },
+      "id": 0
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-78.87678725627129, 42.87803266335692]
+      },
+      "properties": {
+        "name": "Canalside",
+        "line": "MR",
+        "id": 1
+      },
+      "id": 1
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-78.87565278616641, 42.88152652297746]
+      },
+      "properties": {
+        "name": "Seneca",
+        "line": "MR",
+        "id": 2
+      },
+      "id": 2
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-78.87483500400714, 42.884079344654296]
+      },
+      "properties": {
+        "name": "Church St",
+        "line": "MR",
+        "id": 3
+      },
+      "id": 3
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-78.87423629492743, 42.88639655771249]
+      },
+      "properties": {
+        "name": "Lafayette Square",
+        "line": "MR",
+        "id": 4
+      },
+      "id": 4
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-78.87328856439096, 42.88933945712345]
+      },
+      "properties": {
+        "name": "Fountain Plaza",
+        "line": "MR",
+        "id": 5
+      },
+      "id": 5
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-78.8698281087111, 42.89971580929841]
+      },
+      "properties": {
+        "name": "Allen/Medical Campus",
+        "line": "MR",
+        "id": 6
+      },
+      "id": 6
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-78.86810083663708, 42.90488152586831]
+      },
+      "properties": {
+        "name": "Summer-Best",
+        "line": "MR",
+        "id": 7
+      },
+      "id": 7
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-78.8658217746465, 42.91162976038644]
+      },
+      "properties": {
+        "name": "Utica",
+        "line": "MR",
+        "id": 8
+      },
+      "id": 8
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-78.85701091627554, 42.92250270570739]
+      },
+      "properties": {
+        "name": "Delavan/Canisius College",
+        "line": "MR",
+        "id": 9
+      },
+      "id": 9
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-78.85166553600939, 42.9275551668922]
+      },
+      "properties": {
+        "name": "Humboldt-Hospital",
+        "line": "MR",
+        "id": 10
+      },
+      "id": 10
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-78.83854039644078, 42.93978462195822]
+      },
+      "properties": {
+        "name": "Amherst Street",
+        "line": "MR",
+        "id": 11
+      },
+      "id": 11
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-78.83010489207038, 42.94745895910201]
+      },
+      "properties": {
+        "name": "LaSalle",
+        "line": "MR",
+        "id": 12
+      },
+      "id": 12
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-78.82013777192067, 42.95452562555255]
+      },
+      "properties": {
+        "name": "University",
+        "line": "MR",
+        "id": 13
+      },
+      "id": 13
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-78.82343820540183, 42.969133920611895]
+      },
+      "properties": {
+        "name": "Decatur",
+        "line": "MR",
+        "id": 14
+      },
+      "id": 14
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-78.82300115837126, 42.97972153326156]
+      },
+      "properties": {
+        "name": "Eggert",
+        "line": "MR",
+        "id": 15
+      },
+      "id": 15
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-78.8227138954628, 42.98676178312541]
+      },
+      "properties": {
+        "name": "Boulevard Mall",
+        "line": "MR",
+        "id": 16
+      },
+      "id": 16
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-78.81131930588212, 42.990851580253974]
+      },
+      "properties": {
+        "name": "Maple",
+        "line": "MR",
+        "id": 17
+      },
+      "id": 17
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-78.79898589200724, 42.99798148937918]
+      },
+      "properties": {
+        "name": "Sweet Home",
+        "line": "MR",
+        "id": 18
+      },
+      "id": 18
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-78.78922923017139, 42.99968193700217]
+      },
+      "properties": {
+        "name": "Flint",
+        "line": "MR",
+        "id": 19
+      },
+      "id": 19
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-78.7858858001059, 43.00310927889617]
+      },
+      "properties": {
+        "name": "Lee",
+        "line": "MR",
+        "id": 20
+      },
+      "id": 20
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-78.78457114522361, 43.005858788612514]
+      },
+      "properties": {
+        "name": "Ellicott Complex",
+        "line": "MR",
+        "id": 21
+      },
+      "id": 21
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-78.78038550845218, 43.01396597660576]
+      },
+      "properties": {
+        "name": "Audubon Town Center",
+        "line": "MR",
+        "id": 22
+      },
+      "id": 22
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-78.78270452238196, 43.02648820444567]
+      },
+      "properties": {
+        "name": "I-990",
+        "line": "MR",
+        "id": 23
+      },
+      "id": 23
+    }
+  ]
+}

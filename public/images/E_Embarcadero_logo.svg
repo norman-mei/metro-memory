@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="155" height="155">
+ <title>E Embarcadero</title>
+ <circle fill="#666666" stroke="#000" stroke-width="5" cx="77.5" cy="77.5" r="75"/>
+ <path fill="#FFF" d="M 45.175646,120 V 35.000002 H 108.20088 V 49.379265 H 62.337992 V 68.223057 H 105.01193 V 82.544339 H 62.337992 V 105.67872 H 109.82435 V 120 Z"/>
+</svg>

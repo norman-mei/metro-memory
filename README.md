@@ -81,9 +81,12 @@ KV_REST_API_TOKEN=<vercel-kv-token>
 KV_REST_API_READ_ONLY_TOKEN=<vercel-kv-readonly-token>
 UPSTASH_REDIS_REST_URL=https://<upstash-endpoint>
 UPSTASH_REDIS_REST_TOKEN=<upstash-token>
+
+# optional gameplay controls
+SOLUTIONS_PASSWORD=change-me
 ```
 
-Never commit secret tokens to version control. On Vercel or another hosting provider, configure the same variables in the project settings.
+`SOLUTIONS_PASSWORD` lives exclusively on the server and powers the in-game "reveal all stations" password check. Never commit secret tokens to version control. On Vercel or another hosting provider, configure the same variables in the project settings.
 
 ### Run the app
 ```bash

@@ -1,0 +1,71 @@
+import { Metadata } from 'next'
+import { MapboxOptions } from 'mapbox-gl'
+import { Config, Line, LineGroup } from '@/lib/types'
+import linesData from './data/lines.json'
+
+export const BEG_THRESHOLD = 0.5
+
+export const LINES = linesData as { [name: string]: Line }
+
+export const LINE_GROUPS: LineGroup[] = [
+  {
+    title: 'Honolulu Department of Transportation Services (HDTS)',
+    items: [
+      {
+        type: 'lines',
+        lines: ['SKY'],
+      },
+    ],
+  },
+]
+
+export const METADATA: Metadata = {
+  title: 'Honolulu Metro Memory',
+  description:
+    'How many of the Honolulu Skyline stations can you name from memory?',
+  openGraph: {
+    title: 'Honolulu Metro Memory',
+    description:
+      'How many of the Honolulu Skyline stations can you name from memory?',
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://metro-memory.com/honolulu',
+  },
+}
+
+export const MAP_CONFIG: MapboxOptions = {
+  container: 'map',
+  style: 'mapbox://styles/benjamintd/cls31ijdo010o01plcpzag11d',
+  bounds: [
+    [-158.07, 21.28],
+    [-157.83, 21.41],
+  ],
+  maxBounds: [
+    [-158.2, 21.25],
+    [-157.7, 21.45],
+  ],
+  minZoom: 11,
+  fadeDuration: 50,
+}
+
+export const STRIPE_LINK = 'https://buy.stripe.com/28o14B9Yic6m73adQT'
+
+export const CITY_NAME = 'honolulu'
+
+export const LOCALE = 'en'
+
+export const MAP_FROM_DATA = true
+
+const config: Config = {
+  MAP_FROM_DATA,
+  LOCALE,
+  STRIPE_LINK,
+  CITY_NAME,
+  MAP_CONFIG,
+  METADATA,
+  LINES,
+  LINE_GROUPS,
+  BEG_THRESHOLD,
+}
+
+export default config

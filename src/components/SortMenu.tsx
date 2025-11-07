@@ -22,7 +22,7 @@ export default function SortMenu({
         <div className="relative">
           <Listbox.Button
             className={classNames(
-              'relative flex w-full cursor-default items-center justify-between rounded-lg border border-zinc-200 bg-white py-2 pl-3 pr-10 text-left shadow focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-100 dark:focus-visible:ring-indigo-400 dark:focus-visible:ring-offset-zinc-900',
+              'relative flex w-full cursor-default items-center justify-between rounded-lg border border-zinc-200 bg-white py-2 pl-3 pr-10 text-left shadow focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:border-[#18181b] dark:bg-zinc-800 dark:text-zinc-100 dark:focus-visible:ring-indigo-400 dark:focus-visible:ring-offset-zinc-900',
               disabled &&
                 'cursor-not-allowed opacity-50 focus-visible:ring-0 focus-visible:ring-offset-0',
             )}
@@ -42,7 +42,7 @@ export default function SortMenu({
               leaveFrom="opacity-100"
               leaveTo="opacity-0"
             >
-              <Listbox.Options className="absolute right-0 z-30 mt-1 max-h-60 w-72 overflow-auto rounded-md border border-zinc-200 bg-white py-1 text-base shadow-lg focus:outline-none dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-100 sm:text-sm">
+              <Listbox.Options className="absolute right-0 z-30 mt-1 max-h-60 w-72 overflow-auto rounded-md border border-zinc-200 bg-white py-1 text-base shadow-lg focus:outline-none dark:border-[#18181b] dark:bg-zinc-800 dark:text-zinc-100 sm:text-sm">
                 {sortOptions.map((option) => (
                   <Option key={option.id} option={option} />
                 ))}

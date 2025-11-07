@@ -1,0 +1,30 @@
+{
+  "Red_Line": {
+    "name": "Red Line",
+    "color": "#ED1C24",
+    "backgroundColor": "#6B0D10",
+    "textColor": "#FFFFFF",
+    "order": 0
+  },
+  "Blue_Line": {
+    "name": "Blue Line",
+    "color": "#009AD9",
+    "backgroundColor": "#004562",
+    "textColor": "#FFFFFF",
+    "order": 1
+  },
+  "Green_Line": {
+    "name": "Green Line",
+    "color": "#50B848",
+    "backgroundColor": "#245320",
+    "textColor": "#FFFFFF",
+    "order": 2
+  },
+  "Waterfront_Line": {
+    "name": "Waterfront Line",
+    "color": "#27AA90",
+    "backgroundColor": "#124C41",
+    "textColor": "#FFFFFF",
+    "order": 3
+  }
+}

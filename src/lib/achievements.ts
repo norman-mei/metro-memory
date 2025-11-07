@@ -1,0 +1,403 @@
+export interface AchievementDefinition {
+  title: string
+  description: string
+}
+
+export const ACHIEVEMENTS: Record<string, AchievementDefinition> = {
+  adelaide: {
+    title: "Festival State Master",
+    description: "You've tram'd through Adelaide like a true crow eater!",
+  },
+  albuquerque: {
+    title: "Yeah, Science!",
+    description: "You've mastered the Duke City's transit system. Jesse Pinkman would be proud.",
+  },
+  amtrak: {
+    title: "All Aboard America",
+    description: "You've tracked every Amtrak route across the nation. Coast to coast champion!",
+  },
+  atlanta: {
+    title: "Riding the Peach",
+    description: "You know every Peachtree station in the ATL. Welcome to the A!",
+  },
+  austin: {
+    title: "Keep Austin Transit",
+    description: "You've kept it weird and mapped every line in the Live Music Capital.",
+  },
+  barcelona: {
+    title: "Gaudi's Gift",
+    description: "Your mind is as intricate as La Sagrada Familia's metro connections!",
+  },
+  bayarea: {
+    title: "Golden Gate Genius",
+    description: "From the Bay to Sac, you've BART-ed your way to brilliance!",
+  },
+  beijing: {
+    title: "Forbidden City? Familiar City!",
+    description: "你好！You've mastered Beijing's vast metro empire!",
+  },
+  berlin: {
+    title: "No More Walls",
+    description: "You've unified your knowledge of Berlin's U-Bahn and S-Bahn!",
+  },
+  blackpool: {
+    title: "Pleasure Beach Pro",
+    description: "You've tram'd along the seaside like a true Blackpool illumination!",
+  },
+  boston: {
+    title: "Wicked Smaht",
+    description: "You've pahked every T station in your brain. That's wicked awesome!",
+  },
+  budapest: {
+    title: "Danube Dynasty",
+    description: "You've metro'd through both Buda and Pest! Szep!",
+  },
+  buffalo: {
+    title: "Wing Commander",
+    description: "You've conquered Buffalo transit like a true Bills Mafia member.",
+  },
+  calgary: {
+    title: "Stampede Master",
+    description: "You've wrangled every C-Train route in Cowtown!",
+  },
+  canberra: {
+    title: "Capital Territory Genius",
+    description: "You've light-railed through the bush capital, mate!",
+  },
+  charlotte: {
+    title: "Queen City Navigator",
+    description: "You've raced through Charlotte's system faster than a NASCAR pit stop.",
+  },
+  chicago: {
+    title: "L-evated Mind",
+    description: "You know the L like the back of your hand. The Bear would approve.",
+  },
+  cincinnati: {
+    title: "Chili & Chill",
+    description: "You know the streetcar system better than a three-way. Queen City crowned!",
+  },
+  cleveland: {
+    title: "Rock Hall of Transit",
+    description: "You've rolled through The Land like a true Clevelander!",
+  },
+  dallas: {
+    title: "Everything's Bigger",
+    description: "You've conquered the DFW metroplex. Who shot J.R.? You did!",
+  },
+  dc: {
+    title: "The Wire Master",
+    description: "You know every Metro stop better than Omar knows Baltimore streets!",
+  },
+  denver: {
+    title: "Mile High Mastery",
+    description: "You've reached peak transit knowledge at 5,280 feet!",
+  },
+  detroit: {
+    title: "Motor City Mind",
+    description: "You've cruised through Motown's People Mover like it's nothing.",
+  },
+  dongguan: {
+    title: "Manufacturing Marvel",
+    description: "厉害！You've metro'd through Dongguan's industrial heartland!",
+  },
+  dresden: {
+    title: "Baroque and Roll",
+    description: "You've tram'd through Dresden like a phoenix rising!",
+  },
+  edinburgh: {
+    title: "Festival Fringe Master",
+    description: "You've tram'd up and down the Royal Mile with Scottish pride!",
+  },
+  edmonton: {
+    title: "Festival City Scholar",
+    description: "You've LRT'd through Oil Country like a true Edmontonian!",
+  },
+  elpaso: {
+    title: "Border Boss",
+    description: "You've conquered El Paso's transit from the Sun City to the border!",
+  },
+  galveston: {
+    title: "Island Time Keeper",
+    description: "You've trolleyed through Galveston like a true island hopper!",
+  },
+  glasgow: {
+    title: "Clockwork Orange Expert",
+    description: "You've subway'd through Glasgow like Billy Connolly!",
+  },
+  goldcoast: {
+    title: "Surfer's Paradise Navigator",
+    description: "You've G-linked the Coast like a true surfie!",
+  },
+  guangzhou: {
+    title: "Canton Champion",
+    description: "好犀利！You've conquered one of China's largest metro systems!",
+  },
+  hamburg: {
+    title: "Harbor Master",
+    description: "You've U-Bahn'd through Germany's gateway to the world!",
+  },
+  hk: {
+    title: "Asia's World City",
+    description: "You know the fragrant harbor's rails better than Jackie Chan knows stunts!",
+  },
+  honolulu: {
+    title: "Haʻaheo No ʻO Honolulu",
+    description: "Mahalo! You've mastered paradise's transit system!",
+  },
+  houston: {
+    title: "No Problem Here",
+    description: "Houston, we have no problem. You've mastered Space City's metro!",
+  },
+  istanbul: {
+    title: "East Meets West",
+    description: "You've bridged two continents in your transit mind. Muthis!",
+  },
+  jacksonville: {
+    title: "The Good Transit",
+    description: "You found all the stations. You're in The Good Place now.",
+  },
+  karlsruhe: {
+    title: "Tram-Train Brain",
+    description: "You've pioneered the Karlsruhe model in your memory!",
+  },
+  kc: {
+    title: "BBQ & Tracks",
+    description: "You've smoked the KC Streetcar system. Nice!",
+  },
+  kenosha: {
+    title: "K-Town",
+    description: "You've conquered Kenosha's historic streetcars with style!",
+  },
+  la: {
+    title: "La La Land Lord",
+    description: "You're a star! You've mapped Hollywood's metro like a true Angeleno.",
+  },
+  london: {
+    title: "Mind the Gap",
+    description: "You've conquered the Tube, mate. Properly brilliant!",
+  },
+  lr: {
+    title: "Natural State Navigator",
+    description: "You've rolled through Little Rock's streetcar like a governor!",
+  },
+  lv: {
+    title: "House Always Knows",
+    description: "You bet on every station and won big in Sin City!",
+  },
+  macau: {
+    title: "Lucky Lines",
+    description: "You've LRT'd through the Vegas of Asia. 好彩！",
+  },
+  madrid: {
+    title: "Madrileno Completo",
+    description: "Ole! You've danced through Madrid Metro like flamenco!",
+  },
+  manchester: {
+    title: "Madchester Mind",
+    description: "You've Metrolink'd through Manc like Oasis on tour!",
+  },
+  melbourne: {
+    title: "Tram-tastic!",
+    description: "You've conquered Melbourne's trams like a true Melburnian!",
+  },
+  memphis: {
+    title: "Graceland Transit",
+    description: "Thank you, thank you very much. You're the King of Memphis metro!",
+  },
+  "mexico-city": {
+    title: "El Maestro del Metro",
+    description: "You've conquered one of the world's largest systems. Increible!",
+  },
+  miami: {
+    title: "Sunshine State of Mind",
+    description: "You've navigated Florida's transit triangle like Crockett and Tubbs!",
+  },
+  milwaukee: {
+    title: "Brew City Brain",
+    description: "Laverne and Shirley would toast to your Milwaukee transit mastery!",
+  },
+  montreal: {
+    title: "Je Me Souviens",
+    description: "Tabernacle! You know Montreal's metro comme un vrai Montrealais!",
+  },
+  morgantown: {
+    title: "Mountaineer Mind",
+    description: "You've PRT'd through the mountains like a true West Virginian!",
+  },
+  muenchen: {
+    title: "Oktoberfest Navigator",
+    description: "Prost! You've U-Bahn'd and S-Bahn'd through Bavaria's capital!",
+  },
+  nashville: {
+    title: "Music City Maestro",
+    description: "You've hit all the right notes on Nashville's transit lines!",
+  },
+  newcastle: {
+    title: "Novocastrian Knowledge",
+    description: "You've light-railed through Newy like a champion!",
+  },
+  neworleans: {
+    title: "A Streetcar Named Desire",
+    description: "You've second-lined through NOLA's streetcars like it's Mardi Gras!",
+  },
+  norfolk: {
+    title: "Mermaid City",
+    description: "You've navigated Norfolk like a fleet admiral!",
+  },
+  nottingham: {
+    title: "The Queen of the Midlands",
+    description: "You've tram'd through Sherwood like the hero of transit!",
+  },
+  nr: {
+    title: "Nothing Beats Being There!",
+    description: "You've conquered Britain's entire rail network. Mind the gap indeed!",
+  },
+  ny: {
+    title: "Stand Clear of the Closing Doors, Please.",
+    description: "You're a true New Yorker. Jay-Z and Alicia Keys are jealous!",
+  },
+  oceanside: {
+    title: "Carnation City",
+    description: "You feel the need for speed on the COASTER. Highway to the transit zone!",
+  },
+  okc: {
+    title: "The Big Friendly",
+    description: "Boomer! You've streetcar'd through OKC!",
+  },
+  omaha: {
+    title: "The Big O",
+    description: "You've conquered Omaha's streetcar faster than a Warren Buffett investment!",
+  },
+  ottawa: {
+    title: "The City that Fun Forgot",
+    description: "Parliament perfect! You've O-Train'd through the nation's capital!",
+  },
+  paris: {
+    title: "La Ville-Lumière",
+    description: "C'est parfait! You navigate Paris like Amelie!",
+  },
+  perth: {
+    title: "Wild West Master",
+    description: "You've train-lined across Perth like a true sandgroper!",
+  },
+  philly: {
+    title: "The City of Brotherly Love",
+    description: "Yo! You know SEPTA like Rocky knows those museum steps!",
+  },
+  phoenix: {
+    title: "Valley of the Sun God",
+    description: "You've risen above the heat and memorized the Valley Metro!",
+  },
+  pittsburgh: {
+    title: "Steel City",
+    description: "Your knowledge of Pittsburgh transit is stronger than steel!",
+  },
+  portland: {
+    title: "The Dream of Transit is Alive",
+    description: "You put a bird on it. Portland's MAX is yours!",
+  },
+  potsdam: {
+    title: "Palace of Transit",
+    description: "You've royal-tram'd through Potsdam like Frederick the Great!",
+  },
+  sd: {
+    title: "Stay Classy",
+    description: "You're kind of a big deal. You know every trolley in San Diego!",
+  },
+  seattle: {
+    title: "Emerald City Wizard",
+    description: "Tossed salad and scrambled eggs, you've mastered Seattle transit!",
+  },
+  seoul: {
+    title: "Hallyu Hero",
+    description: "You've K-popped every station into your brain! 대박!",
+  },
+  shanghai: {
+    title: "Pearl of the Orient",
+    description: "太棒了！You've mastered one of the world's longest metro systems!",
+  },
+  sheffield: {
+    title: "Steel City Scholar",
+    description: "You've Supertram'd through Sheffield with full force!",
+  },
+  shenzhen: {
+    title: "Silicon Valley of China",
+    description: "真厉害！You've speed-metro'd through China's tech capital!",
+  },
+  singapore: {
+    title: "The Lion City",
+    description: "Your MRT knowledge is as efficient and spotless as Singapore itself!",
+  },
+  sj: {
+    title: "La Llave de las Indias",
+    description: "Wepa! You've mastered San Juan's metro like a true boricua!",
+  },
+  slc: {
+    title: "Crossroads of the West",
+    description: "You've achieved transit enlightenment in the Beehive State!",
+  },
+  stl: {
+    title: "Gateway to Knowledge",
+    description: "You've arched over every MetroLink station!",
+  },
+  stockholm: {
+    title: "Tunnelbana Titan",
+    description: "You've art-metro'd through Sweden's capital like ABBA!",
+  },
+  sydney: {
+    title: "Harbour Master",
+    description: "You've bridged your knowledge of Sydney's entire network. Bonzer!",
+  },
+  taw: {
+    title: "Geordie Genius",
+    description: "Why aye! You've Metro'd through Newcastle like a proper Geordie!",
+  },
+  tokyo: {
+    title: "Lost? Never!",
+    description: "Unlike Bill Murray, you're never lost in Tokyo's transit web!",
+  },
+  toronto: {
+    title: "Ride the Rocket",
+    description: "Started from the TTC, now you know the whole thing!",
+  },
+  tucson: {
+    title: "The Old Pueblo",
+    description: "You've streetcar'd through the Old Pueblo like a Wildcat!",
+  },
+  twincities: {
+    title: "Twin Cities Genius",
+    description: "You've united the Twin Cities in your mind. Purple Rain proud!",
+  },
+  vancouver: {
+    title: "Rain or Shine Expert",
+    description: "You've SkyTrained through Vancouver like a true Canuck!",
+  },
+  viarail: {
+    title: "Love the Way",
+    description: "From sea to sea, you know Canada's rail like the back of your toque!",
+  },
+  wien: {
+    title: "Waltz of Transit",
+    description: "You've U-Bahn'd through Vienna with imperial elegance. Wunderbar!",
+  },
+  wm: {
+    title: "Brummie Brilliant",
+    description: "You've tram'd through the heart of England, bostin!",
+  },
+  yarra: {
+    title: "Yarra Valley Victor",
+    description: "You've tram'd through Melbourne's inner city like royalty!",
+  },
+}
+
+export const getAchievementForCity = (
+  slug: string,
+  fallbackName: string,
+): AchievementDefinition => {
+  return (
+    ACHIEVEMENTS[slug] ?? {
+      title: `${fallbackName} Completionist`,
+      description: `You found every station in ${fallbackName}!`,
+    }
+  )
+}

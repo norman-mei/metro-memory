@@ -1,0 +1,121 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -86.77371234674617,
+          36.16204353484264
+        ]
+      },
+      "properties": {
+        "name": "Riverfront",
+        "line": "WGS",
+        "id": 0
+      },
+      "id": 0
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -86.66657513815599,
+          36.166985032562536
+        ]
+      },
+      "properties": {
+        "name": "Donelson",
+        "line": "WGS",
+        "id": 1
+      },
+      "id": 1
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -86.6055638489832,
+          36.19021291482954
+        ]
+      },
+      "properties": {
+        "name": "Hermitage",
+        "line": "WGS",
+        "id": 2
+      },
+      "id": 2
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -86.51694120114804,
+          36.19939806914359
+        ]
+      },
+      "properties": {
+        "name": "Mt. Juliet",
+        "line": "WGS",
+        "id": 3,
+        "alternate_names": [
+          "Mount Juliet",
+          "Mt Juliet"
+        ]
+      },
+      "id": 3
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -86.42571285582854,
+          36.22894669822832
+        ]
+      },
+      "properties": {
+        "name": "Martha",
+        "line": "WGS",
+        "id": 4
+      },
+      "id": 4
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -86.36774481273939,
+          36.23459355987681
+        ]
+      },
+      "properties": {
+        "name": "Hamilton Springs",
+        "line": "WGS",
+        "id": 5
+      },
+      "id": 5
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -86.2972265158129,
+          36.212060602181396
+        ]
+      },
+      "properties": {
+        "name": "Lebanon",
+        "line": "WGS",
+        "id": 6
+      },
+      "id": 6
+    }
+  ]
+}

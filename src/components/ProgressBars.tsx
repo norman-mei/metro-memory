@@ -165,7 +165,7 @@ const ProgressBars = ({
                 return (
                   <hr
                     key={`separator-${groupIndex}-${itemIndex}`}
-                    className="border-zinc-200 dark:border-zinc-700"
+                    className="border-zinc-200 dark:border-[#18181b]"
                   />
                 )
               }

@@ -71,7 +71,7 @@ const FoundSummary = ({
       <div className="mb-2">
         <p className="mb-2 text-zinc-900 dark:text-zinc-100">
           <span className="text-lg font-bold @md:text-2xl">
-            {((foundProportion || 0) * 100).toFixed(1)}
+            {((foundProportion || 0) * 100).toFixed(2)}
           </span>{' '}
           <span className="mr-2 text-lg @md:text-xl">
             %

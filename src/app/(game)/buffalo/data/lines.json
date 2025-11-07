@@ -1,0 +1,9 @@
+{
+  "MR": {
+    "name": "Metro Rail",
+    "color": "#0F75BC",
+    "backgroundColor": "#004990",
+    "textColor": "#FFFFFF",
+    "order": 0
+  }
+}

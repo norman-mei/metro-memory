@@ -101,7 +101,7 @@ export default function AboutModal({
                         ))}
                       </div>
                     </div>
-                    <div className="rounded-xl border border-gray-200 p-4 dark:border-zinc-700 dark:bg-zinc-800/80">
+                    <div className="rounded-xl border border-gray-200 p-4 dark:border-[#18181b] dark:bg-zinc-800/80">
                       <h4 className="text-sm font-semibold text-gray-900 dark:text-zinc-100">
                         Original Project
                       </h4>

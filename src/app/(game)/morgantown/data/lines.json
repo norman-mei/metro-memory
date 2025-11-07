@@ -1,0 +1,9 @@
+{
+  "PRT": {
+    "name": "Morgantown PRT",
+    "color": "#EBAC00",
+    "backgroundColor": "#173764",
+    "textColor": "#FFFFFF",
+    "order": 0
+  }
+}

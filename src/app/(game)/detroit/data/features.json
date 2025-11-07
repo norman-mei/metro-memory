@@ -1,0 +1,451 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -83.04554987068147,
+          42.32986594703378
+        ]
+      },
+      "properties": {
+        "name": "Congress Street",
+        "line": "QL",
+        "id": 0
+      },
+      "id": 0
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -83.04732879280132,
+          42.33218766397321
+        ]
+      },
+      "properties": {
+        "name": "Campus Martius",
+        "line": "QL",
+        "id": 1
+      },
+      "id": 1
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -83.05039002244506,
+          42.33635658175848
+        ]
+      },
+      "properties": {
+        "name": "Grand Circus Park",
+        "line": "QL",
+        "id": 2
+      },
+      "id": 2
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -83.05233496078964,
+          42.33919878141441
+        ]
+      },
+      "properties": {
+        "name": "Montcalm Street",
+        "line": "QL",
+        "id": 3,
+        "alternate_names": [
+          "Montcalm St"
+        ]
+      },
+      "id": 3
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -83.05401646445388,
+          42.34166799370676
+        ]
+      },
+      "properties": {
+        "name": "Sproat Street/Adelaide Street",
+        "line": "QL",
+        "id": 4,
+        "alternate_names": [
+          "Sproat Street",
+          "Adelaide Street",
+          "Sproat St",
+          "Adelaide St"
+        ]
+      },
+      "id": 4
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -83.05771016337056,
+          42.347219227727656
+        ]
+      },
+      "properties": {
+        "name": "Martin Luther King Boulevard/Mack Avenue",
+        "line": "QL",
+        "id": 5,
+        "alternate_names": [
+          "Martin Luther King Blvd",
+          "MLK Boulevard",
+          "Mack Avenue",
+          "MLK Blvd",
+          "MLK"
+        ]
+      },
+      "id": 5
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -83.06133100010705,
+          42.352571145661464
+        ]
+      },
+      "properties": {
+        "name": "Canfield Street",
+        "line": "QL",
+        "id": 6,
+        "alternate_names": [
+          "Canfield St"
+        ]
+      },
+      "id": 6
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -83.06436317308216,
+          42.356907396115105
+        ]
+      },
+      "properties": {
+        "name": "Warren Avenue",
+        "line": "QL",
+        "id": 7,
+        "alternate_names": [
+          "Warren Ave"
+        ]
+      },
+      "id": 7
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -83.06713204463803,
+          42.3611236978034
+        ]
+      },
+      "properties": {
+        "name": "Ferry Street",
+        "line": "QL",
+        "id": 8,
+        "alternate_names": [
+          "Ferry St"
+        ]
+      },
+      "id": 8
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -83.07071470223417,
+          42.36635948248875
+        ]
+      },
+      "properties": {
+        "name": "Amsterdam Street",
+        "line": "QL",
+        "id": 9,
+        "alternate_names": [
+          "Amsterdam St"
+        ]
+      },
+      "id": 9
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -83.07231607933343,
+          42.36879403197111
+        ]
+      },
+      "properties": {
+        "name": "Baltimore Street",
+        "line": "QL",
+        "id": 10,
+        "alternate_names": [
+          "Baltimore St"
+        ]
+      },
+      "id": 10
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -83.0735943674978,
+          42.37069215963059
+        ]
+      },
+      "properties": {
+        "name": "Grand Boulevard",
+        "line": "QL",
+        "id": 11,
+        "alternate_names": [
+          "Grand Blvd"
+        ]
+      },
+      "id": 11
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -83.05060668587639,
+          42.33580548466338
+        ]
+      },
+      "properties": {
+        "name": "Grand Circus Park",
+        "line": "DPM",
+        "id": 12
+      },
+      "id": 12
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -83.05218002418475,
+          42.33358611788013
+        ]
+      },
+      "properties": {
+        "name": "Times Square",
+        "line": "DPM",
+        "id": 13
+      },
+      "id": 13
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -83.05215557063765,
+          42.33137103946241
+        ]
+      },
+      "properties": {
+        "name": "Michigan Avenue",
+        "line": "DPM",
+        "id": 14,
+        "alternate_names": [
+          "Michigan Ave"
+        ]
+      },
+      "id": 14
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -83.05108437644763,
+          42.32956682038987
+        ]
+      },
+      "properties": {
+        "name": "Fort/Cass",
+        "line": "DPM",
+        "id": 15,
+        "alternate_names": [
+          "Fort Street",
+          "Cass Street",
+          "Fort St"
+        ]
+      },
+      "id": 15
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -83.0499007269312,
+          42.328255521381756
+        ]
+      },
+      "properties": {
+        "name": "Huntington Place",
+        "line": "DPM",
+        "id": 16
+      },
+      "id": 16
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -83.05257824618388,
+          42.32528257019094
+        ]
+      },
+      "properties": {
+        "name": "Water Square",
+        "line": "DPM",
+        "id": 17,
+        "alternate_names": [
+          "West Riverfront",
+          "Joe Louis Arena"
+        ]
+      },
+      "id": 17
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -83.04669779931247,
+          42.328722450422255
+        ]
+      },
+      "properties": {
+        "name": "Financial District",
+        "line": "DPM",
+        "id": 18
+      },
+      "id": 18
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -83.04196728856554,
+          42.33029075434174
+        ]
+      },
+      "properties": {
+        "name": "Millender Center",
+        "line": "DPM",
+        "id": 19
+      },
+      "id": 19
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -83.04003014735784,
+          42.33025709321576
+        ]
+      },
+      "properties": {
+        "name": "Renaissance Center",
+        "line": "DPM",
+        "id": 20
+      },
+      "id": 20
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -83.04124436000569,
+          42.3333453625382
+        ]
+      },
+      "properties": {
+        "name": "Bricktown",
+        "line": "DPM",
+        "id": 21
+      },
+      "id": 21
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -83.04241584705065,
+          42.334632257370394
+        ]
+      },
+      "properties": {
+        "name": "Greektown",
+        "line": "DPM",
+        "id": 22
+      },
+      "id": 22
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -83.04618639168524,
+          42.33379397067491
+        ]
+      },
+      "properties": {
+        "name": "Cadillac Center",
+        "line": "DPM",
+        "id": 23
+      },
+      "id": 23
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -83.04821340506403,
+          42.33547052542823
+        ]
+      },
+      "properties": {
+        "name": "Broadway",
+        "line": "DPM",
+        "id": 24
+      },
+      "id": 24
+    }
+  ]
+}

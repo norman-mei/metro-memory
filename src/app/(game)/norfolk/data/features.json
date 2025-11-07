@@ -1,0 +1,152 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.30347851028161, 36.858714501686876]
+      },
+      "properties": {
+        "name": "EVMC/Fort Norfolk",
+        "line": "TT",
+        "id": 0,
+        "alternate_names": ["EVMC Fort Norfolk", "Fort Norfolk", "Eastern Virginia Medical Center"]
+      },
+      "id": 0
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.2939011075089, 36.85357310615745]
+      },
+      "properties": {
+        "name": "York Street/Freemason",
+        "line": "TT",
+        "id": 1,
+        "alternate_names": ["York Street Freemason", "Freemason"]
+      },
+      "id": 1
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.28885999999152, 36.851200957711036]
+      },
+      "properties": {
+        "name": "Monticello",
+        "line": "TT",
+        "id": 2
+      },
+      "id": 2
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.28968195277905, 36.847132538917556]
+      },
+      "properties": {
+        "name": "MacArthur Square",
+        "line": "TT",
+        "id": 3
+      },
+      "id": 3
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.28557176020423, 36.84560827887493]
+      },
+      "properties": {
+        "name": "Civic Plaza",
+        "line": "TT",
+        "id": 4
+      },
+      "id": 4
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.27804167580322, 36.844044582473856]
+      },
+      "properties": {
+        "name": "Harbor Park",
+        "line": "TT",
+        "id": 5
+      },
+      "id": 5
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.26931285768303, 36.84588976842175]
+      },
+      "properties": {
+        "name": "NSU",
+        "line": "TT",
+        "id": 6,
+        "alternate_names": ["Norfolk State University", "NSU Station"]
+      },
+      "id": 6
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.25317495197362, 36.84626787918237]
+      },
+      "properties": {
+        "name": "Ballentine/Broad Creek",
+        "line": "TT",
+        "id": 7,
+        "alternate_names": ["Ballentine Broad Creek", "Broad Creek"]
+      },
+      "id": 7
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.23488113452673, 36.84275766898096]
+      },
+      "properties": {
+        "name": "Ingleside Road",
+        "line": "TT",
+        "id": 8
+      },
+      "id": 8
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.21313343689017, 36.84155950998053]
+      },
+      "properties": {
+        "name": "Military Highway",
+        "line": "TT",
+        "id": 9
+      },
+      "id": 9
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.19028259727821, 36.84110758547085]
+      },
+      "properties": {
+        "name": "Newtown Road",
+        "line": "TT",
+        "id": 10
+      },
+      "id": 10
+    }
+  ]
+}

@@ -1653,7 +1653,7 @@ export default function GamePage({
               minimizable
               defaultMinimized
             />
-            <hr className="my-4 w-full border-b border-zinc-100 dark:border-zinc-700" />
+            <hr className="my-4 w-full border-b border-zinc-100 dark:border-[#18181b]" />
             <FoundList
               found={found}
               idMap={idMap}
@@ -1693,7 +1693,7 @@ export default function GamePage({
               </button>
             </div>
             <FoundSummary
-              className="rounded-xl border border-zinc-100 bg-white p-4 shadow-sm dark:border-zinc-700 dark:bg-zinc-800/80"
+            className="rounded-xl border border-zinc-100 bg-white p-4 shadow-sm dark:border-[#18181b] dark:bg-zinc-800/80"
               foundProportion={foundProportion}
               foundStationsPerLine={foundStationsPerLine}
               stationsPerLine={stationsPerLine}
@@ -1741,7 +1741,7 @@ export default function GamePage({
                 autoFocus
                 value={solutionsPassword}
                 onChange={handleSolutionsPasswordChange}
-                className="w-full rounded-lg border border-zinc-300 px-4 py-2 text-base text-zinc-900 focus:border-zinc-900 focus:outline-none focus:ring-2 focus:ring-zinc-900/20 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100 dark:focus:border-indigo-400 dark:focus:ring-indigo-500/40"
+                className="w-full rounded-lg border border-zinc-300 px-4 py-2 text-base text-zinc-900 focus:border-zinc-900 focus:outline-none focus:ring-2 focus:ring-zinc-900/20 dark:border-[#18181b] dark:bg-zinc-900 dark:text-zinc-100 dark:focus:border-indigo-400 dark:focus:ring-indigo-500/40"
                 placeholder="Password"
                 autoComplete="off"
               />
@@ -1754,7 +1754,7 @@ export default function GamePage({
                 <button
                   type="button"
                   onClick={handleSolutionsClose}
-                  className="rounded-full border border-zinc-300 px-4 py-2 text-sm font-medium text-zinc-700 hover:bg-zinc-100 focus:outline-none focus:ring-2 focus:ring-zinc-500/40 dark:border-zinc-600 dark:bg-zinc-900 dark:text-zinc-100 dark:hover:bg-zinc-800"
+                  className="rounded-full border border-zinc-300 px-4 py-2 text-sm font-medium text-zinc-700 hover:bg-zinc-100 focus:outline-none focus:ring-2 focus:ring-zinc-500/40 dark:border-[#18181b] dark:bg-zinc-900 dark:text-zinc-100 dark:hover:bg-zinc-800"
                 >
                   {t('backToTheGame')}
                 </button>

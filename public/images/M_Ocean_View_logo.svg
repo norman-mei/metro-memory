@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="155" height="155">
+ <title>M Ocean View</title>
+ <circle fill="#008851" stroke="#000000" stroke-width="5" cx="77.5" cy="77.5" r="75"/>
+ <path fill="#FFFFFF" d="M 36.449526,120 V 35.000002 H 62.135064 L 77.557983,92.980901 92.80696,35.000002 h 25.74352 V 120 H 102.60573 V 53.090043 L 85.73329,120 H 69.208734 L 52.394273,53.090043 V 120 Z"/>
+</svg>

@@ -1,79 +1,272 @@
 'use client'
 
-import { cities, ICity } from '@/lib/citiesConfig'
-import { Transition } from '@headlessui/react'
+import { useEffect, useMemo, useState } from 'react'
+import classNames from 'classnames'
 import Fuse from 'fuse.js'
-import { useMemo, useState } from 'react'
-import CityCard from './CityCard'
+import { Transition } from '@headlessui/react'
+
+import { cities, ICity } from '@/lib/citiesConfig'
+import { getAchievementForCity } from '@/lib/achievements'
+import CityCard from '@/components/CityCard'
+import CreditsContent from '@/components/CreditsContent'
+
+type CitySortOption = 'default' | 'name-asc' | 'name-desc' | 'continent-asc' | 'continent-desc'
+type AchievementSortOption =
+  | 'default'
+  | 'name-asc'
+  | 'name-desc'
+  | 'continent-asc'
+  | 'continent-desc'
+  | 'not-achieved-asc'
+  | 'not-achieved-desc'
+  | 'achieved-asc'
+  | 'achieved-desc'
+
+const CITY_SORT_OPTIONS: Array<{ value: CitySortOption; label: string }> = [
+  { value: 'default', label: 'Default order' },
+  { value: 'name-asc', label: 'Name (A-Z)' },
+  { value: 'name-desc', label: 'Name (Z-A)' },
+  { value: 'continent-asc', label: 'Continent (A-Z)' },
+  { value: 'continent-desc', label: 'Continent (Z-A)' },
+]
+
+const ACHIEVEMENT_SORT_OPTIONS: Array<{ value: AchievementSortOption; label: string }> = [
+  { value: 'default', label: 'Default order' },
+  { value: 'name-asc', label: 'Name (A-Z)' },
+  { value: 'name-desc', label: 'Name (Z-A)' },
+  { value: 'continent-asc', label: 'Continent (A-Z)' },
+  { value: 'continent-desc', label: 'Continent (Z-A)' },
+  { value: 'not-achieved-asc', label: 'Not achieved (A-Z)' },
+  { value: 'not-achieved-desc', label: 'Not achieved (Z-A)' },
+  { value: 'achieved-asc', label: 'Achieved (A-Z)' },
+  { value: 'achieved-desc', label: 'Achieved (Z-A)' },
+]
+
+const REGION_KEYWORDS: Record<string, string[]> = {
+  AL: ['Alabama', 'AL'],
+  AK: ['Alaska', 'AK'],
+  AZ: ['Arizona', 'AZ'],
+  AR: ['Arkansas', 'AR'],
+  CA: ['California', 'CA'],
+  CO: ['Colorado', 'CO'],
+  CT: ['Connecticut', 'CT'],
+  DE: ['Delaware', 'DE'],
+  FL: ['Florida', 'FL'],
+  GA: ['Georgia', 'GA'],
+  HI: ['Hawaii', 'HI'],
+  ID: ['Idaho', 'ID'],
+  IL: ['Illinois', 'IL'],
+  IN: ['Indiana', 'IN'],
+  IA: ['Iowa', 'IA'],
+  KS: ['Kansas', 'KS'],
+  KY: ['Kentucky', 'KY'],
+  LA: ['Louisiana', 'LA'],
+  ME: ['Maine', 'ME'],
+  MD: ['Maryland', 'MD'],
+  MA: ['Massachusetts', 'MA'],
+  MI: ['Michigan', 'MI'],
+  MN: ['Minnesota', 'MN'],
+  MS: ['Mississippi', 'MS'],
+  MO: ['Missouri', 'MO'],
+  MT: ['Montana', 'MT'],
+  NE: ['Nebraska', 'NE'],
+  NV: ['Nevada', 'NV'],
+  NH: ['New Hampshire', 'NH'],
+  NJ: ['New Jersey', 'NJ'],
+  NM: ['New Mexico', 'NM'],
+  NY: ['New York', 'NY'],
+  NC: ['North Carolina', 'NC'],
+  ND: ['North Dakota', 'ND'],
+  OH: ['Ohio', 'OH'],
+  OK: ['Oklahoma', 'OK'],
+  OR: ['Oregon', 'OR'],
+  PA: ['Pennsylvania', 'PA'],
+  RI: ['Rhode Island', 'RI'],
+  SC: ['South Carolina', 'SC'],
+  SD: ['South Dakota', 'SD'],
+  TN: ['Tennessee', 'TN'],
+  TX: ['Texas', 'TX'],
+  UT: ['Utah', 'UT'],
+  VT: ['Vermont', 'VT'],
+  VA: ['Virginia', 'VA'],
+  WA: ['Washington', 'WA'],
+  WV: ['West Virginia', 'WV'],
+  WI: ['Wisconsin', 'WI'],
+  WY: ['Wyoming', 'WY'],
+  DC: ['District of Columbia', 'DC', 'Washington DC'],
+  PR: ['Puerto Rico', 'PR'],
+  MX: ['Mexico', 'MX'],
+  CAN: ['Canada', 'CAN'],
+  AB: ['Alberta', 'AB'],
+  BC: ['British Columbia', 'BC'],
+  MB: ['Manitoba', 'MB'],
+  NB: ['New Brunswick', 'NB'],
+  NL: ['Newfoundland and Labrador', 'NL'],
+  NS: ['Nova Scotia', 'NS'],
+  NT: ['Northwest Territories', 'NT'],
+  NU: ['Nunavut', 'NU'],
+  ON: ['Ontario', 'ON'],
+  PE: ['Prince Edward Island', 'PE'],
+  QC: ['Quebec', 'QC'],
+  SK: ['Saskatchewan', 'SK'],
+  YT: ['Yukon', 'YT'],
+  USA: ['United States', 'USA', 'US', 'America'],
+}
+
+const extractRegionKeywords = (name: string): string[] | undefined => {
+  const match = name.match(/,\s*([A-Z]{2,3}(?:\/[A-Z]{2,3})*)/)
+  if (!match) return undefined
+  const codes = match[1].split('/')
+  const keywords = new Set<string>()
+  for (const code of codes) {
+    const list = REGION_KEYWORDS[code]
+    if (list) {
+      list.forEach((word) => {
+        keywords.add(word)
+        keywords.add(word.toLowerCase())
+      })
+    }
+  }
+  return keywords.size > 0 ? Array.from(keywords) : undefined
+}
+
+const enrichCities = (cityList: ICity[]): ICity[] =>
+  cityList.map((city) => {
+    if (city.keywords && city.keywords.length > 0) {
+      return city
+    }
+    const keywords = extractRegionKeywords(city.name)
+    return keywords ? { ...city, keywords } : city
+  })
+
+const getSlugFromLink = (link: string) => {
+  if (!link.startsWith('/')) {
+    return null
+  }
+  return link.replace(/^\//, '').split(/[?#]/)[0]
+}
+
+interface AchievementMeta {
+  slug: string
+  cityName: string
+  title: string
+  description: string
+  continent: string
+  order: number
+}
 
 const SearcheableCitiesList = () => {
+  const [activeTab, setActiveTab] = useState<'cities' | 'achievements' | 'credits'>('cities')
   const [search, setSearch] = useState('')
+  const [citySort, setCitySort] = useState<CitySortOption>('default')
+  const [achievementSearch, setAchievementSearch] = useState('')
+  const [achievementSort, setAchievementSort] = useState<AchievementSortOption>('default')
+  const [unlockedSlugs, setUnlockedSlugs] = useState<string[]>([])
+
+  const enrichedCities = useMemo(() => enrichCities(cities), [])
+  const achievementCatalog = useMemo(() => {
+    return enrichedCities
+      .map((city, index) => {
+        const slug = getSlugFromLink(city.link)
+        if (!slug) return null
+        const baseName = city.name.split(',')[0]
+        const meta = getAchievementForCity(slug, baseName)
+        return {
+          slug,
+          cityName: baseName,
+          title: meta.title,
+          description: meta.description,
+          continent: city.continent,
+          order: index,
+        }
+      })
+      .filter((entry): entry is AchievementMeta => entry !== null)
+  }, [enrichedCities])
 
   const fuse = useMemo(
     () =>
-      new Fuse(cities, {
-        keys: ['name'],
-        minMatchCharLength: 2,
-        threshold: 0.15,
-        distance: 10,
+      new Fuse(enrichedCities, {
+        keys: ['name', 'keywords'],
+        minMatchCharLength: 1,
+        threshold: 0.3,
+        distance: 100,
+        ignoreLocation: true,
       }),
-    [],
+    [enrichedCities],
   )
 
-  const sortedCities = useMemo(
-    () => [...cities].sort((a, b) => a.name.localeCompare(b.name)),
-    [],
+  const achievementFuse = useMemo(
+    () =>
+      new Fuse(achievementCatalog, {
+        keys: ['cityName', 'title', 'description', 'slug', 'continent'],
+        minMatchCharLength: 1,
+        threshold: 0.35,
+        distance: 100,
+        ignoreLocation: true,
+      }),
+    [achievementCatalog],
   )
+
+  const sortedCities = useMemo(() => {
+    const compareName = (a: ICity, b: ICity) => a.name.localeCompare(b.name)
+    const compareContinent = (a: ICity, b: ICity) => {
+      const result = a.continent.localeCompare(b.continent)
+      return result !== 0 ? result : compareName(a, b)
+    }
+    const baseline = [...enrichedCities]
+    switch (citySort) {
+      case 'name-asc':
+        return baseline.sort(compareName)
+      case 'name-desc':
+        return baseline.sort((a, b) => compareName(b, a))
+      case 'continent-asc':
+        return baseline.sort(compareContinent)
+      case 'continent-desc':
+        return baseline.sort((a, b) => compareContinent(b, a))
+      case 'default':
+      default:
+        return baseline.sort(compareName)
+    }
+  }, [enrichedCities, citySort])
 
   const continentOrder = useMemo(
-    () => [
-      'North America',
-      'South America',
-      'Europe',
-      'Asia',
-      'Australia',
-      'Africa',
-      'Oceania',
-      'Antarctica',
-    ],
+    () => ['North America', 'South America', 'Europe', 'Asia', 'Australia', 'Africa', 'Oceania', 'Antarctica'],
     [],
   )
 
   const groupedCities = useMemo(() => {
     const continentMap = new Map<string, ICity[]>()
-
     sortedCities.forEach((city) => {
       if (!continentMap.has(city.continent)) {
         continentMap.set(city.continent, [])
       }
       continentMap.get(city.continent)!.push(city)
     })
-
-    return Array.from(continentMap.entries())
-      .sort((a, b) => {
+    const entries = Array.from(continentMap.entries())
+    const sortEntries = () => {
+      if (citySort === 'continent-asc') return entries.sort((a, b) => a[0].localeCompare(b[0]))
+      if (citySort === 'continent-desc') return entries.sort((a, b) => b[0].localeCompare(a[0]))
+      return entries.sort((a, b) => {
         const aIndex = continentOrder.indexOf(a[0])
         const bIndex = continentOrder.indexOf(b[0])
-
-        if (aIndex === -1 && bIndex === -1) {
-          return a[0].localeCompare(b[0])
-        }
+        if (aIndex === -1 && bIndex === -1) return a[0].localeCompare(b[0])
         if (aIndex === -1) return 1
         if (bIndex === -1) return -1
         return aIndex - bIndex
       })
-      .map(([continent, cities]) => ({ continent, cities }))
-  }, [sortedCities, continentOrder])
+    }
+    return sortEntries().map(([continent, list]) => ({ continent, cities: list }))
+  }, [sortedCities, continentOrder, citySort])
 
-  const fullCitiesSet = useMemo(
-    () => new Set(cities.map((city) => city.link)),
-    [],
-  )
+  const fullCitiesSet = useMemo(() => new Set(enrichedCities.map((city) => city.link)), [enrichedCities])
 
   const results = useMemo(() => {
-    const res = fuse.search(search)
-    return search.length > 1
-      ? new Set(res.map((result) => result.item.link))
-      : fullCitiesSet
+    const normalized = search.trim()
+    if (normalized.length === 0) {
+      return fullCitiesSet
+    }
+    const res = fuse.search(normalized)
+    return new Set(res.map((result) => result.item.link))
   }, [search, fuse, fullCitiesSet])
 
   const visibleGroups = useMemo(() => {
@@ -85,113 +278,338 @@ const SearcheableCitiesList = () => {
       .filter((group) => group.cities.length > 0)
   }, [groupedCities, results])
 
-  const hasResults = visibleGroups.length > 0
+  const unlockedSet = useMemo(() => new Set(unlockedSlugs), [unlockedSlugs])
+  const allAchievementSlugs = useMemo(() => achievementCatalog.map((entry) => entry.slug), [achievementCatalog])
 
+  const achievementSearchSet = useMemo(() => {
+    const normalized = achievementSearch.trim()
+    if (normalized.length === 0) {
+      return new Set(allAchievementSlugs)
+    }
+    const res = achievementFuse.search(normalized)
+    return new Set(res.map((result) => result.item.slug))
+  }, [achievementSearch, achievementFuse, allAchievementSlugs])
+
+  const visibleAchievements = useMemo(() => {
+    const filtered = achievementCatalog.filter((entry) => achievementSearchSet.has(entry.slug))
+    return sortAchievementEntries(filtered, achievementSort, unlockedSet)
+  }, [achievementCatalog, achievementSearchSet, achievementSort, unlockedSet])
+
+  useEffect(() => {
+    const computeAchievements = () => {
+      if (typeof window === 'undefined') return
+      const unlocked: string[] = []
+      achievementCatalog.forEach((entry) => {
+        const { slug } = entry
+        const totalRaw = window.localStorage.getItem(`${slug}-station-total`)
+        const total = Number(totalRaw)
+        if (!Number.isFinite(total) || total <= 0) {
+          return
+        }
+        let foundCount = 0
+        const stored = window.localStorage.getItem(`${slug}-stations`)
+        if (stored) {
+          try {
+            const parsed = JSON.parse(stored)
+            if (Array.isArray(parsed)) {
+              foundCount = new Set(parsed.filter((value) => typeof value === 'number')).size
+            } else if (typeof parsed === 'number') {
+              foundCount = parsed
+            }
+          } catch {
+            foundCount = 0
+          }
+        }
+        if (foundCount >= total) {
+          unlocked.push(slug)
+        }
+      })
+      setUnlockedSlugs(unlocked)
+    }
+
+    computeAchievements()
+    window.addEventListener('storage', computeAchievements)
+    window.addEventListener('focus', computeAchievements)
+    return () => {
+      window.removeEventListener('storage', computeAchievements)
+      window.removeEventListener('focus', computeAchievements)
+    }
+  }, [achievementCatalog])
+
+  const hasResults = visibleGroups.length > 0
   let cardIndex = 0
 
   return (
     <div className="my-16 mt-16 sm:mt-20">
-      <div className="relative mb-4 rounded-md shadow-sm">
-        <input
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
-          className="block w-full rounded-full border-0 px-10 py-4 pr-10 text-lg text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:leading-6 dark:bg-zinc-900 dark:text-zinc-100 dark:ring-zinc-700 dark:placeholder:text-zinc-500 dark:focus:ring-indigo-400"
-          type="text"
-          placeholder="Search for a city..."
-        />
-
-        <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3 text-gray-400 dark:text-zinc-400">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="32"
-            height="32"
-            viewBox="0 0 24 24"
+      <div className="mb-6 flex gap-3">
+        {(['cities', 'achievements', 'credits'] as const).map((tab) => (
+          <button
+            key={tab}
+            onClick={() => setActiveTab(tab)}
+            className={classNames(
+              'rounded-full px-4 py-2 text-sm font-semibold transition',
+              activeTab === tab
+                ? 'bg-indigo-600 text-white dark:bg-indigo-500'
+                : 'bg-gray-200 text-gray-700 hover:bg-gray-300 dark:bg-zinc-800 dark:text-zinc-200 dark:hover:bg-zinc-700',
+            )}
           >
-            <path
-              fill="currentColor"
-              d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5A6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5S14 7.01 14 9.5S11.99 14 9.5 14z"
-            />
-          </svg>
+            {tab === 'cities' ? 'Cities' : tab === 'achievements' ? 'Achievements' : 'Credits'}
+          </button>
+        ))}
+      </div>
+
+      {activeTab === 'cities' ? (
+        <>
+          <div className="mb-4 flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+            <div className="relative w-full">
+              <input
+                value={search}
+                onChange={(event) => setSearch(event.target.value)}
+                className="block w-full rounded-full border-0 px-10 py-4 pr-10 text-lg text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:leading-6 dark:bg-zinc-900 dark:text-zinc-100 dark:ring-zinc-700 dark:placeholder:text-zinc-500 dark:focus:ring-indigo-400"
+                type="text"
+                placeholder="Search for a city..."
+              />
+              <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3 text-gray-400 dark:text-zinc-400">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                  <path
+                    fill="currentColor"
+                    d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5A6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5S14 7.01 14 9.5S11.99 14 9.5 14z"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div className="w-full md:w-64">
+              <label className="sr-only" htmlFor="city-sort">
+                Sort cities
+              </label>
+              <select
+                id="city-sort"
+                value={citySort}
+                onChange={(event) => setCitySort(event.target.value as CitySortOption)}
+                className="w-full rounded-full border-0 bg-white px-4 py-3 text-sm font-medium text-gray-700 ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-indigo-600 dark:bg-zinc-900 dark:text-zinc-100 dark:ring-zinc-700 dark:focus:ring-indigo-400"
+              >
+                {CITY_SORT_OPTIONS.map((option) => (
+                  <option key={option.value} value={option.value}>
+                    {option.label}
+                  </option>
+                ))}
+              </select>
+            </div>
+          </div>
+          {hasResults ? (
+            <div className="space-y-10">
+              {visibleGroups.map(({ continent, cities }, index) => (
+                <section key={continent} className="space-y-6">
+                  <div>
+                    <h3 className="mb-4 text-xl font-semibold text-zinc-800 dark:text-zinc-100">{continent}</h3>
+                    <div className="mx-auto grid max-w-full grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+                      {cities.map((city) => {
+                        const rotationClass = ''
+                        cardIndex += 1
+                        return (
+                          <Transition
+                            key={city.link}
+                            as="div"
+                            appear
+                            enterFrom="opacity-0 translate-y-4"
+                            enter="transition-all ease-out duration-200"
+                            leaveFrom="opacity-100 translate-y-0"
+                            leave="transition-all ease-in duration-200"
+                            show
+                          >
+                            <CityCard city={city} className={rotationClass} />
+                          </Transition>
+                        )
+                      })}
+                    </div>
+                  </div>
+                  {index < visibleGroups.length - 1 && (
+                    <footer>
+                      <hr className="border-t border-zinc-200 dark:border-[#18181b]" />
+                    </footer>
+                  )}
+                </section>
+              ))}
+            </div>
+          ) : (
+            <EmptyState />
+          )}
+          {hasResults && <SuggestCity />}
+        </>
+      ) : activeTab === 'achievements' ? (
+        <Achievements
+          items={visibleAchievements}
+          unlockedSlugs={unlockedSlugs}
+          searchValue={achievementSearch}
+          onSearchChange={setAchievementSearch}
+          sortOption={achievementSort}
+          onSortChange={setAchievementSort}
+        />
+      ) : (
+        <div className="flex justify-center">
+          <CreditsContent showBackLink={false} />
+        </div>
+      )}
+    </div>
+  )
+}
+
+const Achievements = ({
+  items,
+  unlockedSlugs,
+  searchValue,
+  onSearchChange,
+  sortOption,
+  onSortChange,
+}: {
+  items: AchievementMeta[]
+  unlockedSlugs: string[]
+  searchValue: string
+  onSearchChange: (value: string) => void
+  sortOption: AchievementSortOption
+  onSortChange: (value: AchievementSortOption) => void
+}) => {
+  const unlockedSet = useMemo(() => new Set(unlockedSlugs), [unlockedSlugs])
+  const hasResults = items.length > 0
+
+  return (
+    <div className="space-y-4">
+      <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+        <div className="relative w-full md:max-w-sm">
+          <input
+            value={searchValue}
+            onChange={(event) => onSearchChange(event.target.value)}
+            type="text"
+            placeholder="Search achievements..."
+            className="block w-full rounded-full border-0 px-10 py-3 text-base text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 dark:bg-zinc-900 dark:text-zinc-100 dark:ring-zinc-700 dark:placeholder:text-zinc-500 dark:focus:ring-indigo-400"
+          />
+          <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3 text-gray-400 dark:text-zinc-400">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <path
+                fill="currentColor"
+                d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5A6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5S14 7.01 14 9.5S11.99 14 9.5 14z"
+              />
+            </svg>
+          </div>
+        </div>
+        <div className="w-full md:w-64">
+          <label className="sr-only" htmlFor="achievement-sort">
+            Sort achievements
+          </label>
+          <select
+            id="achievement-sort"
+            value={sortOption}
+            onChange={(event) => onSortChange(event.target.value as AchievementSortOption)}
+            className="w-full rounded-full border-0 bg-white px-4 py-3 text-sm font-medium text-gray-700 ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-indigo-600 dark:bg-zinc-900 dark:text-zinc-100 dark:ring-zinc-700 dark:focus:ring-indigo-400"
+          >
+            {ACHIEVEMENT_SORT_OPTIONS.map((option) => (
+              <option key={option.value} value={option.value}>
+                {option.label}
+              </option>
+            ))}
+          </select>
         </div>
       </div>
-      {hasResults ? (
-        <div className="space-y-10">
-          {visibleGroups.map(({ continent, cities }, index) => (
-            <section key={continent} className="space-y-6">
-              <div>
-                <h3 className="mb-4 text-xl font-semibold text-zinc-800 dark:text-zinc-100">
-                  {continent}
-                </h3>
-                <div className="mx-auto grid max-w-full grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-                  {cities.map((city) => {
-                    const rotationClass = ''
-                    cardIndex += 1
 
-                    return (
-                      <Transition
-                        key={city.link}
-                        as="div"
-                        appear
-                        enterFrom="opacity-0 translate-y-4"
-                        enter="transition-all ease-out duration-200"
-                        leaveFrom="opacity-100 translate-y-0"
-                        leave="transition-all ease-in duration-200"
-                        show={true}
-                      >
-                        <CityCard city={city} className={rotationClass} />
-                      </Transition>
-                    )
-                  })}
-                </div>
-              </div>
-              {index < visibleGroups.length - 1 && (
-                <footer>
-                  <hr className="border-t border-zinc-200 dark:border-zinc-700" />
-                </footer>
-              )}
-            </section>
-          ))}
+      {!hasResults ? (
+        <div className="rounded-2xl border border-dashed border-zinc-300 p-6 text-center text-sm text-zinc-500 dark:border-[#18181b] dark:text-zinc-400">
+          No achievements found. Try a different search or sort option.
         </div>
       ) : (
-        <EmptyState />
+        items.map((meta) => {
+          const isUnlocked = unlockedSet.has(meta.slug)
+          return (
+            <div
+              key={meta.slug}
+              className={classNames(
+                'flex items-start justify-between rounded-2xl border p-4 shadow-sm',
+                isUnlocked
+                  ? 'border-emerald-200 bg-white dark:border-emerald-600/60 dark:bg-zinc-900'
+                  : 'border-zinc-200 bg-zinc-50 text-zinc-400 dark:border-[#18181b] dark:bg-zinc-900/40 dark:text-zinc-500',
+              )}
+            >
+              <div>
+                <h4
+                  className={classNames('text-lg font-semibold', isUnlocked ? 'text-zinc-800 dark:text-zinc-100' : '')}
+                >
+                  {meta.title}
+                </h4>
+                <p className="text-sm text-zinc-600 dark:text-zinc-400">{meta.description}</p>
+                <p className="mt-1 text-xs uppercase tracking-wide text-zinc-400 dark:text-zinc-500">
+                  {meta.cityName} • {meta.continent}
+                </p>
+              </div>
+              <span
+                className={classNames(
+                  'text-sm font-semibold',
+                  isUnlocked ? 'text-emerald-600 dark:text-emerald-400' : 'text-red-500',
+                )}
+              >
+                {isUnlocked ? 'Unlocked' : 'Locked'}
+              </span>
+            </div>
+          )
+        })
       )}
-      {hasResults && <SuggestCity />}
     </div>
   )
 }
 
-const EmptyState = () => {
-  return (
-    <div className="w-full rounded bg-indigo-700 px-12 py-6 text-white">
-      <h3 className="mb-2 text-lg font-medium">No results!</h3>
-      <p>
-        Want to play in your city? Shoot me a message on 𝕏{' '}
-        <a href="https://x.com/_benjamintd">@_benjamintd</a>
-      </p>
-    </div>
-  )
-}
-
-const SuggestCity = () => {
-  return (
-    <p className="mt-6">
-      If you want the game to be available in your city, send me a message on 𝕏{' '}
-      <a
-        className="font-medium hover:underline"
-        href="https://twitter.com/_benjamintd"
-      >
-        @_benjamintd
-      </a>
-      , or contribute on{' '}
-      <a
-        className="font-medium hover:underline"
-        href="https://github.com/benjamintd/metro-memory.com"
-      >
-        Github
-      </a>
-      .
+const EmptyState = () => (
+  <div className="w-full rounded bg-indigo-700 px-12 py-6 text-white">
+    <h3 className="mb-2 text-lg font-medium">No results!</h3>
+    <p>
+      Want to play in your city? Shoot me a message on 𝕏 <a href="https://x.com/_benjamintd">@_benjamintd</a>
     </p>
-  )
+  </div>
+)
+
+const SuggestCity = () => (
+  <p className="mt-6">
+    If you want the game to be available in your city, send me a message on 𝕏{' '}
+    <a className="font-medium hover:underline" href="https://twitter.com/_benjamintd">
+      @_benjamintd
+    </a>
+    , or contribute on{' '}
+    <a className="font-medium hover:underline" href="https://github.com/benjamintd/metro-memory.com">
+      Github
+    </a>
+    .
+  </p>
+)
+
+const sortAchievementEntries = (
+  entries: AchievementMeta[],
+  sort: AchievementSortOption,
+  unlockedSet: Set<string>,
+): AchievementMeta[] => {
+  const compareName = (a: AchievementMeta, b: AchievementMeta) => a.cityName.localeCompare(b.cityName)
+  const compareContinent = (a: AchievementMeta, b: AchievementMeta) => {
+    const result = a.continent.localeCompare(b.continent)
+    return result !== 0 ? result : compareName(a, b)
+  }
+  const base = [...entries]
+  switch (sort) {
+    case 'name-asc':
+      return base.sort(compareName)
+    case 'name-desc':
+      return base.sort((a, b) => compareName(b, a))
+    case 'continent-asc':
+      return base.sort(compareContinent)
+    case 'continent-desc':
+      return base.sort((a, b) => compareContinent(b, a))
+    case 'not-achieved-asc':
+      return base.filter((entry) => !unlockedSet.has(entry.slug)).sort(compareName)
+    case 'not-achieved-desc':
+      return base.filter((entry) => !unlockedSet.has(entry.slug)).sort((a, b) => compareName(b, a))
+    case 'achieved-asc':
+      return base.filter((entry) => unlockedSet.has(entry.slug)).sort(compareName)
+    case 'achieved-desc':
+      return base.filter((entry) => unlockedSet.has(entry.slug)).sort((a, b) => compareName(b, a))
+    case 'default':
+    default:
+      return base.sort((a, b) => a.order - b.order)
+  }
 }
 
 export default SearcheableCitiesList

@@ -1,0 +1,71 @@
+import { Metadata } from 'next'
+import { MapboxOptions } from 'mapbox-gl'
+import { Config, Line, LineGroup } from '@/lib/types'
+import linesData from './data/lines.json'
+
+export const BEG_THRESHOLD = 0.5
+
+export const LINES = linesData as { [name: string]: Line }
+
+export const LINE_GROUPS: LineGroup[] = [
+  {
+    title: 'Niagara Frontier Transportation Authority (NFTA)',
+    items: [
+      {
+        type: 'lines',
+        lines: ['MR'],
+      },
+    ],
+  },
+]
+
+export const METADATA: Metadata = {
+  title: 'Buffalo Metro Memory',
+  description:
+    'How many of the Buffalo Metro Rail stations can you name from memory?',
+  openGraph: {
+    title: 'Buffalo Metro Memory',
+    description:
+      'How many of the Buffalo Metro Rail stations can you name from memory?',
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://metro-memory.com/buffalo',
+  },
+}
+
+export const MAP_CONFIG: MapboxOptions = {
+  container: 'map',
+  style: 'mapbox://styles/benjamintd/cls31ijdo010o01plcpzag11d',
+  bounds: [
+    [-78.99, 42.82],
+    [-78.7, 43.08],
+  ],
+  maxBounds: [
+    [-79.2, 42.6],
+    [-78.5, 43.3],
+  ],
+  minZoom: 9,
+  fadeDuration: 50,
+}
+
+export const STRIPE_LINK = 'https://buy.stripe.com/28o14B9Yic6m73adQT'
+
+export const CITY_NAME = 'buffalo'
+
+export const LOCALE = 'en'
+
+export const MAP_FROM_DATA = true
+
+const config: Config = {
+  MAP_FROM_DATA,
+  LOCALE,
+  STRIPE_LINK,
+  CITY_NAME,
+  MAP_CONFIG,
+  METADATA,
+  LINES,
+  LINE_GROUPS,
+  BEG_THRESHOLD,
+}
+
+export default config

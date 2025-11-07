@@ -1,0 +1,16 @@
+{
+  "QL": {
+    "name": "QLine",
+    "color": "#EF4D2E",
+    "backgroundColor": "#EF4D2E",
+    "textColor": "#FFFFFF",
+    "order": 0
+  },
+  "DPM": {
+    "name": "Detroit People Mover",
+    "color": "#254A7A",
+    "backgroundColor": "#254A7A",
+    "textColor": "#FFFFFF",
+    "order": 1
+  }
+}

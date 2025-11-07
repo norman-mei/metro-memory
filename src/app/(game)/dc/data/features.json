@@ -1198,8 +1198,13 @@
       },
       "properties": {
         "id": 74,
-        "name": "Camden Station Marc",
-        "line": "MarylandLightRailLightRaillink"
+        "name": "Camden",
+        "line": "MarylandLightRailLightRaillink",
+        "alternate_names": [
+          "Camden Station Marc",
+          "Camden Station MARC",
+          "Camden Station"
+        ]
       },
       "id": 74
     },
@@ -2610,8 +2615,12 @@
       },
       "properties": {
         "id": 162,
-        "name": "Johns Hopkins",
-        "line": "MarylandMetroMetroSubwaylink"
+        "name": "Johns Hopkins Hospital",
+        "line": "MarylandMetroMetroSubwaylink",
+        "alternate_names": [
+          "Johns Hopkins",
+          "John Hopkins"
+        ]
       },
       "id": 162
     },
@@ -4712,10 +4721,74 @@
         "line": "VREFredericksburgLine"
       },
       "id": 292
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.44438153920208,
+          38.94516550874195
+        ]
+      },
+      "properties": {
+        "id": 293,
+        "name": "Concourse C",
+        "line": "MWAAAeroTrain"
+      },
+      "id": 293
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.44409042474973,
+          38.94857582005203
+        ]
+      },
+      "properties": {
+        "id": 294,
+        "name": "Concourse A",
+        "line": "MWAAAeroTrain"
+      },
+      "id": 294
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.44683307410084,
+          38.95159710441486
+        ]
+      },
+      "properties": {
+        "id": 295,
+        "name": "Main Terminal",
+        "line": "MWAAAeroTrain"
+      },
+      "id": 295
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.45058706886722,
+          38.94919639611601
+        ]
+      },
+      "properties": {
+        "id": 296,
+        "name": "Concourse B",
+        "line": "MWAAAeroTrain"
+      },
+      "id": 296
     }
   ],
   "properties": {
-    "totalStations": 290,
+    "totalStations": 294,
     "stationsPerLine": {
       "MARCBrunswickLine": 19,
       "MARCCamdenLine": 12,
@@ -4730,7 +4803,8 @@
       "WMATAMetroOrange": 26,
       "WMATAMetroRed": 27,
       "WMATAMetroSilver": 39,
-      "WMATAMetroYellow": 13
+      "WMATAMetroYellow": 13,
+      "MWAAAeroTrain": 4
     }
   }
 }

@@ -1,0 +1,345 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-158.05101077681084, 21.34562953980149]
+      },
+      "properties": {
+        "name": "Kualakaʻi (East Kapolei)",
+        "line": "SKY",
+        "id": 0,
+        "alternate_names": ["Kualakaʻi", "East Kapolei", "Kualakaʻi East Kapolei"]
+      },
+      "id": 0
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-158.05119586393934, 21.3585709179701]
+      },
+      "properties": {
+        "name": "Keoneʻae (University of Hawaiʻi at West Oʻahu)",
+        "line": "SKY",
+        "id": 1,
+        "alternate_names": [
+          "Keoneʻae",
+          "University of Hawaiʻi at West Oʻahu",
+          "Keoneʻae UH West Oʻahu",
+          "UH West Oʻahu"
+        ]
+      },
+      "id": 1
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-158.04524238192946, 21.36706538869296]
+      },
+      "properties": {
+        "name": "Honouliuli (Hoʻopili)",
+        "line": "SKY",
+        "id": 2,
+        "alternate_names": ["Honouliuli", "Hoʻopili", "Honouliuli Hoʻopili"]
+      },
+      "id": 2
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-158.02276155936403, 21.37821060751615]
+      },
+      "properties": {
+        "name": "Hōʻaeʻae (West Loch)",
+        "line": "SKY",
+        "id": 3,
+        "alternate_names": ["Hōʻaeʻae", "West Loch", "Hōʻaeʻae West Loch"]
+      },
+      "id": 3
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-158.00383490318202, 21.3840981756251]
+      },
+      "properties": {
+        "name": "Pouhala (Waipahu Transit Center)",
+        "line": "SKY",
+        "id": 4,
+        "alternate_names": [
+          "Pouhala",
+          "Waipahu Transit Center",
+          "Pouhala Waipahu Transit Center"
+        ]
+      },
+      "id": 4
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-157.98567751059346, 21.394393863693168]
+      },
+      "properties": {
+        "name": "Hālaulani (Leeward Community College)",
+        "line": "SKY",
+        "id": 5,
+        "alternate_names": [
+          "Hālaulani",
+          "Leeward Community College",
+          "Hālaulani Leeward Community College",
+          "LCC"
+        ]
+      },
+      "id": 5
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-157.97984988245372, 21.396718366663478]
+      },
+      "properties": {
+        "name": "Waiawa (Pearl Highlands)",
+        "line": "SKY",
+        "id": 6,
+        "alternate_names": ["Waiawa", "Pearl Highlands", "Waiawa Pearl Highlands"]
+      },
+      "id": 6
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-157.94712575510272, 21.383899552756468]
+      },
+      "properties": {
+        "name": "Kalauao (Pearlridge)",
+        "line": "SKY",
+        "id": 7,
+        "alternate_names": ["Kalauao", "Pearlridge", "Kalauao Pearlridge"]
+      },
+      "id": 7
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-157.9338356641547, 21.371154197533166]
+      },
+      "properties": {
+        "name": "Hālawa (Aloha Stadium)",
+        "line": "SKY",
+        "id": 8,
+        "alternate_names": ["Hālawa", "Aloha Stadium", "Hālawa Aloha Stadium"]
+      },
+      "id": 8
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-157.93539689255277, 21.3520634889349]
+      },
+      "properties": {
+        "name": "Makalapa (Joint Base Pearl Harbor–Hickam)",
+        "line": "SKY",
+        "id": 9,
+        "alternate_names": [
+          "Makalapa",
+          "Joint Base Pearl Harbor–Hickam",
+          "Joint Base Pearl Harbor Hickam",
+          "Makalapa Joint Base Pearl Harbor Hickam"
+        ]
+      },
+      "id": 9
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-157.92095334256376, 21.3338005736847]
+      },
+      "properties": {
+        "name": "Lelepaua (Daniel K. Inouye International Airport)",
+        "line": "SKY",
+        "id": 10,
+        "alternate_names": [
+          "Lelepaua",
+          "Daniel K. Inouye International Airport",
+          "Daniel K Inouye International Airport",
+          "Honolulu International Airport",
+          "HNL",
+          "Lelepaua Airport"
+        ]
+      },
+      "id": 10
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-157.9014020103677, 21.33278906295623]
+      },
+      "properties": {
+        "name": "Āhua (Lagoon Drive)",
+        "line": "SKY",
+        "id": 11,
+        "alternate_names": ["Āhua", "Lagoon Drive", "Āhua Lagoon Drive"]
+      },
+      "id": 11
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-157.8888197645888, 21.33275148888369]
+      },
+      "properties": {
+        "name": "Kahauiki (Middle Street–Kalihi Transit Center)",
+        "line": "SKY",
+        "id": 12,
+        "alternate_names": [
+          "Kahauiki",
+          "Middle Street–Kalihi Transit Center",
+          "Middle Street Kalihi Transit Center",
+          "Kahauiki Middle Street Kalihi"
+        ]
+      },
+      "id": 12
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-157.88119907985276, 21.328384719399676]
+      },
+      "properties": {
+        "name": "Mokauea (Kalihi)",
+        "line": "SKY",
+        "id": 13,
+        "alternate_names": ["Mokauea", "Kalihi", "Mokauea Kalihi"]
+      },
+      "id": 13
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-157.8725469601898, 21.321750705730043]
+      },
+      "properties": {
+        "name": "Niuhelewai (Honolulu Community College–Kapālama)",
+        "line": "SKY",
+        "id": 14,
+        "alternate_names": [
+          "Niuhelewai",
+          "Honolulu Community College–Kapālama",
+          "Honolulu Community College Kapālama",
+          "Honolulu Community College",
+          "HCC"
+        ]
+      },
+      "id": 14
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-157.86653461275898, 21.31759506578638]
+      },
+      "properties": {
+        "name": "Kūwili (Iwilei)",
+        "line": "SKY",
+        "id": 15,
+        "alternate_names": ["Kūwili", "Iwilei", "Kūwili Iwilei"]
+      },
+      "id": 15
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-157.8652170932619, 21.312598486540065]
+      },
+      "properties": {
+        "name": "Hōlau (Chinatown)",
+        "line": "SKY",
+        "id": 16,
+        "alternate_names": ["Hōlau", "Chinatown", "Hōlau Chinatown"]
+      },
+      "id": 16
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-157.86347208467578, 21.30662445853856]
+      },
+      "properties": {
+        "name": "Kuloloia (Downtown)",
+        "line": "SKY",
+        "id": 17,
+        "alternate_names": ["Kuloloia", "Downtown", "Kuloloia Downtown"]
+      },
+      "id": 17
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-157.85944518648455, 21.301457758733395]
+      },
+      "properties": {
+        "name": "Kaʻākaukukui (Civic Center)",
+        "line": "SKY",
+        "id": 18,
+        "alternate_names": [
+          "Kaʻākaukukui",
+          "Civic Center",
+          "Kaʻākaukukui Civic Center"
+        ]
+      },
+      "id": 18
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-157.8552076355843, 21.296468497220626]
+      },
+      "properties": {
+        "name": "Kūkuluaeʻo (Kakaʻako)",
+        "line": "SKY",
+        "id": 19,
+        "alternate_names": ["Kūkuluaeʻo", "Kakaʻako", "Kūkuluaeʻo Kakaʻako"]
+      },
+      "id": 19
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-157.8434842711659, 21.292556984103168]
+      },
+      "properties": {
+        "name": "Kālia (Ala Moana Center)",
+        "line": "SKY",
+        "id": 20,
+        "alternate_names": [
+          "Kālia",
+          "Ala Moana Center",
+          "Kālia Ala Moana Center",
+          "Ala Moana"
+        ]
+      },
+      "id": 20
+    }
+  ]
+}

@@ -366,7 +366,7 @@ const FoundList = ({
             value={filter}
             onChange={(event) => setFilter(event.target.value)}
             disabled={disabled}
-            className="w-full rounded-full border border-zinc-200 px-3 py-2 text-sm text-zinc-900 shadow-sm outline-none transition focus:border-zinc-400 focus:ring-2 focus:ring-zinc-300 disabled:cursor-not-allowed disabled:bg-zinc-100 disabled:text-zinc-400 dark:border-zinc-700 dark:bg-zinc-900/60 dark:text-zinc-100 dark:focus:border-zinc-500 dark:focus:ring-zinc-600 dark:disabled:bg-zinc-800 dark:disabled:text-zinc-500"
+            className="w-full rounded-full border border-zinc-200 px-3 py-2 text-sm text-zinc-900 shadow-sm outline-none transition focus:border-zinc-400 focus:ring-2 focus:ring-zinc-300 disabled:cursor-not-allowed disabled:bg-zinc-100 disabled:text-zinc-400 dark:border-[#18181b] dark:bg-zinc-900/60 dark:text-zinc-100 dark:focus:border-zinc-500 dark:focus:ring-zinc-600 dark:disabled:bg-zinc-800 dark:disabled:text-zinc-500"
             placeholder={t('searchFoundStations')}
           />
         </div>
@@ -387,7 +387,7 @@ const FoundList = ({
             />
           ))
         ) : (
-          <li className="rounded border border-dashed border-zinc-300 px-4 py-3 text-sm text-zinc-600 dark:border-zinc-700 dark:text-zinc-300">
+          <li className="rounded border border-dashed border-zinc-300 px-4 py-3 text-sm text-zinc-600 dark:border-[#18181b] dark:text-zinc-300">
             {t('noStationsFound', {
               query: normalizedFilter ? trimmedFilter : undefined,
             })}
@@ -502,7 +502,7 @@ const GroupedLine = memo(
           onMouseOut={() => setHoveredId(null)}
           disabled={disabled}
           className={classNames(
-            'flex w-full items-start gap-3 rounded border border-zinc-200 bg-white px-3 py-2 text-sm transition-colors dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100',
+            'flex w-full items-start gap-3 rounded border border-zinc-200 bg-white px-3 py-2 text-sm transition-colors dark:border-[#18181b] dark:bg-zinc-900 dark:text-zinc-100',
             {
               'bg-yellow-200 shadow-sm dark:bg-amber-300/40': isHovered,
               'ring-2 ring-indigo-400 shadow-lg dark:ring-indigo-300/80': isActive,

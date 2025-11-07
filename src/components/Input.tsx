@@ -335,7 +335,7 @@ const Input = ({
             'animate animate-shake': wrong,
             'shadow-md !shadow-yellow-500': success,
           },
-          'relative z-40 w-full rounded-full border border-zinc-200 bg-white px-4 py-2 text-lg font-bold text-zinc-900 caret-current shadow-lg outline-none ring-zinc-800 transition-shadow duration-300 focus:ring-2 placeholder:text-zinc-500 disabled:cursor-not-allowed disabled:bg-zinc-100 disabled:text-zinc-400 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100 dark:placeholder:text-zinc-400 dark:disabled:bg-zinc-800 dark:disabled:text-zinc-500',
+          'relative z-40 w-full rounded-full border border-zinc-200 bg-white px-4 py-2 text-lg font-bold text-zinc-900 caret-current shadow-lg outline-none ring-zinc-800 transition-shadow duration-300 focus:ring-2 placeholder:text-zinc-500 disabled:cursor-not-allowed disabled:bg-zinc-100 disabled:text-zinc-400 dark:border-[#18181b] dark:bg-zinc-900 dark:text-zinc-100 dark:placeholder:text-zinc-400 dark:disabled:bg-zinc-800 dark:disabled:text-zinc-500',
         )}
         ref={inputRef}
         placeholder={t('inputPlaceholder')}

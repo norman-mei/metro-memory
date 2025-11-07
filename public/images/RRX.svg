@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <rect width="64" height="64" rx="12" fill="#991204"/>
+  <path d="M20 18h24c3.314 0 6 2.686 6 6v12c0 3.314-2.686 6-6 6H20c-3.314 0-6-2.686-6-6V24c0-3.314 2.686-6 6-6z" fill="#FFFFFF" opacity="0.18"/>
+  <circle cx="22" cy="46" r="6" fill="#FFFFFF" opacity="0.85"/>
+  <circle cx="42" cy="46" r="6" fill="#FFFFFF" opacity="0.85"/>
+  <path d="M22 38h20" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-opacity="0.85"/>
+  <text x="32" y="28" fill="#FFFFFF" font-family="Inter, Arial, Helvetica, sans-serif" font-size="12" font-weight="700" text-anchor="middle">RRX</text>
+</svg>

@@ -1,0 +1,23 @@
+{
+  "RD": {
+    "name": "Red Line",
+    "color": "#BF1939",
+    "backgroundColor": "#600C1D",
+    "textColor": "#FFFFFF",
+    "order": 0
+  },
+  "SV": {
+    "name": "Silver Line",
+    "color": "#A2A4A1",
+    "backgroundColor": "#515350",
+    "textColor": "#000000",
+    "order": 1
+  },
+  "BL": {
+    "name": "Blue Line",
+    "color": "#0096D8",
+    "backgroundColor": "#004B6C",
+    "textColor": "#FFFFFF",
+    "order": 2
+  }
+}

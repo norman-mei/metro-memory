@@ -20,18 +20,11 @@
     "textColor": "#000000",
     "order": 2
   },
-  "VancouverSeabusSeabus": {
-    "name": "Seabus",
-    "color": "#746661",
-    "backgroundColor": "#3A3331",
-    "textColor": "#FFFFFF",
-    "order": 3
-  },
   "VancouverWestCoastExpressWce": {
     "name": "WCE",
     "color": "#77278D",
     "backgroundColor": "#3B1447",
     "textColor": "#ffffff",
-    "order": 4
+    "order": 3
   }
 }

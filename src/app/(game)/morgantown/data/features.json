@@ -1,0 +1,95 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.96038836041507,
+          39.65487203422585
+        ]
+      },
+      "properties": {
+        "name": "Mountain",
+        "line": "PRT",
+        "id": 0,
+        "alternate_names": [
+          "Medical"
+        ]
+      },
+      "id": 0
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.96902797272485,
+          39.64740399390211
+        ]
+      },
+      "properties": {
+        "name": "Towers",
+        "line": "PRT",
+        "id": 1
+      },
+      "id": 1
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.97298748247728,
+          39.64733320800106
+        ]
+      },
+      "properties": {
+        "name": "Engineering",
+        "line": "PRT",
+        "id": 2
+      },
+      "id": 2
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.95617342126637,
+          39.63488782253718
+        ]
+      },
+      "properties": {
+        "name": "Beechurst",
+        "line": "PRT",
+        "id": 3,
+        "alternate_names": [
+          "Beechurst Ave",
+          "Beechurst Av"
+        ]
+      },
+      "id": 3
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.95725721107439,
+          39.63002101281231
+        ]
+      },
+      "properties": {
+        "name": "Walnut",
+        "line": "PRT",
+        "id": 4,
+        "alternate_names": [
+          "Walnut St"
+        ]
+      },
+      "id": 4
+    }
+  ]
+}

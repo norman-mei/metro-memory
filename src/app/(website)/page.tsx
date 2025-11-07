@@ -33,7 +33,7 @@ export default async function Home() {
             Challenge yourself to remember the stations of your city&apos;s
             metro.
             <br />
-            How well do you think know your city?
+            How well do you think know your city's metro system?
           </p>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
             The goal is simple. Type as many of the stations as you can
@@ -41,17 +41,18 @@ export default async function Home() {
           </p>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
             If you do well, there might be some{' '}
-            <ConfettiButton>confetti</ConfettiButton> involved.
+            <ConfettiButton>confetti</ConfettiButton> involved—and achievements
+            to celebrate it.
             <br />
             <br />
             Modified fork of original Metro Memory game by Benjamin TD{' '}
             <a
-              href="https://github.com/benjamintd/metro-memory.com"
+              href="https://github.com/norman-mei/metro-memory"
               target="_blank"
               rel="noreferrer"
               className="font-medium text-zinc-800 underline decoration-zinc-300 underline-offset-4 hover:decoration-zinc-500 dark:text-zinc-200 dark:decoration-zinc-500 dark:hover:decoration-zinc-300"
             >
-              (https://github.com/benjamintd/metro-memory.com)
+              (https://github.com/norman-mei/metro-memory)
             </a>
             .
           </p>
@@ -60,21 +61,13 @@ export default async function Home() {
 
         <p className="mt-6"></p>
         <div className="mt-6 flex gap-6">
+          
           <SocialLink
-            href="https://twitter.com/_benjamintd"
-            aria-label="Follow on Twitter/X"
-            icon={TwitterIcon}
-          />
-          <SocialLink
-            href="https://github.com/benjamintd"
+            href="https://github.com/norman-mei"
             aria-label="Follow on GitHub"
             icon={GitHubIcon}
           />
-          <SocialLink
-            href="https://linkedin.com/in/benjamintd"
-            aria-label="Follow on LinkedIn"
-            icon={LinkedInIcon}
-          />
+          
         </div>
 
         <div className="mt-8">

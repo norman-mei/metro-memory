@@ -1,6 +1,6 @@
 {
   "MBTATMetroBlueLine": {
-    "name": "Blue Line",
+    "name": "Blue",
     "color": "#007CC3",
     "backgroundColor": "#003E62",
     "textColor": "#FFFFFF",
@@ -35,14 +35,14 @@
     "order": 4
   },
   "MBTATMetroOrangeLine": {
-    "name": "Orange Line",
+    "name": "Orange",
     "color": "#E87424",
     "backgroundColor": "#79390D",
     "textColor": "#FFFFFF",
     "order": 5
   },
   "MBTATMetroRedLine": {
-    "name": "Red Line",
+    "name": "Red",
     "color": "#EF3E42",
     "backgroundColor": "#8B0C0E",
     "textColor": "#FFFFFF",
@@ -56,63 +56,63 @@
     "order": 7
   },
   "Fa": {
-    "name": "Fairmount Line",
+    "name": "Fairmount",
     "color": "#7B388C",
     "backgroundColor": "#7B388C",
     "textColor": "#FFFFFF",
     "order": 8
   },
   "Fb": {
-    "name": "Fitchburg Line",
+    "name": "Fitchburg",
     "color": "#7B388C",
     "backgroundColor": "#7B388C",
     "textColor": "#FFFFFF",
     "order": 9
   },
   "Fr": {
-    "name": "Franklin/Foxboro Line",
+    "name": "Franklin/Foxboro",
     "color": "#7B388C",
     "backgroundColor": "#7B388C",
     "textColor": "#FFFFFF",
     "order": 10
   },
   "H": {
-    "name": "Haverhill Line",
+    "name": "Haverhill",
     "color": "#7B388C",
     "backgroundColor": "#7B388C",
     "textColor": "#FFFFFF",
     "order": 11
   },
   "L": {
-    "name": "Lowell Line",
+    "name": "Lowell",
     "color": "#7B388C",
     "backgroundColor": "#7B388C",
     "textColor": "#FFFFFF",
     "order": 12
   },
   "Ne": {
-    "name": "Needham Line",
+    "name": "Needham",
     "color": "#7B388C",
     "backgroundColor": "#7B388C",
     "textColor": "#FFFFFF",
     "order": 13
   },
   "Nr": {
-    "name": "Newburyport/Rockport Lines",
+    "name": "Newburyport/Rockport",
     "color": "#7B388C",
     "backgroundColor": "#7B388C",
     "textColor": "#FFFFFF",
     "order": 14
   },
   "P": {
-    "name": "Providence/Stoughton Line",
+    "name": "Providence/Stoughton",
     "color": "#7B388C",
     "backgroundColor": "#7B388C",
     "textColor": "#FFFFFF",
     "order": 18
   },
   "W": {
-    "name": "Framingham/Worcester Line",
+    "name": "Framingham/Worcester",
     "color": "#7B388C",
     "backgroundColor": "#7B388C",
     "textColor": "#FFFFFF",
@@ -126,21 +126,21 @@
     "order": 20
   },
   "GB": {
-    "name": "Greenbush Line",
+    "name": "Greenbush",
     "color": "#7B388C",
     "backgroundColor": "#7B388C",
     "textColor": "#FFFFFF",
     "order": 15
   },
   "KT": {
-    "name": "Kingston Line",
+    "name": "Kingston",
     "color": "#7B388C",
     "backgroundColor": "#7B388C",
     "textColor": "#FFFFFF",
     "order": 16
   },
   "FB": {
-    "name": "Fall River/New Bedford Line",
+    "name": "Fall River/New Bedford",
     "color": "#7B388C",
     "backgroundColor": "#7B388C",
     "textColor": "#FFFFFF",

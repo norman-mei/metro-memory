@@ -8,7 +8,7 @@ export const LINES: {
   [name: string]: Line
 } = {
   STMMetroVerte: {
-    name: 'Verte',
+    name: 'Green',
     color: '#008E4F',
     backgroundColor: '#004727',
     textColor: '#FFFFFF',
@@ -22,49 +22,49 @@ export const LINES: {
     order: 1,
   },
   STMMetroJaune: {
-    name: 'Jaune',
+    name: 'Yellow',
     color: '#FCD100',
     backgroundColor: '#7E6900',
     textColor: '#FFFFFF',
     order: 2,
   },
   STMMetroBleue: {
-    name: 'Bleue',
+    name: 'Blue',
     color: '#0083C9',
     backgroundColor: '#004265',
     textColor: '#FFFFFF',
     order: 3,
   },
   AMTRailExo1: {
-    name: 'Ligne 11',
+    name: 'Vaudreuil–Hudson',
     color: '#F16179',
     backgroundColor: '#9B0E25',
     textColor: '#FFFFFF',
     order: 4,
   },
   AMTRailExo2: {
-    name: 'Ligne 12',
+    name: 'Saint-Jérôme',
     color: '#A2D586',
     backgroundColor: '#4B812D',
     textColor: '#FFFFFF',
     order: 5,
   },
   AMTRailExo3: {
-    name: 'Ligne 13',
+    name: 'Mont-Saint-Hilaire',
     color: '#999AC6',
     backgroundColor: '#3F4071',
     textColor: '#FFFFFF',
     order: 6,
   },
   AMTRailExo4: {
-    name: 'Ligne 14',
+    name: 'Candiac',
     color: '#5AB6B2',
     backgroundColor: '#2A5E5C',
     textColor: '#FFFFFF',
     order: 7,
   },
   AMTRailExo5: {
-    name: 'Ligne 15',
+    name: 'Mascouche',
     color: '#CA5898',
     backgroundColor: '#6E234D',
     textColor: '#FFFFFF',
@@ -117,7 +117,7 @@ export const GAUGE_COLORS = 'inverted'
 
 export const LINE_GROUPS: LineGroup[] = [
   {
-    title: 'Montreal Metro',
+    title: 'Montréal Metro',
     items: [
       {
         type: 'lines',

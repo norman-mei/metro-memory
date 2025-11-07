@@ -1,0 +1,9 @@
+{
+  "KCStreetcar": {
+    "name": "KC Streetcar",
+    "color": "#2880CC",
+    "backgroundColor": "#2880CC",
+    "textColor": "#FFFFFF",
+    "order": 0
+  }
+}

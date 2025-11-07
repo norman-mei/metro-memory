@@ -1,0 +1,1131 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.73368463333979,
+          35.312212720224
+        ]
+      },
+      "properties": {
+        "name": "UNC Charlotte-Main",
+        "line": "501",
+        "id": 0,
+        "alternate_names": [
+          "UNC Charlotte Main"
+        ]
+      },
+      "id": 0
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.74530041996171,
+          35.31076895602985
+        ]
+      },
+      "properties": {
+        "name": "JW Clay Blvd/UNC Charlotte",
+        "line": "501",
+        "id": 1,
+        "alternate_names": [
+          "JW Clay Blvd",
+          "JW Clay Boulevard",
+          "UNC Charlotte"
+        ]
+      },
+      "id": 1
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.75296565355882,
+          35.301217546750365
+        ]
+      },
+      "properties": {
+        "name": "McCullough",
+        "line": "501",
+        "id": 2
+      },
+      "id": 2
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.76086694277554,
+          35.28699639240375
+        ]
+      },
+      "properties": {
+        "name": "University City Blvd",
+        "line": "501",
+        "id": 3,
+        "alternate_names": [
+          "University City Boulevard"
+        ]
+      },
+      "id": 3
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.7662621831612,
+          35.277995513322324
+        ]
+      },
+      "properties": {
+        "name": "Tom Hunter",
+        "line": "501",
+        "id": 4
+      },
+      "id": 4
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.77286605682167,
+          35.25996678751023
+        ]
+      },
+      "properties": {
+        "name": "Old Concord Road",
+        "line": "501",
+        "id": 5
+      },
+      "id": 5
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.79285470152185,
+          35.25151654977894
+        ]
+      },
+      "properties": {
+        "name": "Sugar Creek",
+        "line": "501",
+        "id": 6
+      },
+      "id": 6
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.80623948310871,
+          35.249229188652215
+        ]
+      },
+      "properties": {
+        "name": "36th Street",
+        "line": "501",
+        "id": 7,
+        "alternate_names": [
+          "36th St"
+        ]
+      },
+      "id": 7
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.81711812799391,
+          35.24176535213418
+        ]
+      },
+      "properties": {
+        "name": "25th Street",
+        "line": "501",
+        "id": 8,
+        "alternate_names": [
+          "25th St"
+        ]
+      },
+      "id": 8
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.82342741077376,
+          35.2370218150313
+        ]
+      },
+      "properties": {
+        "name": "Parkwood",
+        "line": "501",
+        "id": 9
+      },
+      "id": 9
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.83501364212663,
+          35.229652762976514
+        ]
+      },
+      "properties": {
+        "name": "9th Street",
+        "line": "501",
+        "id": 10,
+        "alternate_names": [
+          "9th St"
+        ]
+      },
+      "id": 10
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.83807990355292,
+          35.22743741294644
+        ]
+      },
+      "properties": {
+        "name": "7th Street",
+        "line": "501",
+        "id": 11,
+        "alternate_names": [
+          "7th St"
+        ]
+      },
+      "id": 11
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.84092819304317,
+          35.225401232094804
+        ]
+      },
+      "properties": {
+        "name": "CTC/Arena",
+        "line": "501",
+        "id": 12,
+        "alternate_names": [
+          "CTC",
+          "Arena",
+          "Charlotte Transportation Center",
+          "CTC Arena"
+        ]
+      },
+      "id": 12
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.84336361898545,
+          35.223595765466975
+        ]
+      },
+      "properties": {
+        "name": "3rd Street/Convention Center",
+        "line": "501",
+        "id": 13,
+        "alternate_names": [
+          "3rd Street",
+          "Convention Center",
+          "3rd St"
+        ]
+      },
+      "id": 13
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.84710799351863,
+          35.221343267426604
+        ]
+      },
+      "properties": {
+        "name": "Brooklyn Village",
+        "line": "501",
+        "id": 14
+      },
+      "id": 14
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.85089525602768,
+          35.218854031844934
+        ]
+      },
+      "properties": {
+        "name": "Carson",
+        "line": "501",
+        "id": 15
+      },
+      "id": 15
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.85526371236365,
+          35.21583228100279
+        ]
+      },
+      "properties": {
+        "name": "Bland Street",
+        "line": "501",
+        "id": 16,
+        "alternate_names": [
+          "Bland St"
+        ]
+      },
+      "id": 16
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.85913683673317,
+          35.21212450146178
+        ]
+      },
+      "properties": {
+        "name": "East/West Boulevard",
+        "line": "501",
+        "id": 17,
+        "alternate_names": [
+          "East West Boulevard",
+          "East/West Blvd",
+          "East West Blvd"
+        ]
+      },
+      "id": 17
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.86287077532977,
+          35.207395923413884
+        ]
+      },
+      "properties": {
+        "name": "South End",
+        "line": "501",
+        "id": 18
+      },
+      "id": 18
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.86908912681818,
+          35.19993238863972
+        ]
+      },
+      "properties": {
+        "name": "New Bern",
+        "line": "501",
+        "id": 19
+      },
+      "id": 19
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.87503289314662,
+          35.19098076671836
+        ]
+      },
+      "properties": {
+        "name": "Scaleybark",
+        "line": "501",
+        "id": 20
+      },
+      "id": 20
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.87908739019024,
+          35.175903602079075
+        ]
+      },
+      "properties": {
+        "name": "Woodlawn",
+        "line": "501",
+        "id": 21
+      },
+      "id": 21
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.87756388124681,
+          35.1630024875117
+        ]
+      },
+      "properties": {
+        "name": "Tyvola",
+        "line": "501",
+        "id": 22
+      },
+      "id": 22
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.87750313683046,
+          35.152916513393244
+        ]
+      },
+      "properties": {
+        "name": "Archdale",
+        "line": "501",
+        "id": 23
+      },
+      "id": 23
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.87639804901397,
+          35.13575315895796
+        ]
+      },
+      "properties": {
+        "name": "Arrowood",
+        "line": "501",
+        "id": 24
+      },
+      "id": 24
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.88210481419677,
+          35.11956443659021
+        ]
+      },
+      "properties": {
+        "name": "Sharon Road West",
+        "line": "501",
+        "id": 25,
+        "alternate_names": [
+          "Sharon Rd West"
+        ]
+      },
+      "id": 25
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.88293141727786,
+          35.107100323520044
+        ]
+      },
+      "properties": {
+        "name": "I-485/South Boulevard",
+        "line": "501",
+        "id": 26,
+        "alternate_names": [
+          "I-485",
+          "South Boulevard",
+          "I-485 South Boulevard"
+        ]
+      },
+      "id": 26
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.85442378677719,
+          35.27352454997616
+        ]
+      },
+      "properties": {
+        "name": "Rosa Parks Community Transit Center",
+        "line": "510",
+        "id": 27
+      },
+      "id": 27
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.8540408624967,
+          35.26828848616267
+        ]
+      },
+      "properties": {
+        "name": "Montana Drive",
+        "line": "510",
+        "id": 28
+      },
+      "id": 28
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.85472751567222,
+          35.26300625635355
+        ]
+      },
+      "properties": {
+        "name": "LaSalle St",
+        "line": "510",
+        "id": 29,
+        "alternate_names": [
+          "LaSalle Street"
+        ]
+      },
+      "id": 29
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.85558581886076,
+          35.257049092110265
+        ]
+      },
+      "properties": {
+        "name": "Russell Ave",
+        "line": "510",
+        "id": 30,
+        "alternate_names": [
+          "Russell Avenue"
+        ]
+      },
+      "id": 30
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.85613298693228,
+          35.25285250746046
+        ]
+      },
+      "properties": {
+        "name": "Booker Avenue & Oaklawn Avenue",
+        "line": "510",
+        "id": 31,
+        "alternate_names": [
+          "Booker & Oaklawn"
+        ]
+      },
+      "id": 31
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.85689454720458,
+          35.246246834410655
+        ]
+      },
+      "properties": {
+        "name": "French Street",
+        "line": "510",
+        "id": 32
+      },
+      "id": 32
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.85822716881485,
+          35.24351980408411
+        ]
+      },
+      "properties": {
+        "name": "Johnson C. Smith University",
+        "line": "510",
+        "id": 33,
+        "alternate_names": [
+          "JCSU"
+        ]
+      },
+      "id": 33
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.85849146334496,
+          35.24017532466502
+        ]
+      },
+      "properties": {
+        "name": "Bruns Avenue",
+        "line": "510",
+        "id": 34,
+        "alternate_names": [
+          "Bruns Ave"
+        ]
+      },
+      "id": 34
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.8588289583779,
+          35.237331479670345
+        ]
+      },
+      "properties": {
+        "name": "Wesley Heights",
+        "line": "510",
+        "id": 35
+      },
+      "id": 35
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.8528069610536,
+          35.2350277782394
+        ]
+      },
+      "properties": {
+        "name": "Irwin Avenue",
+        "line": "510",
+        "id": 36,
+        "alternate_names": [
+          "Irwin Ave"
+        ]
+      },
+      "id": 36
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.85099549748385,
+          35.23373680989736
+        ]
+      },
+      "properties": {
+        "name": "Johnson & Wales",
+        "line": "510",
+        "id": 37,
+        "alternate_names": [
+          "Johnson and Wales"
+        ]
+      },
+      "id": 37
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.84782750586926,
+          35.231295208836045
+        ]
+      },
+      "properties": {
+        "name": "Charlotte Gateway",
+        "line": "510",
+        "id": 38,
+        "alternate_names": [
+          "Gateway",
+          "Charlotte Gateway Station"
+        ]
+      },
+      "id": 38
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.84569854843059,
+          35.229487161196325
+        ]
+      },
+      "properties": {
+        "name": "Mint Street",
+        "line": "510",
+        "id": 39,
+        "alternate_names": [
+          "Mint St"
+        ]
+      },
+      "id": 39
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.84336431860675,
+          35.2274542015872
+        ]
+      },
+      "properties": {
+        "name": "Tryon Street",
+        "line": "510",
+        "id": 40,
+        "alternate_names": [
+          "Tryon St"
+        ]
+      },
+      "id": 40
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.84023312055548,
+          35.22477575510725
+        ]
+      },
+      "properties": {
+        "name": "CTC/Arena",
+        "line": "510",
+        "id": 41,
+        "alternate_names": [
+          "CTC",
+          "Arena",
+          "Charlotte Transportation Center",
+          "CTC Arena"
+        ]
+      },
+      "id": 41
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.83783492426257,
+          35.22280498983171
+        ]
+      },
+      "properties": {
+        "name": "Davidson Street",
+        "line": "510",
+        "id": 42,
+        "alternate_names": [
+          "Davidson St"
+        ]
+      },
+      "id": 42
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.83588999068672,
+          35.221058013230746
+        ]
+      },
+      "properties": {
+        "name": "McDowell Street",
+        "line": "510",
+        "id": 43,
+        "alternate_names": [
+          "McDowell St"
+        ]
+      },
+      "id": 43
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.8309848438785,
+          35.21729696245991
+        ]
+      },
+      "properties": {
+        "name": "CPCC Central Campus",
+        "line": "510",
+        "id": 44,
+        "alternate_names": [
+          "Central Campus",
+          "CPCC"
+        ]
+      },
+      "id": 44
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.82649414260125,
+          35.21359179631904
+        ]
+      },
+      "properties": {
+        "name": "Elizabeth & Hawthorne",
+        "line": "510",
+        "id": 45,
+        "alternate_names": [
+          "Elizabeth and Hawthorne"
+        ]
+      },
+      "id": 45
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.82457057575941,
+          35.213797051940176
+        ]
+      },
+      "properties": {
+        "name": "Hawthorne & 5th",
+        "line": "510",
+        "id": 46,
+        "alternate_names": [
+          "Hawthorne and 5th"
+        ]
+      },
+      "id": 46
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.82089958413096,
+          35.216839777301324
+        ]
+      },
+      "properties": {
+        "name": "Hawthorne & 8th",
+        "line": "510",
+        "id": 47,
+        "alternate_names": [
+          "Hawthorne and 8th"
+        ]
+      },
+      "id": 47
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.81890062147521,
+          35.21955830763171
+        ]
+      },
+      "properties": {
+        "name": "Sunnyside Avenue",
+        "line": "510",
+        "id": 48,
+        "alternate_names": [
+          "Sunnyside Ave"
+        ]
+      },
+      "id": 48
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.81653563496084,
+          35.22450844062779
+        ]
+      },
+      "properties": {
+        "name": "Hawthorne at Barnhardt",
+        "line": "510",
+        "id": 49
+      },
+      "id": 49
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.81087077752868,
+          35.220312341122444
+        ]
+      },
+      "properties": {
+        "name": "The Plaza",
+        "line": "510",
+        "id": 50
+      },
+      "id": 50
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.80332538790998,
+          35.2196984722233
+        ]
+      },
+      "properties": {
+        "name": "Veterans Parks",
+        "line": "510",
+        "id": 51,
+        "alternate_names": [
+          "Veterans Park"
+        ]
+      },
+      "id": 51
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.79922734102493,
+          35.219323630841025
+        ]
+      },
+      "properties": {
+        "name": "Morningside Drive",
+        "line": "510",
+        "id": 52,
+        "alternate_names": [
+          "Morningside Dr"
+        ]
+      },
+      "id": 52
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.7943981363296,
+          35.21799547043119
+        ]
+      },
+      "properties": {
+        "name": "Arnold Drive",
+        "line": "510",
+        "id": 53,
+        "alternate_names": [
+          "Arnold Dr"
+        ]
+      },
+      "id": 53
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.78884181181508,
+          35.216583226885604
+        ]
+      },
+      "properties": {
+        "name": "Briar Creek Road",
+        "line": "510",
+        "id": 54,
+        "alternate_names": [
+          "Briar Creek Rd"
+        ]
+      },
+      "id": 54
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.78446840631054,
+          35.2159322698826
+        ]
+      },
+      "properties": {
+        "name": "Eastway Crossing",
+        "line": "510",
+        "id": 55
+      },
+      "id": 55
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.7807546350821,
+          35.215604166443306
+        ]
+      },
+      "properties": {
+        "name": "Eastway Drive",
+        "line": "510",
+        "id": 56,
+        "alternate_names": [
+          "Eastway Dr"
+        ]
+      },
+      "id": 56
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.77491710654311,
+          35.214991612114744
+        ]
+      },
+      "properties": {
+        "name": "Sheridan Drive",
+        "line": "510",
+        "id": 57,
+        "alternate_names": [
+          "Sheridan Dr"
+        ]
+      },
+      "id": 57
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.76864245690791,
+          35.213483533154644
+        ]
+      },
+      "properties": {
+        "name": "Darby Acres",
+        "line": "510",
+        "id": 58
+      },
+      "id": 58
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.76347845004223,
+          35.21233727238302
+        ]
+      },
+      "properties": {
+        "name": "Landsdale Drive & Rosehaven Drive",
+        "line": "510",
+        "id": 59,
+        "alternate_names": [
+          "Landsdale & Rosehaven"
+        ]
+      },
+      "id": 59
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.75908813614232,
+          35.21088792007117
+        ]
+      },
+      "properties": {
+        "name": "Winterfield Place",
+        "line": "510",
+        "id": 60
+      },
+      "id": 60
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.75318577493016,
+          35.20746666733275
+        ]
+      },
+      "properties": {
+        "name": "Eastland Community Transit Center",
+        "line": "510",
+        "id": 61,
+        "alternate_names": [
+          "Eastland Transit Center",
+          "Eastland"
+        ]
+      },
+      "id": 61
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-115.15461443138132, 36.14232879413048]
+      },
+      "properties": {
+        "name": "Sahara",
+        "line": "LVM",
+        "id": 0
+      },
+      "id": 0
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-115.15291122774558, 36.13707959246462]
+      },
+      "properties": {
+        "name": "Westgate",
+        "line": "LVM",
+        "id": 1
+      },
+      "id": 1
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-115.15441915859896, 36.12953853220802]
+      },
+      "properties": {
+        "name": "Convention Center",
+        "line": "LVM",
+        "id": 2
+      },
+      "id": 2
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-115.16854350414845, 36.118785550802876]
+      },
+      "properties": {
+        "name": "Harrah's & The LINQ",
+        "line": "LVM",
+        "id": 3
+      },
+      "id": 3
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-115.16856753146851, 36.11604201424016]
+      },
+      "properties": {
+        "name": "Flamingo & Caesars Palace",
+        "line": "LVM",
+        "id": 4
+      },
+      "id": 4
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-115.16744532772789, 36.1123474465473]
+      },
+      "properties": {
+        "name": "Horseshoe & Paris",
+        "line": "LVM",
+        "id": 5
+      },
+      "id": 5
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-115.16781283653094, 36.10245324400629]
+      },
+      "properties": {
+        "name": "MGM Grand",
+        "line": "LVM",
+        "id": 6
+      },
+      "id": 6
+    }
+  ]
+}
