@@ -760,6 +760,31 @@ export default function GamePage({
     return Array.from(new Set(ids))
   }, [featureCollection.features])
 
+  useEffect(() => {
+    if (typeof window === 'undefined') {
+      return
+    }
+
+    const total = allStationIds.length
+    const storageKey = `${CITY_NAME}-station-total`
+
+    try {
+      if (total <= 0) {
+        window.localStorage.removeItem(storageKey)
+        return
+      }
+
+      const stored = Number(window.localStorage.getItem(storageKey))
+      if (!Number.isFinite(stored) || stored !== total) {
+        window.localStorage.setItem(storageKey, String(total))
+      }
+    } catch (error) {
+      if (process.env.NODE_ENV !== 'production') {
+        console.warn(`Unable to persist station total for ${CITY_NAME}`, error)
+      }
+    }
+  }, [CITY_NAME, allStationIds])
+
   const [map, setMap] = useState<mapboxgl.Map | null>(null)
   const [hoveredId, setHoveredId] = useState<number | null>(null)
   const inputRef = useRef<HTMLInputElement | null>(null)
@@ -862,6 +887,17 @@ export default function GamePage({
   }, [localFound, idMap])
 
   useEffect(() => {
+    if (!Array.isArray(localFound)) {
+      return
+    }
+    const filtered = localFound.filter((id) => idMap.has(id))
+    const unique = Array.from(new Set(filtered))
+    if (unique.length !== localFound.length || filtered.length !== localFound.length) {
+      setFound(unique)
+    }
+  }, [localFound, idMap, setFound])
+
+  useEffect(() => {
     if (found.length === 0) {
       return
     }
@@ -943,6 +979,30 @@ export default function GamePage({
     return result
   }, [found, idMap])
 
+  const launchCompletionConfetti = useCallback(() => {
+    const lineColors = Object.values(LINES ?? {})
+      .map((line) => line?.color)
+      .filter((color): color is string => typeof color === 'string' && color.length > 0)
+
+    const makeConfetti = async () => {
+      const confetti = (await import('tsparticles-confetti')).confetti
+      confetti({
+        spread: 130,
+        ticks: 200,
+        particleCount: 220,
+        origin: { y: 0.2 },
+        decay: 0.88,
+        gravity: 1.8,
+        startVelocity: 55,
+        scalar: 1.4,
+        shapes: ['circle', 'square'],
+        colors: lineColors.length > 0 ? lineColors : undefined,
+      })
+    }
+
+    void makeConfetti()
+  }, [LINES])
+
   const revealAllStations = useCallback(() => {
     setFound(allStationIds)
     setIsNewPlayer(false)
@@ -958,12 +1018,14 @@ export default function GamePage({
       }
       return next
     })
+    launchCompletionConfetti()
   }, [
     allStationIds,
     setFound,
     setIsNewPlayer,
     setHideLabels,
     setFoundTimestamps,
+    launchCompletionConfetti,
   ])
 
   const handleRevealSolutions = useCallback(() => {
@@ -1619,12 +1681,20 @@ export default function GamePage({
                 disabled={solutionsPromptOpen}
               />
               <MenuComponent
-                onReset={onReset}
                 hideLabels={hideLabels}
                 setHideLabels={setHideLabels}
                 onRevealSolutions={handleRevealSolutions}
                 foundProportion={foundProportion}
               />
+              {found.length > 0 && (
+                <button
+                  type="button"
+                  onClick={onReset}
+                  className="hidden rounded-full border border-red-200 px-4 py-2 text-sm font-medium text-red-600 transition hover:bg-red-50 focus:outline-none focus:ring-2 focus:ring-red-300 dark:border-red-500/40 dark:text-red-300 dark:hover:bg-red-500/10 lg:inline-flex"
+                >
+                  Reset progress
+                </button>
+              )}
             </div>
           </div>
         </div>

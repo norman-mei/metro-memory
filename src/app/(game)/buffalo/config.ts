@@ -4,6 +4,7 @@ import { Config, Line, LineGroup } from '@/lib/types'
 import linesData from './data/lines.json'
 
 export const BEG_THRESHOLD = 0.5
+export const GAUGE_COLORS = 'inverted'
 
 export const LINES = linesData as { [name: string]: Line }
 
@@ -66,6 +67,7 @@ const config: Config = {
   LINES,
   LINE_GROUPS,
   BEG_THRESHOLD,
+  GAUGE_COLORS,
 }
 
 export default config

@@ -28,10 +28,20 @@ const ConfettiButton = ({ children }: { children: ReactNode }) => {
       })
     }
 
-    makeConfetti()
+    void makeConfetti()
   }, [])
 
-  return <button onClick={onClick}>{children}</button>
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      className="inline-flex items-center gap-2 rounded-full bg-amber-100 px-4 py-1 text-sm font-semibold text-amber-700 transition hover:bg-amber-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 dark:bg-amber-500/20 dark:text-amber-200 dark:hover:bg-amber-500/30"
+      aria-label="Launch celebratory confetti"
+    >
+      <span aria-hidden="true">🎉</span>
+      <span>{children}</span>
+    </button>
+  )
 }
 
 export default ConfettiButton

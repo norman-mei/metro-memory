@@ -9,19 +9,15 @@ import useTranslation from '@/hooks/useTranslation'
 import Link from 'next/link'
 
 export default function MenuComponent({
-  onReset,
   setHideLabels,
   hideLabels,
   onRevealSolutions,
   foundProportion,
-  canReset,
 }: {
-  onReset: () => void
   hideLabels: boolean
   setHideLabels: (hide: boolean) => void
   onRevealSolutions: () => void
   foundProportion: number
-  canReset: boolean
 }) {
   const [modalOpen, setModalOpen] = useState(false)
   const { t } = useTranslation()
@@ -46,38 +42,6 @@ export default function MenuComponent({
       >
         <Menu.Items className="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none dark:bg-zinc-800 dark:ring-white/10">
           <div className="py-1">
-            <Menu.Item disabled={!canReset}>
-              {({ active, disabled }) => (
-                <span
-                  className={classNames(
-                    'block w-full px-4 py-2 text-sm transition',
-                    disabled
-                      ? 'cursor-not-allowed text-gray-400 dark:text-zinc-500'
-                      : 'cursor-pointer text-gray-700 dark:text-zinc-100',
-                    active &&
-                      !disabled &&
-                      'bg-gray-100 text-gray-900 dark:bg-zinc-700 dark:text-zinc-100',
-                  )}
-                  title={
-                    disabled
-                      ? "You can't start over at 0.00% stations found!"
-                      : undefined
-                  }
-                >
-                  <button
-                    className="w-full bg-transparent text-left text-sm"
-                    onClick={() => {
-                      if (!disabled) {
-                        onReset()
-                      }
-                    }}
-                    disabled={disabled}
-                  >
-                    {t('startOver')}
-                  </button>
-                </span>
-              )}
-            </Menu.Item>
             <Menu.Item disabled={showSolutionsDisabled}>
               {({ active, disabled }) => (
                 <span

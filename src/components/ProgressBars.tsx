@@ -39,6 +39,7 @@ const ProgressBars = ({
   minimized?: boolean
 }) => {
   const { LINES, GAUGE_COLORS, LINE_GROUPS } = useConfig()
+  const gaugeMode = GAUGE_COLORS ?? 'inverted'
   const { resolvedTheme } = useTheme()
   const isDark = resolvedTheme === 'dark'
   const orderedLines = useMemo(
@@ -104,13 +105,12 @@ const ProgressBars = ({
               backgroundPadding={2}
               styles={buildStyles({
                 backgroundColor:
-                  GAUGE_COLORS === 'inverted'
+                  gaugeMode === 'inverted'
                     ? isDark
                       ? '#27272a'
                       : '#ffffff'
                     : meta.color,
-                pathColor:
-                  GAUGE_COLORS === 'inverted' ? meta.color : meta.textColor,
+                pathColor: gaugeMode === 'inverted' ? meta.color : meta.textColor,
                 textColor: isDark ? '#e4e4e7' : '#27272a',
                 trailColor: 'transparent',
               })}

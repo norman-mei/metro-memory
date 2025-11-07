@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useMemo, useState } from 'react'
+import { useCallback, useEffect, useMemo, useState } from 'react'
 import classNames from 'classnames'
 import Fuse from 'fuse.js'
 import { Transition } from '@headlessui/react'
@@ -41,6 +41,61 @@ const ACHIEVEMENT_SORT_OPTIONS: Array<{ value: AchievementSortOption; label: str
   { value: 'achieved-asc', label: 'Achieved (A-Z)' },
   { value: 'achieved-desc', label: 'Achieved (Z-A)' },
 ]
+
+const TAB_OPTIONS: Array<{ id: TabOption; label: string }> = [
+  { id: 'cities', label: 'Cities' },
+  { id: 'achievements', label: 'Achievements' },
+  { id: 'updateLog', label: 'Update Log' },
+  { id: 'credits', label: 'Credits' },
+]
+
+type TabOption = 'cities' | 'achievements' | 'updateLog' | 'credits'
+
+type UpdateLogStatus = 'idle' | 'loading' | 'success' | 'error'
+
+type UpdateLogEntry = {
+  sha: string
+  message: string
+  author: string
+  date?: string
+  url: string
+}
+
+type UpdateLogState = {
+  status: UpdateLogStatus
+  entries: UpdateLogEntry[]
+  errorMessage?: string
+  lastUpdated?: string
+}
+
+type GithubCommitResponse = {
+  sha?: string
+  html_url?: string
+  commit?: {
+    message?: string
+    author?: { name?: string; date?: string | null }
+    committer?: { date?: string | null }
+  }
+  author?: { login?: string | null }
+}
+
+const UPDATE_LOG_ENDPOINT =
+  'https://api.github.com/repos/norman-mei/metro-memory/commits?per_page=20'
+
+const UPDATE_LOG_HEADERS: HeadersInit = {
+  Accept: 'application/vnd.github+json',
+  'X-GitHub-Api-Version': '2022-11-28',
+}
+
+const UPDATE_LOG_LIMIT = 15
+
+const formatCommitMessage = (message?: string | null) => {
+  if (!message) {
+    return 'No commit message'
+  }
+  const firstLine = message.split('\n')[0]?.trim()
+  return firstLine && firstLine.length > 0 ? firstLine : 'No commit message'
+}
 
 const REGION_KEYWORDS: Record<string, string[]> = {
   AL: ['Alabama', 'AL'],
@@ -156,12 +211,16 @@ interface AchievementMeta {
 }
 
 const SearcheableCitiesList = () => {
-  const [activeTab, setActiveTab] = useState<'cities' | 'achievements' | 'credits'>('cities')
+  const [activeTab, setActiveTab] = useState<TabOption>('cities')
   const [search, setSearch] = useState('')
   const [citySort, setCitySort] = useState<CitySortOption>('default')
   const [achievementSearch, setAchievementSearch] = useState('')
   const [achievementSort, setAchievementSort] = useState<AchievementSortOption>('default')
   const [unlockedSlugs, setUnlockedSlugs] = useState<string[]>([])
+  const [updateLogState, setUpdateLogState] = useState<UpdateLogState>({
+    status: 'idle',
+    entries: [],
+  })
 
   const enrichedCities = useMemo(() => enrichCities(cities), [])
   const achievementCatalog = useMemo(() => {
@@ -295,6 +354,104 @@ const SearcheableCitiesList = () => {
     return sortAchievementEntries(filtered, achievementSort, unlockedSet)
   }, [achievementCatalog, achievementSearchSet, achievementSort, unlockedSet])
 
+  const fetchUpdateLog = useCallback(
+    async (signal?: AbortSignal) => {
+      setUpdateLogState((prev) => ({
+        ...prev,
+        status: 'loading',
+        errorMessage: undefined,
+      }))
+
+      try {
+        const response = await fetch(UPDATE_LOG_ENDPOINT, {
+          headers: UPDATE_LOG_HEADERS,
+          signal,
+        })
+
+        if (!response.ok) {
+          throw new Error(`GitHub responded with status ${response.status}`)
+        }
+
+        const payload = (await response.json()) as GithubCommitResponse[]
+        if (signal?.aborted) {
+          return
+        }
+
+        if (!Array.isArray(payload)) {
+          throw new Error('Unexpected GitHub response')
+        }
+
+        const entries = payload
+          .map<UpdateLogEntry | null>((item) => {
+            const sha = item.sha ?? ''
+            if (!sha) {
+              return null
+            }
+            const message = formatCommitMessage(item.commit?.message)
+            const author =
+              item.commit?.author?.name ??
+              item.author?.login ??
+              'Unknown contributor'
+            const date =
+              item.commit?.author?.date ??
+              item.commit?.committer?.date ??
+              undefined
+            const url =
+              item.html_url ??
+              `https://github.com/norman-mei/metro-memory/commit/${sha}`
+
+            return {
+              sha,
+              message,
+              author,
+              date: typeof date === 'string' ? date : undefined,
+              url,
+            }
+          })
+          .filter((entry): entry is UpdateLogEntry => entry !== null)
+          .slice(0, UPDATE_LOG_LIMIT)
+
+        setUpdateLogState({
+          status: 'success',
+          entries,
+          lastUpdated: new Date().toISOString(),
+        })
+      } catch (error) {
+        if (signal?.aborted) {
+          return
+        }
+
+        setUpdateLogState({
+          status: 'error',
+          entries: [],
+          errorMessage:
+            error instanceof Error ? error.message : 'Unable to fetch updates',
+        })
+      }
+    },
+    [],
+  )
+
+  useEffect(() => {
+    if (activeTab !== 'updateLog' || updateLogState.status !== 'idle') {
+      return
+    }
+
+    const controller = new AbortController()
+    fetchUpdateLog(controller.signal)
+
+    return () => {
+      controller.abort()
+    }
+  }, [activeTab, fetchUpdateLog, updateLogState.status])
+
+  const handleUpdateLogRetry = useCallback(() => {
+    if (updateLogState.status === 'loading') {
+      return
+    }
+    fetchUpdateLog()
+  }, [fetchUpdateLog, updateLogState.status])
+
   useEffect(() => {
     const computeAchievements = () => {
       if (typeof window === 'undefined') return
@@ -342,18 +499,18 @@ const SearcheableCitiesList = () => {
   return (
     <div className="my-16 mt-16 sm:mt-20">
       <div className="mb-6 flex gap-3">
-        {(['cities', 'achievements', 'credits'] as const).map((tab) => (
+        {TAB_OPTIONS.map(({ id, label }) => (
           <button
-            key={tab}
-            onClick={() => setActiveTab(tab)}
+            key={id}
+            onClick={() => setActiveTab(id)}
             className={classNames(
               'rounded-full px-4 py-2 text-sm font-semibold transition',
-              activeTab === tab
+              activeTab === id
                 ? 'bg-indigo-600 text-white dark:bg-indigo-500'
                 : 'bg-gray-200 text-gray-700 hover:bg-gray-300 dark:bg-zinc-800 dark:text-zinc-200 dark:hover:bg-zinc-700',
             )}
           >
-            {tab === 'cities' ? 'Cities' : tab === 'achievements' ? 'Achievements' : 'Credits'}
+            {label}
           </button>
         ))}
       </div>
@@ -445,6 +602,8 @@ const SearcheableCitiesList = () => {
           sortOption={achievementSort}
           onSortChange={setAchievementSort}
         />
+      ) : activeTab === 'updateLog' ? (
+        <UpdateLogPanel state={updateLogState} onRetry={handleUpdateLogRetry} />
       ) : (
         <div className="flex justify-center">
           <CreditsContent showBackLink={false} />
@@ -555,6 +714,103 @@ const Achievements = ({
   )
 }
 
+const UpdateLogPanel = ({
+  state,
+  onRetry,
+}: {
+  state: UpdateLogState
+  onRetry: () => void
+}) => {
+  const [showEmptyState, setShowEmptyState] = useState(false)
+
+  useEffect(() => {
+    let timer: ReturnType<typeof setTimeout> | undefined
+    if (state.status === 'success' && state.entries.length === 0) {
+      setShowEmptyState(false)
+      timer = setTimeout(() => setShowEmptyState(true), 60_000)
+    } else {
+      setShowEmptyState(false)
+    }
+
+    return () => {
+      if (timer) {
+        clearTimeout(timer)
+      }
+    }
+  }, [state.entries.length, state.status])
+
+  if (state.status === 'loading' || state.status === 'idle') {
+    return (
+      <div className="rounded-2xl border border-dashed border-zinc-300 p-6 text-center text-sm text-zinc-500 dark:border-[#18181b] dark:text-zinc-400">
+        Fetching the latest updates…
+      </div>
+    )
+  }
+
+  if (state.status === 'error') {
+    return (
+      <div className="rounded-2xl border border-red-200 bg-red-50 p-6 text-center text-sm text-red-700 dark:border-red-900 dark:bg-red-950/40 dark:text-red-300">
+        <p className="mb-3">
+          Unable to load the update log. {state.errorMessage ?? 'Please try again.'}
+        </p>
+        <button
+          type="button"
+          onClick={onRetry}
+          className="rounded-full bg-red-600 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-white transition hover:bg-red-500 dark:bg-red-500 dark:hover:bg-red-400"
+        >
+          Retry
+        </button>
+      </div>
+    )
+  }
+
+  if (state.status === 'success' && state.entries.length === 0) {
+    if (!showEmptyState) {
+      return (
+        <div className="rounded-2xl border border-dashed border-zinc-300 p-6 text-center text-sm text-zinc-500 dark:border-[#18181b] dark:text-zinc-400">
+          Checking for new updates…
+        </div>
+      )
+    }
+    return (
+      <div className="rounded-2xl border border-dashed border-zinc-300 p-6 text-center text-sm text-zinc-500 dark:border-[#18181b] dark:text-zinc-400">
+        No update log(s) found.
+      </div>
+    )
+  }
+
+  return (
+    <div className="space-y-4">
+      {state.lastUpdated && (
+        <p className="text-xs uppercase tracking-wide text-zinc-400 dark:text-zinc-500">
+          Last refreshed {formatUpdateDate(state.lastUpdated)}
+        </p>
+      )}
+      {state.entries.map((entry) => (
+        <article
+          key={entry.sha}
+          className="rounded-2xl border border-zinc-200 bg-white p-4 shadow-sm dark:border-[#18181b] dark:bg-zinc-900"
+        >
+          <div className="space-y-1">
+            <a
+              href={entry.url}
+              target="_blank"
+              rel="noreferrer"
+              className="text-base font-semibold text-indigo-600 underline decoration-indigo-300 underline-offset-4 transition hover:decoration-indigo-500 dark:text-indigo-300 dark:decoration-indigo-500 dark:hover:decoration-indigo-400"
+            >
+              {entry.message}
+            </a>
+            <p className="text-sm text-zinc-500 dark:text-zinc-400">
+              {entry.author} • {formatUpdateDate(entry.date)}
+            </p>
+            <p className="text-xs font-mono text-zinc-400 dark:text-zinc-500">{entry.sha.slice(0, 7)}</p>
+          </div>
+        </article>
+      ))}
+    </div>
+  )
+}
+
 const EmptyState = () => (
   <div className="w-full rounded bg-indigo-700 px-12 py-6 text-white">
     <h3 className="mb-2 text-lg font-medium">No results!</h3>
@@ -610,6 +866,20 @@ const sortAchievementEntries = (
     default:
       return base.sort((a, b) => a.order - b.order)
   }
+}
+
+const formatUpdateDate = (iso?: string) => {
+  if (!iso) {
+    return 'Unknown date'
+  }
+  const date = new Date(iso)
+  if (Number.isNaN(date.getTime())) {
+    return 'Unknown date'
+  }
+  return new Intl.DateTimeFormat(undefined, {
+    dateStyle: 'medium',
+    timeStyle: 'short',
+  }).format(date)
 }
 
 export default SearcheableCitiesList

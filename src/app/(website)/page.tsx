@@ -33,7 +33,7 @@ export default async function Home() {
             Challenge yourself to remember the stations of your city&apos;s
             metro.
             <br />
-            How well do you think know your city's metro system?
+            How well do you think know your city&apos;s metro system?
           </p>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
             The goal is simple. Type as many of the stations as you can
@@ -68,15 +68,6 @@ export default async function Home() {
             icon={GitHubIcon}
           />
           
-        </div>
-
-        <div className="mt-8">
-          <Link
-            href="/credits"
-            className="text-sm font-medium text-indigo-600 underline decoration-indigo-300 underline-offset-4 transition hover:decoration-indigo-500 dark:text-indigo-300 dark:decoration-indigo-500 dark:hover:decoration-indigo-400"
-          >
-            View full credits
-          </Link>
         </div>
 
         <h2 className="mt-12 text-4xl font-bold">

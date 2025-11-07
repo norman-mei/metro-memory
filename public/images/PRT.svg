@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
-  <rect width="64" height="64" rx="12" fill="#173764"/>
-  <path d="M20 16h24c2.209 0 4 1.791 4 4v10c0 2.209-1.791 4-4 4H20c-2.209 0-4-1.791-4-4V20c0-2.209 1.791-4 4-4z" fill="#EBAC00"/>
-  <circle cx="23" cy="42" r="6" fill="#EBAC00"/>
-  <circle cx="41" cy="42" r="6" fill="#EBAC00"/>
-  <path d="M23 35h18" stroke="#EBAC00" stroke-width="3" stroke-linecap="round"/>
-  <text x="32" y="28" fill="#173764" font-family="Inter, Arial, Helvetica, sans-serif" font-size="10" font-weight="700" text-anchor="middle" dominant-baseline="central">PRT</text>
-</svg>
