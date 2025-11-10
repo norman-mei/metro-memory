@@ -1,6 +1,7 @@
 import data from './data/features.json'
 import 'mapbox-gl/dist/mapbox-gl.css'
 import 'react-circular-progressbar/dist/styles.css'
+import type { LineString, MultiLineString } from 'geojson'
 import { DataFeatureCollection, RoutesFeatureCollection } from '@/lib/types'
 import config from './config'
 import GamePage from '@/components/GamePage'
@@ -21,13 +22,45 @@ const fc = {
   ),
 } as DataFeatureCollection
 
-const routes = {
-  ...routesData,
-  features: routesData.features.filter((feature) => {
+type RawRouteFeature = {
+  type: string
+  geometry: LineString | MultiLineString
+  properties?: {
+    line?: string | null
+    color?: string | null
+    [key: string]: unknown
+  }
+}
+
+const rawRouteFeatures = routesData.features as RawRouteFeature[]
+
+const routeFeatures = rawRouteFeatures
+  .map((feature): RoutesFeatureCollection['features'][number] | null => {
     const line = feature.properties?.line
-    return line ? Boolean(config.LINES[line]) : false
-  }),
-} as RoutesFeatureCollection
+    if (!line || !config.LINES[line]) {
+      return null
+    }
+
+    const defaultColor = config.LINES[line]?.color ?? '#1d2835'
+    const rawColor = feature.properties?.color
+    const color =
+      typeof rawColor === 'string' && rawColor.length > 0 ? rawColor : defaultColor
+
+    return {
+      type: 'Feature' as const,
+      geometry: feature.geometry,
+      properties: {
+        ...feature.properties,
+        color,
+      },
+    }
+  })
+  .filter((feature): feature is RoutesFeatureCollection['features'][number] => feature !== null)
+
+const routes: RoutesFeatureCollection = {
+  type: 'FeatureCollection',
+  features: routeFeatures,
+}
 
 export const metadata = config.METADATA
 
