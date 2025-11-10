@@ -415,6 +415,11 @@ const SearcheableCitiesList = ({
       .filter((group) => group.cities.length > 0)
   }, [groupedCities, results])
 
+  const navigationCities = useMemo(
+    () => visibleGroups.flatMap((group) => group.cities),
+    [visibleGroups],
+  )
+
   const unlockedSet = useMemo(() => new Set(unlockedSlugs), [unlockedSlugs])
   const allAchievementSlugs = useMemo(() => achievementCatalog.map((entry) => entry.slug), [achievementCatalog])
 
@@ -639,7 +644,11 @@ const SearcheableCitiesList = ({
               leave="transition-all ease-in duration-200"
               show
             >
-              <CityCard city={city} variant={variant} />
+              <CityCard
+                city={city}
+                variant={variant}
+                visibleCities={navigationCities.length > 0 ? navigationCities : cityList}
+              />
             </Transition>
           ))}
         </div>
@@ -666,7 +675,11 @@ const SearcheableCitiesList = ({
             leave="transition-all ease-in duration-200"
             show
           >
-            <CityCard city={city} variant={variant} />
+            <CityCard
+              city={city}
+              variant={variant}
+              visibleCities={navigationCities.length > 0 ? navigationCities : cityList}
+            />
           </Transition>
         ))}
       </div>

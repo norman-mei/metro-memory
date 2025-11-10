@@ -30,27 +30,6 @@ const cleanupLineName = (name?: string) => {
   return result.replace(/^[–-]\s*/, '').replace(/\s{2,}/g, ' ').trim()
 }
 
-const invertHexColor = (value?: string) => {
-  if (!value) {
-    return undefined
-  }
-  const hex = value.replace('#', '')
-  if (!/^[0-9a-f]{3}$|^[0-9a-f]{6}$/i.test(hex)) {
-    return undefined
-  }
-  const normalized = hex.length === 3 ? hex.split('').map((ch) => ch + ch).join('') : hex
-  const numeric = Number.parseInt(normalized, 16)
-  if (Number.isNaN(numeric)) {
-    return undefined
-  }
-  const inverted = (0xffffff ^ numeric).toString(16).padStart(6, '0')
-  return `#${inverted}`
-}
-
-const getInvertedProgressColor = (color?: string, fallback?: string) => {
-  return invertHexColor(color) ?? fallback ?? color ?? '#000000'
-}
-
 const ProgressBars = ({
   foundStationsPerLine,
   stationsPerLine,
@@ -115,8 +94,7 @@ const ProgressBars = ({
     const displayName = cleanupLineName(meta.name) || meta.name
     const title = `${displayName} - ${found}/${total}`
     const customProgressColor = meta.progressOutlineColor
-    const progressColor =
-      customProgressColor ?? getInvertedProgressColor(meta.color, meta.textColor)
+    const progressColor = customProgressColor ?? meta.color ?? '#000000'
     const percentComplete = total > 0 ? found / total : 0
     const completionColor = getCompletionColor(percentComplete)
 

@@ -39,6 +39,7 @@ export interface Line {
   backgroundColor: string
   textColor: string
   progressOutlineColor?: string
+  statsColor?: string
   order: number
 }
 

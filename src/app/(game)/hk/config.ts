@@ -49,7 +49,7 @@ export const LINE_GROUPS: LineGroup[] = [
       {
         type: 'lines',
         title: 'Heavy Rail',
-        lines: ['EAL', 'TCL', 'TML', 'NOL', 'KTL', 'TWL', 'ISL', 'TKL', 'SIL', 'AEL', 'DRL', 'XRL'],
+        lines: ['EAL', 'TML', 'NOL', 'AEL', 'TCL', 'TWL', 'ISL', 'KTL', 'TKL', 'SIL', 'DRL', 'XRL'],
       },
       {
         type: 'lines',

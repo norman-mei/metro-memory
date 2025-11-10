@@ -1,0 +1,25 @@
+{
+  "Red_Line_(BART)": {
+    "name": "Red Line",
+    "color": "#C8102E",
+    "backgroundColor": "#C8102E",
+    "textColor": "#FFFFFF",
+    "progressOutlineColor": "#ED1C24",
+    "order": 0
+  },
+  "Blue_Line_(BART)": {
+    "name": "Blue Line",
+    "color": "#0054A6",
+    "backgroundColor": "#0054A6",
+    "textColor": "#FFFFFF",
+    "progressOutlineColor": "#009AD9",
+    "order": 1
+  },
+  "LoopTrolley": {
+    "name": "Loop Trolley",
+    "color": "#60AFBA",
+    "backgroundColor": "#60AFBA",
+    "textColor": "#0F172A",
+    "order": 2
+  }
+}

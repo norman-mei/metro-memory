@@ -33,14 +33,17 @@ const CityCard = ({
   city,
   className,
   variant = 'comfortable',
+  visibleCities,
 }: {
   city: ICity
   className?: string
   variant?: CityCardVariant
+  visibleCities?: ICity[]
 }) => {
   const [progress, setProgress] = useState<number | null>(0)
   const [stationTotal, setStationTotal] = useState<number | null>(null)
   const [statsOpen, setStatsOpen] = useState<boolean>(false)
+  const [statsSlug, setStatsSlug] = useState<string | null>(null)
   const [isHovered, setIsHovered] = useState(false)
   const slug = useMemo(() => getSlugFromLink(city.link), [city.link])
   const { progressSummaries } = useAuth()
@@ -127,14 +130,54 @@ const CityCard = ({
   const isCityDisabled = city.disabled || isUnavailableCity
   const displayAsDisabled = city.disabled || showComingSoon
 
+  const statsNavigation = useMemo(() => {
+    if (!visibleCities) {
+      return null
+    }
+    const slugs: string[] = []
+    const slugToName = new Map<string, string>()
+    visibleCities.forEach((visibleCity) => {
+      const citySlug = getSlugFromLink(visibleCity.link)
+      if (citySlug) {
+        slugs.push(citySlug)
+        slugToName.set(citySlug, visibleCity.name)
+      }
+    })
+    return { slugs, slugToName }
+  }, [visibleCities])
+
+  const navigationSlugs = statsNavigation?.slugs ?? null
+  const navigationSlugToName = statsNavigation?.slugToName ?? null
+  const statsCityDisplayName =
+    (statsSlug && navigationSlugToName?.get(statsSlug)) ?? city.name
+  const hasCircularNavigation =
+    navigationSlugs !== null && navigationSlugs.length > 1
+
+  const handleNavigateStats = (direction: -1 | 1) => {
+    if (!navigationSlugs || navigationSlugs.length <= 1 || !statsSlug) {
+      return
+    }
+    const idx = navigationSlugs.indexOf(statsSlug)
+    if (idx < 0) {
+      return
+    }
+    const total = navigationSlugs.length
+    const nextIndex = (idx + direction + total) % total
+    const targetSlug = navigationSlugs[nextIndex]
+    if (targetSlug && targetSlug !== statsSlug) {
+      setStatsSlug(targetSlug)
+    }
+  }
+
+  const handlePrevStats = () => handleNavigateStats(-1)
+  const handleNextStats = () => handleNavigateStats(1)
+
   const headingClasses = classNames(
-    'font-bold group-hover:underline',
-    {
-      'text-2xl': variant === 'comfortable',
-      'text-xl': variant === 'compact',
-      'text-2xl': variant === 'cover',
-      'text-2xl': variant === 'list',
-    },
+    'font-bold group-hover:underline break-words',
+    variant === 'comfortable' && 'text-2xl',
+    variant === 'compact' && 'text-xl',
+    variant === 'cover' && 'text-2xl',
+    variant === 'list' && 'text-2xl',
     {
       'text-zinc-800 dark:text-zinc-100': !displayAsDisabled && variant !== 'cover',
       'text-white drop-shadow': variant === 'cover',
@@ -192,6 +235,10 @@ const CityCard = ({
         onClick={(event) => {
           event.preventDefault()
           event.stopPropagation()
+          if (!slug) {
+            return
+          }
+          setStatsSlug(slug)
           setStatsOpen(true)
         }}
         aria-label={t('openCityStats')}
@@ -214,15 +261,15 @@ const CityCard = ({
       textStyle.textShadow = '0 1px 2px rgba(0,0,0,0.85)'
     }
     return (
-      <>
+      <div className="flex min-w-0 flex-1 items-center gap-3">
         <p
           className={classNames(
-            'm-0 leading-none font-semibold',
+            'm-0 flex-none whitespace-nowrap leading-tight font-semibold',
             {
-              'text-base': variant === 'comfortable',
+              'text-sm': variant === 'comfortable',
               'text-xs': variant === 'compact',
-              'text-sm text-white drop-shadow': variant === 'cover',
-              'text-base text-zinc-800 dark:text-zinc-100': variant === 'list',
+              'text-xs text-white drop-shadow': variant === 'cover',
+              'text-sm text-zinc-800 dark:text-zinc-100': variant === 'list',
             },
           )}
           style={textStyle}
@@ -240,7 +287,7 @@ const CityCard = ({
             })}
           />
         </div>
-      </>
+      </div>
     )
   }
 
@@ -285,6 +332,23 @@ const CityCard = ({
     )
   }
 
+  const renderHeadingSection = () => {
+    const headingNode = renderHeading()
+    if (!headingNode) {
+      return null
+    }
+    const statsButton = renderStatsButton()
+    if (!statsButton) {
+      return headingNode
+    }
+    return (
+      <div className="flex items-start gap-2">
+        <div className="min-w-0 flex-1">{headingNode}</div>
+        <div className="flex-shrink-0">{statsButton}</div>
+      </div>
+    )
+  }
+
   const renderMeta = () => {
     if (isCityDisabled || variant === 'cover') {
       return null
@@ -293,12 +357,11 @@ const CityCard = ({
     return (
       <div
         className={classNames(
-          'flex items-center justify-between gap-3',
+          'flex items-center',
           variant === 'compact' ? 'mt-1' : 'mt-2',
         )}
       >
-        <div className="flex items-center gap-1">{renderProgress()}</div>
-        {renderStatsButton()}
+        {renderProgress()}
       </div>
     )
   }
@@ -315,12 +378,9 @@ const CityCard = ({
       />
       {variant === 'cover' && (
         <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/80 via-black/40 to-transparent p-4">
-          {renderHeading()}
+          {renderHeadingSection()}
           {!isCityDisabled && (
-            <div className="mt-2 flex items-center justify-between gap-3 text-white">
-              <div className="flex items-center gap-1">{renderProgress({ highContrast: true })}</div>
-              {renderStatsButton()}
-            </div>
+            <div className="mt-2 flex text-white">{renderProgress({ highContrast: true })}</div>
           )}
         </div>
       )}
@@ -337,7 +397,7 @@ const CityCard = ({
         <div className="flex w-full items-center gap-4 p-4">
           {renderImage()}
           <div className="flex flex-1 flex-col gap-2">
-            {renderHeading()}
+            {renderHeadingSection()}
             {renderMeta()}
           </div>
         </div>
@@ -353,7 +413,7 @@ const CityCard = ({
             'px-3 pb-4 pt-3': variant === 'compact',
           })}
         >
-          {renderHeading()}
+          {renderHeadingSection()}
           {renderMeta()}
         </div>
       </>
@@ -392,12 +452,17 @@ const CityCard = ({
       >
         {content}
       </Link>
-      {slug && (
+      {statsOpen && statsSlug && (
         <CityStatsPanel
-          cityDisplayName={city.name}
-          slug={slug}
+          cityDisplayName={statsCityDisplayName}
+          slug={statsSlug}
           open={statsOpen}
-          onClose={() => setStatsOpen(false)}
+          onClose={() => {
+            setStatsOpen(false)
+            setStatsSlug(null)
+          }}
+          onNavigatePrevious={hasCircularNavigation ? handlePrevStats : undefined}
+          onNavigateNext={hasCircularNavigation ? handleNextStats : undefined}
         />
       )}
     </>

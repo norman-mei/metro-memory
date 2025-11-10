@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server'
 import path from 'path'
 import { promises as fs } from 'fs'
+import { createHash } from 'crypto'
 
 const VALID_SLUG = /^[a-z0-9-]+$/
 const GAME_ROOT = path.join(process.cwd(), 'src', 'app', '(game)')
@@ -34,8 +35,18 @@ async function getFallbackIcon() {
   return fallbackCache
 }
 
+const buildEtag = (buffer: Buffer) =>
+  `W/"${createHash('sha1').update(buffer).digest('base64')}"`.replace(
+    /=+$/,
+    '',
+  )
+
+const CACHE_HEADERS = {
+  'Cache-Control': 'public, max-age=0, must-revalidate',
+}
+
 export async function GET(
-  _request: Request,
+  request: Request,
   { params }: { params: { slug?: string } },
 ) {
   const slug = params.slug?.toLowerCase()
@@ -51,10 +62,17 @@ export async function GET(
     return NextResponse.json({ error: 'Not found' }, { status: 404 })
   }
 
+  const etag = buildEtag(iconBuffer)
+  const cacheHeaders = { ...CACHE_HEADERS, ETag: etag }
+
+  if (request.headers.get('if-none-match') === etag) {
+    return new NextResponse(null, { status: 304, headers: cacheHeaders })
+  }
+
   return new NextResponse(iconBuffer, {
     headers: {
+      ...cacheHeaders,
       'Content-Type': 'image/x-icon',
-      'Cache-Control': 'public, max-age=604800, immutable',
     },
   })
 }

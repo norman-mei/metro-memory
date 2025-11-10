@@ -4,6 +4,7 @@
     "color": "#0072CE",
     "backgroundColor": "#004C8F",
     "progressOutlineColor": "#CD0066",
+    "statsColor": "#CD0166",
     "textColor": "#FFFFFF",
     "order": 0
   },
@@ -12,6 +13,7 @@
     "color": "#CD0166",
     "backgroundColor": "#B35422",
     "progressOutlineColor": "#002F99",
+    "statsColor": "#0072CE",
     "textColor": "#FFFFFF",
     "order": 1
   }

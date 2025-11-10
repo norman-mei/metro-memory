@@ -11,6 +11,8 @@ type CityStatsPanelProps = {
   slug: string | null
   open: boolean
   onClose: () => void
+  onNavigatePrevious?: () => void
+  onNavigateNext?: () => void
 }
 
 type StationTimelineEntry = {
@@ -123,10 +125,23 @@ const readLocalProgress = (slug: string): LocalProgress => {
     }
   }
 
-  const foundIds = parseJson<number[]>(
+  const foundIdsRaw = parseJson<number[]>(
     window.localStorage.getItem(`${slug}-stations`),
     [],
-  ).filter((id): id is number => typeof id === 'number')
+  )
+
+  const foundIds: number[] = []
+  const seenIds = new Set<number>()
+  foundIdsRaw.forEach((value) => {
+    if (typeof value !== 'number' || !Number.isFinite(value)) {
+      return
+    }
+    const normalized = Math.trunc(value)
+    if (!seenIds.has(normalized)) {
+      seenIds.add(normalized)
+      foundIds.push(normalized)
+    }
+  })
 
   const timestamps = parseJson<Record<string, string>>(
     window.localStorage.getItem(`${slug}-stations-found-at`),
@@ -253,11 +268,24 @@ const computeStats = ({
     totalsPerLine.set(line, keys.size)
   })
 
+  const normalizedFoundIds = Array.from(
+    new Set(progress.foundIds.filter((id) => idToFeature.has(id))),
+  )
+  const totalStations =
+    idToFeature.size > 0
+      ? idToFeature.size
+      : Math.max(progress.totalStations, normalizedFoundIds.length)
+  const normalizedProgress: LocalProgress = {
+    ...progress,
+    foundIds: normalizedFoundIds,
+    totalStations,
+  }
+
   const foundPerLineSet = new Map<string, Set<string>>()
   const timeline: StationTimelineEntry[] = []
   const timestampedEntries: StationTimelineEntry[] = []
 
-  progress.foundIds.forEach((id) => {
+  normalizedProgress.foundIds.forEach((id) => {
     const feature = idToFeature.get(id)
     if (!feature) {
       return
@@ -271,7 +299,7 @@ const computeStats = ({
       foundPerLineSet.get(line)!.add(key)
     }
 
-    const timestamp = progress.timestamps[String(id)]
+    const timestamp = normalizedProgress.timestamps[String(id)]
     const entry: StationTimelineEntry = {
       id,
       name: resolveStationName(feature),
@@ -327,10 +355,11 @@ const computeStats = ({
       const durationMs =
         first !== null && last !== null && last > first ? last - first : undefined
 
+      const displayColor = meta?.statsColor ?? meta?.color ?? meta?.backgroundColor
       return {
         lineId,
         name: meta?.name ?? lineId,
-        color: meta?.color,
+        color: displayColor,
         found: foundCount,
         total,
         percent: total > 0 ? foundCount / total : 0,
@@ -369,11 +398,11 @@ const computeStats = ({
   }))
 
   return {
-    foundCount: progress.foundIds.length,
-    totalStations: progress.totalStations,
+    foundCount: normalizedProgress.foundIds.length,
+    totalStations: normalizedProgress.totalStations,
     percentFound:
-      progress.totalStations > 0
-        ? progress.foundIds.length / progress.totalStations
+      normalizedProgress.totalStations > 0
+        ? normalizedProgress.foundIds.length / normalizedProgress.totalStations
         : 0,
     cumulativeTimeMs,
     firstFoundAt: firstTimestamp,
@@ -393,6 +422,8 @@ const CityStatsPanel = ({
   slug,
   open,
   onClose,
+  onNavigatePrevious,
+  onNavigateNext,
 }: CityStatsPanelProps) => {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
@@ -406,6 +437,16 @@ const CityStatsPanel = ({
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
         onClose()
+        return
+      }
+      if (event.key === 'ArrowLeft' && onNavigatePrevious) {
+        event.preventDefault()
+        onNavigatePrevious()
+        return
+      }
+      if (event.key === 'ArrowRight' && onNavigateNext) {
+        event.preventDefault()
+        onNavigateNext()
       }
     }
     window.addEventListener('keydown', handleKeyDown)
@@ -416,7 +457,7 @@ const CityStatsPanel = ({
       window.removeEventListener('keydown', handleKeyDown)
       document.body.style.overflow = originalOverflow
     }
-  }, [open, onClose])
+  }, [open, onClose, onNavigateNext, onNavigatePrevious])
 
   useEffect(() => {
     if (!open || !slug) {
@@ -427,6 +468,7 @@ const CityStatsPanel = ({
     const load = async () => {
       setLoading(true)
       setError(null)
+      setStats(null)
       try {
         const [configModule, featuresModule] = await Promise.all([
           import(`@/app/(game)/${slug}/config`) as Promise<{ default: Config }>,
@@ -470,6 +512,8 @@ const CityStatsPanel = ({
   if (!open || !slug) {
     return null
   }
+
+  const cityIconSrc = `/api/city-icon/${encodeURIComponent(slug)}`
 
   const handleInnerClick = (event: ReactMouseEvent<HTMLDivElement>) => {
     event.stopPropagation()
@@ -747,18 +791,57 @@ const CityStatsPanel = ({
       aria-modal="true"
       onClick={onClose}
     >
+      {onNavigatePrevious && (
+        <button
+          type="button"
+          className="absolute left-3 top-1/2 z-10 -translate-y-1/2 rounded-full bg-white/90 px-3 py-2 text-base font-semibold text-zinc-800 shadow-lg backdrop-blur focus:outline-none focus:ring-2 focus:ring-[var(--accent-ring)] dark:bg-zinc-900/90 dark:text-zinc-100"
+          onClick={(event) => {
+            event.stopPropagation()
+            onNavigatePrevious()
+          }}
+          aria-label="View previous city stats"
+        >
+          &lt;
+        </button>
+      )}
+      {onNavigateNext && (
+        <button
+          type="button"
+          className="absolute right-3 top-1/2 z-10 -translate-y-1/2 rounded-full bg-white/90 px-3 py-2 text-base font-semibold text-zinc-800 shadow-lg backdrop-blur focus:outline-none focus:ring-2 focus:ring-[var(--accent-ring)] dark:bg-zinc-900/90 dark:text-zinc-100"
+          onClick={(event) => {
+            event.stopPropagation()
+            onNavigateNext()
+          }}
+          aria-label="View next city stats"
+        >
+          &gt;
+        </button>
+      )}
       <div
         className="mx-4 max-h-[90vh] w-full max-w-5xl overflow-y-auto rounded-3xl border border-zinc-200 bg-white p-6 shadow-2xl dark:border-[#18181b] dark:bg-zinc-950"
         onClick={handleInnerClick}
       >
         <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-          <div>
+          <div className="w-full">
             <p className="text-sm uppercase tracking-wide text-[var(--accent-500)] dark:text-[var(--accent-300)]">
               Progress details
             </p>
-            <h3 className="text-3xl font-semibold text-zinc-900 dark:text-zinc-50">
-              {cityDisplayName}
-            </h3>
+            <div className="mt-2 flex items-center gap-3">
+              <div className="relative h-12 w-12 flex-shrink-0 overflow-hidden rounded-2xl border border-zinc-200 bg-white dark:border-[#18181b] dark:bg-zinc-900 sm:h-14 sm:w-14">
+                <Image
+                  src={cityIconSrc}
+                  alt={`${cityDisplayName} icon`}
+                  fill
+                  sizes="(max-width: 640px) 48px, 56px"
+                  className="object-cover"
+                  unoptimized
+                  priority
+                />
+              </div>
+              <h3 className="min-w-0 flex-1 text-3xl font-semibold text-zinc-900 dark:text-zinc-50">
+                {cityDisplayName}
+              </h3>
+            </div>
           </div>
           <button
             type="button"

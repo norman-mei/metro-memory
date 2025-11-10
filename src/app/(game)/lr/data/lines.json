@@ -1,0 +1,18 @@
+{
+  "littlerockblue": {
+    "name": "Metro Streetcar Blue Line",
+    "color": "#007AC1",
+    "backgroundColor": "#00436D",
+    "progressOutlineColor": "#007AC1",
+    "textColor": "#FFFFFF",
+    "order": 0
+  },
+  "littlerockgreen": {
+    "name": "Metro Streetcar Green Line",
+    "color": "#9ACE00",
+    "backgroundColor": "#4C7300",
+    "progressOutlineColor": "#9ACE00",
+    "textColor": "#1A2B00",
+    "order": 1
+  }
+}
