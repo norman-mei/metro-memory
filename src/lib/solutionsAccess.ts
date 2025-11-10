@@ -41,7 +41,7 @@ export const readSolutionsSelection = (): SolutionsSelection => {
       Array.isArray(parsed.cities)
     ) {
       const uniqueCities = Array.from(
-        new Set(
+        new Set<string>(
           parsed.cities.filter(
             (slug: unknown): slug is string =>
               typeof slug === 'string' && slug.length > 0,
@@ -66,7 +66,7 @@ export const writeSolutionsSelection = (selection: SolutionsSelection) => {
     cities:
       selection.mode === 'custom'
         ? Array.from(
-            new Set(
+            new Set<string>(
               (selection.cities ?? []).filter(
                 (slug): slug is string => typeof slug === 'string' && slug.length > 0,
               ),

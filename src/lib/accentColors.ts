@@ -92,14 +92,14 @@ const accentColorOptions = [
     },
     ring: 'rgba(14, 165, 233, 0.4)',
   },
-] as const satisfies AccentColorOption[]
+] as const satisfies ReadonlyArray<AccentColorOption>
 
 export type AccentColorId = (typeof accentColorOptions)[number]['id']
 
-export const ACCENT_COLOR_OPTIONS: AccentColorOption[] = accentColorOptions
+export const ACCENT_COLOR_OPTIONS = accentColorOptions
 
 export const ACCENT_COLOR_MAP: Record<AccentColorId, AccentColorOption> =
-  ACCENT_COLOR_OPTIONS.reduce(
+  accentColorOptions.reduce(
     (acc, option) => {
       acc[option.id as AccentColorId] = option
       return acc
@@ -107,4 +107,4 @@ export const ACCENT_COLOR_MAP: Record<AccentColorId, AccentColorOption> =
     {} as Record<AccentColorId, AccentColorOption>,
   )
 
-export const DEFAULT_ACCENT_COLOR_ID: AccentColorId = ACCENT_COLOR_OPTIONS[0].id
+export const DEFAULT_ACCENT_COLOR_ID: AccentColorId = accentColorOptions[0].id

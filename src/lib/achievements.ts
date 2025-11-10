@@ -360,10 +360,6 @@ export const ACHIEVEMENTS: Record<string, AchievementDefinition> = {
     title: "Ride the Rocket",
     description: "Started from the TTC, now you know the whole thing!",
   },
-  tucson: {
-    title: "The Old Pueblo",
-    description: "You've streetcar'd through the Old Pueblo like a Wildcat!",
-  },
   twincities: {
     title: "Twin Cities Genius",
     description: "You've united the Twin Cities in your mind. Purple Rain proud!",

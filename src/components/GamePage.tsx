@@ -71,6 +71,25 @@ const deriveCityDisplayName = (title?: string, fallback?: string) => {
   return title
 }
 
+const extractMetadataTitle = (title: unknown): string | undefined => {
+  if (!title) {
+    return undefined
+  }
+  if (typeof title === 'string') {
+    return title
+  }
+  if (typeof title === 'object') {
+    const candidate = title as { absolute?: unknown; default?: unknown }
+    if (typeof candidate.absolute === 'string') {
+      return candidate.absolute
+    }
+    if (typeof candidate.default === 'string') {
+      return candidate.default
+    }
+  }
+  return undefined
+}
+
 const EMPTY_TIMESTAMPS: Record<string, string> = {}
 
 const MANUAL_ALTERNATE_NAMES: Record<string, string[]> = {
@@ -921,14 +940,19 @@ export default function GamePage({
     initializeWithValue: false,
   })
 
-  const { value: storedFoundTimestamps, set: setStoredFoundTimestamps } =
-    useLocalStorageValue<Record<string, string> | null>(
-      `${CITY_NAME}-stations-found-at`,
-      {
-        defaultValue: null,
-        initializeWithValue: false,
-      },
-    )
+  const {
+    value: storedFoundTimestampsRaw,
+    set: setStoredFoundTimestamps,
+  } = useLocalStorageValue<Record<string, string> | null>(
+    `${CITY_NAME}-stations-found-at`,
+    {
+      defaultValue: null,
+      initializeWithValue: false,
+    },
+  )
+
+  const storedFoundTimestamps: Record<string, string> | null =
+    storedFoundTimestampsRaw ?? null
 
   const foundTimestamps = storedFoundTimestamps ?? EMPTY_TIMESTAMPS
 
@@ -1365,8 +1389,10 @@ export default function GamePage({
             return ''
           } else if (Array.isArray(value)) {
             return value.map((el) => normalizeString(el))
+          } else if (typeof value === 'string') {
+            return normalizeString(value)
           } else {
-            return normalizeString(value as string)
+            return normalizeString(String(value ?? ''))
           }
         },
       }),
@@ -1386,9 +1412,14 @@ export default function GamePage({
 
   const totalUniqueStations = uniqueStationsMap.size
 
+  const metadataTitle = useMemo(
+    () => extractMetadataTitle(METADATA?.title),
+    [METADATA?.title],
+  )
+
   const cityDisplayName = useMemo(
-    () => deriveCityDisplayName(METADATA?.title, CITY_NAME),
-    [METADATA?.title, CITY_NAME],
+    () => deriveCityDisplayName(metadataTitle, CITY_NAME),
+    [metadataTitle, CITY_NAME],
   )
 
   const foundStationKeys = useMemo(() => {

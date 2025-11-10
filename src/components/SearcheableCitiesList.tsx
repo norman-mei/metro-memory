@@ -76,7 +76,7 @@ type TabOption =
   | 'testimonials'
   | 'press'
   | 'settings'
-  // | 'account'
+  | 'account'
   // | 'privacy'
 
 type UpdateLogStatus = 'idle' | 'loading' | 'success' | 'error'

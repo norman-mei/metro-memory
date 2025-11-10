@@ -1,4 +1,4 @@
-import nodemailer from 'nodemailer'
+import nodemailer, { type Transporter } from 'nodemailer'
 
 type SendEmailParams = {
   to: string
@@ -7,7 +7,7 @@ type SendEmailParams = {
   text: string
 }
 
-let transporter: nodemailer.Transporter | null = null
+let transporter: Transporter | null = null
 
 const smtpHost = process.env.SMTP_HOST
 const smtpPort = process.env.SMTP_PORT
