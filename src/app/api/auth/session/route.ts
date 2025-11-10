@@ -27,7 +27,6 @@ export async function GET() {
     user: {
       id: user.id,
       email: user.email,
-      emailVerified: Boolean(user.emailVerifiedAt),
     },
     progressSummaries: summaries,
     uiPreferences: normalizeUiPreferences(user.uiPreferences),

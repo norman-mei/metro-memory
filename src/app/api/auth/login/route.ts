@@ -32,20 +32,12 @@ export async function POST(request: Request) {
     )
   }
 
-  if (!user.emailVerifiedAt) {
-    return NextResponse.json(
-      { error: 'Please verify your email before logging in.' },
-      { status: 403 },
-    )
-  }
-
   await createSession(user.id)
 
   return NextResponse.json({
     user: {
       id: user.id,
       email: user.email,
-      emailVerified: Boolean(user.emailVerifiedAt),
     },
   })
 }

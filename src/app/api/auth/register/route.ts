@@ -2,12 +2,7 @@ import { NextResponse } from 'next/server'
 import { z } from 'zod'
 
 import { prisma } from '@/lib/prisma'
-import {
-  createVerificationToken,
-  hashPassword,
-  normalizeEmail,
-} from '@/lib/auth'
-import { sendVerificationEmail } from '@/lib/email'
+import { hashPassword, normalizeEmail } from '@/lib/auth'
 
 const registerSchema = z
   .object({
@@ -40,32 +35,22 @@ export async function POST(request: Request) {
     where: { email: normalizedEmail },
   })
 
-  if (existingUser && existingUser.emailVerifiedAt) {
+  if (existingUser) {
     return NextResponse.json(
       { error: 'Email is already registered' },
       { status: 409 },
     )
   }
 
-  const user =
-    existingUser && !existingUser.emailVerifiedAt
-      ? await prisma.user.update({
-          where: { email: normalizedEmail },
-          data: {
-            passwordHash,
-          },
-        })
-      : await prisma.user.create({
-          data: {
-            email: normalizedEmail,
-            passwordHash,
-          },
-        })
-
-  const token = await createVerificationToken(user.id)
-  await sendVerificationEmail(normalizedEmail, token)
+  await prisma.user.create({
+    data: {
+      email: normalizedEmail,
+      passwordHash,
+      emailVerifiedAt: new Date(),
+    },
+  })
 
   return NextResponse.json({
-    message: 'Account created. Check your email to verify your address.',
+    message: 'Account created! You can now log in.',
   })
 }

@@ -18,7 +18,6 @@ import {
 type AuthUser = {
   id: string
   email: string
-  emailVerified: boolean
 }
 
 type ProgressSummaries = Record<string, number>

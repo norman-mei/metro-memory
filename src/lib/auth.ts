@@ -1,6 +1,6 @@
 import bcrypt from 'bcryptjs'
 import { cookies } from 'next/headers'
-import { createHash, randomBytes, randomUUID } from 'node:crypto'
+import { createHash, randomBytes } from 'node:crypto'
 
 import { prisma } from '@/lib/prisma'
 
@@ -106,78 +106,4 @@ export async function requireUser() {
     throw new Error('Unauthorized')
   }
   return user
-}
-
-export async function createVerificationToken(userId: string) {
-  const token = randomUUID().replace(/-/g, '')
-  const tokenHash = hashValue(token)
-  const expiresAt = new Date(Date.now() + 1000 * 60 * 60 * 24) // 24 hours
-
-  await prisma.verificationToken.deleteMany({
-    where: { userId },
-  })
-
-  await prisma.verificationToken.create({
-    data: {
-      userId,
-      tokenHash,
-      expiresAt,
-    },
-  })
-
-  return token
-}
-
-export async function consumeVerificationToken(token: string) {
-  const tokenHash = hashValue(token)
-  const record = await prisma.verificationToken.findUnique({
-    where: { tokenHash },
-  })
-
-  if (!record || record.expiresAt.getTime() < Date.now()) {
-    return null
-  }
-
-  await prisma.verificationToken.delete({
-    where: { tokenHash },
-  })
-
-  return record.userId
-}
-
-export async function createPasswordResetToken(userId: string) {
-  const token = randomUUID().replace(/-/g, '')
-  const tokenHash = hashValue(token)
-  const expiresAt = new Date(Date.now() + 1000 * 60 * 60) // 1 hour
-
-  await prisma.passwordResetToken.deleteMany({
-    where: { userId },
-  })
-
-  await prisma.passwordResetToken.create({
-    data: {
-      userId,
-      tokenHash,
-      expiresAt,
-    },
-  })
-
-  return token
-}
-
-export async function consumePasswordResetToken(token: string) {
-  const tokenHash = hashValue(token)
-  const record = await prisma.passwordResetToken.findUnique({
-    where: { tokenHash },
-  })
-
-  if (!record || record.expiresAt.getTime() < Date.now()) {
-    return null
-  }
-
-  await prisma.passwordResetToken.delete({
-    where: { tokenHash },
-  })
-
-  return record.userId
 }
