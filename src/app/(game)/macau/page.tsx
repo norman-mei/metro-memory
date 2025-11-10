@@ -21,13 +21,32 @@ const fc = {
   ),
 } as DataFeatureCollection
 
-const routes = {
-  ...routesData,
-  features: routesData.features.filter((feature) => {
+const routeFeatures = routesData.features
+  .map((feature): RoutesFeatureCollection['features'][number] | null => {
     const line = feature.properties?.line
-    return line ? Boolean(config.LINES[line]) : false
-  }),
-} as RoutesFeatureCollection
+    if (!line || !config.LINES[line]) {
+      return null
+    }
+    const defaultColor = config.LINES[line]?.color ?? '#1d2835'
+    const color =
+      typeof feature.properties?.color === 'string' && feature.properties.color.length > 0
+        ? feature.properties.color
+        : defaultColor
+
+    return {
+      ...feature,
+      properties: {
+        ...feature.properties,
+        color,
+      },
+    }
+  })
+  .filter((feature): feature is RoutesFeatureCollection['features'][number] => feature !== null)
+
+const routes: RoutesFeatureCollection = {
+  type: routesData.type,
+  features: routeFeatures,
+}
 
 export const metadata = config.METADATA
 
