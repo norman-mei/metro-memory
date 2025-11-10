@@ -1,0 +1,149 @@
+'use client'
+
+import {
+  createContext,
+  useCallback,
+  useContext,
+  useEffect,
+  useMemo,
+  useState,
+  type ReactNode,
+} from 'react'
+import {
+  ACCENT_COLOR_MAP,
+  DEFAULT_ACCENT_COLOR_ID,
+  type AccentColorId,
+} from '@/lib/accentColors'
+
+const hexToRgb = (hex: string) => {
+  const normalized = hex.replace('#', '')
+  if (normalized.length !== 6) {
+    return '0, 0, 0'
+  }
+  const r = parseInt(normalized.slice(0, 2), 16)
+  const g = parseInt(normalized.slice(2, 4), 16)
+  const b = parseInt(normalized.slice(4, 6), 16)
+  return `${r}, ${g}, ${b}`
+}
+
+type Settings = {
+  confettiEnabled: boolean
+  achievementToastsEnabled: boolean
+  stopConfettiAfterCompletion: boolean
+  accentColor: AccentColorId
+}
+
+const DEFAULT_SETTINGS: Settings = {
+  confettiEnabled: true,
+  achievementToastsEnabled: true,
+  stopConfettiAfterCompletion: false,
+  accentColor: DEFAULT_ACCENT_COLOR_ID,
+}
+
+const STORAGE_KEY = 'metro-memory-settings'
+
+type SettingsContextValue = {
+  settings: Settings
+  setConfettiEnabled: (enabled: boolean) => void
+  setAchievementToastsEnabled: (enabled: boolean) => void
+  setStopConfettiAfterCompletion: (enabled: boolean) => void
+  setAccentColor: (accent: AccentColorId) => void
+}
+
+const SettingsContext = createContext<SettingsContextValue | undefined>(undefined)
+
+export const SettingsProvider = ({ children }: { children: ReactNode }) => {
+  const [settings, setSettings] = useState<Settings>(DEFAULT_SETTINGS)
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return
+    try {
+      const raw = window.localStorage.getItem(STORAGE_KEY)
+      if (!raw) return
+      const parsed = JSON.parse(raw)
+      if (typeof parsed === 'object' && parsed !== null) {
+        if (
+          typeof parsed.confettiEnabled === 'boolean' &&
+          typeof parsed.achievementToastsEnabled === 'boolean'
+        ) {
+          setSettings({
+            confettiEnabled: parsed.confettiEnabled,
+            achievementToastsEnabled: parsed.achievementToastsEnabled,
+            stopConfettiAfterCompletion:
+              typeof parsed.stopConfettiAfterCompletion === 'boolean'
+                ? parsed.stopConfettiAfterCompletion
+                : DEFAULT_SETTINGS.stopConfettiAfterCompletion,
+            accentColor:
+              typeof parsed.accentColor === 'string' &&
+              parsed.accentColor in ACCENT_COLOR_MAP
+                ? (parsed.accentColor as AccentColorId)
+                : DEFAULT_SETTINGS.accentColor,
+          })
+        }
+      }
+    } catch {
+      // ignore malformed entries
+    }
+  }, [])
+
+  useEffect(() => {
+    if (typeof document === 'undefined') return
+    const accent =
+      ACCENT_COLOR_MAP[settings.accentColor] ??
+      ACCENT_COLOR_MAP[DEFAULT_ACCENT_COLOR_ID]
+    const root = document.documentElement
+    Object.entries(accent.palette).forEach(([stop, value]) => {
+      root.style.setProperty(`--accent-${stop}`, value)
+    })
+    root.style.setProperty('--accent-ring', accent.ring)
+    root.style.setProperty('--accent-600-rgb', hexToRgb(accent.palette[600]))
+    root.dataset.accent = accent.id
+  }, [settings.accentColor])
+
+  const persist = useCallback((next: Settings) => {
+    if (typeof window === 'undefined') return
+    try {
+      window.localStorage.setItem(STORAGE_KEY, JSON.stringify(next))
+    } catch {
+      // ignore storage errors
+    }
+  }, [])
+
+  const updateSettings = useCallback(
+    (partial: Partial<Settings>) => {
+      setSettings((prev) => {
+        const next = { ...prev, ...partial }
+        persist(next)
+        return next
+      })
+    },
+    [persist],
+  )
+
+  const value = useMemo(
+    () => ({
+      settings,
+      setConfettiEnabled: (enabled: boolean) => updateSettings({ confettiEnabled: enabled }),
+      setAchievementToastsEnabled: (enabled: boolean) =>
+        updateSettings({ achievementToastsEnabled: enabled }),
+      setStopConfettiAfterCompletion: (enabled: boolean) =>
+        updateSettings({ stopConfettiAfterCompletion: enabled }),
+      setAccentColor: (accent: AccentColorId) => {
+        if (accent in ACCENT_COLOR_MAP) {
+          updateSettings({ accentColor: accent })
+        }
+      },
+    }),
+    [settings, updateSettings],
+  )
+
+  return <SettingsContext.Provider value={value}>{children}</SettingsContext.Provider>
+}
+
+export const useSettings = () => {
+  const ctx = useContext(SettingsContext)
+  if (!ctx) {
+    throw new Error('useSettings must be used within a SettingsProvider')
+  }
+  return ctx
+}

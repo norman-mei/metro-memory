@@ -15,6 +15,7 @@
     "@mdx-js/loader": "^2.3.0",
     "@mdx-js/react": "^2.3.0",
     "@next/mdx": "13.4.16",
+    "@prisma/client": "^6.19.0",
     "@react-hookz/web": "^23.1.0",
     "@tailwindcss/container-queries": "^0.1.1",
     "@tailwindcss/typography": "^0.5.4",
@@ -30,6 +31,7 @@
     "@vercel/kv": "^0.2.4",
     "aromanize": "^0.1.5",
     "autoprefixer": "^10.4.12",
+    "bcryptjs": "^3.0.3",
     "cheerio": "^1.0.0-rc.12",
     "classnames": "^2.3.2",
     "clsx": "^1.2.1",
@@ -43,6 +45,7 @@
     "maplibre-gl": "^3.6.2",
     "next": "^14.0.3",
     "next-themes": "^0.2.1",
+    "nodemailer": "^7.0.10",
     "react": "18.2.0",
     "react-circular-progressbar": "^2.1.0",
     "react-dom": "18.2.0",
@@ -51,12 +54,14 @@
     "rosetta": "^1.1.0",
     "tailwindcss": "^3.3.3",
     "tsparticles-confetti": "^2.12.0",
-    "typescript": "5.1.6"
+    "typescript": "5.1.6",
+    "zod": "^4.1.12"
   },
   "devDependencies": {
     "axios": "^1.9.0",
     "eslint": "8.45.0",
     "eslint-config-next": "13.4.16",
+    "prisma": "^6.19.0",
     "prettier": "^3.0.1",
     "prettier-plugin-tailwindcss": "^0.5.2",
     "sharp": "^0.32.0"

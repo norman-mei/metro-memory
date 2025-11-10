@@ -4,6 +4,8 @@ import { createContext, useEffect, useRef } from 'react'
 import { usePathname } from 'next/navigation'
 
 import ThemeProviderClient from '@/components/ThemeProviderClient'
+import { AuthProvider } from '@/context/AuthContext'
+import { SettingsProvider } from '@/context/SettingsContext'
 
 function usePrevious<T>(value: T) {
   const ref = useRef<T>()
@@ -23,7 +25,11 @@ export function Providers({ children }: { children: React.ReactNode }) {
 
   return (
     <AppContext.Provider value={{ previousPathname }}>
-      <ThemeProviderClient>{children}</ThemeProviderClient>
+      <ThemeProviderClient>
+        <SettingsProvider>
+          <AuthProvider>{children}</AuthProvider>
+        </SettingsProvider>
+      </ThemeProviderClient>
     </AppContext.Provider>
   )
 }

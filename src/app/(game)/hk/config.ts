@@ -44,11 +44,76 @@ export const STRIPE_LINK = 'https://buy.stripe.com/aEU6oV8Ue2vMbjqcMW'
 
 export const LINE_GROUPS: LineGroup[] = [
   {
-    title: 'MTR Heavy Rail',
+    title: 'Mass Transit Railway (MTR)',
     items: [
       {
         type: 'lines',
-        lines: ['EAL', 'TCL', 'TML', 'KTL', 'TWL', 'ISL', 'TKL', 'SIL', 'AEL', 'DRL', 'XRL'],
+        title: 'Heavy Rail',
+        lines: ['EAL', 'TCL', 'TML', 'NOL', 'KTL', 'TWL', 'ISL', 'TKL', 'SIL', 'AEL', 'DRL', 'XRL'],
+      },
+      {
+        type: 'lines',
+        title: 'Light Rail',
+        lines: [
+          'MTR505',
+          'MTR507',
+          'MTR610',
+          'MTR614',
+          'MTR614P',
+          'MTR615',
+          'MTR615P',
+          'MTR705',
+          'MTR706',
+          'MTR751',
+          'MTR751P',
+          'MTR761P',
+        ],
+      },
+      {
+        type: 'lines',
+        title: 'Ngong Ping 360',
+        lines: ['HKNP360'],
+      },
+      {
+        type: 'lines',
+        title: 'Hong Kong International Airport Automated People Mover (APM)',
+        lines: ['HKAPMT1', 'HKAPMT2', 'HKAPMSKY'],
+      },
+    ],
+  },
+  {
+    items: [{ type: 'separator' }],
+  },
+  {
+    title: 'RATP Dev Transdev Asia',
+    items: [
+      {
+        type: 'lines',
+        lines: ['HKT'],
+      },
+    ],
+  },
+  {
+    items: [{ type: 'separator' }],
+  },
+  {
+    title: 'Hongkong and Shanghai Hotels (HSH)',
+    items: [
+      {
+        type: 'lines',
+        lines: ['HKTPT'],
+      },
+    ],
+  },
+  {
+    items: [{ type: 'separator' }],
+  },
+  {
+    title: 'Ocean Park Corporation (OPC)',
+    items: [
+      {
+        type: 'lines',
+        lines: ['HKOEX', 'HKOCC'],
       },
     ],
   },

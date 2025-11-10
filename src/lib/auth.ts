@@ -1,0 +1,183 @@
+import bcrypt from 'bcryptjs'
+import { cookies } from 'next/headers'
+import { createHash, randomBytes, randomUUID } from 'node:crypto'
+
+import { prisma } from '@/lib/prisma'
+
+const SESSION_COOKIE_NAME = 'mm_session'
+const SESSION_TTL_MS = 1000 * 60 * 60 * 24 * 7 // 7 days
+
+export function normalizeEmail(email: string) {
+  return email.trim().toLowerCase()
+}
+
+export async function hashPassword(password: string) {
+  return bcrypt.hash(password, 12)
+}
+
+export async function verifyPassword(password: string, hash: string) {
+  return bcrypt.compare(password, hash)
+}
+
+function hashValue(value: string) {
+  return createHash('sha256').update(value).digest('hex')
+}
+
+function getCookieStore() {
+  return cookies()
+}
+
+function buildCookieOptions(expiresAt: Date) {
+  return {
+    httpOnly: true,
+    sameSite: 'lax' as const,
+    secure: process.env.NODE_ENV === 'production',
+    expires: expiresAt,
+    path: '/',
+  }
+}
+
+export async function createSession(userId: string) {
+  const rawToken = randomBytes(48).toString('hex')
+  const tokenHash = hashValue(rawToken)
+  const expiresAt = new Date(Date.now() + SESSION_TTL_MS)
+
+  await prisma.session.create({
+    data: {
+      userId,
+      tokenHash,
+      expiresAt,
+    },
+  })
+
+  const store = getCookieStore()
+  store.set(SESSION_COOKIE_NAME, rawToken, buildCookieOptions(expiresAt))
+}
+
+export async function clearSessionCookie() {
+  const store = getCookieStore()
+  const existing = store.get(SESSION_COOKIE_NAME)?.value
+  if (existing) {
+    const tokenHash = hashValue(existing)
+    await prisma.session.deleteMany({
+      where: { tokenHash },
+    })
+  }
+  store.set(SESSION_COOKIE_NAME, '', {
+    httpOnly: true,
+    sameSite: 'lax',
+    secure: process.env.NODE_ENV === 'production',
+    expires: new Date(0),
+    path: '/',
+  })
+}
+
+export async function getCurrentUser() {
+  const store = getCookieStore()
+  const token = store.get(SESSION_COOKIE_NAME)?.value
+  if (!token) {
+    return null
+  }
+
+  const tokenHash = hashValue(token)
+  const session = await prisma.session.findFirst({
+    where: {
+      tokenHash,
+      expiresAt: {
+        gt: new Date(),
+      },
+    },
+    include: {
+      user: true,
+    },
+  })
+
+  if (!session) {
+    store.delete(SESSION_COOKIE_NAME)
+    return null
+  }
+
+  return session.user
+}
+
+export async function requireUser() {
+  const user = await getCurrentUser()
+  if (!user) {
+    throw new Error('Unauthorized')
+  }
+  return user
+}
+
+export async function createVerificationToken(userId: string) {
+  const token = randomUUID().replace(/-/g, '')
+  const tokenHash = hashValue(token)
+  const expiresAt = new Date(Date.now() + 1000 * 60 * 60 * 24) // 24 hours
+
+  await prisma.verificationToken.deleteMany({
+    where: { userId },
+  })
+
+  await prisma.verificationToken.create({
+    data: {
+      userId,
+      tokenHash,
+      expiresAt,
+    },
+  })
+
+  return token
+}
+
+export async function consumeVerificationToken(token: string) {
+  const tokenHash = hashValue(token)
+  const record = await prisma.verificationToken.findUnique({
+    where: { tokenHash },
+  })
+
+  if (!record || record.expiresAt.getTime() < Date.now()) {
+    return null
+  }
+
+  await prisma.verificationToken.delete({
+    where: { tokenHash },
+  })
+
+  return record.userId
+}
+
+export async function createPasswordResetToken(userId: string) {
+  const token = randomUUID().replace(/-/g, '')
+  const tokenHash = hashValue(token)
+  const expiresAt = new Date(Date.now() + 1000 * 60 * 60) // 1 hour
+
+  await prisma.passwordResetToken.deleteMany({
+    where: { userId },
+  })
+
+  await prisma.passwordResetToken.create({
+    data: {
+      userId,
+      tokenHash,
+      expiresAt,
+    },
+  })
+
+  return token
+}
+
+export async function consumePasswordResetToken(token: string) {
+  const tokenHash = hashValue(token)
+  const record = await prisma.passwordResetToken.findUnique({
+    where: { tokenHash },
+  })
+
+  if (!record || record.expiresAt.getTime() < Date.now()) {
+    return null
+  }
+
+  await prisma.passwordResetToken.delete({
+    where: { tokenHash },
+  })
+
+  return record.userId
+}

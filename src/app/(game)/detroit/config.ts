@@ -33,16 +33,32 @@ export const LINE_GROUPS: LineGroup[] = [
       },
     ],
   },
+  {
+    items: [
+      {
+        type: 'separator',
+      },
+    ],
+  },
+  {
+    title: 'Wayne County Airport Authority (WCAA)',
+    items: [
+      {
+        type: 'lines',
+        lines: ['EXT'],
+      },
+    ],
+  },
 ]
 
 export const METADATA: Metadata = {
   title: 'Detroit Metro Memory',
   description:
-    'How many of the Detroit QLine and People Mover stations can you name from memory?',
+    'How many of the Detroit QLine, People Mover, and ExpressTram stations can you name from memory?',
   openGraph: {
     title: 'Detroit Metro Memory',
     description:
-      'How many of the Detroit QLine and People Mover stations can you name from memory?',
+      'How many of the Detroit QLine, People Mover, and ExpressTram stations can you name from memory?',
     type: 'website',
     locale: 'en_US',
     url: 'https://metro-memory.com/detroit',
@@ -53,14 +69,14 @@ export const MAP_CONFIG: MapboxOptions = {
   container: 'map',
   style: 'mapbox://styles/benjamintd/cls31ijdo010o01plcpzag11d',
   bounds: [
-    [-83.12, 42.31],
+    [-83.4, 42.2],
     [-82.95, 42.39],
   ],
   maxBounds: [
-    [-83.3, 42.2],
+    [-83.5, 42.15],
     [-82.8, 42.5],
   ],
-  minZoom: 12,
+  minZoom: 10,
   fadeDuration: 50,
 }
 

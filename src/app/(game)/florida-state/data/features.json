@@ -1,0 +1,3158 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.323747041792,
+          25.8434055325577
+        ]
+      },
+      "properties": {
+        "name": "Palmetto",
+        "line": "floridaGR",
+        "id": 0
+      },
+      "id": 0
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.3015708057851,
+          25.8398109069014
+        ]
+      },
+      "properties": {
+        "name": "Okeechobee",
+        "line": "floridaGR",
+        "id": 1
+      },
+      "id": 1
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.2790352571393,
+          25.8411808281174
+        ]
+      },
+      "properties": {
+        "name": "Hialeah",
+        "line": "floridaGR",
+        "id": 2
+      },
+      "id": 2
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.2597953038774,
+          25.8454417481873
+        ]
+      },
+      "properties": {
+        "name": "Tri-Rail",
+        "line": "floridaGR",
+        "id": 3,
+        "alternate_names": [
+          "Tri-Rail Transfer"
+        ]
+      },
+      "id": 3
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.2487819405278,
+          25.8458039101236
+        ]
+      },
+      "properties": {
+        "name": "Northside",
+        "line": "floridaGR",
+        "id": 4
+      },
+      "id": 4
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.2411978957753,
+          25.8323910307904
+        ]
+      },
+      "properties": {
+        "name": "Dr. Martin Luther King, Jr. Plaza",
+        "line": "floridaGR",
+        "id": 5,
+        "alternate_names": [
+          "Dr. Martin Luther King Jr Plaza",
+          "MLK Jr. Plaza"
+        ]
+      },
+      "id": 5
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.2407146183221,
+          25.8220701625555
+        ]
+      },
+      "properties": {
+        "name": "Brownsville",
+        "line": "floridaGR",
+        "id": 6
+      },
+      "id": 6
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.2299526080806,
+          25.8124526579406
+        ]
+      },
+      "properties": {
+        "name": "Earlington Heights",
+        "line": "floridaGR",
+        "id": 7
+      },
+      "id": 7
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.2154648693341,
+          25.8086994803344
+        ]
+      },
+      "properties": {
+        "name": "Allapattah",
+        "line": "floridaGR",
+        "id": 8
+      },
+      "id": 8
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.2152061464475,
+          25.7958055747008
+        ]
+      },
+      "properties": {
+        "name": "Santa Clara",
+        "line": "floridaGR",
+        "id": 9
+      },
+      "id": 9
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.2150356650712,
+          25.7896763370415
+        ]
+      },
+      "properties": {
+        "name": "UHealth | Jackson",
+        "line": "floridaGR",
+        "id": 10
+      },
+      "id": 10
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.207546169799,
+          25.7845602964784
+        ]
+      },
+      "properties": {
+        "name": "Culmer",
+        "line": "floridaGR",
+        "id": 11
+      },
+      "id": 11
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.1962846639201,
+          25.7809987134801
+        ]
+      },
+      "properties": {
+        "name": "Historic Overtown/Lyric Theatre",
+        "line": "floridaGR",
+        "id": 12,
+        "alternate_names": [
+          "Historic Overtown",
+          "Lyric Theatre"
+        ]
+      },
+      "id": 12
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.1961007931545,
+          25.7760426366229
+        ]
+      },
+      "properties": {
+        "name": "Government Center",
+        "line": "floridaGR",
+        "id": 13
+      },
+      "id": 13
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.1954654803311,
+          25.7638247041087
+        ]
+      },
+      "properties": {
+        "name": "Brickell",
+        "line": "floridaGR",
+        "id": 14
+      },
+      "id": 14
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.2117678572739,
+          25.7497012081182
+        ]
+      },
+      "properties": {
+        "name": "Vizcaya",
+        "line": "floridaGR",
+        "id": 15
+      },
+      "id": 15
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.238851535779,
+          25.7398185624074
+        ]
+      },
+      "properties": {
+        "name": "Coconut Grove",
+        "line": "floridaGR",
+        "id": 16
+      },
+      "id": 16
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.2548721839808,
+          25.7327571594192
+        ]
+      },
+      "properties": {
+        "name": "Douglas Road",
+        "line": "floridaGR",
+        "id": 17
+      },
+      "id": 17
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.2769780360869,
+          25.7148216707079
+        ]
+      },
+      "properties": {
+        "name": "University",
+        "line": "floridaGR",
+        "id": 18
+      },
+      "id": 18
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.2890817026632,
+          25.7050423963525
+        ]
+      },
+      "properties": {
+        "name": "South Miami",
+        "line": "floridaGR",
+        "id": 19
+      },
+      "id": 19
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.3051110519468,
+          25.6919409363619
+        ]
+      },
+      "properties": {
+        "name": "Dadeland North",
+        "line": "floridaGR",
+        "id": 20
+      },
+      "id": 20
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.3136883684005,
+          25.6850026319916
+        ]
+      },
+      "properties": {
+        "name": "Dadeland South",
+        "line": "floridaGR",
+        "id": 21
+      },
+      "id": 21
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.2593711167053,
+          25.7974120297839
+        ]
+      },
+      "properties": {
+        "name": "Miami International Airport",
+        "line": "floridaOR",
+        "id": 22,
+        "alternate_names": [
+          "Miami Intl Airport Station",
+          "MIA Station"
+        ]
+      },
+      "id": 22
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.2299526080806,
+          25.8124526579406
+        ]
+      },
+      "properties": {
+        "name": "Earlington Heights",
+        "line": "floridaOR",
+        "id": 23
+      },
+      "id": 23
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.2154648693341,
+          25.8086994803344
+        ]
+      },
+      "properties": {
+        "name": "Allapattah",
+        "line": "floridaOR",
+        "id": 24
+      },
+      "id": 24
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.2152061464475,
+          25.7958055747008
+        ]
+      },
+      "properties": {
+        "name": "Santa Clara",
+        "line": "floridaOR",
+        "id": 25
+      },
+      "id": 25
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.2150356650712,
+          25.7896763370415
+        ]
+      },
+      "properties": {
+        "name": "UHealth | Jackson",
+        "line": "floridaOR",
+        "id": 26
+      },
+      "id": 26
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.207546169799,
+          25.7845602964784
+        ]
+      },
+      "properties": {
+        "name": "Culmer",
+        "line": "floridaOR",
+        "id": 27
+      },
+      "id": 27
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.1962846639201,
+          25.7809987134801
+        ]
+      },
+      "properties": {
+        "name": "Historic Overtown/Lyric Theatre",
+        "line": "floridaOR",
+        "id": 28,
+        "alternate_names": [
+          "Historic Overtown",
+          "Lyric Theatre"
+        ]
+      },
+      "id": 28
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.1961007931545,
+          25.7760426366229
+        ]
+      },
+      "properties": {
+        "name": "Government Center",
+        "line": "floridaOR",
+        "id": 29
+      },
+      "id": 29
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.1954654803311,
+          25.7638247041087
+        ]
+      },
+      "properties": {
+        "name": "Brickell",
+        "line": "floridaOR",
+        "id": 30
+      },
+      "id": 30
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.2117678572739,
+          25.7497012081182
+        ]
+      },
+      "properties": {
+        "name": "Vizcaya",
+        "line": "floridaOR",
+        "id": 31
+      },
+      "id": 31
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.238851535779,
+          25.7398185624074
+        ]
+      },
+      "properties": {
+        "name": "Coconut Grove",
+        "line": "floridaOR",
+        "id": 32
+      },
+      "id": 32
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.2548721839808,
+          25.7327571594192
+        ]
+      },
+      "properties": {
+        "name": "Douglas Road",
+        "line": "floridaOR",
+        "id": 33
+      },
+      "id": 33
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.2769780360869,
+          25.7148216707079
+        ]
+      },
+      "properties": {
+        "name": "University",
+        "line": "floridaOR",
+        "id": 34
+      },
+      "id": 34
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.2890817026632,
+          25.7050423963525
+        ]
+      },
+      "properties": {
+        "name": "South Miami",
+        "line": "floridaOR",
+        "id": 35
+      },
+      "id": 35
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.3051110519468,
+          25.6919409363619
+        ]
+      },
+      "properties": {
+        "name": "Dadeland North",
+        "line": "floridaOR",
+        "id": 36
+      },
+      "id": 36
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.3136883684005,
+          25.6850026319916
+        ]
+      },
+      "properties": {
+        "name": "Dadeland South",
+        "line": "floridaOR",
+        "id": 37
+      },
+      "id": 37
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.1960966474294,
+          25.7758687659421
+        ]
+      },
+      "properties": {
+        "name": "Government Center",
+        "line": "floridaOM",
+        "id": 38
+      },
+      "id": 38
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.1935112538209,
+          25.7720281988983
+        ]
+      },
+      "properties": {
+        "name": "Third Street",
+        "line": "floridaOM",
+        "id": 39
+      },
+      "id": 39
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.1913805784261,
+          25.7718697832172
+        ]
+      },
+      "properties": {
+        "name": "Knight Center",
+        "line": "floridaOM",
+        "id": 40
+      },
+      "id": 40
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.1873259398647,
+          25.7731041022977
+        ]
+      },
+      "properties": {
+        "name": "Bayfront Park",
+        "line": "floridaOM",
+        "id": 41
+      },
+      "id": 41
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.1898517913396,
+          25.7757302705768
+        ]
+      },
+      "properties": {
+        "name": "First Street",
+        "line": "floridaOM",
+        "id": 42
+      },
+      "id": 42
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.1899183681802,
+          25.7775884451246
+        ]
+      },
+      "properties": {
+        "name": "College/Bayside",
+        "line": "floridaOM",
+        "id": 43
+      },
+      "id": 43
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.1905702118015,
+          25.7805491827818
+        ]
+      },
+      "properties": {
+        "name": "Freedom Tower",
+        "line": "floridaOM",
+        "id": 44
+      },
+      "id": 44
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.1906461778335,
+          25.7824806602967
+        ]
+      },
+      "properties": {
+        "name": "Miami Worldcenter",
+        "line": "floridaOM",
+        "id": 45,
+        "alternate_names": [
+          "Park West"
+        ]
+      },
+      "id": 45
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.190793108078,
+          25.7848704472276
+        ]
+      },
+      "properties": {
+        "name": "Eleventh Street",
+        "line": "floridaOM",
+        "id": 46
+      },
+      "id": 46
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.1879375461478,
+          25.785922718002
+        ]
+      },
+      "properties": {
+        "name": "Museum Park",
+        "line": "floridaOM",
+        "id": 47
+      },
+      "id": 47
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.1880010067327,
+          25.7894610429048
+        ]
+      },
+      "properties": {
+        "name": "Adrienne Arsht Center",
+        "line": "floridaOM",
+        "id": 48
+      },
+      "id": 48
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.193147744253,
+          25.7893804903012
+        ]
+      },
+      "properties": {
+        "name": "School Board",
+        "line": "floridaOM",
+        "id": 49
+      },
+      "id": 49
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.1920886026852,
+          25.7789307554307
+        ]
+      },
+      "properties": {
+        "name": "College North",
+        "line": "floridaOM",
+        "id": 50
+      },
+      "id": 50
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.1953438502382,
+          25.7788199997062
+        ]
+      },
+      "properties": {
+        "name": "Wilkie D. Ferguson, Jr.",
+        "line": "floridaOM",
+        "id": 51
+      },
+      "id": 51
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.1960966474294,
+          25.7758687659421
+        ]
+      },
+      "properties": {
+        "name": "Government Center",
+        "line": "floridaBR",
+        "id": 52
+      },
+      "id": 52
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.1935112538209,
+          25.7720281988983
+        ]
+      },
+      "properties": {
+        "name": "Third Street",
+        "line": "floridaBR",
+        "id": 53
+      },
+      "id": 53
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.1925612503737,
+          25.7710560261661
+        ]
+      },
+      "properties": {
+        "name": "Riverwalk",
+        "line": "floridaBR",
+        "id": 54
+      },
+      "id": 54
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.1922515552811,
+          25.7691697634577
+        ]
+      },
+      "properties": {
+        "name": "Fifth Street",
+        "line": "floridaBR",
+        "id": 55
+      },
+      "id": 55
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.1921245442798,
+          25.766892369629
+        ]
+      },
+      "properties": {
+        "name": "Brickell City Centre (Eighth Street)",
+        "line": "floridaBR",
+        "id": 56,
+        "alternate_names": [
+          "Brickell City Centre",
+          "Eighth Street"
+        ]
+      },
+      "id": 56
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.192563656062,
+          25.7640209156012
+        ]
+      },
+      "properties": {
+        "name": "Tenth Street/Promenade",
+        "line": "floridaBR",
+        "id": 57
+      },
+      "id": 57
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.1952640079758,
+          25.762668652299
+        ]
+      },
+      "properties": {
+        "name": "Brickell",
+        "line": "floridaBR",
+        "id": 58
+      },
+      "id": 58
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.1928840959037,
+          25.7603860934224
+        ]
+      },
+      "properties": {
+        "name": "Financial District",
+        "line": "floridaBR",
+        "id": 59
+      },
+      "id": 59
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.1913805784261,
+          25.7718697832172
+        ]
+      },
+      "properties": {
+        "name": "Knight Center",
+        "line": "floridaBR",
+        "id": 60
+      },
+      "id": 60
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.1873259398647,
+          25.7731041022977
+        ]
+      },
+      "properties": {
+        "name": "Bayfront Park",
+        "line": "floridaBR",
+        "id": 61
+      },
+      "id": 61
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.1898517913396,
+          25.7757302705768
+        ]
+      },
+      "properties": {
+        "name": "First Street",
+        "line": "floridaBR",
+        "id": 62
+      },
+      "id": 62
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.1899183681802,
+          25.7775884451246
+        ]
+      },
+      "properties": {
+        "name": "College/Bayside",
+        "line": "floridaBR",
+        "id": 63
+      },
+      "id": 63
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.1920886026852,
+          25.7789307554307
+        ]
+      },
+      "properties": {
+        "name": "College North",
+        "line": "floridaBR",
+        "id": 64
+      },
+      "id": 64
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.1953438502382,
+          25.7788199997062
+        ]
+      },
+      "properties": {
+        "name": "Wilkie D. Ferguson, Jr.",
+        "line": "floridaBR",
+        "id": 65
+      },
+      "id": 65
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.1960966474294,
+          25.7758687659421
+        ]
+      },
+      "properties": {
+        "name": "Government Center",
+        "line": "floridaIN",
+        "id": 66
+      },
+      "id": 66
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.1935853836965,
+          25.7733953098504
+        ]
+      },
+      "properties": {
+        "name": "Miami Avenue",
+        "line": "floridaIN",
+        "id": 67
+      },
+      "id": 67
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.1913805784261,
+          25.7718697832172
+        ]
+      },
+      "properties": {
+        "name": "Knight Center",
+        "line": "floridaIN",
+        "id": 68
+      },
+      "id": 68
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.1873259398647,
+          25.7731041022977
+        ]
+      },
+      "properties": {
+        "name": "Bayfront Park",
+        "line": "floridaIN",
+        "id": 69
+      },
+      "id": 69
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.1898517913396,
+          25.7757302705768
+        ]
+      },
+      "properties": {
+        "name": "First Street",
+        "line": "floridaIN",
+        "id": 70
+      },
+      "id": 70
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.1899183681802,
+          25.7775884451246
+        ]
+      },
+      "properties": {
+        "name": "College/Bayside",
+        "line": "floridaIN",
+        "id": 71
+      },
+      "id": 71
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.1920886026852,
+          25.7789307554307
+        ]
+      },
+      "properties": {
+        "name": "College North",
+        "line": "floridaIN",
+        "id": 72
+      },
+      "id": 72
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.1953438502382,
+          25.7788199997062
+        ]
+      },
+      "properties": {
+        "name": "Wilkie D. Ferguson, Jr.",
+        "line": "floridaIN",
+        "id": 73
+      },
+      "id": 73
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.19578,
+          25.77753
+        ]
+      },
+      "properties": {
+        "name": "MiamiCentral",
+        "line": "brightline",
+        "id": 74,
+        "alternate_names": [
+          "Miami Central"
+        ]
+      },
+      "id": 74
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.147407,
+          25.957455
+        ]
+      },
+      "properties": {
+        "name": "Aventura",
+        "line": "brightline",
+        "id": 75
+      },
+      "id": 75
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.14611,
+          26.12366
+        ]
+      },
+      "properties": {
+        "name": "Fort Lauderdale",
+        "line": "brightline",
+        "id": 76
+      },
+      "id": 76
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.087385,
+          26.354617
+        ]
+      },
+      "properties": {
+        "name": "Boca Raton",
+        "line": "brightline",
+        "id": 77
+      },
+      "id": 77
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.05556,
+          26.71182
+        ]
+      },
+      "properties": {
+        "name": "West Palm Beach",
+        "line": "brightline",
+        "id": 78
+      },
+      "id": 78
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.25106710339332,
+          27.19579819798719
+        ]
+      },
+      "properties": {
+        "name": "Stuart",
+        "line": "brightline",
+        "id": 79
+      },
+      "id": 79
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.75163373581597,
+          28.397616490908447
+        ]
+      },
+      "properties": {
+        "name": "Cocoa",
+        "line": "brightline",
+        "id": 80
+      },
+      "id": 80
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.30818,
+          28.41453
+        ]
+      },
+      "properties": {
+        "name": "Orlando",
+        "line": "brightline",
+        "id": 81
+      },
+      "id": 81
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.07675393027903,
+          26.758628429325206
+        ]
+      },
+      "properties": {
+        "name": "Mangonia Park",
+        "line": "Tri-Rail",
+        "id": 82
+      },
+      "id": 82
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.06234516777903,
+          26.713325498329596
+        ]
+      },
+      "properties": {
+        "name": "West Palm Beach",
+        "line": "Tri-Rail",
+        "id": 83
+      },
+      "id": 83
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.06915696625559,
+          26.616301861693447
+        ]
+      },
+      "properties": {
+        "name": "Lake Worth Beach",
+        "line": "Tri-Rail",
+        "id": 84
+      },
+      "id": 84
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.07067578086858,
+          26.55394450690122
+        ]
+      },
+      "properties": {
+        "name": "Boynton Beach",
+        "line": "Tri-Rail",
+        "id": 85
+      },
+      "id": 85
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.09107018027531,
+          26.454454596357703
+        ]
+      },
+      "properties": {
+        "name": "Delray Beach",
+        "line": "Tri-Rail",
+        "id": 86
+      },
+      "id": 86
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.09956933633723,
+          26.3926405326474
+        ]
+      },
+      "properties": {
+        "name": "Boca Raton",
+        "line": "Tri-Rail",
+        "id": 87
+      },
+      "id": 87
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.12234661810959,
+          26.316952548092996
+        ]
+      },
+      "properties": {
+        "name": "Deerfield Beach",
+        "line": "Tri-Rail",
+        "id": 88
+      },
+      "id": 88
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.13481379143273,
+          26.2723758298872
+        ]
+      },
+      "properties": {
+        "name": "Pompano Beach",
+        "line": "Tri-Rail",
+        "id": 89
+      },
+      "id": 89
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.15048563270449,
+          26.201233456811067
+        ]
+      },
+      "properties": {
+        "name": "Cypress Creek",
+        "line": "Tri-Rail",
+        "id": 90
+      },
+      "id": 90
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.17003006623781,
+          26.120092013950398
+        ]
+      },
+      "properties": {
+        "name": "Fort Lauderdale",
+        "line": "Tri-Rail",
+        "id": 91
+      },
+      "id": 91
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.16574771590774,
+          26.061764749936536
+        ]
+      },
+      "properties": {
+        "name": "Fort Lauderdale Airport",
+        "line": "Tri-Rail",
+        "id": 92
+      },
+      "id": 92
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.16802683775809,
+          26.0321308792865
+        ]
+      },
+      "properties": {
+        "name": "Sheridan Street",
+        "line": "Tri-Rail",
+        "id": 93
+      },
+      "id": 93
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.16776381010793,
+          26.01206215010851
+        ]
+      },
+      "properties": {
+        "name": "Hollywood",
+        "line": "Tri-Rail",
+        "id": 94
+      },
+      "id": 94
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.21735217830351,
+          25.92166950895298
+        ]
+      },
+      "properties": {
+        "name": "Golden Glades",
+        "line": "Tri-Rail",
+        "id": 95
+      },
+      "id": 95
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.25293162517121,
+          25.900064101735733
+        ]
+      },
+      "properties": {
+        "name": "Opa-locka",
+        "line": "Tri-Rail",
+        "id": 96
+      },
+      "id": 96
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.2597898627221,
+          25.846637856981108
+        ]
+      },
+      "properties": {
+        "name": "Metrorail Transfer",
+        "line": "Tri-Rail",
+        "id": 97,
+        "alternate_names": [
+          "Tri-Rail Transfer"
+        ]
+      },
+      "id": 97
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.25868008453145,
+          25.811291554165173
+        ]
+      },
+      "properties": {
+        "name": "Hialeah Market",
+        "line": "Tri-Rail",
+        "id": 98
+      },
+      "id": 98
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.2582947780204,
+          25.797251642212977
+        ]
+      },
+      "properties": {
+        "name": "Miami Airport",
+        "line": "Tri-Rail",
+        "id": 99
+      },
+      "id": 99
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.19617984478062,
+          25.780909123325543
+        ]
+      },
+      "properties": {
+        "name": "MiamiCentral",
+        "line": "Tri-Rail",
+        "id": 100,
+        "alternate_names": [
+          "Miami Central"
+        ]
+      },
+      "id": 100
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.35266,
+          29.01783
+        ]
+      },
+      "properties": {
+        "name": "DeLand",
+        "line": "floridaSUN",
+        "id": 101
+      },
+      "id": 101
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.323413,
+          28.855694
+        ]
+      },
+      "properties": {
+        "name": "DeBary",
+        "line": "floridaSUN",
+        "id": 102
+      },
+      "id": 102
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.298115,
+          28.813476
+        ]
+      },
+      "properties": {
+        "name": "Sanford",
+        "line": "floridaSUN",
+        "id": 103
+      },
+      "id": 103
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.318301,
+          28.758665
+        ]
+      },
+      "properties": {
+        "name": "Lake Mary",
+        "line": "floridaSUN",
+        "id": 104
+      },
+      "id": 104
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.345378,
+          28.701299
+        ]
+      },
+      "properties": {
+        "name": "Longwood",
+        "line": "floridaSUN",
+        "id": 105
+      },
+      "id": 105
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.356613,
+          28.663827
+        ]
+      },
+      "properties": {
+        "name": "Altamonte Springs",
+        "line": "floridaSUN",
+        "id": 106
+      },
+      "id": 106
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.362163,
+          28.634943
+        ]
+      },
+      "properties": {
+        "name": "Maitland",
+        "line": "floridaSUN",
+        "id": 107
+      },
+      "id": 107
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.351667,
+          28.597456
+        ]
+      },
+      "properties": {
+        "name": "Winter Park",
+        "line": "floridaSUN",
+        "id": 108
+      },
+      "id": 108
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.371393,
+          28.573272
+        ]
+      },
+      "properties": {
+        "name": "AdventHealth",
+        "line": "floridaSUN",
+        "id": 109
+      },
+      "id": 109
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.380865,
+          28.548551
+        ]
+      },
+      "properties": {
+        "name": "LYNX Central",
+        "line": "floridaSUN",
+        "id": 110
+      },
+      "id": 110
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.38077,
+          28.538901
+        ]
+      },
+      "properties": {
+        "name": "Church Street",
+        "line": "floridaSUN",
+        "id": 111
+      },
+      "id": 111
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.381982,
+          28.526087
+        ]
+      },
+      "properties": {
+        "name": "Orlando Health/Amtrak",
+        "line": "floridaSUN",
+        "id": 112
+      },
+      "id": 112
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.366985,
+          28.453154
+        ]
+      },
+      "properties": {
+        "name": "Sand Lake Road",
+        "line": "floridaSUN",
+        "id": 113
+      },
+      "id": 113
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.374059,
+          28.386511
+        ]
+      },
+      "properties": {
+        "name": "Meadow Woods",
+        "line": "floridaSUN",
+        "id": 114
+      },
+      "id": 114
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.390023,
+          28.343098
+        ]
+      },
+      "properties": {
+        "name": "Tupperware",
+        "line": "floridaSUN",
+        "id": 115
+      },
+      "id": 115
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.404142,
+          28.293801
+        ]
+      },
+      "properties": {
+        "name": "Kissimmee",
+        "line": "floridaSUN",
+        "id": 116
+      },
+      "id": 116
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.484367,
+          28.258907
+        ]
+      },
+      "properties": {
+        "name": "Poinciana",
+        "line": "floridaSUN",
+        "id": 117
+      },
+      "id": 117
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.58132298092073,
+          28.41647677086155
+        ]
+      },
+      "properties": {
+        "name": "Main Street, USA",
+        "line": "DisneyDRR",
+        "id": 118,
+        "alternate_names": [
+          "Main Street USA"
+        ]
+      },
+      "id": 118
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.58509400810469,
+          28.419728398535444
+        ]
+      },
+      "properties": {
+        "name": "Frontierland",
+        "line": "DisneyDRR",
+        "id": 119
+      },
+      "id": 119
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.57826487946701,
+          28.421065672078523
+        ]
+      },
+      "properties": {
+        "name": "Fantasyland",
+        "line": "DisneyDRR",
+        "id": 120
+      },
+      "id": 120
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.57947352808037,
+          28.405690354503772
+        ]
+      },
+      "properties": {
+        "name": "Transportation and Ticket Center",
+        "line": "DisneyMKR",
+        "id": 121,
+        "alternate_names": [
+          "TTC",
+          "Transportation & Ticket Center"
+        ]
+      },
+      "id": 121
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.5852198283818,
+          28.404997829000262
+        ]
+      },
+      "properties": {
+        "name": "Polynesian Village Resort",
+        "line": "DisneyMKR",
+        "id": 122,
+        "alternate_names": [
+          "Disney's Polynesian Village Resort"
+        ]
+      },
+      "id": 122
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.58815078327068,
+          28.410881374685797
+        ]
+      },
+      "properties": {
+        "name": "Grand Floridian Resort & Spa",
+        "line": "DisneyMKR",
+        "id": 123,
+        "alternate_names": [
+          "Grand Floridian Resort",
+          "Disney's Grand Floridian Resort"
+        ]
+      },
+      "id": 123
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.58238069525417,
+          28.41603635934426
+        ]
+      },
+      "properties": {
+        "name": "Magic Kingdom",
+        "line": "DisneyMKR",
+        "id": 124,
+        "alternate_names": [
+          "Magic Kingdom Park"
+        ]
+      },
+      "id": 124
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.57445681974019,
+          28.415212471556526
+        ]
+      },
+      "properties": {
+        "name": "Contemporary Resort",
+        "line": "DisneyMKR",
+        "id": 125,
+        "alternate_names": [
+          "Disney's Contemporary Resort"
+        ]
+      },
+      "id": 125
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.57947352808037,
+          28.405690354503772
+        ]
+      },
+      "properties": {
+        "name": "Transportation and Ticket Center",
+        "line": "DisneyMKX",
+        "id": 126,
+        "alternate_names": [
+          "TTC",
+          "Transportation & Ticket Center"
+        ]
+      },
+      "id": 126
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.58238069525417,
+          28.41603635934426
+        ]
+      },
+      "properties": {
+        "name": "Magic Kingdom",
+        "line": "DisneyMKX",
+        "id": 127,
+        "alternate_names": [
+          "Magic Kingdom Park"
+        ]
+      },
+      "id": 127
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.57947352808037,
+          28.405690354503772
+        ]
+      },
+      "properties": {
+        "name": "Transportation and Ticket Center",
+        "line": "DisneyEPC",
+        "id": 128,
+        "alternate_names": [
+          "TTC",
+          "Transportation & Ticket Center"
+        ]
+      },
+      "id": 128
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.54963290052292,
+          28.376855372831628
+        ]
+      },
+      "properties": {
+        "name": "EPCOT",
+        "line": "DisneyEPC",
+        "id": 129,
+        "alternate_names": [
+          "Epcot"
+        ]
+      },
+      "id": 129
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.54492581312743,
+          28.359194402348784
+        ]
+      },
+      "properties": {
+        "name": "Caribbean Beach Resort",
+        "line": "DisneySKYEPC",
+        "id": 130,
+        "alternate_names": [
+          "Disney's Caribbean Beach Resort"
+        ]
+      },
+      "id": 130
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.54236836377831,
+          28.366052087468603
+        ]
+      },
+      "properties": {
+        "name": "Riviera Resort",
+        "line": "DisneySKYEPC",
+        "id": 131,
+        "alternate_names": [
+          "Disney's Riviera Resort"
+        ]
+      },
+      "id": 131
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.5534296592,
+          28.370020688355364
+        ]
+      },
+      "properties": {
+        "name": "EPCOT",
+        "line": "DisneySKYEPC",
+        "id": 132,
+        "alternate_names": [
+          "Epcot"
+        ]
+      },
+      "id": 132
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.55701230397688,
+          28.359146400676448
+        ]
+      },
+      "properties": {
+        "name": "Hollywood Studios",
+        "line": "DisneySKYHS",
+        "id": 133,
+        "alternate_names": [
+          "Disney's Hollywood Studios"
+        ]
+      },
+      "id": 133
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.54574178143595,
+          28.350424348551023
+        ]
+      },
+      "properties": {
+        "name": "Art of Animation/Pop Century Resorts",
+        "line": "DisneySKYPOP",
+        "id": 134,
+        "alternate_names": [
+          "Pop Century",
+          "Art of Animation",
+          "Pop Century Resort",
+          "Art of Animation Resort"
+        ]
+      },
+      "id": 134
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.45688363210186,
+          27.94526533217977
+        ]
+      },
+      "properties": {
+        "name": "Hattricks",
+        "line": "floridaTECO",
+        "id": 135
+      },
+      "id": 135
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.45482173538193,
+          27.941668872241205
+        ]
+      },
+      "properties": {
+        "name": "Dick Greco Plaza",
+        "line": "floridaTECO",
+        "id": 136
+      },
+      "id": 136
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.45200664045171,
+          27.941926924661267
+        ]
+      },
+      "properties": {
+        "name": "HSBC",
+        "line": "floridaTECO",
+        "id": 137
+      },
+      "id": 137
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.4485751942016,
+          27.943480576800386
+        ]
+      },
+      "properties": {
+        "name": "Amalie Arena",
+        "line": "floridaTECO",
+        "id": 138
+      },
+      "id": 138
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.44566838781984,
+          27.94582104430503
+        ]
+      },
+      "properties": {
+        "name": "The Florida Aquarium",
+        "line": "floridaTECO",
+        "id": 139
+      },
+      "id": 139
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.4455537633387,
+          27.948237405390003
+        ]
+      },
+      "properties": {
+        "name": "York Street",
+        "line": "floridaTECO",
+        "id": 140
+      },
+      "id": 140
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.44546782338523,
+          27.95165314489453
+        ]
+      },
+      "properties": {
+        "name": "Port Tampa Bay",
+        "line": "floridaTECO",
+        "id": 141
+      },
+      "id": 141
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.44554441928562,
+          27.960726478321924
+        ]
+      },
+      "properties": {
+        "name": "Cadrecha Plaza",
+        "line": "floridaTECO",
+        "id": 142
+      },
+      "id": 142
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.44334410446429,
+          27.961148256504927
+        ]
+      },
+      "properties": {
+        "name": "Streetcar Society",
+        "line": "floridaTECO",
+        "id": 143
+      },
+      "id": 143
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.44126271347446,
+          27.96111983528914
+        ]
+      },
+      "properties": {
+        "name": "Centro Ybor",
+        "line": "floridaTECO",
+        "id": 144
+      },
+      "id": 144
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.4373144979206,
+          27.961091398860145
+        ]
+      },
+      "properties": {
+        "name": "Centennial Park",
+        "line": "floridaTECO",
+        "id": 145
+      },
+      "id": 145
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.27386651164582,
+          25.798198081318414
+        ]
+      },
+      "properties": {
+        "name": "Station 1",
+        "line": "floridaSKYTRAIN",
+        "id": 146
+      },
+      "id": 146
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.27658924271714,
+          25.79732619891256
+        ]
+      },
+      "properties": {
+        "name": "Station 2",
+        "line": "floridaSKYTRAIN",
+        "id": 147
+      },
+      "id": 147
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.27975474704887,
+          25.797193419708357
+        ]
+      },
+      "properties": {
+        "name": "Station 3",
+        "line": "floridaSKYTRAIN",
+        "id": 148
+      },
+      "id": 148
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.28364448920846,
+          25.79778594288399
+        ]
+      },
+      "properties": {
+        "name": "Station 4",
+        "line": "floridaSKYTRAIN",
+        "id": 149
+      },
+      "id": 149
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.27981375793509,
+          25.79503812012263
+        ]
+      },
+      "properties": {
+        "name": "Concourse E",
+        "line": "floridaMET",
+        "id": 150
+      },
+      "id": 150
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.28341974778631,
+          25.795256595277195
+        ]
+      },
+      "properties": {
+        "name": "Concourse E Satellite",
+        "line": "floridaMET",
+        "id": 151
+      },
+      "id": 151
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.25917754941558,
+          25.796851333334665
+        ]
+      },
+      "properties": {
+        "name": "Miami Intermodal Center",
+        "line": "floridaMIA",
+        "id": 152
+      },
+      "id": 152
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.27707388910606,
+          25.79516799326855
+        ]
+      },
+      "properties": {
+        "name": "Central Terminal",
+        "line": "floridaMIA",
+        "id": 153
+      },
+      "id": 153
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.53264350593618,
+          27.97656519097299
+        ]
+      },
+      "properties": {
+        "name": "Airside A",
+        "line": "floridaASA",
+        "id": 154
+      },
+      "id": 154
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.53404312522369,
+          27.979667204890198
+        ]
+      },
+      "properties": {
+        "name": "Main Terminal",
+        "line": "floridaASA",
+        "id": 155
+      },
+      "id": 155
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.53233401233665,
+          27.982555922245375
+        ]
+      },
+      "properties": {
+        "name": "Airside C",
+        "line": "floridaASC",
+        "id": 156
+      },
+      "id": 156
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.53394525864972,
+          27.980498129334222
+        ]
+      },
+      "properties": {
+        "name": "Main Terminal",
+        "line": "floridaASC",
+        "id": 157
+      },
+      "id": 157
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.53773600271951,
+          27.98014421930563
+        ]
+      },
+      "properties": {
+        "name": "Airside E",
+        "line": "floridaASE",
+        "id": 158
+      },
+      "id": 158
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.5356582893311,
+          27.980101631855096
+        ]
+      },
+      "properties": {
+        "name": "Main Terminal",
+        "line": "floridaASE",
+        "id": 159
+      },
+      "id": 159
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.53734376320237,
+          27.977198900405007
+        ]
+      },
+      "properties": {
+        "name": "Airside F",
+        "line": "floridaASF",
+        "id": 160
+      },
+      "id": 160
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.53541474390677,
+          27.979583882285908
+        ]
+      },
+      "properties": {
+        "name": "Main Terminal",
+        "line": "floridaASF",
+        "id": 161
+      },
+      "id": 161
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.53340588271293,
+          27.980038924993785
+        ]
+      },
+      "properties": {
+        "name": "Main Terminal",
+        "line": "floridaSKYCONNECT",
+        "id": 162
+      },
+      "id": 162
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.53561261369518,
+          27.9666370940455
+        ]
+      },
+      "properties": {
+        "name": "Economy Parking",
+        "line": "floridaSKYCONNECT",
+        "id": 163
+      },
+      "id": 163
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.53557180298958,
+          27.963800944701447
+        ]
+      },
+      "properties": {
+        "name": "Rental Car Center",
+        "line": "floridaSKYCONNECT",
+        "id": 164
+      },
+      "id": 164
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.31415171469304,
+          28.434674125081866
+        ]
+      },
+      "properties": {
+        "name": "Airside 1",
+        "line": "floridaAS1",
+        "id": 165
+      },
+      "id": 165
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.30977402528949,
+          28.431392227151882
+        ]
+      },
+      "properties": {
+        "name": "Terminal A & B",
+        "line": "floridaAS1",
+        "id": 166,
+        "alternate_names": [
+          "Terminal A",
+          "Terminal B"
+        ]
+      },
+      "id": 166
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.30165466672379,
+          28.435152741747974
+        ]
+      },
+      "properties": {
+        "name": "Airside 2",
+        "line": "floridaAS2",
+        "id": 167
+      },
+      "id": 167
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.30614460774505,
+          28.431407556222048
+        ]
+      },
+      "properties": {
+        "name": "Terminal A & B",
+        "line": "floridaAS2",
+        "id": 168,
+        "alternate_names": [
+          "Terminal A",
+          "Terminal B"
+        ]
+      },
+      "id": 168
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.31377822109434,
+          28.428038598740518
+        ]
+      },
+      "properties": {
+        "name": "Airside 3",
+        "line": "floridaAS3",
+        "id": 169
+      },
+      "id": 169
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.3098112767809,
+          28.430966368196867
+        ]
+      },
+      "properties": {
+        "name": "Terminal A & B",
+        "line": "floridaAS3",
+        "id": 170,
+        "alternate_names": [
+          "Terminal A",
+          "Terminal B"
+        ]
+      },
+      "id": 170
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.30154062291484,
+          28.427383874856098
+        ]
+      },
+      "properties": {
+        "name": "Airside 4",
+        "line": "floridaAS4",
+        "id": 171
+      },
+      "id": 171
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.30617673253428,
+          28.431014143570472
+        ]
+      },
+      "properties": {
+        "name": "Terminal A & B",
+        "line": "floridaAS4",
+        "id": 172,
+        "alternate_names": [
+          "Terminal A",
+          "Terminal B"
+        ]
+      },
+      "id": 172
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.3057055802727,
+          28.430591229038463
+        ]
+      },
+      "properties": {
+        "name": "Terminal A & B",
+        "line": "floridaTL",
+        "id": 173,
+        "alternate_names": [
+          "Terminal A",
+          "Terminal B"
+        ]
+      },
+      "id": 173
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.30877900523096,
+          28.412197508389024
+        ]
+      },
+      "properties": {
+        "name": "Terminal C",
+        "line": "floridaTL",
+        "id": 174,
+        "alternate_names": [
+          "Intermodal Terminal"
+        ]
+      },
+      "id": 174
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.54492581312743,
+          28.359194402348784
+        ]
+      },
+      "properties": {
+        "name": "Caribbean Beach Resort",
+        "line": "DisneySKYHS",
+        "id": 175,
+        "alternate_names": [
+          "Disney's Caribbean Beach Resort"
+        ]
+      },
+      "id": 175
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.54492581312743,
+          28.359194402348784
+        ]
+      },
+      "properties": {
+        "name": "Caribbean Beach Resort",
+        "line": "DisneySKYPOP",
+        "id": 176,
+        "alternate_names": [
+          "Disney's Caribbean Beach Resort"
+        ]
+      },
+      "id": 176
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.658755405726,
+          30.333344550314646
+        ]
+      },
+      "properties": {
+        "name": "Rosa Parks Transit Station",
+        "line": "NB",
+        "id": 177,
+        "alternate_names": [
+          "Rosa Parks"
+        ]
+      },
+      "id": 177
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.658755405726,
+          30.333344550314646
+        ]
+      },
+      "properties": {
+        "name": "Rosa Parks Transit Station",
+        "line": "SB",
+        "id": 178,
+        "alternate_names": [
+          "Rosa Parks"
+        ]
+      },
+      "id": 178
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.65990868831761,
+          30.3294708397588
+        ]
+      },
+      "properties": {
+        "name": "James Weldon Johnson Park",
+        "line": "NB",
+        "id": 179,
+        "alternate_names": [
+          "James Weldon Johnson",
+          "Hemming Park"
+        ]
+      },
+      "id": 179
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.65990868831761,
+          30.3294708397588
+        ]
+      },
+      "properties": {
+        "name": "James Weldon Johnson Park",
+        "line": "SB",
+        "id": 180,
+        "alternate_names": [
+          "James Weldon Johnson",
+          "Hemming Park"
+        ]
+      },
+      "id": 180
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.66235884118157,
+          30.327100728187986
+        ]
+      },
+      "properties": {
+        "name": "Central",
+        "line": "NB",
+        "id": 181
+      },
+      "id": 181
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.66235884118157,
+          30.327100728187986
+        ]
+      },
+      "properties": {
+        "name": "Central",
+        "line": "SB",
+        "id": 182
+      },
+      "id": 182
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.66750766130528,
+          30.327638614490805
+        ]
+      },
+      "properties": {
+        "name": "Jefferson",
+        "line": "NB",
+        "id": 183
+      },
+      "id": 183
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.6722149735221,
+          30.329046155681592
+        ]
+      },
+      "properties": {
+        "name": "Jacksonville Regional Transportation Center at LaVilla",
+        "line": "NB",
+        "id": 184,
+        "alternate_names": [
+          "Jacksonville Regional Transportation Center",
+          "JRTC",
+          "LaVilla"
+        ]
+      },
+      "id": 184
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.66091912289083,
+          30.31773781655535
+        ]
+      },
+      "properties": {
+        "name": "San Marco",
+        "line": "SB",
+        "id": 185,
+        "alternate_names": [
+          "San Marco Station",
+          "San Macro"
+        ]
+      },
+      "id": 185
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.65668501896143,
+          30.317747615147116
+        ]
+      },
+      "properties": {
+        "name": "Riverplace",
+        "line": "SB",
+        "id": 186,
+        "alternate_names": [
+          "River Place"
+        ]
+      },
+      "id": 186
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.65307189952198,
+          30.31532003919497
+        ]
+      },
+      "properties": {
+        "name": "Kings Avenue",
+        "line": "SB",
+        "id": 187,
+        "alternate_names": [
+          "Kings Ave"
+        ]
+      },
+      "id": 187
+    }
+  ]
+}

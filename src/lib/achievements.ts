@@ -68,10 +68,6 @@ export const ACHIEVEMENTS: Record<string, AchievementDefinition> = {
     title: "Queen City Navigator",
     description: "You've raced through Charlotte's system faster than a NASCAR pit stop.",
   },
-  chicago: {
-    title: "L-evated Mind",
-    description: "You know the L like the back of your hand. The Bear would approve.",
-  },
   cincinnati: {
     title: "Chili & Chill",
     description: "You know the streetcar system better than a three-way. Queen City crowned!",
@@ -152,10 +148,6 @@ export const ACHIEVEMENTS: Record<string, AchievementDefinition> = {
     title: "East Meets West",
     description: "You've bridged two continents in your transit mind. Muthis!",
   },
-  jacksonville: {
-    title: "The Good Transit",
-    description: "You found all the stations. You're in The Good Place now.",
-  },
   karlsruhe: {
     title: "Tram-Train Brain",
     description: "You've pioneered the Karlsruhe model in your memory!",
@@ -164,9 +156,9 @@ export const ACHIEVEMENTS: Record<string, AchievementDefinition> = {
     title: "BBQ & Tracks",
     description: "You've smoked the KC Streetcar system. Nice!",
   },
-  kenosha: {
-    title: "K-Town",
-    description: "You've conquered Kenosha's historic streetcars with style!",
+  chicago: {
+    title: "Second City Streetcar",
+    description: "You've mastered the Chicago–Kenosha corridor, loop and lakefront alike!",
   },
   la: {
     title: "La La Land Lord",
@@ -212,6 +204,10 @@ export const ACHIEVEMENTS: Record<string, AchievementDefinition> = {
     title: "Sunshine State of Mind",
     description: "You've navigated Florida's transit triangle like Crockett and Tubbs!",
   },
+  'florida-state': {
+    title: "Sunshine State Superfan",
+    description: "You've conquered Miami, Orlando, Tampa, and Jacksonville without missing a stop!",
+  },
   milwaukee: {
     title: "Brew City Brain",
     description: "Laverne and Shirley would toast to your Milwaukee transit mastery!",
@@ -256,10 +252,6 @@ export const ACHIEVEMENTS: Record<string, AchievementDefinition> = {
     title: "Stand Clear of the Closing Doors, Please.",
     description: "You're a true New Yorker. Jay-Z and Alicia Keys are jealous!",
   },
-  oceanside: {
-    title: "Carnation City",
-    description: "You feel the need for speed on the COASTER. Highway to the transit zone!",
-  },
   okc: {
     title: "The Big Friendly",
     description: "Boomer! You've streetcar'd through OKC!",
@@ -299,6 +291,14 @@ export const ACHIEVEMENTS: Record<string, AchievementDefinition> = {
   potsdam: {
     title: "Palace of Transit",
     description: "You've royal-tram'd through Potsdam like Frederick the Great!",
+  },
+  'san-juan': {
+    title: 'Isla del Encanto',
+    description: 'You cruised through the Tren Urbano like a Boricua commuter!',
+  },
+  tucson: {
+    title: 'Desert Link Legend',
+    description: "Sun-scorched rails can't stop you—you mastered Tucson's Sun Link!",
   },
   sd: {
     title: "Stay Classy",

@@ -446,6 +446,54 @@
         "id": 24
       },
       "id": 24
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -83.3547061566216,
+          42.212586513569555
+        ]
+      },
+      "properties": {
+        "name": "North Station",
+        "line": "EXT",
+        "id": 25
+      },
+      "id": 25
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -83.35810355846282,
+          42.207993075228856
+        ]
+      },
+      "properties": {
+        "name": "Terminal Station",
+        "line": "EXT",
+        "id": 26
+      },
+      "id": 26
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -83.3618252407449,
+          42.20290517155995
+        ]
+      },
+      "properties": {
+        "name": "South Station",
+        "line": "EXT",
+        "id": 27
+      },
+      "id": 27
     }
   ]
 }

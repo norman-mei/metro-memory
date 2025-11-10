@@ -1,0 +1,74 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+enum VerificationType {
+  EMAIL
+}
+
+model User {
+  id               String               @id @default(cuid())
+  email            String               @unique
+  passwordHash     String
+  emailVerifiedAt  DateTime?
+  createdAt        DateTime             @default(now())
+  updatedAt        DateTime             @updatedAt
+  uiPreferences    Json?
+  progress         Progress[]
+  sessions         Session[]
+  verification     VerificationToken[]
+  passwordResets   PasswordResetToken[]
+}
+
+model Session {
+  id        String   @id @default(cuid())
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId    String
+  tokenHash String   @unique
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+}
+
+model VerificationToken {
+  id        String            @id @default(cuid())
+  tokenHash String            @unique
+  type      VerificationType  @default(EMAIL)
+  user      User              @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId    String
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+}
+
+model PasswordResetToken {
+  id        String   @id @default(cuid())
+  tokenHash String   @unique
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId    String
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+}
+
+model CaptchaChallenge {
+  id         String   @id
+  answerHash String
+  expiresAt  DateTime
+  createdAt  DateTime @default(now())
+}
+
+model Progress {
+  id              String   @id @default(cuid())
+  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId          String
+  citySlug        String
+  foundIds        Json
+  foundTimestamps Json?
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  @@unique([userId, citySlug])
+}

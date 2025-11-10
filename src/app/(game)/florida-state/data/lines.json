@@ -1,0 +1,250 @@
+{
+  "floridaGR": {
+    "name": "Green",
+    "color": "#90C05C",
+    "backgroundColor": "#577F2A",
+    "progressOutlineColor": "#90C05C",
+    "textColor": "#1F1F1F",
+    "order": 0
+  },
+  "floridaOR": {
+    "name": "Orange",
+    "color": "#FE4D1A",
+    "backgroundColor": "#B5380F",
+    "progressOutlineColor": "#FE4D1A",
+    "textColor": "#FFFFFF",
+    "order": 1
+  },
+  "floridaOM": {
+    "name": "Omni Loop",
+    "color": "#0A57AE",
+    "backgroundColor": "#043267",
+    "progressOutlineColor": "#0A57AE",
+    "textColor": "#FFFFFF",
+    "order": 2
+  },
+  "floridaBR": {
+    "name": "Brickell Loop",
+    "color": "#FFB638",
+    "backgroundColor": "#B27800",
+    "progressOutlineColor": "#FFB638",
+    "textColor": "#1F1F1F",
+    "order": 3
+  },
+  "floridaIN": {
+    "name": "Inner Loop",
+    "color": "#3AC2EE",
+    "backgroundColor": "#1E86A6",
+    "progressOutlineColor": "#3AC2EE",
+    "textColor": "#1F1F1F",
+    "order": 4
+  },
+  "brightline": {
+    "name": "Brightline",
+    "color": "#FADB19",
+    "backgroundColor": "#B38200",
+    "progressOutlineColor": "#FADB19",
+    "textColor": "#1F1F1F",
+    "order": 5
+  },
+  "Tri-Rail": {
+    "name": "Tri-Rail",
+    "color": "#1EA0C5",
+    "backgroundColor": "#030B1E",
+    "progressOutlineColor": "#E15F3A",
+    "textColor": "#FFFFFF",
+    "order": 6
+  },
+  "floridaSUN": {
+    "name": "SunRail",
+    "color": "#D78A31",
+    "backgroundColor": "#B56B00",
+    "progressOutlineColor": "#D78A31",
+    "textColor": "#1F1F1F",
+    "order": 7
+  },
+  "DisneyDRR": {
+    "name": "Disneyland Railroad",
+    "color": "#B0142B",
+    "backgroundColor": "#6E091B",
+    "progressOutlineColor": "#B0142B",
+    "textColor": "#FFFFFF",
+    "order": 8
+  },
+  "DisneyMKR": {
+    "name": "Magic Kingdom Resort",
+    "color": "#FF0000",
+    "backgroundColor": "#B25B1B",
+    "progressOutlineColor": "#FF0000",
+    "textColor": "#1F1F1F",
+    "order": 9
+  },
+  "DisneyMKX": {
+    "name": "Magic Kingdom Express",
+    "color": "#0000FF",
+    "backgroundColor": "#B25B1B",
+    "progressOutlineColor": "#0000FF",
+    "textColor": "#1F1F1F",
+    "order": 10
+  },
+  "DisneyEPC": {
+    "name": "EPCOT",
+    "color": "#FFC0CB",
+    "backgroundColor": "#B25B1B",
+    "progressOutlineColor": "#FFC0CB",
+    "textColor": "#1F1F1F",
+    "order": 11
+  },
+  "DisneySKYEPC": {
+    "name": "EPCOT",
+    "color": "#008000",
+    "backgroundColor": "#3A86A9",
+    "progressOutlineColor": "#008000",
+    "textColor": "#1F1F1F",
+    "order": 12
+  },
+  "DisneySKYHS": {
+    "name": "Hollywood Studios",
+    "color": "#0000FF",
+    "backgroundColor": "#3A86A9",
+    "progressOutlineColor": "#0000FF",
+    "textColor": "#1F1F1F",
+    "order": 13
+  },
+  "DisneySKYPOP": {
+    "name": "Pop Century/Art of Animation",
+    "color": "#FF0202",
+    "backgroundColor": "#3A86A9",
+    "progressOutlineColor": "#FF0202",
+    "textColor": "#1F1F1F",
+    "order": 14
+  },
+  "floridaTECO": {
+    "name": "TECO Line Streetcar",
+    "color": "#D39F19",
+    "backgroundColor": "#B66A12",
+    "progressOutlineColor": "#D39F19",
+    "textColor": "#1F1F1F",
+    "order": 15
+  },
+  "floridaSKYTRAIN": {
+    "name": "MIA Skytrain",
+    "color": "#FF0000",
+    "backgroundColor": "#003F78",
+    "progressOutlineColor": "#FF0000",
+    "textColor": "#FFFFFF",
+    "order": 16
+  },
+  "floridaMET": {
+    "name": "MIA e Train",
+    "color": "#0000FF",
+    "backgroundColor": "#C04B05",
+    "progressOutlineColor": "#0000FF",
+    "textColor": "#FFFFFF",
+    "order": 17
+  },
+  "floridaMIA": {
+    "name": "MIA Mover",
+    "color": "#008000",
+    "backgroundColor": "#007EAB",
+    "progressOutlineColor": "#008000",
+    "textColor": "#FFFFFF",
+    "order": 18
+  },
+  "floridaASA": {
+    "name": "Airside A APM",
+    "color": "#FF0000",
+    "backgroundColor": "#004768",
+    "progressOutlineColor": "#FF0000",
+    "textColor": "#FFFFFF",
+    "order": 19
+  },
+  "floridaASC": {
+    "name": "Airside C APM",
+    "color": "#0000FF",
+    "backgroundColor": "#005238",
+    "progressOutlineColor": "#0000FF",
+    "textColor": "#FFFFFF",
+    "order": 20
+  },
+  "floridaASE": {
+    "name": "Airside E APM",
+    "color": "#FFF000",
+    "backgroundColor": "#A6530F",
+    "progressOutlineColor": "#FFF000",
+    "textColor": "#1F1F1F",
+    "order": 21
+  },
+  "floridaASF": {
+    "name": "Airside F APM",
+    "color": "#007F00",
+    "backgroundColor": "#5B2A6F",
+    "progressOutlineColor": "#007F00",
+    "textColor": "#FFFFFF",
+    "order": 22
+  },
+  "floridaSKYCONNECT": {
+    "name": "SkyConnect",
+    "color": "#FFA500",
+    "backgroundColor": "#8B004B",
+    "progressOutlineColor": "#FFA500",
+    "textColor": "#FFFFFF",
+    "order": 23
+  },
+  "floridaAS1": {
+    "name": "Airside 1 APM",
+    "color": "#FF0000",
+    "backgroundColor": "#036C92",
+    "progressOutlineColor": "#FF0000",
+    "textColor": "#FFFFFF",
+    "order": 24
+  },
+  "floridaAS2": {
+    "name": "Airside 2 APM",
+    "color": "#0000FF",
+    "backgroundColor": "#B73A0F",
+    "progressOutlineColor": "#0000FF",
+    "textColor": "#FFFFFF",
+    "order": 25
+  },
+  "floridaAS3": {
+    "name": "Airside 3 APM",
+    "color": "#008000",
+    "backgroundColor": "#4730A4",
+    "progressOutlineColor": "#008000",
+    "textColor": "#FFFFFF",
+    "order": 26
+  },
+  "floridaAS4": {
+    "name": "Airside 4 APM",
+    "color": "#FFFF00",
+    "backgroundColor": "#0E7A68",
+    "progressOutlineColor": "#FFFF00",
+    "textColor": "#FFFFFF",
+    "order": 27
+  },
+  "floridaTL": {
+    "name": "Terminal Link",
+    "color": "#F4C542",
+    "backgroundColor": "#B18C19",
+    "progressOutlineColor": "#0B3ABD",
+    "textColor": "#1F1F1F",
+    "order": 28
+  },
+  "NB": {
+    "name": "Northbank",
+    "color": "#004990",
+    "backgroundColor": "#004990",
+    "progressOutlineColor": "#004990",
+    "textColor": "#FFFFFF",
+    "order": 29
+  },
+  "SB": {
+    "name": "Southbank",
+    "color": "#00B8F1",
+    "backgroundColor": "#00B8F1",
+    "progressOutlineColor": "#00B8F1",
+    "textColor": "#FFFFFF",
+    "order": 30
+  }
+}

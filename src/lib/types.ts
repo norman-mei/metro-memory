@@ -38,6 +38,7 @@ export interface Line {
   color: string
   backgroundColor: string
   textColor: string
+  progressOutlineColor?: string
   order: number
 }
 

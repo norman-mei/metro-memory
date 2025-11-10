@@ -2,9 +2,15 @@
 
 import { ReactNode, useCallback } from 'react'
 import colors from 'tailwindcss/colors'
+import { useSettings } from '@/context/SettingsContext'
 
 const ConfettiButton = ({ children }: { children: ReactNode }) => {
+  const { settings } = useSettings()
+
   const onClick = useCallback(() => {
+    if (!settings.confettiEnabled) {
+      return
+    }
     const makeConfetti = async () => {
       const confetti = (await import('tsparticles-confetti')).confetti
       confetti({
@@ -29,7 +35,7 @@ const ConfettiButton = ({ children }: { children: ReactNode }) => {
     }
 
     void makeConfetti()
-  }, [])
+  }, [settings.confettiEnabled])
 
   return (
     <button

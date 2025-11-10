@@ -16,7 +16,9 @@
         "id": 0,
         "alternate_names": [
           "媽閣",
-          "妈阁"
+          "妈阁",
+          "Māgé",
+          "maa1 gok3"
         ]
       },
       "id": 0
@@ -36,7 +38,9 @@
         "id": 1,
         "alternate_names": [
           "海洋",
-          "Oceano"
+          "Oceano",
+          "Hǎiyáng",
+          "hoi2 joeng4"
         ]
       },
       "id": 1
@@ -57,7 +61,9 @@
         "alternate_names": [
           "馬會",
           "马会",
-          "Jockey Clube"
+          "Jockey Clube",
+          "Mǎhuì",
+          "maa5 wui6"
         ]
       },
       "id": 2
@@ -78,7 +84,9 @@
         "alternate_names": [
           "運動場",
           "运动场",
-          "Estádio"
+          "Estádio",
+          "Yùndòngchǎng",
+          "wan6 dung6 coeng4"
         ]
       },
       "id": 3
@@ -97,7 +105,9 @@
         "line": "TPA",
         "id": 4,
         "alternate_names": [
-          "排角"
+          "排角",
+          "Pái jiǎo",
+          "paai4 gok3"
         ]
       },
       "id": 4
@@ -117,7 +127,9 @@
         "id": 5,
         "alternate_names": [
           "路氹西",
-          "Cotai Oeste"
+          "Cotai Oeste",
+          "Lùdàng xī",
+          "lou6 tam5 sai1"
         ]
       },
       "id": 5
@@ -138,7 +150,12 @@
         "alternate_names": [
           "蓮花",
           "莲花",
-          "Lótus"
+          "Lótus",
+          "Lotus — Taipa Line",
+          "蓮花口岸",
+          "莲花口岸",
+          "Liánhuā kǒu'àn",
+          "lin4 faa1 hau2 ngon6"
         ]
       },
       "id": 6
@@ -159,7 +176,9 @@
         "alternate_names": [
           "協和醫院",
           "协和医院",
-          "Hospital Union"
+          "Hospital Union",
+          "Xiéhé yīyuàn",
+          "hip3 wo4 ji1 jyun2"
         ]
       },
       "id": 7
@@ -180,7 +199,9 @@
         "alternate_names": [
           "東亞運",
           "东亚运",
-          "Jogos da Ásia Oriental"
+          "Jogos da Ásia Oriental",
+          "Dōngyà yùn",
+          "dung1 aa3 wan6"
         ]
       },
       "id": 8
@@ -201,7 +222,9 @@
         "alternate_names": [
           "路氹東",
           "路氹东",
-          "Cotai Leste"
+          "Cotai Leste",
+          "Lùdàng dōng",
+          "lou6 tam5 dung1"
         ]
       },
       "id": 9
@@ -223,7 +246,9 @@
           "科大",
           "UCTM",
           "Universidade de Ciência e Tecnologia de Macau",
-          "Macau University of Science and Technology"
+          "Macau University of Science and Technology",
+          "Kēdà",
+          "fo1 daai6"
         ]
       },
       "id": 10
@@ -244,7 +269,9 @@
         "alternate_names": [
           "機場",
           "机场",
-          "Aeroporto"
+          "Aeroporto",
+          "Jīchǎng",
+          "gei1 coeng4"
         ]
       },
       "id": 11
@@ -265,7 +292,9 @@
         "alternate_names": [
           "氹仔碼頭",
           "氹仔码头",
-          "Terminal Marítimo da Taipa"
+          "Terminal Marítimo da Taipa",
+          "Dàngzǎi mǎtóu",
+          "tam5 zai2 maa5 tau4"
         ]
       },
       "id": 12
@@ -286,7 +315,10 @@
         "alternate_names": [
           "蓮花",
           "莲花",
-          "Lótus"
+          "Lótus",
+          "Lotus — Hengqin Line",
+          "Liánhuā",
+          "lin4 faa1"
         ]
       },
       "id": 13
@@ -307,7 +339,9 @@
         "alternate_names": [
           "橫琴",
           "横琴",
-          "Posto Fronteiriço Hengqin"
+          "Posto Fronteiriço Hengqin",
+          "Héngqín",
+          "waang4 kam4"
         ]
       },
       "id": 14
@@ -328,7 +362,9 @@
         "alternate_names": [
           "協和醫院",
           "协和医院",
-          "Hospital Union"
+          "Hospital Union",
+          "Xiéhé yīyuàn",
+          "hip3 wo4 ji1 jyun2"
         ]
       },
       "id": 15
@@ -348,7 +384,9 @@
         "id": 16,
         "alternate_names": [
           "石排灣",
-          "石排湾"
+          "石排湾",
+          "Shí pái wān",
+          "sek6 paai4 waan1"
         ]
       },
       "id": 16

@@ -20,6 +20,51 @@
         "color": "#0B3B8D",
         "order": 0
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-115.14704516667751, 36.081240617682646],
+          [-115.14884092481046, 36.08441013910726]
+        ]
+      },
+      "properties": {
+        "line": "LVGreen",
+        "color": "#008100",
+        "order": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-115.14848222052063, 36.08446735154331],
+          [-115.13760222018054, 36.08168529198482]
+        ]
+      },
+      "properties": {
+        "line": "LVBlue",
+        "color": "#00309A",
+        "order": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-115.13760222018054, 36.08168529198482],
+          [-115.13698649206214, 36.086212540328034]
+        ]
+      },
+      "properties": {
+        "line": "LVRed",
+        "color": "#BF2928",
+        "order": 3
+      }
     }
   ]
 }

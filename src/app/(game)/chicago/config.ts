@@ -65,7 +65,34 @@ export const LINE_GROUPS: LineGroup[] = [
       },
     ],
   },
+  {
+    items: [{ type: 'separator' }],
+  },
+  {
+    title: 'Chicago Department of Aviation (CDA)',
+    items: [
+      {
+        type: 'lines',
+        lines: ['ChicagoATS'],
+      },
+    ],
+  },
+  {
+    items: [{ type: 'separator' }],
+  },
+  {
+    title: 'Kenosha Transit',
+    items: [
+      {
+        type: 'lines',
+        title: 'Kenosha Streetcar',
+        lines: ['kenoshaStreetcar'],
+      },
+    ],
+  },
+
 ]
+
 
 export const METADATA: Metadata = {
   title: 'Chicago Metro Memory',

@@ -12,5 +12,12 @@
     "backgroundColor": "#254A7A",
     "textColor": "#FFFFFF",
     "order": 1
+  },
+  "EXT": {
+    "name": "ExpressTram",
+    "color": "#C8102E",
+    "backgroundColor": "#8E0B1F",
+    "textColor": "#FFFFFF",
+    "order": 2
   }
 }

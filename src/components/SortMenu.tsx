@@ -22,7 +22,7 @@ export default function SortMenu({
         <div className="relative">
           <Listbox.Button
             className={classNames(
-              'relative flex w-full cursor-default items-center justify-between rounded-lg border border-zinc-200 bg-white py-2 pl-3 pr-10 text-left shadow focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:border-[#18181b] dark:bg-zinc-800 dark:text-zinc-100 dark:focus-visible:ring-indigo-400 dark:focus-visible:ring-offset-zinc-900',
+              'relative flex w-full cursor-default items-center justify-between rounded-lg border border-zinc-200 bg-white py-2 pl-3 pr-10 text-left shadow focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent-ring)] focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:border-[#18181b] dark:bg-zinc-800 dark:text-zinc-100 dark:focus-visible:ring-[var(--accent-ring)] dark:focus-visible:ring-offset-zinc-900',
               disabled &&
                 'cursor-not-allowed opacity-50 focus-visible:ring-0 focus-visible:ring-offset-0',
             )}
@@ -71,7 +71,7 @@ const Option = ({ option }: { option: SortOption }) => {
           <span
             className={`block truncate ${
               selected
-                ? 'font-semibold text-indigo-600 dark:text-indigo-300'
+                ? 'font-semibold text-[var(--accent-600)] dark:text-[var(--accent-300)]'
                 : 'font-normal'
             }`}
           >

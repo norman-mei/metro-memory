@@ -1,0 +1,97 @@
+import { NextRequest, NextResponse } from 'next/server'
+import { z } from 'zod'
+
+import { prisma } from '@/lib/prisma'
+import { getCurrentUser } from '@/lib/auth'
+
+type RouteParams = {
+  params: {
+    citySlug: string
+  }
+}
+
+const progressSchema = z.object({
+  foundIds: z.array(z.number().int().nonnegative()).max(10000),
+  foundTimestamps: z.record(z.string()).optional(),
+})
+
+export async function GET(_: NextRequest, { params }: RouteParams) {
+  const user = await getCurrentUser()
+  if (!user) {
+    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+  }
+
+  const citySlug = params.citySlug
+  if (!citySlug) {
+    return NextResponse.json({ error: 'Missing city' }, { status: 400 })
+  }
+
+  const record = await prisma.progress.findUnique({
+    where: {
+      userId_citySlug: {
+        userId: user.id,
+        citySlug,
+      },
+    },
+  })
+
+  if (!record) {
+    return NextResponse.json({ progress: null })
+  }
+
+  return NextResponse.json({
+    progress: {
+      foundIds: Array.isArray(record.foundIds)
+        ? record.foundIds.filter((id): id is number => typeof id === 'number')
+        : [],
+      foundTimestamps:
+        typeof record.foundTimestamps === 'object' && record.foundTimestamps
+          ? record.foundTimestamps
+          : {},
+    },
+  })
+}
+
+export async function POST(request: NextRequest, { params }: RouteParams) {
+  const user = await getCurrentUser()
+  if (!user) {
+    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+  }
+
+  const citySlug = params.citySlug
+  if (!citySlug) {
+    return NextResponse.json({ error: 'Missing city' }, { status: 400 })
+  }
+
+  const json = await request.json().catch(() => null)
+  const parsed = progressSchema.safeParse(json)
+
+  if (!parsed.success) {
+    return NextResponse.json({ error: 'Invalid payload' }, { status: 400 })
+  }
+
+  const uniqueIds = Array.from(
+    new Set(parsed.data.foundIds.filter((id) => Number.isFinite(id))),
+  )
+
+  await prisma.progress.upsert({
+    where: {
+      userId_citySlug: {
+        userId: user.id,
+        citySlug,
+      },
+    },
+    update: {
+      foundIds: uniqueIds,
+      foundTimestamps: parsed.data.foundTimestamps ?? {},
+    },
+    create: {
+      userId: user.id,
+      citySlug,
+      foundIds: uniqueIds,
+      foundTimestamps: parsed.data.foundTimestamps ?? {},
+    },
+  })
+
+  return NextResponse.json({ ok: true, foundCount: uniqueIds.length })
+}

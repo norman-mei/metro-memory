@@ -6,6 +6,7 @@ import Image from 'next/image'
 import { useConfig } from '@/lib/configContext'
 import OverflowMarquee from '@/components/OverflowMarquee'
 import { useTheme } from 'next-themes'
+import { getCompletionColor } from '@/lib/progressColors'
 
 const cleanupLineName = (name?: string) => {
   if (!name) return ''
@@ -27,6 +28,27 @@ const cleanupLineName = (name?: string) => {
   }
 
   return result.replace(/^[–-]\s*/, '').replace(/\s{2,}/g, ' ').trim()
+}
+
+const invertHexColor = (value?: string) => {
+  if (!value) {
+    return undefined
+  }
+  const hex = value.replace('#', '')
+  if (!/^[0-9a-f]{3}$|^[0-9a-f]{6}$/i.test(hex)) {
+    return undefined
+  }
+  const normalized = hex.length === 3 ? hex.split('').map((ch) => ch + ch).join('') : hex
+  const numeric = Number.parseInt(normalized, 16)
+  if (Number.isNaN(numeric)) {
+    return undefined
+  }
+  const inverted = (0xffffff ^ numeric).toString(16).padStart(6, '0')
+  return `#${inverted}`
+}
+
+const getInvertedProgressColor = (color?: string, fallback?: string) => {
+  return invertHexColor(color) ?? fallback ?? color ?? '#000000'
 }
 
 const ProgressBars = ({
@@ -92,6 +114,11 @@ const ProgressBars = ({
     const found = foundStationsPerLine[line] || 0
     const displayName = cleanupLineName(meta.name) || meta.name
     const title = `${displayName} - ${found}/${total}`
+    const customProgressColor = meta.progressOutlineColor
+    const progressColor =
+      customProgressColor ?? getInvertedProgressColor(meta.color, meta.textColor)
+    const percentComplete = total > 0 ? found / total : 0
+    const completionColor = getCompletionColor(percentComplete)
 
     return (
       <div key={line} className="flex items-center gap-2">
@@ -110,7 +137,10 @@ const ProgressBars = ({
                       ? '#27272a'
                       : '#ffffff'
                     : meta.color,
-                pathColor: gaugeMode === 'inverted' ? meta.color : meta.textColor,
+                pathColor:
+                  gaugeMode === 'inverted'
+                    ? progressColor
+                    : customProgressColor ?? meta.textColor,
                 textColor: isDark ? '#e4e4e7' : '#27272a',
                 trailColor: 'transparent',
               })}
@@ -127,7 +157,12 @@ const ProgressBars = ({
         </div>
         {!compact && (
           <OverflowMarquee className="min-w-0 text-sm text-zinc-700 dark:text-zinc-200">
-            {title}
+            <span>
+              {displayName} -{' '}
+              <span style={{ color: completionColor, fontWeight: 600 }}>
+                {found}/{total}
+              </span>
+            </span>
           </OverflowMarquee>
         )}
       </div>
@@ -156,9 +191,15 @@ const ProgressBars = ({
         return (
           <div key={`${group.title ?? 'group'}-${groupIndex}`} className="space-y-3">
             {group.title && (
-              <p className="text-xs font-semibold uppercase tracking-wide text-zinc-500 dark:text-zinc-400">
+              <OverflowMarquee
+                className="text-xs font-semibold uppercase tracking-wide text-zinc-500 dark:text-zinc-400"
+                speed={25}
+                minDuration={8}
+                gap={24}
+                aria-label={group.title}
+              >
                 {group.title}
-              </p>
+              </OverflowMarquee>
             )}
             {group.items.map((item, itemIndex) => {
               if (item.type === 'separator') {
@@ -173,12 +214,16 @@ const ProgressBars = ({
               const visibleLines = item.lines.filter((line) => !!LINES[line])
               if (item.lines.length === 0) {
                 return (
-                  <div
+                  <OverflowMarquee
                     key={`${item.title ?? 'heading'}-${groupIndex}-${itemIndex}`}
                     className="pt-1 text-sm font-semibold text-zinc-700 dark:text-zinc-200"
+                    speed={30}
+                    minDuration={8}
+                    gap={24}
+                    aria-label={item.title}
                   >
                     {item.title}
-                  </div>
+                  </OverflowMarquee>
                 )
               }
               if (visibleLines.length === 0) {
@@ -186,15 +231,21 @@ const ProgressBars = ({
               }
 
               return (
-                  <div
-                    key={`${item.title ?? 'lines'}-${groupIndex}-${itemIndex}`}
-                    className="space-y-2"
-                  >
-                    {item.title && (
-                    <p className="text-sm font-semibold text-zinc-700 dark:text-zinc-200">
+                <div
+                  key={`${item.title ?? 'lines'}-${groupIndex}-${itemIndex}`}
+                  className="space-y-2"
+                >
+                  {item.title && (
+                    <OverflowMarquee
+                      className="text-sm font-semibold text-zinc-700 dark:text-zinc-200"
+                      speed={30}
+                      minDuration={8}
+                      gap={24}
+                      aria-label={item.title}
+                    >
                       {item.title}
-                    </p>
-                    )}
+                    </OverflowMarquee>
+                  )}
                   <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
                     {visibleLines.map((line) => renderLine(line, false))}
                   </div>

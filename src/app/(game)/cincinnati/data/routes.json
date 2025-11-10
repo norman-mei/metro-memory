@@ -32,6 +32,22 @@
         "color": "#41B4E8",
         "order": 0
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-84.65619229880434, 39.05546464985632],
+          [-84.65572836377953, 39.0534402435636],
+          [-84.65617040451083, 39.050350497272966]
+        ]
+      },
+      "properties": {
+        "line": "CincinnatiAPM",
+        "color": "#004DA3",
+        "order": 1
+      }
     }
   ]
 }

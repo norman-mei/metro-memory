@@ -91,6 +91,84 @@
         "id": 6
       },
       "id": 6
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-115.14704516667751, 36.081240617682646]
+      },
+      "properties": {
+        "name": "Concourse C",
+        "line": "LVGreen",
+        "id": 7
+      },
+      "id": 7
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-115.14884092481046, 36.08441013910726]
+      },
+      "properties": {
+        "name": "Terminal 1",
+        "line": "LVGreen",
+        "id": 8
+      },
+      "id": 8
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-115.14848222052063, 36.08446735154331]
+      },
+      "properties": {
+        "name": "Terminal 1",
+        "line": "LVBlue",
+        "id": 9
+      },
+      "id": 9
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-115.13760222018054, 36.08168529198482]
+      },
+      "properties": {
+        "name": "Concourse D",
+        "line": "LVBlue",
+        "id": 10
+      },
+      "id": 10
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-115.13760222018054, 36.08168529198482]
+      },
+      "properties": {
+        "name": "Concourse D",
+        "line": "LVRed",
+        "id": 11
+      },
+      "id": 11
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-115.13698649206214, 36.086212540328034]
+      },
+      "properties": {
+        "name": "Terminal 3",
+        "line": "LVRed",
+        "id": 12
+      },
+      "id": 12
     }
   ]
 }

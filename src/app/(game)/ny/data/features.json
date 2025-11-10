@@ -6739,7 +6739,10 @@
         "id": 669,
         "name": "Kew Gardens - Union Tpke",
         "line": "NewYorkSubwayE",
-        "order": 30
+        "order": 30,
+        "alternate_names": [
+          "Kew Gardens"
+        ]
       },
       "id": 669
     },
@@ -6773,7 +6776,10 @@
         "id": 671,
         "name": "Forest Hills - 71 Av",
         "line": "NewYorkSubwayE",
-        "order": 41
+        "order": 41,
+        "alternate_names": [
+          "Forest Hills"
+        ]
       },
       "id": 671
     },
@@ -8283,7 +8289,10 @@
         "id": 821,
         "name": "Coney Island - Stillwell Av",
         "line": "NewYorkSubwayD",
-        "order": 229
+        "order": 229,
+        "alternate_names": [
+          "Coney Island"
+        ]
       },
       "id": 821
     },
@@ -8300,7 +8309,10 @@
         "id": 822,
         "name": "Coney Island - Stillwell Av",
         "line": "NewYorkSubwayF",
-        "order": 0
+        "order": 0,
+        "alternate_names": [
+          "Coney Island"
+        ]
       },
       "id": 822
     },
@@ -8939,7 +8951,10 @@
         "id": 859,
         "name": "Forest Hills - 71 Av",
         "line": "NewYorkSubwayF",
-        "order": 250
+        "order": 250,
+        "alternate_names": [
+          "Forest Hills"
+        ]
       },
       "id": 859
     },
@@ -8973,7 +8988,10 @@
         "id": 861,
         "name": "Kew Gardens - Union Tpke",
         "line": "NewYorkSubwayF",
-        "order": 260
+        "order": 260,
+        "alternate_names": [
+          "Kew Gardens"
+        ]
       },
       "id": 861
     },
@@ -9075,7 +9093,10 @@
         "id": 910,
         "name": "Coney Island - Stillwell Av",
         "line": "NewYorkSubwayFX",
-        "order": 0
+        "order": 0,
+        "alternate_names": [
+          "Coney Island"
+        ]
       },
       "id": 910
     },
@@ -9092,7 +9113,7 @@
         "id": 911,
         "name": "W 8 St - NY Aquarium",
         "line": "NewYorkSubwayFX",
-        "order": 11
+        "order": 10
       },
       "id": 911
     },
@@ -9109,7 +9130,7 @@
         "id": 912,
         "name": "Neptune Av",
         "line": "NewYorkSubwayFX",
-        "order": 18
+        "order": 20
       },
       "id": 912
     },
@@ -9126,7 +9147,7 @@
         "id": 913,
         "name": "Avenue X",
         "line": "NewYorkSubwayFX",
-        "order": 22
+        "order": 30
       },
       "id": 913
     },
@@ -9143,7 +9164,7 @@
         "id": 914,
         "name": "Avenue U",
         "line": "NewYorkSubwayFX",
-        "order": 24
+        "order": 40
       },
       "id": 914
     },
@@ -9160,7 +9181,7 @@
         "id": 915,
         "name": "Kings Hwy",
         "line": "NewYorkSubwayFX",
-        "order": 25
+        "order": 50
       },
       "id": 915
     },
@@ -9177,7 +9198,7 @@
         "id": 916,
         "name": "Avenue P",
         "line": "NewYorkSubwayFX",
-        "order": 29
+        "order": 60
       },
       "id": 916
     },
@@ -9194,7 +9215,7 @@
         "id": 917,
         "name": "Avenue N",
         "line": "NewYorkSubwayFX",
-        "order": 30
+        "order": 70
       },
       "id": 917
     },
@@ -9211,7 +9232,7 @@
         "id": 918,
         "name": "Bay Pkwy",
         "line": "NewYorkSubwayFX",
-        "order": 31
+        "order": 80
       },
       "id": 918
     },
@@ -9228,7 +9249,7 @@
         "id": 919,
         "name": "Avenue I",
         "line": "NewYorkSubwayFX",
-        "order": 32
+        "order": 90
       },
       "id": 919
     },
@@ -9245,7 +9266,7 @@
         "id": 920,
         "name": "18 Av",
         "line": "NewYorkSubwayFX",
-        "order": 33
+        "order": 100
       },
       "id": 920
     },
@@ -9262,7 +9283,7 @@
         "id": 921,
         "name": "Ditmas Av",
         "line": "NewYorkSubwayFX",
-        "order": 34
+        "order": 110
       },
       "id": 921
     },
@@ -9279,7 +9300,7 @@
         "id": 922,
         "name": "Church Av",
         "line": "NewYorkSubwayFX",
-        "order": 39
+        "order": 120
       },
       "id": 922
     },
@@ -9296,7 +9317,7 @@
         "id": 923,
         "name": "7 Av",
         "line": "NewYorkSubwayFX",
-        "order": 73
+        "order": 130
       },
       "id": 923
     },
@@ -9313,7 +9334,7 @@
         "id": 27247,
         "name": "Bergen St",
         "line": "NewYorkSubwayFX",
-        "order": 95
+        "order": 140
       },
       "id": 27247
     },
@@ -9330,7 +9351,7 @@
         "id": 924,
         "name": "Jay St - Metrotech",
         "line": "NewYorkSubwayFX",
-        "order": 102
+        "order": 150
       },
       "id": 924
     },
@@ -9347,7 +9368,7 @@
         "id": 925,
         "name": "York St",
         "line": "NewYorkSubwayFX",
-        "order": 106
+        "order": 160
       },
       "id": 925
     },
@@ -9364,7 +9385,7 @@
         "id": 926,
         "name": "East Broadway",
         "line": "NewYorkSubwayFX",
-        "order": 121
+        "order": 170
       },
       "id": 926
     },
@@ -9381,7 +9402,7 @@
         "id": 927,
         "name": "Delancey St",
         "line": "NewYorkSubwayFX",
-        "order": 124,
+        "order": 180,
         "alternate_names": [
           "Essex St",
           "Delancey St - Essex St"
@@ -9402,7 +9423,7 @@
         "id": 928,
         "name": "2 Av",
         "line": "NewYorkSubwayFX",
-        "order": 134
+        "order": 190
       },
       "id": 928
     },
@@ -9419,7 +9440,7 @@
         "id": 929,
         "name": "Broadway-Lafayette St",
         "line": "NewYorkSubwayFX",
-        "order": 135
+        "order": 200
       },
       "id": 929
     },
@@ -9436,7 +9457,7 @@
         "id": 930,
         "name": "W 4 St - Wash Sq",
         "line": "NewYorkSubwayFX",
-        "order": 148
+        "order": 210
       },
       "id": 930
     },
@@ -9453,7 +9474,7 @@
         "id": 931,
         "name": "6 Av - 14 St",
         "line": "NewYorkSubwayFX",
-        "order": 149
+        "order": 220
       },
       "id": 931
     },
@@ -9470,7 +9491,7 @@
         "id": 932,
         "name": "23 St",
         "line": "NewYorkSubwayFX",
-        "order": 150
+        "order": 230
       },
       "id": 932
     },
@@ -9487,7 +9508,7 @@
         "id": 933,
         "name": "34 St - Herald Sq",
         "line": "NewYorkSubwayFX",
-        "order": 151
+        "order": 240
       },
       "id": 933
     },
@@ -9504,7 +9525,7 @@
         "id": 934,
         "name": "42 St - Bryant Pk",
         "line": "NewYorkSubwayFX",
-        "order": 152
+        "order": 250
       },
       "id": 934
     },
@@ -9521,80 +9542,9 @@
         "id": 935,
         "name": "47-50 Sts - Rockefeller Ctr",
         "line": "NewYorkSubwayFX",
-        "order": 153
+        "order": 260
       },
       "id": 935
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -73.977448,
-          40.763971
-        ]
-      },
-      "properties": {
-        "id": 936,
-        "name": "57 St",
-        "line": "NewYorkSubwayFX",
-        "order": 154
-      },
-      "id": 936
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -73.966113,
-          40.764629
-        ]
-      },
-      "properties": {
-        "id": 937,
-        "name": "Lexington Av/63 St",
-        "line": "NewYorkSubwayFX",
-        "order": 166,
-        "alternate_names": [
-          "63 St Lexington Av"
-        ]
-      },
-      "id": 937
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -73.953266,
-          40.759137
-        ]
-      },
-      "properties": {
-        "id": 938,
-        "name": "Roosevelt Island",
-        "line": "NewYorkSubwayFX",
-        "order": 168
-      },
-      "id": 938
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -73.942836,
-          40.754203
-        ]
-      },
-      "properties": {
-        "id": 939,
-        "name": "21 St - Queensbridge",
-        "line": "NewYorkSubwayFX",
-        "order": 170
-      },
-      "id": 939
     },
     {
       "type": "Feature",
@@ -9609,7 +9559,7 @@
         "id": 940,
         "name": "Jackson Hts - Roosevelt Av",
         "line": "NewYorkSubwayFX",
-        "order": 200
+        "order": 310
       },
       "id": 940
     },
@@ -9626,7 +9576,10 @@
         "id": 941,
         "name": "Forest Hills - 71 Av",
         "line": "NewYorkSubwayFX",
-        "order": 235
+        "order": 320,
+        "alternate_names": [
+          "Forest Hills"
+        ]
       },
       "id": 941
     },
@@ -9643,7 +9596,7 @@
         "id": 942,
         "name": "75 Av",
         "line": "NewYorkSubwayFX",
-        "order": 237
+        "order": 330
       },
       "id": 942
     },
@@ -9660,7 +9613,10 @@
         "id": 943,
         "name": "Kew Gardens - Union Tpke",
         "line": "NewYorkSubwayFX",
-        "order": 245
+        "order": 340,
+        "alternate_names": [
+          "Kew Gardens"
+        ]
       },
       "id": 943
     },
@@ -9677,7 +9633,7 @@
         "id": 944,
         "name": "Briarwood",
         "line": "NewYorkSubwayFX",
-        "order": 254
+        "order": 350
       },
       "id": 944
     },
@@ -9694,7 +9650,7 @@
         "id": 945,
         "name": "Sutphin Blvd",
         "line": "NewYorkSubwayFX",
-        "order": 266
+        "order": 360
       },
       "id": 945
     },
@@ -9711,7 +9667,7 @@
         "id": 946,
         "name": "Parsons Blvd",
         "line": "NewYorkSubwayFX",
-        "order": 267
+        "order": 370
       },
       "id": 946
     },
@@ -9728,7 +9684,7 @@
         "id": 947,
         "name": "169 St",
         "line": "NewYorkSubwayFX",
-        "order": 270
+        "order": 380
       },
       "id": 947
     },
@@ -9745,7 +9701,7 @@
         "id": 948,
         "name": "Jamaica - 179 St",
         "line": "NewYorkSubwayFX",
-        "order": 278
+        "order": 390
       },
       "id": 948
     },
@@ -12481,7 +12437,10 @@
         "id": 1162,
         "name": "Coney Island - Stillwell Av",
         "line": "NewYorkSubwayN",
-        "order": 214
+        "order": 214,
+        "alternate_names": [
+          "Coney Island"
+        ]
       },
       "id": 1162
     },
@@ -12977,7 +12936,10 @@
         "id": 1191,
         "name": "Coney Island - Stillwell Av",
         "line": "NewYorkSubwayQ",
-        "order": 132
+        "order": 132,
+        "alternate_names": [
+          "Coney Island"
+        ]
       },
       "id": 1191
     },
@@ -13728,7 +13690,10 @@
         "id": 1236,
         "name": "Forest Hills - 71 Av",
         "line": "NewYorkSubwayR",
-        "order": 221
+        "order": 221,
+        "alternate_names": [
+          "Forest Hills"
+        ]
       },
       "id": 1236
     },
@@ -27551,7 +27516,10 @@
         "id": 2031,
         "name": "Forest Hills - 71 Av",
         "line": "NewYorkSubwayG",
-        "order": 273
+        "order": 273,
+        "alternate_names": [
+          "Forest Hills"
+        ]
       },
       "id": 2031
     },
@@ -28381,6 +28349,318 @@
         "order": 1
       },
       "id": 2085
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.975231,
+          40.760158
+        ]
+      },
+      "properties": {
+        "id": 27251,
+        "name": "5 Av/53 St",
+        "line": "NewYorkSubwayFX",
+        "order": 270
+      },
+      "id": 27251
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.969056,
+          40.757551
+        ]
+      },
+      "properties": {
+        "id": 27252,
+        "name": "Lexington Av/53 St",
+        "line": "NewYorkSubwayFX",
+        "order": 280
+      },
+      "id": 27252
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.945299,
+          40.74703
+        ]
+      },
+      "properties": {
+        "id": 27253,
+        "name": "Court Sq",
+        "line": "NewYorkSubwayFX",
+        "order": 290
+      },
+      "id": 27253
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.937248,
+          40.74898
+        ]
+      },
+      "properties": {
+        "id": 27254,
+        "name": "Queens Plaza",
+        "line": "NewYorkSubwayFX",
+        "order": 300
+      },
+      "id": 27254
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.7265,
+          40.7128
+        ]
+      },
+      "properties": {
+        "name": "Elmont UBS Arena",
+        "alternate_names": [
+          "Elmont",
+          "UBS Arena"
+        ],
+        "line": "LIRRPortJefferson",
+        "id": 27255
+      },
+      "id": 27255
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.7265,
+          40.7128
+        ]
+      },
+      "properties": {
+        "name": "Elmont UBS Arena",
+        "alternate_names": [
+          "Elmont",
+          "UBS Arena"
+        ],
+        "line": "LIRRRonkonkoma",
+        "id": 27256
+      },
+      "id": 27256
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.70605881,
+          40.72465747
+        ]
+      },
+      "properties": {
+        "id": 27257,
+        "name": "Floral Park",
+        "line": "LIRRPortJefferson",
+        "order": 400
+      },
+      "id": 27257
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.64087519,
+          40.74035013
+        ]
+      },
+      "properties": {
+        "id": 27258,
+        "name": "Mineola",
+        "line": "LIRROysterBay",
+        "order": 400
+      },
+      "id": 27258
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.64087519,
+          40.74035013
+        ]
+      },
+      "properties": {
+        "id": 27259,
+        "name": "Mineola",
+        "line": "LIRRRonkonkoma",
+        "order": 400
+      },
+      "id": 27259
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.64087519,
+          40.74035013
+        ]
+      },
+      "properties": {
+        "id": 27260,
+        "name": "Mineola",
+        "line": "LIRRMontauk",
+        "order": 400
+      },
+      "id": 27260
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.52852279,
+          40.7671451
+        ]
+      },
+      "properties": {
+        "id": 27261,
+        "name": "Hicksville",
+        "line": "LIRRRonkonkoma",
+        "order": 400
+      },
+      "id": 27261
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.52852279,
+          40.7671451
+        ]
+      },
+      "properties": {
+        "id": 27262,
+        "name": "Hicksville",
+        "line": "LIRRMontauk",
+        "order": 400
+      },
+      "id": 27262
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.32408767,
+          40.70076415
+        ]
+      },
+      "properties": {
+        "id": 27263,
+        "name": "Babylon",
+        "line": "LIRRMontauk",
+        "order": 400
+      },
+      "id": 27263
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.7650805,
+          40.67516489
+        ]
+      },
+      "properties": {
+        "id": 27264,
+        "name": "Locust Manor",
+        "line": "LIRRLongBeach",
+        "order": 400
+      },
+      "id": 27264
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.75179637,
+          40.66853133
+        ]
+      },
+      "properties": {
+        "id": 27265,
+        "name": "Laurelton",
+        "line": "LIRRLongBeach",
+        "order": 400
+      },
+      "id": 27265
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.73548579,
+          40.66591993
+        ]
+      },
+      "properties": {
+        "id": 27266,
+        "name": "Rosedale",
+        "line": "LIRRLongBeach",
+        "order": 400
+      },
+      "id": 27266
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.70481012,
+          40.66155042
+        ]
+      },
+      "properties": {
+        "id": 27267,
+        "name": "Valley Stream",
+        "line": "LIRRLongBeach",
+        "order": 400
+      },
+      "id": 27267
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.67603995,
+          40.65615355
+        ]
+      },
+      "properties": {
+        "id": 27268,
+        "name": "Lynbrook",
+        "line": "LIRRBabylon",
+        "order": 400
+      },
+      "id": 27268
     }
   ],
   "properties": {

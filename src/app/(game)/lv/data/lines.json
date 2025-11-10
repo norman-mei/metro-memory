@@ -5,5 +5,26 @@
     "backgroundColor": "#0B3B8D",
     "textColor": "#FFFFFF",
     "order": 0
+  },
+  "LVGreen": {
+    "name": "Green",
+    "color": "#008100",
+    "backgroundColor": "#004d00",
+    "textColor": "#FFFFFF",
+    "order": 1
+  },
+  "LVBlue": {
+    "name": "Blue",
+    "color": "#00309A",
+    "backgroundColor": "#001a5c",
+    "textColor": "#FFFFFF",
+    "order": 2
+  },
+  "LVRed": {
+    "name": "Red",
+    "color": "#BF2928",
+    "backgroundColor": "#7a1817",
+    "textColor": "#FFFFFF",
+    "order": 3
   }
 }

@@ -17,16 +17,32 @@ export const LINE_GROUPS: LineGroup[] = [
       },
     ],
   },
+  {
+    items: [
+      {
+        type: 'separator',
+      },
+    ],
+  },
+  {
+    title: 'Kenton County Airport Board (KCAB)',
+    items: [
+      {
+        type: 'lines',
+        lines: ['CincinnatiAPM'],
+      },
+    ],
+  },
 ]
 
 export const METADATA: Metadata = {
   title: 'Cincinnati Metro Memory',
   description:
-    'How many of the Cincinnati Connector streetcar stops can you name from memory?',
+    'How many of the Cincinnati Connector streetcar and airport people mover stops can you name from memory?',
   openGraph: {
     title: 'Cincinnati Metro Memory',
     description:
-      'How many of the Cincinnati Connector streetcar stops can you name from memory?',
+      'How many of the Cincinnati Connector streetcar and airport people mover stops can you name from memory?',
     type: 'website',
     locale: 'en_US',
     url: 'https://metro-memory.com/cincinnati',
@@ -37,14 +53,14 @@ export const MAP_CONFIG: MapboxOptions = {
   container: 'map',
   style: 'mapbox://styles/benjamintd/cls31ijdo010o01plcpzag11d',
   bounds: [
-    [-84.525, 39.094],
-    [-84.505, 39.12],
-  ],
-  maxBounds: [
-    [-84.55, 39.08],
+    [-84.67, 39.05],
     [-84.49, 39.13],
   ],
-  minZoom: 13,
+  maxBounds: [
+    [-84.75, 39.0],
+    [-84.45, 39.18],
+  ],
+  minZoom: 11,
   fadeDuration: 50,
 }
 

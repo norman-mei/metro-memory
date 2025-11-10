@@ -1,0 +1,18 @@
+{
+  "TheHopL": {
+    "name": "L Line (Lakefront)",
+    "color": "#F3C53F",
+    "backgroundColor": "#C3941A",
+    "progressOutlineColor": "#F3C53F",
+    "textColor": "#1F1F1F",
+    "order": 0
+  },
+  "TheHopM": {
+    "name": "M Line (Burns Commons \u2013 Intermodal Station)",
+    "color": "#4C74AC",
+    "backgroundColor": "#2F4C78",
+    "progressOutlineColor": "#4C74AC",
+    "textColor": "#FFFFFF",
+    "order": 1
+  }
+}

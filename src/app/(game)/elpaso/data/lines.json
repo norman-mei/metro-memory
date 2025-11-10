@@ -1,0 +1,18 @@
+{
+  "Elpasouptownloop": {
+    "name": "Uptown Loop",
+    "color": "#9CCF00",
+    "backgroundColor": "#6E9A00",
+    "progressOutlineColor": "#9CCF00",
+    "textColor": "#0F3014",
+    "order": 0
+  },
+  "Elpasodowntownloop": {
+    "name": "Downtown Loop",
+    "color": "#F02128",
+    "backgroundColor": "#A2131B",
+    "progressOutlineColor": "#F02128",
+    "textColor": "#FFFFFF",
+    "order": 1
+  }
+}

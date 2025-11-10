@@ -57,7 +57,10 @@ export default async function Home() {
             .
           </p>
         </div>
-        <SearcheableCitiesList />
+        <SearcheableCitiesList
+          testimonialsContent={<Tweets />}
+          pressContent={<LinkPreviews />}
+        />
 
         <p className="mt-6"></p>
         <div className="mt-6 flex gap-6">
@@ -70,13 +73,6 @@ export default async function Home() {
           
         </div>
 
-        <h2 className="mt-12 text-4xl font-bold">
-          What people say about Metro Memory
-        </h2>
-        <Tweets />
-
-        <h2 className="mt-12 text-4xl font-bold">They talked about us</h2>
-        <LinkPreviews />
       </Container>
     </>
   )

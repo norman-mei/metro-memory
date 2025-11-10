@@ -13,11 +13,15 @@ export default function MenuComponent({
   hideLabels,
   onRevealSolutions,
   foundProportion,
+  onOpenSettings,
+  onOpenCityStats,
 }: {
   hideLabels: boolean
   setHideLabels: (hide: boolean) => void
   onRevealSolutions: () => void
   foundProportion: number
+  onOpenSettings?: () => void
+  onOpenCityStats?: () => void
 }) {
   const [modalOpen, setModalOpen] = useState(false)
   const { t } = useTranslation()
@@ -88,6 +92,24 @@ export default function MenuComponent({
                 </button>
               )}
             </Menu.Item>
+            {onOpenCityStats && (
+              <Menu.Item>
+                {({ active }) => (
+                  <button
+                    type="button"
+                    className={classNames(
+                      active
+                        ? 'bg-gray-100 text-gray-900 dark:bg-zinc-700 dark:text-zinc-100'
+                        : 'text-gray-700 dark:text-zinc-100',
+                      'block w-full px-4 py-2 text-left text-sm transition',
+                    )}
+                    onClick={onOpenCityStats}
+                  >
+                    {t('cityStats')}
+                  </button>
+                )}
+              </Menu.Item>
+            )}
             <Menu.Item>
               {({ active }) => (
                 <button
@@ -102,6 +124,36 @@ export default function MenuComponent({
                   {t('about')}
                 </button>
               )}
+            </Menu.Item>
+            <Menu.Item>
+              {({ active }) =>
+                onOpenSettings ? (
+                  <button
+                    type="button"
+                    className={classNames(
+                      active
+                        ? 'bg-gray-100 text-gray-900 dark:bg-zinc-700 dark:text-zinc-100'
+                        : 'text-gray-700 dark:text-zinc-100',
+                      'block w-full px-4 py-2 text-left text-sm transition',
+                    )}
+                    onClick={onOpenSettings}
+                  >
+                    {t('settings')}
+                  </button>
+                ) : (
+                  <Link
+                    className={classNames(
+                      active
+                        ? 'bg-gray-100 text-gray-900 dark:bg-zinc-700 dark:text-zinc-100'
+                        : 'text-gray-700 dark:text-zinc-100',
+                      'block w-full px-4 py-2 text-left text-sm transition',
+                    )}
+                    href="/?tab=settings"
+                  >
+                    {t('settings')}
+                  </Link>
+                )
+              }
             </Menu.Item>
             <Menu.Item>
               {({ active }) => (

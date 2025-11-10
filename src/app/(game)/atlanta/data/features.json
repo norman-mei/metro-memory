@@ -1,0 +1,1342 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.4461788352113,
+          33.6406886296602
+        ]
+      },
+      "properties": {
+        "name": "Airport",
+        "line": "MARTARD",
+        "id": 0,
+        "alternate_names": [
+          "Hartsfield-Jackson Atlanta International Airport",
+          "Atlanta Airport",
+          "atlanta airport"
+        ]
+      },
+      "id": 0
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.4488033483,
+          33.6515338161788
+        ]
+      },
+      "properties": {
+        "name": "College Park",
+        "line": "MARTARD",
+        "id": 1
+      },
+      "id": 1
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.4408001125334,
+          33.6768748554687
+        ]
+      },
+      "properties": {
+        "name": "East Point",
+        "line": "MARTARD",
+        "id": 2
+      },
+      "id": 2
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.4289440309677,
+          33.7003314342357
+        ]
+      },
+      "properties": {
+        "name": "Lakewood-Ft. McPherson",
+        "line": "MARTARD",
+        "id": 3
+      },
+      "id": 3
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.4251598514482,
+          33.717032182767
+        ]
+      },
+      "properties": {
+        "name": "Oakland City",
+        "line": "MARTARD",
+        "id": 4
+      },
+      "id": 4
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.4136699813713,
+          33.7358233864717
+        ]
+      },
+      "properties": {
+        "name": "West End",
+        "line": "MARTARD",
+        "id": 5
+      },
+      "id": 5
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.3955883118927,
+          33.7488009894267
+        ]
+      },
+      "properties": {
+        "name": "Garnett",
+        "line": "MARTARD",
+        "id": 6
+      },
+      "id": 6
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.3917125777447,
+          33.7538363911555
+        ]
+      },
+      "properties": {
+        "name": "Five Points",
+        "line": "MARTARD",
+        "id": 7
+      },
+      "id": 7
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.3875698158285,
+          33.7596843240333
+        ]
+      },
+      "properties": {
+        "name": "Peachtree Center",
+        "line": "MARTARD",
+        "id": 8
+      },
+      "id": 8
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.3874858929425,
+          33.7663867480648
+        ]
+      },
+      "properties": {
+        "name": "Civic Center",
+        "line": "MARTARD",
+        "id": 9
+      },
+      "id": 9
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.3867763590451,
+          33.7715747378298
+        ]
+      },
+      "properties": {
+        "name": "North Avenue",
+        "line": "MARTARD",
+        "id": 10
+      },
+      "id": 10
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.3864559255166,
+          33.7807643453147
+        ]
+      },
+      "properties": {
+        "name": "Midtown",
+        "line": "MARTARD",
+        "id": 11
+      },
+      "id": 11
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.3868068781822,
+          33.7890842019611
+        ]
+      },
+      "properties": {
+        "name": "Arts Center",
+        "line": "MARTARD",
+        "id": 12
+      },
+      "id": 12
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.3695339250253,
+          33.8224856990196
+        ]
+      },
+      "properties": {
+        "name": "Lindbergh Center",
+        "line": "MARTARD",
+        "id": 13
+      },
+      "id": 13
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.3676570950548,
+          33.8477733322418
+        ]
+      },
+      "properties": {
+        "name": "Buckhead",
+        "line": "MARTARD",
+        "id": 14
+      },
+      "id": 14
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.3514598892201,
+          33.9105594490089
+        ]
+      },
+      "properties": {
+        "name": "Medical Center",
+        "line": "MARTARD",
+        "id": 15
+      },
+      "id": 15
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.3444179566834,
+          33.921072756961
+        ]
+      },
+      "properties": {
+        "name": "Dunwoody",
+        "line": "MARTARD",
+        "id": 16
+      },
+      "id": 16
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.3531536163913,
+          33.9326122185127
+        ]
+      },
+      "properties": {
+        "name": "Sandy Springs",
+        "line": "MARTARD",
+        "id": 17
+      },
+      "id": 17
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.3573192679178,
+          33.9438236154296
+        ]
+      },
+      "properties": {
+        "name": "North Springs",
+        "line": "MARTARD",
+        "id": 18
+      },
+      "id": 18
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.4704403227418,
+          33.7544124073381
+        ]
+      },
+      "properties": {
+        "name": "Hamilton E. Holmes",
+        "line": "MARTABL",
+        "id": 19
+      },
+      "id": 19
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.4453853838783,
+          33.7532489254901
+        ]
+      },
+      "properties": {
+        "name": "West Lake",
+        "line": "MARTABL",
+        "id": 20
+      },
+      "id": 20
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.4167904058627,
+          33.7562816120233
+        ]
+      },
+      "properties": {
+        "name": "Ashby",
+        "line": "MARTABL",
+        "id": 21
+      },
+      "id": 21
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.4037855939586,
+          33.7564844720647
+        ]
+      },
+      "properties": {
+        "name": "Vine City",
+        "line": "MARTABL",
+        "id": 22
+      },
+      "id": 22
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.3983078025703,
+          33.7563032231234
+        ]
+      },
+      "properties": {
+        "name": "GWCC/CNN Center",
+        "line": "MARTABL",
+        "id": 23
+      },
+      "id": 23
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.3917125777447,
+          33.7538363911555
+        ]
+      },
+      "properties": {
+        "name": "Five Points",
+        "line": "MARTABL",
+        "id": 24
+      },
+      "id": 24
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.3858455715894,
+          33.7499797315832
+        ]
+      },
+      "properties": {
+        "name": "Georgia State",
+        "line": "MARTABL",
+        "id": 25
+      },
+      "id": 25
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.3755458861468,
+          33.7498080710845
+        ]
+      },
+      "properties": {
+        "name": "King Memorial",
+        "line": "MARTABL",
+        "id": 26
+      },
+      "id": 26
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.3527568783678,
+          33.7574107649203
+        ]
+      },
+      "properties": {
+        "name": "Inman Park-Reynoldstown",
+        "line": "MARTABL",
+        "id": 27
+      },
+      "id": 27
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.3398860865874,
+          33.7618052971605
+        ]
+      },
+      "properties": {
+        "name": "Edgewood-Candler Park",
+        "line": "MARTABL",
+        "id": 28
+      },
+      "id": 28
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.3130534980389,
+          33.7651126412941
+        ]
+      },
+      "properties": {
+        "name": "East Lake",
+        "line": "MARTABL",
+        "id": 29
+      },
+      "id": 29
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.2953761869187,
+          33.7745235021313
+        ]
+      },
+      "properties": {
+        "name": "Decatur",
+        "line": "MARTABL",
+        "id": 30
+      },
+      "id": 30
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.2823375476387,
+          33.7750308577767
+        ]
+      },
+      "properties": {
+        "name": "Avondale",
+        "line": "MARTABL",
+        "id": 31
+      },
+      "id": 31
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.2519191432005,
+          33.7725970818004
+        ]
+      },
+      "properties": {
+        "name": "Kensington",
+        "line": "MARTABL",
+        "id": 32
+      },
+      "id": 32
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.2296641921564,
+          33.7697398736949
+        ]
+      },
+      "properties": {
+        "name": "Indian Creek",
+        "line": "MARTABL",
+        "id": 33
+      },
+      "id": 33
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.4461788352113,
+          33.6406886296602
+        ]
+      },
+      "properties": {
+        "name": "Airport",
+        "line": "MARTAGD",
+        "id": 34,
+        "alternate_names": [
+          "Hartsfield-Jackson Atlanta International Airport",
+          "Atlanta Airport"
+        ]
+      },
+      "id": 34
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.4488033483,
+          33.6515338161788
+        ]
+      },
+      "properties": {
+        "name": "College Park",
+        "line": "MARTAGD",
+        "id": 35
+      },
+      "id": 35
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.4408001125334,
+          33.6768748554687
+        ]
+      },
+      "properties": {
+        "name": "East Point",
+        "line": "MARTAGD",
+        "id": 36
+      },
+      "id": 36
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.4289440309677,
+          33.7003314342357
+        ]
+      },
+      "properties": {
+        "name": "Lakewood-Ft. McPherson",
+        "line": "MARTAGD",
+        "id": 37
+      },
+      "id": 37
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.4251598514482,
+          33.717032182767
+        ]
+      },
+      "properties": {
+        "name": "Oakland City",
+        "line": "MARTAGD",
+        "id": 38
+      },
+      "id": 38
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.4136699813713,
+          33.7358233864717
+        ]
+      },
+      "properties": {
+        "name": "West End",
+        "line": "MARTAGD",
+        "id": 39
+      },
+      "id": 39
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.3955883118927,
+          33.7488009894267
+        ]
+      },
+      "properties": {
+        "name": "Garnett",
+        "line": "MARTAGD",
+        "id": 40
+      },
+      "id": 40
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.3917125777447,
+          33.7538363911555
+        ]
+      },
+      "properties": {
+        "name": "Five Points",
+        "line": "MARTAGD",
+        "id": 41
+      },
+      "id": 41
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.3875698158285,
+          33.7596843240333
+        ]
+      },
+      "properties": {
+        "name": "Peachtree Center",
+        "line": "MARTAGD",
+        "id": 42
+      },
+      "id": 42
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.3874858929425,
+          33.7663867480648
+        ]
+      },
+      "properties": {
+        "name": "Civic Center",
+        "line": "MARTAGD",
+        "id": 43
+      },
+      "id": 43
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.3867763590451,
+          33.7715747378298
+        ]
+      },
+      "properties": {
+        "name": "North Avenue",
+        "line": "MARTAGD",
+        "id": 44
+      },
+      "id": 44
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.3864559255166,
+          33.7807643453147
+        ]
+      },
+      "properties": {
+        "name": "Midtown",
+        "line": "MARTAGD",
+        "id": 45
+      },
+      "id": 45
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.3868068781822,
+          33.7890842019611
+        ]
+      },
+      "properties": {
+        "name": "Arts Center",
+        "line": "MARTAGD",
+        "id": 46
+      },
+      "id": 46
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.3695339250253,
+          33.8224856990196
+        ]
+      },
+      "properties": {
+        "name": "Lindbergh Center",
+        "line": "MARTAGD",
+        "id": 47
+      },
+      "id": 47
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.3569149041148,
+          33.8459613509134
+        ]
+      },
+      "properties": {
+        "name": "Lenox",
+        "line": "MARTAGD",
+        "id": 48
+      },
+      "id": 48
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.3392681103382,
+          33.8599765522386
+        ]
+      },
+      "properties": {
+        "name": "Brookhaven",
+        "line": "MARTAGD",
+        "id": 49
+      },
+      "id": 49
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.3063243767644,
+          33.8874309360438
+        ]
+      },
+      "properties": {
+        "name": "Chamblee",
+        "line": "MARTAGD",
+        "id": 50
+      },
+      "id": 50
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.2810100394379,
+          33.9023921825942
+        ]
+      },
+      "properties": {
+        "name": "Doraville",
+        "line": "MARTAGD",
+        "id": 51
+      },
+      "id": 51
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.428936405425,
+          33.7721469405754
+        ]
+      },
+      "properties": {
+        "name": "Bankhead",
+        "line": "MARTAGR",
+        "id": 52
+      },
+      "id": 52
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.4167904058627,
+          33.7562816120233
+        ]
+      },
+      "properties": {
+        "name": "Ashby",
+        "line": "MARTAGR",
+        "id": 53
+      },
+      "id": 53
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.4037855939586,
+          33.7564844720647
+        ]
+      },
+      "properties": {
+        "name": "Vine City",
+        "line": "MARTAGR",
+        "id": 54
+      },
+      "id": 54
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.3983078025703,
+          33.7563032231234
+        ]
+      },
+      "properties": {
+        "name": "GWCC/CNN Center",
+        "line": "MARTAGR",
+        "id": 55
+      },
+      "id": 55
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.3917125777447,
+          33.7538363911555
+        ]
+      },
+      "properties": {
+        "name": "Five Points",
+        "line": "MARTAGR",
+        "id": 56
+      },
+      "id": 56
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.3858455715894,
+          33.7499797315832
+        ]
+      },
+      "properties": {
+        "name": "Georgia State",
+        "line": "MARTAGR",
+        "id": 57
+      },
+      "id": 57
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.3755458861468,
+          33.7498080710845
+        ]
+      },
+      "properties": {
+        "name": "King Memorial",
+        "line": "MARTAGR",
+        "id": 58
+      },
+      "id": 58
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.3527568783678,
+          33.7574107649203
+        ]
+      },
+      "properties": {
+        "name": "Inman Park-Reynoldstown",
+        "line": "MARTAGR",
+        "id": 59
+      },
+      "id": 59
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.3398860865874,
+          33.7618052971605
+        ]
+      },
+      "properties": {
+        "name": "Edgewood-Candler Park",
+        "line": "MARTAGR",
+        "id": 60
+      },
+      "id": 60
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.39034355574263,
+          33.75801187502161
+        ]
+      },
+      "properties": {
+        "name": "Luckie at Cone",
+        "line": "MARTASC",
+        "id": 61
+      },
+      "id": 61
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.39203229224933,
+          33.75947639879984
+        ]
+      },
+      "properties": {
+        "name": "Centennial Olympic Park",
+        "line": "MARTASC",
+        "id": 62
+      },
+      "id": 62
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.3896973476412,
+          33.75956312763423
+        ]
+      },
+      "properties": {
+        "name": "Carnegie at Springs",
+        "line": "MARTASC",
+        "id": 63
+      },
+      "id": 63
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.38754331164772,
+          33.75806561388061
+        ]
+      },
+      "properties": {
+        "name": "Peachtree Center",
+        "line": "MARTASC",
+        "id": 64
+      },
+      "id": 64
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.3881864925451,
+          33.75604677685842
+        ]
+      },
+      "properties": {
+        "name": "Woodruff Park",
+        "line": "MARTASC",
+        "id": 65
+      },
+      "id": 65
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.38205353273977,
+          33.755604564182335
+        ]
+      },
+      "properties": {
+        "name": "Auburn at Piedmont",
+        "line": "MARTASC",
+        "id": 66
+      },
+      "id": 66
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.37881633102266,
+          33.75557727264967
+        ]
+      },
+      "properties": {
+        "name": "Dobbs Plaza",
+        "line": "MARTASC",
+        "id": 67
+      },
+      "id": 67
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.37494874876896,
+          33.75555542506376
+        ]
+      },
+      "properties": {
+        "name": "King Historic District",
+        "line": "MARTASC",
+        "id": 68
+      },
+      "id": 68
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.37636052779534,
+          33.75439258960186
+        ]
+      },
+      "properties": {
+        "name": "Edgewood at Hilliard",
+        "line": "MARTASC",
+        "id": 69
+      },
+      "id": 69
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.37998459293242,
+          33.75445354654741
+        ]
+      },
+      "properties": {
+        "name": "Sweet Auburn Market",
+        "line": "MARTASC",
+        "id": 70
+      },
+      "id": 70
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.38540414801767,
+          33.75445353825257
+        ]
+      },
+      "properties": {
+        "name": "Hurt Park",
+        "line": "MARTASC",
+        "id": 71
+      },
+      "id": 71
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.38827165957314,
+          33.7551568404846
+        ]
+      },
+      "properties": {
+        "name": "Park Place",
+        "line": "MARTASC",
+        "id": 72
+      },
+      "id": 72
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.44269264559276,
+          33.640814490190266
+        ]
+      },
+      "properties": {
+        "name": "Concourse T",
+        "line": "atlantaTPT",
+        "id": 73
+      },
+      "id": 73
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.43920154270197,
+          33.64082132745081
+        ]
+      },
+      "properties": {
+        "name": "Concourse A",
+        "line": "atlantaTPT",
+        "id": 74
+      },
+      "id": 74
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.43593925763281,
+          33.64082862467976
+        ]
+      },
+      "properties": {
+        "name": "Concourse B",
+        "line": "atlantaTPT",
+        "id": 75
+      },
+      "id": 75
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.43260513580488,
+          33.64088502187698
+        ]
+      },
+      "properties": {
+        "name": "Concourse C",
+        "line": "atlantaTPT",
+        "id": 76
+      },
+      "id": 76
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.42933065067942,
+          33.64081139586293
+        ]
+      },
+      "properties": {
+        "name": "Concourse D",
+        "line": "atlantaTPT",
+        "id": 77
+      },
+      "id": 77
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.42714976789591,
+          33.64077757809729
+        ]
+      },
+      "properties": {
+        "name": "Concourse E",
+        "line": "atlantaTPT",
+        "id": 78
+      },
+      "id": 78
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.42050786321037,
+          33.640280430740475
+        ]
+      },
+      "properties": {
+        "name": "Concourse F",
+        "line": "atlantaTPT",
+        "id": 79
+      },
+      "id": 79
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.44678144324386,
+          33.64089045830364
+        ]
+      },
+      "properties": {
+        "name": "Airport",
+        "line": "atlantaSKY",
+        "id": 80
+      },
+      "id": 80
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.45668826895012,
+          33.64385163557178
+        ]
+      },
+      "properties": {
+        "name": "Gateway Center",
+        "line": "atlantaSKY",
+        "id": 81
+      },
+      "id": 81
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.46433884934285,
+          33.639864183334
+        ]
+      },
+      "properties": {
+        "name": "Rental Car Center",
+        "line": "atlantaSKY",
+        "id": 82
+      },
+      "id": 82
+    }
+  ]
+}

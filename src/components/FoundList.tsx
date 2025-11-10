@@ -505,7 +505,7 @@ const GroupedLine = memo(
             'flex w-full items-start gap-3 rounded border border-zinc-200 bg-white px-3 py-2 text-sm transition-colors dark:border-[#18181b] dark:bg-zinc-900 dark:text-zinc-100',
             {
               'bg-yellow-200 shadow-sm dark:bg-amber-300/40': isHovered,
-              'ring-2 ring-indigo-400 shadow-lg dark:ring-indigo-300/80': isActive,
+              'ring-2 ring-[var(--accent-ring)] shadow-lg dark:ring-[var(--accent-ring)]': isActive,
               'cursor-not-allowed opacity-60': disabled,
             },
           )}

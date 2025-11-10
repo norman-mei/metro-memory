@@ -36,7 +36,8 @@ import hk from '@/app/(game)/hk/opengraph-image.jpg'
 import honolulu from '@/app/(game)/honolulu/opengraph-image.jpg'
 import houston from '@/app/(game)/houston/opengraph-image.jpg'
 import istanbul from '@/app/(game)/istanbul/opengraph-image.jpg'
-import jacksonville from '@/app/(game)/jacksonville/opengraph-image.jpg'
+import floridaState from '@/app/(game)/florida-state/opengraph-image.jpg'
+import sanJuan from '@/app/(game)/san-juan/opengraph-image.jpg'
 import karlsruhe from '@/app/(game)/karlsruhe/opengraph-image.jpg'
 import kc from '@/app/(game)/kc/opengraph-image.jpg'
 import kenosha from '@/app/(game)/kenosha/opengraph-image.jpg'
@@ -61,7 +62,6 @@ import norfolk from '@/app/(game)/norfolk/opengraph-image.jpg'
 import nottingham from '@/app/(game)/nottingham/opengraph-image.jpg'
 import nr from '@/app/(game)/nr/opengraph-image.jpg'
 import ny from '@/app/(game)/ny/opengraph-image.jpg'
-import oceanside from '@/app/(game)/oceanside/opengraph-image.jpg'
 import okc from '@/app/(game)/okc/opengraph-image.jpg'
 import omaha from '@/app/(game)/omaha/opengraph-image.jpg'
 import ottawa from '@/app/(game)/ottawa/opengraph-image.jpg'
@@ -79,7 +79,6 @@ import shanghai from '@/app/(game)/shanghai/opengraph-image.jpg'
 import sheffield from '@/app/(game)/sheffield/opengraph-image.jpg'
 import shenzhen from '@/app/(game)/shenzhen/opengraph-image.jpg'
 import singapore from '@/app/(game)/singapore/opengraph-image.jpg'
-import sj from '@/app/(game)/sj/opengraph-image.jpg'
 import slc from '@/app/(game)/slc/opengraph-image.jpg'
 import stl from '@/app/(game)/stl/opengraph-image.jpg'
 import stockholm from '@/app/(game)/stockholm/opengraph-image.jpg'
@@ -170,9 +169,10 @@ export const cities: ICity[] = [
     continent: 'North America',
   },
   {
-    name: 'Chicago, IL',
+    name: 'Chicago, IL—Kenosha, WI',
     image: chicago,
     link: '/chicago',
+    keywords: ['Chicago', 'Kenosha'],
     continent: 'North America',
   },
   {
@@ -236,21 +236,9 @@ export const cities: ICity[] = [
     continent: 'North America',
   },
   {
-    name: 'Jacksonville, FL',
-    image: jacksonville,
-    link: '/jacksonville',
-    continent: 'North America',
-  },
-  {
     name: 'Kansas City, MO',
     image: kc,
     link: '/kc',
-    continent: 'North America',
-  },
-  {
-    name: 'Kenosha, WI',
-    image: kenosha,
-    link: '/kenosha',
     continent: 'North America',
   },
   {
@@ -285,10 +273,17 @@ export const cities: ICity[] = [
     continent: 'North America',
   },
   {
-    name: 'Miami—Orlando—Tampa, FL',
-    image: miami,
-    link: '/miami',
-    keywords: ['Miami', 'Orlando', 'Tampa'],
+    name: 'Florida State',
+    image: floridaState,
+    link: '/florida-state',
+    keywords: ['Florida', 'Miami', 'Orlando', 'Tampa', 'Jacksonville'],
+    continent: 'North America',
+  },
+  {
+    name: 'San Juan, PR',
+    image: sanJuan,
+    link: '/san-juan',
+    keywords: ['Puerto Rico', 'Tren Urbano'],
     continent: 'North America',
   },
   {
@@ -322,7 +317,7 @@ export const cities: ICity[] = [
     continent: 'North America',
   },
   {
-    name: 'New York, NY',
+    name: 'New York—New Jersey—Connecticut',
     image: ny,
     link: '/ny',
     keywords: ['New York City', 'NYC', 'Big Apple'],
@@ -332,12 +327,6 @@ export const cities: ICity[] = [
     name: 'Norfolk, VA',
     image: norfolk,
     link: '/norfolk',
-    continent: 'North America',
-  },
-  {
-    name: 'Oceanside, CA',
-    image: oceanside,
-    link: '/oceanside',
     continent: 'North America',
   },
   {
@@ -390,18 +379,12 @@ export const cities: ICity[] = [
     continent: 'North America',
   },
   {
-    name: 'San Diego, CA',
+    name: 'San Diego—Oceanside, CA',
     image: sd,
     link: '/sd',
     continent: 'North America',
   },
   
-  {
-    name: 'San Juan, PR',
-    image: sj,
-    link: '/sj',
-    continent: 'North America',
-  },
   {
     name: 'Seattle—Tacoma, WA',
     image: seattle,
@@ -424,6 +407,7 @@ export const cities: ICity[] = [
     name: 'Tucson, AZ',
     image: tucson,
     link: '/tucson',
+    keywords: ['Sun Link', 'Tucson Streetcar'],
     continent: 'North America',
   },
   {

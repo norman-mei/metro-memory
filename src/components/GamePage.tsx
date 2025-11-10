@@ -19,6 +19,7 @@ import 'react-circular-progressbar/dist/styles.css'
 import MenuComponent from '@/components/Menu'
 import IntroModal from '@/components/IntroModal'
 import FoundSummary from '@/components/FoundSummary'
+import AchievementToast from '@/components/AchievementToast'
 import {
   DataFeatureCollection,
   DataFeature,
@@ -28,17 +29,49 @@ import Input from '@/components/Input'
 import useHideLabels from '@/hooks/useHideLabels'
 import { useConfig } from '@/lib/configContext'
 import useTranslation from '@/hooks/useTranslation'
+import { useAuth } from '@/context/AuthContext'
 import FoundList from '@/components/FoundList'
 import useNormalizeString from '@/hooks/useNormalizeString'
 import { bbox } from '@turf/turf'
 import ThemeToggleButton from '@/components/ThemeToggleButton'
 import { useTheme } from 'next-themes'
+import { getAchievementForCity } from '@/lib/achievements'
+import { useSettings } from '@/context/SettingsContext'
+import SettingsPanel from '@/components/SettingsPanel'
+import Link from 'next/link'
+import { getStationKey } from '@/lib/stationUtils'
+import CityStatsPanel from '@/components/CityStatsPanel'
+import { shouldAutoRevealSolutions } from '@/lib/solutionsAccess'
 
 const CONNECTOR_CONFIG = [
   { delimiter: ' - ', joiner: ' - ' },
   { delimiter: ' / ', joiner: ' / ' },
   { delimiter: ' & ', joiner: ' & ' },
 ]
+
+const ACHIEVEMENT_COMPLETION_THRESHOLD = 0.9999
+
+type AchievementToastState = {
+  slug: string
+  cityName: string
+  title: string
+  description: string
+}
+
+const achievementToastStorageKey = (slug: string) => `achievement-toast-hidden-${slug}`
+
+const deriveCityDisplayName = (title?: string, fallback?: string) => {
+  if (!title) {
+    return fallback ?? ''
+  }
+  const stripped = title.replace(/\s*\|\s*.*$/, '').replace(/Metro Memory/gi, '').trim()
+  if (stripped.length > 0) {
+    return stripped
+  }
+  return title
+}
+
+const EMPTY_TIMESTAMPS: Record<string, string> = {}
 
 const MANUAL_ALTERNATE_NAMES: Record<string, string[]> = {
   '42 St - Port Authority Bus Terminal': [
@@ -230,6 +263,10 @@ const MANUAL_COMPLEX_GROUPS: ManualComplexSelector[][] = [
     { name: 'Cortlandt St', line: 'NewYorkSubwayR' },
     { name: 'Cortlandt St', line: 'NewYorkSubwayW' },
     { name: 'WTC Cortlandt', line: 'NewYorkSubway1' },
+  ],
+  [
+    { name: 'Concourse T', line: 'atlantaTPT' },
+    { name: 'Airport', line: 'MARTARD' },
   ],
 ]
 
@@ -426,33 +463,6 @@ const generateAlternateNames = (name?: string): string[] => {
   return Array.from(alternates)
 }
 
-const getStationKey = (feature: DataFeature) => {
-  const propertiesWithCluster = feature.properties as typeof feature.properties & {
-    cluster_key?: number | string
-  }
-
-  if (
-    propertiesWithCluster?.cluster_key !== undefined &&
-    propertiesWithCluster?.cluster_key !== null
-  ) {
-    return `cluster|${propertiesWithCluster.cluster_key}`
-  }
-
-  const name = (feature.properties.name ?? '').trim().toLowerCase()
-  if (
-    feature.geometry?.type === 'Point' &&
-    Array.isArray(feature.geometry.coordinates)
-  ) {
-    const [lng, lat] = feature.geometry.coordinates as number[]
-    const formattedLng =
-      typeof lng === 'number' ? lng.toFixed(6) : String(lng)
-    const formattedLat =
-      typeof lat === 'number' ? lat.toFixed(6) : String(lat)
-    return `${name}|${formattedLng}|${formattedLat}`
-  }
-  return `${name}|${feature.id ?? ''}`
-}
-
 export default function GamePage({
   fc,
   routes,
@@ -460,9 +470,10 @@ export default function GamePage({
   fc: DataFeatureCollection
   routes?: RoutesFeatureCollection
 }) {
-  const { CITY_NAME, MAP_CONFIG, LINES, MAP_FROM_DATA } = useConfig()
+  const { CITY_NAME, MAP_CONFIG, LINES, MAP_FROM_DATA, METADATA } = useConfig()
   const { t } = useTranslation()
   const { resolvedTheme } = useTheme()
+  const { settings } = useSettings()
   const mapContainerRef = useRef<HTMLDivElement | null>(null)
 
   const normalizeString = useNormalizeString()
@@ -789,6 +800,7 @@ export default function GamePage({
   const [hoveredId, setHoveredId] = useState<number | null>(null)
   const inputRef = useRef<HTMLInputElement | null>(null)
   const { hideLabels, setHideLabels } = useHideLabels(map)
+  const { user, updateProgressSummary } = useAuth()
   const [solutionsPromptOpen, setSolutionsPromptOpen] = useState(false)
   const [solutionsPassword, setSolutionsPassword] = useState('')
   const [solutionsError, setSolutionsError] = useState(false)
@@ -801,6 +813,39 @@ export default function GamePage({
   const [sidebarOpenState, setSidebarOpenState] = useState(true)
   const [mobileSidebarOpen, setMobileSidebarOpen] = useState(false)
   const [activeFoundId, setActiveFoundId] = useState<number | null>(null)
+  const [achievementToast, setAchievementToast] = useState<AchievementToastState | null>(null)
+  const [settingsModalOpen, setSettingsModalOpen] = useState(false)
+  const [cityStatsOpen, setCityStatsOpen] = useState(false)
+  const completionConfettiStorageKey = useMemo(
+    () => `${CITY_NAME}-completion-confetti-shown`,
+    [CITY_NAME],
+  )
+  const [cityCompletionConfettiSeen, setCityCompletionConfettiSeen] = useState(false)
+
+  useEffect(() => {
+    if (typeof window === 'undefined') {
+      return
+    }
+    try {
+      setCityCompletionConfettiSeen(
+        window.localStorage.getItem(completionConfettiStorageKey) === '1',
+      )
+    } catch {
+      setCityCompletionConfettiSeen(false)
+    }
+  }, [completionConfettiStorageKey])
+
+  const markCityCompletionConfettiSeen = useCallback(() => {
+    setCityCompletionConfettiSeen(true)
+    if (typeof window === 'undefined') {
+      return
+    }
+    try {
+      window.localStorage.setItem(completionConfettiStorageKey, '1')
+    } catch {
+      // ignore storage errors
+    }
+  }, [completionConfettiStorageKey])
 
   useEffect(() => {
     if (typeof storedSidebarOpen === 'boolean') {
@@ -821,6 +866,24 @@ export default function GamePage({
   )
 
   const sidebarOpen = sidebarOpenState
+
+  const handleAchievementToastClose = useCallback(() => {
+    setAchievementToast(null)
+  }, [])
+
+  const handleAchievementToastNever = useCallback((slug: string) => {
+    if (typeof window !== 'undefined') {
+      try {
+        window.localStorage.setItem(achievementToastStorageKey(slug), '1')
+      } catch {
+        // ignore storage errors
+      }
+    }
+    setAchievementToast(null)
+  }, [])
+
+  const openSettingsModal = useCallback(() => setSettingsModalOpen(true), [])
+  const closeSettingsModal = useCallback(() => setSettingsModalOpen(false), [])
 
   const idMap = useMemo(() => {
     const map = new Map<number, DataFeature>()
@@ -867,7 +930,7 @@ export default function GamePage({
       },
     )
 
-  const foundTimestamps = storedFoundTimestamps ?? {}
+  const foundTimestamps = storedFoundTimestamps ?? EMPTY_TIMESTAMPS
 
   const setFoundTimestamps = useCallback(
     (updater: (prev: Record<string, string>) => Record<string, string>) => {
@@ -886,6 +949,17 @@ export default function GamePage({
     return (localFound || []).filter((f) => idMap.has(f))
   }, [localFound, idMap])
 
+  const localFoundRef = useRef<number[] | null>(null)
+  const localTimestampsRef = useRef<Record<string, string> | null>(null)
+
+  useEffect(() => {
+    localFoundRef.current = Array.isArray(localFound) ? [...localFound] : null
+  }, [localFound])
+
+  useEffect(() => {
+    localTimestampsRef.current = storedFoundTimestamps
+  }, [storedFoundTimestamps])
+
   useEffect(() => {
     if (!Array.isArray(localFound)) {
       return
@@ -896,6 +970,141 @@ export default function GamePage({
       setFound(unique)
     }
   }, [localFound, idMap, setFound])
+
+  const syncTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
+
+  const submitProgress = useCallback(
+    async (
+      ids: number[],
+      timestamps: Record<string, string>,
+      immediate = false,
+    ) => {
+      if (!user) {
+        return
+      }
+
+      const payload = {
+        foundIds: ids,
+        foundTimestamps: timestamps,
+      }
+
+      const send = async () => {
+        try {
+          const response = await fetch(`/api/progress/${CITY_NAME}`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload),
+          })
+          if (response.ok) {
+            updateProgressSummary(CITY_NAME, ids.length)
+          }
+        } catch (error) {
+          if (process.env.NODE_ENV !== 'production') {
+            console.warn('Unable to sync progress', error)
+          }
+        }
+      }
+
+      if (immediate) {
+        await send()
+        return
+      }
+
+      if (syncTimeoutRef.current) {
+        clearTimeout(syncTimeoutRef.current)
+      }
+
+      syncTimeoutRef.current = setTimeout(() => {
+        void send()
+      }, 1200)
+    },
+    [CITY_NAME, updateProgressSummary, user],
+  )
+
+  useEffect(() => {
+    return () => {
+      if (syncTimeoutRef.current) {
+        clearTimeout(syncTimeoutRef.current)
+      }
+    }
+  }, [])
+
+  useEffect(() => {
+    if (!user) {
+      return
+    }
+
+    let cancelled = false
+    ;(async () => {
+      try {
+        const response = await fetch(`/api/progress/${CITY_NAME}`, {
+          cache: 'no-store',
+        })
+        if (!response.ok) {
+          return
+        }
+        const data = await response.json()
+        if (cancelled) {
+          return
+        }
+        if (data?.progress) {
+          const remoteFound = Array.isArray(data.progress.foundIds)
+            ? data.progress.foundIds.filter(
+                (id: unknown): id is number =>
+                  typeof id === 'number' && idMap.has(id),
+              )
+            : []
+          if (remoteFound.length > 0) {
+            setFound(remoteFound)
+            if (
+              data.progress.foundTimestamps &&
+              typeof data.progress.foundTimestamps === 'object'
+            ) {
+              setFoundTimestamps(
+                () =>
+                  data.progress
+                    .foundTimestamps as Record<string, string>,
+              )
+            }
+            updateProgressSummary(CITY_NAME, remoteFound.length)
+            return
+          }
+        }
+        const fallbackIds =
+          localFoundRef.current?.filter((id) => idMap.has(id)) ?? []
+        if (fallbackIds.length > 0) {
+          await submitProgress(
+            fallbackIds,
+            localTimestampsRef.current ?? {},
+            true,
+          )
+        }
+      } catch (error) {
+        if (process.env.NODE_ENV !== 'production') {
+          console.warn('Unable to load synced progress', error)
+        }
+      }
+    })()
+
+    return () => {
+      cancelled = true
+    }
+  }, [
+    CITY_NAME,
+    idMap,
+    setFound,
+    setFoundTimestamps,
+    submitProgress,
+    updateProgressSummary,
+    user,
+  ])
+
+  useEffect(() => {
+    if (!user) {
+      return
+    }
+    void submitProgress(found, foundTimestamps)
+  }, [found, foundTimestamps, submitProgress, user])
 
   useEffect(() => {
     if (found.length === 0) {
@@ -980,6 +1189,12 @@ export default function GamePage({
   }, [found, idMap])
 
   const launchCompletionConfetti = useCallback(() => {
+    if (
+      !settings.confettiEnabled ||
+      (settings.stopConfettiAfterCompletion && cityCompletionConfettiSeen)
+    ) {
+      return
+    }
     const lineColors = Object.values(LINES ?? {})
       .map((line) => line?.color)
       .filter((color): color is string => typeof color === 'string' && color.length > 0)
@@ -1001,7 +1216,17 @@ export default function GamePage({
     }
 
     void makeConfetti()
-  }, [LINES])
+
+    if (!cityCompletionConfettiSeen) {
+      markCityCompletionConfettiSeen()
+    }
+  }, [
+    LINES,
+    cityCompletionConfettiSeen,
+    markCityCompletionConfettiSeen,
+    settings.confettiEnabled,
+    settings.stopConfettiAfterCompletion,
+  ])
 
   const revealAllStations = useCallback(() => {
     setFound(allStationIds)
@@ -1065,9 +1290,24 @@ export default function GamePage({
   )
 
   const handleSolutionsSubmit = useCallback(
-    (event: FormEvent<HTMLFormElement>) => {
+    async (event: FormEvent<HTMLFormElement>) => {
       event.preventDefault()
-      if (solutionsPassword.trim() === 'NYCT') {
+      const password = solutionsPassword.trim()
+      if (!password) {
+        setSolutionsError(true)
+        return
+      }
+      try {
+        const response = await fetch('/api/solutions', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ password }),
+        })
+        const json = await response.json().catch(() => ({}))
+        if (!response.ok || !json?.success) {
+          setSolutionsError(true)
+          return
+        }
         setSolutionsUnlocked(true)
         revealAllStations()
         setSolutionsPromptOpen(false)
@@ -1076,8 +1316,11 @@ export default function GamePage({
         setTimeout(() => {
           inputRef.current?.focus()
         }, 0)
-      } else {
+      } catch (error) {
         setSolutionsError(true)
+        if (process.env.NODE_ENV !== 'production') {
+          console.error('Unable to validate solutions password', error)
+        }
       }
     },
     [
@@ -1088,6 +1331,19 @@ export default function GamePage({
       setSolutionsError,
     ],
   )
+
+  const autoRevealRef = useRef(false)
+
+  useEffect(() => {
+    if (autoRevealRef.current) {
+      return
+    }
+    if (shouldAutoRevealSolutions(CITY_NAME)) {
+      autoRevealRef.current = true
+      setSolutionsUnlocked(true)
+      revealAllStations()
+    }
+  }, [CITY_NAME, revealAllStations])
 
   const fuse = useMemo(
     () =>
@@ -1130,6 +1386,11 @@ export default function GamePage({
 
   const totalUniqueStations = uniqueStationsMap.size
 
+  const cityDisplayName = useMemo(
+    () => deriveCityDisplayName(METADATA?.title, CITY_NAME),
+    [METADATA?.title, CITY_NAME],
+  )
+
   const foundStationKeys = useMemo(() => {
     const keys = new Set<string>()
     for (const id of found) {
@@ -1144,6 +1405,41 @@ export default function GamePage({
     totalUniqueStations === 0
       ? 0
       : foundStationKeys.size / totalUniqueStations
+
+  const completionProgressRef = useRef(foundProportion)
+
+  useEffect(() => {
+    const previous = completionProgressRef.current ?? 0
+    const reachedCompletion =
+      previous < ACHIEVEMENT_COMPLETION_THRESHOLD &&
+      foundProportion >= ACHIEVEMENT_COMPLETION_THRESHOLD
+
+    if (reachedCompletion) {
+      const shouldSuppressGlobal = !settings.achievementToastsEnabled
+      const shouldSuppressCity =
+        typeof window !== 'undefined' &&
+        window.localStorage.getItem(achievementToastStorageKey(CITY_NAME)) === '1'
+      if (shouldSuppressGlobal || shouldSuppressCity) {
+        completionProgressRef.current = foundProportion
+        return
+      }
+      const achievementMeta = getAchievementForCity(CITY_NAME, cityDisplayName)
+      setAchievementToast({
+        slug: CITY_NAME,
+        cityName: cityDisplayName,
+        title: achievementMeta.title,
+        description: achievementMeta.description,
+      })
+    }
+
+    completionProgressRef.current = foundProportion
+  }, [CITY_NAME, cityDisplayName, foundProportion, settings.achievementToastsEnabled])
+
+  useEffect(() => {
+    if (!settings.achievementToastsEnabled) {
+      setAchievementToast(null)
+    }
+  }, [settings.achievementToastsEnabled])
 
   const mapOptions = useMemo(() => {
     const fallbackLightStyle =
@@ -1324,19 +1620,33 @@ export default function GamePage({
         })
 
         const box = bbox(routes)
+        const [minLng, minLat, maxLng, maxLat] = box
+        const hasValidBox =
+          Number.isFinite(minLng) &&
+          Number.isFinite(minLat) &&
+          Number.isFinite(maxLng) &&
+          Number.isFinite(maxLat) &&
+          maxLng > minLng &&
+          maxLat > minLat &&
+          minLat >= -90 &&
+          minLat <= 90 &&
+          maxLat >= -90 &&
+          maxLat <= 90
 
-        mapboxMap.fitBounds(
-          [
-            [box[0], box[1]],
-            [box[2], box[3]],
-          ],
-          { padding: 100, duration: 0 },
-        )
+        if (hasValidBox) {
+          mapboxMap.fitBounds(
+            [
+              [minLng, minLat],
+              [maxLng, maxLat],
+            ],
+            { padding: 100, duration: 0 },
+          )
 
-        mapboxMap.setMaxBounds([
-          [box[0] - 1, box[1] - 1],
-          [box[2] + 1, box[3] + 1],
-        ])
+          mapboxMap.setMaxBounds([
+            [minLng - 1, minLat - 1],
+            [maxLng + 1, maxLat + 1],
+          ])
+        }
       }
 
       if (ensureRouteLayers) {
@@ -1648,13 +1958,15 @@ export default function GamePage({
               foundProportion={foundProportion}
               foundStationsPerLine={foundStationsPerLine}
               stationsPerLine={stationsPerLine}
+              cityCompletionConfettiSeen={cityCompletionConfettiSeen}
+              onCityCompletionConfettiSeen={markCityCompletionConfettiSeen}
               minimizable
             />
             <div className="flex items-center gap-2 lg:gap-3">
               <button
                 type="button"
                 onClick={() => setMobileSidebarOpen((open) => !open)}
-                className="inline-flex h-12 items-center gap-2 rounded-full bg-white px-4 text-sm font-semibold text-zinc-700 shadow-lg transition hover:bg-zinc-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:bg-zinc-800 dark:text-zinc-100 dark:hover:bg-zinc-700 lg:hidden"
+                className="inline-flex h-12 items-center gap-2 rounded-full bg-white px-4 text-sm font-semibold text-zinc-700 shadow-lg transition hover:bg-zinc-100 focus:outline-none focus:ring-2 focus:ring-[var(--accent-ring)] dark:bg-zinc-800 dark:text-zinc-100 dark:hover:bg-zinc-700 lg:hidden"
                 aria-label={`${mobileSidebarOpen ? 'Hide sidebar' : 'Show sidebar'} (${foundStationKeys.size} found)`}
               >
                 <span className="flex flex-col items-start leading-none">
@@ -1685,6 +1997,8 @@ export default function GamePage({
                 setHideLabels={setHideLabels}
                 onRevealSolutions={handleRevealSolutions}
                 foundProportion={foundProportion}
+                onOpenSettings={openSettingsModal}
+                onOpenCityStats={() => setCityStatsOpen(true)}
               />
               {found.length > 0 && (
                 <button
@@ -1708,7 +2022,7 @@ export default function GamePage({
         <button
           type="button"
           onClick={() => setSidebarOpen((open) => !open)}
-          className="absolute left-0 top-1/2 z-20 flex h-10 w-10 -translate-y-1/2 -translate-x-[65%] items-center justify-center rounded-full bg-white text-zinc-700 shadow-lg transition hover:bg-zinc-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:bg-zinc-800 dark:text-zinc-100 dark:hover:bg-zinc-700"
+          className="absolute left-0 top-1/2 z-20 flex h-10 w-10 -translate-y-1/2 -translate-x-[65%] items-center justify-center rounded-full bg-white text-zinc-700 shadow-lg transition hover:bg-zinc-100 focus:outline-none focus:ring-2 focus:ring-[var(--accent-ring)] dark:bg-zinc-800 dark:text-zinc-100 dark:hover:bg-zinc-700"
           aria-label={sidebarOpen ? 'Hide sidebar' : 'Show sidebar'}
         >
           {sidebarOpen ? '<' : '>'}
@@ -1720,6 +2034,8 @@ export default function GamePage({
               foundProportion={foundProportion}
               foundStationsPerLine={foundStationsPerLine}
               stationsPerLine={stationsPerLine}
+              cityCompletionConfettiSeen={cityCompletionConfettiSeen}
+              onCityCompletionConfettiSeen={markCityCompletionConfettiSeen}
               minimizable
               defaultMinimized
             />
@@ -1756,17 +2072,19 @@ export default function GamePage({
               <button
                 type="button"
                 onClick={() => setMobileSidebarOpen(false)}
-                className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-zinc-100 text-zinc-700 shadow hover:bg-zinc-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:bg-zinc-800 dark:text-zinc-100 dark:hover:bg-zinc-700"
+                className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-zinc-100 text-zinc-700 shadow hover:bg-zinc-200 focus:outline-none focus:ring-2 focus:ring-[var(--accent-ring)] dark:bg-zinc-800 dark:text-zinc-100 dark:hover:bg-zinc-700"
                 aria-label="Hide sidebar"
               >
                 {'<'}
               </button>
             </div>
             <FoundSummary
-            className="rounded-xl border border-zinc-100 bg-white p-4 shadow-sm dark:border-[#18181b] dark:bg-zinc-800/80"
+              className="rounded-xl border border-zinc-100 bg-white p-4 shadow-sm dark:border-[#18181b] dark:bg-zinc-800/80"
               foundProportion={foundProportion}
               foundStationsPerLine={foundStationsPerLine}
               stationsPerLine={stationsPerLine}
+              cityCompletionConfettiSeen={cityCompletionConfettiSeen}
+              onCityCompletionConfettiSeen={markCityCompletionConfettiSeen}
             />
             <div className="mt-4 max-h-[60vh] overflow-y-auto pr-1">
               <FoundList
@@ -1792,6 +2110,66 @@ export default function GamePage({
       >
         {t('introInstruction')} ⏎
       </IntroModal>
+      {settingsModalOpen && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-zinc-900/60 backdrop-blur-sm"
+          onClick={closeSettingsModal}
+        >
+          <div
+            className="mx-4 w-full max-w-3xl rounded-3xl border border-zinc-200 bg-white p-6 shadow-2xl dark:border-[#18181b] dark:bg-zinc-900"
+            onClick={(event) => event.stopPropagation()}
+          >
+            <div className="flex items-center justify-between">
+              <h2 className="text-2xl font-semibold text-zinc-900 dark:text-zinc-50">
+                {t('settings')}
+              </h2>
+              <button
+                type="button"
+                onClick={closeSettingsModal}
+                className="rounded-full border border-zinc-300 px-3 py-1 text-sm font-semibold text-zinc-700 hover:bg-zinc-100 focus:outline-none focus:ring-2 focus:ring-[var(--accent-ring)] dark:border-[#18181b] dark:text-zinc-100 dark:hover:bg-zinc-800"
+              >
+                Close
+              </button>
+            </div>
+            <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">
+              Changes here are synced with the main site settings.
+            </p>
+            <SettingsPanel className="mt-4" showHeading={false} />
+            <div className="mt-6 flex flex-wrap justify-end gap-3">
+              <Link
+                href="/?tab=settings"
+                className="inline-flex items-center justify-center rounded-full border border-zinc-300 px-4 py-2 text-sm font-semibold text-zinc-700 transition hover:bg-zinc-100 focus:outline-none focus:ring-2 focus:ring-[var(--accent-ring)] dark:border-[#18181b] dark:text-zinc-100 dark:hover:bg-zinc-800"
+              >
+                Open main page settings
+              </Link>
+              <button
+                type="button"
+                onClick={closeSettingsModal}
+                className="inline-flex items-center justify-center rounded-full bg-[var(--accent-600)] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[var(--accent-500)] focus:outline-none focus:ring-2 focus:ring-[var(--accent-ring)] dark:bg-[var(--accent-600)] dark:hover:bg-[var(--accent-500)]"
+              >
+                Done
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+      <CityStatsPanel
+        cityDisplayName={cityDisplayName}
+        slug={CITY_NAME}
+        open={cityStatsOpen}
+        onClose={() => setCityStatsOpen(false)}
+      />
+      {achievementToast && (
+        <AchievementToast
+          open
+          slug={achievementToast.slug}
+          cityName={achievementToast.cityName}
+          title={achievementToast.title}
+          description={achievementToast.description}
+          onClose={handleAchievementToastClose}
+          onDontShowAgain={() => handleAchievementToastNever(achievementToast.slug)}
+        />
+      )}
       {solutionsPromptOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-zinc-900/60 backdrop-blur-sm">
           <div
@@ -1811,7 +2189,7 @@ export default function GamePage({
                 autoFocus
                 value={solutionsPassword}
                 onChange={handleSolutionsPasswordChange}
-                className="w-full rounded-lg border border-zinc-300 px-4 py-2 text-base text-zinc-900 focus:border-zinc-900 focus:outline-none focus:ring-2 focus:ring-zinc-900/20 dark:border-[#18181b] dark:bg-zinc-900 dark:text-zinc-100 dark:focus:border-indigo-400 dark:focus:ring-indigo-500/40"
+                className="w-full rounded-lg border border-zinc-300 px-4 py-2 text-base text-zinc-900 focus:border-zinc-900 focus:outline-none focus:ring-2 focus:ring-zinc-900/20 dark:border-[#18181b] dark:bg-zinc-900 dark:text-zinc-100 dark:focus:border-[var(--accent-400)] dark:focus:ring-[var(--accent-ring)]"
                 placeholder="Password"
                 autoComplete="off"
               />
@@ -1830,7 +2208,7 @@ export default function GamePage({
                 </button>
                 <button
                   type="submit"
-                  className="rounded-full bg-zinc-900 px-4 py-2 text-sm font-semibold text-white shadow hover:bg-zinc-800 focus:outline-none focus:ring-2 focus:ring-zinc-500/40 dark:bg-indigo-500 dark:hover:bg-indigo-400"
+                  className="rounded-full bg-zinc-900 px-4 py-2 text-sm font-semibold text-white shadow hover:bg-zinc-800 focus:outline-none focus:ring-2 focus:ring-zinc-500/40 dark:bg-[var(--accent-600)] dark:hover:bg-[var(--accent-500)]"
                 >
                   Unlock
                 </button>

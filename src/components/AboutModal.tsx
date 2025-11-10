@@ -130,11 +130,11 @@ export default function AboutModal({
                   </div>
                 </div>
                 <div className="mt-5 sm:mt-6">
-                  <button
-                    type="button"
-                    className="inline-flex w-full justify-center rounded-md bg-zinc-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-zinc-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-600 dark:bg-indigo-500 dark:hover:bg-indigo-400"
-                    onClick={() => setOpen(false)}
-                  >
+          <button
+            type="button"
+            className="inline-flex w-full justify-center rounded-md bg-zinc-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-zinc-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-600 dark:bg-[var(--accent-600)] dark:hover:bg-[var(--accent-500)] dark:focus-visible:outline-[var(--accent-500)]"
+            onClick={() => setOpen(false)}
+          >
                     {t('backToTheGame')}
                   </button>
                 </div>

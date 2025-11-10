@@ -17,6 +17,16 @@ export const LINE_GROUPS: LineGroup[] = [
       },
     ],
   },
+  {
+    title: 'Allegheny County Airport Authority (ACAA)',
+    items: [
+      {
+        type: 'lines',
+        title: 'Pittsburgh International Airport People Mover System',
+        lines: ['pittsburghAPM'],
+      },
+    ],
+  },
 ]
 
 export const METADATA: Metadata = {

@@ -1,14 +1,28 @@
 'use client'
 
-import { useCallback, useEffect, useMemo, useState } from 'react'
+import {
+  Fragment,
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+  type ReactNode,
+} from 'react'
 import classNames from 'classnames'
 import Fuse from 'fuse.js'
 import { Transition } from '@headlessui/react'
+import { useSearchParams } from 'next/navigation'
 
 import { cities, ICity } from '@/lib/citiesConfig'
 import { getAchievementForCity } from '@/lib/achievements'
 import CityCard from '@/components/CityCard'
 import CreditsContent from '@/components/CreditsContent'
+import CollapsibleSection from '@/components/CollapsibleSection'
+import AchievementIcon from '@/components/AchievementIcon'
+import SettingsPanel from '@/components/SettingsPanel'
+import AccountDashboard from '@/app/(website)/account/panel'
+import useTranslation from '@/hooks/useTranslation'
 
 type CitySortOption = 'default' | 'name-asc' | 'name-desc' | 'continent-asc' | 'continent-desc'
 type AchievementSortOption =
@@ -47,9 +61,23 @@ const TAB_OPTIONS: Array<{ id: TabOption; label: string }> = [
   { id: 'achievements', label: 'Achievements' },
   { id: 'updateLog', label: 'Update Log' },
   { id: 'credits', label: 'Credits' },
+  // { id: 'account', label: 'Account' }, // reserved for future use
+  { id: 'testimonials', label: 'What people say' },
+  { id: 'press', label: 'They talked about us' },
+  { id: 'settings', label: 'Settings' },
+  // { id: 'privacy', label: 'Privacy' }, // reserved for future use
 ]
 
-type TabOption = 'cities' | 'achievements' | 'updateLog' | 'credits'
+type TabOption =
+  | 'cities'
+  | 'achievements'
+  | 'updateLog'
+  | 'credits'
+  | 'testimonials'
+  | 'press'
+  | 'settings'
+  // | 'account'
+  // | 'privacy'
 
 type UpdateLogStatus = 'idle' | 'loading' | 'success' | 'error'
 
@@ -88,6 +116,22 @@ const UPDATE_LOG_HEADERS: HeadersInit = {
 }
 
 const UPDATE_LOG_LIMIT = 15
+const UPDATE_LOG_TIMEOUT_MS = 5_000
+const COLLAPSIBLE_CONTINENTS = new Set([
+  'North America',
+  'Europe',
+  'Asia',
+  'Oceania',
+])
+
+const getContinentSectionId = (continent: string) => {
+  const slug = continent
+    .toLowerCase()
+    .trim()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '')
+  return slug ? `continent-${slug}` : 'continent-unknown'
+}
 
 const formatCommitMessage = (message?: string | null) => {
   if (!message) {
@@ -208,12 +252,25 @@ interface AchievementMeta {
   description: string
   continent: string
   order: number
+  iconSrc?: string
 }
 
-const SearcheableCitiesList = () => {
+type SearcheableCitiesListProps = {
+  testimonialsContent?: ReactNode
+  pressContent?: ReactNode
+}
+
+const SearcheableCitiesList = ({
+  testimonialsContent,
+  pressContent,
+}: SearcheableCitiesListProps) => {
+  const { t } = useTranslation()
+  const searchParams = useSearchParams()
+  const lastSearchParamStringRef = useRef<string | null>(null)
   const [activeTab, setActiveTab] = useState<TabOption>('cities')
   const [search, setSearch] = useState('')
   const [citySort, setCitySort] = useState<CitySortOption>('default')
+  const [cityViewMode, setCityViewMode] = useState<CityViewMode>('comfortable')
   const [achievementSearch, setAchievementSearch] = useState('')
   const [achievementSort, setAchievementSort] = useState<AchievementSortOption>('default')
   const [unlockedSlugs, setUnlockedSlugs] = useState<string[]>([])
@@ -223,7 +280,7 @@ const SearcheableCitiesList = () => {
   })
 
   const enrichedCities = useMemo(() => enrichCities(cities), [])
-  const achievementCatalog = useMemo(() => {
+  const cityAchievementCatalog = useMemo(() => {
     return enrichedCities
       .map((city, index) => {
         const slug = getSlugFromLink(city.link)
@@ -241,6 +298,27 @@ const SearcheableCitiesList = () => {
       })
       .filter((entry): entry is AchievementMeta => entry !== null)
   }, [enrichedCities])
+
+  const masterAchievement = useMemo<AchievementMeta>(() => {
+    const totalCities = cityAchievementCatalog.length
+    return {
+      slug: 'metro-memory-master',
+      cityName: 'Metro Memory',
+      title: 'Master Completionist',
+      description:
+        totalCities > 0
+          ? `Unlock all ${totalCities} city achievements to earn this final badge.`
+          : 'Unlock every city achievement to earn this final badge.',
+      continent: 'Global',
+      order: Number.MAX_SAFE_INTEGER,
+      iconSrc: '/favicon.ico',
+    }
+  }, [cityAchievementCatalog.length])
+
+  const achievementCatalog = useMemo(
+    () => [masterAchievement, ...cityAchievementCatalog],
+    [cityAchievementCatalog, masterAchievement],
+  )
 
   const fuse = useMemo(
     () =>
@@ -438,9 +516,33 @@ const SearcheableCitiesList = () => {
     }
 
     const controller = new AbortController()
-    fetchUpdateLog(controller.signal)
+    let timeoutId: ReturnType<typeof setTimeout> | undefined
+
+    const handleTimeout = () => {
+      controller.abort()
+      setUpdateLogState((prev) => {
+        if (prev.status === 'loading' || prev.status === 'idle') {
+          return {
+            status: 'success',
+            entries: [],
+            lastUpdated: new Date().toISOString(),
+          }
+        }
+        return prev
+      })
+    }
+
+    timeoutId = setTimeout(handleTimeout, UPDATE_LOG_TIMEOUT_MS)
+    fetchUpdateLog(controller.signal).finally(() => {
+      if (timeoutId) {
+        clearTimeout(timeoutId)
+      }
+    })
 
     return () => {
+      if (timeoutId) {
+        clearTimeout(timeoutId)
+      }
       controller.abort()
     }
   }, [activeTab, fetchUpdateLog, updateLogState.status])
@@ -456,7 +558,7 @@ const SearcheableCitiesList = () => {
     const computeAchievements = () => {
       if (typeof window === 'undefined') return
       const unlocked: string[] = []
-      achievementCatalog.forEach((entry) => {
+      cityAchievementCatalog.forEach((entry) => {
         const { slug } = entry
         const totalRaw = window.localStorage.getItem(`${slug}-station-total`)
         const total = Number(totalRaw)
@@ -481,6 +583,9 @@ const SearcheableCitiesList = () => {
           unlocked.push(slug)
         }
       })
+      if (cityAchievementCatalog.length > 0 && unlocked.length === cityAchievementCatalog.length) {
+        unlocked.push(masterAchievement.slug)
+      }
       setUnlockedSlugs(unlocked)
     }
 
@@ -491,38 +596,113 @@ const SearcheableCitiesList = () => {
       window.removeEventListener('storage', computeAchievements)
       window.removeEventListener('focus', computeAchievements)
     }
-  }, [achievementCatalog])
+  }, [cityAchievementCatalog, masterAchievement.slug])
+
+  useEffect(() => {
+    if (!searchParams) return
+    const currentQuery = searchParams.toString()
+    if (currentQuery === lastSearchParamStringRef.current) {
+      return
+    }
+    lastSearchParamStringRef.current = currentQuery
+    const tabParam = searchParams.get('tab')
+    if (!tabParam) return
+    const normalized = TAB_OPTIONS.find(({ id }) => id === tabParam)?.id
+    if (normalized) {
+      setActiveTab(normalized as TabOption)
+    }
+  }, [searchParams])
 
   const hasResults = visibleGroups.length > 0
-  let cardIndex = 0
+
+  const renderCityCollection = (cityList: ICity[]) => {
+    const variant =
+      cityViewMode === 'cover'
+        ? 'cover'
+        : cityViewMode === 'compact'
+          ? 'compact'
+          : cityViewMode === 'list'
+            ? 'list'
+            : 'comfortable'
+
+    if (cityViewMode === 'list') {
+      return (
+        <div className="space-y-4">
+          {cityList.map((city) => (
+            <Transition
+              key={city.link}
+              as="div"
+              appear
+              enterFrom="opacity-0 translate-y-2"
+              enter="transition-all ease-out duration-200"
+              leaveFrom="opacity-100 translate-y-0"
+              leave="transition-all ease-in duration-200"
+              show
+            >
+              <CityCard city={city} variant={variant} />
+            </Transition>
+          ))}
+        </div>
+      )
+    }
+
+    const gridClasses = classNames(
+      'mx-auto grid max-w-full grid-cols-1',
+      cityViewMode === 'compact' && 'gap-4 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5',
+      cityViewMode === 'comfortable' && 'gap-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4',
+      cityViewMode === 'cover' && 'gap-6 md:grid-cols-2 xl:grid-cols-3',
+    )
+
+    return (
+      <div className={gridClasses}>
+        {cityList.map((city) => (
+          <Transition
+            key={city.link}
+            as="div"
+            appear
+            enterFrom="opacity-0 translate-y-4"
+            enter="transition-all ease-out duration-200"
+            leaveFrom="opacity-100 translate-y-0"
+            leave="transition-all ease-in duration-200"
+            show
+          >
+            <CityCard city={city} variant={variant} />
+          </Transition>
+        ))}
+      </div>
+    )
+  }
 
   return (
     <div className="my-16 mt-16 sm:mt-20">
       <div className="mb-6 flex gap-3">
-        {TAB_OPTIONS.map(({ id, label }) => (
-          <button
-            key={id}
-            onClick={() => setActiveTab(id)}
-            className={classNames(
-              'rounded-full px-4 py-2 text-sm font-semibold transition',
-              activeTab === id
-                ? 'bg-indigo-600 text-white dark:bg-indigo-500'
-                : 'bg-gray-200 text-gray-700 hover:bg-gray-300 dark:bg-zinc-800 dark:text-zinc-200 dark:hover:bg-zinc-700',
-            )}
-          >
-            {label}
-          </button>
-        ))}
+        {TAB_OPTIONS.map(({ id, label }) => {
+          const labelText = id === 'settings' ? t('settings') : label
+          return (
+            <button
+              key={id}
+              onClick={() => setActiveTab(id)}
+              className={classNames(
+                'rounded-full px-4 py-2 text-sm font-semibold transition',
+                activeTab === id
+                  ? 'bg-[var(--accent-600)] text-white dark:bg-[var(--accent-500)]'
+                  : 'bg-gray-200 text-gray-700 hover:bg-gray-300 dark:bg-zinc-800 dark:text-zinc-200 dark:hover:bg-zinc-700',
+              )}
+            >
+              {labelText}
+            </button>
+          )
+        })}
       </div>
 
       {activeTab === 'cities' ? (
         <>
-          <div className="mb-4 flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+          <div className="mb-4 flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
             <div className="relative w-full">
               <input
                 value={search}
                 onChange={(event) => setSearch(event.target.value)}
-                className="block w-full rounded-full border-0 px-10 py-4 pr-10 text-lg text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:leading-6 dark:bg-zinc-900 dark:text-zinc-100 dark:ring-zinc-700 dark:placeholder:text-zinc-500 dark:focus:ring-indigo-400"
+                className="block w-full rounded-full border-0 px-10 py-4 pr-10 text-lg text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-[var(--accent-600)] sm:leading-6 dark:bg-zinc-900 dark:text-zinc-100 dark:ring-zinc-700 dark:placeholder:text-zinc-500 dark:focus:ring-[var(--accent-400)]"
                 type="text"
                 placeholder="Search for a city..."
               />
@@ -535,58 +715,92 @@ const SearcheableCitiesList = () => {
                 </svg>
               </div>
             </div>
-            <div className="w-full md:w-64">
-              <label className="sr-only" htmlFor="city-sort">
-                Sort cities
-              </label>
-              <select
-                id="city-sort"
-                value={citySort}
-                onChange={(event) => setCitySort(event.target.value as CitySortOption)}
-                className="w-full rounded-full border-0 bg-white px-4 py-3 text-sm font-medium text-gray-700 ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-indigo-600 dark:bg-zinc-900 dark:text-zinc-100 dark:ring-zinc-700 dark:focus:ring-indigo-400"
-              >
-                {CITY_SORT_OPTIONS.map((option) => (
-                  <option key={option.value} value={option.value}>
-                    {option.label}
-                  </option>
-                ))}
-              </select>
+            <div className="flex flex-col gap-3 sm:flex-row sm:items-center lg:w-auto">
+              <div className="w-full sm:w-48">
+                <label className="sr-only" htmlFor="city-sort">
+                  Sort cities
+                </label>
+                <select
+                  id="city-sort"
+                  value={citySort}
+                  onChange={(event) => setCitySort(event.target.value as CitySortOption)}
+                  className="w-full rounded-full border-0 bg-white px-4 py-3 text-sm font-medium text-gray-700 ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-[var(--accent-600)] dark:bg-zinc-900 dark:text-zinc-100 dark:ring-zinc-700 dark:focus:ring-[var(--accent-400)]"
+                >
+                  {CITY_SORT_OPTIONS.map((option) => (
+                    <option key={option.value} value={option.value}>
+                      {option.label}
+                    </option>
+                  ))}
+                </select>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="text-xs font-semibold uppercase tracking-wide text-zinc-500 dark:text-zinc-400">
+                  View
+                </span>
+                <div className="flex rounded-full border border-zinc-200 bg-white p-1 text-xs font-semibold dark:border-[#18181b] dark:bg-zinc-900">
+                  {CITY_VIEW_OPTIONS.map((option) => (
+                    <button
+                      key={option.value}
+                      type="button"
+                      onClick={() => setCityViewMode(option.value)}
+                      className={classNames(
+                        'rounded-full px-3 py-1 transition',
+                        cityViewMode === option.value
+                          ? 'bg-[var(--accent-600)] text-white dark:bg-[var(--accent-500)]'
+                          : 'text-zinc-600 hover:bg-zinc-100 dark:text-zinc-200 dark:hover:bg-zinc-800',
+                      )}
+                      aria-pressed={cityViewMode === option.value}
+                    >
+                      {option.label}
+                    </button>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
           {hasResults ? (
             <div className="space-y-10">
-              {visibleGroups.map(({ continent, cities }, index) => (
-                <section key={continent} className="space-y-6">
-                  <div>
-                    <h3 className="mb-4 text-xl font-semibold text-zinc-800 dark:text-zinc-100">{continent}</h3>
-                    <div className="mx-auto grid max-w-full grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-                      {cities.map((city) => {
-                        const rotationClass = ''
-                        cardIndex += 1
-                        return (
-                          <Transition
-                            key={city.link}
-                            as="div"
-                            appear
-                            enterFrom="opacity-0 translate-y-4"
-                            enter="transition-all ease-out duration-200"
-                            leaveFrom="opacity-100 translate-y-0"
-                            leave="transition-all ease-in duration-200"
-                            show
-                          >
-                            <CityCard city={city} className={rotationClass} />
-                          </Transition>
-                        )
-                      })}
-                    </div>
-                  </div>
-                  {index < visibleGroups.length - 1 && (
-                    <footer>
-                      <hr className="border-t border-zinc-200 dark:border-[#18181b]" />
-                    </footer>
-                  )}
-                </section>
-              ))}
+              {visibleGroups.map(({ continent, cities }, index) => {
+                const cityCount = cities.length
+                const cityGrid = renderCityCollection(cities)
+
+                const isCollapsible = COLLAPSIBLE_CONTINENTS.has(continent)
+                const sectionId = getContinentSectionId(continent)
+
+                return (
+                  <Fragment key={continent}>
+                    {isCollapsible ? (
+                      <CollapsibleSection
+                        sectionId={sectionId}
+                        title={`${continent} · ${cityCount} ${cityCount === 1 ? 'City' : 'Cities'}`}
+                        titleAs="h3"
+                        className="space-y-6"
+                        headingClassName="text-xl font-semibold text-zinc-800 dark:text-zinc-100"
+                        contentClassName="mt-4"
+                      >
+                        {cityGrid}
+                      </CollapsibleSection>
+                    ) : (
+                      <section className="space-y-6">
+                        <div>
+                          <h3 className="mb-4 text-xl font-semibold text-zinc-800 dark:text-zinc-100">
+                            {continent}{' '}
+                            <span className="text-base font-normal text-zinc-500 dark:text-zinc-400">
+                              · {cityCount} {cityCount === 1 ? 'City' : 'Cities'}
+                            </span>
+                          </h3>
+                          {cityGrid}
+                        </div>
+                      </section>
+                    )}
+                    {index < visibleGroups.length - 1 && (
+                      <footer>
+                        <hr className="border-t border-zinc-200 dark:border-[#18181b]" />
+                      </footer>
+                    )}
+                  </Fragment>
+                )
+              })}
             </div>
           ) : (
             <EmptyState />
@@ -601,13 +815,67 @@ const SearcheableCitiesList = () => {
           onSearchChange={setAchievementSearch}
           sortOption={achievementSort}
           onSortChange={setAchievementSort}
+          totalCount={achievementCatalog.length}
+          totalUnlocked={unlockedSlugs.length}
         />
       ) : activeTab === 'updateLog' ? (
         <UpdateLogPanel state={updateLogState} onRetry={handleUpdateLogRetry} />
-      ) : (
+      ) : activeTab === 'credits' ? (
         <div className="flex justify-center">
           <CreditsContent showBackLink={false} />
         </div>
+      ) : activeTab === 'account' ? (
+        <div className="mx-auto w-full max-w-3xl">
+          <AccountDashboard />
+        </div>
+      ) : activeTab === 'testimonials' ? (
+        <div className="space-y-6">
+          <h3 className="text-3xl font-bold text-zinc-900 dark:text-zinc-50">
+            What people say about Metro Memory
+          </h3>
+          {testimonialsContent ?? (
+            <MissingTabContent message="No testimonials available right now." />
+          )}
+        </div>
+      ) : activeTab === 'settings' ? (
+        <SettingsPanel />
+      ) : activeTab === 'press' ? (
+        <div className="space-y-6">
+          <h3 className="text-3xl font-bold text-zinc-900 dark:text-zinc-50">
+            They talked about us
+          </h3>
+          {pressContent ?? (
+            <MissingTabContent message="No press mentions available right now." />
+          )}
+        </div>
+      ) : (
+        <section className="rounded-2xl border border-zinc-200 bg-white p-6 text-sm leading-relaxed text-zinc-700 shadow-sm dark:border-[#18181b] dark:bg-zinc-900 dark:text-zinc-300">
+          <h3 className="text-2xl font-semibold text-zinc-900 dark:text-zinc-50">
+            Privacy &amp; Security
+          </h3>
+          <p className="mt-3">
+            Metro Memory now supports accounts so you can sync progress and achievements across devices.
+            Here&apos;s how your data is handled:
+          </p>
+          <ul className="mt-3 list-disc space-y-2 pl-6">
+            <li>
+              <strong>Passwords</strong> are hashed with bcrypt before they ever touch the database. We never
+              store or log plain-text passwords.
+            </li>
+            <li>
+              <strong>Sessions</strong> are maintained with short-lived, server-side tokens. Logging out or
+              resetting your password revokes them immediately.
+            </li>
+            <li>
+              <strong>Progress data</strong> (found stations + timestamps) is only saved to your account when
+              you opt in by creating one. Guests continue to use local browser storage.
+            </li>
+            <li>
+              <strong>Email verification and password resets</strong> are required during sign up to prevent
+              abuse and to keep your achievements tied to your inbox.
+            </li>
+          </ul>
+        </section>
       )}
     </div>
   )
@@ -620,6 +888,8 @@ const Achievements = ({
   onSearchChange,
   sortOption,
   onSortChange,
+  totalCount,
+  totalUnlocked,
 }: {
   items: AchievementMeta[]
   unlockedSlugs: string[]
@@ -627,6 +897,8 @@ const Achievements = ({
   onSearchChange: (value: string) => void
   sortOption: AchievementSortOption
   onSortChange: (value: AchievementSortOption) => void
+  totalCount: number
+  totalUnlocked: number
 }) => {
   const unlockedSet = useMemo(() => new Set(unlockedSlugs), [unlockedSlugs])
   const hasResults = items.length > 0
@@ -640,7 +912,7 @@ const Achievements = ({
             onChange={(event) => onSearchChange(event.target.value)}
             type="text"
             placeholder="Search achievements..."
-            className="block w-full rounded-full border-0 px-10 py-3 text-base text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 dark:bg-zinc-900 dark:text-zinc-100 dark:ring-zinc-700 dark:placeholder:text-zinc-500 dark:focus:ring-indigo-400"
+            className="block w-full rounded-full border-0 px-10 py-3 text-base text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-[var(--accent-600)] dark:bg-zinc-900 dark:text-zinc-100 dark:ring-zinc-700 dark:placeholder:text-zinc-500 dark:focus:ring-[var(--accent-400)]"
           />
           <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3 text-gray-400 dark:text-zinc-400">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
@@ -659,7 +931,7 @@ const Achievements = ({
             id="achievement-sort"
             value={sortOption}
             onChange={(event) => onSortChange(event.target.value as AchievementSortOption)}
-            className="w-full rounded-full border-0 bg-white px-4 py-3 text-sm font-medium text-gray-700 ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-indigo-600 dark:bg-zinc-900 dark:text-zinc-100 dark:ring-zinc-700 dark:focus:ring-indigo-400"
+            className="w-full rounded-full border-0 bg-white px-4 py-3 text-sm font-medium text-gray-700 ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-[var(--accent-600)] dark:bg-zinc-900 dark:text-zinc-100 dark:ring-zinc-700 dark:focus:ring-[var(--accent-400)]"
           >
             {ACHIEVEMENT_SORT_OPTIONS.map((option) => (
               <option key={option.value} value={option.value}>
@@ -668,6 +940,14 @@ const Achievements = ({
             ))}
           </select>
         </div>
+      </div>
+      <div className="flex flex-col gap-1 text-sm font-semibold md:flex-row md:items-center md:gap-6">
+        <span className="text-emerald-600">
+          Unlocked achievements: {totalUnlocked} / {totalCount}
+        </span>
+        <span className="text-red-500">
+          Locked achievements: {Math.max(totalCount - totalUnlocked, 0)}
+        </span>
       </div>
 
       {!hasResults ? (
@@ -681,22 +961,34 @@ const Achievements = ({
             <div
               key={meta.slug}
               className={classNames(
-                'flex items-start justify-between rounded-2xl border p-4 shadow-sm',
+                'flex flex-col gap-4 rounded-2xl border p-4 shadow-sm sm:flex-row sm:items-center sm:justify-between',
                 isUnlocked
                   ? 'border-emerald-200 bg-white dark:border-emerald-600/60 dark:bg-zinc-900'
                   : 'border-zinc-200 bg-zinc-50 text-zinc-400 dark:border-[#18181b] dark:bg-zinc-900/40 dark:text-zinc-500',
               )}
             >
-              <div>
-                <h4
-                  className={classNames('text-lg font-semibold', isUnlocked ? 'text-zinc-800 dark:text-zinc-100' : '')}
-                >
-                  {meta.title}
-                </h4>
-                <p className="text-sm text-zinc-600 dark:text-zinc-400">{meta.description}</p>
-                <p className="mt-1 text-xs uppercase tracking-wide text-zinc-400 dark:text-zinc-500">
-                  {meta.cityName} • {meta.continent}
-                </p>
+              <div className="flex flex-1 items-stretch gap-4">
+                <AchievementIcon
+                  slug={meta.slug}
+                  cityName={meta.cityName}
+                  className="h-full min-h-[4.5rem] w-20 p-1"
+                  sizes="80px"
+                  iconSrc={meta.iconSrc}
+                />
+                <div>
+                  <h4
+                    className={classNames(
+                      'text-lg font-semibold',
+                      isUnlocked ? 'text-zinc-800 dark:text-zinc-100' : '',
+                    )}
+                  >
+                    {meta.title}
+                  </h4>
+                  <p className="text-sm text-zinc-600 dark:text-zinc-400">{meta.description}</p>
+                  <p className="mt-1 text-xs uppercase tracking-wide text-zinc-400 dark:text-zinc-500">
+                    {meta.cityName} • {meta.continent}
+                  </p>
+                </div>
               </div>
               <span
                 className={classNames(
@@ -721,24 +1013,6 @@ const UpdateLogPanel = ({
   state: UpdateLogState
   onRetry: () => void
 }) => {
-  const [showEmptyState, setShowEmptyState] = useState(false)
-
-  useEffect(() => {
-    let timer: ReturnType<typeof setTimeout> | undefined
-    if (state.status === 'success' && state.entries.length === 0) {
-      setShowEmptyState(false)
-      timer = setTimeout(() => setShowEmptyState(true), 60_000)
-    } else {
-      setShowEmptyState(false)
-    }
-
-    return () => {
-      if (timer) {
-        clearTimeout(timer)
-      }
-    }
-  }, [state.entries.length, state.status])
-
   if (state.status === 'loading' || state.status === 'idle') {
     return (
       <div className="rounded-2xl border border-dashed border-zinc-300 p-6 text-center text-sm text-zinc-500 dark:border-[#18181b] dark:text-zinc-400">
@@ -765,13 +1039,6 @@ const UpdateLogPanel = ({
   }
 
   if (state.status === 'success' && state.entries.length === 0) {
-    if (!showEmptyState) {
-      return (
-        <div className="rounded-2xl border border-dashed border-zinc-300 p-6 text-center text-sm text-zinc-500 dark:border-[#18181b] dark:text-zinc-400">
-          Checking for new updates…
-        </div>
-      )
-    }
     return (
       <div className="rounded-2xl border border-dashed border-zinc-300 p-6 text-center text-sm text-zinc-500 dark:border-[#18181b] dark:text-zinc-400">
         No update log(s) found.
@@ -792,14 +1059,14 @@ const UpdateLogPanel = ({
           className="rounded-2xl border border-zinc-200 bg-white p-4 shadow-sm dark:border-[#18181b] dark:bg-zinc-900"
         >
           <div className="space-y-1">
-            <a
-              href={entry.url}
-              target="_blank"
-              rel="noreferrer"
-              className="text-base font-semibold text-indigo-600 underline decoration-indigo-300 underline-offset-4 transition hover:decoration-indigo-500 dark:text-indigo-300 dark:decoration-indigo-500 dark:hover:decoration-indigo-400"
-            >
-              {entry.message}
-            </a>
+          <a
+            href={entry.url}
+            target="_blank"
+            rel="noreferrer"
+            className="text-base font-semibold text-[var(--accent-600)] underline decoration-[var(--accent-300)] underline-offset-4 transition hover:decoration-[var(--accent-400)] dark:text-[var(--accent-300)] dark:decoration-[var(--accent-400)] dark:hover:decoration-[var(--accent-300)]"
+          >
+            {entry.message}
+          </a>
             <p className="text-sm text-zinc-500 dark:text-zinc-400">
               {entry.author} • {formatUpdateDate(entry.date)}
             </p>
@@ -812,7 +1079,7 @@ const UpdateLogPanel = ({
 }
 
 const EmptyState = () => (
-  <div className="w-full rounded bg-indigo-700 px-12 py-6 text-white">
+  <div className="w-full rounded bg-[var(--accent-700)] px-12 py-6 text-white">
     <h3 className="mb-2 text-lg font-medium">No results!</h3>
     <p>
       Want to play in your city? Shoot me a message on 𝕏 <a href="https://x.com/_benjamintd">@_benjamintd</a>
@@ -820,15 +1087,22 @@ const EmptyState = () => (
   </div>
 )
 
+const MissingTabContent = ({ message }: { message: string }) => (
+  <div className="rounded-2xl border border-dashed border-zinc-300 p-6 text-center text-sm text-zinc-500 dark:border-[#18181b] dark:text-zinc-400">
+    {message}
+  </div>
+)
+
 const SuggestCity = () => (
   <p className="mt-6">
-    If you want the game to be available in your city, send me a message on 𝕏{' '}
-    <a className="font-medium hover:underline" href="https://twitter.com/_benjamintd">
-      @_benjamintd
-    </a>
-    , or contribute on{' '}
-    <a className="font-medium hover:underline" href="https://github.com/benjamintd/metro-memory.com">
-      Github
+    Want the game in your city?{' '}
+    <a
+      className="font-medium text-[var(--accent-600)] underline decoration-[var(--accent-300)] underline-offset-4 transition hover:decoration-[var(--accent-400)] dark:text-[var(--accent-300)] dark:decoration-[var(--accent-400)] dark:hover:decoration-[var(--accent-300)]"
+      href="https://github.com/norman-mei/metro-memory/pulls"
+      target="_blank"
+      rel="noreferrer"
+    >
+      Create a pull request on GitHub
     </a>
     .
   </p>
@@ -883,3 +1157,11 @@ const formatUpdateDate = (iso?: string) => {
 }
 
 export default SearcheableCitiesList
+type CityViewMode = 'comfortable' | 'compact' | 'cover' | 'list'
+
+const CITY_VIEW_OPTIONS: Array<{ value: CityViewMode; label: string }> = [
+  { value: 'comfortable', label: 'Comfortable' },
+  { value: 'compact', label: 'Compact' },
+  { value: 'cover', label: 'Cover' },
+  { value: 'list', label: 'List' },
+]

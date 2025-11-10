@@ -1,0 +1,11 @@
+{
+  "tucsonSunLink": {
+    "name": "Sun Link (Tucson Streetcar)",
+    "color": "#0000F2",
+    "backgroundColor": "#00009E",
+    "progressOutlineColor": "#4D4DFF",
+    "textColor": "#FFFFFF",
+    "order": 0,
+    "image": "tucson"
+  }
+}

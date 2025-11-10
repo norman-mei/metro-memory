@@ -3,6 +3,7 @@
     "name": "Blue Line",
     "color": "#009EDE",
     "backgroundColor": "#004F6F",
+    "progressOutlineColor": "#38C6FF",
     "textColor": "#FFFFFF",
     "order": 0
   },
@@ -10,6 +11,7 @@
     "name": "Brown Line",
     "color": "#633619",
     "backgroundColor": "#311B0D",
+    "progressOutlineColor": "#8B4C23",
     "textColor": "#FFFFFF",
     "order": 1
   },
@@ -17,6 +19,7 @@
     "name": "Green Line",
     "color": "#00A747",
     "backgroundColor": "#005324",
+    "progressOutlineColor": "#00EA63",
     "textColor": "#FFFFFF",
     "order": 2
   },
@@ -24,6 +27,7 @@
     "name": "Orange Line",
     "color": "#F57832",
     "backgroundColor": "#8D3707",
+    "progressOutlineColor": "#FAC2A3",
     "textColor": "#FFFFFF",
     "order": 3
   },
@@ -31,6 +35,7 @@
     "name": "Pink Line",
     "color": "#E480A7",
     "backgroundColor": "#931F4C",
+    "progressOutlineColor": "#FDF5F8",
     "textColor": "#FFFFFF",
     "order": 4
   },
@@ -38,6 +43,7 @@
     "name": "Purple Line",
     "color": "#522398",
     "backgroundColor": "#29124C",
+    "progressOutlineColor": "#7435D1",
     "textColor": "#FFFFFF",
     "order": 5
   },
@@ -45,6 +51,7 @@
     "name": "Red Line",
     "color": "#E72137",
     "backgroundColor": "#770D19",
+    "progressOutlineColor": "#F1808D",
     "textColor": "#FFFFFF",
     "order": 6
   },
@@ -52,104 +59,119 @@
     "name": "Yellow Line",
     "color": "#EABE01",
     "backgroundColor": "#755F00",
+    "progressOutlineColor": "#FEDC4B",
     "textColor": "#FFFFFF",
     "order": 7
   },
   "Metra_BNSF": {
     "name": "BNSF",
-    "color": "#43b02a",
+    "color": "#43B02A",
     "backgroundColor": "#FFFFFF",
-    "textColor": "#FFFFFF",
+    "progressOutlineColor": "#71D85A",
+    "textColor": "#111827",
     "order": 8
   },
   "Metra_HC": {
     "name": "Heritage Corridor",
     "color": "#862041",
     "backgroundColor": "#431021",
+    "progressOutlineColor": "#BC2D5B",
     "textColor": "#FFFFFF",
     "order": 9
   },
   "Metra_ME": {
     "name": "Metra Electric (University Park)",
-    "color": "#fe5000",
+    "color": "#FE5000",
     "backgroundColor": "#7F2800",
+    "progressOutlineColor": "#FF9565",
     "textColor": "#FFFFFF",
     "order": 10
   },
   "Metra_ME_BI": {
     "name": "Metra Electric (Blue Island Branch)",
-    "color": "#c5e9ea",
+    "color": "#C5E9EA",
     "backgroundColor": "#399B9E",
+    "progressOutlineColor": "#FFFFFF",
     "textColor": "#111827",
     "order": 11
   },
   "Metra_ME_SC": {
     "name": "Metra Electric (South Chicago Branch)",
-    "color": "#dfdcd4",
+    "color": "#DFDCD4",
     "backgroundColor": "#7D745D",
+    "progressOutlineColor": "#FFFFFF",
     "textColor": "#111827",
     "order": 12
   },
   "Metra_MDW": {
     "name": "Milwaukee District West",
-    "color": "#f1be48",
+    "color": "#F1BE48",
     "backgroundColor": "#91690B",
+    "progressOutlineColor": "#FAE7BC",
     "textColor": "#111827",
     "order": 13
   },
   "Metra_MDN": {
     "name": "Milwaukee District North",
-    "color": "#e57200",
+    "color": "#E57200",
     "backgroundColor": "#FFFFFF",
-    "textColor": "#FFFFFF",
+    "progressOutlineColor": "#FFA042",
+    "textColor": "#111827",
     "order": 14
   },
   "Metra_NCS": {
     "name": "North Central Service",
-    "color": "#9063cd",
+    "color": "#9063CD",
     "backgroundColor": "#462573",
+    "progressOutlineColor": "#D2BFEB",
     "textColor": "#FFFFFF",
     "order": 15
   },
   "Metra_RI": {
     "name": "Rock Island District",
-    "color": "#da291c",
+    "color": "#DA291C",
     "backgroundColor": "#6D140E",
+    "progressOutlineColor": "#EC756C",
     "textColor": "#FFFFFF",
     "order": 16
   },
   "Metra_RI_Bev": {
     "name": "Rock Island (Beverly Branch)",
-    "color": "#717c7d",
+    "color": "#717C7D",
     "backgroundColor": "#383E3F",
+    "progressOutlineColor": "#A2AAAB",
     "textColor": "#FFFFFF",
     "order": 17
   },
   "Metra_SWS": {
     "name": "SouthWest Service",
-    "color": "#005eb8",
+    "color": "#005EB8",
     "backgroundColor": "#002F5C",
+    "progressOutlineColor": "#0384FF",
     "textColor": "#FFFFFF",
     "order": 18
   },
   "Metra_UPN": {
     "name": "Union Pacific North",
-    "color": "#00843d",
+    "color": "#00843D",
     "backgroundColor": "#00421F",
+    "progressOutlineColor": "#00B955",
     "textColor": "#FFFFFF",
     "order": 19
   },
   "Metra_UPNW": {
     "name": "Union Pacific Northwest",
-    "color": "#fedd00",
+    "color": "#FEDD00",
     "backgroundColor": "#7F6F00",
+    "progressOutlineColor": "#FFEB65",
     "textColor": "#111827",
     "order": 20
   },
   "Metra_UPW": {
     "name": "Union Pacific West",
-    "color": "#ffb1bb",
+    "color": "#FFB1BB",
     "backgroundColor": "#D8001C",
+    "progressOutlineColor": "#FFFFFF",
     "textColor": "#111827",
     "order": 21
   },
@@ -157,6 +179,7 @@
     "name": "South Shore Line (SSL)",
     "color": "#6A1311",
     "backgroundColor": "#350908",
+    "progressOutlineColor": "#941B18",
     "textColor": "#FFFFFF",
     "order": 22
   },
@@ -164,7 +187,25 @@
     "name": "Monon Corridor Line (MCL)",
     "color": "#DC1A21",
     "backgroundColor": "#6E0D11",
+    "progressOutlineColor": "#ED6B70",
     "textColor": "#FFFFFF",
     "order": 23
+  },
+  "ChicagoATS": {
+    "name": "Airport Transit System (ATS)",
+    "color": "#EB0C14",
+    "backgroundColor": "#88070C",
+    "progressOutlineColor": "#FF6A6F",
+    "textColor": "#FFFFFF",
+    "order": 24
+  },
+  "kenoshaStreetcar": {
+    "name": "Kenosha Streetcar",
+    "color": "#00349E",
+    "backgroundColor": "#001F62",
+    "progressOutlineColor": "#5584FF",
+    "textColor": "#FFFFFF",
+    "order": 25,
+    "image": "kenoshaSC"
   }
 }

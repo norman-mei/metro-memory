@@ -1,0 +1,42 @@
+{
+  "UTARed": {
+    "name": "TRAX Red Line",
+    "color": "#CE112D",
+    "backgroundColor": "#78000C",
+    "progressOutlineColor": "#CE112D",
+    "textColor": "#FFFFFF",
+    "order": 0
+  },
+  "UTAGreen": {
+    "name": "TRAX Green Line",
+    "color": "#6AC14C",
+    "backgroundColor": "#2F7A25",
+    "progressOutlineColor": "#6AC14C",
+    "textColor": "#0F3014",
+    "order": 1
+  },
+  "UTABlue": {
+    "name": "TRAX Blue Line",
+    "color": "#004B98",
+    "backgroundColor": "#022C5A",
+    "progressOutlineColor": "#004B98",
+    "textColor": "#FFFFFF",
+    "order": 2
+  },
+  "UTASLine": {
+    "name": "S Line Streetcar",
+    "color": "#044565",
+    "backgroundColor": "#022E3E",
+    "progressOutlineColor": "#044565",
+    "textColor": "#FFFFFF",
+    "order": 3
+  },
+  "UTAFR": {
+    "name": "FrontRunner",
+    "color": "#C02ABA",
+    "backgroundColor": "#022E3E",
+    "progressOutlineColor": "#C02ABA",
+    "textColor": "#FFFFFF",
+    "order": 4
+  }
+}

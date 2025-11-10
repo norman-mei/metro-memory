@@ -134,7 +134,7 @@
       },
       "properties": {
         "line": "RD",
-        "color": "#BF1939",
+        "color": "#E21936",
         "order": 0
       }
     },
@@ -271,7 +271,7 @@
       },
       "properties": {
         "line": "SV",
-        "color": "#A2A4A1",
+        "color": "#7C7C7C",
         "order": 1
       }
     },
@@ -380,8 +380,29 @@
       },
       "properties": {
         "line": "BL",
-        "color": "#0096D8",
+        "color": "#0076BF",
         "order": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -80.25496382887232,
+            40.496007310486476
+          ],
+          [
+            -80.24594459901118,
+            40.49578269825295
+          ]
+        ]
+      },
+      "properties": {
+        "line": "pittsburghAPM",
+        "color": "#D4687C",
+        "order": 3
       }
     }
   ]

@@ -1,23 +1,34 @@
 {
   "RD": {
     "name": "Red Line",
-    "color": "#BF1939",
-    "backgroundColor": "#600C1D",
+    "color": "#E21936",
+    "backgroundColor": "#980F24",
     "textColor": "#FFFFFF",
-    "order": 0
+    "order": 0,
+    "progressOutlineColor": "#E21936"
   },
   "SV": {
     "name": "Silver Line",
-    "color": "#A2A4A1",
-    "backgroundColor": "#515350",
-    "textColor": "#000000",
-    "order": 1
+    "color": "#7C7C7C",
+    "backgroundColor": "#4F4F4F",
+    "textColor": "#FFFFFF",
+    "order": 1,
+    "progressOutlineColor": "#7C7C7C"
   },
   "BL": {
     "name": "Blue Line",
-    "color": "#0096D8",
-    "backgroundColor": "#004B6C",
+    "color": "#0076BF",
+    "backgroundColor": "#00426C",
     "textColor": "#FFFFFF",
-    "order": 2
+    "order": 2,
+    "progressOutlineColor": "#0076BF"
+  },
+  "pittsburghAPM": {
+    "name": "Pittsburgh Airport Tram",
+    "color": "#D4687C",
+    "backgroundColor": "#8C3247",
+    "progressOutlineColor": "#D4687C",
+    "textColor": "#FFFFFF",
+    "order": 3
   }
 }

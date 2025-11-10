@@ -17,6 +17,19 @@ export const LINE_GROUPS: LineGroup[] = [
       },
     ],
   },
+  {
+    items: [{ type: 'separator' }],
+  },
+  {
+    title: 'Clark County Department of Aviation (CCDA)',
+    items: [
+      {
+        type: 'lines',
+        title: 'Harry Reid International Airport People Movers',
+        lines: ['LVGreen', 'LVBlue', 'LVRed'],
+      },
+    ],
+  },
 ]
 
 export const METADATA: Metadata = {

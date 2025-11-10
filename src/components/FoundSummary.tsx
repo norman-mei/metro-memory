@@ -8,12 +8,16 @@ import { MaximizeIcon } from './MaximizeIcon'
 import { MinimizeIcon } from './MinimizeIcon'
 import useTranslation from '@/hooks/useTranslation'
 import { useConfig } from '@/lib/configContext'
+import { useSettings } from '@/context/SettingsContext'
+import { getCompletionColor } from '@/lib/progressColors'
 
 const FoundSummary = ({
   className,
   foundStationsPerLine,
   stationsPerLine,
   foundProportion,
+  cityCompletionConfettiSeen,
+  onCityCompletionConfettiSeen,
   minimizable = false,
   defaultMinimized = false,
 }: {
@@ -21,15 +25,25 @@ const FoundSummary = ({
   foundStationsPerLine: Record<string, number>
   stationsPerLine: Record<string, number>
   foundProportion: number
+  cityCompletionConfettiSeen: boolean
+  onCityCompletionConfettiSeen: () => void
   minimizable?: boolean
   defaultMinimized?: boolean
 }) => {
   const { t } = useTranslation()
   const { LINES } = useConfig()
+  const { settings } = useSettings()
   const previousFound = usePrevious(foundStationsPerLine)
   const [minimized, setMinimized] = useState<boolean>(defaultMinimized)
+  const percentColor = getCompletionColor(foundProportion || 0)
 
   useEffect(() => {
+    if (!settings.confettiEnabled) {
+      return
+    }
+    if (settings.stopConfettiAfterCompletion && cityCompletionConfettiSeen) {
+      return
+    }
     // confetti when new line is 100%
     const newFoundLines = Object.keys(foundStationsPerLine).filter(
       (line) =>
@@ -58,9 +72,23 @@ const FoundSummary = ({
         })
       }
 
-      makeConfetti()
+      void makeConfetti()
+
+      if (foundProportion >= 1 && !cityCompletionConfettiSeen) {
+        onCityCompletionConfettiSeen()
+      }
     }
-  }, [LINES, previousFound, foundStationsPerLine, stationsPerLine])
+  }, [
+    LINES,
+    previousFound,
+    foundStationsPerLine,
+    stationsPerLine,
+    settings.confettiEnabled,
+    settings.stopConfettiAfterCompletion,
+    cityCompletionConfettiSeen,
+    foundProportion,
+    onCityCompletionConfettiSeen,
+  ])
 
   return (
     <div
@@ -70,12 +98,13 @@ const FoundSummary = ({
     >
       <div className="mb-2">
         <p className="mb-2 text-zinc-900 dark:text-zinc-100">
-          <span className="text-lg font-bold @md:text-2xl">
+          <span
+            className="text-lg font-bold @md:text-2xl"
+            style={{ color: percentColor }}
+          >
             {((foundProportion || 0) * 100).toFixed(2)}
+            <span className="ml-1 text-lg font-semibold @md:text-xl">%</span>
           </span>{' '}
-          <span className="mr-2 text-lg @md:text-xl">
-            %
-          </span>
           <span className="text-sm text-zinc-600 dark:text-zinc-200">
             {t('stationsFound')}
           </span>

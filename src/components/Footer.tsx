@@ -27,7 +27,7 @@ export function Footer() {
           <ContainerInner>
             <div className="flex flex-col items-center justify-between gap-6 sm:flex-row">
               <p className="text-sm text-zinc-400 dark:text-zinc-500">
-                &copy; {new Date().getFullYear()} benjamintd. All rights
+                &copy; {new Date().getFullYear()} Norman Mei. All rights
                 reserved.
               </p>
             </div>

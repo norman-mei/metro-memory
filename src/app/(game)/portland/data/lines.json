@@ -1,0 +1,74 @@
+{
+  "MAXBlue": {
+    "name": "MAX Blue Line",
+    "color": "#0069AA",
+    "backgroundColor": "#00436E",
+    "progressOutlineColor": "#4FB6FF",
+    "textColor": "#FFFFFF",
+    "order": 0
+  },
+  "MAXRed": {
+    "name": "MAX Red Line",
+    "color": "#D11241",
+    "backgroundColor": "#8B0C2C",
+    "progressOutlineColor": "#FF628E",
+    "textColor": "#FFFFFF",
+    "order": 1
+  },
+  "MAXYellow": {
+    "name": "MAX Yellow Line",
+    "color": "#FFD800",
+    "backgroundColor": "#A68000",
+    "progressOutlineColor": "#786A00",
+    "textColor": "#1F1F1F",
+    "order": 2
+  },
+  "MAXGreen": {
+    "name": "MAX Green Line",
+    "color": "#008851",
+    "backgroundColor": "#00522F",
+    "progressOutlineColor": "#3DD797",
+    "textColor": "#FFFFFF",
+    "order": 3
+  },
+  "MAXOrange": {
+    "name": "MAX Orange Line",
+    "color": "#D15D0D",
+    "backgroundColor": "#8B3D05",
+    "progressOutlineColor": "#FF9A50",
+    "textColor": "#FFFFFF",
+    "order": 4
+  },
+  "PortlandA": {
+    "name": "Portland Streetcar A Loop",
+    "color": "#DE2E94",
+    "backgroundColor": "#92185F",
+    "progressOutlineColor": "#FF7CC9",
+    "textColor": "#FFFFFF",
+    "order": 5
+  },
+  "PortlandB": {
+    "name": "Portland Streetcar B Loop",
+    "color": "#008AAD",
+    "backgroundColor": "#00556D",
+    "progressOutlineColor": "#4DD1F5",
+    "textColor": "#FFFFFF",
+    "order": 6
+  },
+  "PortlandNS": {
+    "name": "Portland Streetcar North/South Line",
+    "color": "#A1CF59",
+    "backgroundColor": "#5E8030",
+    "progressOutlineColor": "#DFFAA3",
+    "textColor": "#1F1F1F",
+    "order": 7
+  },
+  "PortlandWES": {
+    "name": "WES Commuter Rail",
+    "color": "#6D6E71",
+    "backgroundColor": "#3C3D3F",
+    "progressOutlineColor": "#A5A7AA",
+    "textColor": "#FFFFFF",
+    "order": 8
+  }
+}

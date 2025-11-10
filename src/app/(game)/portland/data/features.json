@@ -1,0 +1,4077 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6619336,
+          45.5169658
+        ]
+      },
+      "properties": {
+        "name": "SE M L King & Morrison",
+        "line": "PortlandA",
+        "id": 0,
+        "alternate_names": [
+          "SE MLK & Morrison"
+        ]
+      },
+      "id": 0
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6678516,
+          45.5301921
+        ]
+      },
+      "properties": {
+        "name": "Interstate/Rose Quarter",
+        "line": "MAXYellow",
+        "id": 1
+      },
+      "id": 1
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6821032,
+          45.5771147
+        ]
+      },
+      "properties": {
+        "name": "N Lombard TC",
+        "line": "MAXYellow",
+        "id": 2
+      },
+      "id": 2
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6618206,
+          45.5273822
+        ]
+      },
+      "properties": {
+        "name": "Oregon Convention Center",
+        "line": "PortlandA",
+        "id": 3
+      },
+      "id": 3
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6618558,
+          45.5233734
+        ]
+      },
+      "properties": {
+        "name": "NE M L King & Burnside",
+        "line": "PortlandA",
+        "id": 4,
+        "alternate_names": [
+          "NE MLK & Burnside"
+        ]
+      },
+      "id": 4
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6618883,
+          45.5191075
+        ]
+      },
+      "properties": {
+        "name": "SE M L King & Stark",
+        "line": "PortlandA",
+        "id": 5,
+        "alternate_names": [
+          "SE MLK & Stark"
+        ]
+      },
+      "id": 5
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6619161,
+          45.5146743
+        ]
+      },
+      "properties": {
+        "name": "SE M L King & Taylor",
+        "line": "PortlandA",
+        "id": 6,
+        "alternate_names": [
+          "SE MLK & Taylor"
+        ]
+      },
+      "id": 6
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6822389,
+          45.5626636
+        ]
+      },
+      "properties": {
+        "name": "N Killingsworth St",
+        "line": "MAXYellow",
+        "id": 7
+      },
+      "id": 7
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.660682,
+          45.5149995
+        ]
+      },
+      "properties": {
+        "name": "SE Grand & Taylor",
+        "line": "PortlandB",
+        "id": 8
+      },
+      "id": 8
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6898629,
+          45.5213579
+        ]
+      },
+      "properties": {
+        "name": "Providence Park EB",
+        "line": "MAXBlue",
+        "id": 9
+      },
+      "id": 9
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6898629,
+          45.5213579
+        ]
+      },
+      "properties": {
+        "name": "Providence Park EB",
+        "line": "MAXRed",
+        "id": 10
+      },
+      "id": 10
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6898096,
+          45.5218035
+        ]
+      },
+      "properties": {
+        "name": "Providence Park WB",
+        "line": "MAXBlue",
+        "id": 11
+      },
+      "id": 11
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6898096,
+          45.5218035
+        ]
+      },
+      "properties": {
+        "name": "Providence Park WB",
+        "line": "MAXRed",
+        "id": 12
+      },
+      "id": 12
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6532786,
+          45.502793
+        ]
+      },
+      "properties": {
+        "name": "Clinton St/SE 12th Ave",
+        "line": "MAXOrange",
+        "id": 13
+      },
+      "id": 13
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6481884,
+          45.497849
+        ]
+      },
+      "properties": {
+        "name": "SE 17th Ave & Rhine St",
+        "line": "MAXOrange",
+        "id": 14
+      },
+      "id": 14
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.8330965,
+          45.5004398
+        ]
+      },
+      "properties": {
+        "name": "Beaverton Creek",
+        "line": "MAXBlue",
+        "id": 15
+      },
+      "id": 15
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.8330965,
+          45.5004398
+        ]
+      },
+      "properties": {
+        "name": "Beaverton Creek",
+        "line": "MAXRed",
+        "id": 16
+      },
+      "id": 16
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6765726,
+          45.5089
+        ]
+      },
+      "properties": {
+        "name": "SW Harrison Street",
+        "line": "PortlandNS",
+        "id": 17
+      },
+      "id": 17
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6765726,
+          45.5089
+        ]
+      },
+      "properties": {
+        "name": "SW Harrison Street",
+        "line": "PortlandA",
+        "id": 18
+      },
+      "id": 18
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6765726,
+          45.5089
+        ]
+      },
+      "properties": {
+        "name": "SW Harrison Street",
+        "line": "PortlandB",
+        "id": 19
+      },
+      "id": 19
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6619687,
+          45.5125193
+        ]
+      },
+      "properties": {
+        "name": "SE M L King & Hawthorne",
+        "line": "PortlandA",
+        "id": 20
+      },
+      "id": 20
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6856445,
+          45.5961385
+        ]
+      },
+      "properties": {
+        "name": "Delta Park/Vanport",
+        "line": "MAXYellow",
+        "id": 21
+      },
+      "id": 21
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.764466,
+          45.3836701
+        ]
+      },
+      "properties": {
+        "name": "Tualatin",
+        "line": "PortlandWES",
+        "id": 22
+      },
+      "id": 22
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.7752155,
+          45.3111673
+        ]
+      },
+      "properties": {
+        "name": "Wilsonville",
+        "line": "PortlandWES",
+        "id": 23
+      },
+      "id": 23
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6719565,
+          45.4961917
+        ]
+      },
+      "properties": {
+        "name": "SW Moody & Gaines",
+        "line": "PortlandNS",
+        "id": 24
+      },
+      "id": 24
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6713904,
+          45.4938999
+        ]
+      },
+      "properties": {
+        "name": "SW Lowell & Bond",
+        "line": "PortlandNS",
+        "id": 25
+      },
+      "id": 25
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.7870794,
+          45.4576214
+        ]
+      },
+      "properties": {
+        "name": "Hall/Nimbus",
+        "line": "PortlandWES",
+        "id": 26
+      },
+      "id": 26
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.769793,
+          45.4302259
+        ]
+      },
+      "properties": {
+        "name": "Tigard TC",
+        "line": "PortlandWES",
+        "id": 27
+      },
+      "id": 27
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6718394,
+          45.4994048
+        ]
+      },
+      "properties": {
+        "name": "SW Moody & Gibbs",
+        "line": "PortlandNS",
+        "id": 28
+      },
+      "id": 28
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6833321,
+          45.5315425
+        ]
+      },
+      "properties": {
+        "name": "NW 12th & Northrup",
+        "line": "PortlandNS",
+        "id": 29
+      },
+      "id": 29
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6964593,
+          45.5313143
+        ]
+      },
+      "properties": {
+        "name": "NW 22nd & Northrup",
+        "line": "PortlandNS",
+        "id": 30
+      },
+      "id": 30
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6839277,
+          45.5137093
+        ]
+      },
+      "properties": {
+        "name": "SW Park & Market",
+        "line": "PortlandNS",
+        "id": 31
+      },
+      "id": 31
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6839277,
+          45.5137093
+        ]
+      },
+      "properties": {
+        "name": "SW Park & Market",
+        "line": "PortlandB",
+        "id": 32
+      },
+      "id": 32
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6830021,
+          45.5089788
+        ]
+      },
+      "properties": {
+        "name": "PSU South/SW 5th & Jackson",
+        "line": "MAXGreen",
+        "id": 33,
+        "alternate_names": [
+          "PSU South SW 5th & Jackson"
+        ]
+      },
+      "id": 33
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6830021,
+          45.5089788
+        ]
+      },
+      "properties": {
+        "name": "PSU South/SW 5th & Jackson",
+        "line": "MAXOrange",
+        "id": 34,
+        "alternate_names": [
+          "PSU South SW 5th & Jackson"
+        ]
+      },
+      "id": 34
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6827466,
+          45.5113524
+        ]
+      },
+      "properties": {
+        "name": "PSU Urban Center/SW 6th & Montgomery",
+        "line": "MAXGreen",
+        "id": 35,
+        "alternate_names": [
+          "PSU Urban Center SW 6th & Montgomery"
+        ]
+      },
+      "id": 35
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6827466,
+          45.5113524
+        ]
+      },
+      "properties": {
+        "name": "PSU Urban Center/SW 6th & Montgomery",
+        "line": "MAXYellow",
+        "id": 36,
+        "alternate_names": [
+          "PSU Urban Center SW 6th & Montgomery"
+        ]
+      },
+      "id": 36
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.5662746,
+          45.4911049
+        ]
+      },
+      "properties": {
+        "name": "SE Holgate Blvd",
+        "line": "MAXGreen",
+        "id": 37
+      },
+      "id": 37
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.566814,
+          45.4804271
+        ]
+      },
+      "properties": {
+        "name": "Lents/SE Foster Rd",
+        "line": "MAXGreen",
+        "id": 38
+      },
+      "id": 38
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.685921,
+          45.5838565
+        ]
+      },
+      "properties": {
+        "name": "Kenton/N Denver Ave",
+        "line": "MAXYellow",
+        "id": 39
+      },
+      "id": 39
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.5666488,
+          45.4678531
+        ]
+      },
+      "properties": {
+        "name": "SE Flavel St",
+        "line": "MAXGreen",
+        "id": 40
+      },
+      "id": 40
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.670753,
+          45.4989478
+        ]
+      },
+      "properties": {
+        "name": "OHSU Plaza",
+        "line": "PortlandNS",
+        "id": 41
+      },
+      "id": 41
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6709471,
+          45.4956032
+        ]
+      },
+      "properties": {
+        "name": "SW Bond & Lane",
+        "line": "PortlandNS",
+        "id": 42
+      },
+      "id": 42
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.5661941,
+          45.4957682
+        ]
+      },
+      "properties": {
+        "name": "SE Powell Blvd",
+        "line": "MAXGreen",
+        "id": 43
+      },
+      "id": 43
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.5666343,
+          45.5033998
+        ]
+      },
+      "properties": {
+        "name": "SE Division St",
+        "line": "MAXGreen",
+        "id": 44
+      },
+      "id": 44
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6810563,
+          45.5129275
+        ]
+      },
+      "properties": {
+        "name": "SW 5th & Market",
+        "line": "PortlandNS",
+        "id": 45
+      },
+      "id": 45
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6810563,
+          45.5129275
+        ]
+      },
+      "properties": {
+        "name": "SW 5th & Market",
+        "line": "PortlandB",
+        "id": 46
+      },
+      "id": 46
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6820938,
+          45.5122258
+        ]
+      },
+      "properties": {
+        "name": "PSU Urban Center",
+        "line": "PortlandNS",
+        "id": 47
+      },
+      "id": 47
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6820938,
+          45.5122258
+        ]
+      },
+      "properties": {
+        "name": "PSU Urban Center",
+        "line": "PortlandA",
+        "id": 48
+      },
+      "id": 48
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6849931,
+          45.5145522
+        ]
+      },
+      "properties": {
+        "name": "SW 10th & Clay",
+        "line": "PortlandNS",
+        "id": 49
+      },
+      "id": 49
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6849931,
+          45.5145522
+        ]
+      },
+      "properties": {
+        "name": "SW 10th & Clay",
+        "line": "PortlandA",
+        "id": 50
+      },
+      "id": 50
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6845688,
+          45.5130595
+        ]
+      },
+      "properties": {
+        "name": "SW Park & Mill",
+        "line": "PortlandNS",
+        "id": 51
+      },
+      "id": 51
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6845688,
+          45.5130595
+        ]
+      },
+      "properties": {
+        "name": "SW Park & Mill",
+        "line": "PortlandA",
+        "id": 52
+      },
+      "id": 52
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6817382,
+          45.5205727
+        ]
+      },
+      "properties": {
+        "name": "SW 10th & Alder",
+        "line": "PortlandNS",
+        "id": 53
+      },
+      "id": 53
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6817382,
+          45.5205727
+        ]
+      },
+      "properties": {
+        "name": "SW 10th & Alder",
+        "line": "PortlandA",
+        "id": 54
+      },
+      "id": 54
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6860955,
+          45.5151102
+        ]
+      },
+      "properties": {
+        "name": "SW 11th & Clay",
+        "line": "PortlandNS",
+        "id": 55
+      },
+      "id": 55
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6860955,
+          45.5151102
+        ]
+      },
+      "properties": {
+        "name": "SW 11th & Clay",
+        "line": "PortlandB",
+        "id": 56
+      },
+      "id": 56
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6853154,
+          45.5164079
+        ]
+      },
+      "properties": {
+        "name": "SW 11th & Jefferson",
+        "line": "PortlandNS",
+        "id": 57
+      },
+      "id": 57
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6853154,
+          45.5164079
+        ]
+      },
+      "properties": {
+        "name": "SW 11th & Jefferson",
+        "line": "PortlandB",
+        "id": 58
+      },
+      "id": 58
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6824576,
+          45.5192122
+        ]
+      },
+      "properties": {
+        "name": "Central Library",
+        "line": "PortlandNS",
+        "id": 59
+      },
+      "id": 59
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6824576,
+          45.5192122
+        ]
+      },
+      "properties": {
+        "name": "Central Library",
+        "line": "PortlandA",
+        "id": 60
+      },
+      "id": 60
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6838877,
+          45.5190644
+        ]
+      },
+      "properties": {
+        "name": "SW 11th & Taylor",
+        "line": "PortlandNS",
+        "id": 61
+      },
+      "id": 61
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6838877,
+          45.5190644
+        ]
+      },
+      "properties": {
+        "name": "SW 11th & Taylor",
+        "line": "PortlandB",
+        "id": 62
+      },
+      "id": 62
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6812624,
+          45.5285774
+        ]
+      },
+      "properties": {
+        "name": "NW 10th & Johnson",
+        "line": "PortlandNS",
+        "id": 63
+      },
+      "id": 63
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6812624,
+          45.5285774
+        ]
+      },
+      "properties": {
+        "name": "NW 10th & Johnson",
+        "line": "PortlandA",
+        "id": 64
+      },
+      "id": 64
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6811964,
+          45.5264523
+        ]
+      },
+      "properties": {
+        "name": "NW 10th & Glisan",
+        "line": "PortlandNS",
+        "id": 65
+      },
+      "id": 65
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6811964,
+          45.5264523
+        ]
+      },
+      "properties": {
+        "name": "NW 10th & Glisan",
+        "line": "PortlandA",
+        "id": 66
+      },
+      "id": 66
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6853709,
+          45.5315124
+        ]
+      },
+      "properties": {
+        "name": "NW 14th & Northrup",
+        "line": "PortlandNS",
+        "id": 67
+      },
+      "id": 67
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6813774,
+          45.5312855
+        ]
+      },
+      "properties": {
+        "name": "NW 10th & Northrup",
+        "line": "PortlandNS",
+        "id": 68
+      },
+      "id": 68
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6813774,
+          45.5312855
+        ]
+      },
+      "properties": {
+        "name": "NW 10th & Northrup",
+        "line": "PortlandB",
+        "id": 69
+      },
+      "id": 69
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.5644467,
+          45.5142741
+        ]
+      },
+      "properties": {
+        "name": "SE Main St",
+        "line": "MAXGreen",
+        "id": 70
+      },
+      "id": 70
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.8008912,
+          45.4909258
+        ]
+      },
+      "properties": {
+        "name": "Beaverton TC",
+        "line": "PortlandWES",
+        "id": 71
+      },
+      "id": 71
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6810984,
+          45.523598
+        ]
+      },
+      "properties": {
+        "name": "NW 10th & Couch",
+        "line": "PortlandNS",
+        "id": 72
+      },
+      "id": 72
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6810984,
+          45.523598
+        ]
+      },
+      "properties": {
+        "name": "NW 10th & Couch",
+        "line": "PortlandA",
+        "id": 73
+      },
+      "id": 73
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6944699,
+          45.5313523
+        ]
+      },
+      "properties": {
+        "name": "NW 21st & Northrup",
+        "line": "PortlandNS",
+        "id": 74
+      },
+      "id": 74
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.689431,
+          45.5314429
+        ]
+      },
+      "properties": {
+        "name": "NW 18th & Northrup",
+        "line": "PortlandNS",
+        "id": 75
+      },
+      "id": 75
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6822377,
+          45.5237904
+        ]
+      },
+      "properties": {
+        "name": "NW 11th & Couch",
+        "line": "PortlandNS",
+        "id": 76
+      },
+      "id": 76
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6822377,
+          45.5237904
+        ]
+      },
+      "properties": {
+        "name": "NW 11th & Couch",
+        "line": "PortlandB",
+        "id": 77
+      },
+      "id": 77
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.68163,
+          45.5198663
+        ]
+      },
+      "properties": {
+        "name": "Galleria/SW 10th Ave",
+        "line": "MAXBlue",
+        "id": 78
+      },
+      "id": 78
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.68163,
+          45.5198663
+        ]
+      },
+      "properties": {
+        "name": "Galleria/SW 10th Ave",
+        "line": "MAXRed",
+        "id": 79
+      },
+      "id": 79
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6791412,
+          45.5192023
+        ]
+      },
+      "properties": {
+        "name": "Pioneer Square North",
+        "line": "MAXBlue",
+        "id": 80
+      },
+      "id": 80
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6791412,
+          45.5192023
+        ]
+      },
+      "properties": {
+        "name": "Pioneer Square North",
+        "line": "MAXRed",
+        "id": 81
+      },
+      "id": 81
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.5656072,
+          45.5590287
+        ]
+      },
+      "properties": {
+        "name": "Parkrose/Sumner TC",
+        "line": "MAXRed",
+        "id": 82
+      },
+      "id": 82
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.7810133,
+          45.5102541
+        ]
+      },
+      "properties": {
+        "name": "Sunset TC",
+        "line": "MAXBlue",
+        "id": 83
+      },
+      "id": 83
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.7810133,
+          45.5102541
+        ]
+      },
+      "properties": {
+        "name": "Sunset TC",
+        "line": "MAXRed",
+        "id": 84
+      },
+      "id": 84
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.689602,
+          45.5299361
+        ]
+      },
+      "properties": {
+        "name": "NW 18th & Loveyjoy",
+        "line": "PortlandNS",
+        "id": 85
+      },
+      "id": 85
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6846275,
+          45.5300033
+        ]
+      },
+      "properties": {
+        "name": "NW 13th & Lovejoy",
+        "line": "PortlandNS",
+        "id": 86
+      },
+      "id": 86
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6828329,
+          45.5210985
+        ]
+      },
+      "properties": {
+        "name": "SW 11th & Alder",
+        "line": "PortlandNS",
+        "id": 87
+      },
+      "id": 87
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6828329,
+          45.5210985
+        ]
+      },
+      "properties": {
+        "name": "SW 11th & Alder",
+        "line": "PortlandB",
+        "id": 88
+      },
+      "id": 88
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6823112,
+          45.526615
+        ]
+      },
+      "properties": {
+        "name": "NW 11th & Glisan",
+        "line": "PortlandNS",
+        "id": 89
+      },
+      "id": 89
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6823112,
+          45.526615
+        ]
+      },
+      "properties": {
+        "name": "NW 11th & Glisan",
+        "line": "PortlandB",
+        "id": 90
+      },
+      "id": 90
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.5671591,
+          45.5771375
+        ]
+      },
+      "properties": {
+        "name": "Mt Hood Ave",
+        "line": "MAXRed",
+        "id": 91
+      },
+      "id": 91
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6967122,
+          45.5297997
+        ]
+      },
+      "properties": {
+        "name": "NW 22nd & Lovejoy",
+        "line": "PortlandNS",
+        "id": 92
+      },
+      "id": 92
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6946887,
+          45.5298418
+        ]
+      },
+      "properties": {
+        "name": "NW 21st & Lovejoy",
+        "line": "PortlandNS",
+        "id": 93
+      },
+      "id": 93
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6987028,
+          45.5306211
+        ]
+      },
+      "properties": {
+        "name": "NW 23rd & Marshall",
+        "line": "PortlandNS",
+        "id": 94
+      },
+      "id": 94
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.684007,
+          45.5163105
+        ]
+      },
+      "properties": {
+        "name": "Art Museum",
+        "line": "PortlandNS",
+        "id": 95
+      },
+      "id": 95
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.684007,
+          45.5163105
+        ]
+      },
+      "properties": {
+        "name": "Art Museum",
+        "line": "PortlandA",
+        "id": 96
+      },
+      "id": 96
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6750713,
+          45.5181138
+        ]
+      },
+      "properties": {
+        "name": "Morrison/SW 3rd Ave",
+        "line": "MAXBlue",
+        "id": 97
+      },
+      "id": 97
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6750713,
+          45.5181138
+        ]
+      },
+      "properties": {
+        "name": "Morrison/SW 3rd Ave",
+        "line": "MAXRed",
+        "id": 98
+      },
+      "id": 98
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6823894,
+          45.5287508
+        ]
+      },
+      "properties": {
+        "name": "NW 11th & Johnson",
+        "line": "PortlandNS",
+        "id": 99
+      },
+      "id": 99
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6823894,
+          45.5287508
+        ]
+      },
+      "properties": {
+        "name": "NW 11th & Johnson",
+        "line": "PortlandB",
+        "id": 100
+      },
+      "id": 100
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.5582887,
+          45.5226462
+        ]
+      },
+      "properties": {
+        "name": "E 102nd Ave",
+        "line": "MAXBlue",
+        "id": 101
+      },
+      "id": 101
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.5934128,
+          45.5878837
+        ]
+      },
+      "properties": {
+        "name": "Portland International Airport",
+        "line": "MAXRed",
+        "id": 102
+      },
+      "id": 102
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.5377607,
+          45.5224999
+        ]
+      },
+      "properties": {
+        "name": "E 122nd Ave",
+        "line": "MAXBlue",
+        "id": 103
+      },
+      "id": 103
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4964469,
+          45.522179
+        ]
+      },
+      "properties": {
+        "name": "E 162nd Ave",
+        "line": "MAXBlue",
+        "id": 104
+      },
+      "id": 104
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4603606,
+          45.516135
+        ]
+      },
+      "properties": {
+        "name": "Ruby Junction/E 197th Ave",
+        "line": "MAXBlue",
+        "id": 105
+      },
+      "id": 105
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4707731,
+          45.5205438
+        ]
+      },
+      "properties": {
+        "name": "Rockwood/E 188th Ave",
+        "line": "MAXBlue",
+        "id": 106
+      },
+      "id": 106
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6622173,
+          45.530096
+        ]
+      },
+      "properties": {
+        "name": "Convention Center",
+        "line": "MAXBlue",
+        "id": 107
+      },
+      "id": 107
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6622173,
+          45.530096
+        ]
+      },
+      "properties": {
+        "name": "Convention Center",
+        "line": "MAXGreen",
+        "id": 108
+      },
+      "id": 108
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6622173,
+          45.530096
+        ]
+      },
+      "properties": {
+        "name": "Convention Center",
+        "line": "MAXRed",
+        "id": 109
+      },
+      "id": 109
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6580735,
+          45.5300995
+        ]
+      },
+      "properties": {
+        "name": "NE 7th Ave",
+        "line": "MAXBlue",
+        "id": 110
+      },
+      "id": 110
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6580735,
+          45.5300995
+        ]
+      },
+      "properties": {
+        "name": "NE 7th Ave",
+        "line": "MAXGreen",
+        "id": 111
+      },
+      "id": 111
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6580735,
+          45.5300995
+        ]
+      },
+      "properties": {
+        "name": "NE 7th Ave",
+        "line": "MAXRed",
+        "id": 112
+      },
+      "id": 112
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4269911,
+          45.5025931
+        ]
+      },
+      "properties": {
+        "name": "Gresham Central TC",
+        "line": "MAXBlue",
+        "id": 113
+      },
+      "id": 113
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4360775,
+          45.505838
+        ]
+      },
+      "properties": {
+        "name": "Gresham City Hall",
+        "line": "MAXBlue",
+        "id": 114
+      },
+      "id": 114
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.679442,
+          45.5185562
+        ]
+      },
+      "properties": {
+        "name": "Pioneer Square South",
+        "line": "MAXBlue",
+        "id": 115
+      },
+      "id": 115
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.679442,
+          45.5185562
+        ]
+      },
+      "properties": {
+        "name": "Pioneer Square South",
+        "line": "MAXRed",
+        "id": 116
+      },
+      "id": 116
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6030342,
+          45.5286331
+        ]
+      },
+      "properties": {
+        "name": "NE 60th Ave",
+        "line": "MAXBlue",
+        "id": 117
+      },
+      "id": 117
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6030342,
+          45.5286331
+        ]
+      },
+      "properties": {
+        "name": "NE 60th Ave",
+        "line": "MAXGreen",
+        "id": 118
+      },
+      "id": 118
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6030342,
+          45.5286331
+        ]
+      },
+      "properties": {
+        "name": "NE 60th Ave",
+        "line": "MAXRed",
+        "id": 119
+      },
+      "id": 119
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6655867,
+          45.5301682
+        ]
+      },
+      "properties": {
+        "name": "Rose Quarter TC",
+        "line": "MAXBlue",
+        "id": 120
+      },
+      "id": 120
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6655867,
+          45.5301682
+        ]
+      },
+      "properties": {
+        "name": "Rose Quarter TC",
+        "line": "MAXGreen",
+        "id": 121
+      },
+      "id": 121
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6655867,
+          45.5301682
+        ]
+      },
+      "properties": {
+        "name": "Rose Quarter TC",
+        "line": "MAXRed",
+        "id": 122
+      },
+      "id": 122
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6723473,
+          45.5200889
+        ]
+      },
+      "properties": {
+        "name": "Oak/ SW 1st Ave",
+        "line": "MAXBlue",
+        "id": 123
+      },
+      "id": 123
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6723473,
+          45.5200889
+        ]
+      },
+      "properties": {
+        "name": "Oak/ SW 1st Ave",
+        "line": "MAXRed",
+        "id": 124
+      },
+      "id": 124
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6210249,
+          45.5328627
+        ]
+      },
+      "properties": {
+        "name": "Hollywood/NE 42nd Ave",
+        "line": "MAXBlue",
+        "id": 125
+      },
+      "id": 125
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6210249,
+          45.5328627
+        ]
+      },
+      "properties": {
+        "name": "Hollywood/NE 42nd Ave",
+        "line": "MAXGreen",
+        "id": 126
+      },
+      "id": 126
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6210249,
+          45.5328627
+        ]
+      },
+      "properties": {
+        "name": "Hollywood/NE 42nd Ave",
+        "line": "MAXRed",
+        "id": 127
+      },
+      "id": 127
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6540441,
+          45.5300904
+        ]
+      },
+      "properties": {
+        "name": "Lloyd Center/NE 11th Ave",
+        "line": "MAXBlue",
+        "id": 128
+      },
+      "id": 128
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6540441,
+          45.5300904
+        ]
+      },
+      "properties": {
+        "name": "Lloyd Center/NE 11th Ave",
+        "line": "MAXGreen",
+        "id": 129
+      },
+      "id": 129
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6540441,
+          45.5300904
+        ]
+      },
+      "properties": {
+        "name": "Lloyd Center/NE 11th Ave",
+        "line": "MAXRed",
+        "id": 130
+      },
+      "id": 130
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.5106658,
+          45.5223018
+        ]
+      },
+      "properties": {
+        "name": "E 148th Ave",
+        "line": "MAXBlue",
+        "id": 131
+      },
+      "id": 131
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.5781026,
+          45.5333445
+        ]
+      },
+      "properties": {
+        "name": "NE 82nd Ave",
+        "line": "MAXBlue",
+        "id": 132
+      },
+      "id": 132
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.5781026,
+          45.5333445
+        ]
+      },
+      "properties": {
+        "name": "NE 82nd Ave",
+        "line": "MAXGreen",
+        "id": 133
+      },
+      "id": 133
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.5781026,
+          45.5333445
+        ]
+      },
+      "properties": {
+        "name": "NE 82nd Ave",
+        "line": "MAXRed",
+        "id": 134
+      },
+      "id": 134
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4771252,
+          45.522018
+        ]
+      },
+      "properties": {
+        "name": "E 181st Ave",
+        "line": "MAXBlue",
+        "id": 135
+      },
+      "id": 135
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4861187,
+          45.5220953
+        ]
+      },
+      "properties": {
+        "name": "E 172nd Ave",
+        "line": "MAXBlue",
+        "id": 136
+      },
+      "id": 136
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.563667,
+          45.5306665
+        ]
+      },
+      "properties": {
+        "name": "Gateway/NE 99th Ave TC",
+        "line": "MAXBlue",
+        "id": 137
+      },
+      "id": 137
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.563667,
+          45.5306665
+        ]
+      },
+      "properties": {
+        "name": "Gateway/NE 99th Ave TC",
+        "line": "MAXGreen",
+        "id": 138
+      },
+      "id": 138
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.563667,
+          45.5306665
+        ]
+      },
+      "properties": {
+        "name": "Gateway/NE 99th Ave TC",
+        "line": "MAXRed",
+        "id": 139
+      },
+      "id": 139
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6938446,
+          45.5181198
+        ]
+      },
+      "properties": {
+        "name": "Goose Hollow/SW Jefferson St",
+        "line": "MAXBlue",
+        "id": 140
+      },
+      "id": 140
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6938446,
+          45.5181198
+        ]
+      },
+      "properties": {
+        "name": "Goose Hollow/SW Jefferson St",
+        "line": "MAXRed",
+        "id": 141
+      },
+      "id": 141
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.7169219,
+          45.5106498
+        ]
+      },
+      "properties": {
+        "name": "Washington Park",
+        "line": "MAXBlue",
+        "id": 142
+      },
+      "id": 142
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.7169219,
+          45.5106498
+        ]
+      },
+      "properties": {
+        "name": "Washington Park",
+        "line": "MAXRed",
+        "id": 143
+      },
+      "id": 143
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.9783762,
+          45.5213062
+        ]
+      },
+      "properties": {
+        "name": "Hillsboro Health District",
+        "line": "MAXBlue",
+        "id": 144
+      },
+      "id": 144
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6743727,
+          45.5171556
+        ]
+      },
+      "properties": {
+        "name": "Yamhill District",
+        "line": "MAXBlue",
+        "id": 145
+      },
+      "id": 145
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6743727,
+          45.5171556
+        ]
+      },
+      "properties": {
+        "name": "Yamhill District",
+        "line": "MAXRed",
+        "id": 146
+      },
+      "id": 146
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6819506,
+          45.5192248
+        ]
+      },
+      "properties": {
+        "name": "Library/SW 9th Ave",
+        "line": "MAXBlue",
+        "id": 147
+      },
+      "id": 147
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6819506,
+          45.5192248
+        ]
+      },
+      "properties": {
+        "name": "Library/SW 9th Ave",
+        "line": "MAXRed",
+        "id": 148
+      },
+      "id": 148
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.9853039,
+          45.5213847
+        ]
+      },
+      "properties": {
+        "name": "Hillsboro Central/SE 3rd TC",
+        "line": "MAXBlue",
+        "id": 149
+      },
+      "id": 149
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.9307537,
+          45.5299799
+        ]
+      },
+      "properties": {
+        "name": "Hawthorn Farm",
+        "line": "MAXBlue",
+        "id": 150
+      },
+      "id": 150
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.9307537,
+          45.5299799
+        ]
+      },
+      "properties": {
+        "name": "Hawthorn Farm",
+        "line": "MAXRed",
+        "id": 151
+      },
+      "id": 151
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.8421768,
+          45.5052461
+        ]
+      },
+      "properties": {
+        "name": "Merlo Rd/SW 158th Ave",
+        "line": "MAXBlue",
+        "id": 152
+      },
+      "id": 152
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.8421768,
+          45.5052461
+        ]
+      },
+      "properties": {
+        "name": "Merlo Rd/SW 158th Ave",
+        "line": "MAXRed",
+        "id": 153
+      },
+      "id": 153
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6713428,
+          45.5231273
+        ]
+      },
+      "properties": {
+        "name": "Skidmore Fountain",
+        "line": "MAXBlue",
+        "id": 154
+      },
+      "id": 154
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6713428,
+          45.5231273
+        ]
+      },
+      "properties": {
+        "name": "Skidmore Fountain",
+        "line": "MAXRed",
+        "id": 155
+      },
+      "id": 155
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.9695587,
+          45.5211827
+        ]
+      },
+      "properties": {
+        "name": "Washington/SE 12th Ave",
+        "line": "MAXBlue",
+        "id": 156
+      },
+      "id": 156
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.9910352,
+          45.5221944
+        ]
+      },
+      "properties": {
+        "name": "Hatfield Government Center",
+        "line": "MAXBlue",
+        "id": 157
+      },
+      "id": 157
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.9461572,
+          45.5269904
+        ]
+      },
+      "properties": {
+        "name": "Hillsboro Airport/Fairgrounds",
+        "line": "MAXBlue",
+        "id": 158
+      },
+      "id": 158
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.9461572,
+          45.5269904
+        ]
+      },
+      "properties": {
+        "name": "Hillsboro Airport/Fairgrounds",
+        "line": "MAXRed",
+        "id": 159
+      },
+      "id": 159
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.8514779,
+          45.5099682
+        ]
+      },
+      "properties": {
+        "name": "Elmonica/SW 170th Ave",
+        "line": "MAXBlue",
+        "id": 160
+      },
+      "id": 160
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.8514779,
+          45.5099682
+        ]
+      },
+      "properties": {
+        "name": "Elmonica/SW 170th Ave",
+        "line": "MAXRed",
+        "id": 161
+      },
+      "id": 161
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6714216,
+          45.5249388
+        ]
+      },
+      "properties": {
+        "name": "Old Town/Chinatown",
+        "line": "MAXBlue",
+        "id": 162
+      },
+      "id": 162
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6714216,
+          45.5249388
+        ]
+      },
+      "properties": {
+        "name": "Old Town/Chinatown",
+        "line": "MAXRed",
+        "id": 163
+      },
+      "id": 163
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.8702247,
+          45.5172575
+        ]
+      },
+      "properties": {
+        "name": "Willow Creek/SW 185th Ave TC",
+        "line": "MAXBlue",
+        "id": 164
+      },
+      "id": 164
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.8702247,
+          45.5172575
+        ]
+      },
+      "properties": {
+        "name": "Willow Creek/SW 185th Ave TC",
+        "line": "MAXRed",
+        "id": 165
+      },
+      "id": 165
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.8071157,
+          45.4904777
+        ]
+      },
+      "properties": {
+        "name": "Beaverton Central",
+        "line": "MAXBlue",
+        "id": 166
+      },
+      "id": 166
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.8071157,
+          45.4904777
+        ]
+      },
+      "properties": {
+        "name": "Beaverton Central",
+        "line": "MAXRed",
+        "id": 167
+      },
+      "id": 167
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.9158464,
+          45.5302917
+        ]
+      },
+      "properties": {
+        "name": "Orenco",
+        "line": "MAXBlue",
+        "id": 168
+      },
+      "id": 168
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.9158464,
+          45.5302917
+        ]
+      },
+      "properties": {
+        "name": "Orenco",
+        "line": "MAXRed",
+        "id": 169
+      },
+      "id": 169
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.8888139,
+          45.5231989
+        ]
+      },
+      "properties": {
+        "name": "Quatama",
+        "line": "MAXBlue",
+        "id": 170
+      },
+      "id": 170
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.8888139,
+          45.5231989
+        ]
+      },
+      "properties": {
+        "name": "Quatama",
+        "line": "MAXRed",
+        "id": 171
+      },
+      "id": 171
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.8215461,
+          45.4952692
+        ]
+      },
+      "properties": {
+        "name": "Millikan Way",
+        "line": "MAXBlue",
+        "id": 172
+      },
+      "id": 172
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.8215461,
+          45.4952692
+        ]
+      },
+      "properties": {
+        "name": "Millikan Way",
+        "line": "MAXRed",
+        "id": 173
+      },
+      "id": 173
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4185093,
+          45.5017749
+        ]
+      },
+      "properties": {
+        "name": "Cleveland Ave",
+        "line": "MAXBlue",
+        "id": 174
+      },
+      "id": 174
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6824706,
+          45.5309099
+        ]
+      },
+      "properties": {
+        "name": "NW 11th & Marshall",
+        "line": "PortlandB",
+        "id": 175
+      },
+      "id": 175
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6605698,
+          45.5318578
+        ]
+      },
+      "properties": {
+        "name": "NE Grand & Multnomah",
+        "line": "PortlandB",
+        "id": 176
+      },
+      "id": 176
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6805135,
+          45.530065
+        ]
+      },
+      "properties": {
+        "name": "NW 9th & Lovejoy",
+        "line": "PortlandA",
+        "id": 177
+      },
+      "id": 177
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6602378,
+          45.5344159
+        ]
+      },
+      "properties": {
+        "name": "NE Weidler & Grand",
+        "line": "PortlandA",
+        "id": 178
+      },
+      "id": 178
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6586218,
+          45.533344
+        ]
+      },
+      "properties": {
+        "name": "NE 7th & Halsey",
+        "line": "PortlandA",
+        "id": 179
+      },
+      "id": 179
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6638495,
+          45.5344317
+        ]
+      },
+      "properties": {
+        "name": "NE Weidler & 2nd",
+        "line": "PortlandA",
+        "id": 180
+      },
+      "id": 180
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6836515,
+          45.5096328
+        ]
+      },
+      "properties": {
+        "name": "PSU South/SW 6th & College",
+        "line": "MAXGreen",
+        "id": 181
+      },
+      "id": 181
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6836515,
+          45.5096328
+        ]
+      },
+      "properties": {
+        "name": "PSU South/SW 6th & College",
+        "line": "MAXYellow",
+        "id": 182
+      },
+      "id": 182
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6586371,
+          45.5307194
+        ]
+      },
+      "properties": {
+        "name": "NE 7th & Holladay",
+        "line": "PortlandA",
+        "id": 183
+      },
+      "id": 183
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6635525,
+          45.5350396
+        ]
+      },
+      "properties": {
+        "name": "NE Broadway & 2nd",
+        "line": "PortlandB",
+        "id": 184
+      },
+      "id": 184
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.660643,
+          45.5168632
+        ]
+      },
+      "properties": {
+        "name": "SE Grand & Morrison",
+        "line": "PortlandB",
+        "id": 185
+      },
+      "id": 185
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6399524,
+          45.4412598
+        ]
+      },
+      "properties": {
+        "name": "Milwaukie/Main St",
+        "line": "MAXOrange",
+        "id": 186
+      },
+      "id": 186
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6606071,
+          45.5275213
+        ]
+      },
+      "properties": {
+        "name": "NE Grand & Hoyt",
+        "line": "PortlandB",
+        "id": 187
+      },
+      "id": 187
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.5580256,
+          45.5722443
+        ]
+      },
+      "properties": {
+        "name": "Cascades",
+        "line": "MAXRed",
+        "id": 188
+      },
+      "id": 188
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6692352,
+          45.5344385
+        ]
+      },
+      "properties": {
+        "name": "N Weidler & Ross",
+        "line": "PortlandA",
+        "id": 189
+      },
+      "id": 189
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6619882,
+          45.5096494
+        ]
+      },
+      "properties": {
+        "name": "SE M L King & Mill",
+        "line": "PortlandA",
+        "id": 190
+      },
+      "id": 190
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6606354,
+          45.5228159
+        ]
+      },
+      "properties": {
+        "name": "SE Grand & Burnside",
+        "line": "PortlandB",
+        "id": 191
+      },
+      "id": 191
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6606586,
+          45.519632
+        ]
+      },
+      "properties": {
+        "name": "SE Grand & Stark",
+        "line": "PortlandB",
+        "id": 192
+      },
+      "id": 192
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6605186,
+          45.5286901
+        ]
+      },
+      "properties": {
+        "name": "NE Oregon & Grand",
+        "line": "PortlandA",
+        "id": 193
+      },
+      "id": 193
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6605963,
+          45.5297335
+        ]
+      },
+      "properties": {
+        "name": "NE Grand & Holladay",
+        "line": "PortlandB",
+        "id": 194
+      },
+      "id": 194
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.640015,
+          45.4747283
+        ]
+      },
+      "properties": {
+        "name": "SE Bybee Blvd",
+        "line": "MAXOrange",
+        "id": 195
+      },
+      "id": 195
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6375999,
+          45.4627862
+        ]
+      },
+      "properties": {
+        "name": "SE Tacoma/Johnson Creek",
+        "line": "MAXOrange",
+        "id": 196
+      },
+      "id": 196
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.660701,
+          45.5128348
+        ]
+      },
+      "properties": {
+        "name": "SE Grand & Hawthorne",
+        "line": "PortlandB",
+        "id": 197
+      },
+      "id": 197
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.648518,
+          45.4908899
+        ]
+      },
+      "properties": {
+        "name": "SE 17th Ave & Holgate Blvd",
+        "line": "MAXOrange",
+        "id": 198
+      },
+      "id": 198
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6765762,
+          45.5270123
+        ]
+      },
+      "properties": {
+        "name": "Union Station/NW 6th & Hoyt",
+        "line": "MAXGreen",
+        "id": 199
+      },
+      "id": 199
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6765762,
+          45.5270123
+        ]
+      },
+      "properties": {
+        "name": "Union Station/NW 6th & Hoyt",
+        "line": "MAXYellow",
+        "id": 200
+      },
+      "id": 200
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6607161,
+          45.5100089
+        ]
+      },
+      "properties": {
+        "name": "SE Grand & Mill",
+        "line": "PortlandB",
+        "id": 201
+      },
+      "id": 201
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6769455,
+          45.5221183
+        ]
+      },
+      "properties": {
+        "name": "SW 6th & Pine",
+        "line": "MAXGreen",
+        "id": 202
+      },
+      "id": 202
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6769455,
+          45.5221183
+        ]
+      },
+      "properties": {
+        "name": "SW 6th & Pine",
+        "line": "MAXYellow",
+        "id": 203
+      },
+      "id": 203
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6754874,
+          45.5241775
+        ]
+      },
+      "properties": {
+        "name": "NW 5th & Couch",
+        "line": "MAXGreen",
+        "id": 204
+      },
+      "id": 204
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6754874,
+          45.5241775
+        ]
+      },
+      "properties": {
+        "name": "NW 5th & Couch",
+        "line": "MAXOrange",
+        "id": 205
+      },
+      "id": 205
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.801516,
+          45.4914467
+        ]
+      },
+      "properties": {
+        "name": "Beaverton TC",
+        "line": "MAXBlue",
+        "id": 206
+      },
+      "id": 206
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.801516,
+          45.4914467
+        ]
+      },
+      "properties": {
+        "name": "Beaverton TC",
+        "line": "MAXRed",
+        "id": 207
+      },
+      "id": 207
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6778018,
+          45.5185046
+        ]
+      },
+      "properties": {
+        "name": "Pioneer Place/SW 5th Ave",
+        "line": "MAXGreen",
+        "id": 208
+      },
+      "id": 208
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6778018,
+          45.5185046
+        ]
+      },
+      "properties": {
+        "name": "Pioneer Place/SW 5th Ave",
+        "line": "MAXOrange",
+        "id": 209
+      },
+      "id": 209
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6713514,
+          45.5027129
+        ]
+      },
+      "properties": {
+        "name": "South Waterfront/S Moody",
+        "line": "MAXOrange",
+        "id": 210
+      },
+      "id": 210
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6805235,
+          45.5079273
+        ]
+      },
+      "properties": {
+        "name": "Lincoln St/SW 3rd Ave",
+        "line": "MAXOrange",
+        "id": 211
+      },
+      "id": 211
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6821564,
+          45.5698972
+        ]
+      },
+      "properties": {
+        "name": "Rosa Parks",
+        "line": "MAXYellow",
+        "id": 212
+      },
+      "id": 212
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6855793,
+          45.6054555
+        ]
+      },
+      "properties": {
+        "name": "Expo Center",
+        "line": "MAXYellow",
+        "id": 213
+      },
+      "id": 213
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6810114,
+          45.5486835
+        ]
+      },
+      "properties": {
+        "name": "Overlook Park",
+        "line": "MAXYellow",
+        "id": 214
+      },
+      "id": 214
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.675523,
+          45.5395658
+        ]
+      },
+      "properties": {
+        "name": "Albina/Mississippi",
+        "line": "MAXYellow",
+        "id": 215
+      },
+      "id": 215
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6823072,
+          45.5551885
+        ]
+      },
+      "properties": {
+        "name": "N Prescott St",
+        "line": "MAXYellow",
+        "id": 216
+      },
+      "id": 216
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6740626,
+          45.5071182
+        ]
+      },
+      "properties": {
+        "name": "SW River & Moody",
+        "line": "PortlandNS",
+        "id": 217
+      },
+      "id": 217
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6740626,
+          45.5071182
+        ]
+      },
+      "properties": {
+        "name": "SW River & Moody",
+        "line": "PortlandA",
+        "id": 218
+      },
+      "id": 218
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6740626,
+          45.5071182
+        ]
+      },
+      "properties": {
+        "name": "SW River & Moody",
+        "line": "PortlandB",
+        "id": 219
+      },
+      "id": 219
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6633811,
+          45.5070142
+        ]
+      },
+      "properties": {
+        "name": "OMSI",
+        "line": "PortlandA",
+        "id": 220
+      },
+      "id": 220
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6633811,
+          45.5070142
+        ]
+      },
+      "properties": {
+        "name": "OMSI",
+        "line": "PortlandB",
+        "id": 221
+      },
+      "id": 221
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6627463,
+          45.506558
+        ]
+      },
+      "properties": {
+        "name": "OMSI/SE Water Ave",
+        "line": "MAXOrange",
+        "id": 222
+      },
+      "id": 222
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6797367,
+          45.5102557
+        ]
+      },
+      "properties": {
+        "name": "SW 3rd & Harrison",
+        "line": "PortlandNS",
+        "id": 223
+      },
+      "id": 223
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6797367,
+          45.5102557
+        ]
+      },
+      "properties": {
+        "name": "SW 3rd & Harrison",
+        "line": "PortlandA",
+        "id": 224
+      },
+      "id": 224
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6797367,
+          45.5102557
+        ]
+      },
+      "properties": {
+        "name": "SW 3rd & Harrison",
+        "line": "PortlandB",
+        "id": 225
+      },
+      "id": 225
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6350762,
+          45.4306855
+        ]
+      },
+      "properties": {
+        "name": "SE Park Ave",
+        "line": "MAXOrange",
+        "id": 226
+      },
+      "id": 226
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6695364,
+          45.5344555
+        ]
+      },
+      "properties": {
+        "name": "N Broadway & Ross",
+        "line": "PortlandB",
+        "id": 227
+      },
+      "id": 227
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.681329,
+          45.5117136
+        ]
+      },
+      "properties": {
+        "name": "SW 5th & Montgomery",
+        "line": "PortlandNS",
+        "id": 228
+      },
+      "id": 228
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.681329,
+          45.5117136
+        ]
+      },
+      "properties": {
+        "name": "SW 5th & Montgomery",
+        "line": "PortlandB",
+        "id": 229
+      },
+      "id": 229
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6605629,
+          45.5348035
+        ]
+      },
+      "properties": {
+        "name": "NE Grand & Broadway",
+        "line": "PortlandB",
+        "id": 230
+      },
+      "id": 230
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6764707,
+          45.5241426
+        ]
+      },
+      "properties": {
+        "name": "NW 6th & Davis",
+        "line": "MAXGreen",
+        "id": 231
+      },
+      "id": 231
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6764707,
+          45.5241426
+        ]
+      },
+      "properties": {
+        "name": "NW 6th & Davis",
+        "line": "MAXYellow",
+        "id": 232
+      },
+      "id": 232
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6759843,
+          45.5218709
+        ]
+      },
+      "properties": {
+        "name": "SW 5th & Oak",
+        "line": "MAXGreen",
+        "id": 233
+      },
+      "id": 233
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6759843,
+          45.5218709
+        ]
+      },
+      "properties": {
+        "name": "SW 5th & Oak",
+        "line": "MAXOrange",
+        "id": 234
+      },
+      "id": 234
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6814738,
+          45.5117453
+        ]
+      },
+      "properties": {
+        "name": "PSU Urban Center/SW 5th & Mill",
+        "line": "MAXGreen",
+        "id": 235
+      },
+      "id": 235
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6814738,
+          45.5117453
+        ]
+      },
+      "properties": {
+        "name": "PSU Urban Center/SW 5th & Mill",
+        "line": "MAXOrange",
+        "id": 236
+      },
+      "id": 236
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6805504,
+          45.5154272
+        ]
+      },
+      "properties": {
+        "name": "SW 6th & Madison St",
+        "line": "MAXGreen",
+        "id": 237
+      },
+      "id": 237
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6805504,
+          45.5154272
+        ]
+      },
+      "properties": {
+        "name": "SW 6th & Madison St",
+        "line": "MAXYellow",
+        "id": 238
+      },
+      "id": 238
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.5736235,
+          45.4534034
+        ]
+      },
+      "properties": {
+        "name": "SE Fuller Rd",
+        "line": "MAXGreen",
+        "id": 239
+      },
+      "id": 239
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.567774,
+          45.4357281
+        ]
+      },
+      "properties": {
+        "name": "Clackamas Town Center TC",
+        "line": "MAXGreen",
+        "id": 240
+      },
+      "id": 240
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4415299,
+          45.5081123
+        ]
+      },
+      "properties": {
+        "name": "Civic Drive",
+        "line": "MAXBlue",
+        "id": 241
+      },
+      "id": 241
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6755927,
+          45.5270072
+        ]
+      },
+      "properties": {
+        "name": "Union Station/NW 5th & Glisan",
+        "line": "MAXGreen",
+        "id": 242
+      },
+      "id": 242
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6755927,
+          45.5270072
+        ]
+      },
+      "properties": {
+        "name": "Union Station/NW 5th & Glisan",
+        "line": "MAXOrange",
+        "id": 243
+      },
+      "id": 243
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6787669,
+          45.5187515
+        ]
+      },
+      "properties": {
+        "name": "Pioneer Courthouse/SW 6th Ave",
+        "line": "MAXGreen",
+        "id": 244
+      },
+      "id": 244
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6787669,
+          45.5187515
+        ]
+      },
+      "properties": {
+        "name": "Pioneer Courthouse/SW 6th Ave",
+        "line": "MAXYellow",
+        "id": 245
+      },
+      "id": 245
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6796057,
+          45.5151674
+        ]
+      },
+      "properties": {
+        "name": "City Hall/SW 5th & Jefferson",
+        "line": "MAXGreen",
+        "id": 246
+      },
+      "id": 246
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6796057,
+          45.5151674
+        ]
+      },
+      "properties": {
+        "name": "City Hall/SW 5th & Jefferson",
+        "line": "MAXOrange",
+        "id": 247
+      },
+      "id": 247
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6727482,
+          45.5032925
+        ]
+      },
+      "properties": {
+        "name": "SW Moody & Meade North",
+        "line": "PortlandNS",
+        "id": 248
+      },
+      "id": 248
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6727482,
+          45.5032925
+        ]
+      },
+      "properties": {
+        "name": "SW Moody & Meade North",
+        "line": "PortlandA",
+        "id": 249
+      },
+      "id": 249
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.672807,
+          45.5031203
+        ]
+      },
+      "properties": {
+        "name": "SW Moody & Meade South",
+        "line": "PortlandNS",
+        "id": 250
+      },
+      "id": 250
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.672807,
+          45.5031203
+        ]
+      },
+      "properties": {
+        "name": "SW Moody & Meade South",
+        "line": "PortlandB",
+        "id": 251
+      },
+      "id": 251
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.5637797,
+          45.5321837
+        ]
+      },
+      "properties": {
+        "name": "Gateway North",
+        "line": "MAXRed",
+        "id": 252
+      },
+      "id": 252
+    }
+  ]
+}

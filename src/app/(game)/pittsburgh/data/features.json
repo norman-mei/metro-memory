@@ -1457,6 +1457,41 @@
         ]
       },
       "id": 85
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.25496382887232,
+          40.496007310486476
+        ]
+      },
+      "properties": {
+        "name": "Landside Terminal",
+        "line": "pittsburghAPM",
+        "id": 86
+      },
+      "id": 86
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.24594459901118,
+          40.49578269825295
+        ]
+      },
+      "properties": {
+        "name": "Airside Terminal",
+        "line": "pittsburghAPM",
+        "id": 87,
+        "alternate_names": [
+          "Midfield Terminal"
+        ]
+      },
+      "id": 87
     }
   ]
 }

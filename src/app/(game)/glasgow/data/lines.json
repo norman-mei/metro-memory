@@ -1,0 +1,16 @@
+{
+  "glasgowIC": {
+    "name": "Inner Circle",
+    "color": "#545455",
+    "backgroundColor": "#2f2f30",
+    "textColor": "#ffffff",
+    "order": 0
+  },
+  "glasgowOC": {
+    "name": "Outer Circle",
+    "color": "#FF6600",
+    "backgroundColor": "#9b3c00",
+    "textColor": "#000000",
+    "order": 1
+  }
+}

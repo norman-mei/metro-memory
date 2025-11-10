@@ -7671,10 +7671,416 @@
         "order": 1
       },
       "id": 531
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.88224363647332,
+          41.99283716526123
+        ]
+      },
+      "properties": {
+        "id": 534,
+        "name": "Multi-Modal Facility",
+        "line": "ChicagoATS",
+        "order": 0
+      },
+      "id": 534
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.89009986534644,
+          41.97512895321891
+        ]
+      },
+      "properties": {
+        "id": 535,
+        "name": "Terminal 5",
+        "line": "ChicagoATS",
+        "order": 1
+      },
+      "id": 535
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.9013533013279,
+          41.97732369063053
+        ]
+      },
+      "properties": {
+        "id": 536,
+        "name": "Terminal 3",
+        "line": "ChicagoATS",
+        "order": 2
+      },
+      "id": 536
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.90453562081728,
+          41.97708236105311
+        ]
+      },
+      "properties": {
+        "id": 537,
+        "name": "Terminal 2",
+        "line": "ChicagoATS",
+        "order": 3
+      },
+      "id": 537
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.9055957284185,
+          41.97927730664599
+        ]
+      },
+      "properties": {
+        "id": 538,
+        "name": "Terminal 1",
+        "line": "ChicagoATS",
+        "order": 4
+      },
+      "id": 538
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.81000146387017,
+          42.587102976766374
+        ]
+      },
+      "properties": {
+        "name": "Fountain Plaza",
+        "line": "kenoshaStreetcar",
+        "id": 539,
+        "alternate_names": [
+          "Celebration Place"
+        ]
+      },
+      "id": 539
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.81000146387017,
+          42.587102976766374
+        ]
+      },
+      "properties": {
+        "name": "54th St & 2nd Ave",
+        "line": "kenoshaStreetcar",
+        "id": 540,
+        "alternate_names": [
+          "Navy Memorial Park",
+          "Navy Park"
+        ]
+      },
+      "id": 540
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.81537373216929,
+          42.587472030108756
+        ]
+      },
+      "properties": {
+        "name": "54th St & 3rd Ave",
+        "line": "kenoshaStreetcar",
+        "id": 541
+      },
+      "id": 541
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.8166032512652,
+          42.58728176088394
+        ]
+      },
+      "properties": {
+        "name": "54th St & 4th Ave",
+        "line": "kenoshaStreetcar",
+        "id": 542
+      },
+      "id": 542
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.81781707953522,
+          42.587160666451545
+        ]
+      },
+      "properties": {
+        "name": "54th St & 5th Ave",
+        "line": "kenoshaStreetcar",
+        "id": 543
+      },
+      "id": 543
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.81934417118592,
+          42.58697615272362
+        ]
+      },
+      "properties": {
+        "name": "54th St & 6th Ave",
+        "line": "kenoshaStreetcar",
+        "id": 544
+      },
+      "id": 544
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.8211495123754,
+          42.58670226768393
+        ]
+      },
+      "properties": {
+        "name": "Kenosha Transit Center",
+        "line": "kenoshaStreetcar",
+        "id": 545,
+        "alternate_names": [
+          "54th St & 8th Ave"
+        ]
+      },
+      "id": 545
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.82493428304261,
+          42.5859589550523
+        ]
+      },
+      "properties": {
+        "name": "Metro Station",
+        "line": "kenoshaStreetcar",
+        "id": 546,
+        "alternate_names": [
+          "Kenosha Metra Station",
+          "Kenosha Station",
+          "Kenosha"
+        ]
+      },
+      "id": 546
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.82463997994535,
+          42.584437453139046
+        ]
+      },
+      "properties": {
+        "name": "56th St & 11th Ave",
+        "line": "kenoshaStreetcar",
+        "id": 547,
+        "alternate_names": [
+          "County Building"
+        ]
+      },
+      "id": 547
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.82463997994535,
+          42.584437453139046
+        ]
+      },
+      "properties": {
+        "name": "56th St & 10th Ave",
+        "line": "kenoshaStreetcar",
+        "id": 548,
+        "alternate_names": [
+          "Dinosaur Museum"
+        ]
+      },
+      "id": 548
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.82118515262658,
+          42.5847059424894
+        ]
+      },
+      "properties": {
+        "name": "56th St & 8th Ave",
+        "line": "kenoshaStreetcar",
+        "id": 549,
+        "alternate_names": [
+          "Post Office"
+        ]
+      },
+      "id": 549
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.81874916656112,
+          42.58501471280352
+        ]
+      },
+      "properties": {
+        "name": "56th St & 6th Ave",
+        "line": "kenoshaStreetcar",
+        "id": 550
+      },
+      "id": 550
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.81756269029961,
+          42.58517351827996
+        ]
+      },
+      "properties": {
+        "name": "56th St & 5th Ave",
+        "line": "kenoshaStreetcar",
+        "id": 551
+      },
+      "id": 551
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.81635965154899,
+          42.58530183172463
+        ]
+      },
+      "properties": {
+        "name": "56th St & 4th Ave",
+        "line": "kenoshaStreetcar",
+        "id": 552
+      },
+      "id": 552
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.81513999910543,
+          42.58549732222034
+        ]
+      },
+      "properties": {
+        "name": "56th St & 3rd Ave",
+        "line": "kenoshaStreetcar",
+        "id": 553
+      },
+      "id": 553
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.81392034059613,
+          42.585619494251965
+        ]
+      },
+      "properties": {
+        "name": "56th St & 2nd Ave",
+        "line": "kenoshaStreetcar",
+        "id": 554
+      },
+      "id": 554
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.81268408127379,
+          42.58572943587857
+        ]
+      },
+      "properties": {
+        "name": "56th St & 1st Ave",
+        "line": "kenoshaStreetcar",
+        "id": 555,
+        "alternate_names": [
+          "Kenosha Public Museum"
+        ]
+      },
+      "id": 555
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.8260462135351,
+          42.58596574466975
+        ]
+      },
+      "properties": {
+        "name": "Kenosha",
+        "line": "Metra_UPN",
+        "id": 556,
+        "alternate_names": [
+          "Kenosha Metra Station",
+          "Metro Station",
+          "Metra Station",
+          "Kenosha Station"
+        ]
+      },
+      "id": 556
     }
   ],
   "properties": {
-    "totalStations": 466,
+    "totalStations": 489,
     "stationsPerLine": {
       "CTAMetroBlueLine": 31,
       "CTAMetroBrownLine": 27,
@@ -7684,7 +8090,7 @@
       "CTAMetroPurpleLine": 26,
       "CTAMetroRedLine": 35,
       "CTAMetroYellowLine": 3,
-      "Metra_UPN": 27,
+      "Metra_UPN": 28,
       "Metra_BNSF": 26,
       "Metra_ME": 32,
       "Metra_ME_SC": 9,
@@ -7699,7 +8105,9 @@
       "Metra_MDN": 21,
       "Metra_HC": 7,
       "NICTD_SSL": 20,
-      "NICTD_MCL": 4
+      "NICTD_MCL": 4,
+      "ChicagoATS": 5,
+      "kenoshaStreetcar": 17
     }
   }
 }

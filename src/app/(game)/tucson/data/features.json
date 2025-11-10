@@ -1,0 +1,363 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -110.94644848798674,
+          32.237329640665756
+        ]
+      },
+      "properties": {
+        "name": "Helen & Warren",
+        "line": "tucsonSunLink",
+        "id": 0
+      },
+      "id": 0
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -110.9474940909079,
+          32.23386284080405
+        ]
+      },
+      "properties": {
+        "name": "2nd St. & Cherry",
+        "line": "tucsonSunLink",
+        "id": 1
+      },
+      "id": 1
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -110.95067224643219,
+          32.23384302440209
+        ]
+      },
+      "properties": {
+        "name": "2nd St. & Highland",
+        "line": "tucsonSunLink",
+        "id": 2
+      },
+      "id": 2
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -110.95529892340883,
+          32.233806688546096
+        ]
+      },
+      "properties": {
+        "name": "2nd St. & Olive",
+        "line": "tucsonSunLink",
+        "id": 3
+      },
+      "id": 3
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -110.95823890296954,
+          32.23169959002039
+        ]
+      },
+      "properties": {
+        "name": "University & Tyndall",
+        "line": "tucsonSunLink",
+        "id": 4
+      },
+      "id": 4
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -110.96442813711384,
+          32.231676008831485
+        ]
+      },
+      "properties": {
+        "name": "University & 3rd Ave.",
+        "line": "tucsonSunLink",
+        "id": 5
+      },
+      "id": 5
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -110.965595545637,
+          32.22973400136108
+        ]
+      },
+      "properties": {
+        "name": "4th Ave. & 4th St.",
+        "line": "tucsonSunLink",
+        "id": 6
+      },
+      "id": 6
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -110.96560383804609,
+          32.22714886558548
+        ]
+      },
+      "properties": {
+        "name": "4th Ave. & 6th St.",
+        "line": "tucsonSunLink",
+        "id": 7
+      },
+      "id": 7
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -110.96556098952549,
+          32.224077988474804
+        ]
+      },
+      "properties": {
+        "name": "4th Ave. & 9th St.",
+        "line": "tucsonSunLink",
+        "id": 8
+      },
+      "id": 8
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -110.96554971351193,
+          32.22177674857424
+        ]
+      },
+      "properties": {
+        "name": "Plaza Centro",
+        "line": "tucsonSunLink",
+        "id": 9
+      },
+      "id": 9
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -110.96830708358945,
+          32.222028284762146
+        ]
+      },
+      "properties": {
+        "name": "Congress & 6th Ave.",
+        "line": "tucsonSunLink",
+        "id": 10
+      },
+      "id": 10
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -110.9710097573073,
+          32.22186991408359
+        ]
+      },
+      "properties": {
+        "name": "Congress & Stone",
+        "line": "tucsonSunLink",
+        "id": 11
+      },
+      "id": 11
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -110.97316253777596,
+          32.22183526794024
+        ]
+      },
+      "properties": {
+        "name": "Congress & Church",
+        "line": "tucsonSunLink",
+        "id": 12
+      },
+      "id": 12
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -110.97579115894001,
+          32.22141773718995
+        ]
+      },
+      "properties": {
+        "name": "Congress & Granada",
+        "line": "tucsonSunLink",
+        "id": 13
+      },
+      "id": 13
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -110.97752471855586,
+          32.21773223647486
+        ]
+      },
+      "properties": {
+        "name": "Granada & Cushing",
+        "line": "tucsonSunLink",
+        "id": 14
+      },
+      "id": 14
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -110.98052770371245,
+          32.217188198680326
+        ]
+      },
+      "properties": {
+        "name": "Cushing & Frontage",
+        "line": "tucsonSunLink",
+        "id": 15
+      },
+      "id": 15
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -110.98430967444239,
+          32.21774510563914
+        ]
+      },
+      "properties": {
+        "name": "Cushing & Convento",
+        "line": "tucsonSunLink",
+        "id": 16
+      },
+      "id": 16
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -110.98521793773344,
+          32.2199206322852
+        ]
+      },
+      "properties": {
+        "name": "Convento & Congress",
+        "line": "tucsonSunLink",
+        "id": 17
+      },
+      "id": 17
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -110.97539752958451,
+          32.22128423418939
+        ]
+      },
+      "properties": {
+        "name": "Broadway & Granada",
+        "line": "tucsonSunLink",
+        "id": 18
+      },
+      "id": 18
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -110.97257959432639,
+          32.221040991609236
+        ]
+      },
+      "properties": {
+        "name": "Broadway & Church",
+        "line": "tucsonSunLink",
+        "id": 19
+      },
+      "id": 19
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -110.97091251262756,
+          32.22099883644069
+        ]
+      },
+      "properties": {
+        "name": "Broadway & Stone",
+        "line": "tucsonSunLink",
+        "id": 20
+      },
+      "id": 20
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -110.96834703741669,
+          32.221185790773106
+        ]
+      },
+      "properties": {
+        "name": "Broadway & 6th Ave.",
+        "line": "tucsonSunLink",
+        "id": 21
+      },
+      "id": 21
+    }
+  ],
+  "properties": {
+    "totalStations": 22,
+    "stationsPerLine": {
+      "tucsonSunLink": 22
+    }
+  }
+}
