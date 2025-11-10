@@ -9,7 +9,7 @@ import {
 } from '@/lib/preferences'
 
 const preferencesSchema = z.object({
-  collapsedSections: z.record(z.boolean()).optional(),
+  collapsedSections: z.record(z.string(), z.boolean()).optional(),
 })
 
 export async function PATCH(request: NextRequest) {
