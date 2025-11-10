@@ -12,8 +12,17 @@ type RouteParams = {
 
 const progressSchema = z.object({
   foundIds: z.array(z.number().int().nonnegative()).max(10000),
-  foundTimestamps: z.record(z.string()).optional(),
+  foundTimestamps: z.record(z.string(), z.string()).optional(),
 })
+
+const isRecordOfStrings = (value: unknown): value is Record<string, string> => {
+  if (typeof value !== 'object' || value === null) {
+    return false
+  }
+  return Object.values(value as Record<string, unknown>).every(
+    (entry): entry is string => typeof entry === 'string',
+  )
+}
 
 export async function GET(_: NextRequest, { params }: RouteParams) {
   const user = await getCurrentUser()
@@ -39,15 +48,16 @@ export async function GET(_: NextRequest, { params }: RouteParams) {
     return NextResponse.json({ progress: null })
   }
 
+  const storedTimestamps = isRecordOfStrings(record.foundTimestamps)
+    ? record.foundTimestamps
+    : {}
+
   return NextResponse.json({
     progress: {
       foundIds: Array.isArray(record.foundIds)
         ? record.foundIds.filter((id): id is number => typeof id === 'number')
         : [],
-      foundTimestamps:
-        typeof record.foundTimestamps === 'object' && record.foundTimestamps
-          ? record.foundTimestamps
-          : {},
+      foundTimestamps: storedTimestamps,
     },
   })
 }
@@ -73,6 +83,7 @@ export async function POST(request: NextRequest, { params }: RouteParams) {
   const uniqueIds = Array.from(
     new Set(parsed.data.foundIds.filter((id) => Number.isFinite(id))),
   )
+  const foundTimestamps: Record<string, string> = parsed.data.foundTimestamps ?? {}
 
   await prisma.progress.upsert({
     where: {
@@ -83,13 +94,13 @@ export async function POST(request: NextRequest, { params }: RouteParams) {
     },
     update: {
       foundIds: uniqueIds,
-      foundTimestamps: parsed.data.foundTimestamps ?? {},
+      foundTimestamps,
     },
     create: {
       userId: user.id,
       citySlug,
       foundIds: uniqueIds,
-      foundTimestamps: parsed.data.foundTimestamps ?? {},
+      foundTimestamps,
     },
   })
 
