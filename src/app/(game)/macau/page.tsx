@@ -1,6 +1,7 @@
 import data from './data/features.json'
 import 'mapbox-gl/dist/mapbox-gl.css'
 import 'react-circular-progressbar/dist/styles.css'
+import type { LineString, MultiLineString } from 'geojson'
 import { DataFeatureCollection, RoutesFeatureCollection } from '@/lib/types'
 import config from './config'
 import GamePage from '@/components/GamePage'
@@ -28,13 +29,14 @@ const routeFeatures = routesData.features
       return null
     }
     const defaultColor = config.LINES[line]?.color ?? '#1d2835'
+    const rawColor = feature.properties?.color as string | null | undefined
     const color =
-      typeof feature.properties?.color === 'string' && feature.properties.color.length > 0
-        ? feature.properties.color
-        : defaultColor
+      typeof rawColor === 'string' && rawColor.length > 0 ? rawColor : defaultColor
 
     return {
       ...feature,
+      type: 'Feature' as const,
+      geometry: feature.geometry as LineString | MultiLineString,
       properties: {
         ...feature.properties,
         color,
@@ -44,7 +46,7 @@ const routeFeatures = routesData.features
   .filter((feature): feature is RoutesFeatureCollection['features'][number] => feature !== null)
 
 const routes: RoutesFeatureCollection = {
-  type: routesData.type,
+  type: 'FeatureCollection',
   features: routeFeatures,
 }
 
