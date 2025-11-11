@@ -1,0 +1,334 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-3.188669277017261, 55.97993520936718]
+      },
+      "properties": {
+        "id": 1,
+        "name": "Newhaven",
+        "line": "EdinburghTram",
+        "order": 0
+      },
+      "id": 1
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-3.177675195270895, 55.980228320398666]
+      },
+      "properties": {
+        "id": 2,
+        "name": "Ocean Terminal",
+        "line": "EdinburghTram",
+        "order": 1
+      },
+      "id": 2
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-3.166391022555652, 55.978178359778575]
+      },
+      "properties": {
+        "id": 3,
+        "name": "Port of Leith",
+        "line": "EdinburghTram",
+        "order": 2
+      },
+      "id": 3
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-3.166888140856612, 55.97507887487509]
+      },
+      "properties": {
+        "id": 4,
+        "name": "The Shore",
+        "alternate_names": ["Shore"],
+        "line": "EdinburghTram",
+        "order": 3
+      },
+      "id": 4
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-3.171111682627034, 55.970796960553024]
+      },
+      "properties": {
+        "id": 5,
+        "name": "Foot of the Walk",
+        "line": "EdinburghTram",
+        "order": 4
+      },
+      "id": 5
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-3.1764285134190793, 55.96532524653059]
+      },
+      "properties": {
+        "id": 6,
+        "name": "Balfour Street",
+        "line": "EdinburghTram",
+        "order": 5
+      },
+      "id": 6
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-3.1816271002963954, 55.960738009047816]
+      },
+      "properties": {
+        "id": 7,
+        "name": "McDonald Road",
+        "line": "EdinburghTram",
+        "order": 6
+      },
+      "id": 7
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-3.18686109090052, 55.95678980814164]
+      },
+      "properties": {
+        "id": 8,
+        "name": "Picardy Place",
+        "line": "EdinburghTram",
+        "order": 7
+      },
+      "id": 8
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-3.1922840073831824, 55.954577797000844]
+      },
+      "properties": {
+        "id": 9,
+        "name": "St. Andrew Square",
+        "line": "EdinburghTram",
+        "order": 8
+      },
+      "id": 9
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-3.1978779977485443, 55.95185182335928]
+      },
+      "properties": {
+        "id": 10,
+        "name": "Princes Street",
+        "line": "EdinburghTram",
+        "order": 9
+      },
+      "id": 10
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-3.21165191441625, 55.94867649406233]
+      },
+      "properties": {
+        "id": 11,
+        "name": "West End",
+        "line": "EdinburghTram",
+        "order": 10
+      },
+      "id": 11
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-3.2195862691171735, 55.9457942753352]
+      },
+      "properties": {
+        "id": 12,
+        "name": "Haymarket",
+        "line": "EdinburghTram",
+        "order": 11
+      },
+      "id": 12
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-3.237287097694114, 55.94206878535314]
+      },
+      "properties": {
+        "id": 13,
+        "name": "Murrayfield Stadium",
+        "line": "EdinburghTram",
+        "order": 12
+      },
+      "id": 13
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-3.252223126766435, 55.938143980075225]
+      },
+      "properties": {
+        "id": 14,
+        "name": "Balgreen",
+        "line": "EdinburghTram",
+        "order": 13
+      },
+      "id": 14
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-3.2755136631864916, 55.932376684639515]
+      },
+      "properties": {
+        "id": 15,
+        "name": "Saughton",
+        "line": "EdinburghTram",
+        "order": 14
+      },
+      "id": 15
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-3.293838308102396, 55.928932126367904]
+      },
+      "properties": {
+        "id": 16,
+        "name": "Bankhead",
+        "line": "EdinburghTram",
+        "order": 15
+      },
+      "id": 16
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-3.3070163195055065, 55.92741534496179]
+      },
+      "properties": {
+        "id": 17,
+        "name": "Edinburgh Park",
+        "line": "EdinburghTram",
+        "order": 16
+      },
+      "id": 17
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-3.314575822305231, 55.931388829583085]
+      },
+      "properties": {
+        "id": 18,
+        "name": "Edinburgh Park Central",
+        "line": "EdinburghTram",
+        "order": 17
+      },
+      "id": 18
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-3.3183751764154246, 55.938080242048954]
+      },
+      "properties": {
+        "id": 19,
+        "name": "Gyle Centre",
+        "line": "EdinburghTram",
+        "order": 18
+      },
+      "id": 19
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-3.3218222317557746, 55.9406252923877]
+      },
+      "properties": {
+        "id": 20,
+        "name": "Edinburgh Gateway",
+        "line": "EdinburghTram",
+        "order": 19
+      },
+      "id": 20
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-3.3322732262959365, 55.93803813837362]
+      },
+      "properties": {
+        "id": 21,
+        "name": "Gogarburn",
+        "line": "EdinburghTram",
+        "order": 20
+      },
+      "id": 21
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-3.3540328254037832, 55.94006328892572]
+      },
+      "properties": {
+        "id": 22,
+        "name": "Ingliston",
+        "line": "EdinburghTram",
+        "order": 21
+      },
+      "id": 22
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-3.3606278733877155, 55.94783782349935]
+      },
+      "properties": {
+        "id": 23,
+        "name": "Edinburgh Airport",
+        "line": "EdinburghTram",
+        "order": 22
+      },
+      "id": 23
+    }
+  ],
+  "properties": {
+    "totalStations": 23,
+    "stationsPerLine": {
+      "EdinburghTram": 23
+    }
+  }
+}

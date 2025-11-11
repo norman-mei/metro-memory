@@ -1,0 +1,38 @@
+{
+  "OTrainLine1": {
+    "name": "Line 1 – Confederation Line",
+    "color": "#C22924",
+    "backgroundColor": "#8F1B19",
+    "textColor": "#ffffff",
+    "progressOutlineColor": "#C22924",
+    "statsColor": "#C22924",
+    "order": 0
+  },
+  "OTrainLine2": {
+    "name": "Line 2 – Trillium Line",
+    "color": "#74A142",
+    "backgroundColor": "#466326",
+    "textColor": "#ffffff",
+    "progressOutlineColor": "#74A142",
+    "statsColor": "#74A142",
+    "order": 1
+  },
+  "OTrainLine3": {
+    "name": "Line 3",
+    "color": "#8B741E",
+    "backgroundColor": "#4E3F0F",
+    "textColor": "#ffffff",
+    "progressOutlineColor": "#8B741E",
+    "statsColor": "#8B741E",
+    "order": 2
+  },
+  "OTrainLine4": {
+    "name": "Line 4 – Airport Link",
+    "color": "#F3F3F2",
+    "backgroundColor": "#9D9D9D",
+    "textColor": "#111827",
+    "progressOutlineColor": "#F3F3F2",
+    "statsColor": "#F3F3F2",
+    "order": 3
+  }
+}

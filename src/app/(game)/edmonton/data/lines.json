@@ -1,0 +1,29 @@
+{
+  "ETSCapital": {
+    "name": "Capital Line",
+    "color": "#4895D0",
+    "backgroundColor": "#2B5C85",
+    "textColor": "#ffffff",
+    "progressOutlineColor": "#4895D0",
+    "statsColor": "#4895D0",
+    "order": 0
+  },
+  "ETSMetro": {
+    "name": "Metro Line",
+    "color": "#DB1D32",
+    "backgroundColor": "#7A0E1C",
+    "textColor": "#ffffff",
+    "progressOutlineColor": "#DB1D32",
+    "statsColor": "#DB1D32",
+    "order": 1
+  },
+  "ETSValley": {
+    "name": "Valley Line",
+    "color": "#2A6A3B",
+    "backgroundColor": "#1B3F24",
+    "textColor": "#ffffff",
+    "progressOutlineColor": "#2A6A3B",
+    "statsColor": "#2A6A3B",
+    "order": 2
+  }
+}

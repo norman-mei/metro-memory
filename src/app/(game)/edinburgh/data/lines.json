@@ -1,0 +1,10 @@
+{
+  "EdinburghTram": {
+    "name": "Edinburgh Tram",
+    "color": "#910500",
+    "backgroundColor": "#5B0200",
+    "textColor": "#FFFFFF",
+    "progressOutlineColor": "#910500",
+    "order": 0
+  }
+}

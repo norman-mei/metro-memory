@@ -5,6 +5,7 @@ import Image from 'next/image'
 import { Config, DataFeature, DataFeatureCollection, LineGroup } from '@/lib/types'
 import { getStationKey } from '@/lib/stationUtils'
 import { getCompletionColor } from '@/lib/progressColors'
+import { isColorLight } from '@/lib/colorUtils'
 
 type CityStatsPanelProps = {
   cityDisplayName: string
@@ -616,51 +617,58 @@ const CityStatsPanel = ({
         <div className="mt-3 space-y-3">
           {visibleLines
             .sort((a, b) => b.percent - a.percent)
-            .map((line) => (
-              <div
-                key={line.lineId}
-                className="flex gap-3 rounded-2xl border border-zinc-200 bg-white p-3 dark:border-[#18181b] dark:bg-zinc-900"
-              >
-                <div className="flex w-14 flex-shrink-0 items-center justify-center">
-                  <Image
-                    alt={line.lineId}
-                    src={`/images/${line.lineId}.svg`}
-                    width={48}
-                    height={48}
-                    className="h-10 w-10 rounded-full object-contain"
-                  />
-                </div>
-                <div className="flex-1">
-                  <div className="flex flex-wrap items-center justify-between gap-2">
-                    <div>
-                      <p className="text-sm font-semibold text-zinc-900 dark:text-zinc-100">
-                        {line.name}
-                      </p>
-                      <p
-                        className="text-xs font-semibold"
-                        style={{ color: getCompletionColor(line.percent) }}
-                      >
-                        {line.found}/{line.total} ({formatPercent(line.percent)})
-                      </p>
+            .map((line) => {
+              const fillColor = line.color ?? '#4f46e5'
+              const needsContrastBorder = isColorLight(fillColor)
+              return (
+                <div
+                  key={line.lineId}
+                  className="flex gap-3 rounded-2xl border border-zinc-200 bg-white p-3 dark:border-[#18181b] dark:bg-zinc-900"
+                >
+                  <div className="flex w-14 flex-shrink-0 items-center justify-center">
+                    <Image
+                      alt={line.lineId}
+                      src={`/images/${line.lineId}.svg`}
+                      width={48}
+                      height={48}
+                      className="h-10 w-10 rounded-full object-contain"
+                    />
+                  </div>
+                  <div className="flex-1">
+                    <div className="flex flex-wrap items-center justify-between gap-2">
+                      <div>
+                        <p className="text-sm font-semibold text-zinc-900 dark:text-zinc-100">
+                          {line.name}
+                        </p>
+                        <p
+                          className="text-xs font-semibold"
+                          style={{ color: getCompletionColor(line.percent) }}
+                        >
+                          {line.found}/{line.total} ({formatPercent(line.percent)})
+                        </p>
+                      </div>
+                      <div className="text-right text-xs text-zinc-500 dark:text-zinc-400">
+                        {line.durationMs
+                          ? `Active for ${formatDuration(line.durationMs)}`
+                          : 'No time data yet'}
+                      </div>
                     </div>
-                    <div className="text-right text-xs text-zinc-500 dark:text-zinc-400">
-                      {line.durationMs
-                        ? `Active for ${formatDuration(line.durationMs)}`
-                        : 'No time data yet'}
+                    <div className="mt-2 h-2 rounded-full bg-zinc-200 dark:bg-zinc-800">
+                      <div
+                        className="h-full rounded-full"
+                        style={{
+                          width: `${Math.min(100, line.percent * 100)}%`,
+                          backgroundColor: fillColor,
+                          boxShadow: needsContrastBorder
+                            ? 'inset 0 0 0 1px rgba(24,24,27,0.18)'
+                            : undefined,
+                        }}
+                      ></div>
                     </div>
                   </div>
-                  <div className="mt-2 h-2 rounded-full bg-zinc-200 dark:bg-zinc-800">
-                    <div
-                      className="h-full rounded-full"
-                      style={{
-                        width: `${Math.min(100, line.percent * 100)}%`,
-                        backgroundColor: line.color ?? '#4f46e5',
-                      }}
-                    ></div>
-                  </div>
                 </div>
-              </div>
-            ))}
+              )
+            })}
         </div>
       </div>
     )
@@ -710,15 +718,24 @@ const CityStatsPanel = ({
                           </span>
                         </p>
                       </div>
-                      <div className="mt-1 h-2 rounded-full bg-zinc-200 dark:bg-zinc-800">
-                        <div
-                          className="h-full rounded-full"
-                          style={{
-                            width: `${Math.min(100, item.percent * 100)}%`,
-                            backgroundColor: item.accentColor ?? '#6366f1',
-                          }}
-                        ></div>
-                      </div>
+                      {(() => {
+                        const fillColor = item.accentColor ?? '#6366f1'
+                        const needsContrastBorder = isColorLight(fillColor)
+                        return (
+                          <div className="mt-1 h-2 rounded-full bg-zinc-200 dark:bg-zinc-800">
+                            <div
+                              className="h-full rounded-full"
+                              style={{
+                                width: `${Math.min(100, item.percent * 100)}%`,
+                                backgroundColor: fillColor,
+                                boxShadow: needsContrastBorder
+                                  ? 'inset 0 0 0 1px rgba(24,24,27,0.18)'
+                                  : undefined,
+                              }}
+                            ></div>
+                          </div>
+                        )
+                      })()}
                     </div>
                   ),
                 )}

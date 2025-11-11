@@ -1,0 +1,1075 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.76085960529677,
+          45.34754938410538
+        ]
+      },
+      "properties": {
+        "name": "Algonquin",
+        "line": "OTrainLine1",
+        "id": 0,
+        "alternate_names": [
+          "Baseline"
+        ]
+      },
+      "id": 0
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.76973207928847,
+          45.35578332400366
+        ]
+      },
+      "properties": {
+        "name": "Iris",
+        "line": "OTrainLine1",
+        "id": 1
+      },
+      "id": 1
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.78217400924746,
+          45.36575470244815
+        ]
+      },
+      "properties": {
+        "name": "Lincoln Fields",
+        "line": "OTrainLine1",
+        "id": 2
+      },
+      "id": 2
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.77806186137286,
+          45.37411328829575
+        ]
+      },
+      "properties": {
+        "name": "New Orchard",
+        "line": "OTrainLine1",
+        "id": 3
+      },
+      "id": 3
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.77116565241285,
+          45.380986973322564
+        ]
+      },
+      "properties": {
+        "name": "Sherbourne",
+        "line": "OTrainLine1",
+        "id": 4
+      },
+      "id": 4
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.76055315145803,
+          45.39227430564639
+        ]
+      },
+      "properties": {
+        "name": "Dominion",
+        "line": "OTrainLine1",
+        "id": 5,
+        "alternate_names": [
+          "Kichi Zìbì"
+        ]
+      },
+      "id": 5
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.7522486617761,
+          45.39659346767917
+        ]
+      },
+      "properties": {
+        "name": "Westboro",
+        "line": "OTrainLine1",
+        "id": 6
+      },
+      "id": 6
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.73525020806431,
+          45.403741217415394
+        ]
+      },
+      "properties": {
+        "name": "Tunney's Pasture",
+        "line": "OTrainLine1",
+        "id": 7
+      },
+      "id": 7
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.72209015793361,
+          45.40939843895735
+        ]
+      },
+      "properties": {
+        "name": "Bayview",
+        "line": "OTrainLine1",
+        "id": 8
+      },
+      "id": 8
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.71365187468659,
+          45.41369316952482
+        ]
+      },
+      "properties": {
+        "name": "Pimisi",
+        "line": "OTrainLine1",
+        "id": 9
+      },
+      "id": 9
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.70515335099245,
+          45.41870233237823
+        ]
+      },
+      "properties": {
+        "name": "Lyon",
+        "line": "OTrainLine1",
+        "id": 10
+      },
+      "id": 10
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.69914388899208,
+          45.421309965610135
+        ]
+      },
+      "properties": {
+        "name": "Parliament",
+        "line": "OTrainLine1",
+        "id": 11
+      },
+      "id": 11
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.69203618479965,
+          45.426100983744576
+        ]
+      },
+      "properties": {
+        "name": "Rideau",
+        "line": "OTrainLine1",
+        "id": 12
+      },
+      "id": 12
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.68278465217757,
+          45.420791010491534
+        ]
+      },
+      "properties": {
+        "name": "uOttawa",
+        "line": "OTrainLine1",
+        "id": 13
+      },
+      "id": 13
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.67050352583786,
+          45.416378668191975
+        ]
+      },
+      "properties": {
+        "name": "Lees",
+        "line": "OTrainLine1",
+        "id": 14
+      },
+      "id": 14
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.6642373061434,
+          45.412458224327615
+        ]
+      },
+      "properties": {
+        "name": "Hurdman",
+        "line": "OTrainLine1",
+        "id": 15
+      },
+      "id": 15
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.65345190018607,
+          45.41695995329704
+        ]
+      },
+      "properties": {
+        "name": "Tremblay",
+        "line": "OTrainLine1",
+        "id": 16
+      },
+      "id": 16
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.63811901466963,
+          45.42062532387166
+        ]
+      },
+      "properties": {
+        "name": "St-Laurent",
+        "line": "OTrainLine1",
+        "id": 17
+      },
+      "id": 17
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.62640314759369,
+          45.42278565819117
+        ]
+      },
+      "properties": {
+        "name": "Cyrville",
+        "line": "OTrainLine1",
+        "id": 18
+      },
+      "id": 18
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.60866567287891,
+          45.43090452885152
+        ]
+      },
+      "properties": {
+        "name": "Blair",
+        "line": "OTrainLine1",
+        "id": 19
+      },
+      "id": 19
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.5836300560974,
+          45.45144297737013
+        ]
+      },
+      "properties": {
+        "name": "Montréal",
+        "line": "OTrainLine1",
+        "id": 20
+      },
+      "id": 20
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.54603894871359,
+          45.46911713133533
+        ]
+      },
+      "properties": {
+        "name": "Jeanne d'Arc",
+        "line": "OTrainLine1",
+        "id": 21
+      },
+      "id": 21
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.53412846018988,
+          45.47368297067839
+        ]
+      },
+      "properties": {
+        "name": "Convent Glen",
+        "line": "OTrainLine1",
+        "id": 22
+      },
+      "id": 22
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.51909109709167,
+          45.479447224858895
+        ]
+      },
+      "properties": {
+        "name": "Place d'Orléans",
+        "line": "OTrainLine1",
+        "id": 23
+      },
+      "id": 23
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.48188183114902,
+          45.49537695492604
+        ]
+      },
+      "properties": {
+        "name": "Trim",
+        "line": "OTrainLine1",
+        "id": 24
+      },
+      "id": 24
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.72209015793361,
+          45.40939843895735
+        ]
+      },
+      "properties": {
+        "name": "Bayview",
+        "line": "OTrainLine2",
+        "id": 25
+      },
+      "id": 25
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.71478908705554,
+          45.40442170593081
+        ]
+      },
+      "properties": {
+        "name": "Corso Italia",
+        "line": "OTrainLine2",
+        "id": 26
+      },
+      "id": 26
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.70966380394985,
+          45.39767563903713
+        ]
+      },
+      "properties": {
+        "name": "Dow's Lake",
+        "line": "OTrainLine2",
+        "id": 27
+      },
+      "id": 27
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.69600658787942,
+          45.38555713899745
+        ]
+      },
+      "properties": {
+        "name": "Carleton",
+        "line": "OTrainLine2",
+        "id": 28
+      },
+      "id": 28
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.68518491590214,
+          45.377017008143454
+        ]
+      },
+      "properties": {
+        "name": "Mooney's Bay",
+        "line": "OTrainLine2",
+        "id": 29
+      },
+      "id": 29
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.66599573620785,
+          45.3688372256331
+        ]
+      },
+      "properties": {
+        "name": "Walkley",
+        "line": "OTrainLine2",
+        "id": 30
+      },
+      "id": 30
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.6592440488108,
+          45.35982379008093
+        ]
+      },
+      "properties": {
+        "name": "Greenboro",
+        "line": "OTrainLine2",
+        "id": 31
+      },
+      "id": 31
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.65556699783811,
+          45.353531080316316
+        ]
+      },
+      "properties": {
+        "name": "South Keys",
+        "line": "OTrainLine2",
+        "id": 32
+      },
+      "id": 32
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.63196005867664,
+          45.31402125377209
+        ]
+      },
+      "properties": {
+        "name": "Leitrim",
+        "line": "OTrainLine2",
+        "id": 33
+      },
+      "id": 33
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.63261427177709,
+          45.29338017253431
+        ]
+      },
+      "properties": {
+        "name": "Bowesville",
+        "line": "OTrainLine2",
+        "id": 34
+      },
+      "id": 34
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.66630190379759,
+          45.27767258651033
+        ]
+      },
+      "properties": {
+        "name": "Limebank",
+        "line": "OTrainLine2",
+        "id": 35
+      },
+      "id": 35
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.83738756843643,
+          45.34090017852192
+        ]
+      },
+      "properties": {
+        "name": "Moodie",
+        "line": "OTrainLine3",
+        "id": 36
+      },
+      "id": 36
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.80937568558491,
+          45.34573208616416
+        ]
+      },
+      "properties": {
+        "name": "Bayshore",
+        "line": "OTrainLine3",
+        "id": 37
+      },
+      "id": 37
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.79088682655339,
+          45.349710340441646
+        ]
+      },
+      "properties": {
+        "name": "Pinecrest",
+        "line": "OTrainLine3",
+        "id": 38
+      },
+      "id": 38
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.7822617388628,
+          45.35413936328917
+        ]
+      },
+      "properties": {
+        "name": "Queensview",
+        "line": "OTrainLine3",
+        "id": 39
+      },
+      "id": 39
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.78217400924746,
+          45.36575470244815
+        ]
+      },
+      "properties": {
+        "name": "Lincoln Fields",
+        "line": "OTrainLine3",
+        "id": 40
+      },
+      "id": 40
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.77806186137286,
+          45.37411328829575
+        ]
+      },
+      "properties": {
+        "name": "New Orchard",
+        "line": "OTrainLine3",
+        "id": 41
+      },
+      "id": 41
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.77116565241285,
+          45.380986973322564
+        ]
+      },
+      "properties": {
+        "name": "Sherbourne",
+        "line": "OTrainLine3",
+        "id": 42
+      },
+      "id": 42
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.76055315145803,
+          45.39227430564639
+        ]
+      },
+      "properties": {
+        "name": "Dominion",
+        "line": "OTrainLine3",
+        "id": 43,
+        "alternate_names": [
+          "Kichi Zìbì"
+        ]
+      },
+      "id": 43
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.7522486617761,
+          45.39659346767917
+        ]
+      },
+      "properties": {
+        "name": "Westboro",
+        "line": "OTrainLine3",
+        "id": 44
+      },
+      "id": 44
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.73525020806431,
+          45.403741217415394
+        ]
+      },
+      "properties": {
+        "name": "Tunney's Pasture",
+        "line": "OTrainLine3",
+        "id": 45
+      },
+      "id": 45
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.72209015793361,
+          45.40939843895735
+        ]
+      },
+      "properties": {
+        "name": "Bayview",
+        "line": "OTrainLine3",
+        "id": 46
+      },
+      "id": 46
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.71365187468659,
+          45.41369316952482
+        ]
+      },
+      "properties": {
+        "name": "Pimisi",
+        "line": "OTrainLine3",
+        "id": 47
+      },
+      "id": 47
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.70515335099245,
+          45.41870233237823
+        ]
+      },
+      "properties": {
+        "name": "Lyon",
+        "line": "OTrainLine3",
+        "id": 48
+      },
+      "id": 48
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.69914388899208,
+          45.421309965610135
+        ]
+      },
+      "properties": {
+        "name": "Parliament",
+        "line": "OTrainLine3",
+        "id": 49
+      },
+      "id": 49
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.69203618479965,
+          45.426100983744576
+        ]
+      },
+      "properties": {
+        "name": "Rideau",
+        "line": "OTrainLine3",
+        "id": 50
+      },
+      "id": 50
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.68278465217757,
+          45.420791010491534
+        ]
+      },
+      "properties": {
+        "name": "uOttawa",
+        "line": "OTrainLine3",
+        "id": 51
+      },
+      "id": 51
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.67050352583786,
+          45.416378668191975
+        ]
+      },
+      "properties": {
+        "name": "Lees",
+        "line": "OTrainLine3",
+        "id": 52
+      },
+      "id": 52
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.6642373061434,
+          45.412458224327615
+        ]
+      },
+      "properties": {
+        "name": "Hurdman",
+        "line": "OTrainLine3",
+        "id": 53
+      },
+      "id": 53
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.65345190018607,
+          45.41695995329704
+        ]
+      },
+      "properties": {
+        "name": "Tremblay",
+        "line": "OTrainLine3",
+        "id": 54
+      },
+      "id": 54
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.63811901466963,
+          45.42062532387166
+        ]
+      },
+      "properties": {
+        "name": "St-Laurent",
+        "line": "OTrainLine3",
+        "id": 55
+      },
+      "id": 55
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.62640314759369,
+          45.42278565819117
+        ]
+      },
+      "properties": {
+        "name": "Cyrville",
+        "line": "OTrainLine3",
+        "id": 56
+      },
+      "id": 56
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.60866567287891,
+          45.43090452885152
+        ]
+      },
+      "properties": {
+        "name": "Blair",
+        "line": "OTrainLine3",
+        "id": 57
+      },
+      "id": 57
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.5836300560974,
+          45.45144297737013
+        ]
+      },
+      "properties": {
+        "name": "Montréal",
+        "line": "OTrainLine3",
+        "id": 58
+      },
+      "id": 58
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.54603894871359,
+          45.46911713133533
+        ]
+      },
+      "properties": {
+        "name": "Jeanne d'Arc",
+        "line": "OTrainLine3",
+        "id": 59
+      },
+      "id": 59
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.53412846018988,
+          45.47368297067839
+        ]
+      },
+      "properties": {
+        "name": "Convent Glen",
+        "line": "OTrainLine3",
+        "id": 60
+      },
+      "id": 60
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.51909109709167,
+          45.479447224858895
+        ]
+      },
+      "properties": {
+        "name": "Place d'Orléans",
+        "line": "OTrainLine3",
+        "id": 61
+      },
+      "id": 61
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.48188183114902,
+          45.49537695492604
+        ]
+      },
+      "properties": {
+        "name": "Trim",
+        "line": "OTrainLine3",
+        "id": 62
+      },
+      "id": 62
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.65556699783811,
+          45.353531080316316
+        ]
+      },
+      "properties": {
+        "name": "South Keys",
+        "line": "OTrainLine4",
+        "id": 63
+      },
+      "id": 63
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.65588212058992,
+          45.333025232703314
+        ]
+      },
+      "properties": {
+        "name": "Uplands",
+        "line": "OTrainLine4",
+        "id": 64
+      },
+      "id": 64
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.66874004666383,
+          45.3237504366147
+        ]
+      },
+      "properties": {
+        "name": "Airport",
+        "line": "OTrainLine4",
+        "id": 65,
+        "alternate_names": [
+          "Ottawa/Macdonald–Cartier International Airport",
+          "Ottawa International Airport",
+          "YOW"
+        ]
+      },
+      "id": 65
+    }
+  ]
+}

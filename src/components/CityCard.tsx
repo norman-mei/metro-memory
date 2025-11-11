@@ -12,15 +12,7 @@ import useTranslation from '@/hooks/useTranslation'
 
 export type CityCardVariant = 'comfortable' | 'compact' | 'cover' | 'list'
 
-const UNAVAILABLE_CITY_SLUGS = new Set([
-  'galveston',
-  'beijing',
-  'dongguan',
-  'guangzhou',
-  'shanghai',
-  'shenzhen',
-  'omaha',
-])
+const UNAVAILABLE_CITY_SLUGS = new Set(['omaha'])
 
 const getSlugFromLink = (link: string) => {
   if (!link.startsWith('/')) {

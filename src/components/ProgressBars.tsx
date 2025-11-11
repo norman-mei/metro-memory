@@ -7,6 +7,8 @@ import { useConfig } from '@/lib/configContext'
 import OverflowMarquee from '@/components/OverflowMarquee'
 import { useTheme } from 'next-themes'
 import { getCompletionColor } from '@/lib/progressColors'
+import clsx from 'clsx'
+import { isColorLight } from '@/lib/colorUtils'
 
 const cleanupLineName = (name?: string) => {
   if (!name) return ''
@@ -95,6 +97,15 @@ const ProgressBars = ({
     const title = `${displayName} - ${found}/${total}`
     const customProgressColor = meta.progressOutlineColor
     const progressColor = customProgressColor ?? meta.color ?? '#000000'
+    const needsContrastBoost = gaugeMode === 'inverted' && !isDark && isColorLight(progressColor)
+    const gaugeBackground =
+      gaugeMode === 'inverted'
+        ? isDark
+          ? '#27272a'
+          : needsContrastBoost
+            ? '#e4e4e7'
+            : '#ffffff'
+        : meta.color
     const percentComplete = total > 0 ? found / total : 0
     const completionColor = getCompletionColor(percentComplete)
 
@@ -104,17 +115,17 @@ const ProgressBars = ({
           title={title}
           className="relative flex h-8 w-8 shrink-0 items-center justify-center"
         >
-          <div className="absolute h-full w-full rounded-full shadow dark:shadow-black/40">
+          <div
+            className={clsx(
+              'absolute h-full w-full rounded-full shadow dark:shadow-black/40',
+              needsContrastBoost && 'ring-1 ring-zinc-200',
+            )}
+          >
             <CircularProgressbar
               background
               backgroundPadding={2}
               styles={buildStyles({
-                backgroundColor:
-                  gaugeMode === 'inverted'
-                    ? isDark
-                      ? '#27272a'
-                      : '#ffffff'
-                    : meta.color,
+                backgroundColor: gaugeBackground,
                 pathColor:
                   gaugeMode === 'inverted'
                     ? progressColor

@@ -2630,7 +2630,7 @@
       },
       "properties": {
         "line": "VancouverWestCoastExpressWce",
-        "name": "WCE",
+        "name": "West Coast Express",
         "color": "#77278D",
         "order": 4
       }
@@ -5268,7 +5268,7 @@
       },
       "properties": {
         "line": "VancouverWestCoastExpressWce",
-        "name": "WCE",
+        "name": "West Coast Express",
         "color": "#77278D",
         "order": 4
       }
@@ -5336,6 +5336,30 @@
       "geometry": {
         "type": "LineString",
         "coordinates": [
+          [
+            -123.15286076823101,
+            49.263931569001095
+          ],
+          [
+            -123.13822894101378,
+            49.26370979753404
+          ],
+          [
+            -123.1245663909718,
+            49.263342404761666
+          ],
+          [
+            -123.11440798753716,
+            49.263112131518476
+          ],
+          [
+            -123.10061381947656,
+            49.262681878656274
+          ],
+          [
+            -123.09513621279113,
+            49.267179447377636
+          ],
           [
             -123.079053,
             49.265802

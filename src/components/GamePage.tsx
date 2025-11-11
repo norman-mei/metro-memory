@@ -1562,6 +1562,7 @@ export default function GamePage({
 
       const ROUTES_SOURCE_ID = 'game-routes'
       const ROUTES_LAYER_ID = 'game-routes-line'
+      const ROUTES_LAYER_CASING_ID = 'game-routes-line-casing'
 
       ensureRouteLayers = () => {
         if (!MAP_FROM_DATA || !routes) {
@@ -1569,9 +1570,35 @@ export default function GamePage({
         }
 
         const routeData = JSON.parse(JSON.stringify(routes))
+        const lineWidthExpression: any = [
+          'interpolate',
+          ['linear'],
+          ['zoom'],
+          9,
+          2.5,
+          16,
+          6,
+          22,
+          8,
+        ]
+        const casingLineWidthExpression: any = [
+          'interpolate',
+          ['linear'],
+          ['zoom'],
+          9,
+          3.2,
+          16,
+          7,
+          22,
+          9.5,
+        ]
+        const lineOffsetExpression: any = ['match', ['get', 'line'], '', 2, 0]
 
         if (mapboxMap.getLayer(ROUTES_LAYER_ID)) {
           mapboxMap.removeLayer(ROUTES_LAYER_ID)
+        }
+        if (mapboxMap.getLayer(ROUTES_LAYER_CASING_ID)) {
+          mapboxMap.removeLayer(ROUTES_LAYER_CASING_ID)
         }
         if (mapboxMap.getSource(ROUTES_SOURCE_ID)) {
           mapboxMap.removeSource(ROUTES_SOURCE_ID)
@@ -1584,20 +1611,27 @@ export default function GamePage({
 
         try {
           mapboxMap.addLayer({
+            id: ROUTES_LAYER_CASING_ID,
+            type: 'line',
+            paint: {
+              'line-width': casingLineWidthExpression,
+              'line-color': 'rgba(24,24,27,0.45)',
+              'line-opacity': 0.6,
+              'line-offset': lineOffsetExpression,
+            },
+            layout: {
+              'line-sort-key': ['-', 100, ['get', 'order']],
+              'line-cap': 'round',
+              'line-join': 'round',
+            },
+            source: ROUTES_SOURCE_ID,
+          })
+
+          mapboxMap.addLayer({
             id: ROUTES_LAYER_ID,
             type: 'line',
             paint: {
-              'line-width': [
-                'interpolate',
-                ['linear'],
-                ['zoom'],
-                9,
-                2.5,
-                16,
-                6,
-                22,
-                8,
-              ],
+              'line-width': lineWidthExpression,
               'line-color': [
                 'case',
                 ['has', 'color'],
@@ -1605,7 +1639,7 @@ export default function GamePage({
                 '#1d2835',
               ],
               'line-opacity': 0.9,
-              'line-offset': ['match', ['get', 'line'], '', 2, 0],
+              'line-offset': lineOffsetExpression,
             },
             layout: {
               'line-sort-key': ['-', 100, ['get', 'order']],

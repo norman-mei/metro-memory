@@ -23,8 +23,16 @@ import AchievementIcon from '@/components/AchievementIcon'
 import SettingsPanel from '@/components/SettingsPanel'
 import AccountDashboard from '@/app/(website)/account/panel'
 import useTranslation from '@/hooks/useTranslation'
+import { useAuth } from '@/context/AuthContext'
 
-type CitySortOption = 'default' | 'name-asc' | 'name-desc' | 'continent-asc' | 'continent-desc'
+type CitySortOption =
+  | 'default'
+  | 'name-asc'
+  | 'name-desc'
+  | 'continent-asc'
+  | 'continent-desc'
+  | 'progress-not-played'
+  | 'progress-played'
 type AchievementSortOption =
   | 'default'
   | 'name-asc'
@@ -42,6 +50,8 @@ const CITY_SORT_OPTIONS: Array<{ value: CitySortOption; label: string }> = [
   { value: 'name-desc', label: 'Name (Z-A)' },
   { value: 'continent-asc', label: 'Continent (A-Z)' },
   { value: 'continent-desc', label: 'Continent (Z-A)' },
+  { value: 'progress-not-played', label: 'Not yet played (0 to 100%)' },
+  { value: 'progress-played', label: 'Played already (100 to 0%)' },
 ]
 
 const ACHIEVEMENT_SORT_OPTIONS: Array<{ value: AchievementSortOption; label: string }> = [
@@ -278,6 +288,8 @@ const SearcheableCitiesList = ({
     status: 'idle',
     entries: [],
   })
+  const { progressSummaries } = useAuth()
+  const [cityProgress, setCityProgress] = useState<Record<string, number>>({})
 
   const enrichedCities = useMemo(() => enrichCities(cities), [])
   const cityAchievementCatalog = useMemo(() => {
@@ -344,11 +356,80 @@ const SearcheableCitiesList = ({
     [achievementCatalog],
   )
 
+  const computeCityProgress = useCallback(() => {
+    if (typeof window === 'undefined') {
+      return
+    }
+    const next: Record<string, number> = {}
+    enrichedCities.forEach((city) => {
+      const slug = getSlugFromLink(city.link)
+      if (!slug) {
+        return
+      }
+      const totalRaw = window.localStorage.getItem(`${slug}-station-total`)
+      const total = Number(totalRaw)
+      const totalStations = Number.isFinite(total) && total > 0 ? total : null
+      let foundCount = 0
+      const stored = window.localStorage.getItem(`${slug}-stations`)
+      if (stored) {
+        try {
+          const parsed = JSON.parse(stored)
+          if (Array.isArray(parsed)) {
+            foundCount = new Set(parsed.filter((value) => typeof value === 'number')).size
+          } else if (typeof parsed === 'number') {
+            foundCount = parsed
+          }
+        } catch {
+          foundCount = 0
+        }
+      }
+      const remoteFound = progressSummaries[slug]
+      if (typeof remoteFound === 'number') {
+        foundCount = remoteFound
+      }
+      let ratio = 0
+      if (totalStations && totalStations > 0) {
+        ratio = Math.max(0, Math.min(1, foundCount / totalStations))
+      } else if (foundCount > 0) {
+        ratio = 1
+      }
+      next[slug] = ratio
+    })
+    setCityProgress(next)
+  }, [enrichedCities, progressSummaries])
+
+  useEffect(() => {
+    computeCityProgress()
+  }, [computeCityProgress])
+
+  useEffect(() => {
+    if (typeof window === 'undefined') {
+      return
+    }
+    const handleProgressUpdate = () => {
+      computeCityProgress()
+    }
+    window.addEventListener('storage', handleProgressUpdate)
+    window.addEventListener('focus', handleProgressUpdate)
+    return () => {
+      window.removeEventListener('storage', handleProgressUpdate)
+      window.removeEventListener('focus', handleProgressUpdate)
+    }
+  }, [computeCityProgress])
+
   const sortedCities = useMemo(() => {
     const compareName = (a: ICity, b: ICity) => a.name.localeCompare(b.name)
     const compareContinent = (a: ICity, b: ICity) => {
       const result = a.continent.localeCompare(b.continent)
       return result !== 0 ? result : compareName(a, b)
+    }
+    const getProgress = (city: ICity) => {
+      const slug = getSlugFromLink(city.link)
+      if (!slug) {
+        return 0
+      }
+      const value = cityProgress[slug]
+      return Number.isFinite(value) ? value : 0
     }
     const baseline = [...enrichedCities]
     switch (citySort) {
@@ -360,11 +441,27 @@ const SearcheableCitiesList = ({
         return baseline.sort(compareContinent)
       case 'continent-desc':
         return baseline.sort((a, b) => compareContinent(b, a))
+      case 'progress-not-played':
+        return baseline.sort((a, b) => {
+          const diff = getProgress(a) - getProgress(b)
+          if (Math.abs(diff) > 0.0001) {
+            return diff
+          }
+          return compareName(a, b)
+        })
+      case 'progress-played':
+        return baseline.sort((a, b) => {
+          const diff = getProgress(b) - getProgress(a)
+          if (Math.abs(diff) > 0.0001) {
+            return diff
+          }
+          return compareName(a, b)
+        })
       case 'default':
       default:
         return baseline.sort(compareName)
     }
-  }, [enrichedCities, citySort])
+  }, [enrichedCities, cityProgress, citySort])
 
   const continentOrder = useMemo(
     () => ['North America', 'South America', 'Europe', 'Asia', 'Australia', 'Africa', 'Oceania', 'Antarctica'],

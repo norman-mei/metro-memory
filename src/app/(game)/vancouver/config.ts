@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 import { MapboxOptions } from 'mapbox-gl'
-import { Config, Line } from '@/lib/types'
+import { Config, Line, LineGroup } from '@/lib/types'
 
 export const BEG_THRESHOLD = 0.5
 
@@ -29,13 +29,35 @@ export const LINES: {
     order: 2,
   },
   VancouverWestCoastExpressWce: {
-    name: 'WCE',
+    name: 'West Coast Express',
     color: '#77278D',
     backgroundColor: '#3B1447',
     textColor: '#ffffff',
     order: 3,
   },
 }
+
+export const LINE_GROUPS: LineGroup[] = [
+  {
+    title: 'South Coast British Columbia Transportation Authority (TransLink)',
+    items: [
+      {
+        type: 'lines',
+        title: 'SkyTrain',
+        lines: [
+          'VancouverSkytrainCanadaLine',
+          'VancouverSkytrainExpoLine',
+          'VancouverSkytrainMillenniumLine',
+        ],
+      },
+      {
+        type: 'lines',
+        title: 'West Coast Express (WCE)',
+        lines: ['VancouverWestCoastExpressWce'],
+      },
+    ],
+  },
+]
 
 export const METADATA: Metadata = {
   title: 'Vancouver Metro Memory',
@@ -82,6 +104,7 @@ const config: Config = {
   MAP_CONFIG,
   METADATA,
   LINES,
+  LINE_GROUPS,
   BEG_THRESHOLD,
 }
 
