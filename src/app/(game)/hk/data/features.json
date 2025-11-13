@@ -4822,8 +4822,8 @@
       },
       "properties": {
         "id": 135,
-        "name": "Tung Chung (東涌纜車站)",
-        "long_name": "東涌纜車站 Tung Chung",
+        "name": "Tung Chung (東涌)",
+        "long_name": "東涌 Tung Chung",
         "alternate_names": [
           "Tung Chung",
           "Tung Chung Station",
@@ -4834,8 +4834,12 @@
           "TungChung",
           "TungChung Station",
           "TungChung station",
-          "dong chong lanche zhan",
-          "dung1 cung1 laam6 ce1 zaam6",
+          "dong chong",
+          "dong-chong",
+          "dongchong",
+          "dung cung",
+          "dung-cung",
+          "dungcung",
           "tung chung",
           "tung chung Station",
           "tung chung station",
@@ -4845,12 +4849,10 @@
           "tungchung",
           "tungchung Station",
           "tungchung station",
-          "东涌缆车站",
-          "东涌缆车站站",
+          "东涌",
+          "东涌站",
           "東涌",
-          "東涌站",
-          "東涌纜車站",
-          "東涌纜車站站"
+          "東涌站"
         ],
         "line": "HKNP360",
         "order": 0

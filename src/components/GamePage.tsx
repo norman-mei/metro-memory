@@ -41,7 +41,11 @@ import SettingsPanel from '@/components/SettingsPanel'
 import Link from 'next/link'
 import { getStationKey } from '@/lib/stationUtils'
 import CityStatsPanel from '@/components/CityStatsPanel'
-import { shouldAutoRevealSolutions } from '@/lib/solutionsAccess'
+import {
+  shouldAutoRevealSolutions,
+  clearAutoRevealSuppressionForCity,
+  suppressAutoRevealForCity,
+} from '@/lib/solutionsAccess'
 
 const CONNECTOR_CONFIG = [
   { delimiter: ' - ', joiner: ' - ' },
@@ -139,6 +143,7 @@ const MANUAL_ALTERNATE_NAMES: Record<string, string[]> = {
     'Court Square - 23 St',
     'Court Square - 23rd St',
   ],
+  'Disneyland Resort (迪士尼)': ['Disneyland', 'Hong Kong Disneyland'],
   'Lexington Av/53 St': [
     'Lex Av/53 St',
     'Lexington Ave/53 St',
@@ -287,6 +292,41 @@ const MANUAL_COMPLEX_GROUPS: ManualComplexSelector[][] = [
     { name: 'Concourse T', line: 'atlantaTPT' },
     { name: 'Airport', line: 'MARTARD' },
   ],
+  [
+    { name: 'Airport (機場)', line: 'AEL' },
+    { name: 'Terminal 2 Interchange (二號客運大樓站)', line: 'HKAPMT1' },
+    { name: 'Terminal 2 Interchange (二號客運大樓站)', line: 'HKAPMT2' },
+    { name: 'Terminal 2 Interchange (二號客運大樓站)', line: 'HKAPMSKY' },
+  ],
+  [
+    { name: 'Hong Kong West Kowloon (香港西九龍)', line: 'XRL' },
+    { name: 'Kowloon (九龍)', line: 'TCL' },
+    { name: 'Kowloon (九龍)', line: 'AEL' },
+    { name: 'Austin (柯士甸)', line: 'TML' },
+  ],
+  [
+    { name: 'Tsim Sha Tsui (尖沙咀)', line: 'TWL' },
+    { name: 'East Tsim Sha Tsui (尖東)', line: 'TML' },
+  ],
+  [
+    { name: 'Tuen Mun South (屯門南)', line: 'TML' },
+    { name: 'Tuen Mun Ferry Pier (屯門碼頭)', line: 'MTR507' },
+    { name: 'Tuen Mun Ferry Pier (屯門碼頭)', line: 'MTR610' },
+    { name: 'Tuen Mun Ferry Pier (屯門碼頭)', line: 'MTR614' },
+    { name: 'Tuen Mun Ferry Pier (屯門碼頭)', line: 'MTR614P' },
+    { name: 'Tuen Mun Ferry Pier (屯門碼頭)', line: 'MTR615' },
+    { name: 'Tuen Mun Ferry Pier (屯門碼頭)', line: 'MTR615P' },
+    { name: 'Siu Hei (兆禧)', line: 'MTR507' },
+    { name: 'Siu Hei (兆禧)', line: 'MTR614' },
+    { name: 'Siu Hei (兆禧)', line: 'MTR614P' },
+  ],
+  [
+    { name: 'Ho Tin (河田)', line: 'MTR507' },
+    { name: 'Tuen Mun (屯門)', line: 'TML' },
+    { name: 'Tuen Mun (屯門)', line: 'MTR505' },
+    { name: 'Tuen Mun (屯門)', line: 'MTR507' },
+    { name: 'Tuen Mun (屯門)', line: 'MTR751' },
+  ],
 ]
 
 const DIRECTIONAL_ABBREVIATIONS: Record<string, string> = {
@@ -295,6 +335,17 @@ const DIRECTIONAL_ABBREVIATIONS: Record<string, string> = {
   north: 'N',
   south: 'S',
 }
+
+const CARDINAL_DIRECTIONS = Object.keys(DIRECTIONAL_ABBREVIATIONS)
+const CARDINAL_DIRECTIONS_PATTERN = CARDINAL_DIRECTIONS.join('|')
+const DIRECTION_SUFFIX_REGEX = new RegExp(
+  `^(.*\\S)\\s+(${CARDINAL_DIRECTIONS_PATTERN})$`,
+  'i',
+)
+const DIRECTION_PREFIX_REGEX = new RegExp(
+  `^(${CARDINAL_DIRECTIONS_PATTERN})\\s+(.*\\S)$`,
+  'i',
+)
 
 const STREET_SEGMENT_KEYWORDS = [
   ' st',
@@ -371,6 +422,30 @@ const generateAlternateNames = (name?: string): string[] => {
   const canonical = directionalName
 
   const alternates = new Set<string>()
+  const englishPortion = trimmed.replace(/\s*\(.*?\)\s*$/, '').trim()
+
+  const formatDirection = (direction: string) =>
+    direction.charAt(0).toUpperCase() + direction.slice(1).toLowerCase()
+
+  if (englishPortion) {
+    const suffixMatch = englishPortion.match(DIRECTION_SUFFIX_REGEX)
+    if (suffixMatch) {
+      const baseSegment = suffixMatch[1]?.replace(/\s+/g, ' ').trim()
+      const directionSegment = suffixMatch[2]
+      if (baseSegment && directionSegment) {
+        alternates.add(`${formatDirection(directionSegment)} ${baseSegment}`)
+      }
+    }
+
+    const prefixMatch = englishPortion.match(DIRECTION_PREFIX_REGEX)
+    if (prefixMatch) {
+      const directionSegment = prefixMatch[1]
+      const baseSegment = prefixMatch[2]?.replace(/\s+/g, ' ').trim()
+      if (baseSegment && directionSegment) {
+        alternates.add(`${baseSegment} ${formatDirection(directionSegment)}`)
+      }
+    }
+  }
 
   if (directionalName !== trimmed) {
     alternates.add(directionalName)
@@ -1029,13 +1104,14 @@ export default function GamePage({
         }
       }
 
+      if (syncTimeoutRef.current) {
+        clearTimeout(syncTimeoutRef.current)
+        syncTimeoutRef.current = null
+      }
+
       if (immediate) {
         await send()
         return
-      }
-
-      if (syncTimeoutRef.current) {
-        clearTimeout(syncTimeoutRef.current)
       }
 
       syncTimeoutRef.current = setTimeout(() => {
@@ -1152,8 +1228,21 @@ export default function GamePage({
     })
   }, [found, setFoundTimestamps])
 
+  const clearStoredProgress = useCallback(() => {
+    if (typeof window === 'undefined') {
+      return
+    }
+    try {
+      window.localStorage.removeItem(`${CITY_NAME}-stations`)
+      window.localStorage.removeItem(`${CITY_NAME}-stations-found-at`)
+    } catch {
+      // ignore storage errors
+    }
+  }, [CITY_NAME])
+
   const onReset = useCallback(() => {
     if (confirm(t('restartWarning'))) {
+      suppressAutoRevealForCity(CITY_NAME)
       if (map && map.getSource('features')) {
         map.removeFeatureState({ source: 'features' })
       }
@@ -1167,6 +1256,8 @@ export default function GamePage({
       setMobileSidebarOpen(false)
       setHoveredId(null)
       setActiveFoundId(null)
+      clearStoredProgress()
+      void submitProgress([], {}, true)
       setTimeout(() => {
         inputRef.current?.focus()
       }, 0)
@@ -1184,7 +1275,11 @@ export default function GamePage({
     setMobileSidebarOpen,
     setHoveredId,
     setActiveFoundId,
+    clearStoredProgress,
+    submitProgress,
     inputRef,
+    CITY_NAME,
+    suppressAutoRevealForCity,
   ])
 
   const foundStationsPerLine = useMemo(() => {
@@ -1279,6 +1374,7 @@ export default function GamePage({
 
   const handleRevealSolutions = useCallback(() => {
     if (solutionsUnlocked) {
+      clearAutoRevealSuppressionForCity(CITY_NAME)
       revealAllStations()
       setTimeout(() => {
         inputRef.current?.focus()
@@ -1290,11 +1386,13 @@ export default function GamePage({
     setSolutionsError(false)
     setSolutionsPromptOpen(true)
   }, [
+    CITY_NAME,
     solutionsUnlocked,
     revealAllStations,
     setSolutionsPassword,
     setSolutionsError,
     setSolutionsPromptOpen,
+    clearAutoRevealSuppressionForCity,
   ])
 
   const handleSolutionsClose = useCallback(() => {
@@ -1332,6 +1430,7 @@ export default function GamePage({
           setSolutionsError(true)
           return
         }
+        clearAutoRevealSuppressionForCity(CITY_NAME)
         setSolutionsUnlocked(true)
         revealAllStations()
         setSolutionsPromptOpen(false)
@@ -1348,11 +1447,13 @@ export default function GamePage({
       }
     },
     [
+      CITY_NAME,
       solutionsPassword,
       revealAllStations,
       setSolutionsPromptOpen,
       setSolutionsPassword,
       setSolutionsError,
+      clearAutoRevealSuppressionForCity,
     ],
   )
 
@@ -1367,7 +1468,7 @@ export default function GamePage({
       setSolutionsUnlocked(true)
       revealAllStations()
     }
-  }, [CITY_NAME, revealAllStations])
+  }, [CITY_NAME, revealAllStations, setSolutionsUnlocked])
 
   const fuse = useMemo(
     () =>

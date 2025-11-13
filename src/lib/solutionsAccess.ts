@@ -1,5 +1,6 @@
 const ACCESS_KEY = 'global-solutions-access-granted'
 const SELECTION_KEY = 'global-solutions-selection'
+const AUTO_REVEAL_SUPPRESSION_KEY = 'solutions-auto-reveal-suppressed'
 
 export type SolutionsSelection = {
   mode: 'all' | 'custom'
@@ -12,6 +13,77 @@ const DEFAULT_SELECTION: SolutionsSelection = {
 }
 
 const isBrowser = () => typeof window !== 'undefined'
+
+const readSuppressedSet = () => {
+  if (!isBrowser()) {
+    return new Set<string>()
+  }
+  const raw = window.localStorage.getItem(AUTO_REVEAL_SUPPRESSION_KEY)
+  if (!raw) {
+    return new Set<string>()
+  }
+  try {
+    const parsed = JSON.parse(raw)
+    if (Array.isArray(parsed)) {
+      return new Set(
+        parsed.filter((entry): entry is string => typeof entry === 'string' && entry.length > 0),
+      )
+    }
+  } catch {
+    // ignore malformed entries
+  }
+  return new Set<string>()
+}
+
+const writeSuppressedSet = (set: Set<string>) => {
+  if (!isBrowser()) {
+    return
+  }
+  if (set.size === 0) {
+    window.localStorage.removeItem(AUTO_REVEAL_SUPPRESSION_KEY)
+    return
+  }
+  window.localStorage.setItem(AUTO_REVEAL_SUPPRESSION_KEY, JSON.stringify(Array.from(set)))
+}
+
+const isAutoRevealSuppressed = (citySlug: string) => {
+  const normalized = (citySlug ?? '').trim()
+  if (!normalized) {
+    return false
+  }
+  return readSuppressedSet().has(normalized)
+}
+
+export const suppressAutoRevealForCity = (citySlug: string) => {
+  if (!isBrowser()) {
+    return
+  }
+  const normalized = (citySlug ?? '').trim()
+  if (!normalized) {
+    return
+  }
+  const suppressed = readSuppressedSet()
+  if (suppressed.has(normalized)) {
+    return
+  }
+  suppressed.add(normalized)
+  writeSuppressedSet(suppressed)
+}
+
+export const clearAutoRevealSuppressionForCity = (citySlug: string) => {
+  if (!isBrowser()) {
+    return
+  }
+  const normalized = (citySlug ?? '').trim()
+  if (!normalized) {
+    return
+  }
+  const suppressed = readSuppressedSet()
+  if (!suppressed.delete(normalized)) {
+    return
+  }
+  writeSuppressedSet(suppressed)
+}
 
 export const readSolutionsAccess = () => {
   if (!isBrowser()) return false
@@ -80,6 +152,9 @@ export const writeSolutionsSelection = (selection: SolutionsSelection) => {
 export const shouldAutoRevealSolutions = (citySlug: string) => {
   if (!isBrowser()) return false
   if (!readSolutionsAccess()) return false
+  if (isAutoRevealSuppressed(citySlug)) {
+    return false
+  }
   const selection = readSolutionsSelection()
   if (selection.mode === 'all') {
     return true
