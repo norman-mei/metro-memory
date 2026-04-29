@@ -1,8 +1,10 @@
 'use client'
 
 import OverflowMarquee from '@/components/OverflowMarquee'
+import { useSettings } from '@/context/SettingsContext'
 import { isColorLight } from '@/lib/colorUtils'
 import { useConfig } from '@/lib/configContext'
+import { formatLocalizedLineName } from '@/lib/lineNameDisplay'
 import { getCompletionColor } from '@/lib/progressColors'
 import clsx from 'clsx'
 import Image from 'next/image'
@@ -177,6 +179,7 @@ const ProgressBars = ({
   minimizedMaxHeight?: number
 }) => {
   const { LINES, GAUGE_COLORS, LINE_GROUPS } = useConfig()
+  const { settings } = useSettings()
   const gaugeMode = GAUGE_COLORS ?? 'inverted'
   const { resolvedTheme } = useTheme()
   const isDark = resolvedTheme === 'dark'
@@ -240,7 +243,7 @@ const ProgressBars = ({
     }
 
     const found = foundStationsPerLine[line] || 0
-    const displayName = cleanupLineName(meta.name) || meta.name
+    const displayName = formatLocalizedLineName(meta.name, settings.language) || meta.name
     const title = `${displayName} - ${found}/${total}`
     const customProgressColor = meta.progressOutlineColor
     const baseProgressColor = customProgressColor ?? meta.color ?? '#000000'

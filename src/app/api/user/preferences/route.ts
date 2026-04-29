@@ -76,7 +76,6 @@ const preferencesSchema = z.object({
       }),
     )
     .optional(),
-  speedrunByCity: z.record(z.string(), z.boolean()).optional(),
 })
 
 export async function PATCH(request: NextRequest) {
@@ -131,14 +130,6 @@ export async function PATCH(request: NextRequest) {
             existingPreferences.mapViewByCity,
             parsed.data.mapViewByCity,
           ),
-        }
-      : {}),
-    ...(parsed.data.speedrunByCity
-      ? {
-          speedrunByCity: {
-            ...(existingPreferences.speedrunByCity ?? {}),
-            ...parsed.data.speedrunByCity,
-          },
         }
       : {}),
   }

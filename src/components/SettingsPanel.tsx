@@ -21,6 +21,7 @@ import {
   resolveAccentColorOption,
 } from '@/lib/accentColors'
 import { cities } from '@/lib/citiesConfig'
+import { formatLocalizedCityName } from '@/lib/cityNameDisplay'
 import { GLOBAL_ACHIEVEMENT_SLUGS } from '@/lib/globalAchievements'
 import { SUPPORTED_LANGUAGES } from '@/lib/i18n'
 import {
@@ -50,6 +51,25 @@ const THEME_OPTIONS: Array<{ value: string; label: string }> = [
   { value: 'light', label: 'light' },
   { value: 'dark', label: 'dark' },
 ]
+
+const FONT_SIZE_LABEL_KEYS = {
+  sm: 'fontSizeSmall',
+  md: 'fontSizeMedium',
+  lg: 'fontSizeLarge',
+  xl: 'fontSizeExtraLarge',
+} as const
+
+const FONT_FAMILY_LABEL_KEYS = {
+  system: 'fontFamilySystem',
+  humanist: 'fontFamilyHumanist',
+  geometric: 'fontFamilyGeometric',
+  rounded: 'fontFamilyRounded',
+  slab: 'fontFamilySlab',
+  condensed: 'fontFamilyCondensed',
+  serif: 'fontFamilySerif',
+  mono: 'fontFamilyMonospace',
+  helveticaBold: 'fontFamilyHelveticaBold',
+} as const
 
 const CURATED_TIMEZONES: string[] = [
   'UTC',
@@ -307,10 +327,10 @@ const SettingsPanel = ({ className, showHeading = true, disableScroll = false }:
         <div className="flex items-center justify-between gap-4 rounded-2xl border border-zinc-200 bg-zinc-50 p-4 dark:border-[#18181b] dark:bg-zinc-900/40">
           <div>
             <p className="text-base font-semibold text-zinc-900 dark:text-zinc-100">
-              Achievement toast duration
+              {t('achievementToastDurationLabel')}
             </p>
             <p className="text-sm text-zinc-600 dark:text-zinc-400">
-              How long achievement toasts stay on screen (in seconds).
+              {t('achievementToastDurationDesc')}
             </p>
           </div>
           <div className="flex items-center gap-2">
@@ -325,22 +345,22 @@ const SettingsPanel = ({ className, showHeading = true, disableScroll = false }:
               }
               className="w-20 rounded-xl border border-zinc-300 bg-white px-3 py-2 text-sm font-semibold text-zinc-900 shadow-sm dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-100"
             />
-            <span className="text-sm text-zinc-500 dark:text-zinc-400">sec</span>
+            <span className="text-sm text-zinc-500 dark:text-zinc-400">{t('secondsAbbrev')}</span>
           </div>
         </div>
         <SettingToggle
-          label="Auto submit on match"
-          description="Automatically submit when your input exactly matches a station."
+          label={t('autoSubmitOnMatch')}
+          description={t('autoSubmitOnMatchDesc')}
           checked={settings.autoSubmitOnMatch}
           onChange={setAutoSubmitOnMatch}
         />
         <div className="flex flex-col gap-3 rounded-2xl border border-zinc-200 bg-zinc-50 p-4 dark:border-[#18181b] dark:bg-zinc-900/40 sm:flex-row sm:items-center sm:justify-between">
           <div>
             <p className="text-base font-semibold text-zinc-900 dark:text-zinc-100">
-              Station matching
+              {t('stationMatching')}
             </p>
             <p className="text-sm text-zinc-600 dark:text-zinc-400">
-              Choose how strict station-name recognition should be during normal play.
+              {t('stationMatchingDesc')}
             </p>
           </div>
           <select
@@ -352,9 +372,9 @@ const SettingsPanel = ({ className, showHeading = true, disableScroll = false }:
             }
             className="rounded-xl border border-zinc-300 bg-white px-3 py-2 text-sm font-semibold text-zinc-900 shadow-sm dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-100"
           >
-            <option value="normal">Normal</option>
-            <option value="forgiving">Forgiving</option>
-            <option value="strict">Strict spelling</option>
+            <option value="normal">{t('stationMatchingNormal')}</option>
+            <option value="forgiving">{t('stationMatchingForgiving')}</option>
+            <option value="strict">{t('stationMatchingStrict')}</option>
           </select>
         </div>
       </div>
@@ -525,10 +545,10 @@ const SettingsPanel = ({ className, showHeading = true, disableScroll = false }:
               />
               <div>
                 <span className="block text-sm font-semibold text-zinc-900 dark:text-zinc-100">
-                  Custom
+                  {t('customOption')}
                 </span>
                 <span className="block text-xs text-zinc-500 dark:text-zinc-400">
-                  Pick any hex color
+                  {t('customAccentDesc')}
                 </span>
               </div>
             </div>
@@ -557,7 +577,7 @@ const SettingsPanel = ({ className, showHeading = true, disableScroll = false }:
       </div>
       <div className="space-y-2">
         <p className="text-sm font-semibold uppercase tracking-wide text-zinc-500 dark:text-zinc-400">
-          Font size
+          {t('fontSize')}
         </p>
         <div className="grid grid-cols-2 items-center gap-2 sm:grid-cols-[0.9fr_1fr_1.1fr_1.2fr] lg:grid-cols-[0.8fr_0.95fr_1.1fr_1.25fr_1.45fr]">
           {FONT_SIZE_OPTIONS.map((option) => (
@@ -573,7 +593,7 @@ const SettingsPanel = ({ className, showHeading = true, disableScroll = false }:
               )}
               style={{ fontSize: option.value }}
             >
-              {option.label}
+              {t(FONT_SIZE_LABEL_KEYS[option.id])}
             </button>
           ))}
           <div className="col-span-2 flex items-center gap-3 sm:col-span-2 lg:col-span-1 lg:justify-self-start">
@@ -592,7 +612,7 @@ const SettingsPanel = ({ className, showHeading = true, disableScroll = false }:
                   : 'text-zinc-900 hover:text-zinc-700 dark:text-zinc-100 dark:hover:text-zinc-300',
               )}
             >
-              Custom
+              {t('customOption')}
             </button>
             <div className="flex min-w-0 flex-1 items-center gap-2">
               <input
@@ -610,14 +630,14 @@ const SettingsPanel = ({ className, showHeading = true, disableScroll = false }:
                 )}
                 aria-label="Custom font size in pixels"
               />
-              <span className="shrink-0 text-sm font-semibold text-zinc-500 dark:text-zinc-400">px</span>
+              <span className="shrink-0 text-sm font-semibold text-zinc-500 dark:text-zinc-400">{t('pixelsAbbrev')}</span>
             </div>
           </div>
         </div>
       </div>
       <div className="space-y-3">
         <p className="text-sm font-semibold uppercase tracking-wide text-zinc-500 dark:text-zinc-400">
-          Font type
+          {t('fontType')}
         </p>
         <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {[...FONT_FAMILY_OPTIONS]
@@ -638,7 +658,10 @@ const SettingsPanel = ({ className, showHeading = true, disableScroll = false }:
                 className="text-sm font-semibold text-zinc-900 dark:text-zinc-100"
                 style={{ fontFamily: option.stack }}
               >
-                {option.label}
+                {t(
+                  FONT_FAMILY_LABEL_KEYS[option.id as keyof typeof FONT_FAMILY_LABEL_KEYS] ??
+                    option.label,
+                )}
               </span>
             </button>
           ))}
@@ -656,10 +679,10 @@ const SettingsPanel = ({ className, showHeading = true, disableScroll = false }:
                   className="text-sm font-semibold text-zinc-900 dark:text-zinc-100"
                   style={customFont ? { fontFamily: 'var(--ui-font)' } : undefined}
                 >
-                  Custom upload
+                  {t('customUpload')}
                 </p>
                 <p className="text-xs text-zinc-500 dark:text-zinc-400">
-                  Local only. Saved in this browser, not your account.
+                  {t('customUploadDesc')}
                 </p>
                 {customFont && (
                   <p className="mt-1 text-xs text-zinc-500 dark:text-zinc-400">
@@ -678,7 +701,7 @@ const SettingsPanel = ({ className, showHeading = true, disableScroll = false }:
                       : 'bg-zinc-100 text-zinc-700 hover:bg-zinc-200 dark:bg-zinc-800 dark:text-zinc-100 dark:hover:bg-zinc-700',
                   )}
                 >
-                  Use
+                  {t('useLabel')}
                 </button>
               )}
             </div>
@@ -690,7 +713,7 @@ const SettingsPanel = ({ className, showHeading = true, disableScroll = false }:
                   onChange={handleCustomFontUpload}
                   className="sr-only"
                 />
-                Upload font
+                {t('uploadFont')}
               </label>
               {customFont && (
                 <button
@@ -708,7 +731,7 @@ const SettingsPanel = ({ className, showHeading = true, disableScroll = false }:
                   }}
                   className="rounded-xl border border-zinc-200 bg-white px-4 py-2 text-sm font-semibold text-zinc-700 transition hover:border-zinc-300 hover:bg-zinc-50 focus:outline-none focus:ring-2 focus:ring-[var(--accent-ring)] dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100 dark:hover:border-zinc-600 dark:hover:bg-zinc-800"
                 >
-                  Remove uploaded font
+                  {t('removeUploadedFont')}
                 </button>
               )}
             </div>
@@ -722,83 +745,77 @@ const SettingsPanel = ({ className, showHeading = true, disableScroll = false }:
       <AchievementsUnlockPanel />
       <div className="space-y-3">
         <p className="text-sm font-semibold uppercase tracking-wide text-zinc-500 dark:text-zinc-400">
-          Keybindings
+          {t('keybindings')}
         </p>
         <div className="rounded-2xl border border-zinc-200 bg-zinc-50 px-4 py-2 dark:border-[#18181b] dark:bg-zinc-900/40">
             <KeybindingRecorder
-                label="Focus Search"
+                label={t('keybindingFocusSearch')}
                 value={settings.keybindings.FOCUS_INPUT}
                 onChange={(val) => setKeybinding('FOCUS_INPUT', val)}
             />
             <div className="h-px bg-zinc-200 dark:bg-zinc-800" />
             <KeybindingRecorder
-                label="Clear / Close"
+                label={t('keybindingClearClose')}
                 value={settings.keybindings.CLEAR_INPUT}
                 onChange={(val) => setKeybinding('CLEAR_INPUT', val)}
             />
             <div className="h-px bg-zinc-200 dark:bg-zinc-800" />
             <KeybindingRecorder
-                label="Toggle Zen Mode"
+                label={t('keybindingToggleZenMode')}
                 value={settings.keybindings.TOGGLE_ZEN_MODE}
                 onChange={(val) => setKeybinding('TOGGLE_ZEN_MODE', val)}
             />
             <div className="h-px bg-zinc-200 dark:bg-zinc-800" />
             <KeybindingRecorder
-                label="Toggle Speedrun"
-                value={settings.keybindings.TOGGLE_SPEEDRUN}
-                onChange={(val) => setKeybinding('TOGGLE_SPEEDRUN', val)}
-            />
-             <div className="h-px bg-zinc-200 dark:bg-zinc-800" />
-            <KeybindingRecorder
-                label="Toggle Sidebar"
+                label={t('keybindingToggleSidebar')}
                 value={settings.keybindings.TOGGLE_SIDEBAR}
                 onChange={(val) => setKeybinding('TOGGLE_SIDEBAR', val)}
             />
              <div className="h-px bg-zinc-200 dark:bg-zinc-800" />
             <KeybindingRecorder
-                label="Toggle Solutions"
+                label={t('keybindingToggleSolutions')}
                 value={settings.keybindings.TOGGLE_SOLUTIONS}
                 onChange={(val) => setKeybinding('TOGGLE_SOLUTIONS', val)}
             />
             <div className="h-px bg-zinc-200 dark:bg-zinc-800" />
             <KeybindingRecorder
-                label="Toggle Station Labels"
+                label={t('keybindingToggleStationLabels')}
                 value={settings.keybindings.TOGGLE_LABELS}
                 onChange={(val) => setKeybinding('TOGGLE_LABELS', val)}
             />
             <div className="h-px bg-zinc-200 dark:bg-zinc-800" />
             <KeybindingRecorder
-                label="Toggle Map Names"
+                label={t('keybindingToggleMapNames')}
                 value={settings.keybindings.TOGGLE_MAP_NAMES}
                 onChange={(val) => setKeybinding('TOGGLE_MAP_NAMES', val)}
             />
             <div className="h-px bg-zinc-200 dark:bg-zinc-800" />
             <KeybindingRecorder
-                label="Toggle Satellite"
+                label={t('keybindingToggleSatellite')}
                 value={settings.keybindings.TOGGLE_SATELLITE}
                 onChange={(val) => setKeybinding('TOGGLE_SATELLITE', val)}
             />
             <div className="h-px bg-zinc-200 dark:bg-zinc-800" />
             <KeybindingRecorder
-                label="Open City Stats"
+                label={t('keybindingOpenCityStats')}
                 value={settings.keybindings.OPEN_CITY_STATS}
                 onChange={(val) => setKeybinding('OPEN_CITY_STATS', val)}
             />
             <div className="h-px bg-zinc-200 dark:bg-zinc-800" />
             <KeybindingRecorder
-                label="Open Achievements"
+                label={t('keybindingOpenAchievements')}
                 value={settings.keybindings.OPEN_ACHIEVEMENTS}
                 onChange={(val) => setKeybinding('OPEN_ACHIEVEMENTS', val)}
             />
             <div className="h-px bg-zinc-200 dark:bg-zinc-800" />
             <KeybindingRecorder
-                label="Open Account"
+                label={t('keybindingOpenAccount')}
                 value={settings.keybindings.OPEN_ACCOUNT}
                 onChange={(val) => setKeybinding('OPEN_ACCOUNT', val)}
             />
             <div className="h-px bg-zinc-200 dark:bg-zinc-800" />
             <KeybindingRecorder
-                label="Open Settings"
+                label={t('keybindingOpenSettings')}
                 value={settings.keybindings.OPEN_SETTINGS}
                 onChange={(val) => setKeybinding('OPEN_SETTINGS', val)}
             />
@@ -806,21 +823,21 @@ const SettingsPanel = ({ className, showHeading = true, disableScroll = false }:
       </div>
       <div className="space-y-3">
         <p className="text-sm font-semibold uppercase tracking-wide text-zinc-500 dark:text-zinc-400">
-          Admin tools
+          {t('adminTools')}
         </p>
         <div className="rounded-2xl border border-zinc-200 bg-zinc-50 p-4 dark:border-[#18181b] dark:bg-zinc-900/40">
           <p className="text-sm text-zinc-700 dark:text-zinc-300">
-            Review monthly automation runs, approve staged changes, and open apply or revert PRs.
+            {t('adminToolsDesc')}
           </p>
           <p className="mt-2 text-xs text-zinc-500 dark:text-zinc-400">
-            Access is restricted to approved signed-in admin accounts.
+            {t('adminToolsAccess')}
           </p>
           <div className="mt-4">
             <Link
               href="/admin/automation"
               className="inline-flex rounded-xl bg-[var(--accent-600)] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[var(--accent-500)] dark:bg-[var(--accent-500)] dark:hover:bg-[var(--accent-400)]"
             >
-              Open automation admin panel
+              {t('openAutomationAdminPanel')}
             </Link>
           </div>
         </div>
@@ -882,6 +899,7 @@ const SettingToggle = ({
 
 const SolutionsAccessPanel = ({ onSettingsChange }: { onSettingsChange?: () => void }) => {
   const { t } = useTranslation()
+  const { settings } = useSettings()
   const [hasAccess, setHasAccess] = useState(false)
   const [passwordInput, setPasswordInput] = useState('')
   const [passwordError, setPasswordError] = useState<string | null>(null)
@@ -895,10 +913,11 @@ const SolutionsAccessPanel = ({ onSettingsChange }: { onSettingsChange?: () => v
       cities
         .map((city) => ({
           slug: city.link.replace(/^\//, ''),
-          name: city.name,
+          name: formatLocalizedCityName(city.name, city.link, settings.language),
+          originalName: city.name,
         }))
         .sort((a, b) => a.name.localeCompare(b.name)),
-    [],
+    [settings.language],
   )
 
   const applySolutionsProgress = useCallback(
@@ -973,7 +992,8 @@ const SolutionsAccessPanel = ({ onSettingsChange }: { onSettingsChange?: () => v
       return allCityOptions
     }
     return allCityOptions.filter((city) =>
-      city.name.toLowerCase().includes(normalizedFilter),
+      city.name.toLowerCase().includes(normalizedFilter) ||
+      city.originalName.toLowerCase().includes(normalizedFilter),
     )
   }, [allCityOptions, cityFilter])
 
@@ -1175,6 +1195,7 @@ const SolutionsAccessPanel = ({ onSettingsChange }: { onSettingsChange?: () => v
 }
 
 const AchievementsUnlockPanel = () => {
+  const { t } = useTranslation()
   const [passwordInput, setPasswordInput] = useState('')
   const [passwordError, setPasswordError] = useState<string | null>(null)
   const [successMessage, setSuccessMessage] = useState<string | null>(null)
@@ -1196,35 +1217,35 @@ const AchievementsUnlockPanel = () => {
         })
         const payload = await response.json().catch(() => ({}))
         if (!response.ok || !payload?.success) {
-          setPasswordError('Incorrect passphrase. Try again.')
+          setPasswordError(t('incorrectPassphrase'))
           return
         }
         unlockAllAchievements()
-        setSuccessMessage('All achievements unlocked.')
+        setSuccessMessage(t('allAchievementsUnlocked'))
         setPasswordInput('')
       } catch (error) {
-        setPasswordError('Unable to verify passphrase. Please try again.')
+        setPasswordError(t('verifyPassphraseError'))
         if (process.env.NODE_ENV !== 'production') {
           console.error(error)
         }
       }
     },
-    [passwordInput],
+    [passwordInput, t],
   )
 
   return (
     <div className="space-y-3 rounded-2xl border border-zinc-200 bg-zinc-50 p-4 dark:border-[#18181b] dark:bg-zinc-900/40">
       <div>
         <p className="text-sm font-semibold uppercase tracking-wide text-zinc-500 dark:text-zinc-400">
-          Unlock all achievements
+          {t('unlockAllAchievements')}
         </p>
         <p className="text-sm text-zinc-600 dark:text-zinc-300">
-          Enter the solutions passphrase to unlock every achievement.
+          {t('unlockAllAchievementsDesc')}
         </p>
       </div>
       <form className="space-y-2" onSubmit={handleUnlockSubmit}>
         <label className="text-xs font-semibold uppercase text-zinc-500 dark:text-zinc-400">
-          Passphrase
+          {t('passphrase')}
         </label>
         <div className="flex gap-2">
           <input
@@ -1232,14 +1253,14 @@ const AchievementsUnlockPanel = () => {
             value={passwordInput}
             onChange={(event) => setPasswordInput(event.target.value)}
             className="flex-1 rounded-xl border border-zinc-300 bg-white px-3 py-2 text-sm text-zinc-900 shadow-sm dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-100"
-            placeholder="Passphrase"
+            placeholder={t('passphrase')}
           />
           <button
             type="submit"
             className="rounded-xl bg-amber-500 px-4 py-2 text-sm font-semibold text-white transition hover:bg-amber-400 disabled:opacity-60"
             disabled={!passwordInput.trim()}
           >
-            Unlock
+            {t('unlock')}
           </button>
         </div>
         {passwordError && (
@@ -1362,8 +1383,6 @@ const ACHIEVEMENT_STORAGE_KEYS = [
 
 const ACHIEVEMENT_STORAGE_PREFIXES = [
   'mm-city-unique-stations-',
-  'speedrun-best-',
-  'speedrun-start-',
 ]
 
 const clearAchievementStorage = () => {
@@ -1402,6 +1421,7 @@ const ResetProgressButton = ({
   progressSummaries: Record<string, number>
 }) => {
   const { t } = useTranslation()
+  const { settings } = useSettings()
   const [holdProgress, setHoldProgress] = useState(0)
   const [statusMessage, setStatusMessage] = useState<string | null>(null)
   const [isResetting, setIsResetting] = useState(false)
@@ -1413,10 +1433,16 @@ const ResetProgressButton = ({
     const entries = new Map<string, { slug: string; name: string; flag: string; found: number }>()
 
     Object.entries(progressSummaries ?? {}).forEach(([slug, found]) => {
-      if ((found ?? 0) > 0) {
-        entries.set(slug, { slug, name: getCityName(slug), flag: getCityFlag(slug), found })
-      }
-    })
+        if ((found ?? 0) > 0) {
+          const originalName = getCityName(slug)
+          entries.set(slug, {
+            slug,
+            name: formatLocalizedCityName(originalName, slug, settings.language),
+            flag: getCityFlag(slug),
+            found,
+          })
+        }
+      })
 
     if (typeof window !== 'undefined') {
       cities.forEach((city) => {
@@ -1427,9 +1453,10 @@ const ResetProgressButton = ({
         const found = readLocalFoundCount(slug)
         if (found > 0) {
           const existing = entries.get(slug)
+          const originalName = getCityName(slug)
           entries.set(slug, {
             slug,
-            name: getCityName(slug),
+            name: formatLocalizedCityName(originalName, slug, settings.language),
             flag: getCityFlag(slug),
             found: existing ? Math.max(existing.found, found) : found,
           })
@@ -1438,7 +1465,7 @@ const ResetProgressButton = ({
     }
 
     return Array.from(entries.values()).sort((a, b) => a.name.localeCompare(b.name))
-  }, [progressSummaries, localProgressVersion, cities])
+  }, [localProgressVersion, progressSummaries, settings.language])
   const [selectedCities, setSelectedCities] = useState<string[]>([])
   const [citySelectionInitialized, setCitySelectionInitialized] = useState(false)
 

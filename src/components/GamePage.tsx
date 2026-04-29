@@ -14,7 +14,6 @@ import CustomGameModal from '@/components/CustomGameModal'
 import MissedGuessInputsModal from '@/components/MissedGuessInputsModal'
 import PrivacyPanel from '@/components/PrivacyPanel'
 import SettingsPanel from '@/components/SettingsPanel'
-import SpeedrunToast from '@/components/SpeedrunToast'
 import ThemeToggleButton from '@/components/ThemeToggleButton'
 
 import ZenModeToast from '@/components/ZenModeToast'
@@ -197,7 +196,6 @@ type MapCoordsMenuState = {
 }
 
 const achievementToastStorageKey = (slug: string) => `achievement-toast-hidden-${slug}`
-const speedrunStartStorageKey = (city: string) => `${city}-speedrun-start`
 const FAVORITES_STORAGE_PREFIX = 'favorites-v1'
 const getFavoritesStorageKey = (userId?: string | null) =>
   `${FAVORITES_STORAGE_PREFIX}-${userId || 'anon'}`
@@ -1632,8 +1630,6 @@ function GamePageContent({
     [rankedMode, searchParams],
   )
   const rankedSeed = searchParams.get('seed')?.trim() || `${CITY_NAME}-${rankedRuleset}`
-  const rankedDailyChallengeId = searchParams.get('dailyChallengeId')?.trim() || null
-  const rankedChallengeId = searchParams.get('challengeId')?.trim() || null
   const rankedBattleId = searchParams.get('battleId')?.trim() || null
   const playlistRunId = searchParams.get('playlistRunId')?.trim() || null
   const { t } = useTranslation()
@@ -1645,21 +1641,6 @@ function GamePageContent({
   
   const [zenMode, setZenMode] = useState(false)
   const [customModalOpen, setCustomModalOpen] = useState(false)
-  const [speedrunMode, setSpeedrunMode] = useState(false)
-  const [speedrunAvailable, setSpeedrunAvailable] = useState(true)
-  const [bestSpeedrunMs, setBestSpeedrunMs] = useState<number | null>(null)
-  const [speedrunElapsedMs, setSpeedrunElapsedMs] = useState<number | null>(null)
-  const speedrunStartRef = useRef<number | null>(null)
-  const speedrunFinishedRef = useRef(false)
-  const speedrunTimerRef = useRef<number | null>(null)
-  const clearSpeedrunStartStorage = useCallback(() => {
-    if (typeof window === 'undefined') return
-    try {
-      window.localStorage.removeItem(speedrunStartStorageKey(CITY_NAME))
-    } catch {
-      // ignore
-    }
-  }, [CITY_NAME])
   useEffect(() => {
     if (!cityPath) return
 
@@ -1685,7 +1666,6 @@ function GamePageContent({
   const perfectStartInitializedRef = useRef(false)
   const neverRepeatRef = useRef(true)
   const typoFreeRef = useRef(true)
-  const speedrunIntegrityRef = useRef(true)
   const recentCorrectTimesRef = useRef<number[]>([])
   const lineMasterSyncRef = useRef(false)
 
@@ -2424,73 +2404,6 @@ function GamePageContent({
   const usingChinaSafeMapStyle =
     isChinaCity && mapStyleMode === 'china-safe'
 
-  // Speedrun preference hydration
-  useEffect(() => {
-    if (typeof window === 'undefined') return
-    const key = `${CITY_NAME}-speedrun-enabled`
-    let initial = false
-    if (uiPreferences.speedrunByCity && typeof uiPreferences.speedrunByCity[CITY_NAME] === 'boolean') {
-      initial = uiPreferences.speedrunByCity[CITY_NAME] as boolean
-    } else {
-      const raw = window.localStorage.getItem(key)
-      if (raw === '1' || raw === 'true') {
-        initial = true
-      }
-    }
-    setSpeedrunMode(initial)
-  }, [CITY_NAME, uiPreferences.speedrunByCity])
-
-  // Best speedrun hydration
-  useEffect(() => {
-    if (typeof window === 'undefined') return
-    try {
-      const raw = window.localStorage.getItem(`speedrun-best-${CITY_NAME}`)
-      if (raw && Number.isFinite(Number(raw))) {
-        setBestSpeedrunMs(Number(raw))
-      }
-    } catch {
-      // ignore
-    }
-  }, [CITY_NAME])
-
-  // Hydrate in-progress speedrun (start timestamp)
-  useEffect(() => {
-    if (!speedrunMode) return
-    if (typeof window === 'undefined') return
-    try {
-      const raw = window.localStorage.getItem(speedrunStartStorageKey(CITY_NAME))
-      if (!raw) return
-      const startedAt = Number(raw)
-      if (!Number.isFinite(startedAt)) return
-      const elapsed = Math.max(0, Date.now() - startedAt)
-      speedrunStartRef.current = performance.now() - elapsed
-      setSpeedrunElapsedMs(elapsed)
-      speedrunFinishedRef.current = false
-    } catch {
-      // ignore
-    }
-  }, [CITY_NAME, speedrunMode])
-
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      window.localStorage.setItem(`${CITY_NAME}-speedrun-enabled`, speedrunMode ? '1' : '0')
-    }
-    updateUiPreferences({ speedrunByCity: { [CITY_NAME]: speedrunMode } })
-    if (!speedrunMode) {
-      speedrunStartRef.current = null
-      speedrunFinishedRef.current = false
-      if (speedrunTimerRef.current) {
-        window.clearInterval(speedrunTimerRef.current)
-        speedrunTimerRef.current = null
-      }
-      setSpeedrunElapsedMs(null)
-      clearSpeedrunStartStorage()
-      setMistakes(0)
-      comebackArmedRef.current = false
-      comebackTriggeredRef.current = false
-    }
-  }, [CITY_NAME, clearSpeedrunStartStorage, speedrunMode, updateUiPreferences])
-
   // Hydrate saved map view (local only)
   useEffect(() => {
     if (typeof window === 'undefined') return
@@ -2714,9 +2627,6 @@ function GamePageContent({
     if (typeof window !== 'undefined') {
       try {
         window.localStorage.setItem(achievementToastStorageKey(slug), '1')
-        if (slug.startsWith('line-master') || slug.includes('line-master')) {
-          window.localStorage.setItem(achievementToastStorageKey('line-master'), '1')
-        }
       } catch {
         // ignore storage errors
       }
@@ -3155,8 +3065,6 @@ function GamePageContent({
   }, [
     CITY_NAME,
     rankedBattleId,
-    rankedChallengeId,
-    rankedDailyChallengeId,
     rankedMode,
     rankedRuleset,
     rankedSeed,
@@ -3181,8 +3089,6 @@ function GamePageContent({
             ruleset: rankedRuleset,
             source: rankedSource,
             seed: rankedSeed,
-            dailyChallengeId: rankedDailyChallengeId,
-            challengeId: rankedChallengeId,
             battleId: rankedBattleId,
             playlistRunId,
           }),
@@ -3208,8 +3114,6 @@ function GamePageContent({
     CITY_NAME,
     cityPath,
     rankedBattleId,
-    rankedChallengeId,
-    rankedDailyChallengeId,
     rankedMode,
     rankedRuleset,
     rankedSeed,
@@ -3627,16 +3531,7 @@ function GamePageContent({
     perfectStartCountRef.current = 0
     neverRepeatRef.current = true
     typoFreeRef.current = true
-    speedrunIntegrityRef.current = true
     recentCorrectTimesRef.current = []
-    speedrunStartRef.current = null
-    speedrunFinishedRef.current = false
-    if (speedrunTimerRef.current) {
-      window.clearInterval(speedrunTimerRef.current)
-      speedrunTimerRef.current = null
-    }
-    setSpeedrunElapsedMs(null)
-    clearSpeedrunStartStorage()
     comebackArmedRef.current = false
     comebackTriggeredRef.current = false
     if (!rankedMode) {
@@ -3661,7 +3556,6 @@ function GamePageContent({
     setHoveredId,
     setActiveFoundId,
     clearStoredProgress,
-    clearSpeedrunStartStorage,
     rankedMode,
     submitProgress,
     inputRef,
@@ -4005,6 +3899,30 @@ function GamePageContent({
     () => deriveCityDisplayName(metadataTitle, CITY_NAME),
     [metadataTitle, CITY_NAME],
   )
+  const getTranslatedMiniCityLabel = useCallback(
+    (slug: string, fallback: string) => {
+      const keyBySlug: Record<string, string> = {
+        gba: 'miniCityParentGba',
+        'gba-guangzhou': 'miniCityNameGbaGuangzhou',
+        'gba-foshan': 'miniCityNameGbaFoshan',
+        'gba-dongguan': 'miniCityNameGbaDongguan',
+        'gba-shenzhen': 'miniCityNameGbaShenzhen',
+        'gba-hong-kong': 'miniCityNameGbaHongKong',
+        'gba-mtr-heavy-rail': 'miniCityNameGbaMtrHeavyRail',
+        'gba-mtr-light-rail': 'miniCityNameGbaMtrLightRail',
+        'gba-macau': 'miniCityNameGbaMacau',
+      }
+
+      const key = keyBySlug[slug]
+      if (!key) {
+        return fallback
+      }
+
+      const value = t(key)
+      return typeof value === 'string' && value !== key ? value : fallback
+    },
+    [settings.language, t],
+  )
   const relatedVersionsPanel = useMemo(() => {
     if (!miniCityLinks) {
       return null
@@ -4012,11 +3930,15 @@ function GamePageContent({
 
     if (miniCityLinks.mode === 'parent' && miniCityLinks.siblings.length > 0) {
       return {
-        title: 'Play smaller versions',
-        description: `Try focused versions of ${cityDisplayName}.`,
+        title:
+          (typeof t('playSmallerVersionsTitle') === 'string' &&
+          t('playSmallerVersionsTitle') !== 'playSmallerVersionsTitle'
+            ? t('playSmallerVersionsTitle')
+            : 'Play smaller versions') as string,
+        description: t('playSmallerVersionsDesc', { city: cityDisplayName }) as string,
         items: miniCityLinks.siblings.map((item) => ({
           slug: item.slug,
-          name: item.name,
+          name: getTranslatedMiniCityLabel(item.slug, item.name),
           link: item.link,
         })),
         currentSlug: null,
@@ -4028,36 +3950,45 @@ function GamePageContent({
       if (miniCityLinks.parent) {
         items.push({
           slug: miniCityLinks.parent.parentSlug,
-          name: miniCityLinks.parent.parentName,
+          name: getTranslatedMiniCityLabel(
+            miniCityLinks.parent.parentSlug,
+            miniCityLinks.parent.parentName,
+          ),
           link: miniCityLinks.parent.parentLink,
         })
       }
       miniCityLinks.siblings.forEach((item) => {
         items.push({
           slug: item.slug,
-          name: item.name,
+          name: getTranslatedMiniCityLabel(item.slug, item.name),
           link: item.link,
         })
       })
 
+      const parentDisplayName = getTranslatedMiniCityLabel(
+        miniCityLinks.parent?.parentSlug ?? '',
+        miniCityLinks.parent?.parentName ?? cityDisplayName,
+      )
+
       return {
-        title: 'Related versions',
-        description: `Switch between ${miniCityLinks.parent?.parentName ?? cityDisplayName} and its smaller versions.`,
+        title:
+          (typeof t('relatedVersionsTitle') === 'string' &&
+          t('relatedVersionsTitle') !== 'relatedVersionsTitle'
+            ? t('relatedVersionsTitle')
+            : 'Related versions') as string,
+        description: t('relatedVersionsDesc', { city: parentDisplayName }) as string,
         items,
         currentSlug: CITY_NAME,
       }
     }
 
     return null
-  }, [CITY_NAME, cityDisplayName, miniCityLinks])
+  }, [CITY_NAME, cityDisplayName, getTranslatedMiniCityLabel, miniCityLinks, settings.language, t])
 
   const awardAchievement = useCallback(
     (id: string, title: string, description: string) => {
       if (earnedAchievementsRef.current.has(id)) return
       earnedAchievementsRef.current.add(id)
-      if (id.startsWith(`${CITY_NAME}-line-master-`)) {
-        earnedAchievementsRef.current.add('line-master')
-      }
       if (typeof window !== 'undefined') {
         try {
           window.localStorage.setItem(
@@ -4071,16 +4002,9 @@ function GamePageContent({
       if (!settings.achievementToastsEnabled) return
 
       let hidden = false
-      const isLineMaster =
-        id.startsWith(`${CITY_NAME}-line-master-`) || id === 'line-master'
       if (typeof window !== 'undefined') {
         try {
-          const specificHidden =
-            window.localStorage.getItem(achievementToastStorageKey(id)) === '1'
-          const globalLineMasterHidden =
-            isLineMaster &&
-            window.localStorage.getItem(achievementToastStorageKey('line-master')) === '1'
-          hidden = specificHidden || globalLineMasterHidden
+          hidden = window.localStorage.getItem(achievementToastStorageKey(id)) === '1'
         } catch {
           hidden = false
         }
@@ -4096,70 +4020,6 @@ function GamePageContent({
     },
     [CITY_NAME, cityDisplayName, settings.achievementToastsEnabled],
   )
-
-  useEffect(() => {
-    const available = totalUniqueStations <= 1000
-    setSpeedrunAvailable(available)
-    if (!available) {
-      setSpeedrunMode(false)
-      clearSpeedrunStartStorage()
-    }
-  }, [clearSpeedrunStartStorage, totalUniqueStations])
-
-  // Live speedrun timer
-  useEffect(() => {
-    if (!speedrunMode) {
-      if (speedrunTimerRef.current) {
-        window.clearInterval(speedrunTimerRef.current)
-        speedrunTimerRef.current = null
-      }
-      setSpeedrunElapsedMs(null)
-      return
-    }
-
-    const tick = () => {
-      const start = speedrunStartRef.current
-      if (start !== null) {
-        setSpeedrunElapsedMs(performance.now() - start)
-      } else {
-        setSpeedrunElapsedMs(0)
-      }
-    }
-
-    tick()
-    speedrunTimerRef.current = window.setInterval(tick, 200)
-
-    return () => {
-      if (speedrunTimerRef.current) {
-        window.clearInterval(speedrunTimerRef.current)
-        speedrunTimerRef.current = null
-      }
-    }
-  }, [speedrunMode])
-
-  useEffect(() => {
-    if (typeof window === 'undefined') return
-    const handleBlur = () => {
-      if (speedrunStartRef.current !== null && !speedrunFinishedRef.current) {
-        speedrunIntegrityRef.current = false
-      }
-    }
-    const handleVisibility = () => {
-      if (
-        document.visibilityState === 'hidden' &&
-        speedrunStartRef.current !== null &&
-        !speedrunFinishedRef.current
-      ) {
-        speedrunIntegrityRef.current = false
-      }
-    }
-    window.addEventListener('blur', handleBlur)
-    document.addEventListener('visibilitychange', handleVisibility)
-    return () => {
-      window.removeEventListener('blur', handleBlur)
-      document.removeEventListener('visibilitychange', handleVisibility)
-    }
-  }, [])
 
 
 
@@ -4238,20 +4098,10 @@ function GamePageContent({
       const key = `${CITY_NAME}-line-master-${line}`
       if (lineMasterEarnedRef.current.has(key)) return
       lineMasterEarnedRef.current.add(key)
-      const lineLabel =
-        (LINES && LINES[line]?.name) || line
-      awardAchievement(
-        key,
-        'Line Master',
-        `Completed every station on ${lineLabel} in ${cityDisplayName}.`,
-      )
       recordLineMaster(key)
     })
   }, [
     CITY_NAME,
-    LINES,
-    awardAchievement,
-    cityDisplayName,
     foundStationsPerLine,
     stationsPerLine,
     recordLineMaster,
@@ -4291,16 +4141,6 @@ function GamePageContent({
     lastPlayDateRef.current = todayStr
     window.localStorage.setItem('mm-last-play-date', todayStr)
     window.localStorage.setItem('mm-streak-count', String(streak))
-
-    const totalDays = playDays.size
-    if (totalDays >= 30)
-      awardAchievement('daily-ultimate', 'Ultimate Daily Grinder', 'Played on 30 different days.')
-    else if (totalDays >= 15)
-      awardAchievement('daily-ultra', 'Ultra Daily Grinder', 'Played on 15 different days.')
-    else if (totalDays >= 5)
-      awardAchievement('daily-super', 'Super Daily Grinder', 'Played on 5 different days.')
-    else if (totalDays >= 1)
-      awardAchievement('daily-normal', 'Daily Grinder', 'Played on 1 day.')
 
     if (streak >= 180)
       awardAchievement('streak-180', 'Streak Saver IV', 'Maintained a 180-day streak.')
@@ -4388,22 +4228,6 @@ function GamePageContent({
             Math.round(performance.now() - rankedFirstCorrectAtRef.current),
           )
         }
-        if (speedrunMode && speedrunStartRef.current === null) {
-          speedrunStartRef.current = performance.now()
-          speedrunFinishedRef.current = false
-          speedrunIntegrityRef.current = true
-          setSpeedrunElapsedMs(0)
-          if (typeof window !== 'undefined') {
-            try {
-              window.localStorage.setItem(
-                speedrunStartStorageKey(CITY_NAME),
-                String(Date.now()),
-              )
-            } catch {
-              // ignore
-            }
-          }
-        }
         registerPlayDay()
         if (perfectStartEligibleRef.current) {
           perfectStartCountRef.current += 1
@@ -4444,7 +4268,7 @@ function GamePageContent({
         registerPlayDay()
       }
     },
-    [CITY_NAME, awardAchievement, idMap, rankedMode, rankedRuleset, registerPlayDay, speedrunMode, zoomToFeatures],
+    [CITY_NAME, awardAchievement, idMap, rankedMode, rankedRuleset, registerPlayDay, zoomToFeatures],
   )
 
   const handleInputEdit = useCallback(() => {
@@ -4550,48 +4374,6 @@ function GamePageContent({
         awardAchievement('underdog', 'Underdog', 'Complete a city with fewer than 20 stations.')
       }
 
-      if (speedrunMode && speedrunAvailable && speedrunStartRef.current !== null && !speedrunFinishedRef.current) {
-        const elapsedMs = performance.now() - speedrunStartRef.current
-        speedrunFinishedRef.current = true
-        setSpeedrunElapsedMs(elapsedMs)
-        if (speedrunTimerRef.current) {
-          window.clearInterval(speedrunTimerRef.current)
-          speedrunTimerRef.current = null
-        }
-        clearSpeedrunStartStorage()
-
-        if (totalUniqueStations < 150 && elapsedMs <= 10 * 60 * 1000) {
-          awardAchievement('speedrunner-1', 'Speedrunner I', 'Complete a city (<150 stations) in under 10 minutes with Speedrun Mode.')
-        } else if (totalUniqueStations >= 150 && totalUniqueStations <= 500 && elapsedMs <= 30 * 60 * 1000) {
-          awardAchievement('speedrunner-2', 'Speedrunner II', 'Complete a city (150-500 stations) in under 30 minutes with Speedrun Mode.')
-        } else if (totalUniqueStations > 500 && totalUniqueStations <= 1000 && elapsedMs <= 75 * 60 * 1000) {
-          awardAchievement(
-            'speedrunner-3',
-            'Speedrunner III',
-            'Complete a city (\u22641000 stations) in under 75 minutes with Speedrun Mode.',
-          )
-        } else if (totalUniqueStations > 1000 && elapsedMs <= 90 * 60 * 1000) {
-          awardAchievement('speedrunner-4', 'Speedrunner IV', 'Complete a city (1000+ stations) in under 90 minutes with Speedrun Mode.')
-        }
-        if (speedrunIntegrityRef.current) {
-          awardAchievement(
-            'consistent-runner',
-            'Consistent Runner',
-            'Finish a speedrun without leaving the tab.',
-          )
-        }
-
-        const prevBestRaw =
-          typeof window !== 'undefined' ? window.localStorage.getItem(`speedrun-best-${CITY_NAME}`) : null
-        const prevBest = prevBestRaw ? Number(prevBestRaw) : null
-        if (typeof window !== 'undefined') {
-          if (prevBest === null || elapsedMs < prevBest) {
-            window.localStorage.setItem(`speedrun-best-${CITY_NAME}`, String(elapsedMs))
-            setBestSpeedrunMs(elapsedMs)
-          }
-        }
-      }
-
       // Main-city-only global completion tracking
       if (typeof window !== 'undefined' && !isMiniCity) {
         const today = new Date().toISOString().slice(0, 10)
@@ -4689,13 +4471,10 @@ function GamePageContent({
     awardAchievement,
     cityDisplayName,
     cityPath,
-    clearSpeedrunStartStorage,
     foundProportion,
     isMiniCity,
     mistakes,
     settings.achievementToastsEnabled,
-    speedrunAvailable,
-    speedrunMode,
     totalUniqueStations,
     user?.id,
   ])
@@ -4724,10 +4503,7 @@ function GamePageContent({
             repeatedGuessCount: rankedRepeatedGuessCountRef.current,
             hintCount: rankedHintCount,
             first50Ms: rankedFirst50MsRef.current,
-            completionMs:
-              speedrunMode && speedrunElapsedMs !== null
-                ? Math.round(speedrunElapsedMs)
-                : null,
+            completionMs: null,
           }),
         })
         const payload = await response.json().catch(() => ({}))
@@ -4754,8 +4530,6 @@ function GamePageContent({
     rankedHintCount,
     rankedMode,
     rankedSessionId,
-    speedrunElapsedMs,
-    speedrunMode,
     user,
   ])
 
@@ -4777,10 +4551,7 @@ function GamePageContent({
           body: JSON.stringify({
             playlistRunId,
             citySlug: CITY_NAME,
-            completionMs:
-              speedrunMode && speedrunElapsedMs !== null
-                ? Math.round(speedrunElapsedMs)
-                : null,
+            completionMs: null,
             accuracy:
               rankedCorrectGuessCountRef.current + rankedWrongGuessCountRef.current + rankedRepeatedGuessCountRef.current > 0
                 ? rankedCorrectGuessCountRef.current /
@@ -4811,8 +4582,6 @@ function GamePageContent({
     playlistRunId,
     rankedMode,
     router,
-    speedrunElapsedMs,
-    speedrunMode,
   ])
 
   useEffect(() => {
@@ -5147,6 +4916,10 @@ function GamePageContent({
 
     mapboxMap.on('load', () => {
       if (!mapboxMap || mapFailed) return
+      mapReady = true
+      clearMapFallbackTimeouts()
+      setShowMapFallbackPreview(false)
+      setMapError(null)
       mapboxMap.doubleClickZoom.disable()
       const isDarkTheme = resolvedTheme === 'dark' || showSatellite
       const foundTextColor = isDarkTheme
@@ -5576,10 +5349,6 @@ function GamePageContent({
       mapboxMap.once('idle', () => {
         const mbMap = mapboxMap
         if (!mbMap) return
-        mapReady = true
-        clearMapFallbackTimeouts()
-        setShowMapFallbackPreview(false)
-        setMapError(null)
         if (!initialMapViewRef.current) {
           const center = mbMap.getCenter()
           initialMapViewRef.current = {
@@ -5800,11 +5569,6 @@ function GamePageContent({
         } else if (action === 'TOGGLE_ZEN_MODE') {
             event.preventDefault()
             setZenMode(prev => !prev)
-        } else if (action === 'TOGGLE_SPEEDRUN') {
-            event.preventDefault()
-            if (speedrunAvailable) {
-              setSpeedrunMode(prev => !prev)
-            }
         } else if (action === 'TOGGLE_SIDEBAR') {
             event.preventDefault()
             setSidebarOpen(prev => !prev)
@@ -5850,8 +5614,6 @@ function GamePageContent({
     router,
     setHideLabels,
     setCityStatsOpen,
-    setSpeedrunMode,
-    speedrunAvailable,
   ])
 
 
@@ -6053,7 +5815,6 @@ function GamePageContent({
   return (
     <div className="relative flex h-screen flex-row items-start justify-start bg-zinc-50 text-zinc-900 dark:bg-zinc-950 dark:text-zinc-100">
       <ZenModeToast zenMode={zenMode} toggleKey={settings.keybindings.TOGGLE_ZEN_MODE} />
-      <SpeedrunToast speedrunMode={speedrunMode} />
       {mapCoordsToast ? (
         <div className="pointer-events-none fixed bottom-32 left-1/2 z-[110] -translate-x-1/2">
           <div className="rounded-full bg-sky-600/95 px-6 py-2 text-sm font-semibold text-white shadow-xl backdrop-blur dark:bg-sky-400/95 dark:text-zinc-950">
@@ -6285,12 +6046,12 @@ function GamePageContent({
                       {user
                         ? rankedFinishSummary?.rankedEligible
                           ? 'Ranked result recorded.'
-                          : rankedDisqualificationReason || rankedFinishSummary?.disqualificationReason
+                        : rankedDisqualificationReason || rankedFinishSummary?.disqualificationReason
                             ? 'Practice only after answer reveal.'
                             : oneLifeFailed
                               ? 'Run failed.'
                               : 'Ranked session active.'
-                        : 'Sign in to place on leaderboards.'}
+                        : 'Sign in to record ranked results.'}
                     </span>
                   </div>
                   <p className="mt-1 text-xs text-zinc-600 dark:text-zinc-400">
@@ -6359,14 +6120,6 @@ function GamePageContent({
                   }
                 />
               )}
-              {speedrunMode && (
-                <div className="flex items-center gap-2 rounded-full bg-amber-500/90 px-3 py-2 text-xs font-semibold text-white shadow-lg ring-1 ring-white/30 backdrop-blur dark:bg-amber-400/90 dark:text-zinc-950">
-                  <span>Speedrun</span>
-                  <span className="tabular-nums text-sm">
-                    {formatMs(speedrunElapsedMs ?? 0)}
-                  </span>
-                </div>
-              )}
               {showChinaMapStyleTestButton && (
                 <button
                   type="button"
@@ -6400,10 +6153,6 @@ function GamePageContent({
                 showMissedGuessInputs={solutionsUnlocked}
                 zenMode={zenMode}
                 onToggleZen={handleToggleZen}
-                speedrunMode={speedrunMode}
-                speedrunDisabled={!speedrunAvailable}
-                onToggleSpeedrun={() => setSpeedrunMode((prev) => !prev)}
-                bestSpeedrunMs={bestSpeedrunMs}
                 showSatellite={showSatellite}
                 onToggleSatellite={handleToggleSatellite}
                 showMapNames={showMapNames}

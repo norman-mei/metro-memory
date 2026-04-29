@@ -289,7 +289,6 @@ export type KeybindingAction =
   | 'TOGGLE_ZEN_MODE'
   | 'TOGGLE_SIDEBAR'
   | 'TOGGLE_SOLUTIONS'
-  | 'TOGGLE_SPEEDRUN'
   | 'OPEN_ACHIEVEMENTS'
   | 'OPEN_ACCOUNT'
   | 'OPEN_SETTINGS'
@@ -304,7 +303,6 @@ export const DEFAULT_KEYBINDINGS: Record<KeybindingAction, string> = {
   TOGGLE_ZEN_MODE: 'Alt+z',
   TOGGLE_SIDEBAR: 'Alt+b',
   TOGGLE_SOLUTIONS: 'Alt+s',
-  TOGGLE_SPEEDRUN: 'Alt+r',
   OPEN_ACHIEVEMENTS: 'Alt+a',
   OPEN_ACCOUNT: 'Alt+c',
   OPEN_SETTINGS: 'Alt+,',

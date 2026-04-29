@@ -13,9 +13,12 @@ import {
 } from 'react'
 
 import { useAuth } from '@/context/AuthContext'
+import { useSettings } from '@/context/SettingsContext'
 import useTranslation from '@/hooks/useTranslation'
+import { formatLocalizedCityName } from '@/lib/cityNameDisplay'
 import { getCityFlagEmojiFromPath } from '@/lib/countryFlags'
 import { cities } from '@/lib/citiesConfig'
+import { MINI_CITIES } from '@/lib/miniCities'
 import { STATION_TOTALS } from '@/lib/stationTotals'
 import { useLocalStorageValue } from '@react-hookz/web'
 
@@ -36,31 +39,30 @@ type LoginFormState = {
 
 const DELETE_HOLD_DURATION_MS = 10_000
 
-const citySlugMap = new Map(
-  cities
-    .map((city) => {
-      if (!city.link.startsWith('/')) return null
-      const slug = city.link.replace(/^\//, '').split(/[?#]/)[0]
-      return [
-        slug,
-        {
-          label: city.name,
-          flagEmoji: getCityFlagEmojiFromPath(city.link),
-        },
-      ] as const
+const citySlugMap = new Map<string, { label: string; flagEmoji: string }>()
+
+cities.forEach((city) => {
+  if (!city.link.startsWith('/')) return
+  const fullSlug = city.link.replace(/^\//, '').split(/[?#]/)[0]
+  const shortSlug = fullSlug.split('/').pop()
+  const entry = {
+    label: city.name,
+    flagEmoji: getCityFlagEmojiFromPath(city.link),
+  }
+  citySlugMap.set(fullSlug, entry)
+  if (shortSlug && !citySlugMap.has(shortSlug)) {
+    citySlugMap.set(shortSlug, entry)
+  }
+})
+
+MINI_CITIES.forEach((miniCity) => {
+  if (!citySlugMap.has(miniCity.slug)) {
+    citySlugMap.set(miniCity.slug, {
+      label: miniCity.name,
+      flagEmoji: getCityFlagEmojiFromPath(miniCity.link),
     })
-    .filter(
-      (
-        entry,
-      ): entry is [
-        string,
-        {
-          label: string
-          flagEmoji: string
-        },
-      ] => Boolean(entry),
-    ),
-)
+  }
+})
 
 const initialSignup: SignupFormState = {
   email: '',
@@ -96,7 +98,15 @@ function logAuthDebug(
 }
 
 export default function AccountDashboard({ showHeading = true }: { showHeading?: boolean }) {
+  const { settings } = useSettings()
   const { t } = useTranslation()
+  const tr = useCallback(
+    (key: string, fallback: string) => {
+      const value = t(key)
+      return typeof value === 'string' && value !== key ? value : fallback
+    },
+    [t],
+  )
   const searchParams = useSearchParams()
   const verifiedState = searchParams.get('verified')
   const authDebugEnabled = shouldDebugAuth(searchParams)
@@ -429,7 +439,7 @@ export default function AccountDashboard({ showHeading = true }: { showHeading?:
       const response = await fetch('/api/auth/delete', { method: 'POST' })
       if (response.status === 401) {
         setDeleteStatus('error')
-        setDeleteMessage('Please sign in again to delete your account.')
+        setDeleteMessage(tr('accountDeleteNeedSignIn', 'Please sign in again to delete your account.'))
         logoutLocally()
         return
       }
@@ -437,14 +447,14 @@ export default function AccountDashboard({ showHeading = true }: { showHeading?:
         throw new Error('Failed to delete account')
       }
       setDeleteStatus('success')
-      setDeleteMessage('Account deleted.')
+      setDeleteMessage(tr('accountDeleteSuccess', 'Account deleted.'))
       logoutLocally()
       setTimeout(() => {
         setDeleteDialogOpen(false)
       }, 1200)
     } catch (error) {
       setDeleteStatus('error')
-      setDeleteMessage('Unable to delete account. Try again.')
+      setDeleteMessage(tr('accountDeleteError', 'Unable to delete account. Try again.'))
       if (process.env.NODE_ENV !== 'production') {
         console.error(error)
       }
@@ -452,7 +462,7 @@ export default function AccountDashboard({ showHeading = true }: { showHeading?:
       setDeleteHoldProgress(0)
       clearDeleteHoldTracking()
     }
-  }, [clearDeleteHoldTracking, logoutLocally])
+  }, [clearDeleteHoldTracking, logoutLocally, tr])
 
   const completeDeleteHold = useCallback(() => {
     clearDeleteHoldTracking()
@@ -549,18 +559,20 @@ export default function AccountDashboard({ showHeading = true }: { showHeading?:
       const payload = await response.json().catch(() => ({}))
       if (!response.ok) {
         setDisplayNameStatus('idle')
-        setDisplayNameError(payload?.error ?? 'Unable to update display name.')
+        setDisplayNameError(
+          payload?.error ?? tr('accountProfileNameUpdateError', 'Unable to update profile name.'),
+        )
         return
       }
       setDisplayNameStatus('success')
-      setDisplayNameMessage('Leaderboard name updated.')
+      setDisplayNameMessage(tr('accountProfileNameUpdated', 'Profile name updated.'))
       await refresh()
     } catch (error) {
       if (process.env.NODE_ENV !== 'production') {
         console.error(error)
       }
       setDisplayNameStatus('idle')
-      setDisplayNameError('Unable to update display name.')
+      setDisplayNameError(tr('accountProfileNameUpdateError', 'Unable to update profile name.'))
     }
   }
 
@@ -619,12 +631,16 @@ export default function AccountDashboard({ showHeading = true }: { showHeading?:
           percent,
           progressPercent,
           barColor,
-          label: citySlugMap.get(slug)?.label ?? slug,
+          label: formatLocalizedCityName(
+            citySlugMap.get(slug)?.label ?? slug,
+            slug,
+            settings.language,
+          ),
           flagEmoji: citySlugMap.get(slug)?.flagEmoji ?? '\u{1F310}',
           iconSrc,
         }
       })
-  }, [progressSummaries])
+  }, [progressSummaries, settings.language])
 
   const filteredProgress = useMemo(() => {
     const normalized = syncedSearch.trim().toLowerCase()
@@ -654,7 +670,9 @@ export default function AccountDashboard({ showHeading = true }: { showHeading?:
     <div className="space-y-6" data-testid="account-dashboard">
       {showHeading && (
         <div>
-          <h1 className="text-3xl font-bold text-zinc-900 dark:text-zinc-100">Account</h1>
+          <h1 className="text-3xl font-bold text-zinc-900 dark:text-zinc-100">
+            {tr('accountHeading', 'Account')}
+          </h1>
           {!user && (
             <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
               {t('accountIntro')}
@@ -686,9 +704,10 @@ export default function AccountDashboard({ showHeading = true }: { showHeading?:
                 {t('accountLoggedInAs', { email: user.email })}
               </h2>
               <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">
-                Public leaderboard name:{' '}
+                {tr('accountPublicProfileName', 'Public profile name:')}{' '}
                 <span className="font-semibold text-zinc-900 dark:text-zinc-100">
-                  {user.displayName?.trim() || 'Auto-generated from your email'}
+                  {user.displayName?.trim() ||
+                    tr('accountAutoGeneratedName', 'Auto-generated from your email')}
                 </span>
               </p>
             </div>
@@ -706,16 +725,19 @@ export default function AccountDashboard({ showHeading = true }: { showHeading?:
           >
             <div className="space-y-1">
               <h3 className="text-sm font-semibold uppercase tracking-wide text-zinc-600 dark:text-zinc-400">
-                Public Profile
+                {tr('accountProfileSection', 'Profile')}
               </h3>
               <p className="text-sm text-zinc-500 dark:text-zinc-400">
-                This name appears on leaderboards, daily challenges, and shared challenge results.
+                {tr(
+                  'accountProfileSectionDesc',
+                  'This name appears anywhere your profile is shown in the app.',
+                )}
               </p>
             </div>
             <div className="mt-3 flex flex-col gap-3 md:flex-row md:items-end">
               <FormField
                 id="display-name"
-                label="Display name"
+                label={tr('accountProfileNameLabel', 'Profile name')}
                 type="text"
                 value={displayNameForm}
                 onChange={(event) => {
@@ -730,7 +752,9 @@ export default function AccountDashboard({ showHeading = true }: { showHeading?:
                 disabled={displayNameStatus === 'submitting'}
                 className="inline-flex h-12 items-center justify-center rounded-full bg-zinc-900 px-4 py-2 text-sm font-semibold text-white transition hover:bg-zinc-800 focus:outline-none focus:ring-2 focus:ring-[var(--accent-ring)] disabled:cursor-not-allowed disabled:opacity-60 dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-zinc-200"
               >
-                {displayNameStatus === 'submitting' ? 'Saving...' : 'Save display name'}
+                {displayNameStatus === 'submitting'
+                  ? tr('accountProfileNameSaving', 'Saving...')
+                  : tr('accountProfileNameSave', 'Save profile name')}
               </button>
             </div>
             {displayNameMessage && (
@@ -955,10 +979,13 @@ export default function AccountDashboard({ showHeading = true }: { showHeading?:
           <div className="mt-6 rounded-2xl border border-red-200 bg-red-50 p-4 text-sm dark:border-red-900/60 dark:bg-red-950/40">
             <div>
               <p className="text-base font-semibold text-red-900 dark:text-red-200">
-                Delete account
+                {tr('accountDeleteTitle', 'Delete account')}
               </p>
               <p className="text-red-700 dark:text-red-300">
-                Delete your account and synced progress permanently.
+                {tr(
+                  'accountDeleteCardDesc',
+                  'Delete your account and synced progress permanently.',
+                )}
               </p>
             </div>
             <button
@@ -966,7 +993,7 @@ export default function AccountDashboard({ showHeading = true }: { showHeading?:
               onClick={openDeleteDialog}
               className="mt-3 inline-flex items-center justify-center rounded-full border border-red-500 bg-red-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-red-500 focus:outline-none focus:ring-2 focus:ring-red-500/40"
             >
-              Delete account
+              {tr('accountDeleteTitle', 'Delete account')}
             </button>
           </div>
         </section>
@@ -1103,7 +1130,7 @@ export default function AccountDashboard({ showHeading = true }: { showHeading?:
                   data-testid="account-switch-login"
                   className="text-sm font-medium text-[var(--accent-600)] hover:underline dark:text-[var(--accent-400)]"
                 >
-                  Already have an account? Sign in
+                  {tr('accountSwitchToLogin', 'Already have an account? Sign in')}
                 </button>
               </div>
             </section>
@@ -1173,7 +1200,7 @@ export default function AccountDashboard({ showHeading = true }: { showHeading?:
                   data-testid="account-switch-create"
                   className="text-sm font-medium text-[var(--accent-600)] hover:underline dark:text-[var(--accent-400)]"
                 >
-                  Don&apos;t have an account? Create one
+                  {tr('accountSwitchToSignup', "Don't have an account? Create one")}
                 </button>
               </div>
             </section>
@@ -1208,10 +1235,13 @@ export default function AccountDashboard({ showHeading = true }: { showHeading?:
               </div>
               <div>
                 <h3 className="text-lg font-semibold text-zinc-900 dark:text-zinc-100">
-                  Delete account
+                  {tr('accountDeleteTitle', 'Delete account')}
                 </h3>
                 <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">
-                  This permanently deletes your account and all synced progress. This cannot be undone.
+                  {tr(
+                    'accountDeleteDesc',
+                    'This permanently deletes your account and all synced progress. This cannot be undone.',
+                  )}
                 </p>
               </div>
             </div>
@@ -1222,20 +1252,23 @@ export default function AccountDashboard({ showHeading = true }: { showHeading?:
                   onClick={closeDeleteDialog}
                   className="rounded-full border border-zinc-300 px-4 py-2 text-sm font-semibold text-zinc-700 transition hover:bg-zinc-100 dark:border-zinc-700 dark:text-zinc-200 dark:hover:bg-zinc-800"
                 >
-                  Cancel
+                  {tr('accountDeleteCancel', 'Cancel')}
                 </button>
                 <button
                   type="button"
                   onClick={() => setDeleteStep(1)}
                   className="rounded-full bg-red-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-red-500"
                 >
-                  I understand
+                  {tr('accountDeleteAcknowledge', 'I understand')}
                 </button>
               </div>
             ) : (
               <div className="mt-6 space-y-3">
                 <p className="text-sm text-zinc-600 dark:text-zinc-400">
-                  Hold the button for 10 seconds to confirm deletion.
+                  {tr(
+                    'accountDeleteHoldDesc',
+                    'Hold the button for 10 seconds to confirm deletion.',
+                  )}
                 </p>
                 <button
                   type="button"
@@ -1259,8 +1292,8 @@ export default function AccountDashboard({ showHeading = true }: { showHeading?:
                   disabled={deleteStatus === 'deleting'}
                 >
                   {deleteStatus === 'deleting'
-                    ? 'Deleting...'
-                    : 'Hold to delete account'}
+                    ? tr('accountDeleteDeleting', 'Deleting...')
+                    : tr('accountDeleteHoldButton', 'Hold to delete account')}
                 </button>
                 <div className="h-1 w-full rounded-full bg-red-200 dark:bg-red-900/40">
                   <div
@@ -1274,7 +1307,7 @@ export default function AccountDashboard({ showHeading = true }: { showHeading?:
                     onClick={closeDeleteDialog}
                     className="rounded-full border border-zinc-300 px-4 py-2 text-sm font-semibold text-zinc-700 transition hover:bg-zinc-100 dark:border-zinc-700 dark:text-zinc-200 dark:hover:bg-zinc-800"
                   >
-                    Cancel
+                    {tr('accountDeleteCancel', 'Cancel')}
                   </button>
                 </div>
               </div>
@@ -1363,6 +1396,15 @@ function PasswordField({
   onToggle: () => void
   autoComplete?: string
 }) {
+  const { t } = useTranslation()
+  const tr = useCallback(
+    (key: string, fallback: string) => {
+      const value = t(key)
+      return typeof value === 'string' && value !== key ? value : fallback
+    },
+    [t],
+  )
+
   return (
     <div className="space-y-1.5">
       <label
@@ -1392,7 +1434,7 @@ function PasswordField({
         onClick={onToggle}
         className="text-sm font-semibold text-[var(--accent-600)] transition hover:text-[var(--accent-500)] dark:text-[var(--accent-400)] dark:hover:text-[var(--accent-300)]"
       >
-        {show ? 'Hide' : 'Show'} {label.toLowerCase()}
+        {show ? tr('accountHideField', 'Hide') : tr('accountShowField', 'Show')} {label}
       </button>
       {error && <p className="text-sm text-rose-500">{error}</p>}
     </div>

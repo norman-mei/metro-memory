@@ -9,30 +9,6 @@ export type GlobalAchievementDefinition = {
 
 export const GLOBAL_ACHIEVEMENTS: GlobalAchievementDefinition[] = [
   {
-    slug: 'speedrunner-1',
-    title: 'Speedrunner I',
-    description: 'Complete a city (<150 stations) in under 10 minutes with Speedrun Mode.',
-    order: 10_001,
-  },
-  {
-    slug: 'speedrunner-2',
-    title: 'Speedrunner II',
-    description: 'Complete a city (150-500 stations) in under 30 minutes with Speedrun Mode.',
-    order: 10_001,
-  },
-  {
-    slug: 'speedrunner-3',
-    title: 'Speedrunner III',
-    description: 'Complete a city (≤1000 stations) in under 75 minutes with Speedrun Mode.',
-    order: 10_001,
-  },
-  {
-    slug: 'speedrunner-4',
-    title: 'Speedrunner IV',
-    description: 'Complete a city (1000+ stations) in under 90 minutes with Speedrun Mode.',
-    order: 10_001,
-  },
-  {
     slug: 'flawless',
     title: 'Flawless Route',
     description: 'Complete any city with zero mistakes.',
@@ -49,12 +25,6 @@ export const GLOBAL_ACHIEVEMENTS: GlobalAchievementDefinition[] = [
     title: 'Comeback Kid',
     description: 'Recover from under 50% to finish a city.',
     order: 10_004,
-  },
-  {
-    slug: 'line-master',
-    title: 'Line Master',
-    description: 'Complete every station on any single line.',
-    order: 10_005,
   },
   {
     slug: 'explorer-3',
@@ -79,30 +49,6 @@ export const GLOBAL_ACHIEVEMENTS: GlobalAchievementDefinition[] = [
     title: 'Ultimate Explorer',
     description: 'Complete 50 different cities.',
     order: 10_013,
-  },
-  {
-    slug: 'daily-normal',
-    title: 'Daily Grinder',
-    description: 'Play on 1 day.',
-    order: 10_020,
-  },
-  {
-    slug: 'daily-super',
-    title: 'Super Daily Grinder',
-    description: 'Play on 5 different days.',
-    order: 10_021,
-  },
-  {
-    slug: 'daily-ultra',
-    title: 'Ultra Daily Grinder',
-    description: 'Play on 15 different days.',
-    order: 10_022,
-  },
-  {
-    slug: 'daily-ultimate',
-    title: 'Ultimate Daily Grinder',
-    description: 'Play on 30 different days.',
-    order: 10_023,
   },
   {
     slug: 'streak-7',
@@ -169,12 +115,6 @@ export const GLOBAL_ACHIEVEMENTS: GlobalAchievementDefinition[] = [
     title: 'Marathoner',
     description: 'Find 10,000 stations across all cities.',
     order: 10_046,
-  },
-  {
-    slug: 'consistent-runner',
-    title: 'Consistent Runner',
-    description: 'Finish a speedrun without leaving the tab.',
-    order: 10_047,
   },
   {
     slug: 'typo-free',

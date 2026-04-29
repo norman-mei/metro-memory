@@ -199,8 +199,8 @@ export default function CampaignCatalogBrowser({
                 Find a campaign
               </h2>
               <p className="text-sm text-zinc-600 dark:text-zinc-400">
-                Search pack names or city slugs, filter by status, and sort the catalog the same
-                way you browse leaderboards.
+                Search pack names or city slugs, filter by status, and sort the catalog however
+                you want to browse it.
               </p>
             </div>
             <div className="text-sm text-zinc-500 dark:text-zinc-400">

@@ -453,18 +453,7 @@ async function syncSeasonEvents(tx: any, run: any) {
 
     let count = 0
 
-    if (event.eventType === 'DAILY_CLEAR') {
-      count = await tx.runSession.count({
-        where: {
-          userId: run.userId,
-          seasonId: run.seasonId,
-          status: 'COMPLETED',
-          rankedEligible: true,
-          completionPercent: { gte: RANKED_COMPLETION_TARGET },
-          sourceType: 'DAILY',
-        },
-      })
-    } else if (event.eventType === 'CITY_CLEAR' && event.citySlug) {
+    if (event.eventType === 'CITY_CLEAR' && event.citySlug) {
       count = await tx.runSession.count({
         where: {
           userId: run.userId,

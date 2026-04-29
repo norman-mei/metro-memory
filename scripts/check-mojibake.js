@@ -33,9 +33,12 @@ const WIN1252_REVERSE_MAP = new Map([
   ['\u0178', 0x9f],
 ])
 
-const MOJIBAKE_PATTERN = /[\u00c2\u00c3\u00c5\u00c6\u00cb\u00d0\u00d8\u00e2\u00e3\u00e5\u00e6\u00e7]/u
+const MOJIBAKE_PATTERN =
+  /(?:Ã.|Â.|â.|æ.|è.|ë.|ì.|í.|î.|ï.|ð.|Ñ.|Ø.|Ù.|ä.|å.|º.|».|¼.|½.|¾.|¿.)/u
 const REPAIR_BONUS_PATTERN =
-  /[\u00df\u2013\u2014\u2018\u2019\u201c\u201d\u2022\u2026\u2122\u2264\u23ce\u2605]|[\u3400-\u9fff]/gu
+  /[\u00c0-\u024f\u00df\u2013\u2014\u2018\u2019\u201c\u201d\u2022\u2026\u2122\u2264\u23ce\u2605]|[\u0600-\u06ff]|[\u1100-\u11ff\u3130-\u318f\uac00-\ud7af]|[\u3400-\u9fff]|[\u3040-\u30ff]/gu
+const SUSPICIOUS_SEQUENCE_PATTERN =
+  /(?:Ã.|Â.|â.|æ.|è.|ë.|ì.|í.|î.|ï.|ð.|Ñ.|Ø.|Ù.|ä.|å.|º.|».|¼.|½.|¾.|¿.)/gu
 
 const decoder = new TextDecoder('utf-8', { fatal: true })
 
@@ -54,12 +57,16 @@ const TARGETS = [
 const EXTENSIONS = new Set(['.ts', '.tsx', '.js', '.jsx', '.json', '.md'])
 
 const countMatches = (value, pattern) => value.match(pattern)?.length ?? 0
+const countControlCharacters = (value) => countMatches(value, /[\u0000-\u001f\u007f-\u009f]/gu)
 
 const scoreRepairCandidate = (value) =>
   countMatches(value, /[\u3400-\u9fff]/gu) * 10 +
+  countMatches(value, /[\u1100-\u11ff\u3130-\u318f\uac00-\ud7af]/gu) * 10 +
+  countMatches(value, /[\u0600-\u06ff]/gu) * 10 +
+  countMatches(value, /[\u3040-\u30ff]/gu) * 10 +
   countMatches(value, REPAIR_BONUS_PATTERN) * 3 -
-  countMatches(value, /[\u00c2\u00c3\u00c5\u00c6\u00cb\u00d0\u00d8\u00e2\u00e3\u00e5\u00e6\u00e7]/gu) *
-    2
+  countMatches(value, SUSPICIOUS_SEQUENCE_PATTERN) * 6 -
+  countControlCharacters(value) * 20
 
 const encodeWin1252 = (value) => {
   const bytes = []

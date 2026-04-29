@@ -1,5 +1,6 @@
 'use client'
 
+import useTranslation from '@/hooks/useTranslation'
 import { useRouter } from 'next/navigation'
 import { ChangeEvent, useMemo, useState } from 'react'
 
@@ -45,7 +46,12 @@ const MiniCityLinksPanel = ({
   onOpenCustomModal,
 }: MiniCityLinksPanelProps) => {
   const router = useRouter()
+  const { t } = useTranslation()
   const [expanded, setExpanded] = useState(defaultExpanded)
+  const getLabel = (key: string, fallback: string) => {
+    const value = t(key)
+    return typeof value === 'string' && value !== key ? value : fallback
+  }
   const selectorValue = useMemo(() => {
     if (currentSlug && items.some((item) => item.slug === currentSlug)) {
       return currentSlug
@@ -102,11 +108,15 @@ const MiniCityLinksPanel = ({
               className="w-full rounded-xl border border-zinc-300 bg-white px-3 py-2.5 text-sm font-medium text-zinc-800 shadow-sm outline-none transition focus:border-[var(--accent-400)] focus:ring-2 focus:ring-[var(--accent-ring)] dark:border-zinc-700 dark:bg-zinc-950 dark:text-zinc-100"
             >
               <option value="" disabled>
-                {currentSlug ? 'Select a related version' : 'Select a smaller version'}
+                {currentSlug
+                  ? getLabel('selectRelatedVersion', 'Select a related version')
+                  : getLabel('selectSmallerVersion', 'Select a smaller version')}
               </option>
               {items.map((item) => (
                 <option key={item.slug} value={item.slug}>
-                  {item.slug === currentSlug ? `${item.name} (Current)` : item.name}
+                  {item.slug === currentSlug
+                    ? `${item.name} (${getLabel('currentTag', 'Current')})`
+                    : item.name}
                 </option>
               ))}
             </select>
@@ -117,7 +127,7 @@ const MiniCityLinksPanel = ({
               onClick={onOpenCustomModal}
               className="inline-flex items-center rounded-full border border-dashed border-zinc-400 bg-transparent px-3 py-1.5 text-sm font-medium text-zinc-600 transition hover:border-[var(--accent-400)] hover:text-[var(--accent-700)] focus:outline-none focus:ring-2 focus:ring-[var(--accent-ring)] dark:border-zinc-600 dark:text-zinc-400 dark:hover:border-zinc-400 dark:hover:text-zinc-200"
             >
-              + Create Custom
+              + {getLabel('createCustomMiniCity', 'Create Custom')}
             </button>
           )}
         </div>

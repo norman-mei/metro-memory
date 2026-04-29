@@ -166,9 +166,6 @@ export default async function CompetitiveOverview() {
         <article className="rounded-3xl border border-zinc-200 bg-white p-6 shadow-sm dark:border-zinc-800 dark:bg-zinc-900">
           <div className="flex items-center justify-between gap-4">
             <h2 className="text-2xl font-semibold text-zinc-900 dark:text-zinc-100">Licenses & badges</h2>
-            <Link href="/leaderboards" className="text-sm font-semibold text-zinc-500 hover:underline dark:text-zinc-400">
-              Leaderboards
-            </Link>
           </div>
           <div className="mt-4 grid gap-3 sm:grid-cols-2">
             {progression.licenses.slice(0, 4).map((entry) => (

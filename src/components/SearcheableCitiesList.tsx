@@ -32,10 +32,13 @@ import { useAuth } from '@/context/AuthContext'
 import { useSettings } from '@/context/SettingsContext'
 import useTranslation from '@/hooks/useTranslation'
 import { getAchievementForCity, getMasterAchievementDefinition } from '@/lib/achievements'
+import { formatAchievementDisplayMeta } from '@/lib/achievementDisplay'
 import { getCityOpenGraphImagePath } from '@/lib/cityAssets'
+import { formatLocalizedCityName } from '@/lib/cityNameDisplay'
 import { ICity, cities, isCityDisabled as isCityDisabledFlag } from '@/lib/citiesConfig'
 import { CITY_COORDINATES } from '@/lib/cityCoordinates'
 import { GLOBAL_ACHIEVEMENTS } from '@/lib/globalAchievements'
+import { resolveI18nLocaleCode } from '@/lib/i18n'
 import {
   MINI_CITIES,
   type MiniCityDefinition,
@@ -53,7 +56,6 @@ import {
     MdHistory,
     MdHome,
     MdInfo,
-    MdLeaderboard,
     MdLightMode,
     MdLocationCity,
     MdLock,
@@ -64,8 +66,6 @@ import {
     MdSatellite,
     MdSettings,
     MdShuffle,
-    MdToday,
-    MdPlaylistPlay,
 } from 'react-icons/md'
 
 import { STATION_TOTALS } from '@/lib/stationTotals'
@@ -177,26 +177,14 @@ const TAB_ICONS: Record<TabOption, React.ElementType> = {
   home: MdHome,
 }
 
-const SIDEBAR_ROUTE_ITEMS = [
-  {
-    href: '/daily',
-    label: 'Daily Challenge',
-    icon: MdToday,
-    match: (pathname: string) => pathname === '/daily',
-  },
-  {
-    href: '/leaderboards',
-    label: 'Leaderboards',
-    icon: MdLeaderboard,
-    match: (pathname: string) => pathname.startsWith('/leaderboards'),
-  },
-  {
-    href: '/challenges',
-    label: 'Challenge Runs',
-    icon: MdPlaylistPlay,
-    match: (pathname: string) => pathname.startsWith('/challenges') || pathname.startsWith('/challenge/'),
-  },
-] as const
+type SidebarRouteItem = {
+  href: string
+  label: string
+  icon: React.ElementType
+  match: (pathname: string) => boolean
+}
+
+const SIDEBAR_ROUTE_ITEMS: SidebarRouteItem[] = []
 
 type UpdateLogStatus = 'idle' | 'loading' | 'success' | 'error'
 
@@ -497,9 +485,37 @@ const formatCountryLabel = (slug: string | null) => {
     return COUNTRY_LABEL_OVERRIDES[slug]
   }
   return slug
-    .split('-')
-    .map((chunk) => (chunk ? chunk[0].toUpperCase() + chunk.slice(1) : chunk))
-    .join(' ')
+      .split('-')
+      .map((chunk) => (chunk ? chunk[0].toUpperCase() + chunk.slice(1) : chunk))
+      .join(' ')
+}
+
+const formatAchievementCountryLabel = (
+  slug: string | null,
+  t: (key: string, params?: Record<string, unknown>) => string,
+) => {
+  if (!slug) {
+    return t('unknownLabel')
+  }
+  if (slug === 'global') {
+    return t('achievementCategoryMain')
+  }
+  if (slug === 'secret-fun') {
+    return t('achievementCategorySecretFun')
+  }
+  return formatCountryLabel(slug)
+}
+
+const formatAchievementContinentLabel = (
+  continent: string,
+  t: (key: string, params?: Record<string, unknown>) => string,
+) => {
+  if (continent === 'Global') {
+    return t('achievementCategoryGlobal')
+  }
+  return CONTINENT_LABEL_KEYS[continent] !== undefined
+    ? t(CONTINENT_LABEL_KEYS[continent])
+    : continent
 }
 
 const getCountryFlagEmoji = (slug: string | null) => {
@@ -674,6 +690,10 @@ const SearcheableCitiesList = ({
   const [userLocation, setUserLocation] = useState<[number, number] | null>(null)
   const { settings } = useSettings()
   const { t } = useTranslation()
+  const getLabel = (key: string, fallback: string) => {
+    const value = t(key)
+    return typeof value === 'string' && value !== key ? value : fallback
+  }
   const { theme, setTheme, resolvedTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
   const [viewportWidth, setViewportWidth] = useState<number>(0)
@@ -829,24 +849,43 @@ const SearcheableCitiesList = ({
     const baseCities = enrichCities(filteredCities)
     return baseCities.map((city) => {
       const slug = getSlugFromLink(city.link)
+      const localizedName = formatLocalizedCityName(
+        city.name,
+        slug ?? city.link,
+        settings.language,
+      )
       if (!slug) {
-        return city
+        return {
+          ...city,
+          name: localizedName,
+        }
+      }
+      const mergedKeywords = new Set(city.keywords ?? [])
+      if (localizedName !== city.name) {
+        mergedKeywords.add(city.name)
       }
       const miniCities = getMiniCitiesForParent(slug)
       if (miniCities.length === 0) {
-        return city
+        return {
+          ...city,
+          name: localizedName,
+          keywords: Array.from(mergedKeywords),
+        }
       }
-      const mergedKeywords = new Set(city.keywords ?? [])
       miniCities.forEach((miniCity) => {
         mergedKeywords.add(miniCity.name)
+        mergedKeywords.add(
+          formatLocalizedCityName(miniCity.name, miniCity.slug, settings.language),
+        )
         miniCity.keywords.forEach((keyword) => mergedKeywords.add(keyword))
       })
       return {
         ...city,
+        name: localizedName,
         keywords: Array.from(mergedKeywords),
       }
     })
-  }, [filteredCities])
+  }, [filteredCities, settings.language])
   const recommendedSet = useMemo(() => new Set(recommendedSlugs), [recommendedSlugs])
   const isMapView = cityViewMode === 'globe' || cityViewMode === 'map'
   const cityAchievementCatalog = useMemo(() => {
@@ -1276,18 +1315,26 @@ const SearcheableCitiesList = ({
       const query = globalStatsSearch.trim().toLowerCase()
       if (!query) return true
       const miniCity = miniCityMetaBySlug.get(entry.slug)
+      const localizedName = formatLocalizedCityName(entry.name, entry.slug, settings.language)
+      const localizedParentName = formatLocalizedCityName(
+        entry.parentName,
+        entry.parentSlug,
+        settings.language,
+      )
       const haystack = [
         entry.name,
+        localizedName,
         entry.slug,
         entry.parentName,
+        localizedParentName,
         miniCity?.continent ?? '',
         ...(miniCity?.keywords ?? []),
       ]
-        .join(' ')
-        .toLowerCase()
+          .join(' ')
+          .toLowerCase()
       return haystack.includes(query)
     },
-    [globalStatsSearch, miniCityMetaBySlug],
+    [globalStatsSearch, miniCityMetaBySlug, settings.language],
   )
 
   const isValidCityViewMode = useCallback(
@@ -1783,12 +1830,16 @@ const SearcheableCitiesList = ({
         return [
           city,
           ...miniCities.map(
-            (miniCity) =>
-              ({
-                name: miniCity.name,
-                image: getCityOpenGraphImagePath(miniCity.slug),
-                link: miniCity.link,
-                continent: city.continent,
+              (miniCity) =>
+                ({
+                name: formatLocalizedCityName(
+                  miniCity.name,
+                  miniCity.slug,
+                  settings.language,
+                ),
+                  image: getCityOpenGraphImagePath(miniCity.slug),
+                  link: miniCity.link,
+                  continent: city.continent,
                 disabled: false,
                 hideInStats: false,
                 keywords: [],
@@ -1796,7 +1847,7 @@ const SearcheableCitiesList = ({
           ),
         ]
       }),
-    [miniCitiesByParentSlug],
+    [miniCitiesByParentSlug, settings.language],
   )
   const displayGroups = useMemo(
     () =>
@@ -2398,10 +2449,6 @@ const SearcheableCitiesList = ({
       progressMap.set(slug, { current, target })
     }
 
-    addThreshold('daily-normal', achievementMetrics.playDays, 1)
-    addThreshold('daily-super', achievementMetrics.playDays, 5)
-    addThreshold('daily-ultra', achievementMetrics.playDays, 15)
-    addThreshold('daily-ultimate', achievementMetrics.playDays, 30)
     addThreshold('streak-7', achievementMetrics.streak, 7)
     addThreshold('streak-30', achievementMetrics.streak, 30)
     addThreshold('streak-90', achievementMetrics.streak, 90)
@@ -2942,18 +2989,17 @@ const SearcheableCitiesList = ({
                 {activeNavItems.map(
                   ({ continent, cityCount, miniCityCount = 0, sectionId, averagePercent, countries }) => {
               const translatedContinent =
-                continent === 'Favorites'
-                  ? t('favoriteCities') || 'Favorite Cities'
-                  : CONTINENT_LABEL_KEYS[continent] !== undefined
-                    ? t(CONTINENT_LABEL_KEYS[continent])
-                    : continent
-                  const countNoun = activeTab === 'achievements' ? 'achievement' : 'city'
+                activeTab === 'achievements'
+                  ? formatAchievementContinentLabel(continent, t)
+                  : continent === 'Favorites'
+                    ? t('favoriteCities') || 'Favorite Cities'
+                    : CONTINENT_LABEL_KEYS[continent] !== undefined
+                      ? t(CONTINENT_LABEL_KEYS[continent])
+                      : continent
                   const countLabel =
-                    cityCount === 1
-                      ? countNoun
-                      : countNoun === 'city'
-                        ? 'cities'
-                        : `${countNoun}s`
+                    activeTab === 'achievements'
+                      ? t('achievementCountLabel', { count: cityCount })
+                      : t('cityCount', { count: cityCount })
                   const miniCountLabel =
                     activeTab === 'cities' && miniCityCount > 0
                       ? `, ${miniCityCount} ${miniCityCount === 1 ? 'Mini City' : 'Mini Cities'}`
@@ -3003,7 +3049,7 @@ const SearcheableCitiesList = ({
                               )}
                             </div>
                             <div className="mt-1 flex items-center justify-between text-xs text-zinc-500 dark:text-zinc-500">
-                              <span>{cityCount} {countLabel}{miniCountLabel}</span>
+                              <span>{countLabel}{miniCountLabel}</span>
                               {isActive && (
                                   <span className="font-medium" style={{ color: percentColor }}>
                                       {percentLabel}
@@ -3015,7 +3061,11 @@ const SearcheableCitiesList = ({
                             type="button"
                             onClick={() => toggleContinentCollapse(continent)}
                             className="mt-0.5 rounded-md p-1 text-zinc-500 transition hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100"
-                            aria-label={isCollapsed ? `Expand ${translatedContinent}` : `Collapse ${translatedContinent}`}
+                            aria-label={
+                              isCollapsed
+                                ? t('expandSectionLabel', { label: translatedContinent })
+                                : t('collapseSectionLabel', { label: translatedContinent })
+                            }
                           >
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
@@ -3053,7 +3103,11 @@ const SearcheableCitiesList = ({
                               <span aria-hidden="true" className="shrink-0">
                                 {getCountryFlagEmoji(country.country)}
                               </span>
-                              <span className="truncate">{country.label}</span>
+                              <span className="truncate">
+                                {activeTab === 'achievements'
+                                  ? formatAchievementCountryLabel(country.country, t)
+                                  : country.label}
+                              </span>
                             </span>
                             <span className="flex items-center gap-1 tabular-nums" style={{ color }}>
                               {percent}
@@ -3383,7 +3437,11 @@ const SearcheableCitiesList = ({
                 )}
               >
                 <MdMyLocation className="h-5 w-5" />
-                <span className="sr-only">{isLocating ? 'Locating...' : 'Get location'}</span>
+                <span className="sr-only">
+                  {isLocating
+                    ? getLabel('locating', 'Locating...')
+                    : getLabel('getLocation', 'Get location')}
+                </span>
                 <span
                   className={classNames(
                     'max-w-0 overflow-hidden whitespace-nowrap pl-0 text-sm opacity-0 transition-all duration-200',
@@ -3391,7 +3449,9 @@ const SearcheableCitiesList = ({
                     'group-focus-visible:max-w-xs group-focus-visible:pl-2 group-focus-visible:opacity-100 group-focus-visible:translate-x-0',
                   )}
                 >
-                  {isLocating ? 'Locating...' : 'Get location'}
+                  {isLocating
+                    ? getLabel('locating', 'Locating...')
+                    : getLabel('getLocation', 'Get location')}
                 </span>
               </button>
               
@@ -3427,7 +3487,9 @@ const SearcheableCitiesList = ({
                 )}
               >
                 <MdShuffle className="h-5 w-5" />
-                <span className="sr-only">Play Random City</span>
+                <span className="sr-only">
+                  {getLabel('playRandomCity', 'Play Random City')}
+                </span>
                 <span
                   className={classNames(
                     'max-w-0 overflow-hidden whitespace-nowrap pl-0 text-sm opacity-0 transition-all duration-200',
@@ -3435,7 +3497,7 @@ const SearcheableCitiesList = ({
                     'group-focus-visible:max-w-xs group-focus-visible:pl-2 group-focus-visible:opacity-100 group-focus-visible:translate-x-0',
                   )}
                 >
-                  Play Random City
+                  {getLabel('playRandomCity', 'Play Random City')}
                 </span>
               </button>
             </div>
@@ -3587,10 +3649,9 @@ const SearcheableCitiesList = ({
       ) : activeTab === 'globalStats' ? (
         <div className="space-y-6">
           <div className="space-y-3">
-            <h3 className="text-3xl font-bold text-zinc-900 dark:text-zinc-50">Global Stats</h3>
+            <h3 className="text-3xl font-bold text-zinc-900 dark:text-zinc-50">{t('tabGlobalStats')}</h3>
             <p className="text-sm text-zinc-600 dark:text-zinc-400">
-              Aggregated from your saved progress across every city on this device (plus any
-              synced progress, if logged in).
+              {t('globalStatsSubtitle')}
             </p>
           </div>
           {renderGlobalBar(
@@ -3608,30 +3669,38 @@ const SearcheableCitiesList = ({
               <div className="mb-3 flex items-center justify-between gap-3">
                 <div>
                   <p className="text-lg font-semibold text-zinc-800 dark:text-zinc-100">
-                    By continent
+                    {t('globalByContinentTitle')}
                   </p>
                   <p className="text-sm text-zinc-600 dark:text-zinc-400">
-                    Overall completion for each continent.
+                    {t('globalByContinentDesc')}
                   </p>
                 </div>
                 <span className="text-xs font-semibold uppercase tracking-wide text-zinc-500 dark:text-zinc-400">
                   {t('cityStatsStationsProgress')}
                 </span>
               </div>
-              <div className="divide-y divide-zinc-200 dark:divide-[#18181b]">
-                {globalStats.continentBreakdown.map((entry) => {
-                  const percentLabel = `${(clamp01(entry.percent) * 100).toFixed(2)}%`
-                  const barBg = getBarBackground(entry.percent)
-                  return (
-                    <div key={entry.continent} className="py-3">
-                      <div className="flex flex-wrap items-center justify-between gap-3">
-                        <div className="flex flex-col">
-                          <span className="text-base font-semibold text-zinc-800 dark:text-zinc-100">
-                            {entry.continent}
-                          </span>
-                          <span className="text-sm font-semibold text-zinc-600 dark:text-zinc-300">
-                            {entry.cityCount} Cities · {entry.found.toLocaleString()} /{' '}
-                            {entry.total.toLocaleString()} stations
+                <div className="divide-y divide-zinc-200 dark:divide-[#18181b]">
+                  {globalStats.continentBreakdown.map((entry) => {
+                    const percentLabel = `${(clamp01(entry.percent) * 100).toFixed(2)}%`
+                    const barBg = getBarBackground(entry.percent)
+                    const translatedContinent =
+                      CONTINENT_LABEL_KEYS[entry.continent] !== undefined
+                        ? t(CONTINENT_LABEL_KEYS[entry.continent])
+                        : entry.continent
+                    return (
+                      <div key={entry.continent} className="py-3">
+                        <div className="flex flex-wrap items-center justify-between gap-3">
+                          <div className="flex flex-col">
+                            <span className="text-base font-semibold text-zinc-800 dark:text-zinc-100">
+                              {translatedContinent}
+                            </span>
+                            <span className="text-sm font-semibold text-zinc-600 dark:text-zinc-300">
+                              {t('globalContinentDetail', {
+                                cityCount: t('cityCount', { count: entry.cityCount }),
+                                found: entry.found.toLocaleString(),
+                              total: entry.total.toLocaleString(),
+                              stations: t('stations', { count: entry.total }),
+                            })}
                           </span>
                         </div>
                         <div className="flex items-center gap-3">
@@ -3690,14 +3759,16 @@ const SearcheableCitiesList = ({
             </div>
           </div>
 
-          <div className="rounded-2xl border border-zinc-200 bg-white p-4 shadow-sm dark:border-[#18181b] dark:bg-zinc-900">
-            <div className="mb-3 flex items-center justify-between gap-3">
-              <div>
-                <p className="text-lg font-semibold text-zinc-800 dark:text-zinc-100">By city</p>
-                <p className="text-sm text-zinc-600 dark:text-zinc-400">
-                  {t('globalByCityHint')}
-                </p>
-              </div>
+            <div className="rounded-2xl border border-zinc-200 bg-white p-4 shadow-sm dark:border-[#18181b] dark:bg-zinc-900">
+              <div className="mb-3 flex items-center justify-between gap-3">
+                <div>
+                  <p className="text-lg font-semibold text-zinc-800 dark:text-zinc-100">
+                    {t('globalByCityTitle')}
+                  </p>
+                  <p className="text-sm text-zinc-600 dark:text-zinc-400">
+                    {t('globalByCityHint')}
+                  </p>
+                </div>
               <span className="text-xs font-semibold uppercase tracking-wide text-zinc-500 dark:text-zinc-400">
                 {t('cityStatsStationsProgress')}
               </span>
@@ -3806,10 +3877,10 @@ const SearcheableCitiesList = ({
             <div className="mb-3 flex items-center justify-between gap-3">
               <div>
                 <p className="text-lg font-semibold text-zinc-800 dark:text-zinc-100">
-                  Mini Cities
+                  {t('globalMiniCitiesTitle')}
                 </p>
                 <p className="text-sm text-zinc-600 dark:text-zinc-400">
-                  Focused subsets of larger city pages. These do not count toward the main city totals above.
+                  {t('globalMiniCitiesDesc')}
                 </p>
               </div>
               <span className="text-xs font-semibold uppercase tracking-wide text-zinc-500 dark:text-zinc-400">
@@ -3817,14 +3888,17 @@ const SearcheableCitiesList = ({
               </span>
             </div>
             {renderGlobalBar(
-              'Mini city completion',
+              t('globalMiniCityCompletion'),
               globalStats.miniPercentFound,
-              `${globalStats.miniTotalStationsFound.toLocaleString()} / ${globalStats.miniTotalStations.toLocaleString()} stations`,
+              t('globalOverallDetail', {
+                found: globalStats.miniTotalStationsFound.toLocaleString(),
+                total: globalStats.miniTotalStations.toLocaleString(),
+              }),
             )}
             <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
               <div className="rounded-2xl border border-zinc-200 bg-white p-4 text-sm font-semibold text-zinc-800 shadow-sm dark:border-[#18181b] dark:bg-zinc-950 dark:text-zinc-100">
                 <p className="text-xs uppercase tracking-wide text-zinc-500 dark:text-zinc-400">
-                  Completed
+                  {t('globalCompletedCities')}
                 </p>
                 <p className="mt-1 text-2xl font-bold text-emerald-600 dark:text-emerald-400">
                   {globalStats.miniCompletedCities}
@@ -3832,7 +3906,7 @@ const SearcheableCitiesList = ({
               </div>
               <div className="rounded-2xl border border-zinc-200 bg-white p-4 text-sm font-semibold text-zinc-800 shadow-sm dark:border-[#18181b] dark:bg-zinc-950 dark:text-zinc-100">
                 <p className="text-xs uppercase tracking-wide text-zinc-500 dark:text-zinc-400">
-                  In progress
+                  {t('globalInProgress')}
                 </p>
                 <p className="mt-1 text-2xl font-bold text-amber-500">
                   {globalStats.miniPartialCities}
@@ -3840,7 +3914,7 @@ const SearcheableCitiesList = ({
               </div>
               <div className="rounded-2xl border border-zinc-200 bg-white p-4 text-sm font-semibold text-zinc-800 shadow-sm dark:border-[#18181b] dark:bg-zinc-950 dark:text-zinc-100">
                 <p className="text-xs uppercase tracking-wide text-zinc-500 dark:text-zinc-400">
-                  Not started
+                  {t('globalNotStarted')}
                 </p>
                 <p className="mt-1 text-2xl font-bold text-red-500">
                   {globalStats.miniNotStartedCities}
@@ -3848,7 +3922,7 @@ const SearcheableCitiesList = ({
               </div>
               <div className="rounded-2xl border border-zinc-200 bg-white p-4 text-sm font-semibold text-zinc-800 shadow-sm dark:border-[#18181b] dark:bg-zinc-950 dark:text-zinc-100">
                 <p className="text-xs uppercase tracking-wide text-zinc-500 dark:text-zinc-400">
-                  Total mini cities
+                  {t('globalTotalMiniCities')}
                 </p>
                 <p
                   className="mt-1 text-2xl font-bold"
@@ -3862,16 +3936,23 @@ const SearcheableCitiesList = ({
               <div className="mt-4 divide-y divide-zinc-200 dark:divide-[#18181b]">
                 {globalStats.miniContinentBreakdown.map((entry) => {
                   const percentLabel = `${(clamp01(entry.percent) * 100).toFixed(2)}%`
+                  const translatedContinent =
+                    CONTINENT_LABEL_KEYS[entry.continent] !== undefined
+                      ? t(CONTINENT_LABEL_KEYS[entry.continent])
+                      : entry.continent
                   return (
                     <div key={`mini-${entry.continent}`} className="py-3">
                       <div className="flex flex-wrap items-center justify-between gap-3">
                         <div className="flex flex-col">
                           <span className="text-base font-semibold text-zinc-800 dark:text-zinc-100">
-                            {entry.continent}
+                            {translatedContinent}
                           </span>
                           <span className="text-sm font-semibold text-zinc-600 dark:text-zinc-300">
-                            {entry.cityCount} Mini Cities · {entry.found.toLocaleString()} /{' '}
-                            {entry.total.toLocaleString()} stations
+                            {t('globalMiniContinentDetail', {
+                              cityCount: entry.cityCount.toLocaleString(),
+                              found: entry.found.toLocaleString(),
+                              total: entry.total.toLocaleString(),
+                            })}
                           </span>
                         </div>
                         <div className="flex items-center gap-3">
@@ -3899,31 +3980,41 @@ const SearcheableCitiesList = ({
             )}
             <div className="mt-4 divide-y divide-zinc-200 dark:divide-[#18181b]">
               {visibleMiniCityBreakdown.map((entry) => {
-                const percentLabel = `${(clamp01(entry.percent) * 100).toFixed(1)}%`
-                const statusClass = getStatusClass(entry.percent)
-                const barBg = getBarBackground(entry.percent)
-                return (
-                  <div key={entry.slug} className="px-1 py-3">
-                    <div className="flex items-center justify-between gap-3">
-                      <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-start sm:gap-3">
-                        <span className="flex items-center gap-3">
+                  const percentLabel = `${(clamp01(entry.percent) * 100).toFixed(1)}%`
+                  const statusClass = getStatusClass(entry.percent)
+                  const barBg = getBarBackground(entry.percent)
+                  const localizedName = formatLocalizedCityName(
+                    entry.name,
+                    entry.slug,
+                    settings.language,
+                  )
+                  const localizedParentName = formatLocalizedCityName(
+                    entry.parentName,
+                    entry.parentSlug,
+                    settings.language,
+                  )
+                  return (
+                    <div key={entry.slug} className="px-1 py-3">
+                      <div className="flex items-center justify-between gap-3">
+                        <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-start sm:gap-3">
+                          <span className="flex items-center gap-3">
                           <AchievementIcon
                             slug={entry.slug}
                             cityName={entry.name}
                             className="h-16 w-16 sm:h-20 sm:w-20"
                             imageClassName="object-contain"
                             sizes="80px"
-                          />
-                          <span className="flex flex-col">
-                            <span className={classNames('text-base font-semibold', statusClass)}>
-                              {entry.name}
-                            </span>
-                            <span className="text-xs uppercase tracking-wide text-zinc-500 dark:text-zinc-400">
-                              {entry.parentName}
+                            />
+                            <span className="flex flex-col">
+                              <span className={classNames('text-base font-semibold', statusClass)}>
+                              {localizedName}
+                              </span>
+                              <span className="text-xs uppercase tracking-wide text-zinc-500 dark:text-zinc-400">
+                              {localizedParentName}
+                              </span>
                             </span>
                           </span>
-                        </span>
-                      </div>
+                        </div>
                       <div className="flex items-center gap-3">
                         <span
                           className="text-sm font-semibold"
@@ -3969,7 +4060,7 @@ const SearcheableCitiesList = ({
         <div className="space-y-8">
           <div>
             <h3 className="mb-4 text-2xl font-bold text-zinc-900 dark:text-zinc-50">
-              Main Cities
+              {t('mainCitiesTitle')}
             </h3>
             <Achievements
               items={visibleAchievements}
@@ -3979,11 +4070,12 @@ const SearcheableCitiesList = ({
               totalCount={achievementCatalog.length}
               totalUnlocked={achievementCatalog.filter((entry) => unlockedData.has(entry.slug)).length}
               timezone={settings.timezone}
+              language={settings.language}
             />
           </div>
           <div>
             <h3 className="mb-4 text-2xl font-bold text-zinc-900 dark:text-zinc-50">
-              Mini Cities
+              {t('globalMiniCitiesTitle')}
             </h3>
             <Achievements
               items={visibleMiniAchievements}
@@ -3993,6 +4085,7 @@ const SearcheableCitiesList = ({
               totalCount={miniCityAchievementCatalog.length}
               totalUnlocked={miniCityAchievementCatalog.filter((entry) => unlockedData.has(entry.slug)).length}
               timezone={settings.timezone}
+              language={settings.language}
             />
           </div>
         </div>
@@ -4098,6 +4191,7 @@ const Achievements = ({
   totalCount,
   totalUnlocked,
   timezone,
+  language,
 }: {
   items: AchievementMeta[]
   groups: AchievementContinentGroup[]
@@ -4106,6 +4200,7 @@ const Achievements = ({
   totalCount: number
   totalUnlocked: number
   timezone?: string
+  language?: string
 }) => {
   const { t } = useTranslation()
   const unlockedSet = useMemo(() => new Set(unlockedData.keys()), [unlockedData])
@@ -4113,23 +4208,24 @@ const Achievements = ({
   const totalProgress = totalCount > 0 ? totalUnlocked / totalCount : 0
   const totalProgressColor = getGradientColor(totalProgress)
 
-  const formatAchievementDate = (timestamp: number) => {
-    if (!timestamp) return ''
-    try {
-      return new Intl.DateTimeFormat(undefined, {
-        dateStyle: 'medium',
-        timeStyle: 'short',
-        timeZone: timezone,
+    const formatAchievementDate = (timestamp: number) => {
+      if (!timestamp) return ''
+      try {
+        return new Intl.DateTimeFormat(resolveI18nLocaleCode(language), {
+          dateStyle: 'medium',
+          timeStyle: 'short',
+          timeZone: timezone,
       }).format(new Date(timestamp))
     } catch {
       return ''
     }
   }
 
-  const renderAchievementCard = (meta: AchievementMeta) => {
-    const isUnlocked = unlockedSet.has(meta.slug)
-    const unlockTimestamp = unlockedData.get(meta.slug) ?? 0
-    const unlockDateLabel = isUnlocked ? formatAchievementDate(unlockTimestamp) : ''
+    const renderAchievementCard = (meta: AchievementMeta) => {
+      const isUnlocked = unlockedSet.has(meta.slug)
+      const displayMeta = formatAchievementDisplayMeta(meta, language)
+      const unlockTimestamp = unlockedData.get(meta.slug) ?? 0
+      const unlockDateLabel = isUnlocked ? formatAchievementDate(unlockTimestamp) : ''
     const progressMeta = progressMap.get(meta.slug)
     const hasProgress = Boolean(progressMeta)
     const currentRaw = progressMeta?.current ?? 0
@@ -4149,16 +4245,17 @@ const Achievements = ({
         ? `${Math.min(displayCurrent, safeTarget)} / ${safeTarget}`
         : ''
 
-    const isSecret = meta.country === 'secret-fun'
-    const description =
-      isSecret && !isUnlocked
-        ? '???'
-        : meta.secretDescription
-          ? meta.secretDescription
-          : meta.description
+      const isSecret = meta.country === 'secret-fun'
+      const description =
+        isSecret && !isUnlocked
+          ? '???'
+          : displayMeta.secretDescription
+            ? displayMeta.secretDescription
+            : displayMeta.description
+      const continentLabel = formatAchievementContinentLabel(meta.continent, t)
 
-    return (
-      <div
+      return (
+        <div
         key={meta.slug}
         className={classNames(
           'flex flex-col gap-4 rounded-2xl border p-4 shadow-sm sm:flex-row sm:items-center sm:justify-between',
@@ -4167,24 +4264,24 @@ const Achievements = ({
             : 'border-zinc-200 bg-zinc-50 text-zinc-400 dark:border-[#18181b] dark:bg-zinc-900/40 dark:text-zinc-500',
         )}
       >
-        <div className="flex flex-1 items-stretch gap-4">
-          <AchievementIcon
-            slug={meta.slug}
-            cityName={meta.cityName}
-            className="h-full min-h-[4.5rem] w-20 p-1"
-            sizes="80px"
-            iconSrc={meta.iconSrc}
+          <div className="flex flex-1 items-stretch gap-4">
+            <AchievementIcon
+              slug={meta.slug}
+              cityName={displayMeta.cityName}
+              className="h-full min-h-[4.5rem] w-20 p-1"
+              sizes="80px"
+              iconSrc={meta.iconSrc}
           />
           <div>
             <h4
-              className={classNames(
-                'text-lg font-semibold',
-                isUnlocked ? 'text-zinc-800 dark:text-zinc-100' : '',
-              )}
-            >
-              {meta.title}
-            </h4>
-            <p className="text-sm text-zinc-600 dark:text-zinc-400">{description}</p>
+                className={classNames(
+                  'text-lg font-semibold',
+                  isUnlocked ? 'text-zinc-800 dark:text-zinc-100' : '',
+                )}
+              >
+                {displayMeta.title}
+              </h4>
+              <p className="text-sm text-zinc-600 dark:text-zinc-400">{description}</p>
             {showProgress && (
               <div className="mt-3">
                 <div
@@ -4203,12 +4300,12 @@ const Achievements = ({
                   {numericLabel} · {percentLabel}
                 </div>
               </div>
-            )}
-            <p className="mt-1 text-xs uppercase tracking-wide text-zinc-400 dark:text-zinc-500">
-              {meta.cityName} • {meta.continent}
-            </p>
+              )}
+              <p className="mt-1 text-xs uppercase tracking-wide text-zinc-400 dark:text-zinc-500">
+                {displayMeta.cityName} • {continentLabel}
+              </p>
+            </div>
           </div>
-        </div>
         <span
           className={classNames(
             'text-sm font-semibold',
@@ -4228,10 +4325,10 @@ const Achievements = ({
         </span>
       </div>
     )
-  }
+    }
 
-  const formatAchievementCount = (count: number) =>
-    `${count} ${count === 1 ? 'achievement' : 'achievements'}`
+    const formatAchievementCount = (count: number) =>
+      t('achievementCountLabel', { count })
 
   return (
     <div className="space-y-4">
@@ -4268,15 +4365,12 @@ const Achievements = ({
                 sum + country.entries.filter((entry) => unlockedSet.has(entry.slug)).length,
               0,
             )
-            const progressRatio = total > 0 ? unlocked / total : 0
-            const headerColor = getGradientColor(progressRatio)
-            const progressLabel = `${(progressRatio * 100).toFixed(2)}%`
-            const translatedContinent =
-              CONTINENT_LABEL_KEYS[group.continent] !== undefined
-                ? t(CONTINENT_LABEL_KEYS[group.continent])
-                : group.continent
-            const cityCountLabel = formatAchievementCount(total)
-            const sectionId = getContinentSectionId(group.continent)
+              const progressRatio = total > 0 ? unlocked / total : 0
+              const headerColor = getGradientColor(progressRatio)
+              const progressLabel = `${(progressRatio * 100).toFixed(2)}%`
+              const translatedContinent = formatAchievementContinentLabel(group.continent, t)
+              const cityCountLabel = formatAchievementCount(total)
+              const sectionId = getContinentSectionId(group.continent)
 
             return (
               <Fragment key={group.continent}>
@@ -4300,13 +4394,13 @@ const Achievements = ({
                       const countryUnlocked = country.entries.filter((entry) =>
                         unlockedSet.has(entry.slug),
                       ).length
-                      const countryTotal = country.entries.length
-                      const countryProgress = countryTotal > 0 ? countryUnlocked / countryTotal : 0
-                      const countryHeaderColor = getGradientColor(countryProgress)
-                      const countryProgressLabel = `${(countryProgress * 100).toFixed(2)}%`
-                      const countryLabel = formatCountryLabel(country.country)
+                        const countryTotal = country.entries.length
+                        const countryProgress = countryTotal > 0 ? countryUnlocked / countryTotal : 0
+                        const countryHeaderColor = getGradientColor(countryProgress)
+                        const countryProgressLabel = `${(countryProgress * 100).toFixed(2)}%`
+                        const countryLabel = formatAchievementCountryLabel(country.country, t)
                         const countryCountLabel = formatAchievementCount(countryTotal)
-                      const countrySectionId = getCountrySectionId(group.continent, country.country)
+                        const countrySectionId = getCountrySectionId(group.continent, country.country)
 
                       return (
                         <CollapsibleSection

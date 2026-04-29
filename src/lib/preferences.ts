@@ -48,7 +48,6 @@ export type UiPreferences = {
   homeActiveTab?: HomeActiveTab
   homeScrollPositions?: HomeScrollPositions
   mapViewByCity?: MapViewByCity
-  speedrunByCity?: Record<string, boolean>
 }
 
 export function normalizeCollapsedSections(
@@ -192,13 +191,6 @@ export function normalizeUiPreferences(value: unknown): UiPreferences {
   const homeActiveTab = normalizeHomeActiveTab(value.homeActiveTab)
   const homeScrollPositions = normalizeHomeScrollPositions(value.homeScrollPositions)
   const mapViewByCity = normalizeMapViewByCity(value.mapViewByCity)
-  const speedrunByCity = isRecord(value.speedrunByCity)
-    ? Object.entries(value.speedrunByCity).reduce<Record<string, boolean>>((acc, [k, v]) => {
-        if (typeof v === 'boolean') acc[k] = v
-        return acc
-      }, {})
-    : undefined
-
   return {
     ...(collapsedSections ? { collapsedSections } : {}),
     ...(language ? { language } : {}),
@@ -210,7 +202,6 @@ export function normalizeUiPreferences(value: unknown): UiPreferences {
     ...(homeActiveTab ? { homeActiveTab } : {}),
     ...(homeScrollPositions ? { homeScrollPositions } : {}),
     ...(mapViewByCity ? { mapViewByCity } : {}),
-    ...(speedrunByCity ? { speedrunByCity } : {}),
   }
 }
 

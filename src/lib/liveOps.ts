@@ -74,7 +74,7 @@ type SeasonDefinition = {
     slug: string
     title: string
     description: string
-    eventType: 'CITY_CLEAR' | 'DAILY_CLEAR' | 'RULESET_CLEAR' | 'BATTLE_WIN'
+    eventType: 'CITY_CLEAR' | 'RULESET_CLEAR' | 'BATTLE_WIN'
     citySlug?: string
     cityPath?: string
     ruleset?: RankedRulesetId
@@ -159,7 +159,7 @@ const SEASON_BLUEPRINTS: SeasonBlueprint[] = [
     slug: 'signal-sprint',
     title: ({ monthLabel }) => `${monthLabel} Signal Sprint`,
     description: () =>
-      'A monthly season focused on daily clears, one featured city, one strict-spelling clear, and a battle win.',
+      'A monthly season focused on classic clears, one featured city, one strict-spelling clear, and a battle win.',
     themeColor: '#dc2626',
     buildEvents: ({ cities, seasonIndex }) => {
       const featuredCity = pickCity(cities, seasonIndex, 0)
@@ -172,10 +172,11 @@ const SEASON_BLUEPRINTS: SeasonBlueprint[] = [
 
       return [
         {
-          slug: 'daily-three',
-          title: 'Three Daily Clears',
-          description: 'Post three valid Daily Challenge results this month.',
-          eventType: 'DAILY_CLEAR' as const,
+          slug: 'classic-three',
+          title: 'Three Classic Clears',
+          description: 'Post three valid classic ranked clears this month.',
+          eventType: 'RULESET_CLEAR' as const,
+          ruleset: 'classic' as const,
           targetCount: 3,
           rewardXp: 180,
         },
@@ -217,7 +218,7 @@ const SEASON_BLUEPRINTS: SeasonBlueprint[] = [
     slug: 'world-tour',
     title: ({ monthLabel }) => `${monthLabel} World Tour`,
     description: () =>
-      'A globe-spanning season that hops between continents, asks for daily consistency, and rewards one battle win.',
+      'A globe-spanning season that hops between continents, asks for steady classic clears, and rewards one battle win.',
     themeColor: '#0891b2',
     buildEvents: ({ cities, seasonIndex }) => {
       const continents = ['Asia', 'Europe', 'North America']
@@ -237,10 +238,11 @@ const SEASON_BLUEPRINTS: SeasonBlueprint[] = [
       return [
         ...continentEvents,
         {
-          slug: 'daily-five',
-          title: 'Five Daily Clears',
-          description: 'Post five valid Daily Challenge results during the tour.',
-          eventType: 'DAILY_CLEAR' as const,
+          slug: 'classic-five',
+          title: 'Five Classic Clears',
+          description: 'Post five valid classic ranked clears during the tour.',
+          eventType: 'RULESET_CLEAR' as const,
+          ruleset: 'classic' as const,
           targetCount: 5,
           rewardXp: 220,
         },
@@ -299,10 +301,11 @@ const SEASON_BLUEPRINTS: SeasonBlueprint[] = [
           rewardXp: 140,
         }),
         {
-          slug: 'daily-two',
-          title: 'Two Daily Clears',
-          description: 'Stay sharp with two Daily Challenge completions.',
-          eventType: 'DAILY_CLEAR' as const,
+          slug: 'classic-two',
+          title: 'Two Classic Clears',
+          description: 'Stay sharp with two classic ranked clears.',
+          eventType: 'RULESET_CLEAR' as const,
+          ruleset: 'classic' as const,
           targetCount: 2,
           rewardXp: 100,
         },
@@ -313,7 +316,7 @@ const SEASON_BLUEPRINTS: SeasonBlueprint[] = [
     slug: 'metro-marathon',
     title: ({ monthLabel }) => `${monthLabel} Metro Marathon`,
     description: () =>
-      'A longer-form season built around four city clears, steady daily play, and one battle result.',
+      'A longer-form season built around four city clears, steady classic play, and one battle result.',
     themeColor: '#ea580c',
     buildEvents: ({ cities, seasonIndex }) => {
       const challengeCities = [0, 1, 2, 3].map((offset) => pickCity(cities, seasonIndex, offset + 4))
@@ -328,10 +331,11 @@ const SEASON_BLUEPRINTS: SeasonBlueprint[] = [
           }),
         ),
         {
-          slug: 'daily-four',
-          title: 'Four Daily Clears',
-          description: 'Keep the marathon streak alive with four Daily Challenge clears.',
-          eventType: 'DAILY_CLEAR' as const,
+          slug: 'classic-four',
+          title: 'Four Classic Clears',
+          description: 'Keep the marathon streak alive with four classic ranked clears.',
+          eventType: 'RULESET_CLEAR' as const,
+          ruleset: 'classic' as const,
           targetCount: 4,
           rewardXp: 160,
         },
@@ -400,7 +404,7 @@ const SEASON_BLUEPRINTS: SeasonBlueprint[] = [
     slug: 'night-service',
     title: ({ monthLabel }) => `${monthLabel} Night Service`,
     description: () =>
-      'A moody late-month rotation built around smaller systems, more daily clears, and efficient ranked runs.',
+      'A moody late-month rotation built around smaller systems, more classic clears, and efficient ranked runs.',
     themeColor: '#2563eb',
     buildEvents: ({ cities, seasonIndex }) => {
       const smallerCities = [0, 1, 2].map((offset) =>
@@ -418,10 +422,11 @@ const SEASON_BLUEPRINTS: SeasonBlueprint[] = [
           }),
         ),
         {
-          slug: 'daily-six',
-          title: 'Six Daily Clears',
-          description: 'Stay on schedule with six Daily Challenge completions.',
-          eventType: 'DAILY_CLEAR' as const,
+          slug: 'classic-six',
+          title: 'Six Classic Clears',
+          description: 'Stay on schedule with six classic ranked clears.',
+          eventType: 'RULESET_CLEAR' as const,
+          ruleset: 'classic' as const,
           targetCount: 6,
           rewardXp: 240,
         },

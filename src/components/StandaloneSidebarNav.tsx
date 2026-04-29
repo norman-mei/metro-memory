@@ -11,14 +11,12 @@ import {
   MdEmojiEvents,
   MdHome,
   MdLaptopMac,
-  MdLeaderboard,
   MdLightMode,
   MdMap,
   MdPerson,
   MdPlaylistPlay,
   MdSettings,
   MdSportsKabaddi,
-  MdToday,
 } from 'react-icons/md'
 
 const NAV_ITEMS = [
@@ -33,18 +31,6 @@ const NAV_ITEMS = [
     label: 'Account',
     icon: MdPerson,
     match: (pathname: string) => pathname === '/account',
-  },
-  {
-    href: '/daily',
-    label: 'Daily',
-    icon: MdToday,
-    match: (pathname: string) => pathname === '/daily',
-  },
-  {
-    href: '/leaderboards',
-    label: 'Leaderboards',
-    icon: MdLeaderboard,
-    match: (pathname: string) => pathname.startsWith('/leaderboards'),
   },
   {
     href: '/campaigns',

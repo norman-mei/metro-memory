@@ -45,6 +45,7 @@ function writeToastPayload() {
 export default function DevSiteRefreshWatcher() {
   const [open, setOpen] = useState(false)
   const [visibleUntil, setVisibleUntil] = useState<number | null>(null)
+  const [pendingRefresh, setPendingRefresh] = useState(false)
 
   useEffect(() => {
     if (process.env.NODE_ENV !== 'development') {
@@ -125,7 +126,9 @@ export default function DevSiteRefreshWatcher() {
         if (previousVersion !== nextVersion) {
           window.sessionStorage.setItem(VERSION_STORAGE_KEY, nextVersion)
           writeToastPayload()
-          window.location.reload()
+          setVisibleUntil(Date.now() + TOAST_DURATION_MS)
+          setOpen(true)
+          setPendingRefresh(true)
           return
         }
       } catch {
@@ -166,14 +169,29 @@ export default function DevSiteRefreshWatcher() {
           <div className="flex-1">
             <p className="text-sm font-semibold text-sky-700 dark:text-sky-300">Data updated</p>
             <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-300">
-              The page refreshed automatically after a local file change.
+              {pendingRefresh
+                ? 'A local file changed. Refresh when you are ready.'
+                : 'The page refreshed automatically after a local file change.'}
             </p>
+            {pendingRefresh && (
+              <button
+                type="button"
+                onClick={() => {
+                  window.sessionStorage.removeItem(TOAST_STORAGE_KEY)
+                  window.location.reload()
+                }}
+                className="mt-3 inline-flex items-center justify-center rounded-full bg-sky-600 px-3 py-1.5 text-xs font-semibold text-white transition hover:bg-sky-500 focus:outline-none focus:ring-2 focus:ring-sky-400"
+              >
+                Refresh now
+              </button>
+            )}
           </div>
           <button
             type="button"
             aria-label="Dismiss data changed notification"
             onClick={() => {
               setOpen(false)
+              setPendingRefresh(false)
               window.sessionStorage.removeItem(TOAST_STORAGE_KEY)
             }}
             className="ml-2 inline-flex items-center justify-center rounded-full border border-transparent p-1 text-sm font-semibold text-zinc-500 transition hover:text-zinc-800 focus:outline-none focus:ring-2 focus:ring-sky-400 dark:text-zinc-300 dark:hover:text-white"

@@ -4,6 +4,9 @@ import { useSettings } from '@/context/SettingsContext'
 import useTranslation from '@/hooks/useTranslation'
 import { resolveAccentColorOption } from '@/lib/accentColors'
 import { getCityIconPath } from '@/lib/cityAssets'
+import { formatLocalizedCityName } from '@/lib/cityNameDisplay'
+import { resolveI18nLocaleCode } from '@/lib/i18n'
+import { formatLocalizedLineName } from '@/lib/lineNameDisplay'
 import { getMiniCityBySlug, isMiniCitySlug } from '@/lib/miniCities'
 import { loadMiniCityParentConfig } from '@/lib/miniCityConfigRuntime'
 import { isColorLight } from '@/lib/colorUtils'
@@ -15,6 +18,17 @@ import { Config, DataFeature, DataFeatureCollection, Line, LineGroup, RoutesFeat
 import Image from 'next/image'
 import Link from 'next/link'
 import { useEffect, useState, type MouseEvent as ReactMouseEvent } from 'react'
+import {
+  MdClose,
+  MdEmojiEvents,
+  MdHistory,
+  MdHome,
+  MdLocationCity,
+  MdLock,
+  MdPerson,
+  MdPublic,
+  MdSettings,
+} from 'react-icons/md'
 import { createPortal } from 'react-dom'
 import LineBadge from './LineBadge'
 
@@ -120,7 +134,7 @@ const formatDuration = (ms?: number) => {
   return parts.length > 0 ? parts.slice(0, 3).join(' ') : '0s'
 }
 
-const formatDateTime = (timestamp?: string) => {
+const formatDateTime = (timestamp?: string, language?: string) => {
   if (!timestamp) {
     return '—'
   }
@@ -128,18 +142,13 @@ const formatDateTime = (timestamp?: string) => {
   if (Number.isNaN(date.getTime())) {
     return '—'
   }
-  return new Intl.DateTimeFormat(undefined, {
+  return new Intl.DateTimeFormat(resolveI18nLocaleCode(language), {
     dateStyle: 'medium',
     timeStyle: 'short',
   }).format(date)
 }
 
 const formatPercent = (value: number) => `${(value * 100).toFixed(2)}%`
-
-const normalizeLineLabel = (value?: string) => {
-  if (!value) return ''
-  return value.replace(/L[Ii]ne/g, 'Line')
-}
 
 const MODERN_STATS_FONT_STYLE = {
   fontFamily: 'Aptos, "Segoe UI", "Helvetica Neue", Arial, sans-serif',
@@ -217,6 +226,7 @@ const resolveLineGroupStats = (
   totals: Map<string, number>,
   foundPerLine: Map<string, number>,
   linesMetadata: Config['LINES'],
+  language?: string,
 ): GroupStat[] => {
   if (!lineGroups || lineGroups.length === 0) {
     return []
@@ -246,7 +256,7 @@ const resolveLineGroupStats = (
       )
 
       const derivedTitle =
-        normalizeLineLabel(
+        formatLocalizedLineName(
           item.title ??
         (visibleLines.length === 1
           ? linesMetadata[visibleLines[0]]?.name ?? visibleLines[0]
@@ -255,9 +265,11 @@ const resolveLineGroupStats = (
                 .map((lineId) => linesMetadata[lineId]?.name ?? lineId)
                 .join(', ')
             : 'Misc services'),
+          language,
         )
       const lineNames = visibleLines.map(
-        (lineId) => normalizeLineLabel(linesMetadata[lineId]?.name ?? lineId),
+        (lineId) =>
+          formatLocalizedLineName(linesMetadata[lineId]?.name ?? lineId, language),
       )
 
       return {
@@ -294,10 +306,12 @@ const computeStats = ({
   config,
   featureCollection,
   progress,
+  language,
 }: {
   config: Config
   featureCollection: DataFeatureCollection
   progress: LocalProgress
+  language?: string
 }): CityStatsSnapshot => {
   const idToFeature = new Map<number, DataFeature>()
   const totalsPerLine = new Map<string, number>()
@@ -360,7 +374,9 @@ const computeStats = ({
       id,
       name: resolveStationName(feature),
       lineId: line ?? undefined,
-      lineName: line ? config.LINES[line]?.name ?? line : undefined,
+      lineName: line
+        ? formatLocalizedLineName(config.LINES[line]?.name ?? line, language)
+        : undefined,
       lineColor: line ? config.LINES[line]?.color : undefined,
       timestamp: timestamp && !Number.isNaN(Date.parse(timestamp)) ? timestamp : undefined,
     }
@@ -414,7 +430,7 @@ const computeStats = ({
       const displayColor = meta?.statsColor ?? meta?.color ?? meta?.backgroundColor
       return {
         lineId,
-        name: normalizeLineLabel(meta?.name ?? lineId),
+        name: formatLocalizedLineName(meta?.name ?? lineId, language),
         color: displayColor,
         backgroundColor: meta?.backgroundColor,
         textColor: meta?.textColor,
@@ -449,6 +465,7 @@ const computeStats = ({
       ]),
     ),
     config.LINES,
+    language,
   )
 
   const enrichedTimeline = timestampedEntries.map((entry) => ({
@@ -495,6 +512,11 @@ const CityStatsPanel = ({
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [stats, setStats] = useState<CityStatsSnapshot | null>(null)
+  const localizedCityDisplayName = formatLocalizedCityName(
+    cityDisplayName,
+    slug ?? cityDisplayName,
+    settings.language,
+  )
 
   useEffect(() => {
     if (!open) {
@@ -609,6 +631,7 @@ const CityStatsPanel = ({
           config,
           featureCollection,
           progress,
+          language: settings.language,
         })
         setStats(snapshot)
       } catch (err) {
@@ -640,14 +663,14 @@ const CityStatsPanel = ({
 
   const cityIconSrc = getCityIconPath(slug)
   const quickNavLinks = [
-    { label: 'Account tab', href: '/metro-memory?tab=account' },
-    { label: 'Privacy tab', href: '/metro-memory?tab=privacy' },
-    { label: 'Cities tab', href: '/metro-memory?tab=cities' },
-    { label: 'Achievements tab', href: '/metro-memory?tab=achievements' },
-    { label: 'Update Log tab', href: '/metro-memory?tab=updateLog' },
-    { label: 'Global Stats tab', href: '/metro-memory?tab=globalStats' },
-    { label: 'Settings tab', href: '/metro-memory?tab=settings' },
-    { label: 'Main page', href: '/metro-memory' },
+    { label: t('tabAccount'), href: '/metro-memory?tab=account', icon: MdPerson },
+    { label: t('tabPrivacy'), href: '/metro-memory?tab=privacy', icon: MdLock },
+    { label: t('tabCities'), href: '/metro-memory?tab=cities', icon: MdLocationCity },
+    { label: t('tabAchievements'), href: '/metro-memory?tab=achievements', icon: MdEmojiEvents },
+    { label: t('tabUpdateLog'), href: '/metro-memory?tab=updateLog', icon: MdHistory },
+    { label: t('tabGlobalStats'), href: '/metro-memory?tab=globalStats', icon: MdPublic },
+    { label: t('tabSettings'), href: '/metro-memory?tab=settings', icon: MdSettings },
+    { label: t('tabHome'), href: '/metro-memory', icon: MdHome },
   ]
 
   const handleInnerClick = (event: ReactMouseEvent<HTMLDivElement>) => {
@@ -699,9 +722,13 @@ const CityStatsPanel = ({
             {t('cityStatsFirstLatest')}
           </p>
           <p className="mt-2 text-sm text-zinc-700 dark:text-zinc-200">
-            {t('cityStatsFirst', { value: formatDateTime(stats.firstFoundAt) })}
+            {t('cityStatsFirst', {
+              value: formatDateTime(stats.firstFoundAt, settings.language),
+            })}
             <br />
-            {t('cityStatsLatest', { value: formatDateTime(stats.lastFoundAt) })}
+            {t('cityStatsLatest', {
+              value: formatDateTime(stats.lastFoundAt, settings.language),
+            })}
           </p>
         </div>
         <div className="rounded-2xl border border-zinc-200 bg-zinc-50 p-4 dark:border-[#18181b] dark:bg-zinc-900/40">
@@ -975,7 +1002,9 @@ const CityStatsPanel = ({
                 </p>
               </div>
               <div className="text-right text-xs text-zinc-500 dark:text-zinc-300">
-                {entry.timestamp ? formatDateTime(entry.timestamp) : 'Unknown'}
+                {entry.timestamp
+                  ? formatDateTime(entry.timestamp, settings.language)
+                  : t('unknownLabel')}
                 <br />
                 {entry.deltaMs !== undefined && entry.deltaMs >= 0
                   ? `+${formatDuration(entry.deltaMs)}`
@@ -1029,13 +1058,13 @@ const CityStatsPanel = ({
         <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <div className="w-full">
             <p className="text-sm uppercase tracking-wide text-[var(--accent-500)] dark:text-[var(--accent-300)]">
-              Progress details
+              {t('progressDetailsTitle')}
             </p>
             <div className="mt-2 flex items-center gap-3">
               <div className="relative h-12 w-12 flex-shrink-0 overflow-hidden rounded-2xl border border-zinc-200 bg-white p-1 dark:border-[#18181b] dark:bg-zinc-900 sm:h-14 sm:w-14">
                 <Image
                   src={cityIconSrc}
-                  alt={`${cityDisplayName} icon`}
+                  alt={`${localizedCityDisplayName} icon`}
                   fill
                   sizes="(max-width: 640px) 48px, 56px"
                   className="object-contain"
@@ -1044,34 +1073,47 @@ const CityStatsPanel = ({
                 />
               </div>
               <h3 className="min-w-0 flex-1 text-3xl font-semibold text-zinc-900 dark:text-zinc-50">
-                {cityDisplayName}
+                {localizedCityDisplayName}
               </h3>
             </div>
           </div>
+        </div>
+        <div className="mb-4 flex flex-wrap items-center gap-2">
+          {quickNavLinks.map((link) => {
+            const Icon = link.icon
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={onClose}
+                className="group inline-flex h-11 items-center rounded-full border border-zinc-300 bg-white px-3 text-sm font-semibold text-zinc-700 transition hover:bg-zinc-100 focus:outline-none focus:ring-2 focus:ring-[var(--accent-ring)] dark:border-[#18181b] dark:bg-zinc-900 dark:text-zinc-100 dark:hover:bg-zinc-800"
+                aria-label={link.label}
+                title={link.label}
+              >
+                <Icon className="h-5 w-5 shrink-0" aria-hidden="true" />
+                <span className="max-w-0 overflow-hidden whitespace-nowrap pl-0 opacity-0 transition-all duration-200 group-hover:max-w-40 group-hover:pl-2 group-hover:opacity-100 group-focus-visible:max-w-40 group-focus-visible:pl-2 group-focus-visible:opacity-100">
+                  {link.label}
+                </span>
+              </Link>
+            )
+          })}
           <button
             type="button"
             onClick={onClose}
-            className="inline-flex items-center justify-center rounded-full border border-zinc-300 px-4 py-2 text-sm font-semibold text-zinc-700 transition hover:bg-zinc-100 focus:outline-none focus:ring-2 focus:ring-[var(--accent-ring)] dark:border-[#18181b] dark:text-zinc-100 dark:hover:bg-zinc-800"
+            className="group inline-flex h-11 items-center rounded-full border border-zinc-300 bg-white px-3 text-sm font-semibold text-zinc-700 transition hover:bg-zinc-100 focus:outline-none focus:ring-2 focus:ring-[var(--accent-ring)] dark:border-[#18181b] dark:bg-zinc-900 dark:text-zinc-100 dark:hover:bg-zinc-800"
+            aria-label={t('closeLabel')}
+            title={t('closeLabel')}
           >
-            Close
+            <MdClose className="h-5 w-5 shrink-0" aria-hidden="true" />
+            <span className="max-w-0 overflow-hidden whitespace-nowrap pl-0 opacity-0 transition-all duration-200 group-hover:max-w-24 group-hover:pl-2 group-hover:opacity-100 group-focus-visible:max-w-24 group-focus-visible:pl-2 group-focus-visible:opacity-100">
+              {t('closeLabel')}
+            </span>
           </button>
-        </div>
-        <div className="mb-4 flex flex-wrap justify-center gap-2">
-          {quickNavLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              onClick={onClose}
-              className="inline-flex items-center justify-center rounded-full border border-zinc-300 px-3 py-2 text-xs font-semibold text-zinc-700 transition hover:bg-zinc-100 focus:outline-none focus:ring-2 focus:ring-[var(--accent-ring)] dark:border-[#18181b] dark:text-zinc-100 dark:hover:bg-zinc-800"
-            >
-              {link.label}
-            </Link>
-          ))}
         </div>
         <div className="mt-4 space-y-6">
           {loading && (
             <p className="text-sm text-zinc-600 dark:text-zinc-400">
-              Loading city stats...
+               {t('loadingCityStats')}
             </p>
           )}
           {error && (

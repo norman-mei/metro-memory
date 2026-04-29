@@ -9,8 +9,6 @@ export type RankedRulesetId = (typeof RANKED_RULESETS)[number]
 
 export const RANKED_SOURCES = [
   'free-play',
-  'daily',
-  'challenge',
   'battle',
 ] as const
 
@@ -31,8 +29,6 @@ const RULESET_LABELS: Record<RankedRulesetId, string> = {
 
 const SOURCE_LABELS: Record<RankedRunSourceId, string> = {
   'free-play': 'Free Play',
-  daily: 'Daily Challenge',
-  challenge: 'Challenge',
   battle: 'Battle',
 }
 
@@ -47,10 +43,8 @@ const RULESET_FROM_PRISMA = Object.fromEntries(
   Object.entries(RULESET_TO_PRISMA).map(([key, value]) => [value, key]),
 ) as Record<(typeof RULESET_TO_PRISMA)[RankedRulesetId], RankedRulesetId>
 
-const SOURCE_TO_PRISMA: Record<RankedRunSourceId, 'FREE_PLAY' | 'DAILY' | 'CHALLENGE' | 'BATTLE'> = {
+const SOURCE_TO_PRISMA: Record<RankedRunSourceId, 'FREE_PLAY' | 'BATTLE'> = {
   'free-play': 'FREE_PLAY',
-  daily: 'DAILY',
-  challenge: 'CHALLENGE',
   battle: 'BATTLE',
 }
 
@@ -96,12 +90,15 @@ export function toPrismaRankedRunSource(value: RankedRunSourceId) {
 }
 
 export function fromPrismaRankedRunSource(
-  value: keyof typeof SOURCE_FROM_PRISMA | null | undefined,
+  value: 'FREE_PLAY' | 'DAILY' | 'CHALLENGE' | 'BATTLE' | null | undefined,
 ): RankedRunSourceId {
   if (!value) {
     return DEFAULT_RANKED_SOURCE
   }
-  return SOURCE_FROM_PRISMA[value] ?? DEFAULT_RANKED_SOURCE
+  if (value === 'FREE_PLAY' || value === 'BATTLE') {
+    return SOURCE_FROM_PRISMA[value]
+  }
+  return DEFAULT_RANKED_SOURCE
 }
 
 export function buildRankedHref(
@@ -111,8 +108,6 @@ export function buildRankedHref(
     ruleset?: RankedRulesetId
     source?: RankedRunSourceId
     seed?: string
-    dailyChallengeId?: string | null
-    challengeId?: string | null
     battleId?: string | null
     playlistRunId?: string | null
   } = {},
@@ -123,12 +118,6 @@ export function buildRankedHref(
   params.set('source', options.source ?? DEFAULT_RANKED_SOURCE)
   if (options.seed) {
     params.set('seed', options.seed)
-  }
-  if (options.dailyChallengeId) {
-    params.set('dailyChallengeId', options.dailyChallengeId)
-  }
-  if (options.challengeId) {
-    params.set('challengeId', options.challengeId)
   }
   if (options.battleId) {
     params.set('battleId', options.battleId)

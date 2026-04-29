@@ -13,7 +13,7 @@ import {
   toPrismaRankedRuleset,
   toPrismaRankedRunSource,
 } from '@/lib/ranked'
-import { ensureDailyChallenge, findRankedCity } from '@/lib/rankedServer'
+import { findRankedCity } from '@/lib/rankedServer'
 
 const startSchema = z.object({
   citySlug: z.string().trim().min(1),
@@ -21,8 +21,6 @@ const startSchema = z.object({
   ruleset: z.enum(RANKED_RULESETS).optional(),
   source: z.enum(RANKED_SOURCES).optional(),
   seed: z.string().trim().min(1).max(64).optional(),
-  dailyChallengeId: z.string().trim().min(1).optional(),
-  challengeId: z.string().trim().min(1).optional(),
   battleId: z.string().trim().min(1).optional(),
   playlistRunId: z.string().trim().min(1).optional(),
 })
@@ -49,44 +47,12 @@ export async function POST(request: NextRequest) {
       .update(`${user.id}:${citySlug}:${ruleset}:${Date.now()}`)
       .digest('hex')
       .slice(0, 16)
-  let dailyChallengeId: string | undefined
-  let challengeId = parsed.data.challengeId
   let battleId = parsed.data.battleId
   let playlistRunId = parsed.data.playlistRunId
   const season = await ensureCurrentSeason()
 
   if (!findRankedCity(citySlug)) {
     return NextResponse.json({ error: 'Unknown city.' }, { status: 404 })
-  }
-
-  if (source === 'daily') {
-    const daily =
-      parsed.data.dailyChallengeId != null
-        ? await prisma.dailyChallenge.findUnique({
-            where: { id: parsed.data.dailyChallengeId },
-          })
-        : await ensureDailyChallenge()
-    if (!daily) {
-      return NextResponse.json({ error: 'Daily challenge not found.' }, { status: 404 })
-    }
-    citySlug = daily.citySlug
-    cityPath = daily.cityPath
-    ruleset = parseRankedRuleset(daily.ruleset.toLowerCase().replace(/_/g, '-'))
-    seed = daily.seed
-    dailyChallengeId = daily.id
-  }
-
-  if (source === 'challenge' && challengeId) {
-    const challenge = await prisma.challengeDefinition.findUnique({
-      where: { id: challengeId },
-    })
-    if (!challenge || !challenge.active) {
-      return NextResponse.json({ error: 'Challenge not found.' }, { status: 404 })
-    }
-    citySlug = challenge.citySlug
-    cityPath = challenge.cityPath
-    ruleset = parseRankedRuleset(challenge.ruleset.toLowerCase().replace(/_/g, '-'))
-    seed = challenge.seed
   }
 
   if (source === 'battle' && battleId) {
@@ -182,8 +148,6 @@ export async function POST(request: NextRequest) {
       sourceType: toPrismaRankedRunSource(source),
       seed,
       seasonId: season.id,
-      ...(dailyChallengeId ? { dailyChallengeId } : {}),
-      ...(challengeId ? { challengeId } : {}),
       ...(battleId ? { battleId } : {}),
       ...(playlistRunId ? { playlistRunId } : {}),
     },

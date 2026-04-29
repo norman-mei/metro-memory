@@ -1,6 +1,9 @@
+'use client'
+
 import Link from 'next/link'
 
 import { ContainerInner, ContainerOuter } from '@/components/Container'
+import useTranslation from '@/hooks/useTranslation'
 
 function NavLink({
   href,
@@ -20,6 +23,9 @@ function NavLink({
 }
 
 export function Footer() {
+  const { t } = useTranslation()
+  const footerCopyright = t('footerCopyright')
+
   return (
     <footer className="mt-32 flex-none">
       <ContainerOuter>
@@ -27,8 +33,9 @@ export function Footer() {
           <ContainerInner>
             <div className="flex flex-col items-center justify-between gap-6 sm:flex-row">
               <p className="text-sm text-zinc-400 dark:text-zinc-500">
-                &copy; {new Date().getFullYear()} kirklandwaterbot. All rights
-                reserved.
+                {typeof footerCopyright === 'string' && footerCopyright !== 'footerCopyright'
+                  ? footerCopyright.replace('{year}', String(new Date().getFullYear()))
+                  : `© ${new Date().getFullYear()} kirklandwaterbot. All rights reserved.`}
               </p>
             </div>
           </ContainerInner>

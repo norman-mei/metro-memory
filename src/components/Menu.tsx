@@ -10,14 +10,6 @@ import MenuIcon from './MenuIcon'
 
 const MENU_TOGGLE_EVENT = 'metro-memory:menu-toggle'
 
-const formatMs = (ms: number) => {
-  if (!Number.isFinite(ms)) return '—'
-  const totalSeconds = Math.round(ms / 1000)
-  const minutes = Math.floor(totalSeconds / 60)
-  const seconds = totalSeconds % 60
-  return `${minutes}:${seconds.toString().padStart(2, '0')}`
-}
-
 export default function MenuComponent({
   setHideLabels,
   hideLabels,
@@ -31,10 +23,6 @@ export default function MenuComponent({
   showMissedGuessInputs,
   zenMode,
   onToggleZen,
-  speedrunMode,
-  speedrunDisabled,
-  onToggleSpeedrun,
-  bestSpeedrunMs,
   showSatellite,
   onToggleSatellite,
   showMapNames,
@@ -52,10 +40,6 @@ export default function MenuComponent({
   showMissedGuessInputs?: boolean
   zenMode?: boolean
   onToggleZen?: () => void
-  speedrunMode?: boolean
-  speedrunDisabled?: boolean
-  onToggleSpeedrun?: () => void
-  bestSpeedrunMs?: number | null
   showSatellite: boolean
   onToggleSatellite: () => void
   showMapNames: boolean
@@ -64,6 +48,10 @@ export default function MenuComponent({
   const [mounted, setMounted] = useState(false)
   const [modalOpen, setModalOpen] = useState(false)
   const { t } = useTranslation()
+  const getLabel = (key: string, fallback: string) => {
+    const value = t(key)
+    return typeof value === 'string' && value !== key ? value : fallback
+  }
   const showSolutionsDisabled = foundProportion >= 1
   useEffect(() => {
     setMounted(true)
@@ -135,7 +123,9 @@ export default function MenuComponent({
                   )}
                   onClick={onToggleSatellite}
                 >
-                  {showSatellite ? 'Hide satellite' : 'Show satellite'}
+                  {showSatellite
+                    ? getLabel('hideSatelliteMenu', 'Hide satellite')
+                    : getLabel('showSatelliteMenu', 'Show satellite')}
                 </button>
               )}
             </Menu.Item>
@@ -150,7 +140,9 @@ export default function MenuComponent({
                   )}
                   onClick={onToggleMapNames}
                 >
-                  {showMapNames ? 'Hide map names' : 'Show map names'}
+                  {showMapNames
+                    ? getLabel('hideMapNamesMenu', 'Hide map names')
+                    : getLabel('showMapNamesMenu', 'Show map names')}
                 </button>
               )}
             </Menu.Item>
@@ -199,8 +191,8 @@ export default function MenuComponent({
                       'block w-full px-4 py-2 text-left text-sm transition',
                     )}
                     onClick={onOpenMissedGuessInputs}
-                  >
-                    See missed guess inputs
+                >
+                    {getLabel('seeMissedGuessInputs', 'See missed guess inputs')}
                   </button>
                 )}
               </Menu.Item>
@@ -263,52 +255,10 @@ export default function MenuComponent({
                     )}
                     onClick={onToggleZen}
                   >
-                    {zenMode ? 'Exit Zen Mode' : 'Enter Zen Mode'}
+                    {zenMode
+                      ? getLabel('exitZenMode', 'Exit Zen Mode')
+                      : getLabel('enterZenMode', 'Enter Zen Mode')}
                   </button>
-                )}
-              </Menu.Item>
-            )}
-            {onToggleSpeedrun && (
-              <Menu.Item>
-                {({ active }) => (
-                  <button
-                    type="button"
-                    disabled={speedrunDisabled}
-                    className={classNames(
-                      speedrunDisabled
-                        ? 'cursor-not-allowed opacity-60 text-gray-500 dark:text-zinc-400'
-                        : active
-                          ? 'bg-gray-100 text-gray-900 dark:bg-zinc-700 dark:text-zinc-100'
-                          : 'text-gray-700 dark:text-zinc-100',
-                      'block w-full px-4 py-2 text-left text-sm transition',
-                    )}
-                    onClick={() => {
-                      if (!speedrunDisabled) onToggleSpeedrun()
-                    }}
-                    title={
-                      speedrunDisabled
-                        ? 'Speedrun mode unavailable for cities with more than 1000 stations.'
-                        : undefined
-                    }
-                  >
-                    {speedrunMode ? 'Exit Speedrun Mode' : 'Enter Speedrun Mode'}
-                  </button>
-                )}
-              </Menu.Item>
-            )}
-            {typeof bestSpeedrunMs === 'number' && (
-              <Menu.Item disabled>
-                {({ active }) => (
-                  <div
-                    className={classNames(
-                      active
-                        ? 'bg-gray-100 text-gray-900 dark:bg-zinc-700 dark:text-zinc-100'
-                        : 'text-gray-700 dark:text-zinc-100',
-                      'block w-full px-4 py-2 text-left text-sm',
-                    )}
-                  >
-                    Best Speedrun: {formatMs(bestSpeedrunMs)}
-                  </div>
                 )}
               </Menu.Item>
             )}
