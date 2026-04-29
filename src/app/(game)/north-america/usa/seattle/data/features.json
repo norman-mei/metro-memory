@@ -207,10 +207,7 @@
         "id": 11,
         "name": "Symphony",
         "line": "SoundTransit1",
-        "order": 11,
-        "alternate_names": [
-          "University Street"
-        ]
+        "order": 11
       },
       "id": 11
     },
@@ -894,10 +891,7 @@
         "id": 50,
         "name": "Symphony",
         "line": "SoundTransit2",
-        "order": 23,
-        "alternate_names": [
-          "University Street"
-        ]
+        "order": 23
       },
       "id": 50
     },

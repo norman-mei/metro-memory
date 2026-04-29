@@ -54,13 +54,22 @@
           "includeLines": ["EAL", "TML", "NOL", "AEL", "TCL", "TWL", "ISL", "KTL", "TKL", "SIL", "DRL", "XRL", "MTR505", "MTR507", "MTR610", "MTR614", "MTR614P", "MTR615", "MTR615P", "MTR705", "MTR706", "MTR751", "MTR751P", "MTR761P", "HKNP360", "HKAPMT1", "HKAPMT2", "HKAPMSKY", "HKT", "HKTPT", "HKOEX", "HKOCC"]
         },
         {
-          "slug": "gba-mtr-only",
-          "name": "Mass Transit Railway",
-          "link": "/asia/china/gba-mtr-only",
-          "assetSourceSlug": "gba-mtr-only",
-          "keywords": ["MTR Only", "MTR", "Hong Kong MTR", "Light Rail", "Ngong Ping 360", "Airport APM"],
+          "slug": "gba-mtr-heavy-rail",
+          "name": "Mass Transit Railway (Heavy Rail)",
+          "link": "/asia/china/gba-mtr-heavy-rail",
+          "assetSourceSlug": "gba-mtr-heavy-rail",
+          "keywords": ["MTR Heavy Rail", "MTR", "Hong Kong MTR", "Heavy Rail"],
           "countingMode": "mini",
-          "includeLines": ["EAL", "TML", "NOL", "AEL", "TCL", "TWL", "ISL", "KTL", "TKL", "SIL", "DRL", "XRL", "MTR505", "MTR507", "MTR610", "MTR614", "MTR614P", "MTR615", "MTR615P", "MTR705", "MTR706", "MTR751", "MTR751P", "MTR761P", "HKNP360", "HKAPMT1", "HKAPMT2", "HKAPMSKY"]
+          "includeLines": ["EAL", "TML", "NOL", "AEL", "TCL", "TWL", "ISL", "KTL", "TKL", "SIL", "DRL"]
+        },
+        {
+          "slug": "gba-mtr-light-rail",
+          "name": "Mass Transit Railway (Light Rail)",
+          "link": "/asia/china/gba-mtr-light-rail",
+          "assetSourceSlug": "gba-mtr-heavy-rail",
+          "keywords": ["MTR Light Rail", "MTR", "Hong Kong Light Rail", "Light Rail"],
+          "countingMode": "mini",
+          "includeLines": ["MTR505", "MTR507", "MTR610", "MTR614", "MTR614P", "MTR615", "MTR615P", "MTR705", "MTR706", "MTR751", "MTR751P", "MTR761P"]
         },
         {
           "slug": "gba-macau",
@@ -306,9 +315,9 @@
           "name": "Washington DC",
           "link": "/north-america/usa/dc-washington-dc",
           "assetSourceSlug": "dc-washington-dc",
-          "keywords": ["Washington DC", "WMATA", "Metro", "VRE", "AeroTrain"],
+          "keywords": ["Washington DC", "WMATA", "Metro", "VRE", "AeroTrain", "Purple Line"],
           "countingMode": "mini",
-          "includeLines": ["WMATAMetroBlue", "WMATAMetroGreen", "WMATAMetroOrange", "WMATAMetroRed", "WMATAMetroSilver", "WMATAMetroYellow", "VREManassasLine", "VREFredericksburgLine", "MWAAAeroTrain"]
+          "includeLines": ["WMATAMetroBlue", "WMATAMetroGreen", "WMATAMetroOrange", "WMATAMetroRed", "WMATAMetroSilver", "WMATAMetroYellow", "MTAPurpleLine", "VREManassasLine", "VREFredericksburgLine", "MWAAAeroTrain"]
         },
         {
           "slug": "dc-baltimore",

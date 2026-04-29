@@ -3,8 +3,11 @@ import californiaStateBartAliases from '@/data/station-aliases/california-state-
 import californiaStateLosAngelesAliases from '@/data/station-aliases/california-state-los-angeles.json'
 import californiaStateSanDiegoAliases from '@/data/station-aliases/california-state-san-diego.json'
 import torontoWaterlooAliases from '@/data/station-aliases/toronto-waterloo.json'
+import { getMiniCityBySlug, getMiniCitiesForParent } from '@/lib/miniCities'
 
-const CITY_STATION_ALIASES: Record<string, Record<string, string[]>> = {
+type CityStationAliasMap = Record<string, string[]>
+
+const CITY_STATION_ALIASES: Record<string, CityStationAliasMap> = {
   'california-state': {
     ...californiaStateBartAliases,
     ...californiaStateLosAngelesAliases,
@@ -16,6 +19,13 @@ const CITY_STATION_ALIASES: Record<string, Record<string, string[]>> = {
   'california-state-los-angeles': californiaStateLosAngelesAliases,
   'california-state-metrolink': californiaStateLosAngelesAliases,
   'california-state-san-diego': californiaStateSanDiegoAliases,
+  'gba-hong-kong': {
+    'Terminal 1 West Hall (一號客運大樓西大堂站)': [
+      'T1',
+      'Terminal 1',
+      'West Hall',
+    ],
+  },
   montreal: montrealAliases,
   seattle: {
     '12th & Jackson': [
@@ -47,4 +57,30 @@ const CITY_STATION_ALIASES: Record<string, Record<string, string[]>> = {
   'toronto-waterloo-ttc-streetcars': torontoWaterlooAliases,
 }
 
-export const getCityStationAliases = (city: string) => CITY_STATION_ALIASES[city] ?? {}
+const mergeAliasMaps = (
+  base: CityStationAliasMap,
+  overrides: CityStationAliasMap,
+): CityStationAliasMap => {
+  const merged: CityStationAliasMap = { ...base }
+
+  Object.entries(overrides).forEach(([stationName, aliases]) => {
+    const existingAliases = merged[stationName] ?? []
+    merged[stationName] = Array.from(new Set([...existingAliases, ...aliases]))
+  })
+
+  return merged
+}
+
+export const getCityStationAliases = (city: string) => {
+  const miniCity = getMiniCityBySlug(city)
+  const familyRootSlug = miniCity?.parentSlug ?? city
+  const familySlugs = [
+    familyRootSlug,
+    ...getMiniCitiesForParent(familyRootSlug).map((entry) => entry.slug),
+  ]
+
+  return familySlugs.reduce<CityStationAliasMap>((merged, slug) => {
+    const aliases = CITY_STATION_ALIASES[slug] ?? {}
+    return mergeAliasMaps(merged, aliases)
+  }, {})
+}

@@ -12,7 +12,9 @@ import '@/styles/tailwind.css'
 import { Analytics } from '@vercel/analytics/next'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import { Metadata, Viewport } from 'next'
+import { headers } from 'next/headers'
 import Script from 'next/script'
+import { getRequestLocaleDefaults } from '@/lib/requestLocaleDefaults'
 
 const FUNDING_CHOICES_PUBLISHER_ID = ADSENSE_CLIENT_ID.replace(/^ca-/, '')
 const FUNDING_CHOICES_RECOVERY_SCRIPT_SRC = `https://fundingchoicesmessages.google.com/i/${FUNDING_CHOICES_PUBLISHER_ID}?ers=1`
@@ -93,13 +95,15 @@ export const viewport: Viewport = {
   viewportFit: 'cover',
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
+  const requestLocaleDefaults = getRequestLocaleDefaults(await headers())
+
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang={requestLocaleDefaults.defaultLanguage} suppressHydrationWarning>
       <body
         suppressHydrationWarning
         className="bg-zinc-50 text-zinc-900 antialiased overflow-y-auto dark:bg-black dark:text-zinc-100"
@@ -123,7 +127,7 @@ export default function RootLayout({
         <AdSenseScript src={ADSENSE_SCRIPT_SRC} />
         <div className="fixed top-0 left-0 right-0 z-50 h-[env(safe-area-inset-top)] bg-black" />
         <ThemeProviderClient>
-          <SettingsProvider>
+          <SettingsProvider requestLocaleDefaults={requestLocaleDefaults}>
             <AuthProvider>
               <AdRails />
               <ServiceWorkerRegister />

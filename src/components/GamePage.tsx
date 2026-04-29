@@ -167,6 +167,21 @@ const safeSetMapLayoutProperty = (
 const mapUnavailableMessage =
   'This browser lost the WebGL map context, so the map cannot be displayed right now. Please reload the page, enable hardware acceleration, or try a different browser.'
 
+const buildChinaSafeMapStyle = (darkMode: boolean): mapboxgl.Style => ({
+  version: 8,
+  name: darkMode ? 'Metro Memory China Safe Dark' : 'Metro Memory China Safe Light',
+  sources: {},
+  layers: [
+    {
+      id: 'background',
+      type: 'background',
+      paint: {
+        'background-color': darkMode ? '#09090b' : '#f5f5f4',
+      },
+    },
+  ],
+})
+
 type AchievementToastState = {
   slug: string
   cityName: string
@@ -1585,6 +1600,10 @@ function GamePageContent({
     () => ASSET_BASE_PATH ?? pathname?.replace(/^\//, '') ?? null,
     [ASSET_BASE_PATH, pathname],
   )
+  const isChinaCity = useMemo(
+    () => Boolean(cityPath?.startsWith('asia/china/')),
+    [cityPath],
+  )
   const miniCityLinks = useMemo(() => getMiniCityLinksForSlug(CITY_NAME), [CITY_NAME])
   const isMiniCity = useMemo(() => isMiniCitySlug(CITY_NAME), [CITY_NAME])
   const customParentSlug = searchParams.get('parent')?.trim() || null
@@ -1620,6 +1639,7 @@ function GamePageContent({
   const { t } = useTranslation()
   const { resolvedTheme } = useTheme()
   const { settings } = useSettings()
+  const prefersChineseCopy = settings.language.startsWith('zh')
   const { showAds } = useShouldShowAds()
   const mapContainerRef = useRef<HTMLDivElement | null>(null)
   
@@ -2393,10 +2413,16 @@ function GamePageContent({
   const [privacyModalOpen, setPrivacyModalOpen] = useState(false)
   const [resetConfirmOpen, setResetConfirmOpen] = useState(false)
   const [mapError, setMapError] = useState<string | null>(null)
+  const [showMapFallbackPreview, setShowMapFallbackPreview] = useState(false)
+  const [fallbackImageHidden, setFallbackImageHidden] = useState(false)
+  const [mapStyleMode, setMapStyleMode] = useState<'default' | 'china-safe'>('default')
+  const [mapRetryNonce, setMapRetryNonce] = useState(0)
   const [highlightedLineId, setHighlightedLineId] = useState<string | null>(null)
   const disableRouteLineHighlightInteraction =
     CITY_NAME === 'nyc' || CITY_NAME === 'amtrak'
   const foundRef = useRef<number[]>([])
+  const usingChinaSafeMapStyle =
+    isChinaCity && mapStyleMode === 'china-safe'
 
   // Speedrun preference hydration
   useEffect(() => {
@@ -2607,6 +2633,15 @@ function GamePageContent({
     }
   }, [storedSidebarOpen])
 
+  useEffect(() => {
+    setMapStyleMode('default')
+    setMapRetryNonce(0)
+    setMapError(null)
+    setShowMapFallbackPreview(false)
+    setFallbackImageHidden(false)
+    mapUnavailableRef.current = false
+  }, [CITY_NAME])
+
   const setSidebarOpen = useCallback(
     (next: boolean | ((prev: boolean) => boolean)) => {
       setSidebarOpenState((prev) => {
@@ -2619,7 +2654,40 @@ function GamePageContent({
     [setStoredSidebarOpen],
   )
 
+  const handleContinueInListMode = useCallback(() => {
+    setSidebarOpen(true)
+    setShowMapFallbackPreview(false)
+    inputRef.current?.focus()
+  }, [setSidebarOpen])
+
+  const handleRetryMap = useCallback(
+    (mode: 'current' | 'china-safe' = 'current') => {
+      mapUnavailableRef.current = false
+      setMap(null)
+      setMapError(null)
+      setShowMapFallbackPreview(false)
+      setFallbackImageHidden(false)
+      if (mode === 'china-safe' && isChinaCity) {
+        setMapStyleMode('china-safe')
+      } else {
+        setMapStyleMode('default')
+      }
+      setMapRetryNonce((prev) => prev + 1)
+    },
+    [isChinaCity],
+  )
+
   const sidebarOpen = sidebarOpenState
+
+  useEffect(() => {
+    if (!map) {
+      return
+    }
+
+    setShowMapFallbackPreview(false)
+    setMapError(null)
+  }, [map])
+
   useEffect(() => {
     const el = sidebarScrollRef.current
     if (!el) {
@@ -4812,6 +4880,17 @@ function GamePageContent({
   }, [settings.achievementToastsEnabled])
 
   const mapOptions = useMemo(() => {
+    const { container: _ignored, ...rest } = MAP_CONFIG as typeof MAP_CONFIG & {
+      container?: unknown
+    }
+
+    if (usingChinaSafeMapStyle) {
+      return {
+        ...rest,
+        style: buildChinaSafeMapStyle(resolvedTheme === 'dark'),
+      }
+    }
+
     const fallbackLightStyle =
       normalizeMapStyleOverride(process.env.NEXT_PUBLIC_MAPBOX_STYLE) ??
       'mapbox://styles/mapbox/light-v11'
@@ -4835,15 +4914,11 @@ function GamePageContent({
           ? darkStyle
           : baseStyle ?? fallbackLightStyle
 
-    const { container: _ignored, ...rest } = MAP_CONFIG as typeof MAP_CONFIG & {
-      container?: unknown
-    }
-
     return {
       ...rest,
       style: resolvedStyle,
     }
-  }, [MAP_CONFIG, resolvedTheme, showSatellite])
+  }, [MAP_CONFIG, resolvedTheme, showSatellite, usingChinaSafeMapStyle])
 
   useEffect(() => {
     disableMapboxTelemetry()
@@ -4858,6 +4933,7 @@ function GamePageContent({
     }
 
     setMapError(null)
+    setShowMapFallbackPreview(false)
 
     const supported =
       typeof mapboxgl.supported === 'function'
@@ -4868,12 +4944,31 @@ function GamePageContent({
       setMapError(
         'This browser cannot initialize WebGL, so the map cannot be displayed. Please enable hardware acceleration or try a different browser.',
       )
+      setShowMapFallbackPreview(true)
       return
     }
 
     let mapboxMap: mapboxgl.Map | null = null
     let mapFailed = false
+    let mapReady = false
+    let chinaSafeRetryRequested = false
     let contextLostHandler: (() => void) | null = null
+    let fallbackPreviewTimeout: number | null = null
+    let chinaSafeRetryTimeout: number | null = null
+
+    const clearMapFallbackTimeouts = () => {
+      if (typeof window === 'undefined') {
+        return
+      }
+      if (fallbackPreviewTimeout !== null) {
+        window.clearTimeout(fallbackPreviewTimeout)
+        fallbackPreviewTimeout = null
+      }
+      if (chinaSafeRetryTimeout !== null) {
+        window.clearTimeout(chinaSafeRetryTimeout)
+        chinaSafeRetryTimeout = null
+      }
+    }
 
     let initialBounds: [number, number, number, number] | undefined
     const restoredMapView = savedMapViewRef.current
@@ -4888,6 +4983,36 @@ function GamePageContent({
       ) {
         initialBounds = box as [number, number, number, number]
       }
+    }
+
+    const requestChinaSafeRetry = (message?: string) => {
+      if (!isChinaCity || usingChinaSafeMapStyle || chinaSafeRetryRequested) {
+        return false
+      }
+
+      chinaSafeRetryRequested = true
+      mapFailed = true
+      clearMapFallbackTimeouts()
+      setMap(null)
+      setShowMapFallbackPreview(true)
+      setMapError(
+        message ??
+          (prefersChineseCopy
+            ? '\u5e95\u56fe\u52a0\u8f7d\u4e0d\u7a33\u5b9a\uff0c\u6b63\u5728\u5207\u6362\u5230\u8f7b\u91cf\u5730\u56fe\u6a21\u5f0f\u3002'
+            : 'The base map is unavailable, switching to a lighter map mode.'),
+      )
+
+      try {
+        mapboxMap?.remove()
+      } catch {
+        // Nothing else to do if teardown also fails.
+      } finally {
+        mapboxMap = null
+      }
+
+      setMapStyleMode('china-safe')
+      setMapRetryNonce((prev) => prev + 1)
+      return true
     }
 
     try {
@@ -4911,14 +5036,52 @@ function GamePageContent({
       mapboxMap = new mapboxgl.Map(options)
     } catch (error) {
       console.error('Failed to initialize map', error)
+      if (
+        requestChinaSafeRetry(
+          prefersChineseCopy
+            ? '\u5730\u56fe\u521d\u59cb\u5316\u5931\u8d25\uff0c\u6b63\u5728\u5207\u6362\u5230\u8f7b\u91cf\u5730\u56fe\u6a21\u5f0f\u3002'
+            : 'Map initialization failed, switching to a lighter map mode.',
+        )
+      ) {
+        return
+      }
       setMapError(
         'Failed to initialize the map in this environment. Please check WebGL support.',
       )
+      setShowMapFallbackPreview(true)
       return
     }
 
     if (!mapboxMap) {
       return
+    }
+
+    if (typeof window !== 'undefined') {
+      fallbackPreviewTimeout = window.setTimeout(() => {
+        if (mapReady || mapFailed) {
+          return
+        }
+        setShowMapFallbackPreview(true)
+        setMapError((current) =>
+          current ??
+          (prefersChineseCopy
+            ? '\u5730\u56fe\u52a0\u8f7d\u8f83\u6162\u3002\u4f60\u53ef\u4ee5\u5148\u7ee7\u7eed\u5217\u8868\u6a21\u5f0f\uff0c\u518d\u7a0d\u540e\u91cd\u8bd5\u5730\u56fe\u3002'
+            : 'Map is taking longer than expected. You can continue in list mode and retry the map later.'),
+        )
+      }, 4000)
+
+      if (isChinaCity && !usingChinaSafeMapStyle) {
+        chinaSafeRetryTimeout = window.setTimeout(() => {
+          if (mapReady || mapFailed) {
+            return
+          }
+          requestChinaSafeRetry(
+            prefersChineseCopy
+              ? '\u5730\u56fe\u670d\u52a1\u52a0\u8f7d\u5931\u8d25\uff0c\u6b63\u5728\u5207\u6362\u5230\u8f7b\u91cf\u5730\u56fe\u6a21\u5f0f\u3002'
+              : 'The map service is unavailable, switching to a lighter map mode.',
+          )
+        }, 7000)
+      }
     }
 
     const failMapOnce = (message = mapUnavailableMessage) => {
@@ -4928,6 +5091,8 @@ function GamePageContent({
 
       mapFailed = true
       mapUnavailableRef.current = true
+      clearMapFallbackTimeouts()
+      setShowMapFallbackPreview(true)
       setMapError(message)
       setMap(null)
 
@@ -4950,7 +5115,24 @@ function GamePageContent({
       const message =
         (event?.error as { message?: string })?.message ??
         (event?.error ? String(event.error) : '')
-      if (message.toLowerCase().includes('webgl')) {
+      const normalizedMessage = message.toLowerCase()
+      if (
+        (normalizedMessage.includes('resource') ||
+          normalizedMessage.includes('sprite') ||
+          normalizedMessage.includes('glyph') ||
+          normalizedMessage.includes('style') ||
+          normalizedMessage.includes('tile') ||
+          normalizedMessage.includes('network') ||
+          normalizedMessage.includes('load')) &&
+        requestChinaSafeRetry(
+          prefersChineseCopy
+            ? '\u5730\u56fe\u8d44\u6e90\u52a0\u8f7d\u5931\u8d25\uff0c\u6b63\u5728\u5207\u6362\u5230\u8f7b\u91cf\u5730\u56fe\u6a21\u5f0f\u3002'
+            : 'The map resources failed to load, switching to a lighter map mode.',
+        )
+      ) {
+        return
+      }
+      if (normalizedMessage.includes('webgl')) {
         failMapOnce(
           'This browser cannot initialize WebGL, so the map cannot be displayed. Please enable hardware acceleration or try a different browser.',
         )
@@ -5328,21 +5510,22 @@ function GamePageContent({
         },
       })
 
-      mapboxMap.addLayer({
-        minzoom: 11,
-        layout: {
-          'text-field': [
-            'to-string',
-            ['coalesce', ['get', 'display_name'], ['get', 'name']],
-          ],
-          'text-font': ['Cabin Regular', 'Arial Unicode MS Regular'],
-          'text-anchor': 'bottom',
-          'text-offset': [0, -0.5],
-          'text-size': ['interpolate', ['linear'], ['zoom'], 11, 12, 22, 14],
-        },
-        type: 'symbol',
-        source: 'features',
-        id: 'stations-labels',
+      if (!usingChinaSafeMapStyle) {
+        mapboxMap.addLayer({
+          minzoom: 11,
+          layout: {
+            'text-field': [
+              'to-string',
+              ['coalesce', ['get', 'display_name'], ['get', 'name']],
+            ],
+            'text-font': ['Cabin Regular', 'Arial Unicode MS Regular'],
+            'text-anchor': 'bottom',
+            'text-offset': [0, -0.5],
+            'text-size': ['interpolate', ['linear'], ['zoom'], 11, 12, 22, 14],
+          },
+          type: 'symbol',
+          source: 'features',
+          id: 'stations-labels',
           paint: {
             'text-color': [
               'case',
@@ -5359,11 +5542,11 @@ function GamePageContent({
             'text-halo-blur': 1,
             'text-halo-width': 1,
           },
-      })
+        })
 
-      mapboxMap.addLayer({
-        id: 'hover-label-point',
-        type: 'symbol',
+        mapboxMap.addLayer({
+          id: 'hover-label-point',
+          type: 'symbol',
           paint: {
             'text-halo-color': hoverHaloColor,
             'text-halo-width': 2,
@@ -5374,16 +5557,17 @@ function GamePageContent({
             'text-field': [
               'to-string',
               ['coalesce', ['get', 'display_name'], ['get', 'name']],
-          ],
-          'text-font': ['Cabin Bold', 'Arial Unicode MS Regular'],
-          'text-anchor': 'bottom',
-          'text-offset': [0, -0.6],
-          'text-size': ['interpolate', ['linear'], ['zoom'], 11, 14, 22, 16],
-          'symbol-placement': 'point',
-        },
-        source: 'hovered',
-        filter: ['==', '$type', 'Point'],
-      })
+            ],
+            'text-font': ['Cabin Bold', 'Arial Unicode MS Regular'],
+            'text-anchor': 'bottom',
+            'text-offset': [0, -0.6],
+            'text-size': ['interpolate', ['linear'], ['zoom'], 11, 14, 22, 16],
+            'symbol-placement': 'point',
+          },
+          source: 'hovered',
+          filter: ['==', '$type', 'Point'],
+        })
+      }
 
       mapboxMap.once('data', () => {
         setMap((map) => (map === null ? mapboxMap : map))
@@ -5392,6 +5576,10 @@ function GamePageContent({
       mapboxMap.once('idle', () => {
         const mbMap = mapboxMap
         if (!mbMap) return
+        mapReady = true
+        clearMapFallbackTimeouts()
+        setShowMapFallbackPreview(false)
+        setMapError(null)
         if (!initialMapViewRef.current) {
           const center = mbMap.getCenter()
           initialMapViewRef.current = {
@@ -5450,6 +5638,7 @@ function GamePageContent({
     })
 
     return () => {
+      clearMapFallbackTimeouts()
       if (!mapboxMap) {
         return
       }
@@ -5484,7 +5673,7 @@ function GamePageContent({
       mapboxMap.remove()
       setMap(null)
     }
-  }, [setMap, featureCollection, displayLines, mapOptions, MAP_FROM_DATA, displayRoutes, renderCullingEnabled, getRenderedCollections, refreshRenderedSources, resolvedTheme, CITY_NAME, updateUiPreferences])
+  }, [setMap, featureCollection, displayLines, mapOptions, MAP_FROM_DATA, displayRoutes, renderCullingEnabled, getRenderedCollections, refreshRenderedSources, resolvedTheme, CITY_NAME, updateUiPreferences, isChinaCity, usingChinaSafeMapStyle, prefersChineseCopy, mapRetryNonce])
 
   useEffect(() => {
     if (!map) {
@@ -5828,57 +6017,143 @@ function GamePageContent({
     mistakes > 0 &&
     foundProportion < RANKED_COMPLETION_TARGET
 
-    return (
-      <div className="relative flex h-screen flex-row items-start justify-start bg-zinc-50 text-zinc-900 dark:bg-zinc-950 dark:text-zinc-100">
-        <ZenModeToast zenMode={zenMode} toggleKey={settings.keybindings.TOGGLE_ZEN_MODE} />
-        <SpeedrunToast speedrunMode={speedrunMode} />
-        {mapCoordsToast ? (
-          <div className="pointer-events-none fixed bottom-32 left-1/2 z-[110] -translate-x-1/2">
-            <div className="rounded-full bg-sky-600/95 px-6 py-2 text-sm font-semibold text-white shadow-xl backdrop-blur dark:bg-sky-400/95 dark:text-zinc-950">
-              {mapCoordsToast}
+  const showMapFallbackOverlay = Boolean(mapError || showMapFallbackPreview)
+  const fallbackImageSrc = `/city-cards/${CITY_NAME}.jpg`
+  const mapFallbackTitle = prefersChineseCopy
+    ? '\u5730\u56fe\u6682\u65f6\u4e0d\u53ef\u7528\uff0c\u53ef\u7ee7\u7eed\u5217\u8868\u6a21\u5f0f'
+    : 'Map unavailable, continue in list mode'
+  const mapFallbackBody =
+    mapError ??
+    (prefersChineseCopy
+      ? '\u4f60\u4ecd\u7136\u53ef\u4ee5\u6839\u636e\u7ad9\u540d\u548c\u7ebf\u8def\u5217\u8868\u7ee7\u7eed\u6e38\u73a9\uff0c\u4e4b\u540e\u518d\u91cd\u8bd5\u5730\u56fe\u3002'
+      : 'You can still keep playing from station names and line lists, then retry the map later.')
+  const mapFallbackRetryLabel =
+    isChinaCity && !usingChinaSafeMapStyle
+      ? prefersChineseCopy
+        ? '\u5c1d\u8bd5\u8f7b\u91cf\u5730\u56fe'
+        : 'Try lighter map'
+      : prefersChineseCopy
+        ? '\u91cd\u8bd5\u5730\u56fe'
+        : 'Retry map'
+  const mapFallbackModeLabel =
+    usingChinaSafeMapStyle && isChinaCity
+      ? prefersChineseCopy
+        ? '\u5f53\u524d\u4f7f\u7528\u8f7b\u91cf\u5730\u56fe\u6a21\u5f0f'
+        : 'Lightweight map mode is active'
+      : null
+  const showChinaMapStyleTestButton = isChinaCity && solutionsUnlocked
+  const chinaMapStyleTestButtonLabel = usingChinaSafeMapStyle
+    ? prefersChineseCopy
+      ? '\u5207\u56de Mapbox \u5730\u56fe'
+      : 'Use Mapbox map'
+    : prefersChineseCopy
+      ? '\u4f7f\u7528\u8f7b\u91cf\u5730\u56fe'
+      : 'Use lightweight map'
+
+  return (
+    <div className="relative flex h-screen flex-row items-start justify-start bg-zinc-50 text-zinc-900 dark:bg-zinc-950 dark:text-zinc-100">
+      <ZenModeToast zenMode={zenMode} toggleKey={settings.keybindings.TOGGLE_ZEN_MODE} />
+      <SpeedrunToast speedrunMode={speedrunMode} />
+      {mapCoordsToast ? (
+        <div className="pointer-events-none fixed bottom-32 left-1/2 z-[110] -translate-x-1/2">
+          <div className="rounded-full bg-sky-600/95 px-6 py-2 text-sm font-semibold text-white shadow-xl backdrop-blur dark:bg-sky-400/95 dark:text-zinc-950">
+            {mapCoordsToast}
+          </div>
+        </div>
+      ) : null}
+      {mapCoordsMenu ? (
+        <>
+          <div
+            className="pointer-events-none fixed z-[119] h-4 w-4 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-sky-500 bg-sky-500/20 shadow-[0_0_0_4px_rgba(14,165,233,0.16)] dark:border-sky-300 dark:bg-sky-300/20 dark:shadow-[0_0_0_4px_rgba(125,211,252,0.18)]"
+            style={{
+              left: mapCoordsMenu.x,
+              top: mapCoordsMenu.y,
+            }}
+          />
+          <div
+            className="fixed z-[120]"
+            style={{
+              left: mapCoordsMenu.x + 10,
+              top: mapCoordsMenu.y + 10,
+            }}
+          >
+            <div
+              className="min-w-[140px] rounded-lg border border-zinc-200 bg-white/95 p-1.5 shadow-xl backdrop-blur dark:border-zinc-700 dark:bg-zinc-900/95"
+              onPointerDown={(event) => event.stopPropagation()}
+            >
+              <button
+                type="button"
+                onClick={() => void copyMapCoords()}
+                className="flex w-full items-center justify-between rounded-md px-2 py-1.5 text-left text-xs font-medium text-zinc-900 transition hover:bg-zinc-100 dark:text-zinc-100 dark:hover:bg-zinc-800"
+              >
+                <span>Copy coords</span>
+                <span className="ml-3 text-[10px] text-zinc-500 dark:text-zinc-400">
+                  {mapCoordsMenu.lat.toFixed(4)}, {mapCoordsMenu.lng.toFixed(4)}
+                </span>
+              </button>
             </div>
           </div>
-        ) : null}
-        {mapCoordsMenu ? (
-          <>
-            <div
-              className="pointer-events-none fixed z-[119] h-4 w-4 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-sky-500 bg-sky-500/20 shadow-[0_0_0_4px_rgba(14,165,233,0.16)] dark:border-sky-300 dark:bg-sky-300/20 dark:shadow-[0_0_0_4px_rgba(125,211,252,0.18)]"
-              style={{
-                left: mapCoordsMenu.x,
-                top: mapCoordsMenu.y,
-              }}
-            />
-            <div
-              className="fixed z-[120]"
-              style={{
-                left: mapCoordsMenu.x + 10,
-                top: mapCoordsMenu.y + 10,
-              }}
-            >
-              <div
-                className="min-w-[140px] rounded-lg border border-zinc-200 bg-white/95 p-1.5 shadow-xl backdrop-blur dark:border-zinc-700 dark:bg-zinc-900/95"
-                onPointerDown={(event) => event.stopPropagation()}
-              >
-                <button
-                  type="button"
-                  onClick={() => void copyMapCoords()}
-                  className="flex w-full items-center justify-between rounded-md px-2 py-1.5 text-left text-xs font-medium text-zinc-900 transition hover:bg-zinc-100 dark:text-zinc-100 dark:hover:bg-zinc-800"
-                >
-                  <span>Copy coords</span>
-                  <span className="ml-3 text-[10px] text-zinc-500 dark:text-zinc-400">
-                    {mapCoordsMenu.lat.toFixed(4)}, {mapCoordsMenu.lng.toFixed(4)}
-                  </span>
-                </button>
+        </>
+      ) : null}
+      <div className="relative flex-1 min-w-0 h-full">
+        <div ref={mapContainerRef} className="absolute inset-0 h-full w-full" />
+        {showMapFallbackOverlay ? (
+          <div className="absolute inset-0 z-50 flex items-center justify-center bg-zinc-950/25 px-4 py-6 backdrop-blur-[2px]">
+            <div className="pointer-events-auto w-full max-w-2xl overflow-hidden rounded-[2rem] border border-white/70 bg-white/95 shadow-2xl dark:border-zinc-700 dark:bg-zinc-900/95">
+              {!fallbackImageHidden ? (
+                <img
+                  src={fallbackImageSrc}
+                  alt={
+                    prefersChineseCopy
+                      ? '\u7ebf\u8def\u9759\u6001\u9884\u89c8\u56fe'
+                      : 'Static network preview'
+                  }
+                  className="h-56 w-full object-cover"
+                  onError={() => setFallbackImageHidden(true)}
+                />
+              ) : null}
+              <div className="space-y-4 p-5 sm:p-6">
+                <div className="space-y-2">
+                  <p className="text-xs font-semibold uppercase tracking-[0.24em] text-zinc-500 dark:text-zinc-400">
+                    {prefersChineseCopy
+                      ? '\u5730\u56fe\u964d\u7ea7\u6a21\u5f0f'
+                      : 'Map fallback'}
+                  </p>
+                  <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50">
+                    {mapFallbackTitle}
+                  </h2>
+                  <p className="text-sm leading-6 text-zinc-700 dark:text-zinc-300">
+                    {mapFallbackBody}
+                  </p>
+                  {mapFallbackModeLabel ? (
+                    <p className="text-xs font-medium text-sky-700 dark:text-sky-300">
+                      {mapFallbackModeLabel}
+                    </p>
+                  ) : null}
+                </div>
+                <div className="flex flex-wrap gap-3">
+                  <button
+                    type="button"
+                    onClick={handleContinueInListMode}
+                    className="rounded-full bg-zinc-900 px-4 py-2 text-sm font-semibold text-white transition hover:bg-zinc-800 dark:bg-zinc-100 dark:text-zinc-950 dark:hover:bg-white"
+                  >
+                    {prefersChineseCopy
+                      ? '\u7ee7\u7eed\u5217\u8868\u6a21\u5f0f'
+                      : 'Continue in list mode'}
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() =>
+                      handleRetryMap(
+                        isChinaCity && !usingChinaSafeMapStyle ? 'china-safe' : 'current',
+                      )
+                    }
+                    className="rounded-full border border-zinc-300 px-4 py-2 text-sm font-semibold text-zinc-700 transition hover:border-zinc-400 hover:bg-zinc-100 dark:border-zinc-600 dark:text-zinc-200 dark:hover:bg-zinc-800"
+                  >
+                    {mapFallbackRetryLabel}
+                  </button>
+                </div>
               </div>
-            </div>
-          </>
-        ) : null}
-        <div className="relative flex-1 min-w-0 h-full">
-          <div ref={mapContainerRef} className="absolute inset-0 h-full w-full" />
-        {mapError ? (
-          <div className="absolute inset-0 z-50 flex items-center justify-center px-4">
-            <div className="max-w-lg rounded-lg bg-white/95 p-4 text-sm font-semibold text-red-700 shadow-lg dark:bg-zinc-900/95 dark:text-red-200 dark:shadow-black/40">
-              {mapError}
             </div>
           </div>
         ) : null}
@@ -6091,6 +6366,26 @@ function GamePageContent({
                     {formatMs(speedrunElapsedMs ?? 0)}
                   </span>
                 </div>
+              )}
+              {showChinaMapStyleTestButton && (
+                <button
+                  type="button"
+                  onClick={() =>
+                    handleRetryMap(usingChinaSafeMapStyle ? 'current' : 'china-safe')
+                  }
+                  className={
+                    usingChinaSafeMapStyle
+                      ? 'inline-flex h-10 items-center rounded-full bg-sky-600 px-4 text-sm font-semibold text-white shadow-lg transition hover:bg-sky-500 focus:outline-none focus:ring-2 focus:ring-sky-300 dark:bg-sky-500 dark:text-zinc-950 dark:hover:bg-sky-400'
+                      : 'inline-flex h-10 items-center rounded-full bg-white px-4 text-sm font-semibold text-zinc-700 shadow-lg transition hover:bg-zinc-100 focus:outline-none focus:ring-2 focus:ring-[var(--accent-ring)] dark:bg-zinc-800 dark:text-zinc-100 dark:hover:bg-zinc-700'
+                  }
+                  title={
+                    prefersChineseCopy
+                      ? '\u4ec5\u9650\u5df2\u89e3\u9501\u7684\u6d4b\u8bd5\u6309\u94ae'
+                      : 'Cheat-unlocked test button'
+                  }
+                >
+                  {chinaMapStyleTestButtonLabel}
+                </button>
               )}
               <MenuComponent
                 hideLabels={hideLabels}

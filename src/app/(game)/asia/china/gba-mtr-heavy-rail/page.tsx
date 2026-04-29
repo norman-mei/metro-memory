@@ -3,9 +3,9 @@ import 'mapbox-gl/dist/mapbox-gl.css'
 import 'react-circular-progressbar/dist/styles.css'
 
 export async function generateMetadata() {
-  return generateMiniCityMetadata('gba-mtr-only')
+  return generateMiniCityMetadata('gba-mtr-heavy-rail')
 }
 
 export default async function Page() {
-  return renderMiniCityPage('gba-mtr-only')
+  return renderMiniCityPage('gba-mtr-heavy-rail')
 }

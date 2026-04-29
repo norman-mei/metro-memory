@@ -4574,7 +4574,11 @@
                          "properties":  {
                                             "id":  283,
                                             "name":  "UM Campus Center",
-                                            "line":  "MTAPurpleLine"
+                                            "line":  "MTAPurpleLine",
+                                            "alternate_names":  [
+                                                                    "Campus Drive - UMD",
+                                                                    "Campus Drive UMD"
+                                                                ]
                                         },
                          "id":  283
                      },
@@ -4590,7 +4594,13 @@
                          "properties":  {
                                             "id":  284,
                                             "name":  "East Campus",
-                                            "line":  "MTAPurpleLine"
+                                            "line":  "MTAPurpleLine",
+                                            "alternate_names":  [
+                                                                    "Baltimore Avenue - UMD",
+                                                                    "Baltimore Avenue UMD",
+                                                                    "Baltimore Ave - UMD",
+                                                                    "Baltimore Ave UMD"
+                                                                ]
                                         },
                          "id":  284
                      },

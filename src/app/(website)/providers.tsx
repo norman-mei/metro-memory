@@ -7,6 +7,7 @@ import ThemeProviderClient from '@/components/ThemeProviderClient'
 import SettingsSaveToast from '@/components/SettingsSaveToast'
 import { AuthProvider } from '@/context/AuthContext'
 import { SettingsProvider } from '@/context/SettingsContext'
+import { RequestLocaleDefaults } from '@/lib/requestLocaleDefaults'
 
 function usePrevious<T>(value: T) {
   const ref = useRef<T>()
@@ -20,14 +21,20 @@ function usePrevious<T>(value: T) {
 
 export const AppContext = createContext<{ previousPathname?: string }>({})
 
-export function Providers({ children }: { children: React.ReactNode }) {
+export function Providers({
+  children,
+  requestLocaleDefaults,
+}: {
+  children: React.ReactNode
+  requestLocaleDefaults: RequestLocaleDefaults
+}) {
   const pathname = usePathname()
   const previousPathname = usePrevious(pathname)
 
   return (
     <AppContext.Provider value={{ previousPathname }}>
       <ThemeProviderClient>
-        <SettingsProvider>
+        <SettingsProvider requestLocaleDefaults={requestLocaleDefaults}>
           <AuthProvider>{children}</AuthProvider>
           <SettingsSaveToast />
         </SettingsProvider>

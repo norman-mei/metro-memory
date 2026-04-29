@@ -17,6 +17,7 @@ import {
     useState,
     type ReactNode,
 } from 'react'
+import { RequestLocaleDefaults } from '@/lib/requestLocaleDefaults'
 
 const hexToRgb = (hex: string) => {
   const normalized = hex.replace('#', '')
@@ -336,6 +337,8 @@ const STORAGE_KEY = 'metro-memory-settings'
 type SettingsContextValue = {
   settings: Settings
   customFont: CustomFontData | null
+  requestCountryCode: string | null
+  requestInMainlandChina: boolean
   setConfettiEnabled: (enabled: boolean) => void
   setAchievementToastsEnabled: (enabled: boolean) => void
   setAchievementToastDurationSec: (seconds: number) => void
@@ -356,8 +359,19 @@ type SettingsContextValue = {
 
 const SettingsContext = createContext<SettingsContextValue | undefined>(undefined)
 
-export const SettingsProvider = ({ children }: { children: ReactNode }) => {
-  const [settings, setSettings] = useState<Settings>(DEFAULT_SETTINGS)
+export const SettingsProvider = ({
+  children,
+  requestLocaleDefaults,
+}: {
+  children: ReactNode
+  requestLocaleDefaults?: RequestLocaleDefaults
+}) => {
+  const defaultLanguage =
+    requestLocaleDefaults?.defaultLanguage ?? DEFAULT_SETTINGS.language
+  const [settings, setSettings] = useState<Settings>(() => ({
+    ...DEFAULT_SETTINGS,
+    language: defaultLanguage,
+  }))
   const [customFont, setCustomFontState] = useState<CustomFontData | null>(null)
   const [lastSavedAt, setLastSavedAt] = useState(0)
 
@@ -407,8 +421,8 @@ export const SettingsProvider = ({ children }: { children: ReactNode }) => {
                 : DEFAULT_SETTINGS.fontFamily,
             language:
               isSupportedLanguageCode(parsed.language)
-                ? normalizeLanguageCode(parsed.language) ?? DEFAULT_SETTINGS.language
-                : DEFAULT_SETTINGS.language,
+                ? normalizeLanguageCode(parsed.language) ?? defaultLanguage
+                : defaultLanguage,
             timezone:
               typeof parsed.timezone === 'string'
                 ? parsed.timezone
@@ -427,7 +441,7 @@ export const SettingsProvider = ({ children }: { children: ReactNode }) => {
     } catch {
       // ignore malformed entries
     }
-  }, [])
+  }, [defaultLanguage])
 
   useEffect(() => {
     let cancelled = false
@@ -563,6 +577,8 @@ export const SettingsProvider = ({ children }: { children: ReactNode }) => {
     () => ({
       settings,
       customFont,
+      requestCountryCode: requestLocaleDefaults?.countryCode ?? null,
+      requestInMainlandChina: requestLocaleDefaults?.inMainlandChina ?? false,
       setConfettiEnabled: (enabled: boolean) => updateSettings({ confettiEnabled: enabled }),
       setAchievementToastsEnabled: (enabled: boolean) =>
         updateSettings({ achievementToastsEnabled: enabled }),
@@ -622,7 +638,16 @@ export const SettingsProvider = ({ children }: { children: ReactNode }) => {
       notifySettingsSaved,
       lastSavedAt,
     }),
-    [customFont, settings, setCustomFont, updateSettings, notifySettingsSaved, lastSavedAt],
+    [
+      customFont,
+      lastSavedAt,
+      notifySettingsSaved,
+      requestLocaleDefaults?.countryCode,
+      requestLocaleDefaults?.inMainlandChina,
+      setCustomFont,
+      settings,
+      updateSettings,
+    ],
   )
 
   return <SettingsContext.Provider value={value}>{children}</SettingsContext.Provider>

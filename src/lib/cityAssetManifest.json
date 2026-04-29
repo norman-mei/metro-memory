@@ -429,7 +429,13 @@
     "openGraphExtension": "jpg",
     "openGraphVersion": "78987fa6625d"
   },
-  "gba-mtr-only": {
+  "gba-mtr-heavy-rail": {
+    "icon": true,
+    "iconVersion": "90431178f29f",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "fa324497f199"
+  },
+  "gba-mtr-light-rail": {
     "icon": true,
     "iconVersion": "90431178f29f",
     "openGraphExtension": "jpg",
