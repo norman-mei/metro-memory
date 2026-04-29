@@ -28,6 +28,12 @@ const guessHistoryLabels: Record<GuessHistoryEntry['type'], string> = {
   wrong: 'Missed',
 }
 
+const guessHistoryIcons: Record<GuessHistoryEntry['type'], string> = {
+  correct: '✅',
+  already: '✅',
+  wrong: '❌',
+}
+
 const Input = ({
   fuse,
   found,
@@ -645,7 +651,7 @@ const Input = ({
                       </p>
                       <span
                         className={classNames(
-                          'shrink-0 rounded-full px-2 py-0.5 text-[11px] font-black uppercase tracking-wide',
+                          'shrink-0 rounded-full px-2 py-0.5 text-[11px] font-black tracking-wide',
                           entry.type === 'correct'
                             ? 'bg-emerald-100 text-emerald-700 dark:bg-emerald-500/15 dark:text-emerald-300'
                             : entry.type === 'already'
@@ -653,7 +659,7 @@ const Input = ({
                               : 'bg-red-100 text-red-700 dark:bg-red-500/15 dark:text-red-300',
                         )}
                       >
-                        {guessHistoryLabels[entry.type]}
+                        {guessHistoryIcons[entry.type]} {guessHistoryLabels[entry.type]}
                       </span>
                     </div>
                     {entry.stationNames.length > 0 && (

@@ -153,7 +153,7 @@ export default function MissedGuessInputsModal({
                           <div className="flex flex-wrap items-baseline justify-between gap-2">
                             <div className="min-w-0">
                               <p className="text-base font-black text-zinc-950 dark:text-zinc-50">
-                                {entry.rawInput}
+                                ❌ {entry.rawInput}
                               </p>
                               {scope === 'all' && (
                                 <p className="mt-1 text-xs font-semibold uppercase tracking-wide text-zinc-500 dark:text-zinc-500">
