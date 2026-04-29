@@ -47,6 +47,7 @@ type MissedGuessTableProbeRow = {
 
 const MISSED_GUESS_TABLE_NAME = 'MissedGuessInput'
 const MISSED_GUESS_TABLE_CACHE_MS = 60_000
+const MAX_SERVER_MISSED_GUESS_ROWS = 100_000
 
 let missedGuessTableCache:
   | {
@@ -133,12 +134,23 @@ export async function POST(request: NextRequest) {
   }
 
   try {
-    await prisma.$executeRaw`
-      INSERT INTO "MissedGuessInput"
-        ("id", "citySlug", "rawInput", "normalizedInput", "suggestions", "createdAt")
-      VALUES
-        (${crypto.randomUUID()}, ${data.city}, ${data.rawInput}, ${data.normalizedInput}, ${JSON.stringify(data.suggestions)}::jsonb, NOW())
-    `
+    await prisma.$transaction([
+      prisma.$executeRaw`
+        INSERT INTO "MissedGuessInput"
+          ("id", "citySlug", "rawInput", "normalizedInput", "suggestions", "createdAt")
+        VALUES
+          (${crypto.randomUUID()}, ${data.city}, ${data.rawInput}, ${data.normalizedInput}, ${JSON.stringify(data.suggestions)}::jsonb, NOW())
+      `,
+      prisma.$executeRaw`
+        DELETE FROM "MissedGuessInput"
+        WHERE "id" IN (
+          SELECT "id"
+          FROM "MissedGuessInput"
+          ORDER BY "createdAt" DESC, "id" DESC
+          OFFSET ${MAX_SERVER_MISSED_GUESS_ROWS}
+        )
+      `,
+    ])
   } catch (error) {
     if (isMissingMissedGuessTableError(error)) {
       missedGuessTableCache = {

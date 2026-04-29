@@ -350,6 +350,7 @@ model MissedGuessInput {
 
   @@index([citySlug, createdAt])
   @@index([citySlug, normalizedInput])
+  @@index([createdAt, id])
 }
 
 model DailyChallenge {
