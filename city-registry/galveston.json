@@ -1,0 +1,40 @@
+{
+  "city": "galveston",
+  "continent": "north america",
+  "bbox": [
+    29.288474001054368,
+    -94.79674344409143,
+    29.309032387540157,
+    -94.7866176644204
+  ],
+  "localLanguages": [
+    "en"
+  ],
+  "modes": [
+    "subway",
+    "light_rail",
+    "tram",
+    "rail",
+    "funicular",
+    "monorail",
+    "cable_car",
+    "gondola",
+    "chair_lift"
+  ],
+  "lines": [
+    {
+      "id": "MAXRed",
+      "name": "Galveston Island Trolley",
+      "keywords": [
+        "Galveston Island Trolley",
+        "Galveston Island",
+        "MAX Red"
+      ],
+      "order": 0,
+      "icon": "north-america/usa/galveston/MAXRed.svg"
+    }
+  ],
+  "stationAliases": {},
+  "stationLocalNames": {},
+  "manualCoords": {}
+}

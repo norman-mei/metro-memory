@@ -1,0 +1,58 @@
+{
+  "RD": {
+    "name": "Red",
+    "color": "#E21936",
+    "backgroundColor": "#980F24",
+    "textColor": "#FFFFFF",
+    "order": 0,
+    "progressOutlineColor": "#E21936",
+    "icon": "north-america/usa/pittsburgh/RD.svg"
+  },
+  "SV": {
+    "name": "Silver",
+    "color": "#7C7C7C",
+    "backgroundColor": "#4F4F4F",
+    "textColor": "#FFFFFF",
+    "order": 1,
+    "progressOutlineColor": "#A1A2A1",
+    "icon": "north-america/usa/pittsburgh/SV.svg"
+  },
+  "BL": {
+    "name": "Blue",
+    "color": "#0076BF",
+    "backgroundColor": "#00426C",
+    "textColor": "#FFFFFF",
+    "order": 2,
+    "progressOutlineColor": "#0076BF",
+    "icon": "north-america/usa/pittsburgh/BL.svg"
+  },
+  "pittsburghAPM": {
+    "name": "Pittsburgh Airport Tram",
+    "color": "#D4687C",
+    "backgroundColor": "#8C3247",
+    "progressOutlineColor": "#D4687C",
+    "textColor": "#FFFFFF",
+    "order": 3,
+    "icon": "north-america/usa/pittsburgh/pittsburghAPM.png"
+  },
+  "DQ": {
+    "name": "Duquesne",
+    "color": "#00FFFF",
+    "backgroundColor": "#008B8B",
+    "progressOutlineColor": "#FF0000",
+    "textColor": "#000000",
+    "order": 4,
+    "icon": "north-america/usa/pittsburgh/DQ.png",
+    "badgeFit": "contain"
+  },
+  "MG": {
+    "name": "Monongahela",
+    "color": "#FF0000",
+    "backgroundColor": "#8B0000",
+    "progressOutlineColor": "#00FFFF",
+    "textColor": "#FFFFFF",
+    "order": 5,
+    "icon": "north-america/usa/pittsburgh/MG.png",
+    "badgeFit": "contain"
+  }
+}

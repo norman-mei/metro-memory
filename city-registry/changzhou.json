@@ -1,0 +1,101 @@
+{
+  "city": "changzhou",
+  "continent": "asia",
+  "bbox": [
+    31.6315673,
+    119.8424186,
+    31.9046566,
+    120.0637345
+  ],
+  "localLanguages": [
+    "zh"
+  ],
+  "modes": [
+    "subway",
+    "light_rail",
+    "tram",
+    "rail",
+    "funicular",
+    "monorail",
+    "cable_car",
+    "gondola",
+    "chair_lift"
+  ],
+  "lines": [
+    {
+      "id": "changzhou1",
+      "name": "Line 1",
+      "keywords": [
+        "Line 1",
+        "1 Line",
+        "L1",
+        "1号线",
+        "地铁1号线",
+        "1号線",
+        "1호선",
+        "Route 1",
+        "Tram Route 1",
+        "changzhou1"
+      ],
+      "order": 1,
+      "icon": "asia/china/changzhou/changzhou1.png"
+    },
+    {
+      "id": "changzhou2",
+      "name": "Line 2",
+      "keywords": [
+        "Line 2",
+        "2 Line",
+        "L2",
+        "2号线",
+        "地铁2号线",
+        "2号線",
+        "2호선",
+        "Route 2",
+        "Tram Route 2",
+        "changzhou2"
+      ],
+      "order": 2,
+      "icon": "asia/china/changzhou/changzhou2.png"
+    },
+    {
+      "id": "changzhou5",
+      "name": "Line 5",
+      "keywords": [
+        "Line 5",
+        "5 Line",
+        "L5",
+        "5号线",
+        "地铁5号线",
+        "5号線",
+        "5호선",
+        "Route 5",
+        "Tram Route 5",
+        "changzhou5"
+      ],
+      "order": 5,
+      "icon": "asia/china/changzhou/changzhou5.png"
+    },
+    {
+      "id": "changzhou6",
+      "name": "Line 6",
+      "keywords": [
+        "Line 6",
+        "6 Line",
+        "L6",
+        "6号线",
+        "地铁6号线",
+        "6号線",
+        "6호선",
+        "Route 6",
+        "Tram Route 6",
+        "changzhou6"
+      ],
+      "order": 6,
+      "icon": "asia/china/changzhou/changzhou6.png"
+    }
+  ],
+  "stationAliases": {},
+  "stationLocalNames": {},
+  "manualCoords": {}
+}

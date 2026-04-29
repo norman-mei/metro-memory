@@ -1,0 +1,425 @@
+{
+  "city": "paris",
+  "continent": "europe",
+  "bbox": [
+    48.76881073327119,
+    2.228536981491631,
+    48.945867271208414,
+    2.464280070543357
+  ],
+  "localLanguages": [
+    "fr"
+  ],
+  "modes": [
+    "subway",
+    "light_rail",
+    "tram",
+    "rail",
+    "funicular",
+    "monorail",
+    "cable_car",
+    "gondola",
+    "chair_lift"
+  ],
+  "lines": [
+    {
+      "id": "METRO 1",
+      "name": "METRO 1",
+      "keywords": [
+        "Métro 1",
+        "Line M",
+        "M Line",
+        "Route M",
+        "Line 1",
+        "1 Line",
+        "L1",
+        "1号线",
+        "地铁1号线",
+        "1号線",
+        "1호선",
+        "Route 1",
+        "Tram Route 1",
+        "1",
+        "RATP",
+        "RATP Line",
+        "Paris M Tro1",
+        "METRO 1"
+      ],
+      "order": 1
+    },
+    {
+      "id": "METRO 10",
+      "name": "METRO 10",
+      "keywords": [
+        "Métro 10",
+        "Line M",
+        "M Line",
+        "Route M",
+        "Line 10",
+        "10 Line",
+        "L10",
+        "10号线",
+        "地铁10号线",
+        "10号線",
+        "10호선",
+        "Route 10",
+        "Tram Route 10",
+        "10",
+        "RATP",
+        "RATP Line",
+        "Paris M Tro10",
+        "METRO 10"
+      ],
+      "order": 10
+    },
+    {
+      "id": "METRO 11",
+      "name": "METRO 11",
+      "keywords": [
+        "Métro 11",
+        "Line M",
+        "M Line",
+        "Route M",
+        "Line 11",
+        "11 Line",
+        "L11",
+        "11号线",
+        "地铁11号线",
+        "11号線",
+        "11호선",
+        "Route 11",
+        "Tram Route 11",
+        "11",
+        "RATP",
+        "RATP Line",
+        "Paris M Tro11",
+        "METRO 11"
+      ],
+      "order": 11
+    },
+    {
+      "id": "METRO 12",
+      "name": "METRO 12",
+      "keywords": [
+        "Métro 12",
+        "Line M",
+        "M Line",
+        "Route M",
+        "Line 12",
+        "12 Line",
+        "L12",
+        "12号线",
+        "地铁12号线",
+        "12号線",
+        "12호선",
+        "Route 12",
+        "Tram Route 12",
+        "12",
+        "RATP",
+        "RATP Line",
+        "Paris M Tro12",
+        "METRO 12"
+      ],
+      "order": 12
+    },
+    {
+      "id": "METRO 13",
+      "name": "METRO 13",
+      "keywords": [
+        "Métro 13",
+        "Line M",
+        "M Line",
+        "Route M",
+        "Line 13",
+        "13 Line",
+        "L13",
+        "13号线",
+        "地铁13号线",
+        "13号線",
+        "13호선",
+        "Route 13",
+        "Tram Route 13",
+        "13",
+        "RATP",
+        "RATP Line",
+        "Paris M Tro13",
+        "METRO 13"
+      ],
+      "order": 13
+    },
+    {
+      "id": "METRO 14",
+      "name": "METRO 14",
+      "keywords": [
+        "Métro 14",
+        "Line M",
+        "M Line",
+        "Route M",
+        "Line 14",
+        "14 Line",
+        "L14",
+        "14号线",
+        "地铁14号线",
+        "14号線",
+        "14호선",
+        "Route 14",
+        "Tram Route 14",
+        "14",
+        "RATP",
+        "RATP Line",
+        "Paris M Tro14",
+        "METRO 14"
+      ],
+      "order": 14
+    },
+    {
+      "id": "METRO 2",
+      "name": "METRO 2",
+      "keywords": [
+        "Métro 2",
+        "Line M",
+        "M Line",
+        "Route M",
+        "Line 2",
+        "2 Line",
+        "L2",
+        "2号线",
+        "地铁2号线",
+        "2号線",
+        "2호선",
+        "Route 2",
+        "Tram Route 2",
+        "RATP",
+        "RATP Line",
+        "Paris M Tro2",
+        "METRO 2"
+      ],
+      "order": 2
+    },
+    {
+      "id": "METRO 3",
+      "name": "METRO 3",
+      "keywords": [
+        "Métro 3",
+        "Line M",
+        "M Line",
+        "Route M",
+        "Line 3",
+        "3 Line",
+        "L3",
+        "3号线",
+        "地铁3号线",
+        "3号線",
+        "3호선",
+        "Route 3",
+        "Tram Route 3",
+        "3",
+        "RATP",
+        "RATP Line",
+        "Paris M Tro3",
+        "METRO 3"
+      ],
+      "order": 3
+    },
+    {
+      "id": "METRO 3bis",
+      "name": "METRO 3bis",
+      "keywords": [
+        "Métro 3bis",
+        "Line M",
+        "M Line",
+        "Route M",
+        "3bis",
+        "RATP",
+        "RATP Line",
+        "Paris M Tro3bis",
+        "METRO 3bis"
+      ],
+      "order": 3.5
+    },
+    {
+      "id": "METRO 4",
+      "name": "METRO 4",
+      "keywords": [
+        "Métro 4",
+        "Line M",
+        "M Line",
+        "Route M",
+        "Line 4",
+        "4 Line",
+        "L4",
+        "4号线",
+        "地铁4号线",
+        "4号線",
+        "4호선",
+        "Route 4",
+        "Tram Route 4",
+        "4",
+        "RATP",
+        "RATP Line",
+        "Paris M Tro4",
+        "METRO 4"
+      ],
+      "order": 4
+    },
+    {
+      "id": "METRO 5",
+      "name": "METRO 5",
+      "keywords": [
+        "Métro 5",
+        "Line M",
+        "M Line",
+        "Route M",
+        "Line 5",
+        "5 Line",
+        "L5",
+        "5号线",
+        "地铁5号线",
+        "5号線",
+        "5호선",
+        "Route 5",
+        "Tram Route 5",
+        "5",
+        "RATP",
+        "RATP Line",
+        "Paris M Tro5",
+        "METRO 5"
+      ],
+      "order": 5
+    },
+    {
+      "id": "METRO 6",
+      "name": "METRO 6",
+      "keywords": [
+        "Métro 6",
+        "Line M",
+        "M Line",
+        "Route M",
+        "Line 6",
+        "6 Line",
+        "L6",
+        "6号线",
+        "地铁6号线",
+        "6号線",
+        "6호선",
+        "Route 6",
+        "Tram Route 6",
+        "6",
+        "RATP",
+        "RATP Line",
+        "Paris M Tro6",
+        "METRO 6"
+      ],
+      "order": 6
+    },
+    {
+      "id": "METRO 7",
+      "name": "METRO 7",
+      "keywords": [
+        "Métro 7",
+        "Line M",
+        "M Line",
+        "Route M",
+        "Line 7",
+        "7 Line",
+        "L7",
+        "7号线",
+        "地铁7号线",
+        "7号線",
+        "7호선",
+        "Route 7",
+        "Tram Route 7",
+        "7",
+        "RATP",
+        "RATP Line",
+        "Paris M Tro7",
+        "METRO 7"
+      ],
+      "order": 7
+    },
+    {
+      "id": "METRO 7bis",
+      "name": "METRO 7bis",
+      "keywords": [
+        "Métro 7bis",
+        "Line M",
+        "M Line",
+        "Route M",
+        "7bis",
+        "RATP",
+        "RATP Line",
+        "Paris M Tro7bis",
+        "METRO 7bis"
+      ],
+      "order": 7.5
+    },
+    {
+      "id": "METRO 8",
+      "name": "METRO 8",
+      "keywords": [
+        "Métro 8",
+        "Line M",
+        "M Line",
+        "Route M",
+        "Line 8",
+        "8 Line",
+        "L8",
+        "8号线",
+        "地铁8号线",
+        "8号線",
+        "8호선",
+        "Route 8",
+        "Tram Route 8",
+        "8",
+        "RATP",
+        "RATP Line",
+        "Paris M Tro8",
+        "METRO 8"
+      ],
+      "order": 8
+    },
+    {
+      "id": "METRO 9",
+      "name": "METRO 9",
+      "keywords": [
+        "Métro 9",
+        "Line M",
+        "M Line",
+        "Route M",
+        "Line 9",
+        "9 Line",
+        "L9",
+        "9号线",
+        "地铁9号线",
+        "9号線",
+        "9호선",
+        "Route 9",
+        "Tram Route 9",
+        "9",
+        "RATP",
+        "RATP Line",
+        "Paris M Tro9",
+        "METRO 9"
+      ],
+      "order": 9
+    }
+  ],
+  "sources": {
+    "gtfsFeeds": [
+      "https://prim.iledefrance-mobilites.fr/fr/jeux-de-donnees/offre-horaires-tc-gtfs-idfm"
+    ],
+    "officialPages": [
+      "https://www.ratp.fr/en",
+      "https://www.ratp.fr/en/plans"
+    ],
+    "pressPages": [
+      "https://www.ratp.fr/en/groupe-ratp/newsroom"
+    ],
+    "mapPdfs": [
+      "https://www.ratp.fr/en/plans?fm=pdf&nompdf=zones"
+    ]
+  },
+  "stationAliases": {},
+  "stationLocalNames": {},
+  "manualCoords": {}
+}

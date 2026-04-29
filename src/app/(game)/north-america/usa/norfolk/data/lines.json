@@ -1,0 +1,10 @@
+{
+  "TT": {
+    "name": "The Tide",
+    "color": "#38B2E6",
+    "backgroundColor": "#38B2E6",
+    "textColor": "#FFFFFF",
+    "order": 0,
+    "icon": "north-america/usa/norfolk/TT.png"
+  }
+}

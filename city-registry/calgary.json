@@ -1,0 +1,52 @@
+{
+  "city": "calgary",
+  "continent": "north america",
+  "bbox": [
+    50.8990979852847,
+    -114.2354255989101,
+    51.13441288644823,
+    -113.9481956801194
+  ],
+  "localLanguages": [
+    "en",
+    "fr"
+  ],
+  "modes": [
+    "subway",
+    "light_rail",
+    "tram",
+    "rail",
+    "funicular",
+    "monorail",
+    "cable_car",
+    "gondola",
+    "chair_lift"
+  ],
+  "lines": [
+    {
+      "id": "CalgaryBlue",
+      "name": "Blue Line",
+      "keywords": [
+        "Blue Line",
+        "Blue",
+        "Calgary Blue"
+      ],
+      "order": 0,
+      "icon": "north-america/canada/calgary/CalgaryBlue.svg"
+    },
+    {
+      "id": "CalgaryRed",
+      "name": "Red Line",
+      "keywords": [
+        "Red Line",
+        "Red",
+        "Calgary Red"
+      ],
+      "order": 1,
+      "icon": "north-america/canada/calgary/CalgaryRed.svg"
+    }
+  ],
+  "stationAliases": {},
+  "stationLocalNames": {},
+  "manualCoords": {}
+}

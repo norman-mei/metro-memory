@@ -1,0 +1,5546 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.530131, 48.182605]
+      },
+      "properties": {
+        "id": 1,
+        "name": "Olympia-Einkaufszentrum",
+        "line": "MunichUBahn_UbahnU1",
+        "order": 0
+      },
+      "id": 1
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.541316, 48.213777]
+      },
+      "properties": {
+        "id": 16,
+        "name": "Feldmoching",
+        "line": "MunichUBahn_UbahnU2",
+        "order": 0
+      },
+      "id": 16
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.508146, 48.180935]
+      },
+      "properties": {
+        "id": 43,
+        "name": "Moosach",
+        "line": "MunichUBahn_UbahnU3",
+        "order": 0
+      },
+      "id": 43
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.521477, 48.134685]
+      },
+      "properties": {
+        "id": 68,
+        "name": "Westendstraße",
+        "line": "MunichUBahn_UbahnU4",
+        "order": 0
+      },
+      "id": 68
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.501974, 48.135408]
+      },
+      "properties": {
+        "id": 81,
+        "name": "Laimer Platz",
+        "line": "MunichUBahn_UbahnU5",
+        "order": 0
+      },
+      "id": 81
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.473786, 48.109026]
+      },
+      "properties": {
+        "id": 99,
+        "name": "Klinikum Großhadern",
+        "line": "MunichUBahn_UbahnU6",
+        "order": 0
+      },
+      "id": 99
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.530131, 48.182605]
+      },
+      "properties": {
+        "id": 125,
+        "name": "Olympia-Einkaufszentrum",
+        "line": "MunichUBahn_UbahnU7",
+        "order": 0
+      },
+      "id": 125
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.555979, 48.1793]
+      },
+      "properties": {
+        "id": 144,
+        "name": "Olympiazentrum",
+        "line": "MunichUBahn_UbahnU8",
+        "order": 0
+      },
+      "id": 144
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.74447, 48.395053]
+      },
+      "properties": {
+        "id": 163,
+        "name": "Freising",
+        "line": "MunichSBahn_DbRegioAgBayernS1",
+        "order": 0
+      },
+      "id": 163
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.785975, 48.353698]
+      },
+      "properties": {
+        "id": 184,
+        "name": "Flughafen München",
+        "line": "MunichSBahn_DbRegioAgBayernS1",
+        "order": 0
+      },
+      "id": 184
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.469775, 48.413511]
+      },
+      "properties": {
+        "id": 205,
+        "name": "Petershausen",
+        "line": "MunichSBahn_DbRegioAgBayernS2",
+        "order": 0
+      },
+      "id": 205
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.255182, 48.384944]
+      },
+      "properties": {
+        "id": 237,
+        "name": "Altomünster",
+        "line": "MunichSBahn_DbRegioAgBayernS2",
+        "order": 0
+      },
+      "id": 237
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.461715, 48.149622]
+      },
+      "properties": {
+        "id": 274,
+        "name": "Pasing",
+        "line": "MunichSBahn_DbRegioAgBayernS20",
+        "order": 0
+      },
+      "id": 274
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.176105, 48.216805]
+      },
+      "properties": {
+        "id": 282,
+        "name": "Mammendorf",
+        "line": "MunichSBahn_DbRegioAgBayernS3",
+        "order": 0
+      },
+      "id": 282
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.037454, 48.105986]
+      },
+      "properties": {
+        "id": 313,
+        "name": "Geltendorf",
+        "line": "MunichSBahn_DbRegioAgBayernS4",
+        "order": 0
+      },
+      "id": 313
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.272899, 47.907146]
+      },
+      "properties": {
+        "id": 337,
+        "name": "Tutzing",
+        "line": "MunichSBahn_DbRegioAgBayernS6",
+        "order": 0
+      },
+      "id": 337
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.759394, 47.917149]
+      },
+      "properties": {
+        "id": 372,
+        "name": "Kreuzstraße",
+        "line": "MunichSBahn_DbRegioAgBayernS7",
+        "order": 0
+      },
+      "id": 372
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.785956, 48.353812]
+      },
+      "properties": {
+        "id": 408,
+        "name": "Flughafen München",
+        "line": "MunichSBahn_DbRegioAgBayernS8",
+        "order": 0
+      },
+      "id": 408
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.427159, 47.914492]
+      },
+      "properties": {
+        "id": 407,
+        "name": "Wolfratshausen",
+        "line": "MunichSBahn_DbRegioAgBayernS7",
+        "order": 1408
+      },
+      "id": 407
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.1707, 47.998988]
+      },
+      "properties": {
+        "id": 439,
+        "name": "Herrsching",
+        "line": "MunichSBahn_DbRegioAgBayernS8",
+        "order": 1310
+      },
+      "id": 439
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.436707, 47.953228]
+      },
+      "properties": {
+        "id": 406,
+        "name": "Icking",
+        "line": "MunichSBahn_DbRegioAgBayernS7",
+        "order": 1259
+      },
+      "id": 406
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.198625, 48.041421]
+      },
+      "properties": {
+        "id": 438,
+        "name": "Seefeld-Hechendorf",
+        "line": "MunichSBahn_DbRegioAgBayernS8",
+        "order": 1241
+      },
+      "id": 438
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.969311, 48.074832]
+      },
+      "properties": {
+        "id": 371,
+        "name": "Ebersberg",
+        "line": "MunichSBahn_DbRegioAgBayernS6",
+        "order": 1206
+      },
+      "id": 371
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.453735, 47.978689]
+      },
+      "properties": {
+        "id": 405,
+        "name": "Ebenhausen-Schäftlarn",
+        "line": "MunichSBahn_DbRegioAgBayernS7",
+        "order": 1198
+      },
+      "id": 405
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.206831, 48.061173]
+      },
+      "properties": {
+        "id": 437,
+        "name": "Steinebach",
+        "line": "MunichSBahn_DbRegioAgBayernS8",
+        "order": 1162
+      },
+      "id": 437
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.45749, 47.991309]
+      },
+      "properties": {
+        "id": 404,
+        "name": "Hohenschäftlarn",
+        "line": "MunichSBahn_DbRegioAgBayernS7",
+        "order": 1143
+      },
+      "id": 404
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.91205, 48.303375]
+      },
+      "properties": {
+        "id": 236,
+        "name": "Erding",
+        "line": "MunichSBahn_DbRegioAgBayernS2",
+        "order": 1115
+      },
+      "id": 236
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.901649, 48.293561]
+      },
+      "properties": {
+        "id": 235,
+        "name": "Altenerding",
+        "line": "MunichSBahn_DbRegioAgBayernS2",
+        "order": 1089
+      },
+      "id": 235
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.962723, 48.04723]
+      },
+      "properties": {
+        "id": 370,
+        "name": "Grafing Stadt",
+        "line": "MunichSBahn_DbRegioAgBayernS6",
+        "order": 1089
+      },
+      "id": 370
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.251747, 48.077426]
+      },
+      "properties": {
+        "id": 436,
+        "name": "Weßling",
+        "line": "MunichSBahn_DbRegioAgBayernS8",
+        "order": 1064
+      },
+      "id": 436
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.894319, 48.274381]
+      },
+      "properties": {
+        "id": 234,
+        "name": "Aufhausen",
+        "line": "MunichSBahn_DbRegioAgBayernS2",
+        "order": 1060
+      },
+      "id": 234
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.480166, 48.018791]
+      },
+      "properties": {
+        "id": 403,
+        "name": "Baierbrunn",
+        "line": "MunichSBahn_DbRegioAgBayernS7",
+        "order": 1029
+      },
+      "id": 403
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.288698, 48.098949]
+      },
+      "properties": {
+        "id": 435,
+        "name": "Neugilching",
+        "line": "MunichSBahn_DbRegioAgBayernS8",
+        "order": 1022
+      },
+      "id": 435
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.88294, 48.243745]
+      },
+      "properties": {
+        "id": 233,
+        "name": "St. Koloman",
+        "line": "MunichSBahn_DbRegioAgBayernS2",
+        "order": 1016
+      },
+      "id": 233
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.940413, 48.043223]
+      },
+      "properties": {
+        "id": 369,
+        "name": "Grafing",
+        "line": "MunichSBahn_DbRegioAgBayernS6",
+        "order": 1012
+      },
+      "id": 369
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.299563, 48.105704]
+      },
+      "properties": {
+        "id": 434,
+        "name": "Gilching-Argelsried",
+        "line": "MunichSBahn_DbRegioAgBayernS8",
+        "order": 1007
+      },
+      "id": 434
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.497479, 48.031243]
+      },
+      "properties": {
+        "id": 402,
+        "name": "Buchenhain",
+        "line": "MunichSBahn_DbRegioAgBayernS7",
+        "order": 972
+      },
+      "id": 402
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.879316, 48.218191]
+      },
+      "properties": {
+        "id": 232,
+        "name": "Ottenhofen",
+        "line": "MunichSBahn_DbRegioAgBayernS2",
+        "order": 956
+      },
+      "id": 232
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.509786, 48.04344]
+      },
+      "properties": {
+        "id": 401,
+        "name": "Höllriegelskreuth",
+        "line": "MunichSBahn_DbRegioAgBayernS7",
+        "order": 951
+      },
+      "id": 401
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.325285, 48.10899]
+      },
+      "properties": {
+        "id": 433,
+        "name": "Geisenbrunn",
+        "line": "MunichSBahn_DbRegioAgBayernS8",
+        "order": 951
+      },
+      "id": 433
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.521876, 48.05897]
+      },
+      "properties": {
+        "id": 400,
+        "name": "Pullach",
+        "line": "MunichSBahn_DbRegioAgBayernS7",
+        "order": 933
+      },
+      "id": 400
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.887261, 48.070968]
+      },
+      "properties": {
+        "id": 368,
+        "name": "Kirchseeon",
+        "line": "MunichSBahn_DbRegioAgBayernS6",
+        "order": 930
+      },
+      "id": 368
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.53091, 48.071076]
+      },
+      "properties": {
+        "id": 399,
+        "name": "Großhesselohe,  Isartalbahnhof",
+        "line": "MunichSBahn_DbRegioAgBayernS7",
+        "order": 914
+      },
+      "id": 399
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.864254, 48.082301]
+      },
+      "properties": {
+        "id": 367,
+        "name": "Eglharting",
+        "line": "MunichSBahn_DbRegioAgBayernS6",
+        "order": 907
+      },
+      "id": 367
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.364004, 48.128923]
+      },
+      "properties": {
+        "id": 432,
+        "name": "Germering-Unterpfaffenhofen",
+        "line": "MunichSBahn_DbRegioAgBayernS8",
+        "order": 889
+      },
+      "id": 432
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.832432, 48.089563]
+      },
+      "properties": {
+        "id": 366,
+        "name": "Zorneding",
+        "line": "MunichSBahn_DbRegioAgBayernS6",
+        "order": 882
+      },
+      "id": 366
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.862024, 48.193621]
+      },
+      "properties": {
+        "id": 231,
+        "name": "Markt Schwaben",
+        "line": "MunichSBahn_DbRegioAgBayernS2",
+        "order": 872
+      },
+      "id": 231
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.387844, 48.133525]
+      },
+      "properties": {
+        "id": 431,
+        "name": "Harthaus",
+        "line": "MunichSBahn_DbRegioAgBayernS8",
+        "order": 866
+      },
+      "id": 431
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.786762, 48.09922]
+      },
+      "properties": {
+        "id": 365,
+        "name": "Baldham",
+        "line": "MunichSBahn_DbRegioAgBayernS6",
+        "order": 862
+      },
+      "id": 365
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.52697, 48.079935]
+      },
+      "properties": {
+        "id": 398,
+        "name": "Solln",
+        "line": "MunichSBahn_DbRegioAgBayernS7",
+        "order": 860
+      },
+      "id": 398
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.764365, 48.104093]
+      },
+      "properties": {
+        "id": 364,
+        "name": "Vaterstetten",
+        "line": "MunichSBahn_DbRegioAgBayernS6",
+        "order": 854
+      },
+      "id": 364
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.532837, 48.094496]
+      },
+      "properties": {
+        "id": 397,
+        "name": "Siemenswerke",
+        "line": "MunichSBahn_DbRegioAgBayernS7",
+        "order": 844
+      },
+      "id": 397
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.410103, 48.140027]
+      },
+      "properties": {
+        "id": 430,
+        "name": "Freiham",
+        "line": "MunichSBahn_DbRegioAgBayernS8",
+        "order": 840
+      },
+      "id": 430
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.731133, 48.111379]
+      },
+      "properties": {
+        "id": 363,
+        "name": "Haar",
+        "line": "MunichSBahn_DbRegioAgBayernS6",
+        "order": 837
+      },
+      "id": 363
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.42219, 48.141727]
+      },
+      "properties": {
+        "id": 429,
+        "name": "Neuaubing",
+        "line": "MunichSBahn_DbRegioAgBayernS8",
+        "order": 836
+      },
+      "id": 429
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.6986, 48.118361]
+      },
+      "properties": {
+        "id": 362,
+        "name": "Gronsdorf",
+        "line": "MunichSBahn_DbRegioAgBayernS6",
+        "order": 822
+      },
+      "id": 362
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.80946, 48.171291]
+      },
+      "properties": {
+        "id": 230,
+        "name": "Poing",
+        "line": "MunichSBahn_DbRegioAgBayernS2",
+        "order": 817
+      },
+      "id": 230
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.536451, 48.107834]
+      },
+      "properties": {
+        "id": 396,
+        "name": "Mittersendling",
+        "line": "MunichSBahn_DbRegioAgBayernS7",
+        "order": 815
+      },
+      "id": 396
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.697293, 47.88446]
+      },
+      "properties": {
+        "id": 312,
+        "name": "Holzkirchen",
+        "line": "MunichSBahn_DbRegioAgBayernS3",
+        "order": 808
+      },
+      "id": 312
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.663337, 48.12599]
+      },
+      "properties": {
+        "id": 361,
+        "name": "Trudering",
+        "line": "MunichSBahn_DbRegioAgBayernS6",
+        "order": 808
+      },
+      "id": 361
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.782555, 48.16453]
+      },
+      "properties": {
+        "id": 229,
+        "name": "Grub",
+        "line": "MunichSBahn_DbRegioAgBayernS2",
+        "order": 802
+      },
+      "id": 229
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.536464, 48.117733]
+      },
+      "properties": {
+        "id": 395,
+        "name": "Harras",
+        "line": "MunichSBahn_DbRegioAgBayernS7",
+        "order": 796
+      },
+      "id": 395
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.759644, 48.158782]
+      },
+      "properties": {
+        "id": 228,
+        "name": "Heimstetten",
+        "line": "MunichSBahn_DbRegioAgBayernS2",
+        "order": 792
+      },
+      "id": 228
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.443865, 48.149067]
+      },
+      "properties": {
+        "id": 428,
+        "name": "Westkreuz",
+        "line": "MunichSBahn_DbRegioAgBayernS8",
+        "order": 774
+      },
+      "id": 428
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.732084, 48.15188]
+      },
+      "properties": {
+        "id": 227,
+        "name": "Feldkirchen",
+        "line": "MunichSBahn_DbRegioAgBayernS2",
+        "order": 773
+      },
+      "id": 227
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.68215, 47.911392]
+      },
+      "properties": {
+        "id": 311,
+        "name": "Otterfing",
+        "line": "MunichSBahn_DbRegioAgBayernS3",
+        "order": 772
+      },
+      "id": 311
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.633284, 48.133948]
+      },
+      "properties": {
+        "id": 360,
+        "name": "Berg am Laim",
+        "line": "MunichSBahn_DbRegioAgBayernS6",
+        "order": 771
+      },
+      "id": 360
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.53166, 48.133105]
+      },
+      "properties": {
+        "id": 394,
+        "name": "Heimeranplatz",
+        "line": "MunichSBahn_DbRegioAgBayernS7",
+        "order": 756
+      },
+      "id": 394
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.616033, 48.134161]
+      },
+      "properties": {
+        "id": 359,
+        "name": "Leuchtenbergring",
+        "line": "MunichSBahn_DbRegioAgBayernS6",
+        "order": 748
+      },
+      "id": 359
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.678037, 48.144026]
+      },
+      "properties": {
+        "id": 226,
+        "name": "Riem",
+        "line": "MunichSBahn_DbRegioAgBayernS2",
+        "order": 745
+      },
+      "id": 226
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.461924, 48.14993]
+      },
+      "properties": {
+        "id": 427,
+        "name": "Pasing",
+        "line": "MunichSBahn_DbRegioAgBayernS8",
+        "order": 730
+      },
+      "id": 427
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.65482, 47.974085]
+      },
+      "properties": {
+        "id": 310,
+        "name": "Sauerlach",
+        "line": "MunichSBahn_DbRegioAgBayernS3",
+        "order": 724
+      },
+      "id": 310
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.605049, 48.127387]
+      },
+      "properties": {
+        "id": 358,
+        "name": "Ostbahnhof",
+        "line": "MunichSBahn_DbRegioAgBayernS6",
+        "order": 719
+      },
+      "id": 358
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.536542, 48.142533]
+      },
+      "properties": {
+        "id": 393,
+        "name": "Donnersbergerbrücke",
+        "line": "MunichSBahn_DbRegioAgBayernS7",
+        "order": 708
+      },
+      "id": 393
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.593012, 48.129145]
+      },
+      "properties": {
+        "id": 357,
+        "name": "Rosenheimer Platz",
+        "line": "MunichSBahn_DbRegioAgBayernS6",
+        "order": 695
+      },
+      "id": 357
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.663337, 48.12599]
+      },
+      "properties": {
+        "id": 336,
+        "name": "Trudering",
+        "line": "MunichSBahn_DbRegioAgBayernS4",
+        "order": 691
+      },
+      "id": 336
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.548574, 48.141906]
+      },
+      "properties": {
+        "id": 392,
+        "name": "Hackerbrücke",
+        "line": "MunichSBahn_DbRegioAgBayernS7",
+        "order": 683
+      },
+      "id": 392
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.633305, 48.134046]
+      },
+      "properties": {
+        "id": 225,
+        "name": "Berg am Laim",
+        "line": "MunichSBahn_DbRegioAgBayernS2",
+        "order": 680
+      },
+      "id": 225
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.583139, 48.134139]
+      },
+      "properties": {
+        "id": 356,
+        "name": "Isartor",
+        "line": "MunichSBahn_DbRegioAgBayernS6",
+        "order": 680
+      },
+      "id": 356
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.575424, 48.13713]
+      },
+      "properties": {
+        "id": 355,
+        "name": "Marienplatz",
+        "line": "MunichSBahn_DbRegioAgBayernS6",
+        "order": 666
+      },
+      "id": 355
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.503681, 48.14439]
+      },
+      "properties": {
+        "id": 426,
+        "name": "Laim",
+        "line": "MunichSBahn_DbRegioAgBayernS8",
+        "order": 665
+      },
+      "id": 426
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.615921, 48.134388]
+      },
+      "properties": {
+        "id": 224,
+        "name": "Leuchtenbergring",
+        "line": "MunichSBahn_DbRegioAgBayernS2",
+        "order": 660
+      },
+      "id": 224
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.583725, 48.019566]
+      },
+      "properties": {
+        "id": 309,
+        "name": "Deisenhofen",
+        "line": "MunichSBahn_DbRegioAgBayernS3",
+        "order": 654
+      },
+      "id": 309
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.633284, 48.133948]
+      },
+      "properties": {
+        "id": 335,
+        "name": "Berg am Laim",
+        "line": "MunichSBahn_DbRegioAgBayernS4",
+        "order": 654
+      },
+      "id": 335
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.565596, 48.139432]
+      },
+      "properties": {
+        "id": 354,
+        "name": "Karlsplatz (Stachus)",
+        "alternate_names": ["Karlsplatz", "Stachus"],
+
+        "line": "MunichSBahn_DbRegioAgBayernS6",
+        "order": 649
+      },
+      "id": 354
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.560503, 48.141113]
+      },
+      "properties": {
+        "id": 391,
+        "name": "München Hbf",
+        "alternate_names": ["Hauptbahnhof"],
+        "line": "MunichSBahn_DbRegioAgBayernS7",
+        "order": 644
+      },
+      "id": 391
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.560247, 48.141171]
+      },
+      "properties": {
+        "id": 353,
+        "name": "München Hbf",
+        "alternate_names": ["Hauptbahnhof"],
+        "line": "MunichSBahn_DbRegioAgBayernS6",
+        "order": 641
+      },
+      "id": 353
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.565671, 48.139393]
+      },
+      "properties": {
+        "id": 390,
+        "name": "Karlsplatz (Stachus)",
+        "alternate_names": ["Karlsplatz", "Stachus"],
+
+        "line": "MunichSBahn_DbRegioAgBayernS7",
+        "order": 636
+      },
+      "id": 390
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.604822, 48.12754]
+      },
+      "properties": {
+        "id": 223,
+        "name": "Ostbahnhof",
+        "line": "MunichSBahn_DbRegioAgBayernS2",
+        "order": 633
+      },
+      "id": 223
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.616033, 48.134161]
+      },
+      "properties": {
+        "id": 334,
+        "name": "Leuchtenbergring",
+        "line": "MunichSBahn_DbRegioAgBayernS4",
+        "order": 631
+      },
+      "id": 334
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.519252, 48.143624]
+      },
+      "properties": {
+        "id": 425,
+        "name": "Hirschgarten",
+        "line": "MunichSBahn_DbRegioAgBayernS8",
+        "order": 631
+      },
+      "id": 425
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.575553, 48.137103]
+      },
+      "properties": {
+        "id": 389,
+        "name": "Marienplatz",
+        "line": "MunichSBahn_DbRegioAgBayernS7",
+        "order": 620
+      },
+      "id": 389
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.593322, 48.0355]
+      },
+      "properties": {
+        "id": 308,
+        "name": "Furth",
+        "line": "MunichSBahn_DbRegioAgBayernS3",
+        "order": 612
+      },
+      "id": 308
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.536538, 48.142813]
+      },
+      "properties": {
+        "id": 424,
+        "name": "Donnersbergerbrücke",
+        "line": "MunichSBahn_DbRegioAgBayernS8",
+        "order": 608
+      },
+      "id": 424
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.583141, 48.134138]
+      },
+      "properties": {
+        "id": 388,
+        "name": "Isartor",
+        "line": "MunichSBahn_DbRegioAgBayernS7",
+        "order": 607
+      },
+      "id": 388
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.593143, 48.129238]
+      },
+      "properties": {
+        "id": 222,
+        "name": "Rosenheimer Platz",
+        "line": "MunichSBahn_DbRegioAgBayernS2",
+        "order": 605
+      },
+      "id": 222
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.605049, 48.127387]
+      },
+      "properties": {
+        "id": 333,
+        "name": "Ostbahnhof",
+        "line": "MunichSBahn_DbRegioAgBayernS4",
+        "order": 602
+      },
+      "id": 333
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.54839, 48.14192]
+      },
+      "properties": {
+        "id": 352,
+        "name": "Hackerbrücke",
+        "line": "MunichSBahn_DbRegioAgBayernS6",
+        "order": 602
+      },
+      "id": 352
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.439736, 48.266674]
+      },
+      "properties": {
+        "id": 245,
+        "name": "Dachau Stadt",
+        "line": "MunichSBahn_DbRegioAgBayernS2",
+        "order": 594
+      },
+      "id": 245
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.593014, 48.129144]
+      },
+      "properties": {
+        "id": 387,
+        "name": "Rosenheimer Platz",
+        "line": "MunichSBahn_DbRegioAgBayernS7",
+        "order": 592
+      },
+      "id": 387
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.583244, 48.134213]
+      },
+      "properties": {
+        "id": 221,
+        "name": "Isartor",
+        "line": "MunichSBahn_DbRegioAgBayernS2",
+        "order": 589
+      },
+      "id": 221
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.609356, 48.05153]
+      },
+      "properties": {
+        "id": 307,
+        "name": "Taufkirchen",
+        "line": "MunichSBahn_DbRegioAgBayernS3",
+        "order": 587
+      },
+      "id": 307
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.548594, 48.142027]
+      },
+      "properties": {
+        "id": 423,
+        "name": "Hackerbrücke",
+        "line": "MunichSBahn_DbRegioAgBayernS8",
+        "order": 586
+      },
+      "id": 423
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.615385, 48.134117]
+      },
+      "properties": {
+        "id": 183,
+        "name": "Leuchtenbergring",
+        "line": "MunichSBahn_DbRegioAgBayernS1",
+        "order": 582
+      },
+      "id": 183
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.593012, 48.129145]
+      },
+      "properties": {
+        "id": 332,
+        "name": "Rosenheimer Platz",
+        "line": "MunichSBahn_DbRegioAgBayernS4",
+        "order": 578
+      },
+      "id": 332
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.536484, 48.14263]
+      },
+      "properties": {
+        "id": 351,
+        "name": "Donnersbergerbrücke",
+        "line": "MunichSBahn_DbRegioAgBayernS6",
+        "order": 575
+      },
+      "id": 351
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.575433, 48.137147]
+      },
+      "properties": {
+        "id": 220,
+        "name": "Marienplatz",
+        "line": "MunichSBahn_DbRegioAgBayernS2",
+        "order": 573
+      },
+      "id": 220
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.604924, 48.12736]
+      },
+      "properties": {
+        "id": 386,
+        "name": "Ostbahnhof",
+        "line": "MunichSBahn_DbRegioAgBayernS7",
+        "order": 570
+      },
+      "id": 386
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.612391, 48.064961]
+      },
+      "properties": {
+        "id": 306,
+        "name": "Unterhaching",
+        "line": "MunichSBahn_DbRegioAgBayernS3",
+        "order": 568
+      },
+      "id": 306
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.583139, 48.134139]
+      },
+      "properties": {
+        "id": 331,
+        "name": "Isartor",
+        "line": "MunichSBahn_DbRegioAgBayernS4",
+        "order": 563
+      },
+      "id": 331
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.609458, 48.0797]
+      },
+      "properties": {
+        "id": 305,
+        "name": "Fasanenpark",
+        "line": "MunichSBahn_DbRegioAgBayernS3",
+        "order": 555
+      },
+      "id": 305
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.519241, 48.1435]
+      },
+      "properties": {
+        "id": 350,
+        "name": "Hirschgarten",
+        "line": "MunichSBahn_DbRegioAgBayernS6",
+        "order": 555
+      },
+      "id": 350
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.605006, 48.127416]
+      },
+      "properties": {
+        "id": 182,
+        "name": "Ostbahnhof",
+        "line": "MunichSBahn_DbRegioAgBayernS1",
+        "order": 554
+      },
+      "id": 182
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.565659, 48.139585]
+      },
+      "properties": {
+        "id": 219,
+        "name": "Karlsplatz (Stachus)",
+        "alternate_names": ["Karlsplatz", "Stachus"],
+
+        "line": "MunichSBahn_DbRegioAgBayernS2",
+        "order": 552
+      },
+      "id": 219
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.606012, 48.092747]
+      },
+      "properties": {
+        "id": 304,
+        "name": "Fasangarten",
+        "line": "MunichSBahn_DbRegioAgBayernS3",
+        "order": 549
+      },
+      "id": 304
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.575424, 48.13713]
+      },
+      "properties": {
+        "id": 330,
+        "name": "Marienplatz",
+        "line": "MunichSBahn_DbRegioAgBayernS4",
+        "order": 549
+      },
+      "id": 330
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.560538, 48.141199]
+      },
+      "properties": {
+        "id": 422,
+        "name": "München Hbf",
+        "alternate_names": ["Hauptbahnhof"],
+        "line": "MunichSBahn_DbRegioAgBayernS8",
+        "order": 548
+      },
+      "id": 422
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.560244, 48.141264]
+      },
+      "properties": {
+        "id": 218,
+        "name": "München Hbf",
+        "alternate_names": ["Hauptbahnhof"],
+        "line": "MunichSBahn_DbRegioAgBayernS2",
+        "order": 541
+      },
+      "id": 218
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.595851, 48.118536]
+      },
+      "properties": {
+        "id": 385,
+        "name": "St.-Martin-Straße",
+        "line": "MunichSBahn_DbRegioAgBayernS7",
+        "order": 541
+      },
+      "id": 385
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.565786, 48.139511]
+      },
+      "properties": {
+        "id": 421,
+        "name": "Karlsplatz (Stachus)",
+        "alternate_names": ["Karlsplatz", "Stachus"],
+
+        "line": "MunichSBahn_DbRegioAgBayernS8",
+        "order": 537
+      },
+      "id": 421
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.565596, 48.139432]
+      },
+      "properties": {
+        "id": 329,
+        "name": "Karlsplatz (Stachus)",
+        "alternate_names": ["Karlsplatz", "Stachus"],
+
+        "line": "MunichSBahn_DbRegioAgBayernS4",
+        "order": 532
+      },
+      "id": 329
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.593012, 48.129145]
+      },
+      "properties": {
+        "id": 181,
+        "name": "Rosenheimer Platz",
+        "line": "MunichSBahn_DbRegioAgBayernS1",
+        "order": 530
+      },
+      "id": 181
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.503645, 48.14427]
+      },
+      "properties": {
+        "id": 349,
+        "name": "Laim",
+        "line": "MunichSBahn_DbRegioAgBayernS6",
+        "order": 529
+      },
+      "id": 349
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.560247, 48.141171]
+      },
+      "properties": {
+        "id": 328,
+        "name": "München Hbf",
+        "alternate_names": ["Hauptbahnhof"],
+        "line": "MunichSBahn_DbRegioAgBayernS4",
+        "order": 524
+      },
+      "id": 328
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.596425, 48.110819]
+      },
+      "properties": {
+        "id": 384,
+        "name": "Giesing",
+        "line": "MunichSBahn_DbRegioAgBayernS7",
+        "order": 518
+      },
+      "id": 384
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.575571, 48.137118]
+      },
+      "properties": {
+        "id": 420,
+        "name": "Marienplatz",
+        "line": "MunichSBahn_DbRegioAgBayernS8",
+        "order": 517
+      },
+      "id": 420
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.583139, 48.134139]
+      },
+      "properties": {
+        "id": 180,
+        "name": "Isartor",
+        "line": "MunichSBahn_DbRegioAgBayernS1",
+        "order": 515
+      },
+      "id": 180
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.596266, 48.110817]
+      },
+      "properties": {
+        "id": 303,
+        "name": "Giesing",
+        "line": "MunichSBahn_DbRegioAgBayernS3",
+        "order": 506
+      },
+      "id": 303
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.548533, 48.142032]
+      },
+      "properties": {
+        "id": 217,
+        "name": "Hackerbrücke",
+        "line": "MunichSBahn_DbRegioAgBayernS2",
+        "order": 504
+      },
+      "id": 217
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.583247, 48.134211]
+      },
+      "properties": {
+        "id": 419,
+        "name": "Isartor",
+        "line": "MunichSBahn_DbRegioAgBayernS8",
+        "order": 503
+      },
+      "id": 419
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.575424, 48.13713]
+      },
+      "properties": {
+        "id": 179,
+        "name": "Marienplatz",
+        "line": "MunichSBahn_DbRegioAgBayernS1",
+        "order": 501
+      },
+      "id": 179
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.593148, 48.129235]
+      },
+      "properties": {
+        "id": 418,
+        "name": "Rosenheimer Platz",
+        "line": "MunichSBahn_DbRegioAgBayernS8",
+        "order": 487
+      },
+      "id": 418
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.378708, 48.280147]
+      },
+      "properties": {
+        "id": 244,
+        "name": "Bachern",
+        "line": "MunichSBahn_DbRegioAgBayernS2",
+        "order": 486
+      },
+      "id": 244
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.54839, 48.14192]
+      },
+      "properties": {
+        "id": 327,
+        "name": "Hackerbrücke",
+        "line": "MunichSBahn_DbRegioAgBayernS4",
+        "order": 485
+      },
+      "id": 327
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.565596, 48.139432]
+      },
+      "properties": {
+        "id": 178,
+        "name": "Karlsplatz (Stachus)",
+        "alternate_names": ["Karlsplatz", "Stachus"],
+        "line": "MunichSBahn_DbRegioAgBayernS1",
+        "order": 484
+      },
+      "id": 178
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.595695, 48.118552]
+      },
+      "properties": {
+        "id": 302,
+        "name": "St.-Martin-Straße",
+        "line": "MunichSBahn_DbRegioAgBayernS3",
+        "order": 483
+      },
+      "id": 302
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.461899, 48.149892]
+      },
+      "properties": {
+        "id": 348,
+        "name": "Pasing",
+        "line": "MunichSBahn_DbRegioAgBayernS6",
+        "order": 483
+      },
+      "id": 348
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.536518, 48.142813]
+      },
+      "properties": {
+        "id": 216,
+        "name": "Donnersbergerbrücke",
+        "line": "MunichSBahn_DbRegioAgBayernS2",
+        "order": 482
+      },
+      "id": 216
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.560247, 48.141171]
+      },
+      "properties": {
+        "id": 177,
+        "name": "München Hbf",
+        "alternate_names": ["Hauptbahnhof"],
+        "line": "MunichSBahn_DbRegioAgBayernS1",
+        "order": 476
+      },
+      "id": 177
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.519135, 48.143628]
+      },
+      "properties": {
+        "id": 215,
+        "name": "Hirschgarten",
+        "line": "MunichSBahn_DbRegioAgBayernS2",
+        "order": 458
+      },
+      "id": 215
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.536484, 48.14263]
+      },
+      "properties": {
+        "id": 326,
+        "name": "Donnersbergerbrücke",
+        "line": "MunichSBahn_DbRegioAgBayernS4",
+        "order": 458
+      },
+      "id": 326
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.604709, 48.127615]
+      },
+      "properties": {
+        "id": 417,
+        "name": "Ostbahnhof",
+        "line": "MunichSBahn_DbRegioAgBayernS8",
+        "order": 455
+      },
+      "id": 417
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.604806, 48.127472]
+      },
+      "properties": {
+        "id": 301,
+        "name": "Ostbahnhof",
+        "line": "MunichSBahn_DbRegioAgBayernS3",
+        "order": 453
+      },
+      "id": 301
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.44397, 48.148971]
+      },
+      "properties": {
+        "id": 347,
+        "name": "Westkreuz",
+        "line": "MunichSBahn_DbRegioAgBayernS6",
+        "order": 440
+      },
+      "id": 347
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.519241, 48.1435]
+      },
+      "properties": {
+        "id": 325,
+        "name": "Hirschgarten",
+        "line": "MunichSBahn_DbRegioAgBayernS4",
+        "order": 438
+      },
+      "id": 325
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.54839, 48.14192]
+      },
+      "properties": {
+        "id": 176,
+        "name": "Hackerbrücke",
+        "line": "MunichSBahn_DbRegioAgBayernS1",
+        "order": 437
+      },
+      "id": 176
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.615951, 48.134395]
+      },
+      "properties": {
+        "id": 416,
+        "name": "Leuchtenbergring",
+        "line": "MunichSBahn_DbRegioAgBayernS8",
+        "order": 433
+      },
+      "id": 416
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.593143, 48.129238]
+      },
+      "properties": {
+        "id": 300,
+        "name": "Rosenheimer Platz",
+        "line": "MunichSBahn_DbRegioAgBayernS3",
+        "order": 427
+      },
+      "id": 300
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.503603, 48.144398]
+      },
+      "properties": {
+        "id": 214,
+        "name": "Laim",
+        "line": "MunichSBahn_DbRegioAgBayernS2",
+        "order": 425
+      },
+      "id": 214
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.631201, 48.093387]
+      },
+      "properties": {
+        "id": 383,
+        "name": "Perlach",
+        "line": "MunichSBahn_DbRegioAgBayernS7",
+        "order": 420
+      },
+      "id": 383
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.364764, 48.300515]
+      },
+      "properties": {
+        "id": 243,
+        "name": "Schwabhausen",
+        "line": "MunichSBahn_DbRegioAgBayernS2",
+        "order": 419
+      },
+      "id": 243
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.431445, 48.129218]
+      },
+      "properties": {
+        "id": 346,
+        "name": "Lochham",
+        "line": "MunichSBahn_DbRegioAgBayernS6",
+        "order": 417
+      },
+      "id": 346
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.503645, 48.14427]
+      },
+      "properties": {
+        "id": 324,
+        "name": "Laim",
+        "line": "MunichSBahn_DbRegioAgBayernS4",
+        "order": 412
+      },
+      "id": 324
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.583244, 48.134213]
+      },
+      "properties": {
+        "id": 299,
+        "name": "Isartor",
+        "line": "MunichSBahn_DbRegioAgBayernS3",
+        "order": 411
+      },
+      "id": 299
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.536484, 48.14263]
+      },
+      "properties": {
+        "id": 175,
+        "name": "Donnersbergerbrücke",
+        "line": "MunichSBahn_DbRegioAgBayernS1",
+        "order": 410
+      },
+      "id": 175
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.426059, 48.120413]
+      },
+      "properties": {
+        "id": 345,
+        "name": "Gräfelfing",
+        "line": "MunichSBahn_DbRegioAgBayernS6",
+        "order": 405
+      },
+      "id": 345
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.575433, 48.137147]
+      },
+      "properties": {
+        "id": 298,
+        "name": "Marienplatz",
+        "line": "MunichSBahn_DbRegioAgBayernS3",
+        "order": 395
+      },
+      "id": 298
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.519241, 48.1435]
+      },
+      "properties": {
+        "id": 174,
+        "name": "Hirschgarten",
+        "line": "MunichSBahn_DbRegioAgBayernS1",
+        "order": 390
+      },
+      "id": 174
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.645162, 48.088678]
+      },
+      "properties": {
+        "id": 382,
+        "name": "Neuperlach Süd",
+        "line": "MunichSBahn_DbRegioAgBayernS7",
+        "order": 380
+      },
+      "id": 382
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.413567, 48.105299]
+      },
+      "properties": {
+        "id": 344,
+        "name": "Planegg",
+        "line": "MunichSBahn_DbRegioAgBayernS6",
+        "order": 376
+      },
+      "id": 344
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.565659, 48.139585]
+      },
+      "properties": {
+        "id": 297,
+        "name": "Karlsplatz (Stachus)",
+        "alternate_names": ["Karlsplatz", "Stachus"],
+
+        "line": "MunichSBahn_DbRegioAgBayernS3",
+        "order": 374
+      },
+      "id": 297
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.46183, 48.14979]
+      },
+      "properties": {
+        "id": 323,
+        "name": "Pasing",
+        "line": "MunichSBahn_DbRegioAgBayernS4",
+        "order": 368
+      },
+      "id": 323
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.503665, 48.144355]
+      },
+      "properties": {
+        "id": 173,
+        "name": "Laim",
+        "line": "MunichSBahn_DbRegioAgBayernS1",
+        "order": 365
+      },
+      "id": 173
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.560244, 48.141264]
+      },
+      "properties": {
+        "id": 296,
+        "name": "München Hbf",
+        "alternate_names": ["Hauptbahnhof"],
+        "line": "MunichSBahn_DbRegioAgBayernS3",
+        "order": 363
+      },
+      "id": 296
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.478098, 48.16422]
+      },
+      "properties": {
+        "id": 213,
+        "name": "Obermenzing",
+        "line": "MunichSBahn_DbRegioAgBayernS2",
+        "order": 361
+      },
+      "id": 213
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.390147, 48.321167]
+      },
+      "properties": {
+        "id": 242,
+        "name": "Niederroth",
+        "line": "MunichSBahn_DbRegioAgBayernS2",
+        "order": 359
+      },
+      "id": 242
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.400846, 48.093257]
+      },
+      "properties": {
+        "id": 343,
+        "name": "Stockdorf",
+        "line": "MunichSBahn_DbRegioAgBayernS6",
+        "order": 356
+      },
+      "id": 343
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.660211, 48.075796]
+      },
+      "properties": {
+        "id": 381,
+        "name": "Neubiberg",
+        "line": "MunichSBahn_DbRegioAgBayernS7",
+        "order": 349
+      },
+      "id": 381
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.472758, 48.177719]
+      },
+      "properties": {
+        "id": 212,
+        "name": "Untermenzing",
+        "line": "MunichSBahn_DbRegioAgBayernS2",
+        "order": 346
+      },
+      "id": 212
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.428474, 48.154525]
+      },
+      "properties": {
+        "id": 322,
+        "name": "Leienfelsstraße",
+        "line": "MunichSBahn_DbRegioAgBayernS4",
+        "order": 333
+      },
+      "id": 322
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.649247, 48.149618]
+      },
+      "properties": {
+        "id": 415,
+        "name": "Daglfing",
+        "line": "MunichSBahn_DbRegioAgBayernS8",
+        "order": 331
+      },
+      "id": 415
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.376182, 48.070612]
+      },
+      "properties": {
+        "id": 342,
+        "name": "Gauting",
+        "line": "MunichSBahn_DbRegioAgBayernS6",
+        "order": 330
+      },
+      "id": 342
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.548533, 48.142032]
+      },
+      "properties": {
+        "id": 295,
+        "name": "Hackerbrücke",
+        "line": "MunichSBahn_DbRegioAgBayernS3",
+        "order": 326
+      },
+      "id": 295
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.413297, 48.155913]
+      },
+      "properties": {
+        "id": 321,
+        "name": "Aubing",
+        "line": "MunichSBahn_DbRegioAgBayernS4",
+        "order": 326
+      },
+      "id": 321
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.468101, 48.189943]
+      },
+      "properties": {
+        "id": 211,
+        "name": "Allach",
+        "line": "MunichSBahn_DbRegioAgBayernS2",
+        "order": 325
+      },
+      "id": 211
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.677817, 48.063706]
+      },
+      "properties": {
+        "id": 380,
+        "name": "Ottobrunn",
+        "line": "MunichSBahn_DbRegioAgBayernS7",
+        "order": 320
+      },
+      "id": 380
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.648305, 48.156913]
+      },
+      "properties": {
+        "id": 414,
+        "name": "Englschalking",
+        "line": "MunichSBahn_DbRegioAgBayernS8",
+        "order": 314
+      },
+      "id": 414
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.536518, 48.142813]
+      },
+      "properties": {
+        "id": 294,
+        "name": "Donnersbergerbrücke",
+        "line": "MunichSBahn_DbRegioAgBayernS3",
+        "order": 304
+      },
+      "id": 294
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.35299, 48.172072]
+      },
+      "properties": {
+        "id": 320,
+        "name": "Puchheim",
+        "line": "MunichSBahn_DbRegioAgBayernS4",
+        "order": 303
+      },
+      "id": 320
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.378448, 48.35246]
+      },
+      "properties": {
+        "id": 241,
+        "name": "Markt Indersdorf",
+        "line": "MunichSBahn_DbRegioAgBayernS2",
+        "order": 293
+      },
+      "id": 241
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.328262, 48.179301]
+      },
+      "properties": {
+        "id": 319,
+        "name": "Eichenau",
+        "line": "MunichSBahn_DbRegioAgBayernS4",
+        "order": 293
+      },
+      "id": 319
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.645931, 48.167624]
+      },
+      "properties": {
+        "id": 413,
+        "name": "Johanneskirchen",
+        "line": "MunichSBahn_DbRegioAgBayernS8",
+        "order": 293
+      },
+      "id": 413
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.459629, 48.211219]
+      },
+      "properties": {
+        "id": 210,
+        "name": "Karlsfeld",
+        "line": "MunichSBahn_DbRegioAgBayernS2",
+        "order": 287
+      },
+      "id": 210
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.519135, 48.143628]
+      },
+      "properties": {
+        "id": 293,
+        "name": "Hirschgarten",
+        "line": "MunichSBahn_DbRegioAgBayernS3",
+        "order": 280
+      },
+      "id": 293
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.645083, 48.088917]
+      },
+      "properties": {
+        "id": 98,
+        "name": "Neuperlach Süd",
+        "line": "MunichUBahn_UbahnU5",
+        "order": 276
+      },
+      "id": 98
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.509685, 48.043475]
+      },
+      "properties": {
+        "id": 281,
+        "name": "Höllriegelskreuth",
+        "line": "MunichSBahn_DbRegioAgBayernS20",
+        "order": 275
+      },
+      "id": 281
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.698873, 48.046573]
+      },
+      "properties": {
+        "id": 379,
+        "name": "Hohenbrunn",
+        "line": "MunichSBahn_DbRegioAgBayernS7",
+        "order": 275
+      },
+      "id": 379
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.642666, 48.094797]
+      },
+      "properties": {
+        "id": 97,
+        "name": "Therese-Giehse-Allee",
+        "line": "MunichUBahn_UbahnU5",
+        "order": 259
+      },
+      "id": 97
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.521831, 48.058986]
+      },
+      "properties": {
+        "id": 280,
+        "name": "Pullach",
+        "line": "MunichSBahn_DbRegioAgBayernS20",
+        "order": 257
+      },
+      "id": 280
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.711958, 48.034191]
+      },
+      "properties": {
+        "id": 378,
+        "name": "Wächterhof",
+        "line": "MunichSBahn_DbRegioAgBayernS7",
+        "order": 253
+      },
+      "id": 378
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.646085, 48.101209]
+      },
+      "properties": {
+        "id": 96,
+        "name": "Neuperlach Zentrum",
+        "line": "MunichUBahn_UbahnU5",
+        "order": 251
+      },
+      "id": 96
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.344055, 48.341302]
+      },
+      "properties": {
+        "id": 240,
+        "name": "Arnbach",
+        "line": "MunichSBahn_DbRegioAgBayernS2",
+        "order": 248
+      },
+      "id": 240
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.503603, 48.144398]
+      },
+      "properties": {
+        "id": 292,
+        "name": "Laim",
+        "line": "MunichSBahn_DbRegioAgBayernS3",
+        "order": 247
+      },
+      "id": 292
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.506148, 48.180302]
+      },
+      "properties": {
+        "id": 172,
+        "name": "Moosach",
+        "line": "MunichSBahn_DbRegioAgBayernS1",
+        "order": 246
+      },
+      "id": 172
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.444242, 48.25465]
+      },
+      "properties": {
+        "id": 209,
+        "name": "Dachau",
+        "alternate_names": ["Dachau Bahnhof"],
+        "line": "MunichSBahn_DbRegioAgBayernS2",
+        "order": 245
+      },
+      "id": 209
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.262147, 48.171728]
+      },
+      "properties": {
+        "id": 318,
+        "name": "Fürstenfeldbruck",
+        "line": "MunichSBahn_DbRegioAgBayernS4",
+        "order": 244
+      },
+      "id": 318
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.646567, 48.108223]
+      },
+      "properties": {
+        "id": 95,
+        "name": "Quiddestraße",
+        "line": "MunichUBahn_UbahnU5",
+        "order": 239
+      },
+      "id": 95
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.646841, 48.190293]
+      },
+      "properties": {
+        "id": 412,
+        "name": "Unterföhring",
+        "line": "MunichSBahn_DbRegioAgBayernS8",
+        "order": 239
+      },
+      "id": 412
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.530843, 48.071183]
+      },
+      "properties": {
+        "id": 279,
+        "name": "Großhesselohe,  Isartalbahnhof",
+        "line": "MunichSBahn_DbRegioAgBayernS20",
+        "order": 237
+      },
+      "id": 279
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.525903, 48.197825]
+      },
+      "properties": {
+        "id": 171,
+        "name": "Fasanerie",
+        "line": "MunichSBahn_DbRegioAgBayernS1",
+        "order": 227
+      },
+      "id": 171
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.631429, 48.118407]
+      },
+      "properties": {
+        "id": 94,
+        "name": "Michaelibad",
+        "line": "MunichUBahn_UbahnU5",
+        "order": 221
+      },
+      "id": 94
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.618665, 48.120302]
+      },
+      "properties": {
+        "id": 93,
+        "name": "Innsbrucker Ring",
+        "line": "MunichUBahn_UbahnU5",
+        "order": 210
+      },
+      "id": 93
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.719151, 48.018461]
+      },
+      "properties": {
+        "id": 377,
+        "name": "Höhenkirchen-Siegertsbrunn",
+        "line": "MunichSBahn_DbRegioAgBayernS7",
+        "order": 209
+      },
+      "id": 377
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.347393, 48.005975]
+      },
+      "properties": {
+        "id": 341,
+        "name": "Starnberg Nord",
+        "line": "MunichSBahn_DbRegioAgBayernS6",
+        "order": 206
+      },
+      "id": 341
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.622069, 48.153461]
+      },
+      "properties": {
+        "id": 80,
+        "name": "Arabellapark",
+        "line": "MunichUBahn_UbahnU4",
+        "order": 198
+      },
+      "id": 80
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.224553, 48.160212]
+      },
+      "properties": {
+        "id": 317,
+        "name": "Buchenau",
+        "line": "MunichSBahn_DbRegioAgBayernS4",
+        "order": 189
+      },
+      "id": 317
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.603589, 48.127381]
+      },
+      "properties": {
+        "id": 92,
+        "name": "Ostbahnhof",
+        "line": "MunichUBahn_UbahnU5",
+        "order": 185
+      },
+      "id": 92
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.541151, 48.213818]
+      },
+      "properties": {
+        "id": 170,
+        "name": "Feldmoching",
+        "line": "MunichSBahn_DbRegioAgBayernS1",
+        "order": 185
+      },
+      "id": 170
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.526837, 48.079941]
+      },
+      "properties": {
+        "id": 278,
+        "name": "Solln",
+        "line": "MunichSBahn_DbRegioAgBayernS20",
+        "order": 182
+      },
+      "id": 278
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.461994, 48.150033]
+      },
+      "properties": {
+        "id": 291,
+        "name": "Pasing",
+        "line": "MunichSBahn_DbRegioAgBayernS3",
+        "order": 182
+      },
+      "id": 291
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.679442, 48.226017]
+      },
+      "properties": {
+        "id": 411,
+        "name": "Ismaning",
+        "line": "MunichSBahn_DbRegioAgBayernS8",
+        "order": 182
+      },
+      "id": 411
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.616624, 48.148531]
+      },
+      "properties": {
+        "id": 79,
+        "name": "Richard-Strauss-Straße",
+        "line": "MunichUBahn_UbahnU4",
+        "order": 181
+      },
+      "id": 79
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.192022, 48.147373]
+      },
+      "properties": {
+        "id": 316,
+        "name": "Schöngeising",
+        "line": "MunichSBahn_DbRegioAgBayernS4",
+        "order": 176
+      },
+      "id": 316
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.343688, 47.995861]
+      },
+      "properties": {
+        "id": 340,
+        "name": "Starnberg",
+        "line": "MunichSBahn_DbRegioAgBayernS6",
+        "order": 169
+      },
+      "id": 340
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.61557, 48.143346]
+      },
+      "properties": {
+        "id": 78,
+        "name": "Böhmerwaldplatz",
+        "line": "MunichUBahn_UbahnU4",
+        "order": 168
+      },
+      "id": 78
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.303339, 48.333766]
+      },
+      "properties": {
+        "id": 239,
+        "name": "Erdweg",
+        "line": "MunichSBahn_DbRegioAgBayernS2",
+        "order": 168
+      },
+      "id": 239
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.455556, 48.291111]
+      },
+      "properties": {
+        "id": 208,
+        "name": "Hebertshausen",
+        "line": "MunichSBahn_DbRegioAgBayernS2",
+        "order": 167
+      },
+      "id": 208
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.153274, 48.13208]
+      },
+      "properties": {
+        "id": 315,
+        "name": "Grafrath",
+        "line": "MunichSBahn_DbRegioAgBayernS4",
+        "order": 167
+      },
+      "id": 315
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.532781, 48.094506]
+      },
+      "properties": {
+        "id": 277,
+        "name": "Siemenswerke",
+        "line": "MunichSBahn_DbRegioAgBayernS20",
+        "order": 163
+      },
+      "id": 277
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.598889, 48.135602]
+      },
+      "properties": {
+        "id": 91,
+        "name": "Max-Weber-Platz",
+        "line": "MunichUBahn_UbahnU5",
+        "order": 154
+      },
+      "id": 91
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.607053, 48.139182]
+      },
+      "properties": {
+        "id": 77,
+        "name": "Prinzregentenplatz",
+        "line": "MunichUBahn_UbahnU4",
+        "order": 151
+      },
+      "id": 77
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.736947, 47.993416]
+      },
+      "properties": {
+        "id": 376,
+        "name": "Dürrnhaar",
+        "line": "MunichSBahn_DbRegioAgBayernS7",
+        "order": 143
+      },
+      "id": 376
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.557727, 48.257256]
+      },
+      "properties": {
+        "id": 169,
+        "name": "Oberschleißheim",
+        "line": "MunichSBahn_DbRegioAgBayernS1",
+        "order": 140
+      },
+      "id": 169
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.587726, 48.139598]
+      },
+      "properties": {
+        "id": 90,
+        "name": "Lehel",
+        "line": "MunichUBahn_UbahnU5",
+        "order": 137
+      },
+      "id": 90
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.536319, 48.107832]
+      },
+      "properties": {
+        "id": 276,
+        "name": "Mittersendling",
+        "line": "MunichSBahn_DbRegioAgBayernS20",
+        "order": 137
+      },
+      "id": 276
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.598889, 48.135602]
+      },
+      "properties": {
+        "id": 76,
+        "name": "Max-Weber-Platz",
+        "line": "MunichUBahn_UbahnU4",
+        "order": 135
+      },
+      "id": 76
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.432428, 48.163115]
+      },
+      "properties": {
+        "id": 290,
+        "name": "Langwied",
+        "line": "MunichSBahn_DbRegioAgBayernS3",
+        "order": 134
+      },
+      "id": 290
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.568565, 48.273718]
+      },
+      "properties": {
+        "id": 168,
+        "name": "Unterschleißheim",
+        "line": "MunichSBahn_DbRegioAgBayernS1",
+        "order": 131
+      },
+      "id": 168
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.57756, 48.142495]
+      },
+      "properties": {
+        "id": 89,
+        "name": "Odeonsplatz",
+        "line": "MunichUBahn_UbahnU5",
+        "order": 128
+      },
+      "id": 89
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.407922, 48.176527]
+      },
+      "properties": {
+        "id": 289,
+        "name": "Lochhausen",
+        "line": "MunichSBahn_DbRegioAgBayernS3",
+        "order": 120
+      },
+      "id": 289
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.587726, 48.139598]
+      },
+      "properties": {
+        "id": 75,
+        "name": "Lehel",
+        "line": "MunichUBahn_UbahnU4",
+        "order": 118
+      },
+      "id": 75
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.374125, 48.194933]
+      },
+      "properties": {
+        "id": 288,
+        "name": "Gröbenzell",
+        "line": "MunichSBahn_DbRegioAgBayernS3",
+        "order": 112
+      },
+      "id": 288
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.580755, 48.287971]
+      },
+      "properties": {
+        "id": 167,
+        "name": "Lohhof",
+        "line": "MunichSBahn_DbRegioAgBayernS1",
+        "order": 111
+      },
+      "id": 167
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.57756, 48.142495]
+      },
+      "properties": {
+        "id": 74,
+        "name": "Odeonsplatz",
+        "line": "MunichUBahn_UbahnU4",
+        "order": 109
+      },
+      "id": 74
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.444706, 48.333317]
+      },
+      "properties": {
+        "id": 207,
+        "name": "Röhrmoos",
+        "line": "MunichSBahn_DbRegioAgBayernS2",
+        "order": 106
+      },
+      "id": 207
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.565488, 48.139663]
+      },
+      "properties": {
+        "id": 88,
+        "name": "Karlsplatz (Stachus)",
+        "alternate_names": ["Karlsplatz", "Stachus"],
+
+        "line": "MunichUBahn_UbahnU5",
+        "order": 101
+      },
+      "id": 88
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.769546, 47.968744]
+      },
+      "properties": {
+        "id": 375,
+        "name": "Aying",
+        "line": "MunichSBahn_DbRegioAgBayernS7",
+        "order": 100
+      },
+      "id": 375
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.306529, 47.961932]
+      },
+      "properties": {
+        "id": 339,
+        "name": "Possenhofen",
+        "line": "MunichSBahn_DbRegioAgBayernS6",
+        "order": 95
+      },
+      "id": 339
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.616746, 48.303002]
+      },
+      "properties": {
+        "id": 166,
+        "name": "Eching",
+        "line": "MunichSBahn_DbRegioAgBayernS1",
+        "order": 93
+      },
+      "id": 166
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.560077, 48.139237]
+      },
+      "properties": {
+        "id": 87,
+        "name": "München Hbf",
+        "alternate_names": ["Hauptbahnhof"],
+        "line": "MunichUBahn_UbahnU5",
+        "order": 92
+      },
+      "id": 87
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.714299, 48.309173]
+      },
+      "properties": {
+        "id": 410,
+        "name": "Hallbergmoos",
+        "line": "MunichSBahn_DbRegioAgBayernS8",
+        "order": 86
+      },
+      "id": 410
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.565488, 48.139663]
+      },
+      "properties": {
+        "id": 73,
+        "name": "Karlsplatz (Stachus)",
+        "alternate_names": ["Karlsplatz", "Stachus"],
+
+        "line": "MunichUBahn_UbahnU4",
+        "order": 82
+      },
+      "id": 73
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.275454, 48.354039]
+      },
+      "properties": {
+        "id": 238,
+        "name": "Kleinberghofen",
+        "line": "MunichSBahn_DbRegioAgBayernS2",
+        "order": 81
+      },
+      "id": 238
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.552342, 48.135623]
+      },
+      "properties": {
+        "id": 86,
+        "name": "Theresienwiese",
+        "line": "MunichUBahn_UbahnU5",
+        "order": 78
+      },
+      "id": 86
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.445117, 48.361116]
+      },
+      "properties": {
+        "id": 206,
+        "name": "Vierkirchen-Esterhofen",
+        "line": "MunichSBahn_DbRegioAgBayernS2",
+        "order": 78
+      },
+      "id": 206
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.77657, 47.960095]
+      },
+      "properties": {
+        "id": 374,
+        "name": "Peiß",
+        "line": "MunichSBahn_DbRegioAgBayernS7",
+        "order": 75
+      },
+      "id": 374
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.560077, 48.139237]
+      },
+      "properties": {
+        "id": 72,
+        "name": "München Hbf",
+        "alternate_names": ["Hauptbahnhof"],
+        "line": "MunichUBahn_UbahnU4",
+        "order": 73
+      },
+      "id": 72
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.531267, 48.132928]
+      },
+      "properties": {
+        "id": 275,
+        "name": "Heimeranplatz",
+        "line": "MunichSBahn_DbRegioAgBayernS20",
+        "order": 71
+      },
+      "id": 275
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.335596, 48.210031]
+      },
+      "properties": {
+        "id": 287,
+        "name": "Olching",
+        "line": "MunichSBahn_DbRegioAgBayernS3",
+        "order": 71
+      },
+      "id": 287
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.290249, 47.946926]
+      },
+      "properties": {
+        "id": 338,
+        "name": "Feldafing",
+        "line": "MunichSBahn_DbRegioAgBayernS6",
+        "order": 62
+      },
+      "id": 338
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.661176, 48.321703]
+      },
+      "properties": {
+        "id": 165,
+        "name": "Neufahrn",
+        "line": "MunichSBahn_DbRegioAgBayernS1",
+        "order": 60
+      },
+      "id": 165
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.552342, 48.135623]
+      },
+      "properties": {
+        "id": 71,
+        "name": "Theresienwiese",
+        "line": "MunichUBahn_UbahnU4",
+        "order": 59
+      },
+      "id": 71
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.540994, 48.133719]
+      },
+      "properties": {
+        "id": 85,
+        "name": "Schwanthalerhöhe",
+        "line": "MunichUBahn_UbahnU5",
+        "order": 59
+      },
+      "id": 85
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.70326, 48.133348]
+      },
+      "properties": {
+        "id": 42,
+        "name": "Messestadt Ost",
+        "line": "MunichUBahn_UbahnU2",
+        "order": 55
+      },
+      "id": 42
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.690756, 48.133396]
+      },
+      "properties": {
+        "id": 41,
+        "name": "Messestadt West",
+        "line": "MunichUBahn_UbahnU2",
+        "order": 53
+      },
+      "id": 41
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.480927, 48.08831]
+      },
+      "properties": {
+        "id": 67,
+        "name": "Fürstenried West",
+        "line": "MunichUBahn_UbahnU3",
+        "order": 53
+      },
+      "id": 67
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.491115, 48.091253]
+      },
+      "properties": {
+        "id": 66,
+        "name": "Basler Straße",
+        "line": "MunichUBahn_UbahnU3",
+        "order": 51
+      },
+      "id": 66
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.671014, 48.130744]
+      },
+      "properties": {
+        "id": 40,
+        "name": "Moosfeld",
+        "line": "MunichUBahn_UbahnU2",
+        "order": 50
+      },
+      "id": 40
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.671357, 48.264684]
+      },
+      "properties": {
+        "id": 124,
+        "name": "Garching, Forschungszentrum",
+        "line": "MunichUBahn_UbahnU6",
+        "order": 50
+      },
+      "id": 124
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.663202, 48.126198]
+      },
+      "properties": {
+        "id": 39,
+        "name": "Trudering",
+        "line": "MunichUBahn_UbahnU2",
+        "order": 49
+      },
+      "id": 39
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.49937, 48.095132]
+      },
+      "properties": {
+        "id": 65,
+        "name": "Forstenrieder Allee",
+        "line": "MunichUBahn_UbahnU3",
+        "order": 49
+      },
+      "id": 65
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.317325, 48.212235]
+      },
+      "properties": {
+        "id": 286,
+        "name": "Esting",
+        "line": "MunichSBahn_DbRegioAgBayernS3",
+        "order": 49
+      },
+      "id": 286
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.652281, 48.249197]
+      },
+      "properties": {
+        "id": 123,
+        "name": "Garching",
+        "line": "MunichUBahn_UbahnU6",
+        "order": 48
+      },
+      "id": 123
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.514984, 48.097396]
+      },
+      "properties": {
+        "id": 64,
+        "name": "Machtlfinger Straße",
+        "line": "MunichUBahn_UbahnU3",
+        "order": 46
+      },
+      "id": 64
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.631135, 48.247345]
+      },
+      "properties": {
+        "id": 122,
+        "name": "Garching-Hochbrück",
+        "line": "MunichUBahn_UbahnU6",
+        "order": 46
+      },
+      "id": 122
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.64673, 48.125752]
+      },
+      "properties": {
+        "id": 38,
+        "name": "Kreillerstraße",
+        "line": "MunichUBahn_UbahnU2",
+        "order": 45
+      },
+      "id": 38
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.525169, 48.09791]
+      },
+      "properties": {
+        "id": 63,
+        "name": "Aidenbachstraße",
+        "line": "MunichUBahn_UbahnU3",
+        "order": 44
+      },
+      "id": 63
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.616834, 48.211768]
+      },
+      "properties": {
+        "id": 121,
+        "name": "Fröttmaning",
+        "line": "MunichUBahn_UbahnU6",
+        "order": 44
+      },
+      "id": 121
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.63383, 48.126555]
+      },
+      "properties": {
+        "id": 37,
+        "name": "Josephsburg",
+        "line": "MunichUBahn_UbahnU2",
+        "order": 43
+      },
+      "id": 37
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.781195, 47.946035]
+      },
+      "properties": {
+        "id": 373,
+        "name": "Großhelfendorf",
+        "line": "MunichSBahn_DbRegioAgBayernS7",
+        "order": 43
+      },
+      "id": 373
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.535554, 48.098228]
+      },
+      "properties": {
+        "id": 62,
+        "name": "Obersendling",
+        "line": "MunichUBahn_UbahnU3",
+        "order": 42
+      },
+      "id": 62
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.613294, 48.203847]
+      },
+      "properties": {
+        "id": 120,
+        "name": "Kieferngarten",
+        "line": "MunichUBahn_UbahnU6",
+        "order": 42
+      },
+      "id": 120
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.618702, 48.120409]
+      },
+      "properties": {
+        "id": 36,
+        "name": "Innsbrucker Ring",
+        "line": "MunichUBahn_UbahnU2",
+        "order": 41
+      },
+      "id": 36
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.531396, 48.133491]
+      },
+      "properties": {
+        "id": 84,
+        "name": "Heimeranplatz",
+        "line": "MunichUBahn_UbahnU5",
+        "order": 41
+      },
+      "id": 84
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.545986, 48.102719]
+      },
+      "properties": {
+        "id": 61,
+        "name": "Thalkirchen (Tierpark)",
+        "alternate_names": ["Thalkirchen", "Tierpark"],
+        "line": "MunichUBahn_UbahnU3",
+        "order": 40
+      },
+      "id": 61
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.540994, 48.133719]
+      },
+      "properties": {
+        "id": 70,
+        "name": "Schwanthalerhöhe",
+        "line": "MunichUBahn_UbahnU4",
+        "order": 40
+      },
+      "id": 70
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.614345, 48.191943]
+      },
+      "properties": {
+        "id": 119,
+        "name": "Freimann",
+        "line": "MunichUBahn_UbahnU6",
+        "order": 40
+      },
+      "id": 119
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.30038, 48.212791]
+      },
+      "properties": {
+        "id": 285,
+        "name": "Gernlinden",
+        "line": "MunichSBahn_DbRegioAgBayernS3",
+        "order": 40
+      },
+      "id": 285
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.608452, 48.117908]
+      },
+      "properties": {
+        "id": 35,
+        "name": "Karl-Preis-Platz",
+        "line": "MunichUBahn_UbahnU2",
+        "order": 39
+      },
+      "id": 35
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.595982, 48.1111]
+      },
+      "properties": {
+        "id": 34,
+        "name": "Giesing",
+        "line": "MunichUBahn_UbahnU2",
+        "order": 38
+      },
+      "id": 34
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.548678, 48.1126]
+      },
+      "properties": {
+        "id": 60,
+        "name": "Brudermühlstraße",
+        "line": "MunichUBahn_UbahnU3",
+        "order": 38
+      },
+      "id": 60
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.607707, 48.183481]
+      },
+      "properties": {
+        "id": 118,
+        "name": "Studentenstadt",
+        "line": "MunichUBahn_UbahnU6",
+        "order": 38
+      },
+      "id": 118
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.646101, 48.101215]
+      },
+      "properties": {
+        "id": 162,
+        "name": "Neuperlach Zentrum",
+        "line": "MunichUBahn_UbahnU8",
+        "order": 38
+      },
+      "id": 162
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.646101, 48.101215]
+      },
+      "properties": {
+        "id": 143,
+        "name": "Neuperlach Zentrum",
+        "line": "MunichUBahn_UbahnU7",
+        "order": 37
+      },
+      "id": 143
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.548288, 48.12017]
+      },
+      "properties": {
+        "id": 59,
+        "name": "Implerstraße",
+        "line": "MunichUBahn_UbahnU3",
+        "order": 36
+      },
+      "id": 59
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.602694, 48.178587]
+      },
+      "properties": {
+        "id": 117,
+        "name": "Alte Heide",
+        "line": "MunichUBahn_UbahnU6",
+        "order": 36
+      },
+      "id": 117
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.646622, 48.108222]
+      },
+      "properties": {
+        "id": 161,
+        "name": "Quiddestraße",
+        "line": "MunichUBahn_UbahnU8",
+        "order": 36
+      },
+      "id": 161
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.646622, 48.108222]
+      },
+      "properties": {
+        "id": 142,
+        "name": "Quiddestraße",
+        "line": "MunichUBahn_UbahnU7",
+        "order": 35
+      },
+      "id": 142
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.587674, 48.11248]
+      },
+      "properties": {
+        "id": 33,
+        "name": "Untersbergstraße",
+        "line": "MunichUBahn_UbahnU2",
+        "order": 34
+      },
+      "id": 33
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.550336, 48.125555]
+      },
+      "properties": {
+        "id": 58,
+        "name": "Poccistraße",
+        "line": "MunichUBahn_UbahnU3",
+        "order": 34
+      },
+      "id": 58
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.596954, 48.17307]
+      },
+      "properties": {
+        "id": 116,
+        "name": "Nordfriedhof",
+        "line": "MunichUBahn_UbahnU6",
+        "order": 34
+      },
+      "id": 116
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.631413, 48.118364]
+      },
+      "properties": {
+        "id": 160,
+        "name": "Michaelibad",
+        "line": "MunichUBahn_UbahnU8",
+        "order": 34
+      },
+      "id": 160
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.631413, 48.118364]
+      },
+      "properties": {
+        "id": 141,
+        "name": "Michaelibad",
+        "line": "MunichUBahn_UbahnU7",
+        "order": 33
+      },
+      "id": 141
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.580994, 48.114738]
+      },
+      "properties": {
+        "id": 32,
+        "name": "Silberhornstraße",
+        "line": "MunichUBahn_UbahnU2",
+        "order": 32
+      },
+      "id": 32
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.557613, 48.12922]
+      },
+      "properties": {
+        "id": 57,
+        "name": "Goetheplatz",
+        "line": "MunichUBahn_UbahnU3",
+        "order": 32
+      },
+      "id": 57
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.590935, 48.167133]
+      },
+      "properties": {
+        "id": 115,
+        "name": "Dietlindenstraße",
+        "line": "MunichUBahn_UbahnU6",
+        "order": 32
+      },
+      "id": 115
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.618702, 48.120409]
+      },
+      "properties": {
+        "id": 159,
+        "name": "Innsbrucker Ring",
+        "line": "MunichUBahn_UbahnU8",
+        "order": 32
+      },
+      "id": 159
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.618702, 48.120409]
+      },
+      "properties": {
+        "id": 140,
+        "name": "Innsbrucker Ring",
+        "line": "MunichUBahn_UbahnU7",
+        "order": 31
+      },
+      "id": 140
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.579203, 48.097124]
+      },
+      "properties": {
+        "id": 15,
+        "name": "Mangfallplatz",
+        "line": "MunichUBahn_UbahnU1",
+        "order": 30
+      },
+      "id": 15
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.576544, 48.119775]
+      },
+      "properties": {
+        "id": 31,
+        "name": "Kolumbusplatz",
+        "line": "MunichUBahn_UbahnU2",
+        "order": 30
+      },
+      "id": 31
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.566519, 48.133438]
+      },
+      "properties": {
+        "id": 56,
+        "name": "Sendlinger Tor",
+        "line": "MunichUBahn_UbahnU3",
+        "order": 30
+      },
+      "id": 56
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.586372, 48.161525]
+      },
+      "properties": {
+        "id": 114,
+        "name": "Münchner Freiheit",
+        "line": "MunichUBahn_UbahnU6",
+        "order": 30
+      },
+      "id": 114
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.608452, 48.117908]
+      },
+      "properties": {
+        "id": 158,
+        "name": "Karl-Preis-Platz",
+        "line": "MunichUBahn_UbahnU8",
+        "order": 30
+      },
+      "id": 158
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.574672, 48.137662]
+      },
+      "properties": {
+        "id": 55,
+        "name": "Marienplatz",
+        "line": "MunichUBahn_UbahnU3",
+        "order": 29
+      },
+      "id": 55
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.584045, 48.156515]
+      },
+      "properties": {
+        "id": 113,
+        "name": "Giselastraße",
+        "line": "MunichUBahn_UbahnU6",
+        "order": 29
+      },
+      "id": 113
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.608452, 48.117908]
+      },
+      "properties": {
+        "id": 139,
+        "name": "Karl-Preis-Platz",
+        "line": "MunichUBahn_UbahnU7",
+        "order": 29
+      },
+      "id": 139
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.595982, 48.1111]
+      },
+      "properties": {
+        "id": 157,
+        "name": "Giesing",
+        "line": "MunichUBahn_UbahnU8",
+        "order": 29
+      },
+      "id": 157
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.581108, 48.104647]
+      },
+      "properties": {
+        "id": 14,
+        "name": "St.-Quirin-Platz",
+        "line": "MunichUBahn_UbahnU1",
+        "order": 28
+      },
+      "id": 14
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.574253, 48.129229]
+      },
+      "properties": {
+        "id": 30,
+        "name": "Fraunhoferstraße",
+        "line": "MunichUBahn_UbahnU2",
+        "order": 28
+      },
+      "id": 30
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.595982, 48.1111]
+      },
+      "properties": {
+        "id": 138,
+        "name": "Giesing",
+        "line": "MunichUBahn_UbahnU7",
+        "order": 28
+      },
+      "id": 138
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.581045, 48.150055]
+      },
+      "properties": {
+        "id": 112,
+        "name": "Universität",
+        "line": "MunichUBahn_UbahnU6",
+        "order": 27
+      },
+      "id": 112
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.256396, 48.21419]
+      },
+      "properties": {
+        "id": 284,
+        "name": "Maisach",
+        "line": "MunichSBahn_DbRegioAgBayernS3",
+        "order": 27
+      },
+      "id": 284
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.077289, 48.104676]
+      },
+      "properties": {
+        "id": 314,
+        "name": "Türkenfeld",
+        "line": "MunichSBahn_DbRegioAgBayernS4",
+        "order": 27
+      },
+      "id": 314
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.566681, 48.133426]
+      },
+      "properties": {
+        "id": 29,
+        "name": "Sendlinger Tor",
+        "line": "MunichUBahn_UbahnU2",
+        "order": 26
+      },
+      "id": 29
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.575594, 48.108263]
+      },
+      "properties": {
+        "id": 13,
+        "name": "Wettersteinplatz",
+        "line": "MunichUBahn_UbahnU1",
+        "order": 25
+      },
+      "id": 13
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.577939, 48.143418]
+      },
+      "properties": {
+        "id": 54,
+        "name": "Odeonsplatz",
+        "line": "MunichUBahn_UbahnU3",
+        "order": 25
+      },
+      "id": 54
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.578107, 48.143384]
+      },
+      "properties": {
+        "id": 111,
+        "name": "Odeonsplatz",
+        "line": "MunichUBahn_UbahnU6",
+        "order": 25
+      },
+      "id": 111
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.587674, 48.11248]
+      },
+      "properties": {
+        "id": 156,
+        "name": "Untersbergstraße",
+        "line": "MunichUBahn_UbahnU8",
+        "order": 25
+      },
+      "id": 156
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.706955, 48.363247]
+      },
+      "properties": {
+        "id": 164,
+        "name": "Pulling",
+        "line": "MunichSBahn_DbRegioAgBayernS1",
+        "order": 25
+      },
+      "id": 164
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.572042, 48.112429]
+      },
+      "properties": {
+        "id": 12,
+        "name": "Candidplatz",
+        "line": "MunichUBahn_UbahnU1",
+        "order": 24
+      },
+      "id": 12
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.587674, 48.11248]
+      },
+      "properties": {
+        "id": 137,
+        "name": "Untersbergstraße",
+        "line": "MunichUBahn_UbahnU7",
+        "order": 24
+      },
+      "id": 137
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.561032, 48.140079]
+      },
+      "properties": {
+        "id": 28,
+        "name": "München Hbf",
+        "alternate_names": ["Hauptbahnhof"],
+        "line": "MunichUBahn_UbahnU2",
+        "order": 23
+      },
+      "id": 28
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.580947, 48.150075]
+      },
+      "properties": {
+        "id": 53,
+        "name": "Universität",
+        "line": "MunichUBahn_UbahnU3",
+        "order": 23
+      },
+      "id": 53
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.580994, 48.114738]
+      },
+      "properties": {
+        "id": 155,
+        "name": "Silberhornstraße",
+        "line": "MunichUBahn_UbahnU8",
+        "order": 23
+      },
+      "id": 155
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.531396, 48.133491]
+      },
+      "properties": {
+        "id": 69,
+        "name": "Heimeranplatz",
+        "line": "MunichUBahn_UbahnU4",
+        "order": 22
+      },
+      "id": 69
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.575223, 48.137212]
+      },
+      "properties": {
+        "id": 110,
+        "name": "Marienplatz",
+        "line": "MunichUBahn_UbahnU6",
+        "order": 22
+      },
+      "id": 110
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.580994, 48.114738]
+      },
+      "properties": {
+        "id": 136,
+        "name": "Silberhornstraße",
+        "line": "MunichUBahn_UbahnU7",
+        "order": 22
+      },
+      "id": 136
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.563168, 48.144996]
+      },
+      "properties": {
+        "id": 27,
+        "name": "Königsplatz",
+        "line": "MunichUBahn_UbahnU2",
+        "order": 21
+      },
+      "id": 27
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.583946, 48.156534]
+      },
+      "properties": {
+        "id": 52,
+        "name": "Giselastraße",
+        "line": "MunichUBahn_UbahnU3",
+        "order": 21
+      },
+      "id": 52
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.576544, 48.119775]
+      },
+      "properties": {
+        "id": 154,
+        "name": "Kolumbusplatz",
+        "line": "MunichUBahn_UbahnU8",
+        "order": 21
+      },
+      "id": 154
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.576544, 48.119775]
+      },
+      "properties": {
+        "id": 11,
+        "name": "Kolumbusplatz",
+        "line": "MunichUBahn_UbahnU1",
+        "order": 20
+      },
+      "id": 11
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.566573, 48.133366]
+      },
+      "properties": {
+        "id": 109,
+        "name": "Sendlinger Tor",
+        "line": "MunichUBahn_UbahnU6",
+        "order": 20
+      },
+      "id": 109
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.576544, 48.119775]
+      },
+      "properties": {
+        "id": 135,
+        "name": "Kolumbusplatz",
+        "line": "MunichUBahn_UbahnU7",
+        "order": 20
+      },
+      "id": 135
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.564354, 48.151433]
+      },
+      "properties": {
+        "id": 26,
+        "name": "Theresienstraße",
+        "line": "MunichUBahn_UbahnU2",
+        "order": 19
+      },
+      "id": 26
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.586111, 48.161561]
+      },
+      "properties": {
+        "id": 51,
+        "name": "Münchner Freiheit",
+        "line": "MunichUBahn_UbahnU3",
+        "order": 19
+      },
+      "id": 51
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.574253, 48.129229]
+      },
+      "properties": {
+        "id": 153,
+        "name": "Fraunhoferstraße",
+        "line": "MunichUBahn_UbahnU8",
+        "order": 19
+      },
+      "id": 153
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.574253, 48.129229]
+      },
+      "properties": {
+        "id": 10,
+        "name": "Fraunhoferstraße",
+        "line": "MunichUBahn_UbahnU1",
+        "order": 18
+      },
+      "id": 10
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.521444, 48.134685]
+      },
+      "properties": {
+        "id": 83,
+        "name": "Westendstraße",
+        "line": "MunichUBahn_UbahnU5",
+        "order": 18
+      },
+      "id": 83
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.55768, 48.129157]
+      },
+      "properties": {
+        "id": 108,
+        "name": "Goetheplatz",
+        "line": "MunichUBahn_UbahnU6",
+        "order": 18
+      },
+      "id": 108
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.574253, 48.129229]
+      },
+      "properties": {
+        "id": 134,
+        "name": "Fraunhoferstraße",
+        "line": "MunichUBahn_UbahnU7",
+        "order": 18
+      },
+      "id": 134
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.567004, 48.155676]
+      },
+      "properties": {
+        "id": 25,
+        "name": "Josephsplatz",
+        "line": "MunichUBahn_UbahnU2",
+        "order": 17
+      },
+      "id": 25
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.566681, 48.133426]
+      },
+      "properties": {
+        "id": 152,
+        "name": "Sendlinger Tor",
+        "line": "MunichUBahn_UbahnU8",
+        "order": 17
+      },
+      "id": 152
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.566681, 48.133426]
+      },
+      "properties": {
+        "id": 9,
+        "name": "Sendlinger Tor",
+        "line": "MunichUBahn_UbahnU1",
+        "order": 16
+      },
+      "id": 9
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.578097, 48.166707]
+      },
+      "properties": {
+        "id": 50,
+        "name": "Bonner Platz",
+        "line": "MunichUBahn_UbahnU3",
+        "order": 16
+      },
+      "id": 50
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.550412, 48.125488]
+      },
+      "properties": {
+        "id": 107,
+        "name": "Poccistraße",
+        "line": "MunichUBahn_UbahnU6",
+        "order": 16
+      },
+      "id": 107
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.566681, 48.133426]
+      },
+      "properties": {
+        "id": 133,
+        "name": "Sendlinger Tor",
+        "line": "MunichUBahn_UbahnU7",
+        "order": 16
+      },
+      "id": 133
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.568712, 48.162359]
+      },
+      "properties": {
+        "id": 24,
+        "name": "Hohenzollernplatz",
+        "line": "MunichUBahn_UbahnU2",
+        "order": 15
+      },
+      "id": 24
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.572799, 48.171443]
+      },
+      "properties": {
+        "id": 49,
+        "name": "Scheidplatz",
+        "line": "MunichUBahn_UbahnU3",
+        "order": 15
+      },
+      "id": 49
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.560704, 48.140407]
+      },
+      "properties": {
+        "id": 8,
+        "name": "München Hbf",
+        "alternate_names": ["Hauptbahnhof"],
+        "line": "MunichUBahn_UbahnU1",
+        "order": 14
+      },
+      "id": 8
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.548472, 48.120139]
+      },
+      "properties": {
+        "id": 106,
+        "name": "Implerstraße",
+        "line": "MunichUBahn_UbahnU6",
+        "order": 14
+      },
+      "id": 106
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.560704, 48.140407]
+      },
+      "properties": {
+        "id": 132,
+        "name": "München Hbf",
+        "alternate_names": ["Hauptbahnhof"],
+        "line": "MunichUBahn_UbahnU7",
+        "order": 14
+      },
+      "id": 132
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.561032, 48.140079]
+      },
+      "properties": {
+        "id": 151,
+        "name": "München Hbf",
+        "alternate_names": ["Hauptbahnhof"],
+        "line": "MunichUBahn_UbahnU8",
+        "order": 14
+      },
+      "id": 151
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.572762, 48.171549]
+      },
+      "properties": {
+        "id": 23,
+        "name": "Scheidplatz",
+        "line": "MunichUBahn_UbahnU2",
+        "order": 13
+      },
+      "id": 23
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.21906, 48.215406]
+      },
+      "properties": {
+        "id": 283,
+        "name": "Malching",
+        "line": "MunichSBahn_DbRegioAgBayernS3",
+        "order": 13
+      },
+      "id": 283
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.563168, 48.144996]
+      },
+      "properties": {
+        "id": 150,
+        "name": "Königsplatz",
+        "line": "MunichUBahn_UbahnU8",
+        "order": 12
+      },
+      "id": 150
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.556943, 48.147849]
+      },
+      "properties": {
+        "id": 7,
+        "name": "Stiglmaierplatz",
+        "line": "MunichUBahn_UbahnU1",
+        "order": 11
+      },
+      "id": 7
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.573104, 48.18095]
+      },
+      "properties": {
+        "id": 22,
+        "name": "Milbertshofen",
+        "line": "MunichUBahn_UbahnU2",
+        "order": 11
+      },
+      "id": 22
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.536298, 48.11687]
+      },
+      "properties": {
+        "id": 105,
+        "name": "Harras",
+        "line": "MunichUBahn_UbahnU6",
+        "order": 11
+      },
+      "id": 105
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.556943, 48.147849]
+      },
+      "properties": {
+        "id": 131,
+        "name": "Stiglmaierplatz",
+        "line": "MunichUBahn_UbahnU7",
+        "order": 11
+      },
+      "id": 131
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.565815, 48.175667]
+      },
+      "properties": {
+        "id": 48,
+        "name": "Petuelring",
+        "line": "MunichUBahn_UbahnU3",
+        "order": 10
+      },
+      "id": 48
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.510848, 48.135061]
+      },
+      "properties": {
+        "id": 82,
+        "name": "Friedenheimer Straße",
+        "line": "MunichUBahn_UbahnU5",
+        "order": 10
+      },
+      "id": 82
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.564354, 48.151433]
+      },
+      "properties": {
+        "id": 149,
+        "name": "Theresienstraße",
+        "line": "MunichUBahn_UbahnU8",
+        "order": 10
+      },
+      "id": 149
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.545547, 48.149964]
+      },
+      "properties": {
+        "id": 6,
+        "name": "Maillingerstraße",
+        "line": "MunichUBahn_UbahnU1",
+        "order": 9
+      },
+      "id": 6
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.572662, 48.186831]
+      },
+      "properties": {
+        "id": 21,
+        "name": "Frankfurter Ring",
+        "line": "MunichUBahn_UbahnU2",
+        "order": 9
+      },
+      "id": 21
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.526418, 48.116937]
+      },
+      "properties": {
+        "id": 104,
+        "name": "Partnachplatz",
+        "line": "MunichUBahn_UbahnU6",
+        "order": 9
+      },
+      "id": 104
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.545547, 48.149964]
+      },
+      "properties": {
+        "id": 130,
+        "name": "Maillingerstraße",
+        "line": "MunichUBahn_UbahnU7",
+        "order": 9
+      },
+      "id": 130
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.555784, 48.179312]
+      },
+      "properties": {
+        "id": 47,
+        "name": "Olympiazentrum",
+        "line": "MunichUBahn_UbahnU3",
+        "order": 8
+      },
+      "id": 47
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.567004, 48.155676]
+      },
+      "properties": {
+        "id": 148,
+        "name": "Josephsplatz",
+        "line": "MunichUBahn_UbahnU8",
+        "order": 8
+      },
+      "id": 148
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.532871, 48.15418]
+      },
+      "properties": {
+        "id": 5,
+        "name": "Rotkreuzplatz",
+        "line": "MunichUBahn_UbahnU1",
+        "order": 7
+      },
+      "id": 5
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.571765, 48.19595]
+      },
+      "properties": {
+        "id": 20,
+        "name": "Am Hart",
+        "line": "MunichUBahn_UbahnU2",
+        "order": 7
+      },
+      "id": 20
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.516582, 48.117902]
+      },
+      "properties": {
+        "id": 103,
+        "name": "Westpark",
+        "line": "MunichUBahn_UbahnU6",
+        "order": 7
+      },
+      "id": 103
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.532871, 48.15418]
+      },
+      "properties": {
+        "id": 129,
+        "name": "Rotkreuzplatz",
+        "line": "MunichUBahn_UbahnU7",
+        "order": 7
+      },
+      "id": 129
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.76419, 48.352069]
+      },
+      "properties": {
+        "id": 185,
+        "name": "Flughafen, Besucherpark",
+        "line": "MunichSBahn_DbRegioAgBayernS1",
+        "order": 7
+      },
+      "id": 185
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.764169, 48.35218]
+      },
+      "properties": {
+        "id": 409,
+        "name": "Flughafen, Besucherpark",
+        "line": "MunichSBahn_DbRegioAgBayernS8",
+        "order": 7
+      },
+      "id": 409
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.547645, 48.185973]
+      },
+      "properties": {
+        "id": 46,
+        "name": "Oberwiesenfeld",
+        "line": "MunichUBahn_UbahnU3",
+        "order": 6
+      },
+      "id": 46
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.568712, 48.162359]
+      },
+      "properties": {
+        "id": 147,
+        "name": "Hohenzollernplatz",
+        "line": "MunichUBahn_UbahnU8",
+        "order": 6
+      },
+      "id": 147
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.529095, 48.162791]
+      },
+      "properties": {
+        "id": 4,
+        "name": "Gern",
+        "line": "MunichUBahn_UbahnU1",
+        "order": 5
+      },
+      "id": 4
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.569367, 48.204248]
+      },
+      "properties": {
+        "id": 19,
+        "name": "Harthof",
+        "line": "MunichUBahn_UbahnU2",
+        "order": 5
+      },
+      "id": 19
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.502424, 48.116259]
+      },
+      "properties": {
+        "id": 102,
+        "name": "Holzapfelkreuth",
+        "line": "MunichUBahn_UbahnU6",
+        "order": 5
+      },
+      "id": 102
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.529095, 48.162791]
+      },
+      "properties": {
+        "id": 128,
+        "name": "Gern",
+        "line": "MunichUBahn_UbahnU7",
+        "order": 5
+      },
+      "id": 128
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.572717, 48.171576]
+      },
+      "properties": {
+        "id": 146,
+        "name": "Scheidplatz",
+        "line": "MunichUBahn_UbahnU8",
+        "order": 4
+      },
+      "id": 146
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.52843, 48.17014]
+      },
+      "properties": {
+        "id": 3,
+        "name": "Westfriedhof",
+        "line": "MunichUBahn_UbahnU1",
+        "order": 3
+      },
+      "id": 3
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.563258, 48.212348]
+      },
+      "properties": {
+        "id": 18,
+        "name": "Dülferstraße",
+        "line": "MunichUBahn_UbahnU2",
+        "order": 3
+      },
+      "id": 18
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.53027, 48.182064]
+      },
+      "properties": {
+        "id": 45,
+        "name": "Olympia-Einkaufszentrum",
+        "line": "MunichUBahn_UbahnU3",
+        "order": 3
+      },
+      "id": 45
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.488833, 48.11837]
+      },
+      "properties": {
+        "id": 101,
+        "name": "Haderner Stern",
+        "line": "MunichUBahn_UbahnU6",
+        "order": 3
+      },
+      "id": 101
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.52843, 48.17014]
+      },
+      "properties": {
+        "id": 127,
+        "name": "Westfriedhof",
+        "line": "MunichUBahn_UbahnU7",
+        "order": 3
+      },
+      "id": 127
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.529016, 48.177202]
+      },
+      "properties": {
+        "id": 2,
+        "name": "Georg-Brauchle-Ring",
+        "line": "MunichUBahn_UbahnU1",
+        "order": 1
+      },
+      "id": 2
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.555021, 48.213372]
+      },
+      "properties": {
+        "id": 17,
+        "name": "Hasenbergl",
+        "line": "MunichUBahn_UbahnU2",
+        "order": 1
+      },
+      "id": 17
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.518594, 48.181816]
+      },
+      "properties": {
+        "id": 44,
+        "name": "Moosacher St.-Martins-Platz",
+        "line": "MunichUBahn_UbahnU3",
+        "order": 1
+      },
+      "id": 44
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.477083, 48.114687]
+      },
+      "properties": {
+        "id": 100,
+        "name": "Großhadern",
+        "line": "MunichUBahn_UbahnU6",
+        "order": 1
+      },
+      "id": 100
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.529016, 48.177202]
+      },
+      "properties": {
+        "id": 126,
+        "name": "Georg-Brauchle-Ring",
+        "line": "MunichUBahn_UbahnU7",
+        "order": 1
+      },
+      "id": 126
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.565814, 48.175667]
+      },
+      "properties": {
+        "id": 145,
+        "name": "Petuelring",
+        "line": "MunichUBahn_UbahnU8",
+        "order": 1
+      },
+      "id": 145
+    }
+  ],
+  "properties": {
+    "totalStations": 392,
+    "stationsPerLine": {
+      "MunichUBahn_UbahnU1": 15,
+      "MunichUBahn_UbahnU2": 27,
+      "MunichUBahn_UbahnU3": 25,
+      "MunichUBahn_UbahnU4": 13,
+      "MunichUBahn_UbahnU5": 18,
+      "MunichUBahn_UbahnU6": 26,
+      "MunichUBahn_UbahnU7": 19,
+      "MunichUBahn_UbahnU8": 19,
+      "MunichSBahn_DbRegioAgBayernS1": 23,
+      "MunichSBahn_DbRegioAgBayernS2": 41,
+      "MunichSBahn_DbRegioAgBayernS20": 8,
+      "MunichSBahn_DbRegioAgBayernS3": 31,
+      "MunichSBahn_DbRegioAgBayernS4": 24,
+      "MunichSBahn_DbRegioAgBayernS6": 35,
+      "MunichSBahn_DbRegioAgBayernS7": 36,
+      "MunichSBahn_DbRegioAgBayernS8": 32
+    }
+  }
+}

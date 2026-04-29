@@ -1,0 +1,72 @@
+{
+  "city": "blackpool",
+  "continent": "europe",
+  "bbox": [
+    53.77807466971092,
+    -3.0583992372829725,
+    53.92761261638358,
+    -3.0080675289977172
+  ],
+  "localLanguages": [
+    "en"
+  ],
+  "modes": [
+    "subway",
+    "light_rail",
+    "tram",
+    "rail",
+    "funicular",
+    "monorail",
+    "cable_car",
+    "gondola",
+    "chair_lift"
+  ],
+  "lines": [
+    {
+      "id": "blackpoolT1",
+      "name": "T1 (Starr Gate – Fleetwood Ferry)",
+      "keywords": [
+        "T1 Starr Gate – Fleetwood Ferry",
+        "blackpool T1"
+      ],
+      "order": 0,
+      "icon": "europe/uk/blackpool/blackpoolT1.png"
+    },
+    {
+      "id": "blackpoolT2",
+      "name": "T2 (Starr Gate – North Station)",
+      "keywords": [
+        "T2 Starr Gate – North Station",
+        "blackpool T2"
+      ],
+      "order": 1,
+      "icon": "europe/uk/blackpool/blackpoolT2.png"
+    },
+    {
+      "id": "blackpoolT3",
+      "name": "T3 (Fleetwood Ferry – North Station)",
+      "keywords": [
+        "T3 Fleetwood Ferry – North Station",
+        "blackpool T3"
+      ],
+      "order": 2,
+      "icon": "europe/uk/blackpool/blackpoolT3.png"
+    },
+    {
+      "id": "blackpoolheritage",
+      "name": "Heritage Tram",
+      "keywords": [
+        "Heritage Tram",
+        "Heritage",
+        "Heritage Line",
+        "blackpoolheritage",
+        "blackpoolheritage Line"
+      ],
+      "order": 3,
+      "icon": "europe/uk/blackpool/blackpoolheritage.png"
+    }
+  ],
+  "stationAliases": {},
+  "stationLocalNames": {},
+  "manualCoords": {}
+}

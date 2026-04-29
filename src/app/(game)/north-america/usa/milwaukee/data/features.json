@@ -1,0 +1,341 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.89623939585833,
+          43.047886248909215
+        ]
+      },
+      "properties": {
+        "name": "Burns Commons",
+        "line": "TheHopM",
+        "id": 0
+      },
+      "id": 0
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.90001787140909,
+          43.04815284406973
+        ]
+      },
+      "properties": {
+        "name": "Ogden at Astor",
+        "line": "TheHopM",
+        "id": 1
+      },
+      "id": 1
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.90381721197949,
+          43.04816808884571
+        ]
+      },
+      "properties": {
+        "name": "Ogden/Jackson",
+        "line": "TheHopM",
+        "id": 2
+      },
+      "id": 2
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.90474940221603,
+          43.04541516773307
+        ]
+      },
+      "properties": {
+        "name": "Jackson at Juneau",
+        "line": "TheHopM",
+        "id": 3
+      },
+      "id": 3
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.90503976118633,
+          43.042642101573925
+        ]
+      },
+      "properties": {
+        "name": "Cathedral Square",
+        "line": "TheHopM",
+        "id": 4
+      },
+      "id": 4
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.90804845570733,
+          43.041510004317686
+        ]
+      },
+      "properties": {
+        "name": "City Hall",
+        "line": "TheHopM",
+        "id": 5
+      },
+      "id": 5
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.90675752925922,
+          43.04154951437296
+        ]
+      },
+      "properties": {
+        "name": "City Hall",
+        "line": "TheHopM",
+        "id": 6
+      },
+      "id": 6
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.90777133913575,
+          43.03834358072711
+        ]
+      },
+      "properties": {
+        "name": "Wisconsin Avenue",
+        "line": "TheHopM",
+        "id": 7
+      },
+      "id": 7
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.90644663512309,
+          43.038358399319584
+        ]
+      },
+      "properties": {
+        "name": "Wisconsin Avenue",
+        "line": "TheHopM",
+        "id": 8
+      },
+      "id": 8
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.90840729084312,
+          43.035084196642174
+        ]
+      },
+      "properties": {
+        "name": "Historic Third Ward",
+        "line": "TheHopM",
+        "id": 9
+      },
+      "id": 9
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.90681941617322,
+          43.03504887997419
+        ]
+      },
+      "properties": {
+        "name": "Historic Third Ward",
+        "line": "TheHopM",
+        "id": 10
+      },
+      "id": 10
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.91152689051358,
+          43.034803891843694
+        ]
+      },
+      "properties": {
+        "name": "St. Paul at Plankinton",
+        "line": "TheHopM",
+        "id": 11
+      },
+      "id": 11
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.9162063062297,
+          43.03503995582935
+        ]
+      },
+      "properties": {
+        "name": "Milwaukee Intermodal Station",
+        "line": "TheHopM",
+        "id": 12
+      },
+      "id": 12
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.90804845570733,
+          43.041510004317686
+        ]
+      },
+      "properties": {
+        "name": "City Hall",
+        "line": "TheHopL",
+        "id": 13
+      },
+      "id": 13
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.90675752925922,
+          43.04154951437296
+        ]
+      },
+      "properties": {
+        "name": "City Hall",
+        "line": "TheHopL",
+        "id": 14
+      },
+      "id": 14
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.90777133913575,
+          43.03834358072711
+        ]
+      },
+      "properties": {
+        "name": "Wisconsin Avenue",
+        "line": "TheHopL",
+        "id": 15
+      },
+      "id": 15
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.90644663512309,
+          43.038358399319584
+        ]
+      },
+      "properties": {
+        "name": "Wisconsin Avenue",
+        "line": "TheHopL",
+        "id": 16
+      },
+      "id": 16
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.90840729084312,
+          43.035084196642174
+        ]
+      },
+      "properties": {
+        "name": "Historic Third Ward",
+        "line": "TheHopL",
+        "id": 17
+      },
+      "id": 17
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.90681941617322,
+          43.03504887997419
+        ]
+      },
+      "properties": {
+        "name": "Historic Third Ward",
+        "line": "TheHopL",
+        "id": 18
+      },
+      "id": 18
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.90421234111847,
+          43.03763776740091
+        ]
+      },
+      "properties": {
+        "name": "Michigan at Jackson",
+        "line": "TheHopL",
+        "id": 19
+      },
+      "id": 19
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.9045300597593,
+          43.03646676158844
+        ]
+      },
+      "properties": {
+        "name": "Clybourn at Jefferson",
+        "line": "TheHopL",
+        "id": 20
+      },
+      "id": 20
+    }
+  ]
+}

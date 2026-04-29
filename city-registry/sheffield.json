@@ -1,0 +1,70 @@
+{
+  "city": "sheffield",
+  "continent": "europe",
+  "bbox": [
+    53.328570482778886,
+    -1.5101605302804206,
+    53.4429568484816,
+    -1.3433177336855098
+  ],
+  "localLanguages": [
+    "en"
+  ],
+  "modes": [
+    "subway",
+    "light_rail",
+    "tram",
+    "rail",
+    "funicular",
+    "monorail",
+    "cable_car",
+    "gondola",
+    "chair_lift"
+  ],
+  "lines": [
+    {
+      "id": "Yellow",
+      "name": "Yellow",
+      "keywords": [
+        "Yellow",
+        "Yellow Line"
+      ],
+      "order": 0,
+      "icon": "europe/uk/sheffield/sheffieldyellow.png"
+    },
+    {
+      "id": "Blue",
+      "name": "Blue",
+      "keywords": [
+        "Blue",
+        "Blue Line"
+      ],
+      "order": 1,
+      "icon": "europe/uk/sheffield/sheffieldblue.png"
+    },
+    {
+      "id": "Purple",
+      "name": "Purple",
+      "keywords": [
+        "Purple",
+        "Purple Line"
+      ],
+      "order": 2,
+      "icon": "europe/uk/sheffield/sheffieldpurple.png"
+    },
+    {
+      "id": "TramTrain",
+      "name": "Tram Train",
+      "keywords": [
+        "Tram Train",
+        "Train",
+        "Train Line"
+      ],
+      "order": 3,
+      "icon": "europe/uk/sheffield/sheffieldtt.png"
+    }
+  ],
+  "stationAliases": {},
+  "stationLocalNames": {},
+  "manualCoords": {}
+}

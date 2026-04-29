@@ -1,0 +1,78 @@
+{
+  "city": "twincities",
+  "continent": "north america",
+  "bbox": [
+    44.8518719821616,
+    -93.44444011245236,
+    44.984050485549375,
+    -93.08627843856812
+  ],
+  "localLanguages": [
+    "en"
+  ],
+  "modes": [
+    "subway",
+    "light_rail",
+    "tram",
+    "rail",
+    "funicular",
+    "monorail",
+    "cable_car",
+    "gondola",
+    "chair_lift"
+  ],
+  "lines": [
+    {
+      "id": "MAXBlue",
+      "name": "METRO Blue Line",
+      "keywords": [
+        "METRO Blue Line",
+        "Blue",
+        "Blue Line",
+        "MAX Blue"
+      ],
+      "order": 0,
+      "icon": "north-america/usa/twincities/MAXBlue.svg"
+    },
+    {
+      "id": "MAXGreen",
+      "name": "METRO Green Line",
+      "keywords": [
+        "METRO Green Line",
+        "Green",
+        "Green Line",
+        "MAX Green"
+      ],
+      "order": 1
+    },
+    {
+      "id": "HubTram",
+      "name": "Hub Tram",
+      "keywords": [
+        "Hub Tram",
+        "Hub",
+        "Hub Line"
+      ],
+      "order": 2,
+      "icon": "north-america/usa/twincities/HubTram.png"
+    },
+    {
+      "id": "ConcourseCMover",
+      "name": "'C' Concourse People Mover",
+      "keywords": [
+        "'C' Concourse People Mover",
+        "Line C",
+        "C Line",
+        "Route C",
+        "Line C Line",
+        "Route C Line",
+        "Concourse C Mover"
+      ],
+      "order": 3,
+      "icon": "north-america/usa/twincities/ConcourseCMover.png"
+    }
+  ],
+  "stationAliases": {},
+  "stationLocalNames": {},
+  "manualCoords": {}
+}

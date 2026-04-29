@@ -1,0 +1,153 @@
+{
+  "city": "dallas",
+  "continent": "north america",
+  "bbox": [
+    32.6526872120431,
+    -97.33874007873743,
+    33.21417451390487,
+    -96.56071221012063
+  ],
+  "localLanguages": [
+    "en"
+  ],
+  "modes": [
+    "subway",
+    "light_rail",
+    "tram",
+    "rail",
+    "funicular",
+    "monorail",
+    "cable_car",
+    "gondola",
+    "chair_lift"
+  ],
+  "lines": [
+    {
+      "id": "DARTRed",
+      "name": "Red",
+      "keywords": [
+        "Red",
+        "Red Line",
+        "DART Red"
+      ],
+      "order": 0,
+      "icon": "north-america/usa/dallas/DARTRed.svg"
+    },
+    {
+      "id": "DARTBlue",
+      "name": "Blue",
+      "keywords": [
+        "Blue",
+        "Blue Line",
+        "DART Blue"
+      ],
+      "order": 1,
+      "icon": "north-america/usa/dallas/DARTBlue.svg"
+    },
+    {
+      "id": "DARTGreen",
+      "name": "Green",
+      "keywords": [
+        "Green",
+        "Green Line",
+        "DART Green"
+      ],
+      "order": 2,
+      "icon": "north-america/usa/dallas/DARTGreen.svg"
+    },
+    {
+      "id": "DARTOrange",
+      "name": "Orange",
+      "keywords": [
+        "Orange",
+        "Orange Line",
+        "DART Orange"
+      ],
+      "order": 3,
+      "icon": "north-america/usa/dallas/DARTOrange.svg"
+    },
+    {
+      "id": "DARTSilver",
+      "name": "Silver",
+      "keywords": [
+        "Silver",
+        "Silver Line",
+        "DART Silver"
+      ],
+      "order": 4,
+      "icon": "north-america/usa/dallas/DARTSilver.svg"
+    },
+    {
+      "id": "DallasStreetcar",
+      "name": "Dallas Streetcar",
+      "keywords": [
+        "Dallas Streetcar"
+      ],
+      "order": 5,
+      "icon": "north-america/usa/dallas/DallasStreetcar.png"
+    },
+    {
+      "id": "MLineTrolley",
+      "name": "M-Line Trolley",
+      "keywords": [
+        "M-Line Trolley",
+        "M-",
+        "Line M",
+        "M Line",
+        "Route M",
+        "Line M Line",
+        "Route M Line"
+      ],
+      "order": 6,
+      "icon": "north-america/usa/dallas/MLineTrolley.svg"
+    },
+    {
+      "id": "TRE",
+      "name": "Trinity Railway Express",
+      "keywords": [
+        "Trinity Railway Express",
+        "Trinity Express",
+        "TRE",
+        "TRE Line"
+      ],
+      "order": 7,
+      "icon": "north-america/usa/dallas/TRE.png"
+    },
+    {
+      "id": "TEXRail",
+      "name": "TEXRail",
+      "keywords": [
+        "TEX Rail"
+      ],
+      "order": 8,
+      "icon": "north-america/usa/dallas/TEXRail.png"
+    },
+    {
+      "id": "ATrain",
+      "name": "A-train",
+      "keywords": [
+        "A-train",
+        "Line A",
+        "A Line",
+        "Route A",
+        "Line A Line",
+        "Route A Line"
+      ],
+      "order": 9,
+      "icon": "north-america/usa/dallas/A-train.png"
+    },
+    {
+      "id": "Skylink",
+      "name": "Skylink",
+      "keywords": [
+        "Skylink",
+        "Skylink Line"
+      ],
+      "order": 10,
+      "icon": "north-america/usa/dallas/DFWSkylink.png"
+    }
+  ],
+  "stationAliases": {},
+  "stationLocalNames": {},
+  "manualCoords": {}
+}

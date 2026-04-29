@@ -1,0 +1,39 @@
+{
+  "city": "newcastle",
+  "continent": "oceania",
+  "bbox": [
+    -32.9276082,
+    151.7587528,
+    -32.9240341,
+    151.7868013
+  ],
+  "localLanguages": [
+    "en"
+  ],
+  "modes": [
+    "subway",
+    "light_rail",
+    "tram",
+    "rail",
+    "funicular",
+    "monorail",
+    "cable_car",
+    "gondola",
+    "chair_lift"
+  ],
+  "lines": [
+    {
+      "id": "NewcastleLR",
+      "name": "Newcastle Light Rail",
+      "keywords": [
+        "Newcastle Light Rail",
+        "Newcastle LR"
+      ],
+      "order": 0,
+      "icon": "oceania/australia/newcastle/newcastleLR.png"
+    }
+  ],
+  "stationAliases": {},
+  "stationLocalNames": {},
+  "manualCoords": {}
+}

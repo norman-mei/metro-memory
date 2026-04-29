@@ -1,0 +1,128 @@
+{
+  "city": "montreal",
+  "continent": "north america",
+  "bbox": [
+    45.360618,
+    -74.140898,
+    45.773174,
+    -73.178496
+  ],
+  "localLanguages": [
+    "en",
+    "fr"
+  ],
+  "modes": [
+    "subway",
+    "light_rail",
+    "tram",
+    "rail",
+    "funicular",
+    "monorail",
+    "cable_car",
+    "gondola",
+    "chair_lift"
+  ],
+  "lines": [
+    {
+      "id": "STMMetroBleue",
+      "name": "Bleue",
+      "keywords": [
+        "Bleue",
+        "Bleue Line",
+        "STM Metro Bleue",
+        "STM Bleue"
+      ],
+      "order": 0,
+      "icon": "north-america/canada/montreal/STMMetroBleue.svg"
+    },
+    {
+      "id": "STMMetroJaune",
+      "name": "Jaune",
+      "keywords": [
+        "Jaune",
+        "Jaune Line",
+        "STM Metro Jaune",
+        "STM Jaune"
+      ],
+      "order": 1,
+      "icon": "north-america/canada/montreal/STMMetroJaune.svg"
+    },
+    {
+      "id": "STMMetroOrange",
+      "name": "Orange",
+      "keywords": [
+        "Orange",
+        "Orange Line",
+        "STM Metro Orange",
+        "STM Orange"
+      ],
+      "order": 2,
+      "icon": "north-america/canada/montreal/STMMetroOrange.svg"
+    },
+    {
+      "id": "STMMetroVerte",
+      "name": "Verte",
+      "keywords": [
+        "Verte",
+        "Verte Line",
+        "STM Metro Verte",
+        "STM Verte"
+      ],
+      "order": 3,
+      "icon": "north-america/canada/montreal/STMMetroVerte.svg"
+    },
+    {
+      "id": "AMTRailExo1",
+      "name": "exo1",
+      "keywords": [
+        "exo1",
+        "AMT Rail Exo1"
+      ],
+      "order": 4,
+      "icon": "north-america/canada/montreal/AMTRailExo1.svg"
+    },
+    {
+      "id": "AMTRailExo2",
+      "name": "exo2",
+      "keywords": [
+        "exo2",
+        "AMT Rail Exo2"
+      ],
+      "order": 5,
+      "icon": "north-america/canada/montreal/AMTRailExo2.svg"
+    },
+    {
+      "id": "AMTRailExo3",
+      "name": "exo3",
+      "keywords": [
+        "exo3",
+        "AMT Rail Exo3"
+      ],
+      "order": 6,
+      "icon": "north-america/canada/montreal/AMTRailExo3.svg"
+    },
+    {
+      "id": "AMTRailExo4",
+      "name": "exo4",
+      "keywords": [
+        "exo4",
+        "AMT Rail Exo4"
+      ],
+      "order": 7,
+      "icon": "north-america/canada/montreal/AMTRailExo4.svg"
+    },
+    {
+      "id": "AMTRailExo5",
+      "name": "exo5",
+      "keywords": [
+        "exo5",
+        "AMT Rail Exo5"
+      ],
+      "order": 8,
+      "icon": "north-america/canada/montreal/AMTRailExo5.svg"
+    }
+  ],
+  "stationAliases": {},
+  "stationLocalNames": {},
+  "manualCoords": {}
+}

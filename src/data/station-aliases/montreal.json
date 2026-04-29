@@ -1,0 +1,8 @@
+{
+  "Bonaventure": ["Gare Centrale", "Central Station", "Montreal Central Station", "Montréal Central Station"],
+  "Gare Centrale": ["Bonaventure", "Central Station", "Montreal Central Station", "Montréal Central Station"],
+  "Côte-Sainte-Catherine": ["Cote-Sainte-Catherine", "Côte Ste Catherine", "Cote Ste Catherine", "Cote Sainte Catherine"],
+  "Université-de-Montréal": ["Universite-de-Montreal", "Université de Montréal", "Universite de Montreal"],
+  "Île-des-Sœurs": ["Ile-des-Soeurs", "Île-des-Soeurs", "Ile des Soeurs", "Ile des Sœurs"],
+  "Fairview–Pointe-Claire": ["Fairview-Pointe-Claire", "Fairview Pointe-Claire", "Fairview"]
+}

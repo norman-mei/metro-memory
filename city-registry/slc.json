@@ -1,0 +1,90 @@
+{
+  "city": "slc",
+  "continent": "north america",
+  "bbox": [
+    40.22535710139957,
+    -112.04485978514909,
+    41.22608596994701,
+    -111.65975383282475
+  ],
+  "localLanguages": [
+    "en"
+  ],
+  "modes": [
+    "subway",
+    "light_rail",
+    "tram",
+    "rail",
+    "funicular",
+    "monorail",
+    "cable_car",
+    "gondola",
+    "chair_lift"
+  ],
+  "lines": [
+    {
+      "id": "UTARed",
+      "name": "TRAX Red Line",
+      "keywords": [
+        "TRAX Red Line",
+        "TRAX Red",
+        "UTA Red"
+      ],
+      "order": 0,
+      "icon": "north-america/usa/slc/UTARed.svg"
+    },
+    {
+      "id": "UTAGreen",
+      "name": "TRAX Green Line",
+      "keywords": [
+        "TRAX Green Line",
+        "TRAX Green",
+        "UTA Green"
+      ],
+      "order": 1,
+      "icon": "north-america/usa/slc/UTAGreen.svg"
+    },
+    {
+      "id": "UTABlue",
+      "name": "TRAX Blue Line",
+      "keywords": [
+        "TRAX Blue Line",
+        "TRAX Blue",
+        "UTA Blue"
+      ],
+      "order": 2,
+      "icon": "north-america/usa/slc/UTABlue.svg"
+    },
+    {
+      "id": "UTASLine",
+      "name": "S Line Streetcar",
+      "keywords": [
+        "S Line Streetcar",
+        "S Streetcar",
+        "Line S",
+        "S Line",
+        "Route S",
+        "Line S Line",
+        "Route S Line",
+        "UTAS Line",
+        "UTAS"
+      ],
+      "order": 3,
+      "icon": "north-america/usa/slc/UTASLine.svg"
+    },
+    {
+      "id": "UTAFR",
+      "name": "FrontRunner",
+      "keywords": [
+        "Front Runner",
+        "UTAFR",
+        "UTAFR Line"
+      ],
+      "order": 4,
+      "icon": "north-america/usa/slc/UTAFR.png"
+    }
+  ],
+  "stationAliases": {},
+  "stationLocalNames": {},
+  "manualCoords": {}
+}

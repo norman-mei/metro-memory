@@ -1,0 +1,662 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -113.51631736768124,
+          53.457765987048354
+        ]
+      },
+      "properties": {
+        "name": "Century Park",
+        "line": "ETSCapital",
+        "id": 0
+      },
+      "id": 0
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -113.51693745549017,
+          53.48553006331937
+        ]
+      },
+      "properties": {
+        "name": "Southgate",
+        "line": "ETSCapital",
+        "id": 1
+      },
+      "id": 1
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -113.52853976417084,
+          53.50290971750589
+        ]
+      },
+      "properties": {
+        "name": "South Campus/Fort Edmonton Park",
+        "line": "ETSCapital",
+        "id": 2,
+        "alternate_names": [
+          "South Campus",
+          "Fort Edmonton Park"
+        ]
+      },
+      "id": 2
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -113.52612758114061,
+          53.512977870465896
+        ]
+      },
+      "properties": {
+        "name": "McKernan/Belgravia",
+        "line": "ETSCapital",
+        "id": 3,
+        "alternate_names": [
+          "McKernan",
+          "Belgravia"
+        ]
+      },
+      "id": 3
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -113.52585086943846,
+          53.52041697222779
+        ]
+      },
+      "properties": {
+        "name": "Health Sciences/Jubilee",
+        "line": "ETSCapital",
+        "id": 4,
+        "alternate_names": [
+          "Health Sciences",
+          "Jubilee"
+        ]
+      },
+      "id": 4
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -113.5218459403854,
+          53.52512456508749
+        ]
+      },
+      "properties": {
+        "name": "University",
+        "line": "ETSCapital",
+        "id": 5
+      },
+      "id": 5
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -113.51022709122654,
+          53.53700922596122
+        ]
+      },
+      "properties": {
+        "name": "Government Centre",
+        "line": "ETSCapital",
+        "id": 6,
+        "alternate_names": [
+          "Government Center",
+          "Govt Center",
+          "Gov't Center"
+        ]
+      },
+      "id": 6
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -113.50540302796367,
+          53.5411200407554
+        ]
+      },
+      "properties": {
+        "name": "Corona",
+        "line": "ETSCapital",
+        "id": 7
+      },
+      "id": 7
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -113.49803041726732,
+          53.54090349338406
+        ]
+      },
+      "properties": {
+        "name": "Bay/Enterprise Square",
+        "line": "ETSCapital",
+        "id": 8,
+        "alternate_names": [
+          "Bay",
+          "Enterprise Square"
+        ]
+      },
+      "id": 8
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -113.49179587657773,
+          53.54125487828521
+        ]
+      },
+      "properties": {
+        "name": "Central",
+        "line": "ETSCapital",
+        "id": 9
+      },
+      "id": 9
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -113.48891143237356,
+          53.543558792880184
+        ]
+      },
+      "properties": {
+        "name": "Churchill",
+        "line": "ETSCapital",
+        "id": 10
+      },
+      "id": 10
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -113.47077816686587,
+          53.56002424491077
+        ]
+      },
+      "properties": {
+        "name": "Stadium",
+        "line": "ETSCapital",
+        "id": 11
+      },
+      "id": 11
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -113.45859338221861,
+          53.57072922122669
+        ]
+      },
+      "properties": {
+        "name": "Coliseum",
+        "line": "ETSCapital",
+        "id": 12
+      },
+      "id": 12
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -113.43329154358682,
+          53.58823707387778
+        ]
+      },
+      "properties": {
+        "name": "Belvedere",
+        "line": "ETSCapital",
+        "id": 13
+      },
+      "id": 13
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -113.41186015414891,
+          53.60173004730137
+        ]
+      },
+      "properties": {
+        "name": "Clareview",
+        "line": "ETSCapital",
+        "id": 14
+      },
+      "id": 14
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -113.52585086943846,
+          53.52041697222779
+        ]
+      },
+      "properties": {
+        "name": "Health Sciences/Jubilee",
+        "line": "ETSMetro",
+        "id": 15,
+        "alternate_names": [
+          "Health Sciences",
+          "Jubilee"
+        ]
+      },
+      "id": 15
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -113.5218459403854,
+          53.52512456508749
+        ]
+      },
+      "properties": {
+        "name": "University",
+        "line": "ETSMetro",
+        "id": 16
+      },
+      "id": 16
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -113.51022709122654,
+          53.53700922596122
+        ]
+      },
+      "properties": {
+        "name": "Government Centre",
+        "line": "ETSMetro",
+        "id": 17,
+        "alternate_names": [
+          "Government Center",
+          "Govt Center",
+          "Gov't Center"
+        ]
+      },
+      "id": 17
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -113.50540302796367,
+          53.5411200407554
+        ]
+      },
+      "properties": {
+        "name": "Corona",
+        "line": "ETSMetro",
+        "id": 18
+      },
+      "id": 18
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -113.49803041726732,
+          53.54090349338406
+        ]
+      },
+      "properties": {
+        "name": "Bay/Enterprise Square",
+        "line": "ETSMetro",
+        "id": 19,
+        "alternate_names": [
+          "Bay",
+          "Enterprise Square"
+        ]
+      },
+      "id": 19
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -113.49179587657773,
+          53.54125487828521
+        ]
+      },
+      "properties": {
+        "name": "Central",
+        "line": "ETSMetro",
+        "id": 20
+      },
+      "id": 20
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -113.48891143237356,
+          53.543558792880184
+        ]
+      },
+      "properties": {
+        "name": "Churchill",
+        "line": "ETSMetro",
+        "id": 21
+      },
+      "id": 21
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -113.49868197160858,
+          53.54778105568379
+        ]
+      },
+      "properties": {
+        "name": "MacEwan",
+        "line": "ETSMetro",
+        "id": 22
+      },
+      "id": 22
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -113.5013344274793,
+          53.558008008284666
+        ]
+      },
+      "properties": {
+        "name": "Kingsway/Royal Alex",
+        "line": "ETSMetro",
+        "id": 23,
+        "alternate_names": [
+          "Kingsway",
+          "Royal Alex"
+        ]
+      },
+      "id": 23
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -113.50887824545697,
+          53.566722408460315
+        ]
+      },
+      "properties": {
+        "name": "NAIT/Blatchford Market",
+        "line": "ETSMetro",
+        "id": 24,
+        "alternate_names": [
+          "NAIT",
+          "Blatchford Market"
+        ]
+      },
+      "id": 24
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -113.51046248527388,
+          53.57698787441992
+        ]
+      },
+      "properties": {
+        "name": "Blatchford Gate",
+        "line": "ETSMetro",
+        "id": 25
+      },
+      "id": 25
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -113.49418212743767,
+          53.543255095981365
+        ]
+      },
+      "properties": {
+        "name": "102 Street",
+        "line": "ETSValley",
+        "id": 26,
+        "alternate_names": [
+          "102 St"
+        ]
+      },
+      "id": 26
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -113.48891143237356,
+          53.543558792880184
+        ]
+      },
+      "properties": {
+        "name": "Churchill",
+        "line": "ETSValley",
+        "id": 27
+      },
+      "id": 27
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -113.48406525027566,
+          53.54447815535519
+        ]
+      },
+      "properties": {
+        "name": "Quarters",
+        "line": "ETSValley",
+        "id": 28
+      },
+      "id": 28
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -113.4800514589832,
+          53.536321252847756
+        ]
+      },
+      "properties": {
+        "name": "Muttart",
+        "line": "ETSValley",
+        "id": 29
+      },
+      "id": 29
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -113.46243196589977,
+          53.5317197208726
+        ]
+      },
+      "properties": {
+        "name": "Strathearn",
+        "line": "ETSValley",
+        "id": 30
+      },
+      "id": 30
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -113.45757627307087,
+          53.528091691163695
+        ]
+      },
+      "properties": {
+        "name": "Holyrood",
+        "line": "ETSValley",
+        "id": 31
+      },
+      "id": 31
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -113.4553757793884,
+          53.51979434632128
+        ]
+      },
+      "properties": {
+        "name": "Bonnie Doon",
+        "line": "ETSValley",
+        "id": 32
+      },
+      "id": 32
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -113.45514875142332,
+          53.50833416026999
+        ]
+      },
+      "properties": {
+        "name": "Avonmore",
+        "line": "ETSValley",
+        "id": 33
+      },
+      "id": 33
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -113.44400457617279,
+          53.49973361974518
+        ]
+      },
+      "properties": {
+        "name": "Davies",
+        "line": "ETSValley",
+        "id": 34
+      },
+      "id": 34
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -113.43899713562932,
+          53.474772130430885
+        ]
+      },
+      "properties": {
+        "name": "Millbourne/Woodvale",
+        "line": "ETSValley",
+        "id": 35,
+        "alternate_names": [
+          "Millbourne",
+          "Woodvale"
+        ]
+      },
+      "id": 35
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -113.43465341027412,
+          53.46302235775118
+        ]
+      },
+      "properties": {
+        "name": "Grey Nuns",
+        "line": "ETSValley",
+        "id": 36
+      },
+      "id": 36
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -113.42975873064825,
+          53.45854714605998
+        ]
+      },
+      "properties": {
+        "name": "Mill Woods",
+        "line": "ETSValley",
+        "id": 37
+      },
+      "id": 37
+    }
+  ]
+}

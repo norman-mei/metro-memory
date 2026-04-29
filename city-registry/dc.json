@@ -1,0 +1,149 @@
+{
+  "city": "dc",
+  "continent": "north america",
+  "bbox": [
+    38.21896401194312,
+    -77.96111110624754,
+    39.55853765827944,
+    -76.07191618791683
+  ],
+  "localLanguages": [
+    "en"
+  ],
+  "modes": [
+    "subway",
+    "light_rail",
+    "tram",
+    "rail",
+    "funicular",
+    "monorail",
+    "cable_car",
+    "gondola",
+    "chair_lift"
+  ],
+  "lines": [
+    {
+      "id": "WMATAMetroBlue",
+      "name": "Blue",
+      "keywords": [
+        "WMATA Blue Line: Franconia–Springfield → Downtown Largo",
+        "WMATA Blue : Franconia–Springfield → Downtown Largo",
+        "B",
+        "Line B",
+        "B Line",
+        "Route B",
+        "Washington Metro",
+        "Washington",
+        "Washington Metropolitan Area Transit Authority",
+        "Dc WMATA Blue Line Franconia Springfield Downtown Largo",
+        "Dc WMATA Blue Franconia Springfield Downtown Largo",
+        "Blue",
+        "WMATAMetroBlue"
+      ],
+      "order": 1000
+    },
+    {
+      "id": "WMATAMetroGreen",
+      "name": "Green",
+      "keywords": [
+        "WMATA Green Line: Greenbelt → Branch Avenue",
+        "WMATA Green : Greenbelt → Branch Avenue",
+        "G",
+        "Line G",
+        "G Line",
+        "Route G",
+        "Washington Metro",
+        "Washington",
+        "Washington Metropolitan Area Transit Authority",
+        "Dc WMATA Green Line Greenbelt Branch Avenue",
+        "Dc WMATA Green Greenbelt Branch Avenue",
+        "Green",
+        "WMATAMetroGreen"
+      ],
+      "order": 1000
+    },
+    {
+      "id": "WMATAMetroOrange",
+      "name": "Orange",
+      "keywords": [
+        "WMATA Orange Line: Vienna/Fairfax–GMU → New Carrollton",
+        "WMATA Orange : Vienna/Fairfax–GMU → New Carrollton",
+        "O",
+        "Line O",
+        "O Line",
+        "Route O",
+        "Washington Metro",
+        "Washington",
+        "Washington Metropolitan Area Transit Authority",
+        "Dc WMATA Orange Line Vienna Fairfax GMU New Carrollton",
+        "Dc WMATA Orange Vienna Fairfax GMU New Carrollton",
+        "Orange",
+        "WMATAMetroOrange"
+      ],
+      "order": 1000
+    },
+    {
+      "id": "WMATAMetroRed",
+      "name": "Red",
+      "keywords": [
+        "WMATA Red Line: Shady Grove → Glenmont",
+        "WMATA Red : Shady Grove → Glenmont",
+        "R",
+        "Line R",
+        "R Line",
+        "Route R",
+        "Washington Metro",
+        "Washington",
+        "Washington Metropolitan Area Transit Authority",
+        "Dc WMATA Red Line Shady Grove Glenmont",
+        "Dc WMATA Red Shady Grove Glenmont",
+        "Red",
+        "WMATAMetroRed"
+      ],
+      "order": 1000
+    },
+    {
+      "id": "WMATAMetroSilver",
+      "name": "Silver",
+      "keywords": [
+        "WMATA Silver Line: New Carrollton → Ashburn",
+        "WMATA Silver : New Carrollton → Ashburn",
+        "S",
+        "Line S",
+        "S Line",
+        "Route S",
+        "Washington Metro",
+        "Washington",
+        "Washington Metropolitan Area Transit Authority",
+        "Dc WMATA Silver Line New Carrollton Ashburn",
+        "Dc WMATA Silver New Carrollton Ashburn",
+        "Silver",
+        "WMATAMetroSilver"
+      ],
+      "order": 1000
+    },
+    {
+      "id": "WMATAMetroYellow",
+      "name": "Yellow",
+      "keywords": [
+        "WMATA Yellow Line: Huntington → Greenbelt",
+        "WMATA Yellow : Huntington → Greenbelt",
+        "Y",
+        "Line Y",
+        "Y Line",
+        "Route Y",
+        "Washington Metro",
+        "Washington",
+        "Washington Metropolitan Area Transit Authority",
+        "Dc WMATA Yellow Line Huntington Greenbelt",
+        "Dc WMATA Yellow Huntington Greenbelt",
+        "Yellow",
+        "WMATAMetroYellow"
+      ],
+      "order": 1000
+    }
+  ],
+  "stationAliases": {},
+  "stationLocalNames": {},
+  "manualCoords": {}
+}

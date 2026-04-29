@@ -1,0 +1,62 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# old metro-memory for reference
+/metro-memory-old
+/metro-memory-old/public/images
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+/playwright-report
+/test-results
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.dev-server/
+
+# local env files
+.env*.local
+.env
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+public/stats/*
+public/city-data/*
+public/city-cards/*
+
+# database artifacts
+prisma/**/*.db
+prisma/**/*.sqlite
+
+# metro sync cache
+/tmp/metro-sync
+
+/tools/**/node_modules/
+/tools/**/.next/
+/tools/**/out/
+
+# local codex history rewrite helpers
+.codex-history/
+.codex/

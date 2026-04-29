@@ -1,0 +1,252 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-94.57202292703087, 39.117044834871365]
+      },
+      "properties": {
+        "name": "Riverfront - Riverfront Drive",
+        "line": "KCStreetcar",
+        "id": 0
+      },
+      "id": 0
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-94.5815230556518, 39.11024294257421]
+      },
+      "properties": {
+        "name": "River Market North - 3rd & Grand",
+        "line": "KCStreetcar",
+        "id": 1
+      },
+      "id": 1
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-94.58435518561328, 39.10880449656569]
+      },
+      "properties": {
+        "name": "River Market West - 4th & Delaware",
+        "line": "KCStreetcar",
+        "id": 2
+      },
+      "id": 2
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-94.58204286459274, 39.10846427776438]
+      },
+      "properties": {
+        "name": "City Market - 5th & Walnut",
+        "line": "KCStreetcar",
+        "id": 3
+      },
+      "id": 3
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-94.58305956815497, 39.10533516481538]
+      },
+      "properties": {
+        "name": "North Loop - 7th & Main",
+        "line": "KCStreetcar",
+        "id": 4
+      },
+      "id": 4
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-94.58309679455125, 39.10314277063229]
+      },
+      "properties": {
+        "name": "Library - 9th & Main",
+        "line": "KCStreetcar",
+        "id": 5
+      },
+      "id": 5
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-94.58320020797129, 39.09993270284758]
+      },
+      "properties": {
+        "name": "Metro Center - 12th & Main",
+        "line": "KCStreetcar",
+        "id": 6
+      },
+      "id": 6
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-94.58335184405337, 39.09684682191685]
+      },
+      "properties": {
+        "name": "Power & Light - 14th & Main",
+        "line": "KCStreetcar",
+        "id": 7
+      },
+      "id": 7
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-94.58346766687481, 39.09455143145942]
+      },
+      "properties": {
+        "name": "Kauffman Center - 16th & Main",
+        "line": "KCStreetcar",
+        "id": 8
+      },
+      "id": 8
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-94.58368706207382, 39.090519478421776]
+      },
+      "properties": {
+        "name": "Crossroads - 19th & Main",
+        "line": "KCStreetcar",
+        "id": 9
+      },
+      "id": 9
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-94.58402211904483, 39.08487506457678]
+      },
+      "properties": {
+        "name": "Union Station - Pershing & Main",
+        "line": "KCStreetcar",
+        "id": 10
+      },
+      "id": 10
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-94.58466559269672, 39.078263144173874]
+      },
+      "properties": {
+        "name": "WWI Museum & Memorial - 27th & Main",
+        "line": "KCStreetcar",
+        "id": 11
+      },
+      "id": 11
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-94.58534476261265, 39.0706627335556]
+      },
+      "properties": {
+        "name": "Union Hill - 31st & Main",
+        "line": "KCStreetcar",
+        "id": 12
+      },
+      "id": 12
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-94.58568631654863, 39.06380175015555]
+      },
+      "properties": {
+        "name": "Armour - Armour Blvd & Main",
+        "line": "KCStreetcar",
+        "id": 13
+      },
+      "id": 13
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-94.58613189812479, 39.056610848619215]
+      },
+      "properties": {
+        "name": "Westport - 39th & Main",
+        "line": "KCStreetcar",
+        "id": 14
+      },
+      "id": 14
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-94.58653164555841, 39.04936802272915]
+      },
+      "properties": {
+        "name": "Southmoreland - 43rd & Main",
+        "line": "KCStreetcar",
+        "id": 15
+      },
+      "id": 15
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-94.58673690204694, 39.04566600636232]
+      },
+      "properties": {
+        "name": "Art Museums - 45th & Main",
+        "line": "KCStreetcar",
+        "id": 16
+      },
+      "id": 16
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-94.58661538434444, 39.04206775963676]
+      },
+      "properties": {
+        "name": "Plaza - Emanuel Cleaver II Blvd & Main",
+        "line": "KCStreetcar",
+        "id": 17
+      },
+      "id": 17
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-94.58424929349357, 39.03474059564809]
+      },
+      "properties": {
+        "name": "UMKC - 51st & Brookside Blvd",
+        "line": "KCStreetcar",
+        "id": 18
+      },
+      "id": 18
+    }
+  ]
+}

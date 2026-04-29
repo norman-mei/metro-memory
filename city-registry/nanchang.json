@@ -1,0 +1,101 @@
+{
+  "city": "nanchang",
+  "continent": "asia",
+  "bbox": [
+    28.522093,
+    115.716041,
+    28.8596232,
+    116.0775256
+  ],
+  "localLanguages": [
+    "zh"
+  ],
+  "modes": [
+    "subway",
+    "light_rail",
+    "tram",
+    "rail",
+    "funicular",
+    "monorail",
+    "cable_car",
+    "gondola",
+    "chair_lift"
+  ],
+  "lines": [
+    {
+      "id": "nanchang1",
+      "name": "Line 1",
+      "keywords": [
+        "Line 1",
+        "1 Line",
+        "L1",
+        "1号线",
+        "地铁1号线",
+        "1号線",
+        "1호선",
+        "Route 1",
+        "Tram Route 1",
+        "nanchang1"
+      ],
+      "order": 0,
+      "icon": "asia/china/nanchang/nanchang1.png"
+    },
+    {
+      "id": "nanchang2",
+      "name": "Line 2",
+      "keywords": [
+        "Line 2",
+        "2 Line",
+        "L2",
+        "2号线",
+        "地铁2号线",
+        "2号線",
+        "2호선",
+        "Route 2",
+        "Tram Route 2",
+        "nanchang2"
+      ],
+      "order": 1,
+      "icon": "asia/china/nanchang/nanchang2.png"
+    },
+    {
+      "id": "nanchang3",
+      "name": "Line 3",
+      "keywords": [
+        "Line 3",
+        "3 Line",
+        "L3",
+        "3号线",
+        "地铁3号线",
+        "3号線",
+        "3호선",
+        "Route 3",
+        "Tram Route 3",
+        "nanchang3"
+      ],
+      "order": 2,
+      "icon": "asia/china/nanchang/nanchang3.png"
+    },
+    {
+      "id": "nanchang4",
+      "name": "Line 4",
+      "keywords": [
+        "Line 4",
+        "4 Line",
+        "L4",
+        "4号线",
+        "地铁4号线",
+        "4号線",
+        "4호선",
+        "Route 4",
+        "Tram Route 4",
+        "nanchang4"
+      ],
+      "order": 3,
+      "icon": "asia/china/nanchang/nanchang4.png"
+    }
+  ],
+  "stationAliases": {},
+  "stationLocalNames": {},
+  "manualCoords": {}
+}

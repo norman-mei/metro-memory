@@ -1,0 +1,170 @@
+import type { Metadata } from 'next'
+
+import cityAssetManifest from './cityAssetManifest.json'
+import { CITY_PATH_MAP } from './cityPathMap'
+import { getMiniCityBySlug } from './miniCities'
+
+export const CITY_ASSETS_BASE_PATH = '/images'
+export const DEFAULT_CITY_ICON_PATH = '/favicon.ico'
+export const DEFAULT_CITY_OPEN_GRAPH_IMAGE_PATH = '/city-cards/_default.jpg'
+
+type CityAssetManifestEntry = {
+  icon?: boolean
+  iconVersion?: string
+  openGraphExtension?: string
+  openGraphVersion?: string
+}
+
+const CITY_ASSET_MANIFEST = cityAssetManifest as Record<
+  string,
+  CityAssetManifestEntry
+>
+
+const normalizeSlug = (slug: string | null | undefined) =>
+  slug?.trim().toLowerCase() || null
+
+const normalizePathFromLink = (link: string | null | undefined) => {
+  if (!link || !link.startsWith('/')) {
+    return null
+  }
+
+  return link.replace(/^\//, '').split(/[?#]/)[0] || null
+}
+
+const appendVersionQuery = (
+  assetPath: string,
+  version: string | null | undefined,
+) => (version ? `${assetPath}?v=${version}` : assetPath)
+
+const resolveCityAssetSlug = (
+  slug: string | null | undefined,
+): string | null => {
+  const normalizedSlug = normalizeSlug(slug)
+  if (!normalizedSlug) {
+    return null
+  }
+
+  const assetSourceSlug =
+    normalizeSlug(getMiniCityBySlug(normalizedSlug)?.assetSourceSlug) ??
+    normalizedSlug
+
+  if (assetSourceSlug && resolveCityAssetRoutePath(assetSourceSlug)) {
+    return assetSourceSlug
+  }
+
+  return resolveCityAssetRoutePath(normalizedSlug) ? normalizedSlug : null
+}
+
+export const resolveCityAssetRoutePath = (
+  slug: string | null | undefined,
+): string | null => {
+  const normalizedSlug = normalizeSlug(slug)
+  if (!normalizedSlug) {
+    return null
+  }
+
+  const directRoutePath =
+    CITY_PATH_MAP[normalizedSlug] ??
+    normalizePathFromLink(getMiniCityBySlug(normalizedSlug)?.link)
+  if (directRoutePath) {
+    return directRoutePath
+  }
+  return null
+}
+
+export const getCityAssetDirectory = (slug: string | null | undefined) => {
+  const routePath = resolveCityAssetRoutePath(resolveCityAssetSlug(slug))
+  return routePath ? `${CITY_ASSETS_BASE_PATH}/${routePath}` : null
+}
+
+export const resolveCityIconAssetSlug = (slug: string | null | undefined) => {
+  const normalizedSlug = normalizeSlug(slug)
+  if (!normalizedSlug) {
+    return null
+  }
+
+  return resolveCityAssetSlug(normalizedSlug)
+}
+
+export const resolveCityOpenGraphAssetSlug = (
+  slug: string | null | undefined,
+) => {
+  const normalizedSlug = normalizeSlug(slug)
+  if (!normalizedSlug) {
+    return null
+  }
+
+  return resolveCityAssetSlug(normalizedSlug)
+}
+
+export const getCityIconPath = (
+  slug: string | null | undefined,
+  fallbackPath = DEFAULT_CITY_ICON_PATH,
+) => {
+  const assetSlug = resolveCityAssetSlug(slug)
+  const assetRoutePath = resolveCityAssetRoutePath(assetSlug)
+  if (!assetRoutePath) {
+    return fallbackPath
+  }
+
+  return appendVersionQuery(
+    `${CITY_ASSETS_BASE_PATH}/${assetRoutePath}/icon.ico`,
+    assetSlug ? CITY_ASSET_MANIFEST[assetSlug]?.iconVersion : null,
+  )
+}
+
+export const getCityOpenGraphImagePath = (
+  slug: string | null | undefined,
+  fallbackPath = DEFAULT_CITY_OPEN_GRAPH_IMAGE_PATH,
+) => {
+  const assetSlug = resolveCityOpenGraphAssetSlug(slug)
+  if (!assetSlug) {
+    return fallbackPath
+  }
+
+  const assetRoutePath = resolveCityAssetRoutePath(assetSlug)
+  if (!assetRoutePath) {
+    return fallbackPath
+  }
+
+  const openGraphExtension =
+    (assetSlug ? CITY_ASSET_MANIFEST[assetSlug]?.openGraphExtension : null) ??
+    'jpg'
+
+  return appendVersionQuery(
+    `${CITY_ASSETS_BASE_PATH}/${assetRoutePath}/opengraph-image.${openGraphExtension}`,
+    assetSlug ? CITY_ASSET_MANIFEST[assetSlug]?.openGraphVersion : null,
+  )
+}
+
+const mergeMetadataRecord = <T extends Record<string, unknown>>(
+  value: T | null | undefined,
+) => (value && typeof value === 'object' ? value : ({} as T))
+
+export const withCityAssetMetadata = (
+  slug: string,
+  metadata: Metadata,
+): Metadata => {
+  const icon = getCityIconPath(slug)
+  const openGraphImage = getCityOpenGraphImagePath(slug)
+
+  return {
+    ...metadata,
+    icons: {
+      ...mergeMetadataRecord(metadata.icons as Record<string, unknown> | null),
+      icon,
+      shortcut: icon,
+      apple: icon,
+    },
+    openGraph: {
+      ...mergeMetadataRecord(
+        metadata.openGraph as Record<string, unknown> | null,
+      ),
+      images: [openGraphImage],
+    },
+    twitter: {
+      ...mergeMetadataRecord(metadata.twitter as Record<string, unknown> | null),
+      images: [openGraphImage],
+    },
+  }
+}

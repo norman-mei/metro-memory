@@ -1,0 +1,391 @@
+{
+  "ACE": {
+    "name": "Acela",
+    "color": "#00B5E2",
+    "backgroundColor": "#024C6E",
+    "textColor": "#FFFFFF",
+    "order": 0,
+    "icon": "north-america/usa/amtrak/ace-v2.png",
+    "badgeShape": "square",
+    "badgeFit": "contain"
+  },
+  "CRN": {
+    "name": "Carolinian",
+    "color": "#024C6E",
+    "backgroundColor": "#024C6E",
+    "textColor": "#FFFFFF",
+    "order": 1,
+    "icon": "north-america/usa/amtrak/crn-v2.png"
+  },
+  "NER": {
+    "name": "Northeast Regional",
+    "color": "#024C6E",
+    "backgroundColor": "#024C6E",
+    "textColor": "#FFFFFF",
+    "order": 2,
+    "icon": "north-america/usa/amtrak/ner-v2.png"
+  },
+  "VTR": {
+    "name": "Vermonter",
+    "color": "#024C6E",
+    "backgroundColor": "#024C6E",
+    "textColor": "#FFFFFF",
+    "order": 3,
+    "icon": "north-america/usa/amtrak/vtr-v2.png"
+  },
+  "ADR": {
+    "name": "Adirondack",
+    "color": "#024C6E",
+    "backgroundColor": "#024C6E",
+    "textColor": "#FFFFFF",
+    "order": 4,
+    "icon": "north-america/usa/amtrak/adr-v2.png"
+  },
+  "ACS": {
+    "name": "Amtrak Cascades",
+    "color": "#215240",
+    "backgroundColor": "#024C6E",
+    "textColor": "#FFFFFF",
+    "order": 5,
+    "icon": "north-america/usa/amtrak/acs-v2.png",
+    "progressOutlineColor": "#215240",
+    "badgeShape": "square",
+    "badgeFit": "contain"
+  },
+  "HTF": {
+    "name": "Hartford Line",
+    "color": "#024C6E",
+    "backgroundColor": "#024C6E",
+    "textColor": "#FFFFFF",
+    "order": 6,
+    "icon": "north-america/usa/amtrak/htf-v2.png"
+  },
+  "BKF": {
+    "name": "Berkshire Flyer",
+    "color": "#024C6E",
+    "backgroundColor": "#024C6E",
+    "textColor": "#FFFFFF",
+    "order": 7,
+    "icon": "north-america/usa/amtrak/bkf-v2.png"
+  },
+  "BLW": {
+    "name": "Blue Water",
+    "color": "#024C6E",
+    "backgroundColor": "#024C6E",
+    "textColor": "#FFFFFF",
+    "order": 8,
+    "icon": "north-america/usa/amtrak/blw-v2.png"
+  },
+  "BRS": {
+    "name": "Borealis",
+    "color": "#024C6E",
+    "backgroundColor": "#024C6E",
+    "textColor": "#FFFFFF",
+    "order": 9,
+    "icon": "north-america/usa/amtrak/brs-v2.png"
+  },
+  "CPC": {
+    "name": "Capitol Corridor",
+    "color": "#024C6E",
+    "backgroundColor": "#024C6E",
+    "textColor": "#FFFFFF",
+    "order": 10,
+    "icon": "north-america/usa/amtrak/cpc-v2.png"
+  },
+  "DWE": {
+    "name": "Downeaster",
+    "color": "#024C6E",
+    "backgroundColor": "#024C6E",
+    "textColor": "#FFFFFF",
+    "order": 11,
+    "icon": "north-america/usa/amtrak/dwe-v2.png"
+  },
+  "EMS": {
+    "name": "Empire Service",
+    "color": "#024C6E",
+    "backgroundColor": "#024C6E",
+    "textColor": "#FFFFFF",
+    "order": 12,
+    "icon": "north-america/usa/amtrak/ems-v2.png"
+  },
+  "GDR": {
+    "name": "Gold Runner",
+    "color": "#024C6E",
+    "backgroundColor": "#024C6E",
+    "textColor": "#FFFFFF",
+    "order": 13,
+    "icon": "north-america/usa/amtrak/gdr-v2.png"
+  },
+  "HLF": {
+    "name": "Heartland Flyer",
+    "color": "#024C6E",
+    "backgroundColor": "#024C6E",
+    "textColor": "#FFFFFF",
+    "order": 14,
+    "icon": "north-america/usa/amtrak/hlf-v2.png"
+  },
+  "HWA": {
+    "name": "Hiawatha",
+    "color": "#024C6E",
+    "backgroundColor": "#024C6E",
+    "textColor": "#FFFFFF",
+    "order": 15,
+    "icon": "north-america/usa/amtrak/hwa-v2.png"
+  },
+  "IAS": {
+    "name": "Illini and Saluki",
+    "color": "#024C6E",
+    "backgroundColor": "#024C6E",
+    "textColor": "#FFFFFF",
+    "order": 16,
+    "icon": "north-america/usa/amtrak/ias-v2.png"
+  },
+  "IZC": {
+    "name": "Illinois Zephyr and Carl Sandburg",
+    "color": "#024C6E",
+    "backgroundColor": "#024C6E",
+    "textColor": "#FFFFFF",
+    "order": 17,
+    "icon": "north-america/usa/amtrak/izc-v2.png"
+  },
+  "KSS": {
+    "name": "Keystone Service",
+    "color": "#024C6E",
+    "backgroundColor": "#024C6E",
+    "textColor": "#FFFFFF",
+    "order": 18,
+    "icon": "north-america/usa/amtrak/kss-v2.png"
+  },
+  "LCS": {
+    "name": "Lincoln Service",
+    "color": "#024C6E",
+    "backgroundColor": "#024C6E",
+    "textColor": "#FFFFFF",
+    "order": 19,
+    "icon": "north-america/usa/amtrak/lcs-v2.png"
+  },
+  "MPL": {
+    "name": "Maple Leaf",
+    "color": "#024C6E",
+    "backgroundColor": "#024C6E",
+    "textColor": "#FFFFFF",
+    "order": 20,
+    "icon": "north-america/usa/amtrak/mpl-v2.png"
+  },
+  "MGS": {
+    "name": "Mardi Gras Service",
+    "color": "#024C6E",
+    "backgroundColor": "#024C6E",
+    "textColor": "#FFFFFF",
+    "order": 21,
+    "icon": "north-america/usa/amtrak/mgs-v2.png"
+  },
+  "MRR": {
+    "name": "Missouri River Runner",
+    "color": "#024C6E",
+    "backgroundColor": "#024C6E",
+    "textColor": "#FFFFFF",
+    "order": 22,
+    "icon": "north-america/usa/amtrak/mrr-v2.png"
+  },
+  "PAN": {
+    "name": "Pennsylvanian",
+    "color": "#024C6E",
+    "backgroundColor": "#024C6E",
+    "textColor": "#FFFFFF",
+    "order": 23,
+    "icon": "north-america/usa/amtrak/pan-v2.png"
+  },
+  "PMQ": {
+    "name": "Pere Marquette",
+    "color": "#024C6E",
+    "backgroundColor": "#024C6E",
+    "textColor": "#FFFFFF",
+    "order": 24,
+    "icon": "north-america/usa/amtrak/pmq-v2.png"
+  },
+  "PDM": {
+    "name": "Piedmont",
+    "color": "#024C6E",
+    "backgroundColor": "#024C6E",
+    "textColor": "#FFFFFF",
+    "order": 25,
+    "icon": "north-america/usa/amtrak/pdm-v2.png"
+  },
+  "VLF": {
+    "name": "Valley Flyer",
+    "color": "#024C6E",
+    "backgroundColor": "#024C6E",
+    "textColor": "#FFFFFF",
+    "order": 26,
+    "icon": "north-america/usa/amtrak/vlf-v2.png"
+  },
+  "WPX": {
+    "name": "Winter Park Express",
+    "color": "#024C6E",
+    "backgroundColor": "#024C6E",
+    "textColor": "#FFFFFF",
+    "order": 27,
+    "icon": "north-america/usa/amtrak/wpx-v2.png"
+  },
+  "WLR": {
+    "name": "Wolverine",
+    "color": "#024C6E",
+    "backgroundColor": "#024C6E",
+    "textColor": "#FFFFFF",
+    "order": 28,
+    "icon": "north-america/usa/amtrak/wlr-v2.png"
+  },
+  "AUT": {
+    "name": "Auto Train",
+    "color": "#024C6E",
+    "backgroundColor": "#024C6E",
+    "textColor": "#FFFFFF",
+    "order": 29,
+    "icon": "north-america/usa/amtrak/aut-v2.png"
+  },
+  "CAZ": {
+    "name": "California Zephyr",
+    "color": "#024C6E",
+    "backgroundColor": "#024C6E",
+    "textColor": "#FFFFFF",
+    "order": 30,
+    "icon": "north-america/usa/amtrak/caz-v2.png"
+  },
+  "CRD": {
+    "name": "Cardinal",
+    "color": "#024C6E",
+    "backgroundColor": "#024C6E",
+    "textColor": "#FFFFFF",
+    "order": 31,
+    "icon": "north-america/usa/amtrak/crd-v2.png"
+  },
+  "CNO": {
+    "name": "City of New Orleans",
+    "color": "#024C6E",
+    "backgroundColor": "#024C6E",
+    "textColor": "#FFFFFF",
+    "order": 32,
+    "icon": "north-america/usa/amtrak/cno-v2.png"
+  },
+  "CRS": {
+    "name": "Crescent",
+    "color": "#024C6E",
+    "backgroundColor": "#024C6E",
+    "textColor": "#FFFFFF",
+    "order": 33,
+    "icon": "north-america/usa/amtrak/crs-v2.png"
+  },
+  "EMB": {
+    "name": "Empire Builder",
+    "color": "#024C6E",
+    "backgroundColor": "#024C6E",
+    "textColor": "#FFFFFF",
+    "order": 34,
+    "icon": "north-america/usa/amtrak/emb-v2.png"
+  },
+  "FLN": {
+    "name": "Floridian",
+    "color": "#024C6E",
+    "backgroundColor": "#024C6E",
+    "textColor": "#FFFFFF",
+    "order": 35,
+    "icon": "north-america/usa/amtrak/fln-v2.png"
+  },
+  "LSL": {
+    "name": "Lake Shore Limited",
+    "color": "#024C6E",
+    "backgroundColor": "#024C6E",
+    "textColor": "#FFFFFF",
+    "order": 36,
+    "icon": "north-america/usa/amtrak/lsl-v2.png"
+  },
+  "PMT": {
+    "name": "Palmetto",
+    "color": "#024C6E",
+    "backgroundColor": "#024C6E",
+    "textColor": "#FFFFFF",
+    "order": 37,
+    "icon": "north-america/usa/amtrak/pmt-v2.png"
+  },
+  "SLM": {
+    "name": "Silver Meteor",
+    "color": "#024C6E",
+    "backgroundColor": "#024C6E",
+    "textColor": "#FFFFFF",
+    "order": 38,
+    "icon": "north-america/usa/amtrak/slm-v2.png"
+  },
+  "SWC": {
+    "name": "Southwest Chief",
+    "color": "#024C6E",
+    "backgroundColor": "#024C6E",
+    "textColor": "#FFFFFF",
+    "order": 39,
+    "icon": "north-america/usa/amtrak/swc-v2.png"
+  },
+  "SSL": {
+    "name": "Sunset Limited",
+    "color": "#024C6E",
+    "backgroundColor": "#024C6E",
+    "textColor": "#FFFFFF",
+    "order": 40,
+    "icon": "north-america/usa/amtrak/ssl-v2.png"
+  },
+  "TXE": {
+    "name": "Texas Eagle",
+    "color": "#024C6E",
+    "backgroundColor": "#024C6E",
+    "textColor": "#FFFFFF",
+    "order": 41,
+    "icon": "north-america/usa/amtrak/txe-v2.png"
+  },
+  "CPL": {
+    "name": "Capitol Limited",
+    "color": "#024C6E",
+    "backgroundColor": "#024C6E",
+    "textColor": "#FFFFFF",
+    "order": 42,
+    "icon": "north-america/usa/amtrak/cpl.png"
+  },
+  "CST": {
+    "name": "Coast Starlight",
+    "color": "#024C6E",
+    "backgroundColor": "#024C6E",
+    "textColor": "#FFFFFF",
+    "order": 43,
+    "icon": "north-america/usa/amtrak/csl-v2.png"
+  },
+  "EAX": {
+    "name": "Ethan Allen Express",
+    "color": "#024C6E",
+    "backgroundColor": "#024C6E",
+    "textColor": "#FFFFFF",
+    "order": 44,
+    "icon": "north-america/usa/amtrak/eax-v2.png"
+  },
+  "HOS": {
+    "name": "Hoosier State",
+    "color": "#024C6E",
+    "backgroundColor": "#024C6E",
+    "textColor": "#FFFFFF",
+    "order": 45,
+    "icon": "north-america/usa/amtrak/hos.png"
+  },
+  "PSL": {
+    "name": "Pacific Surfliner",
+    "color": "#024C6E",
+    "backgroundColor": "#024C6E",
+    "textColor": "#FFFFFF",
+    "order": 46,
+    "icon": "north-america/usa/amtrak/psl-v2.png"
+  },
+  "SLS": {
+    "name": "Silver Star",
+    "color": "#024C6E",
+    "backgroundColor": "#024C6E",
+    "textColor": "#FFFFFF",
+    "order": 47,
+    "icon": "north-america/usa/amtrak/sls.png"
+  }
+}

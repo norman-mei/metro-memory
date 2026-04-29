@@ -1,0 +1,114 @@
+{
+  "city": "kyoto",
+  "continent": "asia",
+  "bbox": [
+    34.9329593,
+    135.6778322,
+    35.0696375,
+    135.8638291
+  ],
+  "localLanguages": [
+    "ja"
+  ],
+  "modes": [
+    "subway",
+    "light_rail",
+    "tram",
+    "rail",
+    "funicular",
+    "monorail",
+    "cable_car",
+    "gondola",
+    "chair_lift"
+  ],
+  "lines": [
+    {
+      "id": "Karasuma",
+      "name": "烏丸線 Karasuma Line",
+      "keywords": [
+        "烏丸線 Karasuma Line",
+        "烏丸線 Karasuma",
+        "Karasuma",
+        "Karasuma Line"
+      ],
+      "order": 0,
+      "icon": "asia/japan/kyoto/karasuma.png"
+    },
+    {
+      "id": "Tozai",
+      "name": "東西線 Tōzai Line",
+      "keywords": [
+        "東西線 Tōzai Line",
+        "東西線 Tōzai",
+        "Line T",
+        "T Line",
+        "Route T",
+        "Line T Line",
+        "Route T Line",
+        "Tozai",
+        "Tozai Line"
+      ],
+      "order": 1,
+      "icon": "asia/japan/kyoto/tozai.png"
+    },
+    {
+      "id": "Arashiyama",
+      "name": "嵐山本線 Arashiyama Line",
+      "keywords": [
+        "嵐山本線 Arashiyama Line",
+        "嵐山本線 Arashiyama",
+        "Arashiyama",
+        "Arashiyama Line"
+      ],
+      "order": 2,
+      "icon": "asia/japan/kyoto/arashiyama.png"
+    },
+    {
+      "id": "Kitano",
+      "name": "北野線 Kitano Line",
+      "keywords": [
+        "北野線 Kitano Line",
+        "北野線 Kitano",
+        "Kitano",
+        "Kitano Line"
+      ],
+      "order": 3,
+      "icon": "asia/japan/kyoto/kitano.png"
+    },
+    {
+      "id": "Eizan Cable",
+      "name": "鋼索線 Eizan Cable",
+      "keywords": [
+        "鋼索線 Eizan Cable",
+        "Eizan Cable"
+      ],
+      "order": 4,
+      "icon": "asia/japan/kyoto/cable.png"
+    },
+    {
+      "id": "Eizan Ropeway",
+      "name": "Eizan Ropeway",
+      "keywords": [
+        "Eizan Ropeway"
+      ],
+      "order": 5,
+      "icon": "asia/japan/kyoto/ropeway.png"
+    },
+    {
+      "id": "Hieizan Railway",
+      "name": "比叡山鉄道 Hieizan Railway",
+      "keywords": [
+        "比叡山鉄道 Hieizan Railway",
+        "比叡山鉄道 Hieizan",
+        "Hieizan Railway",
+        "Hieizan",
+        "Hieizan Line"
+      ],
+      "order": 6,
+      "icon": "asia/japan/kyoto/hieizan.png"
+    }
+  ],
+  "stationAliases": {},
+  "stationLocalNames": {},
+  "manualCoords": {}
+}

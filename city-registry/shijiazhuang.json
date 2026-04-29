@@ -1,0 +1,83 @@
+{
+  "city": "shijiazhuang",
+  "continent": "asia",
+  "bbox": [
+    37.9674481,
+    114.4011736,
+    38.1621861,
+    114.6712594
+  ],
+  "localLanguages": [
+    "zh"
+  ],
+  "modes": [
+    "subway",
+    "light_rail",
+    "tram",
+    "rail",
+    "funicular",
+    "monorail",
+    "cable_car",
+    "gondola",
+    "chair_lift"
+  ],
+  "lines": [
+    {
+      "id": "shijiazhuang1",
+      "name": "Line 1",
+      "keywords": [
+        "Line 1",
+        "1 Line",
+        "L1",
+        "1号线",
+        "地铁1号线",
+        "1号線",
+        "1호선",
+        "Route 1",
+        "Tram Route 1",
+        "shijiazhuang1"
+      ],
+      "order": 0,
+      "icon": "asia/china/shijiazhuang/shijiazhuang1.png"
+    },
+    {
+      "id": "shijiazhuang2",
+      "name": "Line 2",
+      "keywords": [
+        "Line 2",
+        "2 Line",
+        "L2",
+        "2号线",
+        "地铁2号线",
+        "2号線",
+        "2호선",
+        "Route 2",
+        "Tram Route 2",
+        "shijiazhuang2"
+      ],
+      "order": 1,
+      "icon": "asia/china/shijiazhuang/shijiazhuang2.png"
+    },
+    {
+      "id": "shijiazhuang3",
+      "name": "Line 3",
+      "keywords": [
+        "Line 3",
+        "3 Line",
+        "L3",
+        "3号线",
+        "地铁3号线",
+        "3号線",
+        "3호선",
+        "Route 3",
+        "Tram Route 3",
+        "shijiazhuang3"
+      ],
+      "order": 2,
+      "icon": "asia/china/shijiazhuang/shijiazhuang3.png"
+    }
+  ],
+  "stationAliases": {},
+  "stationLocalNames": {},
+  "manualCoords": {}
+}

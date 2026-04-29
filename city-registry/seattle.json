@@ -1,0 +1,168 @@
+{
+  "city": "seattle",
+  "continent": "north america",
+  "bbox": [
+    47.15218780083131,
+    -122.5007995642418,
+    47.9799319922735,
+    -122.1075021
+  ],
+  "localLanguages": [
+    "en"
+  ],
+  "modes": [
+    "subway",
+    "light_rail",
+    "tram",
+    "rail",
+    "funicular",
+    "monorail",
+    "cable_car",
+    "gondola",
+    "chair_lift"
+  ],
+  "lines": [
+    {
+      "id": "SoundTransit1",
+      "name": "1 Line",
+      "keywords": [
+        "1 Line",
+        "Line 1",
+        "L1",
+        "1号线",
+        "地铁1号线",
+        "1号線",
+        "1호선",
+        "Route 1",
+        "Tram Route 1",
+        "Sound Transit1"
+      ],
+      "order": 0,
+      "icon": "north-america/usa/seattle/SoundTransit1.svg"
+    },
+    {
+      "id": "SoundTransit2",
+      "name": "2 Line",
+      "keywords": [
+        "2 Line",
+        "Line 2",
+        "L2",
+        "2号线",
+        "地铁2号线",
+        "2号線",
+        "2호선",
+        "Route 2",
+        "Tram Route 2",
+        "Sound Transit2"
+      ],
+      "order": 1,
+      "icon": "north-america/usa/seattle/SoundTransit2.svg"
+    },
+    {
+      "id": "SoundTransitT",
+      "name": "T Line",
+      "keywords": [
+        "T Line",
+        "Line T",
+        "Route T",
+        "Line T Line",
+        "Route T Line",
+        "Sound Transit T"
+      ],
+      "order": 2,
+      "icon": "north-america/usa/seattle/SoundTransitT.svg"
+    },
+    {
+      "id": "SoundTransitN",
+      "name": "N Line",
+      "keywords": [
+        "N Line",
+        "Line N",
+        "Route N",
+        "Line N Line",
+        "Route N Line",
+        "Sound Transit N"
+      ],
+      "order": 3,
+      "icon": "north-america/usa/seattle/SoundTransitN.svg"
+    },
+    {
+      "id": "SoundTransitS",
+      "name": "S Line",
+      "keywords": [
+        "S Line",
+        "Line S",
+        "Route S",
+        "Line S Line",
+        "Route S Line",
+        "Sound Transit S"
+      ],
+      "order": 4,
+      "icon": "north-america/usa/seattle/SoundTransitS.svg"
+    },
+    {
+      "id": "SeattleStreetcarSLU",
+      "name": "South Lake Union",
+      "keywords": [
+        "South Lake Union",
+        "Seattle Streetcar SLU"
+      ],
+      "order": 5,
+      "icon": "north-america/usa/seattle/SLU.png"
+    },
+    {
+      "id": "SeattleStreetcarFirstHill",
+      "name": "First Hill",
+      "keywords": [
+        "First Hill",
+        "Seattle Streetcar First Hill"
+      ],
+      "order": 6,
+      "icon": "north-america/usa/seattle/FH.png"
+    },
+    {
+      "id": "SeattleCenterMonorail",
+      "name": "Seattle Center Monorail",
+      "keywords": [
+        "Seattle Center Monorail"
+      ],
+      "order": 7,
+      "icon": "north-america/usa/seattle/SeattleCenterMonorail.svg"
+    },
+    {
+      "id": "MAXGreen",
+      "name": "Green",
+      "keywords": [
+        "Green",
+        "Green Line",
+        "MAX Green"
+      ],
+      "order": 8
+    },
+    {
+      "id": "MAXBlue",
+      "name": "Blue",
+      "keywords": [
+        "Blue",
+        "Blue Line",
+        "MAX Blue"
+      ],
+      "order": 9,
+      "icon": "north-america/usa/seattle/MAXBlue.svg"
+    },
+    {
+      "id": "MAXYellow",
+      "name": "Yellow",
+      "keywords": [
+        "Yellow",
+        "Yellow Line",
+        "MAX Yellow"
+      ],
+      "order": 10,
+      "icon": "north-america/usa/seattle/MAXYellow.svg"
+    }
+  ],
+  "stationAliases": {},
+  "stationLocalNames": {},
+  "manualCoords": {}
+}

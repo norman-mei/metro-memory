@@ -1,0 +1,454 @@
+{
+  "parents": [
+    {
+      "parentSlug": "gba",
+      "parentName": "Greater Bay Area",
+      "parentLink": "/asia/china/gba",
+      "parentPath": "asia/china/gba",
+      "continent": "Asia",
+      "country": "china",
+      "children": [
+        {
+          "slug": "gba-guangzhou",
+          "name": "Guangzhou",
+          "link": "/asia/china/gba-guangzhou",
+          "assetSourceSlug": "gba-guangzhou",
+          "keywords": ["GZ Metro", "Guangzhou Metro", "Guangzhou Tram"],
+          "countingMode": "mini",
+          "includeLines": ["gzline1", "gzline2", "gzline3", "gzline4", "gzline5", "gzline6", "gzline7", "gzline8", "gzline9", "gzline10", "gzline11", "gzline12", "gzline13", "gzline14", "gzline18", "gzline21", "gzline22", "gzline24", "gzapm", "gzt_thp1", "gzt_thp2", "gzt_thz1", "gzsp_cable", "gzcw_cable"]
+        },
+        {
+          "slug": "gba-foshan",
+          "name": "Foshan",
+          "link": "/asia/china/gba-foshan",
+          "assetSourceSlug": "gba-foshan",
+          "keywords": ["Foshan Metro", "Guangfo"],
+          "countingMode": "mini",
+          "includeLines": ["fs_guangfo", "fs_line2", "fs_line3", "fs_tnh1"]
+        },
+        {
+          "slug": "gba-dongguan",
+          "name": "Dongguan",
+          "link": "/asia/china/gba-dongguan",
+          "assetSourceSlug": "gba-dongguan",
+          "keywords": ["Dongguan Rail Transit", "DGRT"],
+          "countingMode": "mini",
+          "includeLines": ["dongguanline1", "dongguanline2"]
+        },
+        {
+          "slug": "gba-shenzhen",
+          "name": "Shenzhen",
+          "link": "/asia/china/gba-shenzhen",
+          "assetSourceSlug": "gba-shenzhen",
+          "keywords": ["Shenzhen Metro", "Shenzhen Trams", "BYD", "Shenzhen Airport APM"],
+          "countingMode": "mini",
+          "includeLines": ["szline1", "szline2", "szline3", "szline4", "szline5", "szline6", "szline6b", "szline7", "szline8", "szline9", "szline10", "szline11", "szline12", "szline13", "szline14", "szline15", "szline16", "szline17", "szline20", "szline22", "szline25", "szline27", "szline29", "szline32", "sztram1", "sztram2", "szbyd1", "szairportapm"]
+        },
+        {
+          "slug": "gba-hong-kong",
+          "name": "Hong Kong",
+          "link": "/asia/china/gba-hong-kong",
+          "assetSourceSlug": "gba-hong-kong",
+          "keywords": ["MTR", "Hong Kong", "Light Rail", "Peak Tram", "Ngong Ping 360", "Airport APM"],
+          "countingMode": "mini",
+          "includeLines": ["EAL", "TML", "NOL", "AEL", "TCL", "TWL", "ISL", "KTL", "TKL", "SIL", "DRL", "XRL", "MTR505", "MTR507", "MTR610", "MTR614", "MTR614P", "MTR615", "MTR615P", "MTR705", "MTR706", "MTR751", "MTR751P", "MTR761P", "HKNP360", "HKAPMT1", "HKAPMT2", "HKAPMSKY", "HKT", "HKTPT", "HKOEX", "HKOCC"]
+        },
+        {
+          "slug": "gba-mtr-only",
+          "name": "Mass Transit Railway",
+          "link": "/asia/china/gba-mtr-only",
+          "assetSourceSlug": "gba-mtr-only",
+          "keywords": ["MTR Only", "MTR", "Hong Kong MTR", "Light Rail", "Ngong Ping 360", "Airport APM"],
+          "countingMode": "mini",
+          "includeLines": ["EAL", "TML", "NOL", "AEL", "TCL", "TWL", "ISL", "KTL", "TKL", "SIL", "DRL", "XRL", "MTR505", "MTR507", "MTR610", "MTR614", "MTR614P", "MTR615", "MTR615P", "MTR705", "MTR706", "MTR751", "MTR751P", "MTR761P", "HKNP360", "HKAPMT1", "HKAPMT2", "HKAPMSKY"]
+        },
+        {
+          "slug": "gba-macau",
+          "name": "Macau",
+          "link": "/asia/china/gba-macau",
+          "assetSourceSlug": "gba-macau",
+          "keywords": ["Macao", "Macau LRT", "Wynn", "Guia Hill", "Taipa Grande"],
+          "countingMode": "mini",
+          "includeLines": ["TPA", "HNQ", "SPV", "moeast", "wynnskycab", "mab_guia", "mab_taipa"]
+        }
+      ]
+    },
+    {
+      "parentSlug": "chicago",
+      "parentName": "Chicago",
+      "parentLink": "/north-america/usa/chicago",
+      "parentPath": "north-america/usa/chicago",
+      "continent": "North America",
+      "country": "usa",
+      "children": [
+        {
+          "slug": "chicago-cta",
+          "name": "Chicago Transit Authority",
+          "link": "/north-america/usa/chicago-cta",
+          "assetSourceSlug": "chicago-cta",
+          "keywords": ["Chicago Transit Authority", "L", "El"],
+          "countingMode": "mini",
+          "includeLines": ["CTAMetroBlueLine", "CTAMetroBrownLine", "CTAMetroGreenLine", "CTAMetroOrangeLine", "CTAMetroPinkLine", "CTAMetroPurpleLine", "CTAMetroRedLine", "CTAMetroYellowLine"]
+        },
+        {
+          "slug": "chicago-metra",
+          "name": "Metra",
+          "link": "/north-america/usa/chicago-metra",
+          "assetSourceSlug": "chicago-metra",
+          "keywords": ["Metra", "Commuter Rail"],
+          "countingMode": "mini",
+          "includeLines": ["Metra_BNSF", "Metra_HC", "Metra_ME", "Metra_ME_BI", "Metra_ME_SC", "Metra_MDN", "Metra_MDW", "Metra_NCS", "Metra_RI", "Metra_RI_Bev", "Metra_SWS", "Metra_UPN", "Metra_UPNW", "Metra_UPW"]
+        }
+      ]
+    },
+    {
+      "parentSlug": "california-state",
+      "parentName": "California State",
+      "parentLink": "/north-america/usa/california-state",
+      "parentPath": "north-america/usa/california-state",
+      "continent": "North America",
+      "country": "usa",
+      "children": [
+        {
+          "slug": "california-state-los-angeles",
+          "name": "Los Angeles",
+          "link": "/north-america/usa/california-state-los-angeles",
+          "assetSourceSlug": "california-state-los-angeles",
+          "keywords": ["LA Metro", "Los Angeles", "OCTA", "LAX", "Metrolink"],
+          "countingMode": "mini",
+          "includeLines": ["LACMTA_A", "LACMTA_B", "LACMTA_C", "LACMTA_D", "LACMTA_E", "LACMTA_K", "OCStreetcar", "LAXAPM", "MetrolinkAV", "MetrolinkVC", "MetrolinkSB", "MetrolinkRIV", "MetrolinkOC", "Metrolink91PV", "MetrolinkIEOC", "Arrow"]
+        },
+        {
+          "slug": "california-state-bay-area",
+          "name": "Bay Area",
+          "link": "/north-america/usa/california-state-bay-area",
+          "assetSourceSlug": "california-state-bay-area",
+          "keywords": ["Bay Area", "BART", "Caltrain", "Muni", "VTA", "SMART", "ACE"],
+          "countingMode": "mini",
+          "includeLines": ["BARTYellow", "BARTOrange", "BARTBlue", "BARTGreen", "BARTRed", "BARTOAC", "SFOBlue", "SFORed", "CaltrainLocal", "CaltrainLimited", "CaltrainExpress", "CaltrainSouth", "SMART", "ACE", "MuniJ", "MuniK", "MuniL", "MuniM", "MuniN", "MuniS", "MuniT", "MuniE", "MuniF", "MuniC", "MuniPH", "MuniPM", "VTABlue", "VTAGreen", "VTAOrange"]
+        },
+        {
+          "slug": "california-state-muni",
+          "name": "San Francisco Municipal Railway",
+          "link": "/north-america/usa/california-state-muni",
+          "assetSourceSlug": "california-state-muni",
+          "keywords": ["MUNI", "Muni Metro", "San Francisco Municipal Railway", "SFMTA", "San Francisco"],
+          "countingMode": "mini",
+          "includeLines": ["MuniJ", "MuniK", "MuniL", "MuniM", "MuniN", "MuniS", "MuniT", "MuniE", "MuniF", "MuniC", "MuniPH", "MuniPM"]
+        },
+        {
+          "slug": "california-state-san-diego",
+          "name": "San Diego",
+          "link": "/north-america/usa/california-state-san-diego",
+          "assetSourceSlug": "california-state-san-diego",
+          "keywords": ["San Diego", "MTS", "NCTD", "Trolley", "COASTER", "SPRINTER"],
+          "countingMode": "mini",
+          "includeLines": ["MTSBlue", "MTSOrange", "MTSGreen", "MTSSilver", "MTSSpecialEvents", "MTSCopper", "COASTER", "SPRINTER"]
+        },
+        {
+          "slug": "california-state-sacramento",
+          "name": "Sacramento",
+          "link": "/north-america/usa/california-state-sacramento",
+          "assetSourceSlug": "california-state-sacramento",
+          "keywords": ["Sacramento", "SacRT", "Sacramento Regional Transit", "Light Rail"],
+          "countingMode": "mini",
+          "includeLines": ["SacRTGold", "SacRTBlue", "SacRTGreen"]
+        },
+        {
+          "slug": "california-state-bart",
+          "name": "Bay Area Rapid Transit",
+          "link": "/north-america/usa/california-state-bart",
+          "assetSourceSlug": "california-state-bart",
+          "keywords": ["BART", "Bay Area Rapid Transit", "Oakland Airport Connector"],
+          "countingMode": "mini",
+          "includeLines": ["BARTYellow", "BARTOrange", "BARTBlue", "BARTGreen", "BARTRed", "BARTOAC"]
+        },
+        {
+          "slug": "california-state-caltrain",
+          "name": "Caltrain",
+          "link": "/north-america/usa/california-state-caltrain",
+          "assetSourceSlug": "california-state-caltrain",
+          "keywords": ["Caltrain", "Peninsula Corridor", "South County Connector"],
+          "countingMode": "mini",
+          "includeLines": ["CaltrainLocal", "CaltrainLimited", "CaltrainExpress", "CaltrainSouth"]
+        },
+        {
+          "slug": "california-state-vta",
+          "name": "Santa Clara Valley Transportation Authority",
+          "link": "/north-america/usa/california-state-vta",
+          "assetSourceSlug": "california-state-vta",
+          "keywords": ["VTA", "Santa Clara Valley Transportation Authority", "San Jose light rail"],
+          "countingMode": "mini",
+          "includeLines": ["VTABlue", "VTAGreen", "VTAOrange"]
+        },
+        {
+          "slug": "california-state-la-metro",
+          "name": "Los Angeles Metro",
+          "link": "/north-america/usa/california-state-la-metro",
+          "assetSourceSlug": "california-state-la-metro",
+          "keywords": ["LA Metro", "Los Angeles Metro", "LACMTA"],
+          "countingMode": "mini",
+          "includeLines": ["LACMTA_A", "LACMTA_B", "LACMTA_C", "LACMTA_D", "LACMTA_E", "LACMTA_K"]
+        },
+        {
+          "slug": "california-state-metrolink",
+          "name": "Metrolink",
+          "link": "/north-america/usa/california-state-metrolink",
+          "assetSourceSlug": "california-state-metrolink",
+          "keywords": ["Metrolink", "Southern California Regional Rail Authority", "Arrow"],
+          "countingMode": "mini",
+          "includeLines": ["MetrolinkAV", "MetrolinkVC", "MetrolinkSB", "MetrolinkRIV", "MetrolinkOC", "Metrolink91PV", "MetrolinkIEOC", "Arrow"]
+        }
+      ]
+    },
+    {
+      "parentSlug": "nyc",
+      "parentName": "New York",
+      "parentLink": "/north-america/usa/nyc",
+      "parentPath": "north-america/usa/nyc",
+      "continent": "North America",
+      "country": "usa",
+      "children": [
+        {
+          "slug": "nyc-subway",
+          "name": "New York City Subway",
+          "link": "/north-america/usa/nyc-subway",
+          "assetSourceSlug": "nyc-subway",
+          "keywords": ["Subway", "NYCTA", "Staten Island Railway", "IBX"],
+          "countingMode": "mini",
+          "includeLines": ["NewYorkSubway1", "NewYorkSubway2", "NewYorkSubway3", "NewYorkSubway4", "NewYorkSubway5", "NewYorkSubway6", "NewYorkSubway6X", "NewYorkSubway7", "NewYorkSubway7X", "NewYorkSubwayGS", "NewYorkSubwayA", "NewYorkSubwayB", "NewYorkSubwayC", "NewYorkSubwayD", "NewYorkSubwayE", "NewYorkSubwayF", "NewYorkSubwayFX", "NewYorkSubwayG", "NewYorkSubwayJ", "NewYorkSubwayL", "NewYorkSubwayM", "NewYorkSubwayN", "NewYorkSubwayQ", "NewYorkSubwayR", "NewYorkSubwayW", "NewYorkSubwayFS", "NewYorkSubwayT", "NewYorkSubwayZ", "IBX", "NewYorkSubwaySI", "NewYorkSubwaySIExpress"]
+        },
+        {
+          "slug": "nyc-lirr",
+          "name": "Long Island Rail Road",
+          "link": "/north-america/usa/nyc-lirr",
+          "assetSourceSlug": "nyc-lirr",
+          "keywords": ["Long Island Rail Road", "LIRR"],
+          "countingMode": "mini",
+          "includeLines": ["LIRRAtlantic", "LIRRBabylon", "LIRRBelmont", "LIRRFarRockaway", "LIRRHempstead", "LIRRLongBeach", "LIRRPortWashington", "LIRRRonkonkoma", "LIRRWestHempstead", "LIRRGreenport", "LIRRMontauk", "LIRROysterBay", "LIRRPortJefferson"]
+        },
+        {
+          "slug": "nyc-mnr",
+          "name": "Metro-North Railroad",
+          "link": "/north-america/usa/nyc-mnr",
+          "assetSourceSlug": "nyc-mnr",
+          "keywords": ["Metro-North", "MNR"],
+          "countingMode": "mini",
+          "includeLines": ["MNRRHarlem", "MNRRHudson", "MNRRDanbury", "MNRRNewCanaan", "MNRRNewHaven", "MNRRWaterbury", "NJTPascackValley", "NJTPortJervis"]
+        },
+        {
+          "slug": "nyc-mta",
+          "name": "Metropolitan Transportation Authority",
+          "link": "/north-america/usa/nyc-mta",
+          "assetSourceSlug": "nyc-mta",
+          "keywords": ["MTA", "Subway", "LIRR", "Metro-North"],
+          "countingMode": "mini",
+          "includeLines": ["NewYorkSubway1", "NewYorkSubway2", "NewYorkSubway3", "NewYorkSubway4", "NewYorkSubway5", "NewYorkSubway6", "NewYorkSubway6X", "NewYorkSubway7", "NewYorkSubway7X", "NewYorkSubwayGS", "NewYorkSubwayA", "NewYorkSubwayB", "NewYorkSubwayC", "NewYorkSubwayD", "NewYorkSubwayE", "NewYorkSubwayF", "NewYorkSubwayFX", "NewYorkSubwayG", "NewYorkSubwayJ", "NewYorkSubwayL", "NewYorkSubwayM", "NewYorkSubwayN", "NewYorkSubwayQ", "NewYorkSubwayR", "NewYorkSubwayW", "NewYorkSubwayFS", "NewYorkSubwayT", "NewYorkSubwayZ", "IBX", "NewYorkSubwaySI", "NewYorkSubwaySIExpress", "LIRRAtlantic", "LIRRBabylon", "LIRRBelmont", "LIRRFarRockaway", "LIRRHempstead", "LIRRLongBeach", "LIRRPortWashington", "LIRRRonkonkoma", "LIRRWestHempstead", "LIRRGreenport", "LIRRMontauk", "LIRROysterBay", "LIRRPortJefferson", "MNRRHarlem", "MNRRHudson", "MNRRDanbury", "MNRRNewCanaan", "MNRRNewHaven", "MNRRWaterbury", "NJTPascackValley", "NJTPortJervis"]
+        },
+        {
+          "slug": "nyc-njt",
+          "name": "New Jersey Transit",
+          "link": "/north-america/usa/nyc-njt",
+          "assetSourceSlug": "nyc-njt",
+          "keywords": ["New Jersey Transit", "NJT", "Hudson Bergen", "Newark Light Rail"],
+          "countingMode": "mini",
+          "includeLines": ["NJTLR8thStHoboken", "NJTLRBayonneFlyer", "NJTLRWestSideTonnelle", "NJTLRHobokenTonnelle", "NJTLRNewark", "NJTLRNewarkBroad", "NJTLRRiverLine", "NJTAtlanticCity", "NJTNorthJerseyCoast", "NJTNorthEastCorridor", "NJTPrinceton", "NJTRaritanValley", "NJTBergenCounty", "NJTGladstone", "NJTMainLine", "NJTMeadowlands", "NJTMontclairBoonton", "NJTMorrisEssex", "NJTPascackValley", "NJTPortJervis"]
+        },
+        {
+          "slug": "nyc-panynj",
+          "name": "Port Authority of New York and New Jersey",
+          "link": "/north-america/usa/nyc-panynj",
+          "assetSourceSlug": "nyc-panynj",
+          "keywords": ["PANYNJ", "PATH", "AirTrain JFK", "AirTrain EWR"],
+          "countingMode": "mini",
+          "includeLines": ["NewYorkSubwayPATHHob33", "NewYorkSubwayPATHHobwtc", "NewYorkSubwayPATHJsq33", "NewYorkSubwayPATHNwkwtc", "AirTrainEWR", "AirTrainJFKHowardBeach", "AirTrainJFKJamaica", "AirTrainJFKAllTerminals"]
+        }
+      ]
+    },
+    {
+      "parentSlug": "boston",
+      "parentName": "Boston",
+      "parentLink": "/north-america/usa/boston",
+      "parentPath": "north-america/usa/boston",
+      "continent": "North America",
+      "country": "usa",
+      "children": [
+        {
+          "slug": "boston-subway-light-rail",
+          "name": "Boston Subway & Light Rail",
+          "link": "/north-america/usa/boston-subway-light-rail",
+          "assetSourceSlug": "boston-subway-light-rail",
+          "keywords": ["MBTA subway", "MBTA light rail", "Green Line", "Red Line", "Blue Line", "Orange Line"],
+          "countingMode": "mini",
+          "includeLines": ["MBTATMetroRedLine", "MBTATMetroBlueLine", "MBTATMetroOrangeLine", "MBTATMetroGreenBLine", "MBTATGreenCLine", "MBTATGreenDLine", "MBTATGreenELine", "MBTATMetroRedMLine"]
+        },
+        {
+          "slug": "boston-commuter-rail",
+          "name": "MBTA Commuter Rail",
+          "link": "/north-america/usa/boston-commuter-rail",
+          "assetSourceSlug": "boston-commuter-rail",
+          "keywords": ["MBTA Commuter Rail", "North Station", "South Station"],
+          "countingMode": "mini",
+          "includeLines": ["Fb", "H", "L", "Nr", "CapeFlyer", "Fa", "Fr", "Ne", "GB", "KT", "P", "W"]
+        }
+      ]
+    },
+    {
+      "parentSlug": "dc",
+      "parentName": "Washington-Baltimore",
+      "parentLink": "/north-america/usa/dc",
+      "parentPath": "north-america/usa/dc",
+      "continent": "North America",
+      "country": "usa",
+      "children": [
+        {
+          "slug": "dc-washington-dc",
+          "name": "Washington DC",
+          "link": "/north-america/usa/dc-washington-dc",
+          "assetSourceSlug": "dc-washington-dc",
+          "keywords": ["Washington DC", "WMATA", "Metro", "VRE", "AeroTrain"],
+          "countingMode": "mini",
+          "includeLines": ["WMATAMetroBlue", "WMATAMetroGreen", "WMATAMetroOrange", "WMATAMetroRed", "WMATAMetroSilver", "WMATAMetroYellow", "VREManassasLine", "VREFredericksburgLine", "MWAAAeroTrain"]
+        },
+        {
+          "slug": "dc-baltimore",
+          "name": "Baltimore",
+          "link": "/north-america/usa/dc-baltimore",
+          "assetSourceSlug": "dc-baltimore",
+          "keywords": ["Baltimore", "MTA Maryland", "Light Rail", "SubwayLink", "MARC", "Purple Line"],
+          "countingMode": "mini",
+          "includeLines": ["MarylandMetroMetroSubwaylink", "MarylandLightRailLightRaillink", "MTAPurpleLine", "MARCBrunswickLine", "MARCCamdenLine", "MARCPennLine"]
+        }
+      ]
+    },
+    {
+      "parentSlug": "florida-state",
+      "parentName": "Florida State",
+      "parentLink": "/north-america/usa/florida-state",
+      "parentPath": "north-america/usa/florida-state",
+      "continent": "North America",
+      "country": "usa",
+      "children": [
+        {
+          "slug": "florida-state-miami",
+          "name": "Miami",
+          "link": "/north-america/usa/florida-state-miami",
+          "assetSourceSlug": "florida-state-miami",
+          "keywords": ["Miami", "Metrorail", "Metromover", "Tri-Rail", "MIA", "Brightline"],
+          "countingMode": "mini",
+          "includeLines": ["floridaGR", "floridaOR", "floridaOM", "floridaBR", "floridaIN", "floridaSKYTRAIN", "floridaMET", "floridaMIA", "Tri-Rail", "brightline"]
+        },
+        {
+          "slug": "florida-state-orlando",
+          "name": "Orlando",
+          "link": "/north-america/usa/florida-state-orlando",
+          "assetSourceSlug": "florida-state-orlando",
+          "keywords": ["Orlando", "SunRail", "Disney", "MCO", "Brightline"],
+          "countingMode": "mini",
+          "includeLines": ["floridaSUN", "DisneyDRR", "DisneyMKR", "DisneyMKX", "DisneyEPC", "DisneySKYEPC", "DisneySKYHS", "DisneySKYPOP", "floridaAS1", "floridaAS2", "floridaAS3", "floridaAS4", "floridaTL", "brightline"]
+        },
+        {
+          "slug": "florida-state-tampa",
+          "name": "Tampa",
+          "link": "/north-america/usa/florida-state-tampa",
+          "assetSourceSlug": "florida-state-tampa",
+          "keywords": ["Tampa", "TECO", "SkyConnect", "TPA"],
+          "countingMode": "mini",
+          "includeLines": ["floridaASA", "floridaASC", "floridaASE", "floridaASF", "floridaSKYCONNECT", "floridaTECO"]
+        },
+        {
+          "slug": "florida-state-jacksonville",
+          "name": "Jacksonville",
+          "link": "/north-america/usa/florida-state-jacksonville",
+          "assetSourceSlug": "florida-state-jacksonville",
+          "keywords": ["Jacksonville", "JTA", "Jacksonville Skyway", "Skyway", "JRTC", "LaVilla"],
+          "countingMode": "mini",
+          "includeLines": ["NB", "SB"]
+        }
+      ]
+    },
+    {
+      "parentSlug": "philly",
+      "parentName": "Philadelphia",
+      "parentLink": "/north-america/usa/philly",
+      "parentPath": "north-america/usa/philly",
+      "continent": "North America",
+      "country": "usa",
+      "children": [
+        {
+          "slug": "philly-metro-patco",
+          "name": "SEPTA Metro + DPA",
+          "link": "/north-america/usa/philly-metro-patco",
+          "assetSourceSlug": "philly-metro-patco",
+          "keywords": ["SEPTA Metro", "PATCO", "Rapid Transit", "Trolley"],
+          "countingMode": "mini",
+          "includeLines": ["PhillySEPTAL", "PhillySEPTAB1", "PhillySEPTAB2", "PhillySEPTAB3", "PhillySEPTAT1", "PhillySEPTAT2", "PhillySEPTAT3", "PhillySEPTAT4", "PhillySEPTAT5", "PhillySEPTAD1", "PhillySEPTAD2", "PhillySEPTAG", "PhillySEPTAM", "PATCOSpeedline"]
+        },
+        {
+          "slug": "philly-regional-rail",
+          "name": "Southeastern Pennsylvania Transportation Authority Regional Rail",
+          "link": "/north-america/usa/philly-regional-rail",
+          "assetSourceSlug": "philly-regional-rail",
+          "keywords": ["SEPTA Regional Rail", "Reading", "Pennsylvania Railroad"],
+          "countingMode": "mini",
+          "includeLines": ["PhillySEPTAAP", "PhillySEPTACW", "PhillySEPTACY", "PhillySEPTAMW", "PhillySEPTAPT", "PhillySEPTATR", "PhillySEPTAWN", "PhillySEPTACE", "PhillySEPTAFC", "PhillySEPTALD", "PhillySEPTAMN", "PhillySEPTAWM", "PhillySEPTAWT"]
+        }
+      ]
+    },
+    {
+      "parentSlug": "toronto-waterloo",
+      "parentName": "Toronto–Waterloo",
+      "parentLink": "/north-america/canada/toronto-waterloo",
+      "parentPath": "north-america/canada/toronto-waterloo",
+      "continent": "North America",
+      "country": "canada",
+      "children": [
+        {
+          "slug": "toronto-waterloo-ttc",
+          "name": "Toronto Transit Commission",
+          "link": "/north-america/canada/toronto-waterloo-ttc",
+          "assetSourceSlug": "toronto-waterloo-ttc",
+          "keywords": ["TTC", "TTC only", "Toronto Transit Commission", "subway and streetcars"],
+          "countingMode": "mini",
+          "includeLines": ["TTC1", "TTC2", "TTC3", "TTC4", "TTC5", "TTC6", "TTC501", "TTC503", "TTC504", "TTC505", "TTC506", "TTC507", "TTC508", "TTC509", "TTC510", "TTC511", "TTC512"]
+        },
+        {
+          "slug": "toronto-waterloo-ttc-subway",
+          "name": "TTC Subway",
+          "link": "/north-america/canada/toronto-waterloo-ttc-subway",
+          "assetSourceSlug": "toronto-waterloo-ttc-subway",
+          "keywords": ["TTC Subway", "Toronto subway", "Line 1", "Line 2"],
+          "countingMode": "mini",
+          "includeLines": ["TTC1", "TTC2", "TTC3", "TTC4", "TTC5", "TTC6"]
+        },
+        {
+          "slug": "toronto-waterloo-ttc-streetcars",
+          "name": "TTC Streetcars",
+          "link": "/north-america/canada/toronto-waterloo-ttc-streetcars",
+          "assetSourceSlug": "toronto-waterloo-ttc-streetcars",
+          "keywords": ["TTC Streetcar", "Streetcars", "King", "Queen"],
+          "countingMode": "mini",
+          "includeLines": ["TTC501", "TTC503", "TTC504", "TTC505", "TTC506", "TTC507", "TTC508", "TTC509", "TTC510", "TTC511", "TTC512"]
+        },
+        {
+          "slug": "toronto-waterloo-go-up",
+          "name": "GO Transit + UP Express",
+          "link": "/north-america/canada/toronto-waterloo-go-up",
+          "assetSourceSlug": "toronto-waterloo-go-up",
+          "keywords": ["GO Transit", "UP Express", "Pearson"],
+          "countingMode": "mini",
+          "includeLines": ["UPExpress", "GOLW", "GOLE", "GOMI", "GOKI", "GOBR", "GORH", "GOST"]
+        },
+        {
+          "slug": "toronto-waterloo-metrolinx",
+          "name": "Metrolinx",
+          "link": "/north-america/canada/toronto-waterloo-metrolinx",
+          "assetSourceSlug": "toronto-waterloo-metrolinx",
+          "keywords": ["Metrolinx", "GO", "UP", "Hamilton LRT", "Hurontario LRT"],
+          "countingMode": "mini",
+          "includeLines": ["UPExpress", "GOLW", "GOLE", "GOMI", "GOKI", "GOBR", "GORH", "GOST", "HMLRT", "Hazel"]
+        }
+      ]
+    }
+  ]
+}

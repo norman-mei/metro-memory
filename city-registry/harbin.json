@@ -1,0 +1,83 @@
+{
+  "city": "harbin",
+  "continent": "asia",
+  "bbox": [
+    45.6037801,
+    126.5284404,
+    45.8731697,
+    126.7387372
+  ],
+  "localLanguages": [
+    "zh"
+  ],
+  "modes": [
+    "subway",
+    "light_rail",
+    "tram",
+    "rail",
+    "funicular",
+    "monorail",
+    "cable_car",
+    "gondola",
+    "chair_lift"
+  ],
+  "lines": [
+    {
+      "id": "harbin1",
+      "name": "Line 1",
+      "keywords": [
+        "Line 1",
+        "1 Line",
+        "L1",
+        "1号线",
+        "地铁1号线",
+        "1号線",
+        "1호선",
+        "Route 1",
+        "Tram Route 1",
+        "harbin1"
+      ],
+      "order": 1,
+      "icon": "asia/china/harbin/harbin1.png"
+    },
+    {
+      "id": "harbin2",
+      "name": "Line 2",
+      "keywords": [
+        "Line 2",
+        "2 Line",
+        "L2",
+        "2号线",
+        "地铁2号线",
+        "2号線",
+        "2호선",
+        "Route 2",
+        "Tram Route 2",
+        "harbin2"
+      ],
+      "order": 2,
+      "icon": "asia/china/harbin/harbin2.png"
+    },
+    {
+      "id": "harbin3",
+      "name": "Line 3",
+      "keywords": [
+        "Line 3",
+        "3 Line",
+        "L3",
+        "3号线",
+        "地铁3号线",
+        "3号線",
+        "3호선",
+        "Route 3",
+        "Tram Route 3",
+        "harbin3"
+      ],
+      "order": 3,
+      "icon": "asia/china/harbin/harbin3.png"
+    }
+  ],
+  "stationAliases": {},
+  "stationLocalNames": {},
+  "manualCoords": {}
+}

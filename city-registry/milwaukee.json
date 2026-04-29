@@ -1,0 +1,60 @@
+{
+  "city": "milwaukee",
+  "continent": "north america",
+  "bbox": [
+    43.0346404,
+    -87.9161578,
+    43.0481959,
+    -87.8962162
+  ],
+  "localLanguages": [
+    "en"
+  ],
+  "modes": [
+    "subway",
+    "light_rail",
+    "tram",
+    "rail",
+    "funicular",
+    "monorail",
+    "cable_car",
+    "gondola",
+    "chair_lift"
+  ],
+  "lines": [
+    {
+      "id": "TheHopL",
+      "name": "Lakefront",
+      "keywords": [
+        "Lakefront",
+        "Lakefront Line",
+        "The Hop L",
+        "Line L",
+        "L Line",
+        "Route L",
+        "Line L Line",
+        "Route L Line"
+      ],
+      "order": 0,
+      "icon": "north-america/usa/milwaukee/TheHopL_v2.png"
+    },
+    {
+      "id": "TheHopM",
+      "name": "Burn Commons - Intermodal Station",
+      "keywords": [
+        "Burn Commons - Intermodal Station",
+        "The Hop M",
+        "Line M",
+        "M Line",
+        "Route M",
+        "Line M Line",
+        "Route M Line"
+      ],
+      "order": 1,
+      "icon": "north-america/usa/milwaukee/TheHopM_v2.png"
+    }
+  ],
+  "stationAliases": {},
+  "stationLocalNames": {},
+  "manualCoords": {}
+}

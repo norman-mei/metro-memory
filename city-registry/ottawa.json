@@ -1,0 +1,128 @@
+{
+  "city": "ottawa",
+  "continent": "north america",
+  "bbox": [
+    45.27754187639863,
+    -75.83833661939343,
+    45.495889724799895,
+    -75.48062367879199
+  ],
+  "localLanguages": [
+    "en",
+    "fr"
+  ],
+  "modes": [
+    "subway",
+    "light_rail",
+    "tram",
+    "rail",
+    "funicular",
+    "monorail",
+    "cable_car",
+    "gondola",
+    "chair_lift"
+  ],
+  "lines": [
+    {
+      "id": "OTrainLine1",
+      "name": "Line 1 – Confederation Line",
+      "keywords": [
+        "Line 1 – Confederation Line",
+        "1 – Confederation",
+        "Line 1",
+        "1 Line",
+        "L1",
+        "1号线",
+        "地铁1号线",
+        "1号線",
+        "1호선",
+        "Route 1",
+        "Tram Route 1",
+        "O Train Line1",
+        "Line O",
+        "O Line",
+        "Route O",
+        "Line O Line",
+        "Route O Line"
+      ],
+      "order": 0,
+      "icon": "north-america/canada/ottawa/OTrainLine1.svg"
+    },
+    {
+      "id": "OTrainLine2",
+      "name": "Line 2 – Trillium Line",
+      "keywords": [
+        "Line 2 – Trillium Line",
+        "2 – Trillium",
+        "Line 2",
+        "2 Line",
+        "L2",
+        "2号线",
+        "地铁2号线",
+        "2号線",
+        "2호선",
+        "Route 2",
+        "Tram Route 2",
+        "O Train Line2",
+        "Line O",
+        "O Line",
+        "Route O",
+        "Line O Line",
+        "Route O Line"
+      ],
+      "order": 1,
+      "icon": "north-america/canada/ottawa/OTrainLine2.svg"
+    },
+    {
+      "id": "OTrainLine3",
+      "name": "Line 3",
+      "keywords": [
+        "Line 3",
+        "3 Line",
+        "L3",
+        "3号线",
+        "地铁3号线",
+        "3号線",
+        "3호선",
+        "Route 3",
+        "Tram Route 3",
+        "O Train Line3",
+        "Line O",
+        "O Line",
+        "Route O",
+        "Line O Line",
+        "Route O Line"
+      ],
+      "order": 2,
+      "icon": "north-america/canada/ottawa/OTrainLine3.svg"
+    },
+    {
+      "id": "OTrainLine4",
+      "name": "Line 4 – Airport Link",
+      "keywords": [
+        "Line 4 – Airport Link",
+        "4 – Airport Link",
+        "Line 4",
+        "4 Line",
+        "L4",
+        "4号线",
+        "地铁4号线",
+        "4号線",
+        "4호선",
+        "Route 4",
+        "Tram Route 4",
+        "O Train Line4",
+        "Line O",
+        "O Line",
+        "Route O",
+        "Line O Line",
+        "Route O Line"
+      ],
+      "order": 3,
+      "icon": "north-america/canada/ottawa/OTrainLine4.svg"
+    }
+  ],
+  "stationAliases": {},
+  "stationLocalNames": {},
+  "manualCoords": {}
+}

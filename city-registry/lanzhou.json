@@ -1,0 +1,65 @@
+{
+  "city": "lanzhou",
+  "continent": "asia",
+  "bbox": [
+    36.0342165,
+    103.6572314,
+    36.0997212,
+    103.91752
+  ],
+  "localLanguages": [
+    "zh"
+  ],
+  "modes": [
+    "subway",
+    "light_rail",
+    "tram",
+    "rail",
+    "funicular",
+    "monorail",
+    "cable_car",
+    "gondola",
+    "chair_lift"
+  ],
+  "lines": [
+    {
+      "id": "lanzhou1",
+      "name": "Line 1",
+      "keywords": [
+        "Line 1",
+        "1 Line",
+        "L1",
+        "1号线",
+        "地铁1号线",
+        "1号線",
+        "1호선",
+        "Route 1",
+        "Tram Route 1",
+        "lanzhou1"
+      ],
+      "order": 1,
+      "icon": "asia/china/lanzhou/lanzhou1.png"
+    },
+    {
+      "id": "lanzhou2",
+      "name": "Line 2",
+      "keywords": [
+        "Line 2",
+        "2 Line",
+        "L2",
+        "2号线",
+        "地铁2号线",
+        "2号線",
+        "2호선",
+        "Route 2",
+        "Tram Route 2",
+        "lanzhou2"
+      ],
+      "order": 2,
+      "icon": "asia/china/lanzhou/lanzhou2.png"
+    }
+  ],
+  "stationAliases": {},
+  "stationLocalNames": {},
+  "manualCoords": {}
+}

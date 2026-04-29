@@ -1,0 +1,130 @@
+{
+  "city": "portland",
+  "continent": "north america",
+  "bbox": [
+    45.311156,
+    -122.991034,
+    45.6054447,
+    -122.4184931
+  ],
+  "localLanguages": [
+    "en"
+  ],
+  "modes": [
+    "subway",
+    "light_rail",
+    "tram",
+    "rail",
+    "funicular",
+    "monorail",
+    "cable_car",
+    "gondola",
+    "chair_lift"
+  ],
+  "lines": [
+    {
+      "id": "MAXBlue",
+      "name": "MAX Blue Line",
+      "keywords": [
+        "MAX Blue Line",
+        "MAX Blue"
+      ],
+      "order": 0,
+      "icon": "north-america/usa/portland/MAXBlue.svg"
+    },
+    {
+      "id": "MAXRed",
+      "name": "MAX Red Line",
+      "keywords": [
+        "MAX Red Line",
+        "MAX Red"
+      ],
+      "order": 1,
+      "icon": "north-america/usa/portland/MAXRed.svg"
+    },
+    {
+      "id": "MAXYellow",
+      "name": "MAX Yellow Line",
+      "keywords": [
+        "MAX Yellow Line",
+        "MAX Yellow"
+      ],
+      "order": 2,
+      "icon": "north-america/usa/portland/MAXYellow.svg"
+    },
+    {
+      "id": "MAXGreen",
+      "name": "MAX Green Line",
+      "keywords": [
+        "MAX Green Line",
+        "MAX Green"
+      ],
+      "order": 3
+    },
+    {
+      "id": "MAXOrange",
+      "name": "MAX Orange Line",
+      "keywords": [
+        "MAX Orange Line",
+        "MAX Orange"
+      ],
+      "order": 4
+    },
+    {
+      "id": "PortlandA",
+      "name": "Portland Streetcar A Loop",
+      "keywords": [
+        "Portland Streetcar A Loop",
+        "Line A",
+        "A Line",
+        "Route A",
+        "Line A Line",
+        "Route A Line",
+        "Portland A",
+        "Portland A Line"
+      ],
+      "order": 5,
+      "icon": "north-america/usa/portland/PortlandA.png"
+    },
+    {
+      "id": "PortlandB",
+      "name": "Portland Streetcar B Loop",
+      "keywords": [
+        "Portland Streetcar B Loop",
+        "Line B",
+        "B Line",
+        "Route B",
+        "Line B Line",
+        "Route B Line",
+        "Portland B",
+        "Portland B Line"
+      ],
+      "order": 6,
+      "icon": "north-america/usa/portland/PortlandB.png"
+    },
+    {
+      "id": "PortlandNS",
+      "name": "Portland Streetcar North/South Line",
+      "keywords": [
+        "Portland Streetcar North/South Line",
+        "Portland Streetcar North/South",
+        "Portland NS"
+      ],
+      "order": 7,
+      "icon": "north-america/usa/portland/PortlandNS.png"
+    },
+    {
+      "id": "PortlandWES",
+      "name": "WES Commuter Rail",
+      "keywords": [
+        "WES Commuter Rail",
+        "Portland WES"
+      ],
+      "order": 8,
+      "icon": "north-america/usa/portland/PortlandWES.png"
+    }
+  ],
+  "stationAliases": {},
+  "stationLocalNames": {},
+  "manualCoords": {}
+}

@@ -1,0 +1,65 @@
+{
+  "city": "luoyang",
+  "continent": "asia",
+  "bbox": [
+    34.5952151,
+    112.3165566,
+    34.708237,
+    112.5503455
+  ],
+  "localLanguages": [
+    "zh"
+  ],
+  "modes": [
+    "subway",
+    "light_rail",
+    "tram",
+    "rail",
+    "funicular",
+    "monorail",
+    "cable_car",
+    "gondola",
+    "chair_lift"
+  ],
+  "lines": [
+    {
+      "id": "luoyang1",
+      "name": "Line 1",
+      "keywords": [
+        "Line 1",
+        "1 Line",
+        "L1",
+        "1号线",
+        "地铁1号线",
+        "1号線",
+        "1호선",
+        "Route 1",
+        "Tram Route 1",
+        "luoyang1"
+      ],
+      "order": 1,
+      "icon": "asia/china/luoyang/luoyang1.png"
+    },
+    {
+      "id": "luoyang2",
+      "name": "Line 2",
+      "keywords": [
+        "Line 2",
+        "2 Line",
+        "L2",
+        "2号线",
+        "地铁2号线",
+        "2号線",
+        "2호선",
+        "Route 2",
+        "Tram Route 2",
+        "luoyang2"
+      ],
+      "order": 2,
+      "icon": "asia/china/luoyang/luoyang2.png"
+    }
+  ],
+  "stationAliases": {},
+  "stationLocalNames": {},
+  "manualCoords": {}
+}

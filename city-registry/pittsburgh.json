@@ -1,0 +1,78 @@
+{
+  "city": "pittsburgh",
+  "continent": "north america",
+  "bbox": [
+    40.28672077325884,
+    -80.25543823551436,
+    40.49596175668668,
+    -79.99478599513229
+  ],
+  "localLanguages": [
+    "en"
+  ],
+  "modes": [
+    "subway",
+    "light_rail",
+    "tram",
+    "rail",
+    "funicular",
+    "monorail",
+    "cable_car",
+    "gondola",
+    "chair_lift"
+  ],
+  "lines": [
+    {
+      "id": "RD",
+      "name": "Red Line",
+      "keywords": [
+        "Red Line",
+        "Red",
+        "RD"
+      ],
+      "order": 0,
+      "icon": "north-america/usa/pittsburgh/RD.svg"
+    },
+    {
+      "id": "SV",
+      "name": "Silver Line",
+      "keywords": [
+        "Silver Line",
+        "Silver",
+        "SV",
+        "Line V",
+        "V Line",
+        "Route V",
+        "Line V Line",
+        "Route V Line"
+      ],
+      "order": 1,
+      "icon": "north-america/usa/pittsburgh/SV.svg"
+    },
+    {
+      "id": "BL",
+      "name": "Blue Line",
+      "keywords": [
+        "Blue Line",
+        "Blue",
+        "BL"
+      ],
+      "order": 2,
+      "icon": "north-america/usa/pittsburgh/BL.svg"
+    },
+    {
+      "id": "pittsburghAPM",
+      "name": "Pittsburgh Airport Tram",
+      "keywords": [
+        "Pittsburgh Airport Tram",
+        "Pittsburgh Airport",
+        "pittsburgh APM"
+      ],
+      "order": 3,
+      "icon": "north-america/usa/pittsburgh/pittsburghAPM.png"
+    }
+  ],
+  "stationAliases": {},
+  "stationLocalNames": {},
+  "manualCoords": {}
+}

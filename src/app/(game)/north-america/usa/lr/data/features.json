@@ -1,0 +1,315 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -92.25882054555933,
+          34.74465379092455
+        ]
+      },
+      "properties": {
+        "name": "Presidential Library/Heifer International",
+        "line": "littlerockblue",
+        "id": 0
+      },
+      "id": 0
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -92.26588751686963,
+          34.74587649521653
+        ]
+      },
+      "properties": {
+        "name": "3rd at River Market",
+        "line": "littlerockblue",
+        "id": 1
+      },
+      "id": 1
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -92.2670977284562,
+          34.74668162496109
+        ]
+      },
+      "properties": {
+        "name": "2nd at Rock",
+        "line": "littlerockblue",
+        "id": 2
+      },
+      "id": 2
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -92.26893404603017,
+          34.74694616319707
+        ]
+      },
+      "properties": {
+        "name": "2nd at Scott",
+        "line": "littlerockblue",
+        "id": 3
+      },
+      "id": 3
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -92.27315903141564,
+          34.74752607515137
+        ]
+      },
+      "properties": {
+        "name": "2nd at Center",
+        "line": "littlerockblue",
+        "id": 4
+      },
+      "id": 4
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -92.27342984568237,
+          34.748507353563355
+        ]
+      },
+      "properties": {
+        "name": "Markham at Spring",
+        "line": "littlerockblue",
+        "id": 5
+      },
+      "id": 5
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -92.26952587168621,
+          34.74795869583045
+        ]
+      },
+      "properties": {
+        "name": "Markham at Scott",
+        "line": "littlerockblue",
+        "id": 6
+      },
+      "id": 6
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -92.26906491570297,
+          34.74817251035564
+        ]
+      },
+      "properties": {
+        "name": "Main Street Bridge",
+        "line": "littlerockblue",
+        "id": 7,
+        "alternate_names": [
+          "Scott Bridge"
+        ]
+      },
+      "id": 7
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -92.26779442605643,
+          34.75512895521458
+        ]
+      },
+      "properties": {
+        "name": "Main at 2nd",
+        "line": "littlerockblue",
+        "id": 8
+      },
+      "id": 8
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -92.26764743708321,
+          34.757565258797186
+        ]
+      },
+      "properties": {
+        "name": "Main at 5th",
+        "line": "littlerockblue",
+        "id": 9
+      },
+      "id": 9
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -92.26752570666046,
+          34.75972428511574
+        ]
+      },
+      "properties": {
+        "name": "Main at 7th",
+        "line": "littlerockblue",
+        "id": 10,
+        "alternate_names": [
+          "Bishop Lindsey"
+        ]
+      },
+      "id": 10
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -92.26884387395143,
+          34.759193166706154
+        ]
+      },
+      "properties": {
+        "name": "Maple at 6th",
+        "line": "littlerockblue",
+        "id": 11
+      },
+      "id": 11
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -92.26895487916806,
+          34.75638262749823
+        ]
+      },
+      "properties": {
+        "name": "Maple at Broadway",
+        "line": "littlerockblue",
+        "id": 12
+      },
+      "id": 12
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -92.26563062211872,
+          34.747189806383
+        ]
+      },
+      "properties": {
+        "name": "President Clinton Ave. at River Market",
+        "line": "littlerockblue",
+        "id": 13
+      },
+      "id": 13
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -92.26893404603017,
+          34.74694616319707
+        ]
+      },
+      "properties": {
+        "name": "2nd at Scott",
+        "line": "littlerockgreen",
+        "id": 14
+      },
+      "id": 14
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -92.27315903141564,
+          34.74752607515137
+        ]
+      },
+      "properties": {
+        "name": "2nd at Center",
+        "line": "littlerockgreen",
+        "id": 15
+      },
+      "id": 15
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -92.27342984568237,
+          34.748507353563355
+        ]
+      },
+      "properties": {
+        "name": "Markham at Spring",
+        "line": "littlerockgreen",
+        "id": 16
+      },
+      "id": 16
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -92.26952587168621,
+          34.74795869583045
+        ]
+      },
+      "properties": {
+        "name": "Markham at Scott",
+        "line": "littlerockgreen",
+        "id": 17
+      },
+      "id": 17
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -92.26563062211872,
+          34.747189806383
+        ]
+      },
+      "properties": {
+        "name": "President Clinton Ave. at River Market",
+        "line": "littlerockgreen",
+        "id": 18
+      },
+      "id": 18
+    }
+  ]
+}

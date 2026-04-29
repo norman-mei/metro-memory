@@ -1,0 +1,10 @@
+{
+  "RRX": {
+    "name": "Rail Runner Express",
+    "color": "#991204",
+    "backgroundColor": "#991204",
+    "textColor": "#FFFFFF",
+    "order": 0,
+    "icon": "north-america/usa/albuquerque/RRX.png"
+  }
+}

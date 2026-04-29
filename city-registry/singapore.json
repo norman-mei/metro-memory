@@ -1,0 +1,139 @@
+{
+  "city": "singapore",
+  "continent": "asia",
+  "bbox": [
+    1.265289,
+    103.635186,
+    1.449579,
+    103.988565
+  ],
+  "localLanguages": [
+    "en"
+  ],
+  "modes": [
+    "subway",
+    "light_rail",
+    "tram",
+    "rail",
+    "funicular",
+    "monorail",
+    "cable_car",
+    "gondola",
+    "chair_lift"
+  ],
+  "lines": [
+    {
+      "id": "SingaporeMRTCircleLine",
+      "name": "CC",
+      "keywords": [
+        "CC",
+        "Singapore MRT Circle Line",
+        "Singapore MRT Circle"
+      ],
+      "order": 0
+    },
+    {
+      "id": "SingaporeMRTDowntownLine",
+      "name": "DT",
+      "keywords": [
+        "DT",
+        "Singapore MRT Downtown Line",
+        "Singapore MRT Downtown"
+      ],
+      "order": 1
+    },
+    {
+      "id": "SingaporeMRTEastwestLine",
+      "name": "EW",
+      "keywords": [
+        "EW",
+        "Singapore MRT Eastwest Line",
+        "Singapore MRT Eastwest"
+      ],
+      "order": 2
+    },
+    {
+      "id": "SingaporeMRTNortheastLine",
+      "name": "NE",
+      "keywords": [
+        "NE",
+        "Singapore MRT Northeast Line",
+        "Singapore MRT Northeast"
+      ],
+      "order": 3
+    },
+    {
+      "id": "SingaporeMRTNorthsouthLine",
+      "name": "NS",
+      "keywords": [
+        "NS",
+        "Singapore MRT Northsouth Line",
+        "Singapore MRT Northsouth"
+      ],
+      "order": 4
+    },
+    {
+      "id": "CM_SingaporeMRT_tel",
+      "name": "TE",
+      "keywords": [
+        "TE",
+        "CM Singapore MRT tel"
+      ],
+      "order": 5
+    },
+    {
+      "id": "SingaporeLRTBukitPanjangLine",
+      "name": "BPLRT",
+      "keywords": [
+        "BPLRT",
+        "BPLRT Line",
+        "Singapore LRT Bukit Panjang Line",
+        "Singapore LRT Bukit Panjang"
+      ],
+      "order": 6
+    },
+    {
+      "id": "SingaporeLRTPunggolLineEastLoop",
+      "name": "PGLRT (East)",
+      "keywords": [
+        "PGLRT East",
+        "Singapore LRT Punggol Line East Loop",
+        "Singapore LRT Punggol East Loop"
+      ],
+      "order": 7
+    },
+    {
+      "id": "SingaporeLRTPunggolLineWestLoop",
+      "name": "PGLRT (West)",
+      "keywords": [
+        "PGLRT West",
+        "Singapore LRT Punggol Line West Loop",
+        "Singapore LRT Punggol West Loop"
+      ],
+      "order": 8
+    },
+    {
+      "id": "SingaporeLRTSengkangLineEastLoop",
+      "name": "SKLRT (East)",
+      "keywords": [
+        "SKLRT East",
+        "Singapore LRT Sengkang Line East Loop",
+        "Singapore LRT Sengkang East Loop"
+      ],
+      "order": 9
+    },
+    {
+      "id": "SingaporeLRTSengkangLineWestLoop",
+      "name": "SKLRT (West)",
+      "keywords": [
+        "SKLRT West",
+        "Singapore LRT Sengkang Line West Loop",
+        "Singapore LRT Sengkang West Loop"
+      ],
+      "order": 10
+    }
+  ],
+  "stationAliases": {},
+  "stationLocalNames": {},
+  "manualCoords": {}
+}

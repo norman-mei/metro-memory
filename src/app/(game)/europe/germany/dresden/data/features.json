@@ -1,0 +1,8039 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7988158,
+          50.9991963
+        ]
+      },
+      "properties": {
+        "id": 33,
+        "name": "Prohlis, Gleisschleife",
+        "alternate_names": [
+          "Prohlis"
+        ],
+        "line": "DresdenTram1",
+        "order": 1
+      },
+      "id": 33
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7978298,
+          51.0019201
+        ]
+      },
+      "properties": {
+        "id": 32,
+        "name": "Georg-Palitzsch-Straße",
+        "line": "DresdenTram1",
+        "order": 1
+      },
+      "id": 32
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7990736,
+          51.0052352
+        ]
+      },
+      "properties": {
+        "id": 31,
+        "name": "Jacob-Winter-Platz (Prohlis-Zentrum)",
+        "line": "DresdenTram1",
+        "order": 1
+      },
+      "id": 31
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8026636,
+          51.0078471
+        ]
+      },
+      "properties": {
+        "id": 30,
+        "name": "Albert-Wolf-Platz",
+        "line": "DresdenTram1",
+        "order": 1
+      },
+      "id": 30
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8081894,
+          51.0114103
+        ]
+      },
+      "properties": {
+        "id": 29,
+        "name": "S-Bahnhof Dobritz",
+        "line": "DresdenTram1",
+        "order": 1
+      },
+      "id": 29
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.811346,
+          51.0137188
+        ]
+      },
+      "properties": {
+        "id": 28,
+        "name": "Breitscheidstraße",
+        "line": "DresdenTram1",
+        "order": 1
+      },
+      "id": 28
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.815306,
+          51.0170143
+        ]
+      },
+      "properties": {
+        "id": 27,
+        "name": "Abzweig nach Reick",
+        "line": "DresdenTram1",
+        "order": 1
+      },
+      "id": 27
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.81171,
+          51.0204686
+        ]
+      },
+      "properties": {
+        "id": 26,
+        "name": "Lassallestraße",
+        "line": "DresdenTram1",
+        "order": 1
+      },
+      "id": 26
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8099456,
+          51.0229321
+        ]
+      },
+      "properties": {
+        "id": 25,
+        "name": "Prof.-Ricker-Straße",
+        "line": "DresdenTram1",
+        "order": 1
+      },
+      "id": 25
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8063282,
+          51.0250179
+        ]
+      },
+      "properties": {
+        "id": 24,
+        "name": "Marienberger Straße",
+        "line": "DresdenTram1",
+        "order": 1
+      },
+      "id": 24
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8015922,
+          51.0269476
+        ]
+      },
+      "properties": {
+        "id": 23,
+        "name": "Rennplatzstraße",
+        "line": "DresdenTram1",
+        "order": 1
+      },
+      "id": 23
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7953367,
+          51.0283622
+        ]
+      },
+      "properties": {
+        "id": 22,
+        "name": "Rauensteinstraße",
+        "line": "DresdenTram1",
+        "order": 1
+      },
+      "id": 22
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7899673,
+          51.0299899
+        ]
+      },
+      "properties": {
+        "id": 21,
+        "name": "Liebstädter Straße",
+        "line": "DresdenTram1",
+        "order": 1
+      },
+      "id": 21
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7830836,
+          51.0338367
+        ]
+      },
+      "properties": {
+        "id": 20,
+        "name": "Zwinglistraße",
+        "line": "DresdenTram1",
+        "order": 1
+      },
+      "id": 20
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.777945,
+          51.0371023
+        ]
+      },
+      "properties": {
+        "id": 19,
+        "name": "Karcherallee",
+        "line": "DresdenTram1",
+        "order": 1
+      },
+      "id": 19
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7718472,
+          51.0394176
+        ]
+      },
+      "properties": {
+        "id": 18,
+        "name": "Lipsiusstraße",
+        "line": "DresdenTram1",
+        "order": 1
+      },
+      "id": 18
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7677019,
+          51.0410576
+        ]
+      },
+      "properties": {
+        "id": 17,
+        "name": "Comeniusplatz",
+        "line": "DresdenTram1",
+        "order": 1
+      },
+      "id": 17
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7553756,
+          51.0460416
+        ]
+      },
+      "properties": {
+        "id": 16,
+        "name": "Straßburger Platz (Gläserne Manufaktur)",
+        "alternate_names": [
+          "Fučikplatz",
+          "Straßburger Platz"
+        ],
+        "line": "DresdenTram1",
+        "order": 1
+      },
+      "id": 16
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7504076,
+          51.0474998
+        ]
+      },
+      "properties": {
+        "id": 15,
+        "name": "Deutsches Hygiene-Museum",
+        "line": "DresdenTram1",
+        "order": 1
+      },
+      "id": 15
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7436089,
+          51.0495289
+        ]
+      },
+      "properties": {
+        "id": 14,
+        "name": "Pirnaischer Platz (Stadtmuseum)",
+        "alternate_names": [
+          "Pirnaischer Platz"
+        ],
+        "line": "DresdenTram1",
+        "order": 1
+      },
+      "id": 14
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7390681,
+          51.0501316
+        ]
+      },
+      "properties": {
+        "id": 13,
+        "name": "Altmarkt",
+        "line": "DresdenTram1",
+        "order": 1
+      },
+      "id": 13
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7351974,
+          51.0506098
+        ]
+      },
+      "properties": {
+        "id": 12,
+        "name": "Postplatz",
+        "line": "DresdenTram1",
+        "order": 1
+      },
+      "id": 12
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7269181,
+          51.052686
+        ]
+      },
+      "properties": {
+        "id": 11,
+        "name": "Schweriner Straße (Hochschule für Musik)",
+        "alternate_names": [
+          "Schweriner Straße"
+        ],
+        "line": "DresdenTram1",
+        "order": 1
+      },
+      "id": 11
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7230613,
+          51.0553566
+        ]
+      },
+      "properties": {
+        "id": 10,
+        "name": "Bahnhof Mitte",
+        "line": "DresdenTram1",
+        "order": 1
+      },
+      "id": 10
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7197431,
+          51.0548606
+        ]
+      },
+      "properties": {
+        "id": 9,
+        "name": "Koreanischer Platz",
+        "line": "DresdenTram1",
+        "order": 1
+      },
+      "id": 9
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7149509,
+          51.0564718
+        ]
+      },
+      "properties": {
+        "id": 8,
+        "name": "Manitiusstraße",
+        "line": "DresdenTram1",
+        "order": 1
+      },
+      "id": 8
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7106655,
+          51.0578886
+        ]
+      },
+      "properties": {
+        "id": 7,
+        "name": "Waltherstraße",
+        "line": "DresdenTram1",
+        "order": 1
+      },
+      "id": 7
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.703548,
+          51.05895
+        ]
+      },
+      "properties": {
+        "id": 6,
+        "name": "Hamburger Straße",
+        "line": "DresdenTram1",
+        "order": 1
+      },
+      "id": 6
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6955258,
+          51.0604652
+        ]
+      },
+      "properties": {
+        "id": 5,
+        "name": "Bremer Straße",
+        "line": "DresdenTram1",
+        "order": 1
+      },
+      "id": 5
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6915309,
+          51.0613168
+        ]
+      },
+      "properties": {
+        "id": 4,
+        "name": "Flügelweg",
+        "line": "DresdenTram1",
+        "order": 1
+      },
+      "id": 4
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6803568,
+          51.0615815
+        ]
+      },
+      "properties": {
+        "id": 3,
+        "name": "Cossebauder Straße",
+        "line": "DresdenTram1",
+        "order": 1
+      },
+      "id": 3
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6776015,
+          51.0609396
+        ]
+      },
+      "properties": {
+        "id": 2,
+        "name": "Cotta, Gottfried-Keller-Straße",
+        "alternate_names": [
+          "Cotta",
+          "Gottfried-Keller-Straße"
+        ],
+        "line": "DresdenTram1",
+        "order": 1
+      },
+      "id": 2
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6705316,
+          51.0590617
+        ]
+      },
+      "properties": {
+        "id": 1,
+        "name": "Leutewitz",
+        "line": "DresdenTram1",
+        "order": 1
+      },
+      "id": 1
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8545227,
+          51.0083333
+        ]
+      },
+      "properties": {
+        "id": 34,
+        "name": "Kleinzschachwitz, Freystraße",
+        "alternate_names": [
+          "Freystraße",
+          "Kleinzschachwitz"
+        ],
+        "line": "DresdenTram2",
+        "order": 6
+      },
+      "id": 34
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8487323,
+          51.0079768
+        ]
+      },
+      "properties": {
+        "id": 35,
+        "name": "Meußlitzer Straße",
+        "line": "DresdenTram2",
+        "order": 6
+      },
+      "id": 35
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.84026,
+          51.0086757
+        ]
+      },
+      "properties": {
+        "id": 36,
+        "name": "Heckenweg",
+        "line": "DresdenTram2",
+        "order": 6
+      },
+      "id": 36
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8302885,
+          51.0101963
+        ]
+      },
+      "properties": {
+        "id": 37,
+        "name": "Berthold-Haupt-Straße",
+        "line": "DresdenTram2",
+        "order": 6
+      },
+      "id": 37
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8272745,
+          51.0115253
+        ]
+      },
+      "properties": {
+        "id": 38,
+        "name": "Altleuben",
+        "line": "DresdenTram2",
+        "order": 6
+      },
+      "id": 38
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8214804,
+          51.0133984
+        ]
+      },
+      "properties": {
+        "id": 39,
+        "name": "Rottwerndorfer Straße",
+        "line": "DresdenTram2",
+        "order": 6
+      },
+      "id": 39
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.815306,
+          51.0170143
+        ]
+      },
+      "properties": {
+        "id": 40,
+        "name": "Abzweig nach Reick",
+        "line": "DresdenTram2",
+        "order": 6
+      },
+      "id": 40
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.81171,
+          51.0204686
+        ]
+      },
+      "properties": {
+        "id": 41,
+        "name": "Lassallestraße",
+        "line": "DresdenTram2",
+        "order": 6
+      },
+      "id": 41
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8099456,
+          51.0229321
+        ]
+      },
+      "properties": {
+        "id": 42,
+        "name": "Prof.-Ricker-Straße",
+        "line": "DresdenTram2",
+        "order": 6
+      },
+      "id": 42
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8063282,
+          51.0250179
+        ]
+      },
+      "properties": {
+        "id": 43,
+        "name": "Marienberger Straße",
+        "line": "DresdenTram2",
+        "order": 6
+      },
+      "id": 43
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8015922,
+          51.0269476
+        ]
+      },
+      "properties": {
+        "id": 44,
+        "name": "Rennplatzstraße",
+        "line": "DresdenTram2",
+        "order": 6
+      },
+      "id": 44
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7953367,
+          51.0283622
+        ]
+      },
+      "properties": {
+        "id": 45,
+        "name": "Rauensteinstraße",
+        "line": "DresdenTram2",
+        "order": 6
+      },
+      "id": 45
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7899673,
+          51.0299899
+        ]
+      },
+      "properties": {
+        "id": 46,
+        "name": "Liebstädter Straße",
+        "line": "DresdenTram2",
+        "order": 6
+      },
+      "id": 46
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7830836,
+          51.0338367
+        ]
+      },
+      "properties": {
+        "id": 47,
+        "name": "Zwinglistraße",
+        "line": "DresdenTram2",
+        "order": 6
+      },
+      "id": 47
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.777945,
+          51.0371023
+        ]
+      },
+      "properties": {
+        "id": 48,
+        "name": "Karcherallee",
+        "line": "DresdenTram2",
+        "order": 6
+      },
+      "id": 48
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7718472,
+          51.0394176
+        ]
+      },
+      "properties": {
+        "id": 49,
+        "name": "Lipsiusstraße",
+        "line": "DresdenTram2",
+        "order": 6
+      },
+      "id": 49
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7677019,
+          51.0410576
+        ]
+      },
+      "properties": {
+        "id": 50,
+        "name": "Comeniusplatz",
+        "line": "DresdenTram2",
+        "order": 6
+      },
+      "id": 50
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7553756,
+          51.0460416
+        ]
+      },
+      "properties": {
+        "id": 51,
+        "name": "Straßburger Platz (Gläserne Manufaktur)",
+        "alternate_names": [
+          "Fučikplatz",
+          "Straßburger Platz"
+        ],
+        "line": "DresdenTram2",
+        "order": 6
+      },
+      "id": 51
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7504076,
+          51.0474998
+        ]
+      },
+      "properties": {
+        "id": 52,
+        "name": "Deutsches Hygiene-Museum",
+        "line": "DresdenTram2",
+        "order": 6
+      },
+      "id": 52
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7436089,
+          51.0495289
+        ]
+      },
+      "properties": {
+        "id": 53,
+        "name": "Pirnaischer Platz (Stadtmuseum)",
+        "alternate_names": [
+          "Pirnaischer Platz"
+        ],
+        "line": "DresdenTram2",
+        "order": 6
+      },
+      "id": 53
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7390681,
+          51.0501316
+        ]
+      },
+      "properties": {
+        "id": 54,
+        "name": "Altmarkt",
+        "line": "DresdenTram2",
+        "order": 6
+      },
+      "id": 54
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7351974,
+          51.0506098
+        ]
+      },
+      "properties": {
+        "id": 55,
+        "name": "Postplatz",
+        "line": "DresdenTram2",
+        "order": 6
+      },
+      "id": 55
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7269181,
+          51.052686
+        ]
+      },
+      "properties": {
+        "id": 56,
+        "name": "Schweriner Straße (Hochschule für Musik)",
+        "alternate_names": [
+          "Schweriner Straße"
+        ],
+        "line": "DresdenTram2",
+        "order": 6
+      },
+      "id": 56
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7230613,
+          51.0553566
+        ]
+      },
+      "properties": {
+        "id": 57,
+        "name": "Bahnhof Mitte",
+        "line": "DresdenTram2",
+        "order": 6
+      },
+      "id": 57
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7193861,
+          51.0541597
+        ]
+      },
+      "properties": {
+        "id": 58,
+        "name": "Koreanischer Platz",
+        "line": "DresdenTram2",
+        "order": 6
+      },
+      "id": 58
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7130275,
+          51.0503067
+        ]
+      },
+      "properties": {
+        "id": 59,
+        "name": "Cottaer Straße",
+        "line": "DresdenTram2",
+        "order": 6
+      },
+      "id": 59
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7046092,
+          51.0510883
+        ]
+      },
+      "properties": {
+        "id": 60,
+        "name": "Semmelweisstraße",
+        "line": "DresdenTram2",
+        "order": 6
+      },
+      "id": 60
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6957066,
+          51.0489833
+        ]
+      },
+      "properties": {
+        "id": 61,
+        "name": "Burgkstraße",
+        "line": "DresdenTram2",
+        "order": 6
+      },
+      "id": 61
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6915366,
+          51.0490661
+        ]
+      },
+      "properties": {
+        "id": 62,
+        "name": "Pennricher Straße",
+        "line": "DresdenTram2",
+        "order": 6
+      },
+      "id": 62
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6884146,
+          51.0492176
+        ]
+      },
+      "properties": {
+        "id": 63,
+        "name": "Chamissostraße",
+        "line": "DresdenTram2",
+        "order": 6
+      },
+      "id": 63
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6825133,
+          51.0509216
+        ]
+      },
+      "properties": {
+        "id": 64,
+        "name": "Hebbelplatz",
+        "line": "DresdenTram2",
+        "order": 6
+      },
+      "id": 64
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6804231,
+          51.0478875
+        ]
+      },
+      "properties": {
+        "id": 65,
+        "name": "Coventrystraße",
+        "line": "DresdenTram2",
+        "order": 6
+      },
+      "id": 65
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6797557,
+          51.0460821
+        ]
+      },
+      "properties": {
+        "id": 66,
+        "name": "Dahlienweg",
+        "line": "DresdenTram2",
+        "order": 6
+      },
+      "id": 66
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6775254,
+          51.0452979
+        ]
+      },
+      "properties": {
+        "id": 67,
+        "name": "Amalie-Dietrich-Platz",
+        "line": "DresdenTram2",
+        "order": 6
+      },
+      "id": 67
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6696303,
+          51.0445144
+        ]
+      },
+      "properties": {
+        "id": 68,
+        "name": "Merianplatz (Elbamare)",
+        "alternate_names": [
+          "Merianplatz"
+        ],
+        "line": "DresdenTram2",
+        "order": 6
+      },
+      "id": 68
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6637101,
+          51.0457436
+        ]
+      },
+      "properties": {
+        "id": 69,
+        "name": "Kirschenstraße",
+        "line": "DresdenTram2",
+        "order": 6
+      },
+      "id": 69
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6584133,
+          51.048804
+        ]
+      },
+      "properties": {
+        "id": 70,
+        "name": "Schlehenstraße",
+        "line": "DresdenTram2",
+        "order": 6
+      },
+      "id": 70
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6526489,
+          51.0466849
+        ]
+      },
+      "properties": {
+        "id": 71,
+        "name": "Gorbitz, Betriebshof",
+        "alternate_names": [
+          "Gorbitz"
+        ],
+        "line": "DresdenTram2",
+        "order": 6
+      },
+      "id": 71
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6993917,
+          51.0158434
+        ]
+      },
+      "properties": {
+        "id": 99,
+        "name": "Coschütz",
+        "line": "DresdenTram3",
+        "order": 7
+      },
+      "id": 99
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7006197,
+          51.0162514
+        ]
+      },
+      "properties": {
+        "id": 98,
+        "name": "Achtbeeteweg",
+        "line": "DresdenTram3",
+        "order": 7
+      },
+      "id": 98
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7060811,
+          51.0190597
+        ]
+      },
+      "properties": {
+        "id": 97,
+        "name": "Saarstraße",
+        "line": "DresdenTram3",
+        "order": 7
+      },
+      "id": 97
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7101163,
+          51.0215899
+        ]
+      },
+      "properties": {
+        "id": 96,
+        "name": "Kotteweg",
+        "line": "DresdenTram3",
+        "order": 7
+      },
+      "id": 96
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7179515,
+          51.0220024
+        ]
+      },
+      "properties": {
+        "id": 95,
+        "name": "Cämmerswalder Straße",
+        "line": "DresdenTram3",
+        "order": 7
+      },
+      "id": 95
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7160847,
+          51.0276582
+        ]
+      },
+      "properties": {
+        "id": 94,
+        "name": "Plauen, Nöthnitzer Straße",
+        "alternate_names": [
+          "Plauen",
+          "Nöthnitzer Straße"
+        ],
+        "line": "DresdenTram3",
+        "order": 7
+      },
+      "id": 94
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7212984,
+          51.0299421
+        ]
+      },
+      "properties": {
+        "id": 93,
+        "name": "Münchner Platz (Gedenkstätte)",
+        "alternate_names": [
+          "Münchner Platz"
+        ],
+        "line": "DresdenTram3",
+        "order": 7
+      },
+      "id": 93
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7256234,
+          51.0314511
+        ]
+      },
+      "properties": {
+        "id": 92,
+        "name": "Nürnberger Platz",
+        "line": "DresdenTram3",
+        "order": 7
+      },
+      "id": 92
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7313147,
+          51.0352162
+        ]
+      },
+      "properties": {
+        "id": 91,
+        "name": "Reichenbachstraße (Studentenwerk)",
+        "alternate_names": [
+          "Reichenbachstraße"
+        ],
+        "line": "DresdenTram3",
+        "order": 7
+      },
+      "id": 91
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7330808,
+          51.0392958
+        ]
+      },
+      "properties": {
+        "id": 90,
+        "name": "Hauptbahnhof",
+        "line": "DresdenTram3",
+        "order": 7
+      },
+      "id": 90
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7347297,
+          51.0411056
+        ]
+      },
+      "properties": {
+        "id": 89,
+        "name": "Hauptbahnhof Nord",
+        "line": "DresdenTram3",
+        "order": 7
+      },
+      "id": 89
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7376352,
+          51.043748
+        ]
+      },
+      "properties": {
+        "id": 88,
+        "name": "Walpurgisstraße",
+        "line": "DresdenTram3",
+        "order": 7
+      },
+      "id": 88
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7381803,
+          51.0471132
+        ]
+      },
+      "properties": {
+        "id": 87,
+        "name": "Prager Straße",
+        "line": "DresdenTram3",
+        "order": 7
+      },
+      "id": 87
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7338088,
+          51.0496597
+        ]
+      },
+      "properties": {
+        "id": 86,
+        "name": "Postplatz",
+        "line": "DresdenTram3",
+        "order": 7
+      },
+      "id": 86
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7357049,
+          51.0528955
+        ]
+      },
+      "properties": {
+        "id": 85,
+        "name": "Theaterplatz",
+        "line": "DresdenTram3",
+        "order": 7
+      },
+      "id": 85
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7408785,
+          51.0571971
+        ]
+      },
+      "properties": {
+        "id": 84,
+        "name": "Neustädter Markt",
+        "line": "DresdenTram3",
+        "order": 7
+      },
+      "id": 84
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7458691,
+          51.0576821
+        ]
+      },
+      "properties": {
+        "id": 83,
+        "name": "Carolaplatz (Regierungsviertel)",
+        "alternate_names": [
+          "Carolaplatz"
+        ],
+        "line": "DresdenTram3",
+        "order": 7
+      },
+      "id": 83
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7459705,
+          51.0626862
+        ]
+      },
+      "properties": {
+        "id": 82,
+        "name": "Albertplatz (Erich-Kästner-Museum)",
+        "alternate_names": [
+          "Albertplatz"
+        ],
+        "line": "DresdenTram3",
+        "order": 7
+      },
+      "id": 82
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7419123,
+          51.0646711
+        ]
+      },
+      "properties": {
+        "id": 81,
+        "name": "Bahnhof Neustadt",
+        "line": "DresdenTram3",
+        "order": 7
+      },
+      "id": 81
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7390813,
+          51.066254
+        ]
+      },
+      "properties": {
+        "id": 80,
+        "name": "Bahnhof Neustadt (Hansastraße)",
+        "line": "DresdenTram3",
+        "order": 7
+      },
+      "id": 80
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7380822,
+          51.0694725
+        ]
+      },
+      "properties": {
+        "id": 79,
+        "name": "Lößnitzstraße",
+        "line": "DresdenTram3",
+        "order": 7
+      },
+      "id": 79
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7352382,
+          51.0733503
+        ]
+      },
+      "properties": {
+        "id": 78,
+        "name": "Großenhainer Platz",
+        "line": "DresdenTram3",
+        "order": 7
+      },
+      "id": 78
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7330413,
+          51.0764816
+        ]
+      },
+      "properties": {
+        "id": 77,
+        "name": "Liststraße",
+        "line": "DresdenTram3",
+        "order": 7
+      },
+      "id": 77
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7301162,
+          51.082437
+        ]
+      },
+      "properties": {
+        "id": 76,
+        "name": "Zeithainer Straße",
+        "line": "DresdenTram3",
+        "order": 7
+      },
+      "id": 76
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7281354,
+          51.0843646
+        ]
+      },
+      "properties": {
+        "id": 75,
+        "name": "Trachenberger Platz",
+        "line": "DresdenTram3",
+        "order": 7
+      },
+      "id": 75
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7238573,
+          51.088964
+        ]
+      },
+      "properties": {
+        "id": 74,
+        "name": "Hubertusplatz",
+        "line": "DresdenTram3",
+        "order": 7
+      },
+      "id": 74
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.720618,
+          51.0928567
+        ]
+      },
+      "properties": {
+        "id": 73,
+        "name": "Dorothea-Erxleben-Straße",
+        "line": "DresdenTram3",
+        "order": 7
+      },
+      "id": 73
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7194236,
+          51.0958465
+        ]
+      },
+      "properties": {
+        "id": 72,
+        "name": "Wilder Mann",
+        "line": "DresdenTram3",
+        "order": 7
+      },
+      "id": 72
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.5664457,
+          51.1595954
+        ]
+      },
+      "properties": {
+        "id": 159,
+        "name": "Weinböhla (Rathausstraße)",
+        "alternate_names": [
+          "Weinböhla",
+          "Rathausstraße"
+        ],
+        "line": "DresdenTram4",
+        "order": 8
+      },
+      "id": 159
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.5692359,
+          51.1569939
+        ]
+      },
+      "properties": {
+        "id": 158,
+        "name": "Weinböhla, Gellertstraße",
+        "alternate_names": [
+          "Gellertstraße"
+        ],
+        "line": "DresdenTram4",
+        "order": 8
+      },
+      "id": 158
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.5738747,
+          51.1519648
+        ]
+      },
+      "properties": {
+        "id": 157,
+        "name": "Weinböhla, Köhlerstraße",
+        "alternate_names": [
+          "Köhlerstraße"
+        ],
+        "line": "DresdenTram4",
+        "order": 8
+      },
+      "id": 157
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.5726122,
+          51.1434049
+        ]
+      },
+      "properties": {
+        "id": 156,
+        "name": "Coswig, Steinbacher Weg",
+        "alternate_names": [
+          "Steinbacher Weg"
+        ],
+        "line": "DresdenTram4",
+        "order": 8
+      },
+      "id": 156
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.5751194,
+          51.1400737
+        ]
+      },
+      "properties": {
+        "id": 155,
+        "name": "Coswig, Auerstraße",
+        "alternate_names": [
+          "Auerstraße"
+        ],
+        "line": "DresdenTram4",
+        "order": 8
+      },
+      "id": 155
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.5783068,
+          51.1362301
+        ]
+      },
+      "properties": {
+        "id": 154,
+        "name": "Coswig, Salzstraße",
+        "alternate_names": [
+          "Salzstraße"
+        ],
+        "line": "DresdenTram4",
+        "order": 8
+      },
+      "id": 154
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.5779751,
+          51.1278653
+        ]
+      },
+      "properties": {
+        "id": 153,
+        "name": "Coswig, Rathaus",
+        "alternate_names": [
+          "Rathaus"
+        ],
+        "line": "DresdenTram4",
+        "order": 8
+      },
+      "id": 153
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.5812239,
+          51.1272062
+        ]
+      },
+      "properties": {
+        "id": 152,
+        "name": "Coswig, Zentrum / Börse",
+        "alternate_names": [
+          "Zentrum/Börse"
+        ],
+        "line": "DresdenTram4",
+        "order": 8
+      },
+      "id": 152
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.5889536,
+          51.1256512
+        ]
+      },
+      "properties": {
+        "id": 151,
+        "name": "Coswig, Radebeuler Straße",
+        "alternate_names": [
+          "Radebeuler Straße"
+        ],
+        "line": "DresdenTram4",
+        "order": 8
+      },
+      "id": 151
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.5947685,
+          51.1210733
+        ]
+      },
+      "properties": {
+        "id": 150,
+        "name": "Radebeul, Eisenbahnbrücke",
+        "alternate_names": [
+          "Eisenbahnbrücke"
+        ],
+        "line": "DresdenTram4",
+        "order": 8
+      },
+      "id": 150
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6037661,
+          51.1196529
+        ]
+      },
+      "properties": {
+        "id": 149,
+        "name": "Radebeul, Gerhart-Hauptmann-Straße",
+        "alternate_names": [
+          "Gerhart-Hauptmann-Straße"
+        ],
+        "line": "DresdenTram4",
+        "order": 8
+      },
+      "id": 149
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6119027,
+          51.1144188
+        ]
+      },
+      "properties": {
+        "id": 148,
+        "name": "Radebeul, Johannisbergstraße",
+        "alternate_names": [
+          "Johannisbergstraße"
+        ],
+        "line": "DresdenTram4",
+        "order": 8
+      },
+      "id": 148
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6186162,
+          51.1128509
+        ]
+      },
+      "properties": {
+        "id": 147,
+        "name": "Radebeul, Schloss Wackerbarth",
+        "alternate_names": [
+          "Schloss Wackerbarth"
+        ],
+        "line": "DresdenTram4",
+        "order": 8
+      },
+      "id": 147
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6253882,
+          51.1099914
+        ]
+      },
+      "properties": {
+        "id": 146,
+        "name": "Radebeul West, Flemmingstraße",
+        "line": "DresdenTram4",
+        "order": 8
+      },
+      "id": 146
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6310354,
+          51.1080688
+        ]
+      },
+      "properties": {
+        "id": 145,
+        "name": "Radebeul, Moritzburger Straße",
+        "alternate_names": [
+          "Moritzburger Straße"
+        ],
+        "line": "DresdenTram4",
+        "order": 8
+      },
+      "id": 145
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6355797,
+          51.1073523
+        ]
+      },
+      "properties": {
+        "id": 144,
+        "name": "Radebeul, Gradsteg",
+        "alternate_names": [
+          "Gradsteg"
+        ],
+        "line": "DresdenTram4",
+        "order": 8
+      },
+      "id": 144
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6412749,
+          51.1066067
+        ]
+      },
+      "properties": {
+        "id": 143,
+        "name": "Radebeul, Borstraße",
+        "alternate_names": [
+          "Borstraße"
+        ],
+        "line": "DresdenTram4",
+        "order": 8
+      },
+      "id": 143
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6469016,
+          51.1061809
+        ]
+      },
+      "properties": {
+        "id": 142,
+        "name": "Radebeul, Dr.-Külz-Straße",
+        "alternate_names": [
+          "Dr.-Külz-Straße"
+        ],
+        "line": "DresdenTram4",
+        "order": 8
+      },
+      "id": 142
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6540369,
+          51.105463
+        ]
+      },
+      "properties": {
+        "id": 141,
+        "name": "Radebeul, Zillerstraße (Elblandklinikum)",
+        "alternate_names": [
+          "Zillerstraße"
+        ],
+        "line": "DresdenTram4",
+        "order": 8
+      },
+      "id": 141
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6596512,
+          51.1060354
+        ]
+      },
+      "properties": {
+        "id": 140,
+        "name": "Radebeul, Landesbühnen Sachsen",
+        "alternate_names": [
+          "Landesbühnen Sachsen"
+        ],
+        "line": "DresdenTram4",
+        "order": 8
+      },
+      "id": 140
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.668985,
+          51.1039994
+        ]
+      },
+      "properties": {
+        "id": 139,
+        "name": "Radebeul, Wasastraße",
+        "alternate_names": [
+          "Wasastraße"
+        ],
+        "line": "DresdenTram4",
+        "order": 8
+      },
+      "id": 139
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6746822,
+          51.1036983
+        ]
+      },
+      "properties": {
+        "id": 138,
+        "name": "Radebeul, Schildenstraße",
+        "alternate_names": [
+          "Schildenstraße"
+        ],
+        "line": "DresdenTram4",
+        "order": 8
+      },
+      "id": 138
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6815325,
+          51.1021736
+        ]
+      },
+      "properties": {
+        "id": 137,
+        "name": "Radebeul, Hauptstraße",
+        "alternate_names": [
+          "Hauptstraße"
+        ],
+        "line": "DresdenTram4",
+        "order": 8
+      },
+      "id": 137
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6855905,
+          51.1007322
+        ]
+      },
+      "properties": {
+        "id": 136,
+        "name": "Radebeul, Zinzendorfstraße",
+        "alternate_names": [
+          "Zinzendorfstraße"
+        ],
+        "line": "DresdenTram4",
+        "order": 8
+      },
+      "id": 136
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6947975,
+          51.095948
+        ]
+      },
+      "properties": {
+        "id": 135,
+        "name": "Radebeul, Forststraße",
+        "alternate_names": [
+          "Forststraße"
+        ],
+        "line": "DresdenTram4",
+        "order": 8
+      },
+      "id": 135
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6999475,
+          51.0922685
+        ]
+      },
+      "properties": {
+        "id": 134,
+        "name": "Kleestraße",
+        "line": "DresdenTram4",
+        "order": 8
+      },
+      "id": 134
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7027557,
+          51.0900048
+        ]
+      },
+      "properties": {
+        "id": 133,
+        "name": "S-Bahnhof Trachau West",
+        "line": "DresdenTram4",
+        "order": 8
+      },
+      "id": 133
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7036054,
+          51.0881621
+        ]
+      },
+      "properties": {
+        "id": 160,
+        "name": "Peschelstraße",
+        "line": "DresdenTram4",
+        "order": 8
+      },
+      "id": 160
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7050237,
+          51.0853533
+        ]
+      },
+      "properties": {
+        "id": 132,
+        "name": "Rankestraße",
+        "line": "DresdenTram4",
+        "order": 8
+      },
+      "id": 132
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7094132,
+          51.0842658
+        ]
+      },
+      "properties": {
+        "id": 131,
+        "name": "Alttrachau",
+        "line": "DresdenTram4",
+        "order": 8
+      },
+      "id": 131
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7143299,
+          51.0798184
+        ]
+      },
+      "properties": {
+        "id": 130,
+        "name": "Mickten",
+        "line": "DresdenTram4",
+        "order": 8
+      },
+      "id": 130
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7176384,
+          51.0770944
+        ]
+      },
+      "properties": {
+        "id": 129,
+        "name": "Altpieschen",
+        "line": "DresdenTram4",
+        "order": 8
+      },
+      "id": 129
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7232785,
+          51.074316
+        ]
+      },
+      "properties": {
+        "id": 128,
+        "name": "Oschatzer Straße",
+        "line": "DresdenTram4",
+        "order": 8
+      },
+      "id": 128
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7286221,
+          51.0707923
+        ]
+      },
+      "properties": {
+        "id": 127,
+        "name": "Alexander-Puschkin-Platz",
+        "line": "DresdenTram4",
+        "order": 8
+      },
+      "id": 127
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7314455,
+          51.068129
+        ]
+      },
+      "properties": {
+        "id": 126,
+        "name": "Alter Schlachthof",
+        "line": "DresdenTram4",
+        "order": 8
+      },
+      "id": 126
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7373935,
+          51.0623666
+        ]
+      },
+      "properties": {
+        "id": 125,
+        "name": "Antonstraße / Leipziger Straße",
+        "alternate_names": [
+          "Anton-/Leipziger Straße"
+        ],
+        "line": "DresdenTram4",
+        "order": 8
+      },
+      "id": 125
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7384499,
+          51.0600349
+        ]
+      },
+      "properties": {
+        "id": 124,
+        "name": "Palaisplatz (Japanisches Palais)",
+        "alternate_names": [
+          "Palaisplatz"
+        ],
+        "line": "DresdenTram4",
+        "order": 8
+      },
+      "id": 124
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.740772,
+          51.0579681
+        ]
+      },
+      "properties": {
+        "id": 123,
+        "name": "Neustädter Markt (Goldener Reiter)",
+        "alternate_names": [
+          "Neustädter Markt",
+          "Neustädter Markt (Goldener Reiter)"
+        ],
+        "line": "DresdenTram4",
+        "order": 8
+      },
+      "id": 123
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7408785,
+          51.0571971
+        ]
+      },
+      "properties": {
+        "id": 122,
+        "name": "Neustädter Markt",
+        "line": "DresdenTram4",
+        "order": 8
+      },
+      "id": 122
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7357049,
+          51.0528955
+        ]
+      },
+      "properties": {
+        "id": 121,
+        "name": "Theaterplatz",
+        "line": "DresdenTram4",
+        "order": 8
+      },
+      "id": 121
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7351974,
+          51.0506098
+        ]
+      },
+      "properties": {
+        "id": 120,
+        "name": "Postplatz",
+        "line": "DresdenTram4",
+        "order": 8
+      },
+      "id": 120
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7390681,
+          51.0501316
+        ]
+      },
+      "properties": {
+        "id": 119,
+        "name": "Altmarkt",
+        "line": "DresdenTram4",
+        "order": 8
+      },
+      "id": 119
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7436089,
+          51.0495289
+        ]
+      },
+      "properties": {
+        "id": 118,
+        "name": "Pirnaischer Platz (Stadtmuseum)",
+        "alternate_names": [
+          "Pirnaischer Platz"
+        ],
+        "line": "DresdenTram4",
+        "order": 8
+      },
+      "id": 118
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7504076,
+          51.0474998
+        ]
+      },
+      "properties": {
+        "id": 117,
+        "name": "Deutsches Hygiene-Museum",
+        "line": "DresdenTram4",
+        "order": 8
+      },
+      "id": 117
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7553756,
+          51.0460416
+        ]
+      },
+      "properties": {
+        "id": 116,
+        "name": "Straßburger Platz (Gläserne Manufaktur)",
+        "alternate_names": [
+          "Fučikplatz",
+          "Straßburger Platz"
+        ],
+        "line": "DresdenTram4",
+        "order": 8
+      },
+      "id": 116
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7628683,
+          51.0467691
+        ]
+      },
+      "properties": {
+        "id": 115,
+        "name": "Krankenhaus St. Joseph-Stift",
+        "line": "DresdenTram4",
+        "order": 8
+      },
+      "id": 115
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.770805,
+          51.0464382
+        ]
+      },
+      "properties": {
+        "id": 114,
+        "name": "Fetscherplatz",
+        "line": "DresdenTram4",
+        "order": 8
+      },
+      "id": 114
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7781729,
+          51.0447253
+        ]
+      },
+      "properties": {
+        "id": 113,
+        "name": "Mosenstraße",
+        "line": "DresdenTram4",
+        "order": 8
+      },
+      "id": 113
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7825362,
+          51.0435832
+        ]
+      },
+      "properties": {
+        "id": 112,
+        "name": "Spenerstraße",
+        "line": "DresdenTram4",
+        "order": 8
+      },
+      "id": 112
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7879448,
+          51.0432854
+        ]
+      },
+      "properties": {
+        "id": 111,
+        "name": "Bergmannstraße",
+        "line": "DresdenTram4",
+        "order": 8
+      },
+      "id": 111
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7946531,
+          51.0429084
+        ]
+      },
+      "properties": {
+        "id": 110,
+        "name": "Pohlandplatz (Technische Sammlungen)",
+        "alternate_names": [
+          "Pohlandplatz"
+        ],
+        "line": "DresdenTram4",
+        "order": 8
+      },
+      "id": 110
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8012466,
+          51.0410916
+        ]
+      },
+      "properties": {
+        "id": 109,
+        "name": "Gottleubaer Straße",
+        "line": "DresdenTram4",
+        "order": 8
+      },
+      "id": 109
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8063285,
+          51.0392769
+        ]
+      },
+      "properties": {
+        "id": 108,
+        "name": "Striesen, Altenberger Straße",
+        "line": "DresdenTram4",
+        "order": 8
+      },
+      "id": 108
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.807852,
+          51.0384162
+        ]
+      },
+      "properties": {
+        "id": 107,
+        "name": "Striesen, Ludwig-Hartmann-Straße",
+        "line": "DresdenTram4",
+        "order": 8
+      },
+      "id": 107
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.813114,
+          51.0366911
+        ]
+      },
+      "properties": {
+        "id": 106,
+        "name": "Johannisfriedhof",
+        "line": "DresdenTram4",
+        "order": 8
+      },
+      "id": 106
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8167635,
+          51.0356688
+        ]
+      },
+      "properties": {
+        "id": 105,
+        "name": "Tolkewitz Schulcampus",
+        "line": "DresdenTram4",
+        "order": 8
+      },
+      "id": 105
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8229082,
+          51.0340457
+        ]
+      },
+      "properties": {
+        "id": 104,
+        "name": "Wasserwerk Tolkewitz",
+        "line": "DresdenTram4",
+        "order": 8
+      },
+      "id": 104
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8320833,
+          51.0299595
+        ]
+      },
+      "properties": {
+        "id": 103,
+        "name": "Alttolkewitz",
+        "line": "DresdenTram4",
+        "order": 8
+      },
+      "id": 103
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8347326,
+          51.0277909
+        ]
+      },
+      "properties": {
+        "id": 102,
+        "name": "Hermann-Seidel-Straße",
+        "line": "DresdenTram4",
+        "order": 8
+      },
+      "id": 102
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.838099,
+          51.0240092
+        ]
+      },
+      "properties": {
+        "id": 101,
+        "name": "Leubener Straße",
+        "line": "DresdenTram4",
+        "order": 8
+      },
+      "id": 101
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8376238,
+          51.0230179
+        ]
+      },
+      "properties": {
+        "id": 100,
+        "name": "Laubegast, Kronstädter Platz",
+        "alternate_names": [
+          "Laubegast",
+          "Kronstädter Platz"
+        ],
+        "line": "DresdenTram4",
+        "order": 8
+      },
+      "id": 100
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6884752,
+          51.0998138
+        ]
+      },
+      "properties": {
+        "id": 161,
+        "name": "Radebeul Ost, Schillerstraße",
+        "line": "DresdenTram4",
+        "order": 8
+      },
+      "id": 161
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8294667,
+          50.9996491
+        ]
+      },
+      "properties": {
+        "id": 205,
+        "name": "S-Bahnhof Niedersedlitz",
+        "line": "DresdenTram6",
+        "order": 9
+      },
+      "id": 205
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8293187,
+          51.0002452
+        ]
+      },
+      "properties": {
+        "id": 204,
+        "name": "Försterlingstraße",
+        "line": "DresdenTram6",
+        "order": 9
+      },
+      "id": 204
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8271544,
+          51.0021692
+        ]
+      },
+      "properties": {
+        "id": 203,
+        "name": "Straße des 17. Juni",
+        "line": "DresdenTram6",
+        "order": 9
+      },
+      "id": 203
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8265361,
+          51.0048554
+        ]
+      },
+      "properties": {
+        "id": 202,
+        "name": "Guerickestraße",
+        "line": "DresdenTram6",
+        "order": 9
+      },
+      "id": 202
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8302885,
+          51.0101963
+        ]
+      },
+      "properties": {
+        "id": 201,
+        "name": "Berthold-Haupt-Straße",
+        "line": "DresdenTram6",
+        "order": 9
+      },
+      "id": 201
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8272745,
+          51.0115253
+        ]
+      },
+      "properties": {
+        "id": 200,
+        "name": "Altleuben",
+        "line": "DresdenTram6",
+        "order": 9
+      },
+      "id": 200
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8239598,
+          51.0131381
+        ]
+      },
+      "properties": {
+        "id": 199,
+        "name": "Friedhof Leuben",
+        "line": "DresdenTram6",
+        "order": 9
+      },
+      "id": 199
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8293397,
+          51.0170701
+        ]
+      },
+      "properties": {
+        "id": 198,
+        "name": "Großglocknerstraße",
+        "line": "DresdenTram6",
+        "order": 9
+      },
+      "id": 198
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8335411,
+          51.0215502
+        ]
+      },
+      "properties": {
+        "id": 197,
+        "name": "Laibacher Straße",
+        "line": "DresdenTram6",
+        "order": 9
+      },
+      "id": 197
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8367343,
+          51.0245286
+        ]
+      },
+      "properties": {
+        "id": 196,
+        "name": "Leubener Straße",
+        "line": "DresdenTram6",
+        "order": 9
+      },
+      "id": 196
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8347326,
+          51.0277909
+        ]
+      },
+      "properties": {
+        "id": 195,
+        "name": "Hermann-Seidel-Straße",
+        "line": "DresdenTram6",
+        "order": 9
+      },
+      "id": 195
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8320833,
+          51.0299595
+        ]
+      },
+      "properties": {
+        "id": 194,
+        "name": "Alttolkewitz",
+        "line": "DresdenTram6",
+        "order": 9
+      },
+      "id": 194
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8229082,
+          51.0340457
+        ]
+      },
+      "properties": {
+        "id": 193,
+        "name": "Wasserwerk Tolkewitz",
+        "line": "DresdenTram6",
+        "order": 9
+      },
+      "id": 193
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8167635,
+          51.0356688
+        ]
+      },
+      "properties": {
+        "id": 192,
+        "name": "Tolkewitz Schulcampus",
+        "line": "DresdenTram6",
+        "order": 9
+      },
+      "id": 192
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.813114,
+          51.0366911
+        ]
+      },
+      "properties": {
+        "id": 191,
+        "name": "Johannisfriedhof",
+        "line": "DresdenTram6",
+        "order": 9
+      },
+      "id": 191
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8091719,
+          51.038491
+        ]
+      },
+      "properties": {
+        "id": 190,
+        "name": "Striesen, Ludwig-Hartmann-Straße",
+        "line": "DresdenTram6",
+        "order": 9
+      },
+      "id": 190
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8125926,
+          51.0414838
+        ]
+      },
+      "properties": {
+        "id": 189,
+        "name": "Gustav-Freytag-Straße",
+        "line": "DresdenTram6",
+        "order": 9
+      },
+      "id": 189
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8131918,
+          51.0456992
+        ]
+      },
+      "properties": {
+        "id": 188,
+        "name": "Heinrich-Schütz-Straße",
+        "line": "DresdenTram6",
+        "order": 9
+      },
+      "id": 188
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8098144,
+          51.0490119
+        ]
+      },
+      "properties": {
+        "id": 187,
+        "name": "Jüngststraße",
+        "line": "DresdenTram6",
+        "order": 9
+      },
+      "id": 187
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8052155,
+          51.0521431
+        ]
+      },
+      "properties": {
+        "id": 186,
+        "name": "Blasewitz, Schillerplatz",
+        "alternate_names": [
+          "Blasewitz",
+          "Schillerplatz"
+        ],
+        "line": "DresdenTram6",
+        "order": 9
+      },
+      "id": 186
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7994449,
+          51.0528947
+        ]
+      },
+      "properties": {
+        "id": 185,
+        "name": "Prellerstraße",
+        "line": "DresdenTram6",
+        "order": 9
+      },
+      "id": 185
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7937057,
+          51.0536711
+        ]
+      },
+      "properties": {
+        "id": 184,
+        "name": "Lene-Glatzer-Straße",
+        "line": "DresdenTram6",
+        "order": 9
+      },
+      "id": 184
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7862919,
+          51.0537466
+        ]
+      },
+      "properties": {
+        "id": 183,
+        "name": "Königsheimplatz",
+        "line": "DresdenTram6",
+        "order": 9
+      },
+      "id": 183
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7817762,
+          51.0533096
+        ]
+      },
+      "properties": {
+        "id": 182,
+        "name": "Augsburger Straße (Universitätsklinikum)",
+        "alternate_names": [
+          "Augsburger Straße",
+          ""
+        ],
+        "line": "DresdenTram6",
+        "order": 9
+      },
+      "id": 182
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7782605,
+          51.052948
+        ]
+      },
+      "properties": {
+        "id": 181,
+        "name": "Blasewitzer Straße / Fetscherstraße",
+        "alternate_names": [
+          "Blasewitzer/Fetscherstraße"
+        ],
+        "line": "DresdenTram6",
+        "order": 9
+      },
+      "id": 181
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7697082,
+          51.0524902
+        ]
+      },
+      "properties": {
+        "id": 180,
+        "name": "Trinitatisplatz",
+        "line": "DresdenTram6",
+        "order": 9
+      },
+      "id": 180
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7635042,
+          51.0531255
+        ]
+      },
+      "properties": {
+        "id": 179,
+        "name": "Permoserstraße",
+        "line": "DresdenTram6",
+        "order": 9
+      },
+      "id": 179
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7577529,
+          51.0542174
+        ]
+      },
+      "properties": {
+        "id": 178,
+        "name": "Sachsenallee",
+        "line": "DresdenTram6",
+        "order": 9
+      },
+      "id": 178
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7528675,
+          51.0592227
+        ]
+      },
+      "properties": {
+        "id": 177,
+        "name": "Rosa-Luxemburg-Platz",
+        "line": "DresdenTram6",
+        "order": 9
+      },
+      "id": 177
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7519716,
+          51.0623258
+        ]
+      },
+      "properties": {
+        "id": 176,
+        "name": "Bautzner Straße / Rothenburger Straße",
+        "alternate_names": [
+          "Bautzner-/Rothenburger Straße",
+          ""
+        ],
+        "line": "DresdenTram6",
+        "order": 9
+      },
+      "id": 176
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7483651,
+          51.0634194
+        ]
+      },
+      "properties": {
+        "id": 175,
+        "name": "Albertplatz (Erich-Kästner-Museum)",
+        "alternate_names": [
+          "Albertplatz"
+        ],
+        "line": "DresdenTram6",
+        "order": 9
+      },
+      "id": 175
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7419123,
+          51.0646711
+        ]
+      },
+      "properties": {
+        "id": 174,
+        "name": "Bahnhof Neustadt",
+        "line": "DresdenTram6",
+        "order": 9
+      },
+      "id": 174
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7358964,
+          51.0624991
+        ]
+      },
+      "properties": {
+        "id": 173,
+        "name": "Antonstraße / Leipziger Straße",
+        "alternate_names": [
+          "Anton-/Leipziger Straße"
+        ],
+        "line": "DresdenTram6",
+        "order": 9
+      },
+      "id": 173
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7276451,
+          51.0582056
+        ]
+      },
+      "properties": {
+        "id": 172,
+        "name": "Kongresszentrum (Haus der Presse)",
+        "alternate_names": [
+          "Kongresszentrum",
+          "Haus der Presse"
+        ],
+        "line": "DresdenTram6",
+        "order": 9
+      },
+      "id": 172
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7239116,
+          51.055439
+        ]
+      },
+      "properties": {
+        "id": 171,
+        "name": "Bahnhof Mitte",
+        "line": "DresdenTram6",
+        "order": 9
+      },
+      "id": 171
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7230613,
+          51.0553566
+        ]
+      },
+      "properties": {
+        "id": 170,
+        "name": "Bahnhof Mitte",
+        "line": "DresdenTram6",
+        "order": 9
+      },
+      "id": 170
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7193861,
+          51.0541597
+        ]
+      },
+      "properties": {
+        "id": 169,
+        "name": "Koreanischer Platz",
+        "line": "DresdenTram6",
+        "order": 9
+      },
+      "id": 169
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7130275,
+          51.0503067
+        ]
+      },
+      "properties": {
+        "id": 168,
+        "name": "Cottaer Straße",
+        "line": "DresdenTram6",
+        "order": 9
+      },
+      "id": 168
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7068329,
+          51.0458278
+        ]
+      },
+      "properties": {
+        "id": 167,
+        "name": "Wernerstraße",
+        "line": "DresdenTram6",
+        "order": 9
+      },
+      "id": 167
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7037892,
+          51.0436794
+        ]
+      },
+      "properties": {
+        "id": 166,
+        "name": "Löbtau, Tharandter Straße",
+        "alternate_names": [
+          "Löbtau",
+          "Tharandter Straße"
+        ],
+        "line": "DresdenTram6",
+        "order": 9
+      },
+      "id": 166
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6978686,
+          51.043465
+        ]
+      },
+      "properties": {
+        "id": 165,
+        "name": "Bünaustraße",
+        "line": "DresdenTram6",
+        "order": 9
+      },
+      "id": 165
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6898483,
+          51.0425432
+        ]
+      },
+      "properties": {
+        "id": 164,
+        "name": "Malterstraße",
+        "line": "DresdenTram6",
+        "order": 9
+      },
+      "id": 164
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.684447,
+          51.0424384
+        ]
+      },
+      "properties": {
+        "id": 163,
+        "name": "Koblenzer Straße",
+        "line": "DresdenTram6",
+        "order": 9
+      },
+      "id": 163
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6799331,
+          51.0432048
+        ]
+      },
+      "properties": {
+        "id": 206,
+        "name": "Julius-Vahlteich-Straße",
+        "line": "DresdenTram6",
+        "order": 9
+      },
+      "id": 206
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.682345,
+          51.0431316
+        ]
+      },
+      "properties": {
+        "id": 162,
+        "name": "Wölfnitz",
+        "line": "DresdenTram6",
+        "order": 9
+      },
+      "id": 162
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6256229,
+          51.0406677
+        ]
+      },
+      "properties": {
+        "id": 251,
+        "name": "Pennrich, Gleisschleife",
+        "alternate_names": [
+          "Pennrich"
+        ],
+        "line": "DresdenTram7",
+        "order": 10
+      },
+      "id": 251
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6325868,
+          51.0399227
+        ]
+      },
+      "properties": {
+        "id": 250,
+        "name": "Gompitz, Gompitzer Höhe",
+        "alternate_names": [
+          "Gompitz",
+          "Gompitzer Höhe"
+        ],
+        "line": "DresdenTram7",
+        "order": 10
+      },
+      "id": 250
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6372942,
+          51.0387761
+        ]
+      },
+      "properties": {
+        "id": 249,
+        "name": "Rudolf-Walther-Straße",
+        "line": "DresdenTram7",
+        "order": 10
+      },
+      "id": 249
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6452469,
+          51.0399835
+        ]
+      },
+      "properties": {
+        "id": 248,
+        "name": "Altnossener Straße",
+        "line": "DresdenTram7",
+        "order": 10
+      },
+      "id": 248
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6526489,
+          51.0466849
+        ]
+      },
+      "properties": {
+        "id": 247,
+        "name": "Gorbitz, Betriebshof",
+        "alternate_names": [
+          "Gorbitz"
+        ],
+        "line": "DresdenTram7",
+        "order": 10
+      },
+      "id": 247
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6584133,
+          51.048804
+        ]
+      },
+      "properties": {
+        "id": 246,
+        "name": "Schlehenstraße",
+        "line": "DresdenTram7",
+        "order": 10
+      },
+      "id": 246
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6637101,
+          51.0457436
+        ]
+      },
+      "properties": {
+        "id": 245,
+        "name": "Kirschenstraße",
+        "line": "DresdenTram7",
+        "order": 10
+      },
+      "id": 245
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6696303,
+          51.0445144
+        ]
+      },
+      "properties": {
+        "id": 244,
+        "name": "Merianplatz (Elbamare)",
+        "alternate_names": [
+          "Merianplatz"
+        ],
+        "line": "DresdenTram7",
+        "order": 10
+      },
+      "id": 244
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6775254,
+          51.0452979
+        ]
+      },
+      "properties": {
+        "id": 243,
+        "name": "Amalie-Dietrich-Platz",
+        "line": "DresdenTram7",
+        "order": 10
+      },
+      "id": 243
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6799331,
+          51.0432048
+        ]
+      },
+      "properties": {
+        "id": 242,
+        "name": "Julius-Vahlteich-Straße",
+        "line": "DresdenTram7",
+        "order": 10
+      },
+      "id": 242
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.684447,
+          51.0424384
+        ]
+      },
+      "properties": {
+        "id": 241,
+        "name": "Koblenzer Straße",
+        "line": "DresdenTram7",
+        "order": 10
+      },
+      "id": 241
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6898483,
+          51.0425432
+        ]
+      },
+      "properties": {
+        "id": 240,
+        "name": "Malterstraße",
+        "line": "DresdenTram7",
+        "order": 10
+      },
+      "id": 240
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6978686,
+          51.043465
+        ]
+      },
+      "properties": {
+        "id": 239,
+        "name": "Bünaustraße",
+        "line": "DresdenTram7",
+        "order": 10
+      },
+      "id": 239
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7037892,
+          51.0436794
+        ]
+      },
+      "properties": {
+        "id": 238,
+        "name": "Löbtau, Tharandter Straße",
+        "alternate_names": [
+          "Löbtau",
+          "Tharandter Straße"
+        ],
+        "line": "DresdenTram7",
+        "order": 10
+      },
+      "id": 238
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7091041,
+          51.0447555
+        ]
+      },
+      "properties": {
+        "id": 237,
+        "name": "Oederaner Straße",
+        "line": "DresdenTram7",
+        "order": 10
+      },
+      "id": 237
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7130491,
+          51.0465293
+        ]
+      },
+      "properties": {
+        "id": 236,
+        "name": "Rosenstraße",
+        "line": "DresdenTram7",
+        "order": 10
+      },
+      "id": 236
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7206231,
+          51.0482348
+        ]
+      },
+      "properties": {
+        "id": 235,
+        "name": "S-Bahnhof Freiberger Straße (World Trade Center)",
+        "alternate_names": [
+          "S-Bahnhof Freiberger Straße",
+          ""
+        ],
+        "line": "DresdenTram7",
+        "order": 10
+      },
+      "id": 235
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7253092,
+          51.0436699
+        ]
+      },
+      "properties": {
+        "id": 234,
+        "name": "Budapester Straße",
+        "line": "DresdenTram7",
+        "order": 10
+      },
+      "id": 234
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.733278,
+          51.0408561
+        ]
+      },
+      "properties": {
+        "id": 233,
+        "name": "Hauptbahnhof",
+        "line": "DresdenTram7",
+        "order": 10
+      },
+      "id": 233
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7347297,
+          51.0411056
+        ]
+      },
+      "properties": {
+        "id": 232,
+        "name": "Hauptbahnhof Nord",
+        "line": "DresdenTram7",
+        "order": 10
+      },
+      "id": 232
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7376352,
+          51.043748
+        ]
+      },
+      "properties": {
+        "id": 231,
+        "name": "Walpurgisstraße",
+        "line": "DresdenTram7",
+        "order": 10
+      },
+      "id": 231
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7381803,
+          51.0471132
+        ]
+      },
+      "properties": {
+        "id": 230,
+        "name": "Prager Straße",
+        "line": "DresdenTram7",
+        "order": 10
+      },
+      "id": 230
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7338088,
+          51.0496597
+        ]
+      },
+      "properties": {
+        "id": 229,
+        "name": "Postplatz",
+        "line": "DresdenTram7",
+        "order": 10
+      },
+      "id": 229
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7357049,
+          51.0528955
+        ]
+      },
+      "properties": {
+        "id": 228,
+        "name": "Theaterplatz",
+        "line": "DresdenTram7",
+        "order": 10
+      },
+      "id": 228
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7408785,
+          51.0571971
+        ]
+      },
+      "properties": {
+        "id": 227,
+        "name": "Neustädter Markt",
+        "line": "DresdenTram7",
+        "order": 10
+      },
+      "id": 227
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7458691,
+          51.0576821
+        ]
+      },
+      "properties": {
+        "id": 226,
+        "name": "Carolaplatz (Regierungsviertel)",
+        "alternate_names": [
+          "Carolaplatz"
+        ],
+        "line": "DresdenTram7",
+        "order": 10
+      },
+      "id": 226
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7459705,
+          51.0626862
+        ]
+      },
+      "properties": {
+        "id": 225,
+        "name": "Albertplatz (Erich-Kästner-Museum)",
+        "alternate_names": [
+          "Albertplatz"
+        ],
+        "line": "DresdenTram7",
+        "order": 10
+      },
+      "id": 225
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7474236,
+          51.0675417
+        ]
+      },
+      "properties": {
+        "id": 224,
+        "name": "Louisenstraße",
+        "line": "DresdenTram7",
+        "order": 10
+      },
+      "id": 224
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7504808,
+          51.0711156
+        ]
+      },
+      "properties": {
+        "id": 223,
+        "name": "Bischofsweg",
+        "line": "DresdenTram7",
+        "order": 10
+      },
+      "id": 223
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7525519,
+          51.0734442
+        ]
+      },
+      "properties": {
+        "id": 222,
+        "name": "Tannenstraße (Goethe-Institut)",
+        "alternate_names": [
+          "Tannenstraße",
+          ""
+        ],
+        "line": "DresdenTram7",
+        "order": 10
+      },
+      "id": 222
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7557559,
+          51.0768517
+        ]
+      },
+      "properties": {
+        "id": 221,
+        "name": "Stauffenbergallee (Militärhistorisches Museum)",
+        "alternate_names": [
+          "Stauffenbergallee"
+        ],
+        "line": "DresdenTram7",
+        "order": 10
+      },
+      "id": 221
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7597912,
+          51.0814529
+        ]
+      },
+      "properties": {
+        "id": 220,
+        "name": "Heeresbäckerei (Stadtarchiv)",
+        "alternate_names": [
+          "Heeresbäckerei"
+        ],
+        "line": "DresdenTram7",
+        "order": 10
+      },
+      "id": 220
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.763326,
+          51.0868782
+        ]
+      },
+      "properties": {
+        "id": 219,
+        "name": "S-Bahnhof Industriegelände",
+        "line": "DresdenTram7",
+        "order": 10
+      },
+      "id": 219
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7648074,
+          51.091543
+        ]
+      },
+      "properties": {
+        "id": 218,
+        "name": "Hellersiedlung",
+        "line": "DresdenTram7",
+        "order": 10
+      },
+      "id": 218
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7685308,
+          51.09896
+        ]
+      },
+      "properties": {
+        "id": 217,
+        "name": "Moritzburger Weg",
+        "line": "DresdenTram7",
+        "order": 10
+      },
+      "id": 217
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7701808,
+          51.1028358
+        ]
+      },
+      "properties": {
+        "id": 216,
+        "name": "Infineon Süd (Abzweig nach Hellerau)",
+        "alternate_names": [
+          "Infineon Süd",
+          "Abzweig nach Hellerau"
+        ],
+        "line": "DresdenTram7",
+        "order": 10
+      },
+      "id": 216
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7728879,
+          51.1076433
+        ]
+      },
+      "properties": {
+        "id": 215,
+        "name": "Infineon Nord",
+        "line": "DresdenTram7",
+        "order": 10
+      },
+      "id": 215
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.775663,
+          51.1105732
+        ]
+      },
+      "properties": {
+        "id": 214,
+        "name": "Karl-Marx-Straße",
+        "line": "DresdenTram7",
+        "order": 10
+      },
+      "id": 214
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7834731,
+          51.114054
+        ]
+      },
+      "properties": {
+        "id": 213,
+        "name": "Zur Neuen Brücke",
+        "line": "DresdenTram7",
+        "order": 10
+      },
+      "id": 213
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7894414,
+          51.1184083
+        ]
+      },
+      "properties": {
+        "id": 212,
+        "name": "Käthe-Kollwitz-Platz",
+        "line": "DresdenTram7",
+        "order": 10
+      },
+      "id": 212
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7913536,
+          51.122817
+        ]
+      },
+      "properties": {
+        "id": 211,
+        "name": "Arkonastraße",
+        "line": "DresdenTram7",
+        "order": 10
+      },
+      "id": 211
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7926579,
+          51.1274032
+        ]
+      },
+      "properties": {
+        "id": 210,
+        "name": "Industriepark Klotzsche",
+        "line": "DresdenTram7",
+        "order": 10
+      },
+      "id": 210
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7952724,
+          51.1336094
+        ]
+      },
+      "properties": {
+        "id": 209,
+        "name": "Fuchsberg",
+        "line": "DresdenTram7",
+        "order": 10
+      },
+      "id": 209
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8002846,
+          51.1402134
+        ]
+      },
+      "properties": {
+        "id": 208,
+        "name": "Haltepunkt Weixdorf Bad",
+        "line": "DresdenTram7",
+        "order": 10
+      },
+      "id": 208
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.804021,
+          51.1443614
+        ]
+      },
+      "properties": {
+        "id": 207,
+        "name": "Weixdorf, Rathenaustraße",
+        "alternate_names": [
+          "Weixdorf",
+          "Rathenaustraße"
+        ],
+        "line": "DresdenTram7",
+        "order": 10
+      },
+      "id": 207
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7403858,
+          51.1163573
+        ]
+      },
+      "properties": {
+        "id": 252,
+        "name": "Hellerau, Kiefernweg",
+        "alternate_names": [
+          "Hellerau",
+          "Kiefernweg"
+        ],
+        "line": "DresdenTram8",
+        "order": 11
+      },
+      "id": 252
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7461941,
+          51.1155007
+        ]
+      },
+      "properties": {
+        "id": 253,
+        "name": "Brunnenweg",
+        "line": "DresdenTram8",
+        "order": 11
+      },
+      "id": 253
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7522554,
+          51.1124243
+        ]
+      },
+      "properties": {
+        "id": 254,
+        "name": "Festspielhaus Hellerau",
+        "line": "DresdenTram8",
+        "order": 11
+      },
+      "id": 254
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7604587,
+          51.1123996
+        ]
+      },
+      "properties": {
+        "id": 255,
+        "name": "Heinrich-Tessenow-Weg",
+        "line": "DresdenTram8",
+        "order": 11
+      },
+      "id": 255
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7632665,
+          51.1101277
+        ]
+      },
+      "properties": {
+        "id": 256,
+        "name": "Am Hellerrand (Deutsche Werkstätten)",
+        "alternate_names": [
+          "Am Hellerrand"
+        ],
+        "line": "DresdenTram8",
+        "order": 11
+      },
+      "id": 256
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7697891,
+          51.1029375
+        ]
+      },
+      "properties": {
+        "id": 257,
+        "name": "Infineon Süd (Abzweig nach Hellerau)",
+        "alternate_names": [
+          "Infineon Süd",
+          "Abzweig nach Hellerau"
+        ],
+        "line": "DresdenTram8",
+        "order": 11
+      },
+      "id": 257
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7685308,
+          51.09896
+        ]
+      },
+      "properties": {
+        "id": 258,
+        "name": "Moritzburger Weg",
+        "line": "DresdenTram8",
+        "order": 11
+      },
+      "id": 258
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7648074,
+          51.091543
+        ]
+      },
+      "properties": {
+        "id": 259,
+        "name": "Hellersiedlung",
+        "line": "DresdenTram8",
+        "order": 11
+      },
+      "id": 259
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.763326,
+          51.0868782
+        ]
+      },
+      "properties": {
+        "id": 260,
+        "name": "S-Bahnhof Industriegelände",
+        "line": "DresdenTram8",
+        "order": 11
+      },
+      "id": 260
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7597912,
+          51.0814529
+        ]
+      },
+      "properties": {
+        "id": 261,
+        "name": "Heeresbäckerei (Stadtarchiv)",
+        "alternate_names": [
+          "Heeresbäckerei"
+        ],
+        "line": "DresdenTram8",
+        "order": 11
+      },
+      "id": 261
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7557559,
+          51.0768517
+        ]
+      },
+      "properties": {
+        "id": 262,
+        "name": "Stauffenbergallee (Militärhistorisches Museum)",
+        "alternate_names": [
+          "Stauffenbergallee"
+        ],
+        "line": "DresdenTram8",
+        "order": 11
+      },
+      "id": 262
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7525519,
+          51.0734442
+        ]
+      },
+      "properties": {
+        "id": 263,
+        "name": "Tannenstraße (Goethe-Institut)",
+        "alternate_names": [
+          "Tannenstraße",
+          ""
+        ],
+        "line": "DresdenTram8",
+        "order": 11
+      },
+      "id": 263
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7504808,
+          51.0711156
+        ]
+      },
+      "properties": {
+        "id": 264,
+        "name": "Bischofsweg",
+        "line": "DresdenTram8",
+        "order": 11
+      },
+      "id": 264
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7474236,
+          51.0675417
+        ]
+      },
+      "properties": {
+        "id": 265,
+        "name": "Louisenstraße",
+        "line": "DresdenTram8",
+        "order": 11
+      },
+      "id": 265
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7483651,
+          51.0634194
+        ]
+      },
+      "properties": {
+        "id": 266,
+        "name": "Albertplatz (Erich-Kästner-Museum)",
+        "alternate_names": [
+          "Albertplatz"
+        ],
+        "line": "DresdenTram8",
+        "order": 11
+      },
+      "id": 266
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7519716,
+          51.0623258
+        ]
+      },
+      "properties": {
+        "id": 267,
+        "name": "Bautzner Straße / Rothenburger Straße",
+        "alternate_names": [
+          "Bautzner-/Rothenburger Straße",
+          ""
+        ],
+        "line": "DresdenTram8",
+        "order": 11
+      },
+      "id": 267
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7528675,
+          51.0592227
+        ]
+      },
+      "properties": {
+        "id": 268,
+        "name": "Rosa-Luxemburg-Platz",
+        "line": "DresdenTram8",
+        "order": 11
+      },
+      "id": 268
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7577529,
+          51.0542174
+        ]
+      },
+      "properties": {
+        "id": 269,
+        "name": "Sachsenallee",
+        "line": "DresdenTram8",
+        "order": 11
+      },
+      "id": 269
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7578569,
+          51.0517925
+        ]
+      },
+      "properties": {
+        "id": 270,
+        "name": "Dürerstraße (Evangelische Hochschule)",
+        "alternate_names": [
+          "Dürerstraße",
+          "Evangelische Hochschule"
+        ],
+        "line": "DresdenTram8",
+        "order": 11
+      },
+      "id": 270
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7572746,
+          51.0500952
+        ]
+      },
+      "properties": {
+        "id": 271,
+        "name": "Sankt-Benno-Gymnasium",
+        "line": "DresdenTram8",
+        "order": 11
+      },
+      "id": 271
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7546181,
+          51.0457792
+        ]
+      },
+      "properties": {
+        "id": 272,
+        "name": "Straßburger Platz (Gläserne Manufaktur)",
+        "alternate_names": [
+          "Fučikplatz",
+          "Straßburger Platz"
+        ],
+        "line": "DresdenTram8",
+        "order": 11
+      },
+      "id": 272
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7506676,
+          51.0419203
+        ]
+      },
+      "properties": {
+        "id": 273,
+        "name": "Georg-Arnhold-Bad (Deutsches Hygiene-Museum)",
+        "alternate_names": [
+          "Georg-Arnhold-Bad"
+        ],
+        "line": "DresdenTram8",
+        "order": 11
+      },
+      "id": 273
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7454763,
+          51.0378398
+        ]
+      },
+      "properties": {
+        "id": 274,
+        "name": "Lennéplatz",
+        "line": "DresdenTram8",
+        "order": 11
+      },
+      "id": 274
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7400064,
+          51.0387323
+        ]
+      },
+      "properties": {
+        "id": 275,
+        "name": "Gret-Palucca-Straße",
+        "line": "DresdenTram8",
+        "order": 11
+      },
+      "id": 275
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7330808,
+          51.0392958
+        ]
+      },
+      "properties": {
+        "id": 276,
+        "name": "Hauptbahnhof",
+        "line": "DresdenTram8",
+        "order": 11
+      },
+      "id": 276
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7313147,
+          51.0352162
+        ]
+      },
+      "properties": {
+        "id": 277,
+        "name": "Reichenbachstraße (Studentenwerk)",
+        "alternate_names": [
+          "Reichenbachstraße"
+        ],
+        "line": "DresdenTram8",
+        "order": 11
+      },
+      "id": 277
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7262194,
+          51.0322138
+        ]
+      },
+      "properties": {
+        "id": 278,
+        "name": "Nürnberger Platz",
+        "line": "DresdenTram8",
+        "order": 11
+      },
+      "id": 278
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7221922,
+          51.0339235
+        ]
+      },
+      "properties": {
+        "id": 279,
+        "name": "Südvorstadt",
+        "line": "DresdenTram8",
+        "order": 11
+      },
+      "id": 279
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7988715,
+          50.9992453
+        ]
+      },
+      "properties": {
+        "id": 280,
+        "name": "Prohlis, Gleisschleife",
+        "alternate_names": [
+          "Prohlis"
+        ],
+        "line": "DresdenTram9",
+        "order": 12
+      },
+      "id": 280
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7978298,
+          51.0019201
+        ]
+      },
+      "properties": {
+        "id": 281,
+        "name": "Georg-Palitzsch-Straße",
+        "line": "DresdenTram9",
+        "order": 12
+      },
+      "id": 281
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7990736,
+          51.0052352
+        ]
+      },
+      "properties": {
+        "id": 282,
+        "name": "Jacob-Winter-Platz (Prohlis-Zentrum)",
+        "line": "DresdenTram9",
+        "order": 12
+      },
+      "id": 282
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8026636,
+          51.0078471
+        ]
+      },
+      "properties": {
+        "id": 283,
+        "name": "Albert-Wolf-Platz",
+        "line": "DresdenTram9",
+        "order": 12
+      },
+      "id": 283
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.800926,
+          51.0099855
+        ]
+      },
+      "properties": {
+        "id": 284,
+        "name": "Trattendorfer Straße",
+        "line": "DresdenTram9",
+        "order": 12
+      },
+      "id": 284
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7956461,
+          51.0129392
+        ]
+      },
+      "properties": {
+        "id": 285,
+        "name": "Altreick",
+        "line": "DresdenTram9",
+        "order": 12
+      },
+      "id": 285
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7908225,
+          51.0134976
+        ]
+      },
+      "properties": {
+        "id": 286,
+        "name": "Hülßestraße",
+        "line": "DresdenTram9",
+        "order": 12
+      },
+      "id": 286
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7872018,
+          51.0155932
+        ]
+      },
+      "properties": {
+        "id": 287,
+        "name": "Lohrmannstraße",
+        "line": "DresdenTram9",
+        "order": 12
+      },
+      "id": 287
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7840323,
+          51.0175744
+        ]
+      },
+      "properties": {
+        "id": 288,
+        "name": "Wieckestraße",
+        "line": "DresdenTram9",
+        "order": 12
+      },
+      "id": 288
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7804297,
+          51.019489
+        ]
+      },
+      "properties": {
+        "id": 289,
+        "name": "Otto-Dix-Ring",
+        "line": "DresdenTram9",
+        "order": 12
+      },
+      "id": 289
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7746293,
+          51.0225398
+        ]
+      },
+      "properties": {
+        "id": 290,
+        "name": "Eugen-Bracht-Straße",
+        "line": "DresdenTram9",
+        "order": 12
+      },
+      "id": 290
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7693621,
+          51.0245893
+        ]
+      },
+      "properties": {
+        "id": 291,
+        "name": "Cäcilienstraße",
+        "line": "DresdenTram9",
+        "order": 12
+      },
+      "id": 291
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.765253,
+          51.0225056
+        ]
+      },
+      "properties": {
+        "id": 292,
+        "name": "Hugo-Bürkner-Straße",
+        "line": "DresdenTram9",
+        "order": 12
+      },
+      "id": 292
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7624742,
+          51.0243547
+        ]
+      },
+      "properties": {
+        "id": 293,
+        "name": "Mockritzer Straße",
+        "line": "DresdenTram9",
+        "order": 12
+      },
+      "id": 293
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7598583,
+          51.0273831
+        ]
+      },
+      "properties": {
+        "id": 294,
+        "name": "Wasaplatz",
+        "line": "DresdenTram9",
+        "order": 12
+      },
+      "id": 294
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7610657,
+          51.0309823
+        ]
+      },
+      "properties": {
+        "id": 295,
+        "name": "S-Bahnhof Strehlen",
+        "line": "DresdenTram9",
+        "order": 12
+      },
+      "id": 295
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7583196,
+          51.0344743
+        ]
+      },
+      "properties": {
+        "id": 296,
+        "name": "Querallee",
+        "line": "DresdenTram9",
+        "order": 12
+      },
+      "id": 296
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7531059,
+          51.0365453
+        ]
+      },
+      "properties": {
+        "id": 297,
+        "name": "Zoo",
+        "line": "DresdenTram9",
+        "order": 12
+      },
+      "id": 297
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7454763,
+          51.0378398
+        ]
+      },
+      "properties": {
+        "id": 298,
+        "name": "Lennéplatz",
+        "line": "DresdenTram9",
+        "order": 12
+      },
+      "id": 298
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7400064,
+          51.0387323
+        ]
+      },
+      "properties": {
+        "id": 299,
+        "name": "Gret-Palucca-Straße",
+        "line": "DresdenTram9",
+        "order": 12
+      },
+      "id": 299
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7347297,
+          51.0411056
+        ]
+      },
+      "properties": {
+        "id": 300,
+        "name": "Hauptbahnhof Nord",
+        "line": "DresdenTram9",
+        "order": 12
+      },
+      "id": 300
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7376352,
+          51.043748
+        ]
+      },
+      "properties": {
+        "id": 301,
+        "name": "Walpurgisstraße",
+        "line": "DresdenTram9",
+        "order": 12
+      },
+      "id": 301
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7381803,
+          51.0471132
+        ]
+      },
+      "properties": {
+        "id": 302,
+        "name": "Prager Straße",
+        "line": "DresdenTram9",
+        "order": 12
+      },
+      "id": 302
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7338088,
+          51.0496597
+        ]
+      },
+      "properties": {
+        "id": 303,
+        "name": "Postplatz",
+        "line": "DresdenTram9",
+        "order": 12
+      },
+      "id": 303
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7357049,
+          51.0528955
+        ]
+      },
+      "properties": {
+        "id": 304,
+        "name": "Theaterplatz",
+        "line": "DresdenTram9",
+        "order": 12
+      },
+      "id": 304
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7408785,
+          51.0571971
+        ]
+      },
+      "properties": {
+        "id": 305,
+        "name": "Neustädter Markt",
+        "line": "DresdenTram9",
+        "order": 12
+      },
+      "id": 305
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.740772,
+          51.0579681
+        ]
+      },
+      "properties": {
+        "id": 306,
+        "name": "Neustädter Markt (Goldener Reiter)",
+        "alternate_names": [
+          "Neustädter Markt",
+          "Neustädter Markt (Goldener Reiter)"
+        ],
+        "line": "DresdenTram9",
+        "order": 12
+      },
+      "id": 306
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7384499,
+          51.0600349
+        ]
+      },
+      "properties": {
+        "id": 307,
+        "name": "Palaisplatz (Japanisches Palais)",
+        "alternate_names": [
+          "Palaisplatz"
+        ],
+        "line": "DresdenTram9",
+        "order": 12
+      },
+      "id": 307
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7373935,
+          51.0623666
+        ]
+      },
+      "properties": {
+        "id": 308,
+        "name": "Antonstraße / Leipziger Straße",
+        "alternate_names": [
+          "Anton-/Leipziger Straße"
+        ],
+        "line": "DresdenTram9",
+        "order": 12
+      },
+      "id": 308
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7314455,
+          51.068129
+        ]
+      },
+      "properties": {
+        "id": 309,
+        "name": "Alter Schlachthof",
+        "line": "DresdenTram9",
+        "order": 12
+      },
+      "id": 309
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7286221,
+          51.0707923
+        ]
+      },
+      "properties": {
+        "id": 310,
+        "name": "Alexander-Puschkin-Platz",
+        "line": "DresdenTram9",
+        "order": 12
+      },
+      "id": 310
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7232785,
+          51.074316
+        ]
+      },
+      "properties": {
+        "id": 311,
+        "name": "Oschatzer Straße",
+        "line": "DresdenTram9",
+        "order": 12
+      },
+      "id": 311
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7176384,
+          51.0770944
+        ]
+      },
+      "properties": {
+        "id": 312,
+        "name": "Altpieschen",
+        "line": "DresdenTram9",
+        "order": 12
+      },
+      "id": 312
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7138256,
+          51.0794519
+        ]
+      },
+      "properties": {
+        "id": 313,
+        "name": "Mickten",
+        "line": "DresdenTram9",
+        "order": 12
+      },
+      "id": 313
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7076341,
+          51.0788789
+        ]
+      },
+      "properties": {
+        "id": 314,
+        "name": "Trachauer Straße",
+        "line": "DresdenTram9",
+        "order": 12
+      },
+      "id": 314
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7025406,
+          51.0779316
+        ]
+      },
+      "properties": {
+        "id": 315,
+        "name": "Brockwitzer Straße",
+        "line": "DresdenTram9",
+        "order": 12
+      },
+      "id": 315
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6983702,
+          51.0772386
+        ]
+      },
+      "properties": {
+        "id": 316,
+        "name": "An der Flutrinne",
+        "line": "DresdenTram9",
+        "order": 12
+      },
+      "id": 316
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6971772,
+          51.0795038
+        ]
+      },
+      "properties": {
+        "id": 317,
+        "name": "Sörnewitzer Straße",
+        "line": "DresdenTram9",
+        "order": 12
+      },
+      "id": 317
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6947463,
+          51.0819171
+        ]
+      },
+      "properties": {
+        "id": 318,
+        "name": "Elbepark",
+        "line": "DresdenTram9",
+        "order": 12
+      },
+      "id": 318
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6914474,
+          51.0821822
+        ]
+      },
+      "properties": {
+        "id": 319,
+        "name": "Washingtonstraße",
+        "line": "DresdenTram9",
+        "order": 12
+      },
+      "id": 319
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6872385,
+          51.0834215
+        ]
+      },
+      "properties": {
+        "id": 320,
+        "name": "Kaditz, Riegelplatz",
+        "alternate_names": [
+          "Riegelplatz",
+          "Kaditz"
+        ],
+        "line": "DresdenTram9",
+        "order": 12
+      },
+      "id": 320
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.807852,
+          51.0384162
+        ]
+      },
+      "properties": {
+        "id": 321,
+        "name": "Striesen, Ludwig-Hartmann-Straße",
+        "line": "DresdenTram10",
+        "order": 2
+      },
+      "id": 321
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8063285,
+          51.0392769
+        ]
+      },
+      "properties": {
+        "id": 322,
+        "name": "Striesen, Altenberger Straße",
+        "line": "DresdenTram10",
+        "order": 2
+      },
+      "id": 322
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8012466,
+          51.0410916
+        ]
+      },
+      "properties": {
+        "id": 323,
+        "name": "Gottleubaer Straße",
+        "line": "DresdenTram10",
+        "order": 2
+      },
+      "id": 323
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7946531,
+          51.0429084
+        ]
+      },
+      "properties": {
+        "id": 324,
+        "name": "Pohlandplatz (Technische Sammlungen)",
+        "alternate_names": [
+          "Pohlandplatz"
+        ],
+        "line": "DresdenTram10",
+        "order": 2
+      },
+      "id": 324
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7879448,
+          51.0432854
+        ]
+      },
+      "properties": {
+        "id": 325,
+        "name": "Bergmannstraße",
+        "line": "DresdenTram10",
+        "order": 2
+      },
+      "id": 325
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7825362,
+          51.0435832
+        ]
+      },
+      "properties": {
+        "id": 326,
+        "name": "Spenerstraße",
+        "line": "DresdenTram10",
+        "order": 2
+      },
+      "id": 326
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7781729,
+          51.0447253
+        ]
+      },
+      "properties": {
+        "id": 327,
+        "name": "Mosenstraße",
+        "line": "DresdenTram10",
+        "order": 2
+      },
+      "id": 327
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.770805,
+          51.0464382
+        ]
+      },
+      "properties": {
+        "id": 328,
+        "name": "Fetscherplatz",
+        "line": "DresdenTram10",
+        "order": 2
+      },
+      "id": 328
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7628683,
+          51.0467691
+        ]
+      },
+      "properties": {
+        "id": 329,
+        "name": "Krankenhaus St. Joseph-Stift",
+        "line": "DresdenTram10",
+        "order": 2
+      },
+      "id": 329
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7546181,
+          51.0457792
+        ]
+      },
+      "properties": {
+        "id": 330,
+        "name": "Straßburger Platz (Gläserne Manufaktur)",
+        "alternate_names": [
+          "Fučikplatz",
+          "Straßburger Platz"
+        ],
+        "line": "DresdenTram10",
+        "order": 2
+      },
+      "id": 330
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7506676,
+          51.0419203
+        ]
+      },
+      "properties": {
+        "id": 331,
+        "name": "Georg-Arnhold-Bad (Deutsches Hygiene-Museum)",
+        "alternate_names": [
+          "Georg-Arnhold-Bad"
+        ],
+        "line": "DresdenTram10",
+        "order": 2
+      },
+      "id": 331
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7454763,
+          51.0378398
+        ]
+      },
+      "properties": {
+        "id": 332,
+        "name": "Lennéplatz",
+        "line": "DresdenTram10",
+        "order": 2
+      },
+      "id": 332
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7400064,
+          51.0387323
+        ]
+      },
+      "properties": {
+        "id": 333,
+        "name": "Gret-Palucca-Straße",
+        "line": "DresdenTram10",
+        "order": 2
+      },
+      "id": 333
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.733278,
+          51.0408561
+        ]
+      },
+      "properties": {
+        "id": 334,
+        "name": "Hauptbahnhof",
+        "line": "DresdenTram10",
+        "order": 2
+      },
+      "id": 334
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7253092,
+          51.0436699
+        ]
+      },
+      "properties": {
+        "id": 335,
+        "name": "Budapester Straße",
+        "line": "DresdenTram10",
+        "order": 2
+      },
+      "id": 335
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7206231,
+          51.0482348
+        ]
+      },
+      "properties": {
+        "id": 336,
+        "name": "S-Bahnhof Freiberger Straße (World Trade Center)",
+        "alternate_names": [
+          "S-Bahnhof Freiberger Straße",
+          ""
+        ],
+        "line": "DresdenTram10",
+        "order": 2
+      },
+      "id": 336
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7230613,
+          51.0553566
+        ]
+      },
+      "properties": {
+        "id": 337,
+        "name": "Bahnhof Mitte",
+        "line": "DresdenTram10",
+        "order": 2
+      },
+      "id": 337
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7237944,
+          51.0580512
+        ]
+      },
+      "properties": {
+        "id": 338,
+        "name": "Weißeritzstraße",
+        "line": "DresdenTram10",
+        "order": 2
+      },
+      "id": 338
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7181496,
+          51.0598859
+        ]
+      },
+      "properties": {
+        "id": 339,
+        "name": "Krankenhaus Friedrichstadt (Sportpark Ostra)",
+        "alternate_names": [
+          "Krankenhaus Friedrichstadt",
+          "Sportpark Ostra"
+        ],
+        "line": "DresdenTram10",
+        "order": 2
+      },
+      "id": 339
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7146615,
+          51.0615463
+        ]
+      },
+      "properties": {
+        "id": 340,
+        "name": "Vorwerkstraße",
+        "line": "DresdenTram10",
+        "order": 2
+      },
+      "id": 340
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7156179,
+          51.0631209
+        ]
+      },
+      "properties": {
+        "id": 341,
+        "name": "Alberthafen",
+        "line": "DresdenTram10",
+        "order": 2
+      },
+      "id": 341
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7163636,
+          51.0674507
+        ]
+      },
+      "properties": {
+        "id": 342,
+        "name": "Messering (Halle 1)",
+        "line": "DresdenTram10",
+        "order": 2
+      },
+      "id": 342
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7143466,
+          51.0699288
+        ]
+      },
+      "properties": {
+        "id": 343,
+        "name": "Messe Dresden",
+        "line": "DresdenTram10",
+        "order": 2
+      },
+      "id": 343
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7148741,
+          51.0724362
+        ]
+      },
+      "properties": {
+        "id": 344,
+        "name": "Messe, Gleisschleife",
+        "line": "DresdenTram10",
+        "order": 2
+      },
+      "id": 344
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7418378,
+          51.0194047
+        ]
+      },
+      "properties": {
+        "id": 374,
+        "name": "Zschertnitz, Münzmeisterstraße",
+        "alternate_names": [
+          "Zschertnitz",
+          "Münzmeisterstraße"
+        ],
+        "line": "DresdenTram11",
+        "order": 3
+      },
+      "id": 374
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7430712,
+          51.0234709
+        ]
+      },
+      "properties": {
+        "id": 373,
+        "name": "Räcknitzhöhe",
+        "line": "DresdenTram11",
+        "order": 3
+      },
+      "id": 373
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7455905,
+          51.027895
+        ]
+      },
+      "properties": {
+        "id": 372,
+        "name": "Zellescher Weg",
+        "line": "DresdenTram11",
+        "order": 3
+      },
+      "id": 372
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7485643,
+          51.0326703
+        ]
+      },
+      "properties": {
+        "id": 371,
+        "name": "Strehlener Platz",
+        "line": "DresdenTram11",
+        "order": 3
+      },
+      "id": 371
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7454763,
+          51.0378398
+        ]
+      },
+      "properties": {
+        "id": 370,
+        "name": "Lennéplatz",
+        "line": "DresdenTram11",
+        "order": 3
+      },
+      "id": 370
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7400064,
+          51.0387323
+        ]
+      },
+      "properties": {
+        "id": 369,
+        "name": "Gret-Palucca-Straße",
+        "line": "DresdenTram11",
+        "order": 3
+      },
+      "id": 369
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7347297,
+          51.0411056
+        ]
+      },
+      "properties": {
+        "id": 368,
+        "name": "Hauptbahnhof Nord",
+        "line": "DresdenTram11",
+        "order": 3
+      },
+      "id": 368
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7376352,
+          51.043748
+        ]
+      },
+      "properties": {
+        "id": 367,
+        "name": "Walpurgisstraße",
+        "line": "DresdenTram11",
+        "order": 3
+      },
+      "id": 367
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7381803,
+          51.0471132
+        ]
+      },
+      "properties": {
+        "id": 366,
+        "name": "Prager Straße",
+        "line": "DresdenTram11",
+        "order": 3
+      },
+      "id": 366
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7338088,
+          51.0496597
+        ]
+      },
+      "properties": {
+        "id": 365,
+        "name": "Postplatz",
+        "line": "DresdenTram11",
+        "order": 3
+      },
+      "id": 365
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7303289,
+          51.0544876
+        ]
+      },
+      "properties": {
+        "id": 364,
+        "name": "Am Zwingerteich",
+        "line": "DresdenTram11",
+        "order": 3
+      },
+      "id": 364
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7276451,
+          51.0582056
+        ]
+      },
+      "properties": {
+        "id": 363,
+        "name": "Kongresszentrum (Haus der Presse)",
+        "alternate_names": [
+          "Kongresszentrum",
+          "Haus der Presse"
+        ],
+        "line": "DresdenTram11",
+        "order": 3
+      },
+      "id": 363
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7358964,
+          51.0624991
+        ]
+      },
+      "properties": {
+        "id": 362,
+        "name": "Antonstraße / Leipziger Straße",
+        "alternate_names": [
+          "Anton-/Leipziger Straße"
+        ],
+        "line": "DresdenTram11",
+        "order": 3
+      },
+      "id": 362
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7419123,
+          51.0646711
+        ]
+      },
+      "properties": {
+        "id": 361,
+        "name": "Bahnhof Neustadt",
+        "line": "DresdenTram11",
+        "order": 3
+      },
+      "id": 361
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7483651,
+          51.0634194
+        ]
+      },
+      "properties": {
+        "id": 360,
+        "name": "Albertplatz (Erich-Kästner-Museum)",
+        "alternate_names": [
+          "Albertplatz"
+        ],
+        "line": "DresdenTram11",
+        "order": 3
+      },
+      "id": 360
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7530904,
+          51.0629069
+        ]
+      },
+      "properties": {
+        "id": 359,
+        "name": "Bautzner Straße / Rothenburger Straße",
+        "alternate_names": [
+          "Bautzner-/Rothenburger Straße",
+          ""
+        ],
+        "line": "DresdenTram11",
+        "order": 3
+      },
+      "id": 359
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7571882,
+          51.0632416
+        ]
+      },
+      "properties": {
+        "id": 358,
+        "name": "Pulsnitzer Straße",
+        "line": "DresdenTram11",
+        "order": 3
+      },
+      "id": 358
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7620399,
+          51.0640848
+        ]
+      },
+      "properties": {
+        "id": 357,
+        "name": "Diakonissenkrankenhaus",
+        "line": "DresdenTram11",
+        "order": 3
+      },
+      "id": 357
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7688965,
+          51.0660019
+        ]
+      },
+      "properties": {
+        "id": 356,
+        "name": "Nordstraße",
+        "line": "DresdenTram11",
+        "order": 3
+      },
+      "id": 356
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7776877,
+          51.0673744
+        ]
+      },
+      "properties": {
+        "id": 355,
+        "name": "Waldschlößchen",
+        "line": "DresdenTram11",
+        "order": 3
+      },
+      "id": 355
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7851966,
+          51.0669773
+        ]
+      },
+      "properties": {
+        "id": 354,
+        "name": "Angelikastraße (Gedenkstätte Bautzner Straße)",
+        "alternate_names": [
+          "Angelikastraße",
+          ""
+        ],
+        "line": "DresdenTram11",
+        "order": 3
+      },
+      "id": 354
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.788265,
+          51.0670894
+        ]
+      },
+      "properties": {
+        "id": 353,
+        "name": "Wilhelminenstraße",
+        "line": "DresdenTram11",
+        "order": 3
+      },
+      "id": 353
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7984521,
+          51.0659403
+        ]
+      },
+      "properties": {
+        "id": 352,
+        "name": "Elbschlösser",
+        "line": "DresdenTram11",
+        "order": 3
+      },
+      "id": 352
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8113254,
+          51.0642911
+        ]
+      },
+      "properties": {
+        "id": 351,
+        "name": "Mordgrundbrücke",
+        "line": "DresdenTram11",
+        "order": 3
+      },
+      "id": 351
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8214683,
+          51.0637167
+        ]
+      },
+      "properties": {
+        "id": 350,
+        "name": "Plattleite",
+        "line": "DresdenTram11",
+        "order": 3
+      },
+      "id": 350
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8315942,
+          51.0618503
+        ]
+      },
+      "properties": {
+        "id": 349,
+        "name": "Am Weißen Adler",
+        "line": "DresdenTram11",
+        "order": 3
+      },
+      "id": 349
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8387272,
+          51.0622459
+        ]
+      },
+      "properties": {
+        "id": 348,
+        "name": "Schwimmhalle Bühlau",
+        "line": "DresdenTram11",
+        "order": 3
+      },
+      "id": 348
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8440097,
+          51.0619091
+        ]
+      },
+      "properties": {
+        "id": 347,
+        "name": "Hegereiterstraße",
+        "line": "DresdenTram11",
+        "order": 3
+      },
+      "id": 347
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8477051,
+          51.0618064
+        ]
+      },
+      "properties": {
+        "id": 346,
+        "name": "Grundstraße",
+        "line": "DresdenTram11",
+        "order": 3
+      },
+      "id": 346
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8541505,
+          51.0622916
+        ]
+      },
+      "properties": {
+        "id": 345,
+        "name": "Bühlau, Ullersdorfer Platz",
+        "alternate_names": [
+          "Bühlau",
+          "Ullersdorfer Platz"
+        ],
+        "line": "DresdenTram11",
+        "order": 3
+      },
+      "id": 345
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.807852,
+          51.0384162
+        ]
+      },
+      "properties": {
+        "id": 406,
+        "name": "Striesen, Ludwig-Hartmann-Straße",
+        "line": "DresdenTram12",
+        "order": 4
+      },
+      "id": 406
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8125926,
+          51.0414838
+        ]
+      },
+      "properties": {
+        "id": 405,
+        "name": "Gustav-Freytag-Straße",
+        "line": "DresdenTram12",
+        "order": 4
+      },
+      "id": 405
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8131918,
+          51.0456992
+        ]
+      },
+      "properties": {
+        "id": 404,
+        "name": "Heinrich-Schütz-Straße",
+        "line": "DresdenTram12",
+        "order": 4
+      },
+      "id": 404
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8098144,
+          51.0490119
+        ]
+      },
+      "properties": {
+        "id": 403,
+        "name": "Jüngststraße",
+        "line": "DresdenTram12",
+        "order": 4
+      },
+      "id": 403
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8052155,
+          51.0521431
+        ]
+      },
+      "properties": {
+        "id": 402,
+        "name": "Blasewitz, Schillerplatz",
+        "alternate_names": [
+          "Blasewitz",
+          "Schillerplatz"
+        ],
+        "line": "DresdenTram12",
+        "order": 4
+      },
+      "id": 402
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7994449,
+          51.0528947
+        ]
+      },
+      "properties": {
+        "id": 401,
+        "name": "Prellerstraße",
+        "line": "DresdenTram12",
+        "order": 4
+      },
+      "id": 401
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7937057,
+          51.0536711
+        ]
+      },
+      "properties": {
+        "id": 400,
+        "name": "Lene-Glatzer-Straße",
+        "line": "DresdenTram12",
+        "order": 4
+      },
+      "id": 400
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7862919,
+          51.0537466
+        ]
+      },
+      "properties": {
+        "id": 399,
+        "name": "Königsheimplatz",
+        "line": "DresdenTram12",
+        "order": 4
+      },
+      "id": 399
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7817762,
+          51.0533096
+        ]
+      },
+      "properties": {
+        "id": 398,
+        "name": "Augsburger Straße (Universitätsklinikum)",
+        "alternate_names": [
+          "Augsburger Straße",
+          ""
+        ],
+        "line": "DresdenTram12",
+        "order": 4
+      },
+      "id": 398
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7782605,
+          51.052948
+        ]
+      },
+      "properties": {
+        "id": 397,
+        "name": "Blasewitzer Straße / Fetscherstraße",
+        "alternate_names": [
+          "Blasewitzer/Fetscherstraße"
+        ],
+        "line": "DresdenTram12",
+        "order": 4
+      },
+      "id": 397
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7742531,
+          51.0493624
+        ]
+      },
+      "properties": {
+        "id": 396,
+        "name": "Gabelsbergerstraße",
+        "line": "DresdenTram12",
+        "order": 4
+      },
+      "id": 396
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.770805,
+          51.0464382
+        ]
+      },
+      "properties": {
+        "id": 395,
+        "name": "Fetscherplatz",
+        "line": "DresdenTram12",
+        "order": 4
+      },
+      "id": 395
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7628683,
+          51.0467691
+        ]
+      },
+      "properties": {
+        "id": 394,
+        "name": "Krankenhaus St. Joseph-Stift",
+        "line": "DresdenTram12",
+        "order": 4
+      },
+      "id": 394
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7553756,
+          51.0460416
+        ]
+      },
+      "properties": {
+        "id": 393,
+        "name": "Straßburger Platz (Gläserne Manufaktur)",
+        "alternate_names": [
+          "Fučikplatz",
+          "Straßburger Platz"
+        ],
+        "line": "DresdenTram12",
+        "order": 4
+      },
+      "id": 393
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7504076,
+          51.0474998
+        ]
+      },
+      "properties": {
+        "id": 392,
+        "name": "Deutsches Hygiene-Museum",
+        "line": "DresdenTram12",
+        "order": 4
+      },
+      "id": 392
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7432305,
+          51.0483517
+        ]
+      },
+      "properties": {
+        "id": 391,
+        "name": "Pirnaischer Platz (Stadtmuseum)",
+        "alternate_names": [
+          "Pirnaischer Platz"
+        ],
+        "line": "DresdenTram12",
+        "order": 4
+      },
+      "id": 391
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7381803,
+          51.0471132
+        ]
+      },
+      "properties": {
+        "id": 390,
+        "name": "Prager Straße",
+        "line": "DresdenTram12",
+        "order": 4
+      },
+      "id": 390
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7338088,
+          51.0496597
+        ]
+      },
+      "properties": {
+        "id": 389,
+        "name": "Postplatz",
+        "line": "DresdenTram12",
+        "order": 4
+      },
+      "id": 389
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7254864,
+          51.050388
+        ]
+      },
+      "properties": {
+        "id": 388,
+        "name": "Schwimmhalle Freiberger Platz",
+        "line": "DresdenTram12",
+        "order": 4
+      },
+      "id": 388
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7209155,
+          51.0494362
+        ]
+      },
+      "properties": {
+        "id": 387,
+        "name": "S-Bahnhof Freiberger Straße (World Trade Center)",
+        "alternate_names": [
+          "S-Bahnhof Freiberger Straße",
+          ""
+        ],
+        "line": "DresdenTram12",
+        "order": 4
+      },
+      "id": 387
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7130491,
+          51.0465293
+        ]
+      },
+      "properties": {
+        "id": 386,
+        "name": "Rosenstraße",
+        "line": "DresdenTram12",
+        "order": 4
+      },
+      "id": 386
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7091041,
+          51.0447555
+        ]
+      },
+      "properties": {
+        "id": 385,
+        "name": "Oederaner Straße",
+        "line": "DresdenTram12",
+        "order": 4
+      },
+      "id": 385
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7037892,
+          51.0436794
+        ]
+      },
+      "properties": {
+        "id": 384,
+        "name": "Löbtau, Tharandter Straße",
+        "alternate_names": [
+          "Löbtau",
+          "Tharandter Straße"
+        ],
+        "line": "DresdenTram12",
+        "order": 4
+      },
+      "id": 384
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6978686,
+          51.043465
+        ]
+      },
+      "properties": {
+        "id": 383,
+        "name": "Bünaustraße",
+        "line": "DresdenTram12",
+        "order": 4
+      },
+      "id": 383
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6931427,
+          51.0458362
+        ]
+      },
+      "properties": {
+        "id": 382,
+        "name": "Conertplatz",
+        "line": "DresdenTram12",
+        "order": 4
+      },
+      "id": 382
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6921249,
+          51.0488324
+        ]
+      },
+      "properties": {
+        "id": 381,
+        "name": "Pennricher Straße",
+        "line": "DresdenTram12",
+        "order": 4
+      },
+      "id": 381
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.691039,
+          51.0526921
+        ]
+      },
+      "properties": {
+        "id": 380,
+        "name": "Birkenhainer Straße",
+        "line": "DresdenTram12",
+        "order": 4
+      },
+      "id": 380
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6878802,
+          51.056514
+        ]
+      },
+      "properties": {
+        "id": 379,
+        "name": "Altcotta",
+        "line": "DresdenTram12",
+        "order": 4
+      },
+      "id": 379
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6838796,
+          51.0590829
+        ]
+      },
+      "properties": {
+        "id": 378,
+        "name": "Ockerwitzer Straße",
+        "line": "DresdenTram12",
+        "order": 4
+      },
+      "id": 378
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6803568,
+          51.0615815
+        ]
+      },
+      "properties": {
+        "id": 377,
+        "name": "Cossebauder Straße",
+        "line": "DresdenTram12",
+        "order": 4
+      },
+      "id": 377
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6776015,
+          51.0609396
+        ]
+      },
+      "properties": {
+        "id": 376,
+        "name": "Cotta, Gottfried-Keller-Straße",
+        "alternate_names": [
+          "Cotta",
+          "Gottfried-Keller-Straße"
+        ],
+        "line": "DresdenTram12",
+        "order": 4
+      },
+      "id": 376
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6705316,
+          51.0590617
+        ]
+      },
+      "properties": {
+        "id": 375,
+        "name": "Leutewitz",
+        "line": "DresdenTram12",
+        "order": 4
+      },
+      "id": 375
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6872385,
+          51.0834215
+        ]
+      },
+      "properties": {
+        "id": 449,
+        "name": "Kaditz, Riegelplatz",
+        "alternate_names": [
+          "Riegelplatz",
+          "Kaditz"
+        ],
+        "line": "DresdenTram13",
+        "order": 5
+      },
+      "id": 449
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6914474,
+          51.0821822
+        ]
+      },
+      "properties": {
+        "id": 448,
+        "name": "Washingtonstraße",
+        "line": "DresdenTram13",
+        "order": 5
+      },
+      "id": 448
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6947463,
+          51.0819171
+        ]
+      },
+      "properties": {
+        "id": 447,
+        "name": "Elbepark",
+        "line": "DresdenTram13",
+        "order": 5
+      },
+      "id": 447
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6971772,
+          51.0795038
+        ]
+      },
+      "properties": {
+        "id": 446,
+        "name": "Sörnewitzer Straße",
+        "line": "DresdenTram13",
+        "order": 5
+      },
+      "id": 446
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6983702,
+          51.0772386
+        ]
+      },
+      "properties": {
+        "id": 445,
+        "name": "An der Flutrinne",
+        "line": "DresdenTram13",
+        "order": 5
+      },
+      "id": 445
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7025406,
+          51.0779316
+        ]
+      },
+      "properties": {
+        "id": 444,
+        "name": "Brockwitzer Straße",
+        "line": "DresdenTram13",
+        "order": 5
+      },
+      "id": 444
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7076341,
+          51.0788789
+        ]
+      },
+      "properties": {
+        "id": 443,
+        "name": "Trachauer Straße",
+        "line": "DresdenTram13",
+        "order": 5
+      },
+      "id": 443
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7138256,
+          51.0794519
+        ]
+      },
+      "properties": {
+        "id": 442,
+        "name": "Mickten",
+        "line": "DresdenTram13",
+        "order": 5
+      },
+      "id": 442
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7178807,
+          51.0775171
+        ]
+      },
+      "properties": {
+        "id": 441,
+        "name": "Altpieschen",
+        "line": "DresdenTram13",
+        "order": 5
+      },
+      "id": 441
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7219828,
+          51.0773766
+        ]
+      },
+      "properties": {
+        "id": 440,
+        "name": "Rathaus Pieschen",
+        "line": "DresdenTram13",
+        "order": 5
+      },
+      "id": 440
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7259576,
+          51.0768352
+        ]
+      },
+      "properties": {
+        "id": 439,
+        "name": "Bürgerstraße",
+        "line": "DresdenTram13",
+        "order": 5
+      },
+      "id": 439
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7330413,
+          51.0764816
+        ]
+      },
+      "properties": {
+        "id": 438,
+        "name": "Liststraße",
+        "line": "DresdenTram13",
+        "order": 5
+      },
+      "id": 438
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7411641,
+          51.0733683
+        ]
+      },
+      "properties": {
+        "id": 437,
+        "name": "Friedensstraße",
+        "line": "DresdenTram13",
+        "order": 5
+      },
+      "id": 437
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7468529,
+          51.072006
+        ]
+      },
+      "properties": {
+        "id": 436,
+        "name": "S-Bahnhof Bischofsplatz",
+        "line": "DresdenTram13",
+        "order": 5
+      },
+      "id": 436
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7512046,
+          51.0712593
+        ]
+      },
+      "properties": {
+        "id": 435,
+        "name": "Bischofsweg",
+        "line": "DresdenTram13",
+        "order": 5
+      },
+      "id": 435
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7556709,
+          51.0698704
+        ]
+      },
+      "properties": {
+        "id": 434,
+        "name": "Alaunplatz",
+        "line": "DresdenTram13",
+        "order": 5
+      },
+      "id": 434
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7535156,
+          51.0657595
+        ]
+      },
+      "properties": {
+        "id": 433,
+        "name": "Görlitzer Straße (Nordbad)",
+        "alternate_names": [
+          "Görlitzer Straße",
+          "Nordbad"
+        ],
+        "line": "DresdenTram13",
+        "order": 5
+      },
+      "id": 433
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7519716,
+          51.0623258
+        ]
+      },
+      "properties": {
+        "id": 432,
+        "name": "Bautzner Straße / Rothenburger Straße",
+        "alternate_names": [
+          "Bautzner-/Rothenburger Straße",
+          ""
+        ],
+        "line": "DresdenTram13",
+        "order": 5
+      },
+      "id": 432
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7528675,
+          51.0592227
+        ]
+      },
+      "properties": {
+        "id": 431,
+        "name": "Rosa-Luxemburg-Platz",
+        "line": "DresdenTram13",
+        "order": 5
+      },
+      "id": 431
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7577529,
+          51.0542174
+        ]
+      },
+      "properties": {
+        "id": 430,
+        "name": "Sachsenallee",
+        "line": "DresdenTram13",
+        "order": 5
+      },
+      "id": 430
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7578569,
+          51.0517925
+        ]
+      },
+      "properties": {
+        "id": 429,
+        "name": "Dürerstraße (Evangelische Hochschule)",
+        "alternate_names": [
+          "Dürerstraße",
+          "Evangelische Hochschule"
+        ],
+        "line": "DresdenTram13",
+        "order": 5
+      },
+      "id": 429
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7572746,
+          51.0500952
+        ]
+      },
+      "properties": {
+        "id": 428,
+        "name": "Sankt-Benno-Gymnasium",
+        "line": "DresdenTram13",
+        "order": 5
+      },
+      "id": 428
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7546181,
+          51.0457792
+        ]
+      },
+      "properties": {
+        "id": 427,
+        "name": "Straßburger Platz (Gläserne Manufaktur)",
+        "alternate_names": [
+          "Fučikplatz",
+          "Straßburger Platz"
+        ],
+        "line": "DresdenTram13",
+        "order": 5
+      },
+      "id": 427
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7506676,
+          51.0419203
+        ]
+      },
+      "properties": {
+        "id": 426,
+        "name": "Georg-Arnhold-Bad (Deutsches Hygiene-Museum)",
+        "alternate_names": [
+          "Georg-Arnhold-Bad"
+        ],
+        "line": "DresdenTram13",
+        "order": 5
+      },
+      "id": 426
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7482535,
+          51.0376257
+        ]
+      },
+      "properties": {
+        "id": 425,
+        "name": "Lennéplatz",
+        "line": "DresdenTram13",
+        "order": 5
+      },
+      "id": 425
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7531059,
+          51.0365453
+        ]
+      },
+      "properties": {
+        "id": 424,
+        "name": "Zoo",
+        "line": "DresdenTram13",
+        "order": 5
+      },
+      "id": 424
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7583196,
+          51.0344743
+        ]
+      },
+      "properties": {
+        "id": 423,
+        "name": "Querallee",
+        "line": "DresdenTram13",
+        "order": 5
+      },
+      "id": 423
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7610657,
+          51.0309823
+        ]
+      },
+      "properties": {
+        "id": 422,
+        "name": "S-Bahnhof Strehlen",
+        "line": "DresdenTram13",
+        "order": 5
+      },
+      "id": 422
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7598583,
+          51.0273831
+        ]
+      },
+      "properties": {
+        "id": 421,
+        "name": "Wasaplatz",
+        "line": "DresdenTram13",
+        "order": 5
+      },
+      "id": 421
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7624742,
+          51.0243547
+        ]
+      },
+      "properties": {
+        "id": 420,
+        "name": "Mockritzer Straße",
+        "line": "DresdenTram13",
+        "order": 5
+      },
+      "id": 420
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.765253,
+          51.0225056
+        ]
+      },
+      "properties": {
+        "id": 419,
+        "name": "Hugo-Bürkner-Straße",
+        "line": "DresdenTram13",
+        "order": 5
+      },
+      "id": 419
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7693621,
+          51.0245893
+        ]
+      },
+      "properties": {
+        "id": 418,
+        "name": "Cäcilienstraße",
+        "line": "DresdenTram13",
+        "order": 5
+      },
+      "id": 418
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7746293,
+          51.0225398
+        ]
+      },
+      "properties": {
+        "id": 417,
+        "name": "Eugen-Bracht-Straße",
+        "line": "DresdenTram13",
+        "order": 5
+      },
+      "id": 417
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7804297,
+          51.019489
+        ]
+      },
+      "properties": {
+        "id": 416,
+        "name": "Otto-Dix-Ring",
+        "line": "DresdenTram13",
+        "order": 5
+      },
+      "id": 416
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7840323,
+          51.0175744
+        ]
+      },
+      "properties": {
+        "id": 415,
+        "name": "Wieckestraße",
+        "line": "DresdenTram13",
+        "order": 5
+      },
+      "id": 415
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7872018,
+          51.0155932
+        ]
+      },
+      "properties": {
+        "id": 414,
+        "name": "Lohrmannstraße",
+        "line": "DresdenTram13",
+        "order": 5
+      },
+      "id": 414
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7908225,
+          51.0134976
+        ]
+      },
+      "properties": {
+        "id": 413,
+        "name": "Hülßestraße",
+        "line": "DresdenTram13",
+        "order": 5
+      },
+      "id": 413
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7956461,
+          51.0129392
+        ]
+      },
+      "properties": {
+        "id": 412,
+        "name": "Altreick",
+        "line": "DresdenTram13",
+        "order": 5
+      },
+      "id": 412
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.800926,
+          51.0099855
+        ]
+      },
+      "properties": {
+        "id": 411,
+        "name": "Trattendorfer Straße",
+        "line": "DresdenTram13",
+        "order": 5
+      },
+      "id": 411
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8026636,
+          51.0078471
+        ]
+      },
+      "properties": {
+        "id": 410,
+        "name": "Albert-Wolf-Platz",
+        "line": "DresdenTram13",
+        "order": 5
+      },
+      "id": 410
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7990736,
+          51.0052352
+        ]
+      },
+      "properties": {
+        "id": 409,
+        "name": "Jacob-Winter-Platz (Prohlis-Zentrum)",
+        "line": "DresdenTram13",
+        "order": 5
+      },
+      "id": 409
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7978298,
+          51.0019201
+        ]
+      },
+      "properties": {
+        "id": 408,
+        "name": "Georg-Palitzsch-Straße",
+        "line": "DresdenTram13",
+        "order": 5
+      },
+      "id": 408
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7988715,
+          50.9992453
+        ]
+      },
+      "properties": {
+        "id": 407,
+        "name": "Prohlis, Gleisschleife",
+        "alternate_names": [
+          "Prohlis"
+        ],
+        "line": "DresdenTram13",
+        "order": 5
+      },
+      "id": 407
+    }
+  ],
+  "properties": {
+    "totalStations": 260,
+    "stationsPerLine": {
+      "DresdenTram1": 33,
+      "DresdenTram2": 38,
+      "DresdenTram3": 28,
+      "DresdenTram4": 62,
+      "DresdenTram6": 45,
+      "DresdenTram7": 45,
+      "DresdenTram8": 28,
+      "DresdenTram9": 41,
+      "DresdenTram10": 24,
+      "DresdenTram11": 30,
+      "DresdenTram12": 32,
+      "DresdenTram13": 43
+    },
+    "nextStationId": 450
+  }
+}

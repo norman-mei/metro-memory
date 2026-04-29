@@ -1,0 +1,189 @@
+{
+  "city": "istanbul",
+  "continent": "europe",
+  "bbox": [
+    40.875352,
+    28.712792,
+    41.256565,
+    29.31173
+  ],
+  "localLanguages": [
+    "tr"
+  ],
+  "modes": [
+    "subway",
+    "light_rail",
+    "tram",
+    "rail",
+    "funicular",
+    "monorail",
+    "cable_car",
+    "gondola",
+    "chair_lift"
+  ],
+  "lines": [
+    {
+      "id": "CM_Istanbulmetro_m1",
+      "name": "M1",
+      "keywords": [
+        "M1",
+        "CM Istanbulmetro m1"
+      ],
+      "order": 1,
+      "icon": "europe/turkey/istanbul/CM_Istanbulmetro_m1.svg"
+    },
+    {
+      "id": "CM_Istanbulmetro_m2",
+      "name": "M2",
+      "keywords": [
+        "M2",
+        "CM Istanbulmetro m2"
+      ],
+      "order": 2,
+      "icon": "europe/turkey/istanbul/CM_Istanbulmetro_m2.svg"
+    },
+    {
+      "id": "CM_Istanbulmetro_m3",
+      "name": "M3",
+      "keywords": [
+        "M3",
+        "CM Istanbulmetro m3"
+      ],
+      "order": 3,
+      "icon": "europe/turkey/istanbul/CM_Istanbulmetro_m3.svg"
+    },
+    {
+      "id": "CM_Istanbulmetro_m4",
+      "name": "M4",
+      "keywords": [
+        "M4",
+        "CM Istanbulmetro m4"
+      ],
+      "order": 4,
+      "icon": "europe/turkey/istanbul/CM_Istanbulmetro_m4.svg"
+    },
+    {
+      "id": "CM_Istanbulmetro_m5",
+      "name": "M5",
+      "keywords": [
+        "M5",
+        "CM Istanbulmetro m5"
+      ],
+      "order": 5,
+      "icon": "europe/turkey/istanbul/CM_Istanbulmetro_m5.svg"
+    },
+    {
+      "id": "CM_Istanbulmetro_m6",
+      "name": "M6",
+      "keywords": [
+        "M6",
+        "CM Istanbulmetro m6"
+      ],
+      "order": 6,
+      "icon": "europe/turkey/istanbul/CM_Istanbulmetro_m6.svg"
+    },
+    {
+      "id": "CM_Istanbulmetro_m7",
+      "name": "M7",
+      "keywords": [
+        "M7",
+        "CM Istanbulmetro m7"
+      ],
+      "order": 7,
+      "icon": "europe/turkey/istanbul/CM_Istanbulmetro_m7.svg"
+    },
+    {
+      "id": "CM_Istanbulmetro_m8",
+      "name": "M8",
+      "keywords": [
+        "M8",
+        "CM Istanbulmetro m8"
+      ],
+      "order": 8,
+      "icon": "europe/turkey/istanbul/CM_Istanbulmetro_m8.svg"
+    },
+    {
+      "id": "CM_Istanbulmetro_m9",
+      "name": "M9",
+      "keywords": [
+        "M9",
+        "CM Istanbulmetro m9"
+      ],
+      "order": 9,
+      "icon": "europe/turkey/istanbul/CM_Istanbulmetro_m9.svg"
+    },
+    {
+      "id": "CM_Istanbulmetro_m10",
+      "name": "M10",
+      "keywords": [
+        "M10",
+        "CM Istanbulmetro m10"
+      ],
+      "order": 10,
+      "icon": "europe/turkey/istanbul/CM_Istanbulmetro_m10.svg"
+    },
+    {
+      "id": "CM_Istanbulmetro_m11",
+      "name": "M11",
+      "keywords": [
+        "M11",
+        "CM Istanbulmetro m11"
+      ],
+      "order": 11,
+      "icon": "europe/turkey/istanbul/CM_Istanbulmetro_m11.svg"
+    },
+    {
+      "id": "CM_CagdasTramvay_t1",
+      "name": "T1",
+      "keywords": [
+        "T1",
+        "CM Cagdas Tramvay t1"
+      ],
+      "order": 12,
+      "icon": "europe/turkey/istanbul/CM_CagdasTramvay_t1.svg"
+    },
+    {
+      "id": "CM_NostaljikTramvay_t2",
+      "name": "T2",
+      "keywords": [
+        "T2",
+        "CM Nostaljik Tramvay t2"
+      ],
+      "order": 13,
+      "icon": "europe/turkey/istanbul/CM_NostaljikTramvay_t2.svg"
+    },
+    {
+      "id": "CM_NostaljikTramvay_t3",
+      "name": "T3",
+      "keywords": [
+        "T3",
+        "CM Nostaljik Tramvay t3"
+      ],
+      "order": 14,
+      "icon": "europe/turkey/istanbul/CM_NostaljikTramvay_t3.svg"
+    },
+    {
+      "id": "CM_CagdasTramvay_t4",
+      "name": "T4",
+      "keywords": [
+        "T4",
+        "CM Cagdas Tramvay t4"
+      ],
+      "order": 15,
+      "icon": "europe/turkey/istanbul/CM_CagdasTramvay_t4.svg"
+    },
+    {
+      "id": "CM_CagdasTramvay_t5",
+      "name": "T5",
+      "keywords": [
+        "T5",
+        "CM Cagdas Tramvay t5"
+      ],
+      "order": 16,
+      "icon": "europe/turkey/istanbul/CM_CagdasTramvay_t5.svg"
+    }
+  ],
+  "stationAliases": {},
+  "stationLocalNames": {},
+  "manualCoords": {}
+}

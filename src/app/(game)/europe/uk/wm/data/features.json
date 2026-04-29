@@ -1,0 +1,1027 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.124524,
+          52.583996
+        ]
+      },
+      "properties": {
+        "name": "Wolverhampton St George's",
+        "line": "Line1",
+        "id": 0,
+        "alternate_names": [
+          "Wolverhampton St Georges"
+        ]
+      },
+      "id": 0
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.1227644999999997,
+          52.585125500000004
+        ]
+      },
+      "properties": {
+        "name": "Pipers Row",
+        "line": "Line1",
+        "id": 1
+      },
+      "id": 1
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.119358,
+          52.587144
+        ]
+      },
+      "properties": {
+        "name": "Wolverhampton",
+        "line": "Line1",
+        "id": 2,
+        "alternate_names": [
+          "Wolverhampton Station"
+        ]
+      },
+      "id": 2
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.9237453333333334,
+          52.472010000000004
+        ]
+      },
+      "properties": {
+        "name": "Edgbaston Village",
+        "line": "Line1",
+        "id": 3
+      },
+      "id": 3
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.9151843333333334,
+          52.47472366666667
+        ]
+      },
+      "properties": {
+        "name": "Five Ways",
+        "line": "Line1",
+        "id": 4
+      },
+      "id": 4
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.91232,
+          52.476690999999995
+        ]
+      },
+      "properties": {
+        "name": "Brindleyplace",
+        "line": "Line1",
+        "id": 5,
+        "alternate_names": [
+          "Brindley Place"
+        ]
+      },
+      "id": 5
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.9083629999999998,
+          52.478702999999996
+        ]
+      },
+      "properties": {
+        "name": "Library",
+        "line": "Line1",
+        "id": 6,
+        "alternate_names": [
+          "Centenary Square"
+        ]
+      },
+      "id": 6
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.903379,
+          52.479285
+        ]
+      },
+      "properties": {
+        "name": "Town Hall",
+        "line": "Line1",
+        "id": 7
+      },
+      "id": 7
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.8992406666666666,
+          52.478611
+        ]
+      },
+      "properties": {
+        "name": "Grand Central",
+        "line": "Line1",
+        "id": 8,
+        "alternate_names": [
+          "Birmingham New Street",
+          "New Street"
+        ]
+      },
+      "id": 8
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.897059,
+          52.479873
+        ]
+      },
+      "properties": {
+        "name": "Corporation Street",
+        "line": "Line1",
+        "id": 9
+      },
+      "id": 9
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.8964723333333333,
+          52.482012999999995
+        ]
+      },
+      "properties": {
+        "name": "Bull Street",
+        "line": "Line1",
+        "id": 10,
+        "cluster_key": "wm-bull-street"
+      },
+      "id": 10
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.9003663333333334,
+          52.48473633333333
+        ]
+      },
+      "properties": {
+        "name": "St Chads",
+        "line": "Line1",
+        "id": 11,
+        "alternate_names": [
+          "St. Chads"
+        ]
+      },
+      "id": 11
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.9047969999999999,
+          52.487224499999996
+        ]
+      },
+      "properties": {
+        "name": "St Paul's",
+        "line": "Line1",
+        "id": 12,
+        "alternate_names": [
+          "Saint Paul's",
+          "St Pauls"
+        ]
+      },
+      "id": 12
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.914269,
+          52.4899165
+        ]
+      },
+      "properties": {
+        "name": "Jewellery Quarter",
+        "line": "Line1",
+        "id": 13
+      },
+      "id": 13
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.9310095,
+          52.4969975
+        ]
+      },
+      "properties": {
+        "name": "Soho Benson Road",
+        "line": "Line1",
+        "id": 14,
+        "alternate_names": [
+          "Soho Benson Rd",
+          "Soho, Benson Road"
+        ]
+      },
+      "id": 14
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.9391254999999998,
+          52.498917500000005
+        ]
+      },
+      "properties": {
+        "name": "Winson Green Outer Circle",
+        "line": "Line1",
+        "id": 15,
+        "alternate_names": [
+          "Winson Green",
+          "Winson Green, Outer Circle"
+        ]
+      },
+      "id": 15
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.952324,
+          52.502105
+        ]
+      },
+      "properties": {
+        "name": "Handsworth Booth Street",
+        "line": "Line1",
+        "id": 16,
+        "alternate_names": [
+          "Handsworth Booth St",
+          "Handsworth, Booth Street"
+        ]
+      },
+      "id": 16
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.96508,
+          52.5058195
+        ]
+      },
+      "properties": {
+        "name": "The Hawthorns",
+        "line": "Line1",
+        "id": 17
+      },
+      "id": 17
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.9825335000000002,
+          52.5087025
+        ]
+      },
+      "properties": {
+        "name": "Kenrick Park",
+        "line": "Line1",
+        "id": 18
+      },
+      "id": 18
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.9882513333333334,
+          52.51190733333333
+        ]
+      },
+      "properties": {
+        "name": "Trinity Way",
+        "line": "Line1",
+        "id": 19
+      },
+      "id": 19
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.9946920000000001,
+          52.5165405
+        ]
+      },
+      "properties": {
+        "name": "West Bromwich Central",
+        "line": "Line1",
+        "id": 20
+      },
+      "id": 20
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.9999080000000002,
+          52.518674000000004
+        ]
+      },
+      "properties": {
+        "name": "Lodge Road",
+        "line": "Line1",
+        "id": 21,
+        "alternate_names": [
+          "West Bromwich Town Hall",
+          "Lodge Road, West Bromwich Town Hall"
+        ]
+      },
+      "id": 21
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.004526,
+          52.52047733333333
+        ]
+      },
+      "properties": {
+        "name": "Dartmouth Street",
+        "line": "Line1",
+        "id": 22
+      },
+      "id": 22
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.0085413333333335,
+          52.525178333333336
+        ]
+      },
+      "properties": {
+        "name": "Dudley Street Guns Village",
+        "line": "Line1",
+        "id": 23,
+        "alternate_names": [
+          "Dudley Street, Guns Village"
+        ]
+      },
+      "id": 23
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.0111703333333333,
+          52.531009000000005
+        ]
+      },
+      "properties": {
+        "name": "Black Lake",
+        "line": "Line1",
+        "id": 24
+      },
+      "id": 24
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.025615,
+          52.548935
+        ]
+      },
+      "properties": {
+        "name": "Wednesbury Great Western Street",
+        "line": "Line1",
+        "id": 25,
+        "alternate_names": [
+          "Wednesbury, Great Western Street"
+        ],
+        "cluster_key": "wm-wednesbury-great-western-street"
+      },
+      "id": 25
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.0320213333333332,
+          52.549685333333336
+        ]
+      },
+      "properties": {
+        "name": "Wednesbury Parkway",
+        "line": "Line1",
+        "id": 26
+      },
+      "id": 26
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.0577433333333333,
+          52.55596966666667
+        ]
+      },
+      "properties": {
+        "name": "Bradley Lane",
+        "line": "Line1",
+        "id": 27
+      },
+      "id": 27
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.0658966666666667,
+          52.56006766666667
+        ]
+      },
+      "properties": {
+        "name": "Loxdale",
+        "line": "Line1",
+        "id": 28
+      },
+      "id": 28
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.0748453333333337,
+          52.56553233333333
+        ]
+      },
+      "properties": {
+        "name": "Bilston Central",
+        "line": "Line1",
+        "id": 29
+      },
+      "id": 29
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.0808596666666666,
+          52.567966000000006
+        ]
+      },
+      "properties": {
+        "name": "The Crescent",
+        "line": "Line1",
+        "id": 30
+      },
+      "id": 30
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.097989333333333,
+          52.571942
+        ]
+      },
+      "properties": {
+        "name": "Priestfield",
+        "line": "Line1",
+        "id": 31
+      },
+      "id": 31
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.117081666666667,
+          52.581089999999996
+        ]
+      },
+      "properties": {
+        "name": "The Royal",
+        "line": "Line1",
+        "id": 32
+      },
+      "id": 32
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.025615,
+          52.548935
+        ]
+      },
+      "properties": {
+        "name": "Wednesbury, Great Western Street",
+        "line": "Line2",
+        "id": 33,
+        "alternate_names": [
+          "Wednesbury Great Western Street"
+        ],
+        "cluster_key": "wm-wednesbury-great-western-street"
+      },
+      "id": 33
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.028728,
+          52.540809
+        ]
+      },
+      "properties": {
+        "name": "Gold's Hill",
+        "line": "Line2",
+        "id": 34,
+        "alternate_names": [
+          "Golds Hill",
+          "Gold's Hill [2027]"
+        ]
+      },
+      "id": 34
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.036254,
+          52.53237
+        ]
+      },
+      "properties": {
+        "name": "Great Bridge",
+        "line": "Line2",
+        "id": 35,
+        "alternate_names": [
+          "Great Bridge [Aug 2026]"
+        ]
+      },
+      "id": 35
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.044624,
+          52.528456
+        ]
+      },
+      "properties": {
+        "name": "Horseley Road",
+        "line": "Line2",
+        "id": 36,
+        "alternate_names": [
+          "Horseley Road [Aug 2026]"
+        ]
+      },
+      "id": 36
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.049921,
+          52.525049
+        ]
+      },
+      "properties": {
+        "name": "Dudley Port",
+        "line": "Line2",
+        "id": 37,
+        "alternate_names": [
+          "Dudley Port [Aug 2026]"
+        ]
+      },
+      "id": 37
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.059561,
+          52.522573
+        ]
+      },
+      "properties": {
+        "name": "Sedgley Road",
+        "line": "Line2",
+        "id": 38,
+        "alternate_names": [
+          "Sedgley Road [Aug 2026]"
+        ]
+      },
+      "id": 38
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.068326,
+          52.51998
+        ]
+      },
+      "properties": {
+        "name": "Birmingham New Road",
+        "line": "Line2",
+        "id": 39,
+        "alternate_names": [
+          "Birmingham New Road [Aug 2026]"
+        ]
+      },
+      "id": 39
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.073403,
+          52.517121
+        ]
+      },
+      "properties": {
+        "name": "Tipton Road",
+        "line": "Line2",
+        "id": 40,
+        "alternate_names": [
+          "Tipton Road [Aug 2026]"
+        ]
+      },
+      "id": 40
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.0751155,
+          52.515508
+        ]
+      },
+      "properties": {
+        "name": "Dudley Castle & Zoo",
+        "line": "Line2",
+        "id": 41,
+        "alternate_names": [
+          "Dudley Castle",
+          "Dudley Zoo",
+          "Dudley Castle & Zoo [Aug 2026]"
+        ]
+      },
+      "id": 41
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.079281,
+          52.510761
+        ]
+      },
+      "properties": {
+        "name": "Dudley Interchange",
+        "line": "Line2",
+        "id": 42,
+        "alternate_names": [
+          "Dudley Interchange [Aug 2026]"
+        ]
+      },
+      "id": 42
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.08144,
+          52.5088615
+        ]
+      },
+      "properties": {
+        "name": "Flood Street",
+        "line": "Line2",
+        "id": 43,
+        "alternate_names": [
+          "Flood Street [Aug 2026]"
+        ]
+      },
+      "id": 43
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.090468,
+          52.500965
+        ]
+      },
+      "properties": {
+        "name": "Cinder Bank",
+        "line": "Line2",
+        "id": 44,
+        "alternate_names": [
+          "Cinder Bank [2027]"
+        ]
+      },
+      "id": 44
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.105052,
+          52.495179
+        ]
+      },
+      "properties": {
+        "name": "Pedmore Road",
+        "line": "Line2",
+        "id": 45,
+        "alternate_names": [
+          "Pedmore Road [2027]"
+        ]
+      },
+      "id": 45
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.111418,
+          52.490921
+        ]
+      },
+      "properties": {
+        "name": "Canal Street",
+        "line": "Line2",
+        "id": 46,
+        "alternate_names": [
+          "Canal Street [2027]"
+        ]
+      },
+      "id": 46
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.112945,
+          52.487418
+        ]
+      },
+      "properties": {
+        "name": "Waterfront Merry Hill",
+        "line": "Line2",
+        "id": 47,
+        "alternate_names": [
+          "Waterfront Merry Hill [2027]"
+        ]
+      },
+      "id": 47
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.113975,
+          52.484154
+        ]
+      },
+      "properties": {
+        "name": "Merry Hill Shopping Centre",
+        "line": "Line2",
+        "id": 48,
+        "alternate_names": [
+          "Merry Hill Shopping Centre [2027]"
+        ]
+      },
+      "id": 48
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.119966,
+          52.48123
+        ]
+      },
+      "properties": {
+        "name": "Brierley Hill",
+        "line": "Line2",
+        "id": 49,
+        "alternate_names": [
+          "Brierley Hill [2027]"
+        ]
+      },
+      "id": 49
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.8964723333333333,
+          52.482012999999995
+        ]
+      },
+      "properties": {
+        "name": "Bull Street",
+        "line": "EastsideExtension",
+        "id": 50,
+        "cluster_key": "wm-bull-street"
+      },
+      "id": 50
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.892663,
+          52.480404500000006
+        ]
+      },
+      "properties": {
+        "name": "Albert Street",
+        "line": "EastsideExtension",
+        "id": 51
+      },
+      "id": 51
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.88767,
+          52.480963
+        ]
+      },
+      "properties": {
+        "name": "Curzon Street",
+        "line": "EastsideExtension",
+        "id": 52
+      },
+      "id": 52
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.88813,
+          52.478525
+        ]
+      },
+      "properties": {
+        "name": "Meriden Street",
+        "line": "EastsideExtension",
+        "id": 53
+      },
+      "id": 53
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.883846,
+          52.474517
+        ]
+      },
+      "properties": {
+        "name": "Digbeth",
+        "line": "EastsideExtension",
+        "id": 54,
+        "alternate_names": [
+          "High Street Deritend"
+        ]
+      },
+      "id": 54
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.7326735,
+          52.4529935
+        ]
+      },
+      "properties": {
+        "name": "Birmingham Airport",
+        "line": "AirRailLink",
+        "id": 55,
+        "alternate_names": [
+          "BHX",
+          "Airport"
+        ]
+      },
+      "id": 55
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.726363,
+          52.4504445
+        ]
+      },
+      "properties": {
+        "name": "Birmingham International",
+        "line": "AirRailLink",
+        "id": 56
+      },
+      "id": 56
+    }
+  ]
+}

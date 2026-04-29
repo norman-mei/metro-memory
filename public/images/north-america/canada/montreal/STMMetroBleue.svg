@@ -1,0 +1,21 @@
+<svg width="100%" height="100%" viewBox="0 0 513 513" version="1.1"
+    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+    xml:space="preserve" xmlns:serif="http://www.serif.com/"
+    style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1,0,0,1,-2843,-1945)">
+        <g id="Métro-5" serif:id="Métro 5" transform="matrix(1,0,0,1,2843.22,1945.81)">
+            <rect x="0" y="0" width="512" height="512" style="fill:none;"/>
+            <clipPath id="_clip1">
+                <rect x="0" y="0" width="512" height="512"/>
+            </clipPath>
+            <g clip-path="url(#_clip1)">
+                <g transform="matrix(0,-21.6555,-21.6555,0,256.011,6.82121e-13)">
+                    <path d="M-11.822,-11.821C-18.351,-11.821 -23.643,-6.528 -23.643,0.001C-23.643,6.53 -18.351,11.822 -11.822,11.822C-5.293,11.822 0,6.53 0,0.001C0,-6.528 -5.293,-11.821 -11.822,-11.821" style="fill:rgb(0,131,201);fill-rule:nonzero;"/>
+                </g>
+                <g transform="matrix(21.6555,0,0,21.6555,244.077,130.491)">
+                    <path d="M0,11.99C-1.202,11.99 -2.015,11.719 -2.642,11.465L-2.54,9.619C-2.066,9.873 -1.236,10.195 -0.355,10.195C1.016,10.195 1.846,9.263 1.846,7.976C1.846,6.503 0.83,5.825 -0.593,5.825C-1.338,5.825 -1.879,5.995 -2.456,6.181L-2.456,0L3.675,0L3.675,1.711L-0.423,1.711L-0.423,4.335C-0.118,4.251 0.339,4.183 0.796,4.183C2.761,4.183 4.234,5.555 4.234,7.807C4.234,10.5 2.523,11.99 0,11.99" style="fill:white;fill-rule:nonzero;"/>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

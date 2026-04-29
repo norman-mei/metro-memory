@@ -1,0 +1,229 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.8762555,
+          42.8736336
+        ]
+      },
+      "properties": {
+        "name": "DL&W",
+        "line": "MR",
+        "id": 0
+      },
+      "id": 0
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.87678725627129,
+          42.87803266335692
+        ]
+      },
+      "properties": {
+        "name": "Canalside",
+        "line": "MR",
+        "id": 1
+      },
+      "id": 1
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.87565278616641,
+          42.88152652297746
+        ]
+      },
+      "properties": {
+        "name": "Seneca",
+        "line": "MR",
+        "id": 2
+      },
+      "id": 2
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.87483500400714,
+          42.884079344654296
+        ]
+      },
+      "properties": {
+        "name": "Church St",
+        "line": "MR",
+        "id": 3
+      },
+      "id": 3
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.87423629492743,
+          42.88639655771249
+        ]
+      },
+      "properties": {
+        "name": "Lafayette Square",
+        "line": "MR",
+        "id": 4
+      },
+      "id": 4
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.87328856439096,
+          42.88933945712345
+        ]
+      },
+      "properties": {
+        "name": "Fountain Plaza",
+        "line": "MR",
+        "id": 5
+      },
+      "id": 5
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.8698281087111,
+          42.89971580929841
+        ]
+      },
+      "properties": {
+        "name": "Allen/Medical Campus",
+        "line": "MR",
+        "id": 6
+      },
+      "id": 6
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.86810083663708,
+          42.90488152586831
+        ]
+      },
+      "properties": {
+        "name": "Summer-Best",
+        "line": "MR",
+        "id": 7
+      },
+      "id": 7
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.8658217746465,
+          42.91162976038644
+        ]
+      },
+      "properties": {
+        "name": "Utica",
+        "line": "MR",
+        "id": 8
+      },
+      "id": 8
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.85701091627554,
+          42.92250270570739
+        ]
+      },
+      "properties": {
+        "name": "Delavan/Canisius College",
+        "line": "MR",
+        "id": 9
+      },
+      "id": 9
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.85166553600939,
+          42.9275551668922
+        ]
+      },
+      "properties": {
+        "name": "Humboldt-Hospital",
+        "line": "MR",
+        "id": 10
+      },
+      "id": 10
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.83854039644078,
+          42.93978462195822
+        ]
+      },
+      "properties": {
+        "name": "Amherst Street",
+        "line": "MR",
+        "id": 11
+      },
+      "id": 11
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.83010489207038,
+          42.94745895910201
+        ]
+      },
+      "properties": {
+        "name": "LaSalle",
+        "line": "MR",
+        "id": 12
+      },
+      "id": 12
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.82013777192067,
+          42.95452562555255
+        ]
+      },
+      "properties": {
+        "name": "University",
+        "line": "MR",
+        "id": 13
+      },
+      "id": 13
+    }
+  ]
+}

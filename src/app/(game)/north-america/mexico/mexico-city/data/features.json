@@ -1,0 +1,2760 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.07471, 19.416327]
+      },
+      "properties": {
+        "id": 1,
+        "name": "Pantitlán",
+        "line": "DFMetro1",
+        "order": 0
+      },
+      "id": 1
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.215978, 19.459589]
+      },
+      "properties": {
+        "id": 21,
+        "name": "Cuatro Caminos",
+        "line": "DFMetro2",
+        "order": 0
+      },
+      "id": 21
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.173889, 19.324475]
+      },
+      "properties": {
+        "id": 45,
+        "name": "Universidad",
+        "line": "DFMetro3",
+        "order": 0
+      },
+      "id": 45
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.106169, 19.482457]
+      },
+      "properties": {
+        "id": 66,
+        "name": "Martín Carrera",
+        "line": "DFMetro4",
+        "order": 0
+      },
+      "id": 66
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.149187, 19.500557]
+      },
+      "properties": {
+        "id": 76,
+        "name": "Politécnico",
+        "line": "DFMetro5",
+        "order": 0
+      },
+      "id": 76
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.199558, 19.505251]
+      },
+      "properties": {
+        "id": 89,
+        "name": "El Rosario",
+        "line": "DFMetro6",
+        "order": 0
+      },
+      "id": 89
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.189277, 19.361563]
+      },
+      "properties": {
+        "id": 100,
+        "name": "Barranca del Muerto",
+        "line": "DFMetro7",
+        "order": 0
+      },
+      "id": 100
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.138908, 19.443946]
+      },
+      "properties": {
+        "id": 114,
+        "name": "Garibaldi/Lagunilla",
+        "alternate_names": ["Garibaldi", "Lagunilla"],
+        "line": "DFMetro8",
+        "order": 0
+      },
+      "id": 114
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.072207, 19.415348]
+      },
+      "properties": {
+        "id": 133,
+        "name": "Pantitlán",
+        "line": "DFMetro9",
+        "order": 0
+      },
+      "id": 133
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.18758, 19.37626]
+      },
+      "properties": {
+        "id": 145,
+        "name": "Mixcoac",
+        "line": "DFMetro12",
+        "order": 0
+      },
+      "id": 145
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.072168, 19.415275]
+      },
+      "properties": {
+        "id": 165,
+        "name": "Pantitlán",
+        "line": "DFMetroA",
+        "order": 0
+      },
+      "id": 165
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.152339, 19.446247]
+      },
+      "properties": {
+        "id": 175,
+        "name": "Buenavista",
+        "line": "DFMetroB",
+        "order": 0
+      },
+      "id": 175
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.119457, 19.495329]
+      },
+      "properties": {
+        "id": 65,
+        "name": "Indios Verdes",
+        "line": "DFMetro3",
+        "order": 124
+      },
+      "id": 65
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.126011, 19.484471]
+      },
+      "properties": {
+        "id": 64,
+        "name": "Deportivo 18 de Marzo",
+        "line": "DFMetro3",
+        "order": 118
+      },
+      "id": 64
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.132283, 19.476816]
+      },
+      "properties": {
+        "id": 63,
+        "name": "Potrero",
+        "line": "DFMetro3",
+        "order": 116
+      },
+      "id": 63
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.139531, 19.343737]
+      },
+      "properties": {
+        "id": 44,
+        "name": "Tasqueña",
+        "line": "DFMetro2",
+        "order": 112
+      },
+      "id": 44
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.139323, 19.469284]
+      },
+      "properties": {
+        "id": 62,
+        "name": "La Raza",
+        "line": "DFMetro3",
+        "order": 108
+      },
+      "id": 62
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.143345, 19.45504]
+      },
+      "properties": {
+        "id": 61,
+        "name": "Tlatelolco",
+        "line": "DFMetro3",
+        "order": 98
+      },
+      "id": 61
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.145032, 19.353246]
+      },
+      "properties": {
+        "id": 43,
+        "name": "General Anaya",
+        "line": "DFMetro2",
+        "order": 96
+      },
+      "id": 43
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.145136, 19.444719]
+      },
+      "properties": {
+        "id": 60,
+        "name": "Guerrero",
+        "line": "DFMetro3",
+        "order": 95
+      },
+      "id": 60
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.063811, 19.34595]
+      },
+      "properties": {
+        "id": 132,
+        "name": "Constitución de 1917",
+        "line": "DFMetro8",
+        "order": 95
+      },
+      "id": 132
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.146748, 19.437374]
+      },
+      "properties": {
+        "id": 59,
+        "name": "Hidalgo",
+        "line": "DFMetro3",
+        "order": 94
+      },
+      "id": 59
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.142941, 19.361985]
+      },
+      "properties": {
+        "id": 42,
+        "name": "Ermita",
+        "line": "DFMetro2",
+        "order": 91
+      },
+      "id": 42
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.147669, 19.433248]
+      },
+      "properties": {
+        "id": 58,
+        "name": "Juárez",
+        "line": "DFMetro3",
+        "order": 91
+      },
+      "id": 58
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.074841, 19.35102]
+      },
+      "properties": {
+        "id": 131,
+        "name": "Uam-I",
+        "line": "DFMetro8",
+        "order": 91
+      },
+      "id": 131
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.149079, 19.426483]
+      },
+      "properties": {
+        "id": 57,
+        "name": "Balderas",
+        "line": "DFMetro3",
+        "order": 88
+      },
+      "id": 57
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.085688, 19.355989]
+      },
+      "properties": {
+        "id": 130,
+        "name": "Cerro de La Estrella",
+        "line": "DFMetro8",
+        "order": 88
+      },
+      "id": 130
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.141604, 19.369924]
+      },
+      "properties": {
+        "id": 41,
+        "name": "Portales",
+        "line": "DFMetro2",
+        "order": 86
+      },
+      "id": 41
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.150422, 19.419449]
+      },
+      "properties": {
+        "id": 56,
+        "name": "Niños Héroes/ Poder Judicial Cdmx",
+        "alternate_names": ["Niños Héroes", "Poder Judicial Cdmx"],
+        "line": "DFMetro3",
+        "order": 84
+      },
+      "id": 56
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.140103, 19.380061]
+      },
+      "properties": {
+        "id": 40,
+        "name": "Nativitas",
+        "line": "DFMetro2",
+        "order": 83
+      },
+      "id": 40
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.093435, 19.357774]
+      },
+      "properties": {
+        "id": 129,
+        "name": "Iztapalapa",
+        "line": "DFMetro8",
+        "order": 82
+      },
+      "id": 129
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.138935, 19.387577]
+      },
+      "properties": {
+        "id": 39,
+        "name": "Villa de Cortés",
+        "line": "DFMetro2",
+        "order": 81
+      },
+      "id": 39
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.027518, 19.534455]
+      },
+      "properties": {
+        "id": 195,
+        "name": "Ciudad Azteca",
+        "line": "DFMetroB",
+        "order": 81
+      },
+      "id": 195
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.200392, 19.39825]
+      },
+      "properties": {
+        "id": 20,
+        "name": "Observatorio",
+        "line": "DFMetro1",
+        "order": 79
+      },
+      "id": 20
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.137787, 19.395207]
+      },
+      "properties": {
+        "id": 38,
+        "name": "Xola",
+        "line": "DFMetro2",
+        "order": 79
+      },
+      "id": 38
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.15323, 19.413725]
+      },
+      "properties": {
+        "id": 55,
+        "name": "Hospital General",
+        "line": "DFMetro3",
+        "order": 79
+      },
+      "id": 55
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.101291, 19.355968]
+      },
+      "properties": {
+        "id": 128,
+        "name": "Atlalilco",
+        "line": "DFMetro8",
+        "order": 79
+      },
+      "id": 128
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.03017, 19.528476]
+      },
+      "properties": {
+        "id": 194,
+        "name": "Plaza Aragón",
+        "line": "DFMetroB",
+        "order": 79
+      },
+      "id": 194
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.187453, 19.401976]
+      },
+      "properties": {
+        "id": 144,
+        "name": "Tacubaya",
+        "line": "DFMetro9",
+        "order": 78
+      },
+      "id": 144
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.136869, 19.400866]
+      },
+      "properties": {
+        "id": 37,
+        "name": "Viaducto",
+        "line": "DFMetro2",
+        "order": 77
+      },
+      "id": 37
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.135628, 19.408941]
+      },
+      "properties": {
+        "id": 36,
+        "name": "Chabacano",
+        "line": "DFMetro2",
+        "order": 76
+      },
+      "id": 36
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.188349, 19.402359]
+      },
+      "properties": {
+        "id": 19,
+        "name": "Tacubaya",
+        "line": "DFMetro1",
+        "order": 75
+      },
+      "id": 19
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.033329, 19.521345]
+      },
+      "properties": {
+        "id": 193,
+        "name": "Olímpica",
+        "line": "DFMetroB",
+        "order": 75
+      },
+      "id": 193
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.134521, 19.416017]
+      },
+      "properties": {
+        "id": 35,
+        "name": "San Antonio Abad",
+        "line": "DFMetro2",
+        "order": 74
+      },
+      "id": 35
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.155082, 19.407727]
+      },
+      "properties": {
+        "id": 54,
+        "name": "Centro Médico",
+        "line": "DFMetro3",
+        "order": 72
+      },
+      "id": 54
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.036036, 19.515117]
+      },
+      "properties": {
+        "id": 192,
+        "name": "Ecatepec",
+        "line": "DFMetroB",
+        "order": 72
+      },
+      "id": 192
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.109543, 19.364852]
+      },
+      "properties": {
+        "id": 127,
+        "name": "Escuadrón 201",
+        "line": "DFMetro8",
+        "order": 71
+      },
+      "id": 127
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.04204, 19.501447]
+      },
+      "properties": {
+        "id": 191,
+        "name": "Múzquiz",
+        "line": "DFMetroB",
+        "order": 70
+      },
+      "id": 191
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.04681, 19.490698]
+      },
+      "properties": {
+        "id": 190,
+        "name": "Río de Los Remedios",
+        "line": "DFMetroB",
+        "order": 69
+      },
+      "id": 190
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.181978, 19.412949]
+      },
+      "properties": {
+        "id": 18,
+        "name": "Juanacatlán",
+        "line": "DFMetro1",
+        "order": 68
+      },
+      "id": 18
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.155978, 19.396031]
+      },
+      "properties": {
+        "id": 53,
+        "name": "Etiopía / Plaza de La Transparencia",
+        "alternate_names": ["Etiopía", "Plaza de La Transparencia"],
+        "line": "DFMetro3",
+        "order": 67
+      },
+      "id": 53
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.132889, 19.424382]
+      },
+      "properties": {
+        "id": 34,
+        "name": "Pino Suárez",
+        "line": "DFMetro2",
+        "order": 66
+      },
+      "id": 34
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-98.960924, 19.350567]
+      },
+      "properties": {
+        "id": 174,
+        "name": "La Paz",
+        "line": "DFMetroA",
+        "order": 66
+      },
+      "id": 174
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.048919, 19.485733]
+      },
+      "properties": {
+        "id": 189,
+        "name": "Impulsora",
+        "line": "DFMetroB",
+        "order": 66
+      },
+      "id": 189
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.106706, 19.482671]
+      },
+      "properties": {
+        "id": 99,
+        "name": "Martín Carrera",
+        "line": "DFMetro6",
+        "order": 65
+      },
+      "id": 99
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.10773, 19.37321]
+      },
+      "properties": {
+        "id": 126,
+        "name": "Aculco",
+        "line": "DFMetro8",
+        "order": 65
+      },
+      "id": 126
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.054582, 19.472879]
+      },
+      "properties": {
+        "id": 188,
+        "name": "Nezahualcóyotl",
+        "line": "DFMetroB",
+        "order": 64
+      },
+      "id": 188
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.157188, 19.386125]
+      },
+      "properties": {
+        "id": 52,
+        "name": "Eugenia",
+        "line": "DFMetro3",
+        "order": 61
+      },
+      "id": 52
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.176423, 19.420767]
+      },
+      "properties": {
+        "id": 17,
+        "name": "Chapultepec",
+        "line": "DFMetro1",
+        "order": 60
+      },
+      "id": 17
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.132321, 19.432505]
+      },
+      "properties": {
+        "id": 33,
+        "name": "Zócalo",
+        "line": "DFMetro2",
+        "order": 60
+      },
+      "id": 33
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.10949, 19.3791]
+      },
+      "properties": {
+        "id": 125,
+        "name": "Apatlaco",
+        "line": "DFMetro8",
+        "order": 60
+      },
+      "id": 125
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.171115, 19.421829]
+      },
+      "properties": {
+        "id": 16,
+        "name": "Sevilla",
+        "line": "DFMetro1",
+        "order": 58
+      },
+      "id": 16
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.178922, 19.406104]
+      },
+      "properties": {
+        "id": 143,
+        "name": "Patriotismo",
+        "line": "DFMetro9",
+        "order": 57
+      },
+      "id": 143
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.112078, 19.388296]
+      },
+      "properties": {
+        "id": 124,
+        "name": "Iztacalco",
+        "line": "DFMetro8",
+        "order": 56
+      },
+      "id": 124
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.163274, 19.42367]
+      },
+      "properties": {
+        "id": 15,
+        "name": "Insurgentes",
+        "line": "DFMetro1",
+        "order": 55
+      },
+      "id": 15
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.159396, 19.379064]
+      },
+      "properties": {
+        "id": 51,
+        "name": "División del Norte",
+        "line": "DFMetro3",
+        "order": 55
+      },
+      "id": 51
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.061367, 19.461628]
+      },
+      "properties": {
+        "id": 187,
+        "name": "Villa de Aragón",
+        "line": "DFMetroB",
+        "order": 54
+      },
+      "id": 187
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.136877, 19.435515]
+      },
+      "properties": {
+        "id": 32,
+        "name": "Allende",
+        "line": "DFMetro2",
+        "order": 53
+      },
+      "id": 32
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.154577, 19.425652]
+      },
+      "properties": {
+        "id": 14,
+        "name": "Cuauhtémoc",
+        "line": "DFMetro1",
+        "order": 52
+      },
+      "id": 14
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.149473, 19.426976]
+      },
+      "properties": {
+        "id": 13,
+        "name": "Balderas",
+        "line": "DFMetro1",
+        "order": 51
+      },
+      "id": 13
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.164389, 19.371126]
+      },
+      "properties": {
+        "id": 50,
+        "name": "Zapata",
+        "line": "DFMetro3",
+        "order": 51
+      },
+      "id": 50
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.200112, 19.504738]
+      },
+      "properties": {
+        "id": 113,
+        "name": "El Rosario",
+        "line": "DFMetro7",
+        "order": 51
+      },
+      "id": 113
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.168311, 19.405949]
+      },
+      "properties": {
+        "id": 142,
+        "name": "Chilpancingo",
+        "line": "DFMetro9",
+        "order": 51
+      },
+      "id": 142
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-98.976875, 19.359071]
+      },
+      "properties": {
+        "id": 173,
+        "name": "Los Reyes",
+        "line": "DFMetroA",
+        "order": 51
+      },
+      "id": 173
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.141626, 19.436316]
+      },
+      "properties": {
+        "id": 31,
+        "name": "Bellas Artes",
+        "line": "DFMetro2",
+        "order": 50
+      },
+      "id": 31
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.118378, 19.481613]
+      },
+      "properties": {
+        "id": 98,
+        "name": "La Villa/Basílica",
+        "alternate_names": ["La Villa", "Basílica"],
+        "line": "DFMetro6",
+        "order": 50
+      },
+      "id": 98
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.069271, 19.458067]
+      },
+      "properties": {
+        "id": 186,
+        "name": "Bosque de Aragón",
+        "line": "DFMetroB",
+        "order": 50
+      },
+      "id": 186
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.143417, 19.426889]
+      },
+      "properties": {
+        "id": 12,
+        "name": "Salto del Agua",
+        "line": "DFMetro1",
+        "order": 47
+      },
+      "id": 12
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.146917, 19.437458]
+      },
+      "properties": {
+        "id": 30,
+        "name": "Hidalgo",
+        "line": "DFMetro2",
+        "order": 47
+      },
+      "id": 30
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.113446, 19.398301]
+      },
+      "properties": {
+        "id": 123,
+        "name": "Coyuya",
+        "line": "DFMetro8",
+        "order": 47
+      },
+      "id": 123
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.15603, 19.406562]
+      },
+      "properties": {
+        "id": 141,
+        "name": "Centro Médico",
+        "line": "DFMetro9",
+        "order": 47
+      },
+      "id": 141
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.079305, 19.450969]
+      },
+      "properties": {
+        "id": 185,
+        "name": "Deportivo Oceanía",
+        "line": "DFMetroB",
+        "order": 47
+      },
+      "id": 185
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.137834, 19.426347]
+      },
+      "properties": {
+        "id": 11,
+        "name": "Isabel La Católica",
+        "line": "DFMetro1",
+        "order": 44
+      },
+      "id": 11
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.14463, 19.407218]
+      },
+      "properties": {
+        "id": 140,
+        "name": "Lázaro Cárdenas",
+        "line": "DFMetro9",
+        "order": 44
+      },
+      "id": 140
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.132643, 19.425894]
+      },
+      "properties": {
+        "id": 10,
+        "name": "Pino Suárez",
+        "line": "DFMetro1",
+        "order": 43
+      },
+      "id": 10
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.170891, 19.361373]
+      },
+      "properties": {
+        "id": 49,
+        "name": "Coyoacán",
+        "line": "DFMetro3",
+        "order": 43
+      },
+      "id": 49
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.121606, 19.404271]
+      },
+      "properties": {
+        "id": 75,
+        "name": "Santa Anita",
+        "line": "DFMetro4",
+        "order": 43
+      },
+      "id": 75
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-98.995178, 19.36033]
+      },
+      "properties": {
+        "id": 172,
+        "name": "Santa Marta",
+        "line": "DFMetroA",
+        "order": 43
+      },
+      "id": 172
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.087216, 19.445685]
+      },
+      "properties": {
+        "id": 184,
+        "name": "Oceanía",
+        "line": "DFMetroB",
+        "order": 43
+      },
+      "id": 184
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.153893, 19.439058]
+      },
+      "properties": {
+        "id": 29,
+        "name": "Revolución",
+        "line": "DFMetro2",
+        "order": 42
+      },
+      "id": 29
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.125889, 19.483438]
+      },
+      "properties": {
+        "id": 97,
+        "name": "Deportivo 18 de Marzo",
+        "line": "DFMetro6",
+        "order": 42
+      },
+      "id": 97
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.195316, 19.490664]
+      },
+      "properties": {
+        "id": 112,
+        "name": "Aquiles Serdán",
+        "line": "DFMetro7",
+        "order": 42
+      },
+      "id": 112
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.160666, 19.441888]
+      },
+      "properties": {
+        "id": 28,
+        "name": "San Cosme",
+        "line": "DFMetro2",
+        "order": 41
+      },
+      "id": 28
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.121738, 19.41092]
+      },
+      "properties": {
+        "id": 74,
+        "name": "Jamaica",
+        "line": "DFMetro4",
+        "order": 40
+      },
+      "id": 74
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.135097, 19.488059]
+      },
+      "properties": {
+        "id": 96,
+        "name": "Lindavista",
+        "line": "DFMetro6",
+        "order": 39
+      },
+      "id": 96
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.135346, 19.408334]
+      },
+      "properties": {
+        "id": 139,
+        "name": "Chabacano",
+        "line": "DFMetro9",
+        "order": 39
+      },
+      "id": 139
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.094226, 19.440775]
+      },
+      "properties": {
+        "id": 183,
+        "name": "Romero Rubio",
+        "line": "DFMetroB",
+        "order": 39
+      },
+      "id": 183
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.167308, 19.444503]
+      },
+      "properties": {
+        "id": 27,
+        "name": "Normal",
+        "line": "DFMetro2",
+        "order": 38
+      },
+      "id": 27
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.125033, 19.425473]
+      },
+      "properties": {
+        "id": 9,
+        "name": "Merced",
+        "line": "DFMetro1",
+        "order": 37
+      },
+      "id": 9
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.171819, 19.449246]
+      },
+      "properties": {
+        "id": 26,
+        "name": "Colegio Militar",
+        "line": "DFMetro2",
+        "order": 36
+      },
+      "id": 26
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.120506, 19.421587]
+      },
+      "properties": {
+        "id": 73,
+        "name": "Fray Servando",
+        "line": "DFMetro4",
+        "order": 36
+      },
+      "id": 73
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.144519, 19.490165]
+      },
+      "properties": {
+        "id": 95,
+        "name": "Instituto del Petróleo",
+        "line": "DFMetro6",
+        "order": 36
+      },
+      "id": 95
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.121182, 19.40431]
+      },
+      "properties": {
+        "id": 122,
+        "name": "Santa Anita",
+        "line": "DFMetro8",
+        "order": 36
+      },
+      "id": 122
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.005654, 19.364737]
+      },
+      "properties": {
+        "id": 171,
+        "name": "Acatitla",
+        "line": "DFMetroA",
+        "order": 36
+      },
+      "id": 171
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.103688, 19.436524]
+      },
+      "properties": {
+        "id": 182,
+        "name": "Ricardo Flores Magón",
+        "line": "DFMetroB",
+        "order": 36
+      },
+      "id": 182
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.176011, 19.353472]
+      },
+      "properties": {
+        "id": 48,
+        "name": "Viveros/ Derechos Humanos",
+        "alternate_names": ["Viveros", "Derechos Humanos"],
+        "line": "DFMetro3",
+        "order": 34
+      },
+      "id": 48
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.075191, 19.415668]
+      },
+      "properties": {
+        "id": 88,
+        "name": "Pantitlán",
+        "line": "DFMetro5",
+        "order": 34
+      },
+      "id": 88
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.188859, 19.478974]
+      },
+      "properties": {
+        "id": 111,
+        "name": "Camarones",
+        "line": "DFMetro7",
+        "order": 34
+      },
+      "id": 111
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.175523, 19.452869]
+      },
+      "properties": {
+        "id": 25,
+        "name": "Popotla",
+        "line": "DFMetro2",
+        "order": 33
+      },
+      "id": 25
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.119391, 19.428805]
+      },
+      "properties": {
+        "id": 72,
+        "name": "Candelaria",
+        "line": "DFMetro4",
+        "order": 33
+      },
+      "id": 72
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.190092, 19.469452]
+      },
+      "properties": {
+        "id": 110,
+        "name": "Refinería",
+        "line": "DFMetro7",
+        "order": 32
+      },
+      "id": 110
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.017002, 19.373368]
+      },
+      "properties": {
+        "id": 170,
+        "name": "Penón Viejo",
+        "line": "DFMetroA",
+        "order": 32
+      },
+      "id": 170
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.189453, 19.45906]
+      },
+      "properties": {
+        "id": 109,
+        "name": "Tacuba",
+        "line": "DFMetro7",
+        "order": 31
+      },
+      "id": 109
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.126288, 19.406707]
+      },
+      "properties": {
+        "id": 121,
+        "name": "La Viga",
+        "line": "DFMetro8",
+        "order": 31
+      },
+      "id": 121
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.12235, 19.4091]
+      },
+      "properties": {
+        "id": 138,
+        "name": "Jamaica",
+        "line": "DFMetro9",
+        "order": 31
+      },
+      "id": 138
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.088113, 19.424376]
+      },
+      "properties": {
+        "id": 87,
+        "name": "Hangares",
+        "line": "DFMetro5",
+        "order": 30
+      },
+      "id": 87
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.155963, 19.489798]
+      },
+      "properties": {
+        "id": 94,
+        "name": "Vallejo",
+        "line": "DFMetro6",
+        "order": 30
+      },
+      "id": 94
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.120915, 19.42954]
+      },
+      "properties": {
+        "id": 8,
+        "name": "Candelaria",
+        "line": "DFMetro1",
+        "order": 28
+      },
+      "id": 8
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.181506, 19.457243]
+      },
+      "properties": {
+        "id": 24,
+        "name": "Cuitláhuac",
+        "line": "DFMetro2",
+        "order": 28
+      },
+      "id": 24
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.088159, 19.43431]
+      },
+      "properties": {
+        "id": 86,
+        "name": "Terminal Aérea",
+        "line": "DFMetro5",
+        "order": 28
+      },
+      "id": 86
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.118134, 19.439657]
+      },
+      "properties": {
+        "id": 71,
+        "name": "Morelos",
+        "line": "DFMetro4",
+        "order": 27
+      },
+      "id": 71
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.191774, 19.44501]
+      },
+      "properties": {
+        "id": 108,
+        "name": "San Joaquín",
+        "line": "DFMetro7",
+        "order": 27
+      },
+      "id": 108
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.035636, 19.385186]
+      },
+      "properties": {
+        "id": 169,
+        "name": "Guelatao",
+        "line": "DFMetroA",
+        "order": 27
+      },
+      "id": 169
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.114434, 19.431921]
+      },
+      "properties": {
+        "id": 181,
+        "name": "San Lázaro",
+        "line": "DFMetroB",
+        "order": 27
+      },
+      "id": 181
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.112857, 19.408379]
+      },
+      "properties": {
+        "id": 137,
+        "name": "Mixiuhca",
+        "line": "DFMetro9",
+        "order": 26
+      },
+      "id": 137
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.180799, 19.346256]
+      },
+      "properties": {
+        "id": 47,
+        "name": "Miguel Ángel de Quevedo",
+        "line": "DFMetro3",
+        "order": 25
+      },
+      "id": 47
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.162986, 19.488677]
+      },
+      "properties": {
+        "id": 93,
+        "name": "Norte 45",
+        "line": "DFMetro6",
+        "order": 25
+      },
+      "id": 93
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.188255, 19.459423]
+      },
+      "properties": {
+        "id": 23,
+        "name": "Tacuba",
+        "line": "DFMetro2",
+        "order": 24
+      },
+      "id": 23
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.116114, 19.448947]
+      },
+      "properties": {
+        "id": 70,
+        "name": "Canal del Norte",
+        "line": "DFMetro4",
+        "order": 24
+      },
+      "id": 70
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.046305, 19.391321]
+      },
+      "properties": {
+        "id": 168,
+        "name": "Tepalcates",
+        "line": "DFMetroA",
+        "order": 23
+      },
+      "id": 168
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.08695, 19.445411]
+      },
+      "properties": {
+        "id": 85,
+        "name": "Oceanía",
+        "line": "DFMetro5",
+        "order": 22
+      },
+      "id": 85
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.103133, 19.408544]
+      },
+      "properties": {
+        "id": 136,
+        "name": "Velódromo",
+        "line": "DFMetro9",
+        "order": 21
+      },
+      "id": 136
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.114655, 19.430761]
+      },
+      "properties": {
+        "id": 7,
+        "name": "San Lázaro",
+        "line": "DFMetro1",
+        "order": 20
+      },
+      "id": 7
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.190897, 19.433526]
+      },
+      "properties": {
+        "id": 107,
+        "name": "Polanco",
+        "line": "DFMetro7",
+        "order": 20
+      },
+      "id": 107
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.133771, 19.410157]
+      },
+      "properties": {
+        "id": 120,
+        "name": "Chabacano",
+        "line": "DFMetro8",
+        "order": 20
+      },
+      "id": 120
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.113943, 19.45803]
+      },
+      "properties": {
+        "id": 69,
+        "name": "Consulado",
+        "line": "DFMetro4",
+        "order": 19
+      },
+      "id": 69
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.174134, 19.490586]
+      },
+      "properties": {
+        "id": 92,
+        "name": "Ferrería/Arena Ciudad de México",
+        "alternate_names": ["Ferrería", "Arena Ciudad de México"],
+        "line": "DFMetro6",
+        "order": 19
+      },
+      "id": 92
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.0142, 19.28602]
+      },
+      "properties": {
+        "id": 164,
+        "name": "Tláhuac",
+        "line": "DFMetro12",
+        "order": 19
+      },
+      "id": 164
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.059398, 19.398794]
+      },
+      "properties": {
+        "id": 167,
+        "name": "Canal de San Juan",
+        "line": "DFMetroA",
+        "order": 19
+      },
+      "id": 167
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.202936, 19.458689]
+      },
+      "properties": {
+        "id": 22,
+        "name": "Panteones",
+        "line": "DFMetro2",
+        "order": 18
+      },
+      "id": 22
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.096197, 19.451205]
+      },
+      "properties": {
+        "id": 84,
+        "name": "Aragón",
+        "line": "DFMetro5",
+        "order": 18
+      },
+      "id": 84
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.191918, 19.425723]
+      },
+      "properties": {
+        "id": 106,
+        "name": "Auditorio",
+        "line": "DFMetro7",
+        "order": 18
+      },
+      "id": 106
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.02025, 19.295672]
+      },
+      "properties": {
+        "id": 163,
+        "name": "Tlaltenco",
+        "line": "DFMetro12",
+        "order": 18
+      },
+      "id": 163
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.03431, 19.29666]
+      },
+      "properties": {
+        "id": 162,
+        "name": "Zapotitlán",
+        "line": "DFMetro12",
+        "order": 17
+      },
+      "id": 162
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.109814, 19.426825]
+      },
+      "properties": {
+        "id": 6,
+        "name": "Moctezuma",
+        "line": "DFMetro1",
+        "order": 16
+      },
+      "id": 6
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.186293, 19.49084]
+      },
+      "properties": {
+        "id": 91,
+        "name": "Uam Azcapotzalco",
+        "alternate_names": ["Azcapotzalco"],
+        "line": "DFMetro6",
+        "order": 16
+      },
+      "id": 91
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.04599, 19.29996]
+      },
+      "properties": {
+        "id": 161,
+        "name": "Nopalera",
+        "line": "DFMetro12",
+        "order": 16
+      },
+      "id": 161
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.069551, 19.404649]
+      },
+      "properties": {
+        "id": 166,
+        "name": "Agrícola Oriental",
+        "line": "DFMetroA",
+        "order": 16
+      },
+      "id": 166
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.1028, 19.423306]
+      },
+      "properties": {
+        "id": 5,
+        "name": "Balbuena",
+        "line": "DFMetro1",
+        "order": 15
+      },
+      "id": 5
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.05951, 19.30432]
+      },
+      "properties": {
+        "id": 160,
+        "name": "Olivos",
+        "line": "DFMetro12",
+        "order": 15
+      },
+      "id": 160
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.176964, 19.33619]
+      },
+      "properties": {
+        "id": 46,
+        "name": "Copilco",
+        "line": "DFMetro3",
+        "order": 14
+      },
+      "id": 46
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.105322, 19.451436]
+      },
+      "properties": {
+        "id": 83,
+        "name": "Eduardo Molina",
+        "line": "DFMetro5",
+        "order": 14
+      },
+      "id": 83
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.191223, 19.411357]
+      },
+      "properties": {
+        "id": 105,
+        "name": "Constituyentes",
+        "line": "DFMetro7",
+        "order": 14
+      },
+      "id": 105
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.06534, 19.30616]
+      },
+      "properties": {
+        "id": 159,
+        "name": "Tezonco",
+        "line": "DFMetro12",
+        "order": 14
+      },
+      "id": 159
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.09125, 19.408427]
+      },
+      "properties": {
+        "id": 135,
+        "name": "Ciudad Deportiva",
+        "line": "DFMetro9",
+        "order": 13
+      },
+      "id": 135
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.07451, 19.31761]
+      },
+      "properties": {
+        "id": 158,
+        "name": "Periférico Oriente",
+        "line": "DFMetro12",
+        "order": 13
+      },
+      "id": 158
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.096278, 19.419902]
+      },
+      "properties": {
+        "id": 4,
+        "name": "Boulevard Puerto Aéreo",
+        "line": "DFMetro1",
+        "order": 12
+      },
+      "id": 4
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.111925, 19.464645]
+      },
+      "properties": {
+        "id": 68,
+        "name": "Bondojito",
+        "line": "DFMetro4",
+        "order": 12
+      },
+      "id": 68
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.113487, 19.455203]
+      },
+      "properties": {
+        "id": 82,
+        "name": "Consulado",
+        "line": "DFMetro5",
+        "order": 12
+      },
+      "id": 82
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.18665, 19.40223]
+      },
+      "properties": {
+        "id": 104,
+        "name": "Tacubaya",
+        "line": "DFMetro7",
+        "order": 12
+      },
+      "id": 104
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.082391, 19.407186]
+      },
+      "properties": {
+        "id": 134,
+        "name": "Puebla",
+        "line": "DFMetro9",
+        "order": 12
+      },
+      "id": 134
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.08587, 19.32047]
+      },
+      "properties": {
+        "id": 157,
+        "name": "Calle 11",
+        "line": "DFMetro12",
+        "order": 12
+      },
+      "id": 157
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.196011, 19.494925]
+      },
+      "properties": {
+        "id": 90,
+        "name": "Tezozómoc",
+        "line": "DFMetro6",
+        "order": 11
+      },
+      "id": 90
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.09575, 19.32215]
+      },
+      "properties": {
+        "id": 156,
+        "name": "Lomas Estrella",
+        "line": "DFMetro12",
+        "order": 11
+      },
+      "id": 156
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.090294, 19.41635]
+      },
+      "properties": {
+        "id": 3,
+        "name": "Gómez Farías",
+        "line": "DFMetro1",
+        "order": 10
+      },
+      "id": 3
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.119517, 19.458799]
+      },
+      "properties": {
+        "id": 81,
+        "name": "Valle Gómez",
+        "line": "DFMetro5",
+        "order": 10
+      },
+      "id": 81
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.144049, 19.413241]
+      },
+      "properties": {
+        "id": 119,
+        "name": "Obrera",
+        "line": "DFMetro8",
+        "order": 10
+      },
+      "id": 119
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.10452, 19.32815]
+      },
+      "properties": {
+        "id": 155,
+        "name": "San Andrés Tomatlán",
+        "line": "DFMetro12",
+        "order": 10
+      },
+      "id": 155
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.119569, 19.43917]
+      },
+      "properties": {
+        "id": 180,
+        "name": "Morelos",
+        "line": "DFMetroB",
+        "order": 10
+      },
+      "id": 180
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.143195, 19.42155]
+      },
+      "properties": {
+        "id": 118,
+        "name": "Doctores",
+        "line": "DFMetro8",
+        "order": 9
+      },
+      "id": 118
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.108919, 19.336917]
+      },
+      "properties": {
+        "id": 154,
+        "name": "Culhuacán",
+        "line": "DFMetro12",
+        "order": 9
+      },
+      "id": 154
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.082381, 19.4118]
+      },
+      "properties": {
+        "id": 2,
+        "name": "Zaragoza",
+        "line": "DFMetro1",
+        "order": 8
+      },
+      "id": 2
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.107968, 19.474355]
+      },
+      "properties": {
+        "id": 67,
+        "name": "Talismán",
+        "line": "DFMetro4",
+        "order": 8
+      },
+      "id": 67
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.130253, 19.463091]
+      },
+      "properties": {
+        "id": 80,
+        "name": "Misterios",
+        "line": "DFMetro5",
+        "order": 8
+      },
+      "id": 80
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.18586, 19.391496]
+      },
+      "properties": {
+        "id": 103,
+        "name": "San Pedro de Los Pinos",
+        "line": "DFMetro7",
+        "order": 8
+      },
+      "id": 103
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.10131, 19.35608]
+      },
+      "properties": {
+        "id": 153,
+        "name": "Atlalilco",
+        "line": "DFMetro12",
+        "order": 8
+      },
+      "id": 153
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.12314, 19.35776]
+      },
+      "properties": {
+        "id": 152,
+        "name": "Mexicaltzingo",
+        "line": "DFMetro12",
+        "order": 7
+      },
+      "id": 152
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.124064, 19.442905]
+      },
+      "properties": {
+        "id": 179,
+        "name": "Tepito",
+        "line": "DFMetroB",
+        "order": 7
+      },
+      "id": 179
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.141906, 19.427728]
+      },
+      "properties": {
+        "id": 117,
+        "name": "Salto del Agua",
+        "line": "DFMetro8",
+        "order": 6
+      },
+      "id": 117
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.1429, 19.36198]
+      },
+      "properties": {
+        "id": 151,
+        "name": "Ermita",
+        "line": "DFMetro12",
+        "order": 6
+      },
+      "id": 151
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.130232, 19.443185]
+      },
+      "properties": {
+        "id": 178,
+        "name": "Lagunilla",
+        "line": "DFMetroB",
+        "order": 6
+      },
+      "id": 178
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.136406, 19.469724]
+      },
+      "properties": {
+        "id": 79,
+        "name": "La Raza",
+        "line": "DFMetro5",
+        "order": 5
+      },
+      "id": 79
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.186604, 19.384339]
+      },
+      "properties": {
+        "id": 102,
+        "name": "San Antonio",
+        "line": "DFMetro7",
+        "order": 5
+      },
+      "id": 102
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.141271, 19.431583]
+      },
+      "properties": {
+        "id": 116,
+        "name": "San Juan de Letrán",
+        "line": "DFMetro8",
+        "order": 5
+      },
+      "id": 116
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.15142, 19.36134]
+      },
+      "properties": {
+        "id": 150,
+        "name": "Eje Central",
+        "line": "DFMetro12",
+        "order": 5
+      },
+      "id": 150
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.15872, 19.37066]
+      },
+      "properties": {
+        "id": 149,
+        "name": "Parque de Los Venados",
+        "line": "DFMetro12",
+        "order": 4
+      },
+      "id": 149
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.139, 19.443999]
+      },
+      "properties": {
+        "id": 177,
+        "name": "Garibaldi/Lagunilla",
+        "alternate_names": ["Garibaldi", "Lagunilla"],
+        "line": "DFMetroB",
+        "order": 4
+      },
+      "id": 177
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.140507, 19.479123]
+      },
+      "properties": {
+        "id": 78,
+        "name": "Autobuses del Norte",
+        "line": "DFMetro5",
+        "order": 3
+      },
+      "id": 78
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.14039, 19.437006]
+      },
+      "properties": {
+        "id": 115,
+        "name": "Bellas Artes",
+        "line": "DFMetro8",
+        "order": 3
+      },
+      "id": 115
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.16451, 19.37119]
+      },
+      "properties": {
+        "id": 148,
+        "name": "Zapata",
+        "line": "DFMetro12",
+        "order": 3
+      },
+      "id": 148
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.187759, 19.376275]
+      },
+      "properties": {
+        "id": 101,
+        "name": "Mixcoac",
+        "line": "DFMetro7",
+        "order": 2
+      },
+      "id": 101
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.17088, 19.37201]
+      },
+      "properties": {
+        "id": 147,
+        "name": "Hospital 20 de Noviembre",
+        "line": "DFMetro12",
+        "order": 2
+      },
+      "id": 147
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.144717, 19.489337]
+      },
+      "properties": {
+        "id": 77,
+        "name": "Instituto del Petróleo",
+        "line": "DFMetro5",
+        "order": 1
+      },
+      "id": 77
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.17825, 19.37355]
+      },
+      "properties": {
+        "id": 146,
+        "name": "Insurgentes Sur",
+        "line": "DFMetro12",
+        "order": 1
+      },
+      "id": 146
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.14614, 19.445138]
+      },
+      "properties": {
+        "id": 176,
+        "name": "Guerrero",
+        "line": "DFMetroB",
+        "order": 1
+      },
+      "id": 176
+    }
+  ],
+  "properties": {
+    "totalStations": 195,
+    "stationsPerLine": {
+      "DFMetro1": 20,
+      "DFMetro2": 24,
+      "DFMetro3": 21,
+      "DFMetro4": 10,
+      "DFMetro5": 13,
+      "DFMetro6": 11,
+      "DFMetro7": 14,
+      "DFMetro8": 19,
+      "DFMetro9": 12,
+      "DFMetro12": 20,
+      "DFMetroA": 10,
+      "DFMetroB": 21
+    }
+  }
+}

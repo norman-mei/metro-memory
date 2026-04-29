@@ -1,0 +1,69 @@
+{
+  "city": "charlotte",
+  "continent": "north america",
+  "bbox": [
+    35.1058422866378,
+    -80.8839021493663,
+    35.3150573420683,
+    -80.7321254114811
+  ],
+  "localLanguages": [
+    "en"
+  ],
+  "modes": [
+    "subway",
+    "light_rail",
+    "tram",
+    "rail",
+    "funicular",
+    "monorail",
+    "cable_car",
+    "gondola",
+    "chair_lift"
+  ],
+  "lines": [
+    {
+      "id": "501",
+      "name": "LYNX Blue Line",
+      "keywords": [
+        "LYNX Blue Line",
+        "LYNX Blue",
+        "501",
+        "Line 501",
+        "501 Line",
+        "L501",
+        "501号线",
+        "地铁501号线",
+        "501号線",
+        "501호선",
+        "Route 501",
+        "Tram Route 501"
+      ],
+      "order": 0,
+      "icon": "north-america/usa/charlotte/501.png"
+    },
+    {
+      "id": "510",
+      "name": "CityLYNX Gold Line",
+      "keywords": [
+        "City LYNX Gold Line",
+        "City LYNX Gold",
+        "510",
+        "Line 510",
+        "510 Line",
+        "L510",
+        "510号线",
+        "地铁510号线",
+        "510号線",
+        "510호선",
+        "Route 510",
+        "Tram Route 510"
+      ],
+      "order": 1,
+      "icon": "north-america/usa/charlotte/510.png"
+    }
+  ],
+  "stationAliases": {},
+  "stationLocalNames": {},
+  "manualCoords": {}
+}

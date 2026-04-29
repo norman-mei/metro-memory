@@ -1,0 +1,34 @@
+{
+  "Line1": {
+    "name": "Line 1",
+    "color": "#0288D1",
+    "backgroundColor": "#0288D1",
+    "textColor": "#FFFFFF",
+    "icon": "europe/uk/wm/line1.png",
+    "order": 0
+  },
+  "Line2": {
+    "name": "Line 2",
+    "color": "#00A900",
+    "backgroundColor": "#00A900",
+    "textColor": "#FFFFFF",
+    "icon": "europe/uk/wm/line2.png",
+    "order": 1
+  },
+  "EastsideExtension": {
+    "name": "Eastside Extension",
+    "color": "#FE3B9F",
+    "backgroundColor": "#FE3B9F",
+    "textColor": "#FFFFFF",
+    "icon": "europe/uk/wm/east.png",
+    "order": 2
+  },
+  "AirRailLink": {
+    "name": "Air-Rail Link",
+    "color": "#0005FF",
+    "backgroundColor": "#0005FF",
+    "textColor": "#FFFFFF",
+    "icon": "europe/uk/wm/airlink.png",
+    "order": 3
+  }
+}

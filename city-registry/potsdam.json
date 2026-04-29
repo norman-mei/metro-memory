@@ -1,0 +1,162 @@
+{
+  "city": "potsdam",
+  "continent": "europe",
+  "bbox": [
+    52.3582521,
+    13.0105243,
+    52.4324904,
+    13.141990300000002
+  ],
+  "localLanguages": [
+    "de"
+  ],
+  "modes": [
+    "subway",
+    "light_rail",
+    "tram",
+    "rail",
+    "funicular",
+    "monorail",
+    "cable_car",
+    "gondola",
+    "chair_lift"
+  ],
+  "lines": [
+    {
+      "id": "PotsdamTram91",
+      "name": "91",
+      "keywords": [
+        "91",
+        "Line 91",
+        "91 Line",
+        "L91",
+        "91号线",
+        "地铁91号线",
+        "91号線",
+        "91호선",
+        "Route 91",
+        "Tram Route 91",
+        "Potsdam Tram91"
+      ],
+      "order": 1,
+      "icon": "europe/germany/potsdam/PotsdamTram91.svg"
+    },
+    {
+      "id": "PotsdamTram92",
+      "name": "92",
+      "keywords": [
+        "92",
+        "Line 92",
+        "92 Line",
+        "L92",
+        "92号线",
+        "地铁92号线",
+        "92号線",
+        "92호선",
+        "Route 92",
+        "Tram Route 92",
+        "Potsdam Tram92"
+      ],
+      "order": 2,
+      "icon": "europe/germany/potsdam/PotsdamTram92.svg"
+    },
+    {
+      "id": "PotsdamTram93",
+      "name": "93",
+      "keywords": [
+        "93",
+        "Line 93",
+        "93 Line",
+        "L93",
+        "93号线",
+        "地铁93号线",
+        "93号線",
+        "93호선",
+        "Route 93",
+        "Tram Route 93",
+        "Potsdam Tram93"
+      ],
+      "order": 3,
+      "icon": "europe/germany/potsdam/PotsdamTram93.svg"
+    },
+    {
+      "id": "PotsdamTram94",
+      "name": "94",
+      "keywords": [
+        "94",
+        "Line 94",
+        "94 Line",
+        "L94",
+        "94号线",
+        "地铁94号线",
+        "94号線",
+        "94호선",
+        "Route 94",
+        "Tram Route 94",
+        "Potsdam Tram94"
+      ],
+      "order": 4,
+      "icon": "europe/germany/potsdam/PotsdamTram94.svg"
+    },
+    {
+      "id": "PotsdamTram96",
+      "name": "96",
+      "keywords": [
+        "96",
+        "Line 96",
+        "96 Line",
+        "L96",
+        "96号线",
+        "地铁96号线",
+        "96号線",
+        "96호선",
+        "Route 96",
+        "Tram Route 96",
+        "Potsdam Tram96"
+      ],
+      "order": 5,
+      "icon": "europe/germany/potsdam/PotsdamTram96.svg"
+    },
+    {
+      "id": "PotsdamTram98",
+      "name": "98",
+      "keywords": [
+        "98",
+        "Line 98",
+        "98 Line",
+        "L98",
+        "98号线",
+        "地铁98号线",
+        "98号線",
+        "98호선",
+        "Route 98",
+        "Tram Route 98",
+        "Potsdam Tram98"
+      ],
+      "order": 6,
+      "icon": "europe/germany/potsdam/PotsdamTram98.svg"
+    },
+    {
+      "id": "PotsdamTram99",
+      "name": "99",
+      "keywords": [
+        "99",
+        "Line 99",
+        "99 Line",
+        "L99",
+        "99号线",
+        "地铁99号线",
+        "99号線",
+        "99호선",
+        "Route 99",
+        "Tram Route 99",
+        "Potsdam Tram99"
+      ],
+      "order": 7,
+      "icon": "europe/germany/potsdam/PotsdamTram99.svg"
+    }
+  ],
+  "stationAliases": {},
+  "stationLocalNames": {},
+  "manualCoords": {}
+}

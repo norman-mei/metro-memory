@@ -1,0 +1,42 @@
+{
+  "OTrainLine1": {
+    "name": "Line 1 – Confederation Line",
+    "color": "#C12D29",
+    "backgroundColor": "#8F1B19",
+    "textColor": "#ffffff",
+    "progressOutlineColor": "#C12D29",
+    "statsColor": "#C12D29",
+    "order": 0,
+    "icon": "north-america/canada/ottawa/OTrainLine1.svg"
+  },
+  "OTrainLine2": {
+    "name": "Line 2 – Trillium Line",
+    "color": "#73A044",
+    "backgroundColor": "#466326",
+    "textColor": "#ffffff",
+    "progressOutlineColor": "#73A044",
+    "statsColor": "#73A044",
+    "order": 1,
+    "icon": "north-america/canada/ottawa/OTrainLine2.svg"
+  },
+  "OTrainLine3": {
+    "name": "Line 3",
+    "color": "#8A7323",
+    "backgroundColor": "#4E3F0F",
+    "textColor": "#ffffff",
+    "progressOutlineColor": "#8A7323",
+    "statsColor": "#8A7323",
+    "order": 2,
+    "icon": "north-america/canada/ottawa/OTrainLine3.svg"
+  },
+  "OTrainLine4": {
+    "name": "Line 4 – Airport Link",
+    "color": "#4498D1",
+    "backgroundColor": "#4498D1",
+    "textColor": "#ffffff",
+    "progressOutlineColor": "#4498D1",
+    "statsColor": "#4498D1",
+    "order": 3,
+    "icon": "north-america/canada/ottawa/OTrainLine4.svg"
+  }
+}

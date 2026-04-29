@@ -1,0 +1,3181 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.95052, 41.005235]
+      },
+      "properties": {
+        "id": 1,
+        "name": "Yenikapı",
+        "line": "CM_Istanbulmetro_m1",
+        "order": 0
+      },
+      "id": 1
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [29.030567, 41.139809]
+      },
+      "properties": {
+        "id": 32,
+        "name": "Hacıosman",
+        "line": "CM_Istanbulmetro_m2",
+        "order": 0
+      },
+      "id": 32
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.997716, 41.100933]
+      },
+      "properties": {
+        "id": 47,
+        "name": "Seyrantepe",
+        "line": "CM_Istanbulmetro_m2",
+        "order": 0
+      },
+      "id": 47
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.842408, 41.033159]
+      },
+      "properties": {
+        "id": 49,
+        "name": "Kirazlı",
+        "line": "CM_Istanbulmetro_m3",
+        "order": 0
+      },
+      "id": 49
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [29.31152, 40.906791]
+      },
+      "properties": {
+        "id": 62,
+        "name": "Sabiha Gökçen Havalimanı",
+        "line": "CM_Istanbulmetro_m4",
+        "order": 0
+      },
+      "id": 62
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [29.188988, 41.014051]
+      },
+      "properties": {
+        "id": 85,
+        "name": "Çekmeköy/Sancaktepe",
+        "alternate_names": ["Çekmeköy", "Sancaktepe"],
+        "line": "CM_Istanbulmetro_m5",
+        "order": 0
+      },
+      "id": 85
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [29.043796, 41.085109]
+      },
+      "properties": {
+        "id": 101,
+        "name": "Boğaziçi Üniversitesi",
+        "alternate_names": ["hisarüstü"],
+        "line": "CM_Istanbulmetro_m6",
+        "order": 0
+      },
+      "id": 101
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.833597, 41.054467]
+      },
+      "properties": {
+        "id": 105,
+        "name": "Mahmutbey",
+        "line": "CM_Istanbulmetro_m7",
+        "order": 0
+      },
+      "id": 105
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [29.152642, 41.031211]
+      },
+      "properties": {
+        "id": 123,
+        "name": "Parseller",
+        "line": "CM_Istanbulmetro_m8",
+        "order": 0
+      },
+      "id": 123
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.799296, 41.058579]
+      },
+      "properties": {
+        "id": 136,
+        "name": "Bahariye",
+        "line": "CM_Istanbulmetro_m9",
+        "order": 0
+      },
+      "id": 136
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [29.233325, 40.880749]
+      },
+      "properties": {
+        "id": 141,
+        "name": "Pendik Merkez",
+        "line": "CM_Istanbulmetro_m10",
+        "order": 0
+      },
+      "id": 141
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.976468, 41.080273]
+      },
+      "properties": {
+        "id": 147,
+        "name": "Kağıthane",
+        "line": "CM_Istanbulmetro_m11",
+        "order": 0
+      },
+      "id": 147
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.992542, 41.03452]
+      },
+      "properties": {
+        "id": 154,
+        "name": "Kabataş",
+        "line": "CM_CagdasTramvay_t1",
+        "order": 0
+      },
+      "id": 154
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.984745, 41.036438]
+      },
+      "properties": {
+        "id": 185,
+        "name": "Taksim",
+        "line": "CM_NostaljikTramvay_t2",
+        "order": 0
+      },
+      "id": 185
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [29.022003, 40.989917]
+      },
+      "properties": {
+        "id": 200,
+        "name": "Kadıköy İdo",
+        "line": "CM_NostaljikTramvay_t3",
+        "order": 0
+      },
+      "id": 200
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.848242, 41.118709]
+      },
+      "properties": {
+        "id": 211,
+        "name": "Mescid-İ Selam",
+        "line": "CM_CagdasTramvay_t4",
+        "order": 0
+      },
+      "id": 211
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.969976, 41.01825]
+      },
+      "properties": {
+        "id": 233,
+        "name": "Eminönü",
+        "line": "CM_CagdasTramvay_t5",
+        "order": 0
+      },
+      "id": 233
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.943994, 41.086902]
+      },
+      "properties": {
+        "id": 246,
+        "name": "Cep Otogarı",
+        "alternate_names": ["Alibeyköy Cep Otogarı"],
+        "line": "CM_CagdasTramvay_t5",
+        "order": 387
+      },
+      "id": 246
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [29.021841, 40.990649]
+      },
+      "properties": {
+        "id": 84,
+        "name": "Kadıköy",
+        "line": "CM_Istanbulmetro_m4",
+        "order": 367
+      },
+      "id": 84
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [29.03018, 41.00036]
+      },
+      "properties": {
+        "id": 83,
+        "name": "Ayrılıkçeşme",
+        "alternate_names": ["Ayrılık Çeşmesi"],
+        "line": "CM_Istanbulmetro_m4",
+        "order": 354
+      },
+      "id": 83
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.949482, 41.078484]
+      },
+      "properties": {
+        "id": 245,
+        "name": "Alibeyköy Metro",
+        "line": "CM_CagdasTramvay_t5",
+        "order": 343
+      },
+      "id": 245
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.766428, 41.119784]
+      },
+      "properties": {
+        "id": 61,
+        "name": "Kayaşehir Merkez",
+        "line": "CM_Istanbulmetro_m3",
+        "order": 327
+      },
+      "id": 61
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [29.044381, 41.002529]
+      },
+      "properties": {
+        "id": 82,
+        "name": "Acıbadem",
+        "line": "CM_Istanbulmetro_m4",
+        "order": 324
+      },
+      "id": 82
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.946106, 41.073796]
+      },
+      "properties": {
+        "id": 244,
+        "name": "Alibeyköy Merkez",
+        "line": "CM_CagdasTramvay_t5",
+        "order": 312
+      },
+      "id": 244
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.768062, 41.107722]
+      },
+      "properties": {
+        "id": 60,
+        "name": "Toplu Konutlar",
+        "line": "CM_Istanbulmetro_m3",
+        "order": 309
+      },
+      "id": 60
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [29.059886, 40.998354]
+      },
+      "properties": {
+        "id": 81,
+        "name": "Ünalan",
+        "line": "CM_Istanbulmetro_m4",
+        "order": 303
+      },
+      "id": 81
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.942886, 41.069834]
+      },
+      "properties": {
+        "id": 243,
+        "name": "Üniversite",
+        "line": "CM_CagdasTramvay_t5",
+        "order": 290
+      },
+      "id": 243
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [29.070367, 40.994428]
+      },
+      "properties": {
+        "id": 80,
+        "name": "Göztepe",
+        "line": "CM_Istanbulmetro_m4",
+        "order": 289
+      },
+      "id": 80
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.777226, 41.103254]
+      },
+      "properties": {
+        "id": 59,
+        "name": "Şehir Hastanesi",
+        "line": "CM_Istanbulmetro_m3",
+        "order": 278
+      },
+      "id": 59
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.942916, 41.064765]
+      },
+      "properties": {
+        "id": 242,
+        "name": "Silahtarağa Mahallesi",
+        "line": "CM_CagdasTramvay_t5",
+        "order": 268
+      },
+      "id": 242
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [29.090903, 40.984864]
+      },
+      "properties": {
+        "id": 79,
+        "name": "Yenisahra",
+        "line": "CM_Istanbulmetro_m4",
+        "order": 265
+      },
+      "id": 79
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [29.09982, 40.975463]
+      },
+      "properties": {
+        "id": 78,
+        "name": "Kozyatağı",
+        "line": "CM_Istanbulmetro_m4",
+        "order": 255
+      },
+      "id": 78
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [29.105403, 40.965288]
+      },
+      "properties": {
+        "id": 77,
+        "name": "Bostancı",
+        "line": "CM_Istanbulmetro_m4",
+        "order": 248
+      },
+      "id": 77
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [29.122768, 40.948904]
+      },
+      "properties": {
+        "id": 76,
+        "name": "Küçükyalı",
+        "line": "CM_Istanbulmetro_m4",
+        "order": 235
+      },
+      "id": 76
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.790428, 41.11353]
+      },
+      "properties": {
+        "id": 58,
+        "name": "Onurkent",
+        "line": "CM_Istanbulmetro_m3",
+        "order": 232
+      },
+      "id": 58
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.941223, 41.056755]
+      },
+      "properties": {
+        "id": 241,
+        "name": "Eyüpsultan Devlet Hastanesi",
+        "line": "CM_CagdasTramvay_t5",
+        "order": 220
+      },
+      "id": 241
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [29.139493, 40.936073]
+      },
+      "properties": {
+        "id": 75,
+        "name": "Maltepe",
+        "line": "CM_Istanbulmetro_m4",
+        "order": 209
+      },
+      "id": 75
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.801584, 41.107001]
+      },
+      "properties": {
+        "id": 57,
+        "name": "Metrokent",
+        "line": "CM_Istanbulmetro_m3",
+        "order": 200
+      },
+      "id": 57
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [29.146257, 40.930667]
+      },
+      "properties": {
+        "id": 74,
+        "name": "Huzurevi",
+        "line": "CM_Istanbulmetro_m4",
+        "order": 191
+      },
+      "id": 74
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.712792, 41.255552]
+      },
+      "properties": {
+        "id": 153,
+        "name": "Havalimanı Kargo Terminali",
+        "alternate_names": ["Kargo Terminali"],
+        "line": "CM_Istanbulmetro_m11",
+        "order": 188
+      },
+      "id": 153
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.742627, 41.256036]
+      },
+      "properties": {
+        "id": 152,
+        "name": "İstanbul Havalimanı",
+        "line": "CM_Istanbulmetro_m11",
+        "order": 182
+      },
+      "id": 152
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.935196, 41.050489]
+      },
+      "properties": {
+        "id": 240,
+        "name": "Eyüpsultan Teleferik",
+        "line": "CM_CagdasTramvay_t5",
+        "order": 177
+      },
+      "id": 240
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.82104, 40.97974]
+      },
+      "properties": {
+        "id": 18,
+        "name": "Atatürk Havalimanı",
+        "line": "CM_Istanbulmetro_m1",
+        "order": 176
+      },
+      "id": 18
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.791674, 41.098359]
+      },
+      "properties": {
+        "id": 56,
+        "name": "Başak Konutları",
+        "line": "CM_Istanbulmetro_m3",
+        "order": 174
+      },
+      "id": 56
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [29.155752, 40.923711]
+      },
+      "properties": {
+        "id": 73,
+        "name": "Gülsuyu",
+        "line": "CM_Istanbulmetro_m4",
+        "order": 171
+      },
+      "id": 73
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.828613, 40.986594]
+      },
+      "properties": {
+        "id": 17,
+        "name": "D.T.M.- İstanbul Fuar Merkezi",
+        "alternate_names": [
+          "DTM İstanbul Fuar Merkezi",
+          "Istanbul Fuar Merkezi"
+        ],
+        "line": "CM_Istanbulmetro_m1",
+        "order": 164
+      },
+      "id": 17
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.83702, 40.989432]
+      },
+      "properties": {
+        "id": 16,
+        "name": "Yenibosna",
+        "line": "CM_Istanbulmetro_m1",
+        "order": 157
+      },
+      "id": 16
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [29.166422, 40.921003]
+      },
+      "properties": {
+        "id": 72,
+        "name": "Esenkent",
+        "line": "CM_Istanbulmetro_m4",
+        "order": 155
+      },
+      "id": 72
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.938044, 41.045469]
+      },
+      "properties": {
+        "id": 239,
+        "name": "Feshane",
+        "line": "CM_CagdasTramvay_t5",
+        "order": 155
+      },
+      "id": 239
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.809064, 41.242964]
+      },
+      "properties": {
+        "id": 151,
+        "name": "İhsaniye",
+        "line": "CM_Istanbulmetro_m11",
+        "order": 152
+      },
+      "id": 151
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.795919, 41.089613]
+      },
+      "properties": {
+        "id": 55,
+        "name": "Siteler",
+        "line": "CM_Istanbulmetro_m3",
+        "order": 150
+      },
+      "id": 55
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.8461, 40.99137]
+      },
+      "properties": {
+        "id": 15,
+        "name": "Ataköy Şirinevler",
+        "line": "CM_Istanbulmetro_m1",
+        "order": 148
+      },
+      "id": 15
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [29.175498, 40.917431]
+      },
+      "properties": {
+        "id": 71,
+        "name": "Hastane Adliye",
+        "line": "CM_Istanbulmetro_m4",
+        "order": 142
+      },
+      "id": 71
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.863711, 40.995597]
+      },
+      "properties": {
+        "id": 14,
+        "name": "Bahçelievler",
+        "line": "CM_Istanbulmetro_m1",
+        "order": 136
+      },
+      "id": 14
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [29.096863, 40.95142]
+      },
+      "properties": {
+        "id": 135,
+        "name": "Bostancı",
+        "line": "CM_Istanbulmetro_m8",
+        "order": 133
+      },
+      "id": 135
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.797612, 41.081098]
+      },
+      "properties": {
+        "id": 54,
+        "name": "Turgut Özal",
+        "line": "CM_Istanbulmetro_m3",
+        "order": 132
+      },
+      "id": 54
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.874643, 40.996612]
+      },
+      "properties": {
+        "id": 13,
+        "name": "Bakırköy-İncirli",
+        "alternate_names": ["Bakırköy", "İncirli"],
+        "line": "CM_Istanbulmetro_m1",
+        "order": 129
+      },
+      "id": 13
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.943926, 41.039618]
+      },
+      "properties": {
+        "id": 238,
+        "name": "Ayvansaray",
+        "line": "CM_CagdasTramvay_t5",
+        "order": 128
+      },
+      "id": 238
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [29.19243, 40.913388]
+      },
+      "properties": {
+        "id": 70,
+        "name": "Soğanlık",
+        "line": "CM_Istanbulmetro_m4",
+        "order": 125
+      },
+      "id": 70
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.889479, 41.001672]
+      },
+      "properties": {
+        "id": 12,
+        "name": "Zeytinburnu",
+        "line": "CM_Istanbulmetro_m1",
+        "order": 119
+      },
+      "id": 12
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [29.093619, 40.96033]
+      },
+      "properties": {
+        "id": 134,
+        "name": "Emin Ali Paşa",
+        "line": "CM_Istanbulmetro_m8",
+        "order": 118
+      },
+      "id": 134
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.896199, 41.007541]
+      },
+      "properties": {
+        "id": 11,
+        "name": "Merter",
+        "line": "CM_Istanbulmetro_m1",
+        "order": 110
+      },
+      "id": 11
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [29.086561, 40.966766]
+      },
+      "properties": {
+        "id": 133,
+        "name": "Ayşekadın",
+        "line": "CM_Istanbulmetro_m8",
+        "order": 108
+      },
+      "id": 133
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.948033, 41.034113]
+      },
+      "properties": {
+        "id": 237,
+        "name": "Balat",
+        "line": "CM_CagdasTramvay_t5",
+        "order": 108
+      },
+      "id": 237
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.805038, 41.070293]
+      },
+      "properties": {
+        "id": 53,
+        "name": "İkitelli Sanayi",
+        "line": "CM_Istanbulmetro_m3",
+        "order": 107
+      },
+      "id": 53
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.900261, 41.020612]
+      },
+      "properties": {
+        "id": 10,
+        "name": "Davutpaşa",
+        "line": "CM_Istanbulmetro_m1",
+        "order": 98
+      },
+      "id": 10
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [29.21213, 40.906338]
+      },
+      "properties": {
+        "id": 69,
+        "name": "Kartal",
+        "line": "CM_Istanbulmetro_m4",
+        "order": 98
+      },
+      "id": 69
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.993096, 41.065489]
+      },
+      "properties": {
+        "id": 119,
+        "name": "Şişli Mecidiyekoy",
+        "line": "CM_Istanbulmetro_m7",
+        "order": 98
+      },
+      "id": 119
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.980139, 41.070734]
+      },
+      "properties": {
+        "id": 118,
+        "name": "Çağlayan",
+        "line": "CM_Istanbulmetro_m7",
+        "order": 94
+      },
+      "id": 118
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.860762, 41.033933]
+      },
+      "properties": {
+        "id": 184,
+        "name": "Bağcılar",
+        "line": "CM_CagdasTramvay_t1",
+        "order": 93
+      },
+      "id": 184
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.897928, 41.030394]
+      },
+      "properties": {
+        "id": 9,
+        "name": "Terazidere",
+        "line": "CM_Istanbulmetro_m1",
+        "order": 91
+      },
+      "id": 9
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.860955, 41.028988]
+      },
+      "properties": {
+        "id": 183,
+        "name": "Güneştepe",
+        "line": "CM_CagdasTramvay_t1",
+        "order": 91
+      },
+      "id": 183
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [29.09982, 40.977605]
+      },
+      "properties": {
+        "id": 132,
+        "name": "Kozyatağı",
+        "line": "CM_Istanbulmetro_m8",
+        "order": 90
+      },
+      "id": 132
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.863192, 41.024273]
+      },
+      "properties": {
+        "id": 182,
+        "name": "Yavuz Selim",
+        "line": "CM_CagdasTramvay_t1",
+        "order": 89
+      },
+      "id": 182
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.885289, 41.175649]
+      },
+      "properties": {
+        "id": 150,
+        "name": "Göktürk",
+        "line": "CM_Istanbulmetro_m11",
+        "order": 87
+      },
+      "id": 150
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.866803, 41.02125]
+      },
+      "properties": {
+        "id": 181,
+        "name": "Soğanlı",
+        "line": "CM_CagdasTramvay_t1",
+        "order": 87
+      },
+      "id": 181
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.973051, 41.079592]
+      },
+      "properties": {
+        "id": 117,
+        "name": "Kağıthane",
+        "line": "CM_Istanbulmetro_m7",
+        "order": 85
+      },
+      "id": 117
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.871309, 41.017211]
+      },
+      "properties": {
+        "id": 180,
+        "name": "Akıncılar",
+        "line": "CM_CagdasTramvay_t1",
+        "order": 84
+      },
+      "id": 180
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [29.111834, 40.979148]
+      },
+      "properties": {
+        "id": 131,
+        "name": "Küçükbakkalköy",
+        "line": "CM_Istanbulmetro_m8",
+        "order": 82
+      },
+      "id": 131
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.877091, 41.015462]
+      },
+      "properties": {
+        "id": 179,
+        "name": "Güngören",
+        "line": "CM_CagdasTramvay_t1",
+        "order": 82
+      },
+      "id": 179
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.894621, 41.040115]
+      },
+      "properties": {
+        "id": 8,
+        "name": "Otogar",
+        "line": "CM_Istanbulmetro_m1",
+        "order": 80
+      },
+      "id": 8
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.963879, 41.079773]
+      },
+      "properties": {
+        "id": 116,
+        "name": "Nurtepe",
+        "line": "CM_Istanbulmetro_m7",
+        "order": 79
+      },
+      "id": 116
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.880653, 41.011916]
+      },
+      "properties": {
+        "id": 178,
+        "name": "Merter Tekstil Merkezi",
+        "line": "CM_CagdasTramvay_t1",
+        "order": 79
+      },
+      "id": 178
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.95447, 41.028662]
+      },
+      "properties": {
+        "id": 236,
+        "name": "Fener",
+        "line": "CM_CagdasTramvay_t5",
+        "order": 79
+      },
+      "id": 236
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.882322, 41.004654]
+      },
+      "properties": {
+        "id": 177,
+        "name": "Mehmet Akif",
+        "line": "CM_CagdasTramvay_t1",
+        "order": 78
+      },
+      "id": 177
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.89002, 41.001533]
+      },
+      "properties": {
+        "id": 176,
+        "name": "Zeytinburnu",
+        "line": "CM_CagdasTramvay_t1",
+        "order": 75
+      },
+      "id": 176
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.95144, 41.079003]
+      },
+      "properties": {
+        "id": 115,
+        "name": "Alibeyköy",
+        "line": "CM_Istanbulmetro_m7",
+        "order": 73
+      },
+      "id": 115
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [29.126149, 40.979224]
+      },
+      "properties": {
+        "id": 130,
+        "name": "İçerenköy",
+        "line": "CM_Istanbulmetro_m8",
+        "order": 72
+      },
+      "id": 130
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.950241, 41.005221]
+      },
+      "properties": {
+        "id": 46,
+        "name": "Yenikapı",
+        "line": "CM_Istanbulmetro_m2",
+        "order": 71
+      },
+      "id": 46
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.91026, 41.159463]
+      },
+      "properties": {
+        "id": 149,
+        "name": "Kemerburgaz",
+        "line": "CM_Istanbulmetro_m11",
+        "order": 71
+      },
+      "id": 149
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.899686, 41.003318]
+      },
+      "properties": {
+        "id": 175,
+        "name": "Mithatpaşa",
+        "line": "CM_CagdasTramvay_t1",
+        "order": 71
+      },
+      "id": 175
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.907706, 41.004209]
+      },
+      "properties": {
+        "id": 174,
+        "name": "Akşemsettin",
+        "alternate_names": ["Seyitnizam-Akşemsettin"],
+        "line": "CM_CagdasTramvay_t1",
+        "order": 70
+      },
+      "id": 174
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.825848, 41.065293]
+      },
+      "properties": {
+        "id": 52,
+        "name": "İstoç",
+        "line": "CM_Istanbulmetro_m3",
+        "order": 69
+      },
+      "id": 52
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.959618, 41.012507]
+      },
+      "properties": {
+        "id": 45,
+        "name": "Vezneciler",
+        "line": "CM_Istanbulmetro_m2",
+        "order": 68
+      },
+      "id": 45
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.935305, 41.079825]
+      },
+      "properties": {
+        "id": 114,
+        "name": "Çırçır",
+        "line": "CM_Istanbulmetro_m7",
+        "order": 67
+      },
+      "id": 114
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.842287, 41.033124]
+      },
+      "properties": {
+        "id": 31,
+        "name": "Kirazlı",
+        "line": "CM_Istanbulmetro_m1",
+        "order": 66
+      },
+      "id": 31
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [29.229026, 40.895555]
+      },
+      "properties": {
+        "id": 68,
+        "name": "Yakacık - Adnan Kahveci",
+        "alternate_names": ["Yakacık", "Adnan Kahveci"],
+        "line": "CM_Istanbulmetro_m4",
+        "order": 66
+      },
+      "id": 68
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.895582, 41.048392]
+      },
+      "properties": {
+        "id": 7,
+        "name": "Kartaltepe-Kocatepe",
+        "alternate_names": ["Kartaltepe", "Kocatepe"],
+        "line": "CM_Istanbulmetro_m1",
+        "order": 65
+      },
+      "id": 7
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.96657, 41.022683]
+      },
+      "properties": {
+        "id": 44,
+        "name": "Haliç",
+        "line": "CM_Istanbulmetro_m2",
+        "order": 64
+      },
+      "id": 44
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.928994, 41.079407]
+      },
+      "properties": {
+        "id": 113,
+        "name": "Veysel Karani-Akşemsettin",
+        "line": "CM_Istanbulmetro_m7",
+        "order": 64
+      },
+      "id": 113
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.860828, 41.034312]
+      },
+      "properties": {
+        "id": 30,
+        "name": "Bağcılar Meydan",
+        "line": "CM_Istanbulmetro_m1",
+        "order": 62
+      },
+      "id": 30
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [29.137806, 40.984759]
+      },
+      "properties": {
+        "id": 129,
+        "name": "Kayışdağı",
+        "line": "CM_Istanbulmetro_m8",
+        "order": 62
+      },
+      "id": 129
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.973603, 41.027932]
+      },
+      "properties": {
+        "id": 43,
+        "name": "Şişhane",
+        "line": "CM_Istanbulmetro_m2",
+        "order": 61
+      },
+      "id": 43
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.909578, 41.010414]
+      },
+      "properties": {
+        "id": 173,
+        "name": "Merkez Efendi",
+        "line": "CM_CagdasTramvay_t1",
+        "order": 61
+      },
+      "id": 173
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.919542, 41.081993]
+      },
+      "properties": {
+        "id": 112,
+        "name": "Yeşilpınar",
+        "line": "CM_Istanbulmetro_m7",
+        "order": 58
+      },
+      "id": 112
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.912041, 41.016126]
+      },
+      "properties": {
+        "id": 172,
+        "name": "Cevizlibağ-A.Ö.Y",
+        "line": "CM_CagdasTramvay_t1",
+        "order": 57
+      },
+      "id": 172
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.870946, 41.03696]
+      },
+      "properties": {
+        "id": 29,
+        "name": "Üçyüzlü",
+        "line": "CM_Istanbulmetro_m1",
+        "order": 56
+      },
+      "id": 29
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [29.239023, 40.888565]
+      },
+      "properties": {
+        "id": 67,
+        "name": "Pendik",
+        "line": "CM_Istanbulmetro_m4",
+        "order": 52
+      },
+      "id": 67
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.910376, 41.084842]
+      },
+      "properties": {
+        "id": 111,
+        "name": "Kazım Karabekir",
+        "line": "CM_Istanbulmetro_m7",
+        "order": 52
+      },
+      "id": 111
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.91947, 41.019222]
+      },
+      "properties": {
+        "id": 171,
+        "name": "Topkapı",
+        "line": "CM_CagdasTramvay_t1",
+        "order": 52
+      },
+      "id": 171
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.879452, 41.042737]
+      },
+      "properties": {
+        "id": 28,
+        "name": "Menderes",
+        "line": "CM_Istanbulmetro_m1",
+        "order": 51
+      },
+      "id": 28
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [29.15335, 40.992283]
+      },
+      "properties": {
+        "id": 128,
+        "name": "Mevlana",
+        "line": "CM_Istanbulmetro_m8",
+        "order": 50
+      },
+      "id": 128
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.985764, 41.036976]
+      },
+      "properties": {
+        "id": 42,
+        "name": "Taksim",
+        "line": "CM_Istanbulmetro_m2",
+        "order": 48
+      },
+      "id": 42
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.83085, 41.055966]
+      },
+      "properties": {
+        "id": 51,
+        "name": "Mahmutbey",
+        "line": "CM_Istanbulmetro_m3",
+        "order": 48
+      },
+      "id": 51
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [29.31173, 40.906484]
+      },
+      "properties": {
+        "id": 146,
+        "name": "Sabiha Gökçen Havalimanı",
+        "line": "CM_Istanbulmetro_m10",
+        "order": 48
+      },
+      "id": 146
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.927195, 41.018214]
+      },
+      "properties": {
+        "id": 170,
+        "name": "Pazartekke",
+        "line": "CM_CagdasTramvay_t1",
+        "order": 48
+      },
+      "id": 170
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.885782, 41.037558]
+      },
+      "properties": {
+        "id": 27,
+        "name": "Esenler",
+        "line": "CM_Istanbulmetro_m1",
+        "order": 47
+      },
+      "id": 27
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.933321, 41.015219]
+      },
+      "properties": {
+        "id": 169,
+        "name": "Çapa-Şehremini",
+        "line": "CM_CagdasTramvay_t1",
+        "order": 47
+      },
+      "id": 169
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.939185, 41.012394]
+      },
+      "properties": {
+        "id": 168,
+        "name": "Fındıkzade",
+        "line": "CM_CagdasTramvay_t1",
+        "order": 46
+      },
+      "id": 168
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.907194, 41.040798]
+      },
+      "properties": {
+        "id": 6,
+        "name": "Sağmalcılar",
+        "line": "CM_Istanbulmetro_m1",
+        "order": 45
+      },
+      "id": 6
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.943251, 41.010945]
+      },
+      "properties": {
+        "id": 167,
+        "name": "Haseki",
+        "line": "CM_CagdasTramvay_t1",
+        "order": 44
+      },
+      "id": 167
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.96027, 41.024337]
+      },
+      "properties": {
+        "id": 235,
+        "name": "Cibali",
+        "line": "CM_CagdasTramvay_t5",
+        "order": 44
+      },
+      "id": 235
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.767343, 41.079576]
+      },
+      "properties": {
+        "id": 140,
+        "name": "Olimpiyat",
+        "line": "CM_Istanbulmetro_m9",
+        "order": 43
+      },
+      "id": 140
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.947141, 41.009976]
+      },
+      "properties": {
+        "id": 166,
+        "name": "Yusufpaşa",
+        "line": "CM_CagdasTramvay_t1",
+        "order": 43
+      },
+      "id": 166
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.892484, 41.083807]
+      },
+      "properties": {
+        "id": 110,
+        "name": "Yenimahalle",
+        "line": "CM_Istanbulmetro_m7",
+        "order": 42
+      },
+      "id": 110
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.953728, 41.009633]
+      },
+      "properties": {
+        "id": 165,
+        "name": "Aksaray",
+        "line": "CM_CagdasTramvay_t1",
+        "order": 41
+      },
+      "id": 165
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.98718, 41.054211]
+      },
+      "properties": {
+        "id": 41,
+        "name": "Osmanbey",
+        "line": "CM_Istanbulmetro_m2",
+        "order": 40
+      },
+      "id": 41
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.946153, 41.124718]
+      },
+      "properties": {
+        "id": 148,
+        "name": "Hasdal",
+        "line": "CM_Istanbulmetro_m11",
+        "order": 40
+      },
+      "id": 148
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.957542, 41.00956]
+      },
+      "properties": {
+        "id": 164,
+        "name": "Laleli-Üniversite",
+        "alternate_names": [
+          "Laleli",
+          "Istanbul University - Laleli",
+          "İstanbul Universitesi - Laleli"
+        ],
+        "line": "CM_CagdasTramvay_t1",
+        "order": 40
+      },
+      "id": 164
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [29.156011, 41.000298]
+      },
+      "properties": {
+        "id": 127,
+        "name": "İmes",
+        "line": "CM_Istanbulmetro_m8",
+        "order": 39
+      },
+      "id": 127
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [29.296298, 40.909829]
+      },
+      "properties": {
+        "id": 145,
+        "name": "Kurtköy",
+        "line": "CM_Istanbulmetro_m10",
+        "order": 39
+      },
+      "id": 145
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.968056, 41.00882]
+      },
+      "properties": {
+        "id": 163,
+        "name": "Beyazıt",
+        "line": "CM_CagdasTramvay_t1",
+        "order": 38
+      },
+      "id": 163
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [29.248984, 40.882246]
+      },
+      "properties": {
+        "id": 66,
+        "name": "Tavşantepe",
+        "line": "CM_Istanbulmetro_m4",
+        "order": 37
+      },
+      "id": 66
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.920523, 41.019734]
+      },
+      "properties": {
+        "id": 232,
+        "name": "Topkapı",
+        "line": "CM_CagdasTramvay_t4",
+        "order": 37
+      },
+      "id": 232
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.971108, 41.008459]
+      },
+      "properties": {
+        "id": 162,
+        "name": "Çemberlitaş",
+        "line": "CM_CagdasTramvay_t1",
+        "order": 36
+      },
+      "id": 162
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.920217, 41.034037]
+      },
+      "properties": {
+        "id": 5,
+        "name": "Bayrampaşa-Maltepe",
+        "line": "CM_Istanbulmetro_m1",
+        "order": 35
+      },
+      "id": 5
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.992426, 41.064291]
+      },
+      "properties": {
+        "id": 40,
+        "name": "Şişli Mecidiyekoy",
+        "line": "CM_Istanbulmetro_m2",
+        "order": 35
+      },
+      "id": 40
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.9757, 41.008079]
+      },
+      "properties": {
+        "id": 161,
+        "name": "Sultanahmet",
+        "line": "CM_CagdasTramvay_t1",
+        "order": 35
+      },
+      "id": 161
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [29.020965, 40.987926]
+      },
+      "properties": {
+        "id": 209,
+        "name": "Damla Sokak",
+        "line": "CM_NostaljikTramvay_t3",
+        "order": 35
+      },
+      "id": 209
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.924988, 41.021531]
+      },
+      "properties": {
+        "id": 231,
+        "name": "Fetihkapı",
+        "line": "CM_CagdasTramvay_t4",
+        "order": 34
+      },
+      "id": 231
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.92926, 41.025572]
+      },
+      "properties": {
+        "id": 230,
+        "name": "Vatan",
+        "line": "CM_CagdasTramvay_t4",
+        "order": 33
+      },
+      "id": 230
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [29.275881, 40.90399]
+      },
+      "properties": {
+        "id": 144,
+        "name": "Yayalar",
+        "line": "CM_Istanbulmetro_m10",
+        "order": 32
+      },
+      "id": 144
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.875033, 41.0807]
+      },
+      "properties": {
+        "id": 109,
+        "name": "Karadeniz Mahallesi",
+        "line": "CM_Istanbulmetro_m7",
+        "order": 31
+      },
+      "id": 109
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [29.161712, 41.00745]
+      },
+      "properties": {
+        "id": 126,
+        "name": "Modoko - Keyap",
+        "alternate_names": ["Modoko", "Keyap"],
+        "line": "CM_Istanbulmetro_m8",
+        "order": 31
+      },
+      "id": 126
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.933906, 41.031464]
+      },
+      "properties": {
+        "id": 229,
+        "name": "Edirnekapı",
+        "line": "CM_CagdasTramvay_t4",
+        "order": 31
+      },
+      "id": 229
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.786193, 41.074564]
+      },
+      "properties": {
+        "id": 139,
+        "name": "Ziya Gökalp",
+        "line": "CM_Istanbulmetro_m9",
+        "order": 30
+      },
+      "id": 139
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [29.010553, 41.068691]
+      },
+      "properties": {
+        "id": 39,
+        "name": "Gayrettepe",
+        "line": "CM_Istanbulmetro_m2",
+        "order": 29
+      },
+      "id": 39
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [29.021177, 40.985234]
+      },
+      "properties": {
+        "id": 208,
+        "name": "Mühürdar",
+        "line": "CM_NostaljikTramvay_t3",
+        "order": 29
+      },
+      "id": 208
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.929352, 41.033807]
+      },
+      "properties": {
+        "id": 228,
+        "name": "Şehitlik",
+        "line": "CM_CagdasTramvay_t4",
+        "order": 29
+      },
+      "id": 228
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.978436, 41.012167]
+      },
+      "properties": {
+        "id": 160,
+        "name": "Gülhane",
+        "line": "CM_CagdasTramvay_t1",
+        "order": 28
+      },
+      "id": 160
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [29.024318, 40.984021]
+      },
+      "properties": {
+        "id": 207,
+        "name": "Moda",
+        "line": "CM_NostaljikTramvay_t3",
+        "order": 28
+      },
+      "id": 207
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.923612, 41.036608]
+      },
+      "properties": {
+        "id": 227,
+        "name": "Demirkapı",
+        "line": "CM_CagdasTramvay_t4",
+        "order": 27
+      },
+      "id": 227
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [29.013412, 41.077604]
+      },
+      "properties": {
+        "id": 38,
+        "name": "Levent",
+        "line": "CM_Istanbulmetro_m2",
+        "order": 25
+      },
+      "id": 38
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [29.262303, 40.889194]
+      },
+      "properties": {
+        "id": 65,
+        "name": "Fevzi Çakmak",
+        "line": "CM_Istanbulmetro_m4",
+        "order": 25
+      },
+      "id": 65
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.865897, 41.070067]
+      },
+      "properties": {
+        "id": 108,
+        "name": "Tekstilkent-Giyimkent",
+        "line": "CM_Istanbulmetro_m7",
+        "order": 25
+      },
+      "id": 108
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.918912, 41.042078]
+      },
+      "properties": {
+        "id": 226,
+        "name": "Topçular",
+        "line": "CM_CagdasTramvay_t4",
+        "order": 25
+      },
+      "id": 226
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [29.026662, 40.98409]
+      },
+      "properties": {
+        "id": 206,
+        "name": "Moda İlkokulu",
+        "line": "CM_NostaljikTramvay_t3",
+        "order": 24
+      },
+      "id": 206
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [29.006841, 41.087026]
+      },
+      "properties": {
+        "id": 37,
+        "name": "4. Levent",
+        "line": "CM_Istanbulmetro_m2",
+        "order": 23
+      },
+      "id": 37
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.836256, 41.039752]
+      },
+      "properties": {
+        "id": 50,
+        "name": "Yenimahalle",
+        "line": "CM_Istanbulmetro_m3",
+        "order": 22
+      },
+      "id": 50
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.976069, 41.01548]
+      },
+      "properties": {
+        "id": 159,
+        "name": "Sirkeci",
+        "line": "CM_CagdasTramvay_t1",
+        "order": 22
+      },
+      "id": 159
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.912132, 41.049737]
+      },
+      "properties": {
+        "id": 225,
+        "name": "Rami",
+        "line": "CM_CagdasTramvay_t4",
+        "order": 22
+      },
+      "id": 225
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [29.262739, 40.889155]
+      },
+      "properties": {
+        "id": 143,
+        "name": "Fevzi Çakmak",
+        "line": "CM_Istanbulmetro_m10",
+        "order": 21
+      },
+      "id": 143
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.963536, 41.020631]
+      },
+      "properties": {
+        "id": 234,
+        "name": "Küçükpazar",
+        "line": "CM_CagdasTramvay_t5",
+        "order": 21
+      },
+      "id": 234
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [29.005516, 41.09491]
+      },
+      "properties": {
+        "id": 36,
+        "name": "Sanayi Mahallesi",
+        "line": "CM_Istanbulmetro_m2",
+        "order": 20
+      },
+      "id": 36
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [29.16327, 41.014938]
+      },
+      "properties": {
+        "id": 125,
+        "name": "Dudullu",
+        "line": "CM_Istanbulmetro_m8",
+        "order": 20
+      },
+      "id": 125
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.802498, 41.07196]
+      },
+      "properties": {
+        "id": 138,
+        "name": "İkitelli Sanayi",
+        "line": "CM_Istanbulmetro_m9",
+        "order": 20
+      },
+      "id": 138
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.930906, 41.023675]
+      },
+      "properties": {
+        "id": 4,
+        "name": "Topkapı-Ulubatlı",
+        "alternate_names": ["Topkapı", "Ulubatlı"],
+        "line": "CM_Istanbulmetro_m1",
+        "order": 19
+      },
+      "id": 4
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.908902, 41.055845]
+      },
+      "properties": {
+        "id": 224,
+        "name": "Uluyol - Bereç",
+        "alternate_names": ["Uluyol", "Bereç"],
+        "line": "CM_CagdasTramvay_t4",
+        "order": 19
+      },
+      "id": 224
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.973225, 41.017468]
+      },
+      "properties": {
+        "id": 158,
+        "name": "Eminönü",
+        "line": "CM_CagdasTramvay_t1",
+        "order": 18
+      },
+      "id": 158
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.905748, 41.058102]
+      },
+      "properties": {
+        "id": 223,
+        "name": "Sağmalclar",
+        "line": "CM_CagdasTramvay_t4",
+        "order": 18
+      },
+      "id": 223
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [29.27572, 40.904224]
+      },
+      "properties": {
+        "id": 64,
+        "name": "Yayalar",
+        "line": "CM_Istanbulmetro_m4",
+        "order": 16
+      },
+      "id": 64
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.856005, 41.063489]
+      },
+      "properties": {
+        "id": 107,
+        "name": "Yüzyıl-Oruç Reis",
+        "alternate_names": ["Yüzyıl", "Oruç Reis"],
+        "line": "CM_Istanbulmetro_m7",
+        "order": 16
+      },
+      "id": 107
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [29.261583, 40.882253]
+      },
+      "properties": {
+        "id": 142,
+        "name": "Kaynarca Merkez",
+        "line": "CM_Istanbulmetro_m10",
+        "order": 16
+      },
+      "id": 142
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.901961, 41.062062]
+      },
+      "properties": {
+        "id": 222,
+        "name": "Bosna - Çukurçeşme",
+        "alternate_names": ["Bosna", "Çukurçeşme"],
+        "line": "CM_CagdasTramvay_t4",
+        "order": 16
+      },
+      "id": 222
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.938827, 41.01796]
+      },
+      "properties": {
+        "id": 3,
+        "name": "Emniyet-Fatih",
+        "line": "CM_Istanbulmetro_m1",
+        "order": 15
+      },
+      "id": 3
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [29.012979, 41.025159]
+      },
+      "properties": {
+        "id": 100,
+        "name": "Üsküdar",
+        "line": "CM_Istanbulmetro_m5",
+        "order": 15
+      },
+      "id": 100
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [29.021051, 41.10812]
+      },
+      "properties": {
+        "id": 35,
+        "name": "İtü - Ayazağa",
+        "alternate_names": ["İtü", "Ayazağa"],
+        "line": "CM_Istanbulmetro_m2",
+        "order": 14
+      },
+      "id": 35
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [29.02793, 41.028115]
+      },
+      "properties": {
+        "id": 99,
+        "name": "Fıstıkağacı",
+        "line": "CM_Istanbulmetro_m5",
+        "order": 14
+      },
+      "id": 99
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [29.00954, 41.05451]
+      },
+      "properties": {
+        "id": 122,
+        "name": "Yıldız",
+        "line": "CM_Istanbulmetro_m7",
+        "order": 14
+      },
+      "id": 122
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.974788, 41.022262]
+      },
+      "properties": {
+        "id": 157,
+        "name": "Karaköy",
+        "line": "CM_CagdasTramvay_t1",
+        "order": 14
+      },
+      "id": 157
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.896736, 41.067583]
+      },
+      "properties": {
+        "id": 221,
+        "name": "Ali Fuat Başgil",
+        "line": "CM_CagdasTramvay_t4",
+        "order": 14
+      },
+      "id": 221
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [29.036245, 41.021374]
+      },
+      "properties": {
+        "id": 98,
+        "name": "Bağlarbaşı",
+        "line": "CM_Istanbulmetro_m5",
+        "order": 13
+      },
+      "id": 98
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [29.013412, 41.077604]
+      },
+      "properties": {
+        "id": 104,
+        "name": "Levent",
+        "line": "CM_Istanbulmetro_m6",
+        "order": 13
+      },
+      "id": 104
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [29.159541, 41.022602]
+      },
+      "properties": {
+        "id": 124,
+        "name": "Huzur",
+        "line": "CM_Istanbulmetro_m8",
+        "order": 13
+      },
+      "id": 124
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [29.027773, 40.98594]
+      },
+      "properties": {
+        "id": 205,
+        "name": "Kilise",
+        "line": "CM_NostaljikTramvay_t3",
+        "order": 13
+      },
+      "id": 205
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [29.047852, 41.022722]
+      },
+      "properties": {
+        "id": 97,
+        "name": "Altunizade",
+        "line": "CM_Istanbulmetro_m5",
+        "order": 12
+      },
+      "id": 97
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.974853, 41.028877]
+      },
+      "properties": {
+        "id": 189,
+        "name": "Tünel",
+        "line": "CM_NostaljikTramvay_t2",
+        "order": 12
+      },
+      "id": 189
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.887917, 41.072452]
+      },
+      "properties": {
+        "id": 220,
+        "name": "Taşköprü",
+        "line": "CM_CagdasTramvay_t4",
+        "order": 12
+      },
+      "id": 220
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [29.061234, 41.022323]
+      },
+      "properties": {
+        "id": 96,
+        "name": "Kısıklı",
+        "line": "CM_Istanbulmetro_m5",
+        "order": 11
+      },
+      "id": 96
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [29.028435, 40.987643]
+      },
+      "properties": {
+        "id": 204,
+        "name": "Bahariye",
+        "line": "CM_NostaljikTramvay_t3",
+        "order": 11
+      },
+      "id": 204
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.883228, 41.074931]
+      },
+      "properties": {
+        "id": 219,
+        "name": "Karadeniz",
+        "line": "CM_CagdasTramvay_t4",
+        "order": 11
+      },
+      "id": 219
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [29.296394, 40.910132]
+      },
+      "properties": {
+        "id": 63,
+        "name": "Kurtköy",
+        "line": "CM_Istanbulmetro_m4",
+        "order": 10
+      },
+      "id": 63
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [29.076155, 41.016448]
+      },
+      "properties": {
+        "id": 95,
+        "name": "Bulgurlu",
+        "line": "CM_Istanbulmetro_m5",
+        "order": 10
+      },
+      "id": 95
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [29.02633, 41.077459]
+      },
+      "properties": {
+        "id": 103,
+        "name": "Nispetiye",
+        "line": "CM_Istanbulmetro_m6",
+        "order": 10
+      },
+      "id": 103
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.980284, 41.026786]
+      },
+      "properties": {
+        "id": 156,
+        "name": "Tophane",
+        "line": "CM_CagdasTramvay_t1",
+        "order": 10
+      },
+      "id": 156
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [29.028773, 40.989402]
+      },
+      "properties": {
+        "id": 203,
+        "name": "Altıyol",
+        "line": "CM_NostaljikTramvay_t3",
+        "order": 10
+      },
+      "id": 203
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.948803, 41.011608]
+      },
+      "properties": {
+        "id": 2,
+        "name": "Aksaray",
+        "line": "CM_Istanbulmetro_m1",
+        "order": 9
+      },
+      "id": 2
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [29.024432, 41.118699]
+      },
+      "properties": {
+        "id": 34,
+        "name": "Atatürk Oto Sanayi",
+        "line": "CM_Istanbulmetro_m2",
+        "order": 9
+      },
+      "id": 34
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [29.086228, 41.024665]
+      },
+      "properties": {
+        "id": 94,
+        "name": "Ümraniye",
+        "line": "CM_Istanbulmetro_m5",
+        "order": 9
+      },
+      "id": 94
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.875825, 41.079933]
+      },
+      "properties": {
+        "id": 218,
+        "name": "Kiptaş Venezia",
+        "line": "CM_CagdasTramvay_t4",
+        "order": 9
+      },
+      "id": 218
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [29.097139, 41.025722]
+      },
+      "properties": {
+        "id": 93,
+        "name": "Çarşı",
+        "line": "CM_Istanbulmetro_m5",
+        "order": 8
+      },
+      "id": 93
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.804729, 41.064441]
+      },
+      "properties": {
+        "id": 137,
+        "name": "Masko",
+        "line": "CM_Istanbulmetro_m9",
+        "order": 8
+      },
+      "id": 137
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.872006, 41.084139]
+      },
+      "properties": {
+        "id": 217,
+        "name": "Cumhuriyet Mahallesi",
+        "line": "CM_CagdasTramvay_t4",
+        "order": 8
+      },
+      "id": 217
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [29.108568, 41.024244]
+      },
+      "properties": {
+        "id": 92,
+        "name": "Yamanevler",
+        "line": "CM_Istanbulmetro_m5",
+        "order": 7
+      },
+      "id": 92
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [29.007127, 41.062193]
+      },
+      "properties": {
+        "id": 121,
+        "name": "Fulya",
+        "line": "CM_Istanbulmetro_m7",
+        "order": 7
+      },
+      "id": 121
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.976105, 41.03173]
+      },
+      "properties": {
+        "id": 188,
+        "name": "Odakule",
+        "line": "CM_NostaljikTramvay_t2",
+        "order": 7
+      },
+      "id": 188
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.867114, 41.087915]
+      },
+      "properties": {
+        "id": 216,
+        "name": "50. Yıl - Baştabya",
+        "alternate_names": ["50. Yıl", "Baştabya"],
+        "line": "CM_CagdasTramvay_t4",
+        "order": 7
+      },
+      "id": 216
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [29.11862, 41.021507]
+      },
+      "properties": {
+        "id": 91,
+        "name": "Çakmak",
+        "line": "CM_Istanbulmetro_m5",
+        "order": 6
+      },
+      "id": 91
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.848017, 41.05668]
+      },
+      "properties": {
+        "id": 106,
+        "name": "Göztepe",
+        "line": "CM_Istanbulmetro_m7",
+        "order": 6
+      },
+      "id": 106
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [29.025471, 40.991111]
+      },
+      "properties": {
+        "id": 202,
+        "name": "Çarşı",
+        "line": "CM_NostaljikTramvay_t3",
+        "order": 6
+      },
+      "id": 202
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.864024, 41.092856]
+      },
+      "properties": {
+        "id": 215,
+        "name": "Hacı Şükrü",
+        "line": "CM_CagdasTramvay_t4",
+        "order": 6
+      },
+      "id": 215
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [29.02457, 41.129918]
+      },
+      "properties": {
+        "id": 33,
+        "name": "Darüşşafaka",
+        "line": "CM_Istanbulmetro_m2",
+        "order": 5
+      },
+      "id": 33
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [29.13138, 41.019253]
+      },
+      "properties": {
+        "id": 90,
+        "name": "Ihlamurkuyu",
+        "line": "CM_Istanbulmetro_m5",
+        "order": 5
+      },
+      "id": 90
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.862994, 41.100044]
+      },
+      "properties": {
+        "id": 214,
+        "name": "Yeni Mahalle",
+        "line": "CM_CagdasTramvay_t4",
+        "order": 5
+      },
+      "id": 214
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [29.139859, 41.01655]
+      },
+      "properties": {
+        "id": 89,
+        "name": "Altınşehir",
+        "line": "CM_Istanbulmetro_m5",
+        "order": 4
+      },
+      "id": 89
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [29.037604, 41.082451]
+      },
+      "properties": {
+        "id": 102,
+        "name": "Etiler",
+        "line": "CM_Istanbulmetro_m6",
+        "order": 4
+      },
+      "id": 102
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.98953, 41.031497]
+      },
+      "properties": {
+        "id": 155,
+        "name": "Fındıklı",
+        "line": "CM_CagdasTramvay_t1",
+        "order": 4
+      },
+      "id": 155
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.977508, 41.033609]
+      },
+      "properties": {
+        "id": 187,
+        "name": "Galatasaray",
+        "line": "CM_NostaljikTramvay_t2",
+        "order": 4
+      },
+      "id": 187
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.860537, 41.106188]
+      },
+      "properties": {
+        "id": 213,
+        "name": "Sultançiftliği",
+        "line": "CM_CagdasTramvay_t4",
+        "order": 4
+      },
+      "id": 213
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [29.15114, 41.015888]
+      },
+      "properties": {
+        "id": 88,
+        "name": "İmam Hatip",
+        "alternate_names": ["İmam Hatip Lisesi"],
+        "line": "CM_Istanbulmetro_m5",
+        "order": 3
+      },
+      "id": 88
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.980732, 41.034912]
+      },
+      "properties": {
+        "id": 186,
+        "name": "Ağa Camii",
+        "line": "CM_NostaljikTramvay_t2",
+        "order": 3
+      },
+      "id": 186
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [29.022969, 40.990532]
+      },
+      "properties": {
+        "id": 201,
+        "name": "İskele Camii",
+        "line": "CM_NostaljikTramvay_t3",
+        "order": 3
+      },
+      "id": 201
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.857479, 41.112598]
+      },
+      "properties": {
+        "id": 212,
+        "name": "Cebeci",
+        "line": "CM_CagdasTramvay_t4",
+        "order": 3
+      },
+      "id": 212
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [29.163916, 41.015671]
+      },
+      "properties": {
+        "id": 87,
+        "name": "Dudullu",
+        "line": "CM_Istanbulmetro_m5",
+        "order": 2
+      },
+      "id": 87
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [29.180517, 41.015607]
+      },
+      "properties": {
+        "id": 86,
+        "name": "Necip Fazıl",
+        "line": "CM_Istanbulmetro_m5",
+        "order": 1
+      },
+      "id": 86
+    }
+  ]
+}

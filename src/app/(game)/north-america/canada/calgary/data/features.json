@@ -1,0 +1,882 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.18869395573488,
+          51.03763889465274
+        ]
+      },
+      "properties": {
+        "name": "69 Street",
+        "line": "CalgaryBlue",
+        "id": 0
+      },
+      "id": 0
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.16960064990623,
+          51.03819174282358
+        ]
+      },
+      "properties": {
+        "name": "Sirocco",
+        "line": "CalgaryBlue",
+        "id": 1
+      },
+      "id": 1
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.15363914130339,
+          51.038038268233386
+        ]
+      },
+      "properties": {
+        "name": "45 Street",
+        "line": "CalgaryBlue",
+        "id": 2
+      },
+      "id": 2
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.13644901406445,
+          51.04057100702614
+        ]
+      },
+      "properties": {
+        "name": "Westbrook",
+        "line": "CalgaryBlue",
+        "id": 3
+      },
+      "id": 3
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.12465287132136,
+          51.04174359292076
+        ]
+      },
+      "properties": {
+        "name": "Shaganappi Point",
+        "line": "CalgaryBlue",
+        "id": 4
+      },
+      "id": 4
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.09944060095513,
+          51.04470478215203
+        ]
+      },
+      "properties": {
+        "name": "Sunalta",
+        "line": "CalgaryBlue",
+        "id": 5
+      },
+      "id": 5
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.08773982632849,
+          51.047197873160094
+        ]
+      },
+      "properties": {
+        "name": "Downtown West-Kerby",
+        "line": "CalgaryBlue",
+        "id": 6
+      },
+      "id": 6
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.07990805127915,
+          51.04699388726365
+        ]
+      },
+      "properties": {
+        "name": "8 Street SW",
+        "line": "CalgaryBlue",
+        "id": 7
+      },
+      "id": 7
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0779634234288,
+          51.04698550093614
+        ]
+      },
+      "properties": {
+        "name": "7 Street SW",
+        "line": "CalgaryBlue",
+        "id": 8
+      },
+      "id": 8
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.07488951193346,
+          51.04680644253483
+        ]
+      },
+      "properties": {
+        "name": "6 Street SW",
+        "line": "CalgaryBlue",
+        "id": 9
+      },
+      "id": 9
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0724327655596,
+          51.04680645456131
+        ]
+      },
+      "properties": {
+        "name": "4 Street SW",
+        "line": "CalgaryBlue",
+        "id": 10
+      },
+      "id": 10
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.06888404198929,
+          51.04668233182887
+        ]
+      },
+      "properties": {
+        "name": "3 Street SW",
+        "line": "CalgaryBlue",
+        "id": 11
+      },
+      "id": 11
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.06433854402916,
+          51.04661988106924
+        ]
+      },
+      "properties": {
+        "name": "1 Street SW",
+        "line": "CalgaryBlue",
+        "id": 12
+      },
+      "id": 12
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.06296915650789,
+          51.046581852461934
+        ]
+      },
+      "properties": {
+        "name": "Centre Street",
+        "line": "CalgaryBlue",
+        "id": 13
+      },
+      "id": 13
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.05670787478762,
+          51.04643115432766
+        ]
+      },
+      "properties": {
+        "name": "City Hall/Bow Valley College",
+        "line": "CalgaryBlue",
+        "id": 14,
+        "alternate_names": [
+          "City Hall",
+          "Bow Valley College"
+        ]
+      },
+      "id": 14
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.04000336307587,
+          51.049115178352004
+        ]
+      },
+      "properties": {
+        "name": "Bridgeland/Memorial",
+        "line": "CalgaryBlue",
+        "id": 15,
+        "alternate_names": [
+          "Bridgeland",
+          "Memorial"
+        ]
+      },
+      "id": 15
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.02577593334554,
+          51.04745687406685
+        ]
+      },
+      "properties": {
+        "name": "Zoo",
+        "line": "CalgaryBlue",
+        "id": 16
+      },
+      "id": 16
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.00621760096074,
+          51.045479029528614
+        ]
+      },
+      "properties": {
+        "name": "Barlow/Max Bell",
+        "line": "CalgaryBlue",
+        "id": 17,
+        "alternate_names": [
+          "Barlow",
+          "Max Bell"
+        ]
+      },
+      "id": 17
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -113.9947144608115,
+          51.04716757854826
+        ]
+      },
+      "properties": {
+        "name": "Franklin",
+        "line": "CalgaryBlue",
+        "id": 18
+      },
+      "id": 18
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -113.9817036414122,
+          51.05908559944528
+        ]
+      },
+      "properties": {
+        "name": "Marlborough",
+        "line": "CalgaryBlue",
+        "id": 19
+      },
+      "id": 19
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -113.9816968530429,
+          51.07511954778203
+        ]
+      },
+      "properties": {
+        "name": "Rundle",
+        "line": "CalgaryBlue",
+        "id": 20
+      },
+      "id": 20
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -113.98177651218127,
+          51.08623991781693
+        ]
+      },
+      "properties": {
+        "name": "Whitehorn",
+        "line": "CalgaryBlue",
+        "id": 21
+      },
+      "id": 21
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -113.97577840518066,
+          51.10918768523898
+        ]
+      },
+      "properties": {
+        "name": "McKnight-Westwinds",
+        "line": "CalgaryBlue",
+        "id": 22
+      },
+      "id": 22
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -113.96799820932225,
+          51.11779810079941
+        ]
+      },
+      "properties": {
+        "name": "Martindale",
+        "line": "CalgaryBlue",
+        "id": 23
+      },
+      "id": 23
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -113.94820632651052,
+          51.12616575029007
+        ]
+      },
+      "properties": {
+        "name": "Saddletowne",
+        "line": "CalgaryBlue",
+        "id": 24
+      },
+      "id": 24
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.23576399556441,
+          51.13460803728057
+        ]
+      },
+      "properties": {
+        "name": "Tuscany",
+        "line": "CalgaryRed",
+        "id": 25
+      },
+      "id": 25
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.20708213324879,
+          51.1227891298896
+        ]
+      },
+      "properties": {
+        "name": "Crowfoot",
+        "line": "CalgaryRed",
+        "id": 26
+      },
+      "id": 26
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.16030750521459,
+          51.103307964083044
+        ]
+      },
+      "properties": {
+        "name": "Dalhousie",
+        "line": "CalgaryRed",
+        "id": 27
+      },
+      "id": 27
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.13139383281938,
+          51.08708755675938
+        ]
+      },
+      "properties": {
+        "name": "Brentwood",
+        "line": "CalgaryRed",
+        "id": 28
+      },
+      "id": 28
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.12295346682335,
+          51.08027096210271
+        ]
+      },
+      "properties": {
+        "name": "University",
+        "line": "CalgaryRed",
+        "id": 29
+      },
+      "id": 29
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.11578668361634,
+          51.071174670371505
+        ]
+      },
+      "properties": {
+        "name": "Banff Trail",
+        "line": "CalgaryRed",
+        "id": 30
+      },
+      "id": 30
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.10369144705862,
+          51.065160541543186
+        ]
+      },
+      "properties": {
+        "name": "Lions Park",
+        "line": "CalgaryRed",
+        "id": 31
+      },
+      "id": 31
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.09137815642836,
+          51.06319831537471
+        ]
+      },
+      "properties": {
+        "name": "SAIT/AUArts/Jubilee",
+        "line": "CalgaryRed",
+        "id": 32,
+        "alternate_names": [
+          "SAIT",
+          "AUArts",
+          "Jubilee"
+        ]
+      },
+      "id": 32
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0845890387293,
+          51.05651084241733
+        ]
+      },
+      "properties": {
+        "name": "Sunnyside",
+        "line": "CalgaryRed",
+        "id": 33
+      },
+      "id": 33
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.07990805127915,
+          51.04699388726365
+        ]
+      },
+      "properties": {
+        "name": "8 Street SW",
+        "line": "CalgaryRed",
+        "id": 34
+      },
+      "id": 34
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0779634234288,
+          51.04698550093614
+        ]
+      },
+      "properties": {
+        "name": "7 Street SW",
+        "line": "CalgaryRed",
+        "id": 35
+      },
+      "id": 35
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.07488951193346,
+          51.04680644253483
+        ]
+      },
+      "properties": {
+        "name": "6 Street SW",
+        "line": "CalgaryRed",
+        "id": 36
+      },
+      "id": 36
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0724327655596,
+          51.04680645456131
+        ]
+      },
+      "properties": {
+        "name": "4 Street SW",
+        "line": "CalgaryRed",
+        "id": 37
+      },
+      "id": 37
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.06888404198929,
+          51.04668233182887
+        ]
+      },
+      "properties": {
+        "name": "3 Street SW",
+        "line": "CalgaryRed",
+        "id": 38
+      },
+      "id": 38
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.06433854402916,
+          51.04661988106924
+        ]
+      },
+      "properties": {
+        "name": "1 Street SW",
+        "line": "CalgaryRed",
+        "id": 39
+      },
+      "id": 39
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.06296915650789,
+          51.046581852461934
+        ]
+      },
+      "properties": {
+        "name": "Centre Street",
+        "line": "CalgaryRed",
+        "id": 40
+      },
+      "id": 40
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.05670787478762,
+          51.04643115432766
+        ]
+      },
+      "properties": {
+        "name": "City Hall/Bow Valley College",
+        "line": "CalgaryRed",
+        "id": 41,
+        "alternate_names": [
+          "City Hall",
+          "Bow Valley College"
+        ]
+      },
+      "id": 41
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.05834684193246,
+          51.03868370561821
+        ]
+      },
+      "properties": {
+        "name": "Victoria Park/Stampede",
+        "line": "CalgaryRed",
+        "id": 42,
+        "alternate_names": [
+          "Victoria Park",
+          "Stampede"
+        ]
+      },
+      "id": 42
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.05894363139757,
+          51.032149468546095
+        ]
+      },
+      "properties": {
+        "name": "Erlton/Stampede",
+        "line": "CalgaryRed",
+        "id": 43,
+        "alternate_names": [
+          "Erlton",
+          "Stampede"
+        ]
+      },
+      "id": 43
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.06134032791724,
+          51.01788830968561
+        ]
+      },
+      "properties": {
+        "name": "39 Avenue",
+        "line": "CalgaryRed",
+        "id": 44
+      },
+      "id": 44
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.06584636284651,
+          50.997079300205705
+        ]
+      },
+      "properties": {
+        "name": "Chinook",
+        "line": "CalgaryRed",
+        "id": 45
+      },
+      "id": 45
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0740925851285,
+          50.979003656852406
+        ]
+      },
+      "properties": {
+        "name": "Heritage",
+        "line": "CalgaryRed",
+        "id": 46
+      },
+      "id": 46
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0768505870359,
+          50.964667418100326
+        ]
+      },
+      "properties": {
+        "name": "Southland",
+        "line": "CalgaryRed",
+        "id": 47
+      },
+      "id": 47
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.07469536515248,
+          50.9544286019634
+        ]
+      },
+      "properties": {
+        "name": "Anderson",
+        "line": "CalgaryRed",
+        "id": 48
+      },
+      "id": 48
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.07000865715604,
+          50.93670300689108
+        ]
+      },
+      "properties": {
+        "name": "Canyon Meadows",
+        "line": "CalgaryRed",
+        "id": 49
+      },
+      "id": 49
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.07323294690673,
+          50.923413795779965
+        ]
+      },
+      "properties": {
+        "name": "Fish Creek-Lacombe",
+        "line": "CalgaryRed",
+        "id": 50
+      },
+      "id": 50
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.07070902066992,
+          50.91098345892464
+        ]
+      },
+      "properties": {
+        "name": "Shawnessy",
+        "line": "CalgaryRed",
+        "id": 51
+      },
+      "id": 51
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0688452727658,
+          50.89901352993885
+        ]
+      },
+      "properties": {
+        "name": "Somerset-Bridlewood",
+        "line": "CalgaryRed",
+        "id": 52
+      },
+      "id": 52
+    }
+  ]
+}

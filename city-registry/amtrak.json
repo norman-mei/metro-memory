@@ -1,0 +1,572 @@
+{
+  "city": "amtrak",
+  "continent": "north america",
+  "bbox": [
+    36.8283,
+    -101.5795,
+    42.8283,
+    -95.5795
+  ],
+  "localLanguages": [
+    "en"
+  ],
+  "modes": [
+    "subway",
+    "light_rail",
+    "tram",
+    "rail",
+    "funicular",
+    "monorail",
+    "cable_car",
+    "gondola",
+    "chair_lift"
+  ],
+  "lines": [
+    {
+      "id": "ACE",
+      "name": "Acela",
+      "keywords": [
+        "Acela",
+        "Acela Line",
+        "ACE",
+        "ACE Line"
+      ],
+      "order": 0,
+      "icon": "north-america/usa/amtrak/ace-v2.png"
+    },
+    {
+      "id": "CRN",
+      "name": "Carolinian",
+      "keywords": [
+        "Carolinian",
+        "Carolinian Line",
+        "CRN",
+        "CRN Line"
+      ],
+      "order": 1,
+      "icon": "north-america/usa/amtrak/crn-v2.png"
+    },
+    {
+      "id": "NER",
+      "name": "Northeast Regional",
+      "keywords": [
+        "Northeast Regional",
+        "NER",
+        "NER Line"
+      ],
+      "order": 2,
+      "icon": "north-america/usa/amtrak/ner-v2.png"
+    },
+    {
+      "id": "VTR",
+      "name": "Vermonter",
+      "keywords": [
+        "Vermonter",
+        "Vermonter Line",
+        "VTR",
+        "VTR Line"
+      ],
+      "order": 3,
+      "icon": "north-america/usa/amtrak/vtr-v2.png"
+    },
+    {
+      "id": "ADR",
+      "name": "Adirondack",
+      "keywords": [
+        "Adirondack",
+        "Adirondack Line",
+        "ADR",
+        "ADR Line"
+      ],
+      "order": 4,
+      "icon": "north-america/usa/amtrak/adr-v2.png"
+    },
+    {
+      "id": "ACS",
+      "name": "Amtrak Cascades",
+      "keywords": [
+        "Amtrak Cascades",
+        "ACS",
+        "ACS Line"
+      ],
+      "order": 5,
+      "icon": "north-america/usa/amtrak/acs-v2.png"
+    },
+    {
+      "id": "HTF",
+      "name": "Hartford Line",
+      "keywords": [
+        "Hartford Line",
+        "Hartford",
+        "HTF",
+        "HTF Line"
+      ],
+      "order": 6,
+      "icon": "north-america/usa/amtrak/htf-v2.png"
+    },
+    {
+      "id": "BKF",
+      "name": "Berkshire Flyer",
+      "keywords": [
+        "Berkshire Flyer",
+        "BKF",
+        "BKF Line"
+      ],
+      "order": 7,
+      "icon": "north-america/usa/amtrak/bkf-v2.png"
+    },
+    {
+      "id": "BLW",
+      "name": "Blue Water",
+      "keywords": [
+        "Blue Water",
+        "BLW",
+        "BLW Line"
+      ],
+      "order": 8,
+      "icon": "north-america/usa/amtrak/blw-v2.png"
+    },
+    {
+      "id": "BRS",
+      "name": "Borealis",
+      "keywords": [
+        "Borealis",
+        "Borealis Line",
+        "BRS",
+        "BRS Line"
+      ],
+      "order": 9,
+      "icon": "north-america/usa/amtrak/brs-v2.png"
+    },
+    {
+      "id": "CPC",
+      "name": "Capitol Corridor",
+      "keywords": [
+        "Capitol Corridor",
+        "CPC",
+        "CPC Line"
+      ],
+      "order": 10,
+      "icon": "north-america/usa/amtrak/cpc-v2.png"
+    },
+    {
+      "id": "DWE",
+      "name": "Downeaster",
+      "keywords": [
+        "Downeaster",
+        "Downeaster Line",
+        "DWE",
+        "DWE Line"
+      ],
+      "order": 11,
+      "icon": "north-america/usa/amtrak/dwe-v2.png"
+    },
+    {
+      "id": "EMS",
+      "name": "Empire Service",
+      "keywords": [
+        "Empire Service",
+        "EMS",
+        "EMS Line"
+      ],
+      "order": 12,
+      "icon": "north-america/usa/amtrak/ems-v2.png"
+    },
+    {
+      "id": "GDR",
+      "name": "Gold Runner",
+      "keywords": [
+        "Gold Runner",
+        "GDR",
+        "GDR Line"
+      ],
+      "order": 13,
+      "icon": "north-america/usa/amtrak/gdr-v2.png"
+    },
+    {
+      "id": "HLF",
+      "name": "Heartland Flyer",
+      "keywords": [
+        "Heartland Flyer",
+        "HLF",
+        "HLF Line"
+      ],
+      "order": 14,
+      "icon": "north-america/usa/amtrak/hlf-v2.png"
+    },
+    {
+      "id": "HWA",
+      "name": "Hiawatha",
+      "keywords": [
+        "Hiawatha",
+        "Hiawatha Line",
+        "HWA",
+        "HWA Line"
+      ],
+      "order": 15,
+      "icon": "north-america/usa/amtrak/hwa-v2.png"
+    },
+    {
+      "id": "IAS",
+      "name": "Illini and Saluki",
+      "keywords": [
+        "Illini and Saluki",
+        "IAS",
+        "IAS Line"
+      ],
+      "order": 16,
+      "icon": "north-america/usa/amtrak/ias-v2.png"
+    },
+    {
+      "id": "IZC",
+      "name": "Illinois Zephyr and Carl Sandburg",
+      "keywords": [
+        "Illinois Zephyr and Carl Sandburg",
+        "IZC",
+        "IZC Line"
+      ],
+      "order": 17,
+      "icon": "north-america/usa/amtrak/izc-v2.png"
+    },
+    {
+      "id": "KSS",
+      "name": "Keystone Service",
+      "keywords": [
+        "Keystone Service",
+        "KSS",
+        "KSS Line"
+      ],
+      "order": 18,
+      "icon": "north-america/usa/amtrak/kss-v2.png"
+    },
+    {
+      "id": "LCS",
+      "name": "Lincoln Service",
+      "keywords": [
+        "Lincoln Service",
+        "LCS",
+        "LCS Line"
+      ],
+      "order": 19,
+      "icon": "north-america/usa/amtrak/lcs-v2.png"
+    },
+    {
+      "id": "MPL",
+      "name": "Maple Leaf",
+      "keywords": [
+        "Maple Leaf",
+        "MPL",
+        "MPL Line"
+      ],
+      "order": 20,
+      "icon": "north-america/usa/amtrak/mpl-v2.png"
+    },
+    {
+      "id": "MGS",
+      "name": "Mardi Gras Service",
+      "keywords": [
+        "Mardi Gras Service",
+        "MGS",
+        "MGS Line"
+      ],
+      "order": 21,
+      "icon": "north-america/usa/amtrak/mgs-v2.png"
+    },
+    {
+      "id": "MRR",
+      "name": "Missouri River Runner",
+      "keywords": [
+        "Missouri River Runner",
+        "MRR",
+        "MRR Line"
+      ],
+      "order": 22,
+      "icon": "north-america/usa/amtrak/mrr-v2.png"
+    },
+    {
+      "id": "PAN",
+      "name": "Pennsylvanian",
+      "keywords": [
+        "Pennsylvanian",
+        "Pennsylvanian Line",
+        "PAN",
+        "PAN Line"
+      ],
+      "order": 23,
+      "icon": "north-america/usa/amtrak/pan-v2.png"
+    },
+    {
+      "id": "PMQ",
+      "name": "Pere Marquette",
+      "keywords": [
+        "Pere Marquette",
+        "PMQ",
+        "PMQ Line"
+      ],
+      "order": 24,
+      "icon": "north-america/usa/amtrak/pmq-v2.png"
+    },
+    {
+      "id": "PDM",
+      "name": "Piedmont",
+      "keywords": [
+        "Piedmont",
+        "Piedmont Line",
+        "PDM",
+        "PDM Line"
+      ],
+      "order": 25,
+      "icon": "north-america/usa/amtrak/pdm-v2.png"
+    },
+    {
+      "id": "VLF",
+      "name": "Valley Flyer",
+      "keywords": [
+        "Valley Flyer",
+        "VLF",
+        "VLF Line"
+      ],
+      "order": 26,
+      "icon": "north-america/usa/amtrak/vlf-v2.png"
+    },
+    {
+      "id": "WPX",
+      "name": "Winter Park Express",
+      "keywords": [
+        "Winter Park Express",
+        "WPX",
+        "WPX Line"
+      ],
+      "order": 27,
+      "icon": "north-america/usa/amtrak/wpx-v2.png"
+    },
+    {
+      "id": "WLR",
+      "name": "Wolverine",
+      "keywords": [
+        "Wolverine",
+        "Wolverine Line",
+        "WLR",
+        "WLR Line"
+      ],
+      "order": 28,
+      "icon": "north-america/usa/amtrak/wlr-v2.png"
+    },
+    {
+      "id": "AUT",
+      "name": "Auto Train",
+      "keywords": [
+        "Auto Train",
+        "AUT",
+        "AUT Line"
+      ],
+      "order": 29,
+      "icon": "north-america/usa/amtrak/aut-v2.png"
+    },
+    {
+      "id": "CAZ",
+      "name": "California Zephyr",
+      "keywords": [
+        "California Zephyr",
+        "CAZ",
+        "CAZ Line"
+      ],
+      "order": 30,
+      "icon": "north-america/usa/amtrak/caz-v2.png"
+    },
+    {
+      "id": "CRD",
+      "name": "Cardinal",
+      "keywords": [
+        "Cardinal",
+        "Cardinal Line",
+        "CRD",
+        "CRD Line"
+      ],
+      "order": 31,
+      "icon": "north-america/usa/amtrak/crd-v2.png"
+    },
+    {
+      "id": "CNO",
+      "name": "City of New Orleans",
+      "keywords": [
+        "City of New Orleans",
+        "CNO",
+        "CNO Line"
+      ],
+      "order": 32,
+      "icon": "north-america/usa/amtrak/cno-v2.png"
+    },
+    {
+      "id": "CRS",
+      "name": "Crescent",
+      "keywords": [
+        "Crescent",
+        "Crescent Line",
+        "CRS",
+        "CRS Line"
+      ],
+      "order": 33,
+      "icon": "north-america/usa/amtrak/crs-v2.png"
+    },
+    {
+      "id": "EMB",
+      "name": "Empire Builder",
+      "keywords": [
+        "Empire Builder",
+        "EMB",
+        "EMB Line"
+      ],
+      "order": 34,
+      "icon": "north-america/usa/amtrak/emb-v2.png"
+    },
+    {
+      "id": "FLN",
+      "name": "Floridian",
+      "keywords": [
+        "Floridian",
+        "Floridian Line",
+        "FLN",
+        "FLN Line"
+      ],
+      "order": 35,
+      "icon": "north-america/usa/amtrak/fln-v2.png"
+    },
+    {
+      "id": "LSL",
+      "name": "Lake Shore Limited",
+      "keywords": [
+        "Lake Shore Limited",
+        "LSL",
+        "LSL Line"
+      ],
+      "order": 36,
+      "icon": "north-america/usa/amtrak/lsl-v2.png"
+    },
+    {
+      "id": "PMT",
+      "name": "Palmetto",
+      "keywords": [
+        "Palmetto",
+        "Palmetto Line",
+        "PMT",
+        "PMT Line"
+      ],
+      "order": 37,
+      "icon": "north-america/usa/amtrak/pmt-v2.png"
+    },
+    {
+      "id": "SLM",
+      "name": "Silver Meteor",
+      "keywords": [
+        "Silver Meteor",
+        "SLM",
+        "SLM Line"
+      ],
+      "order": 38,
+      "icon": "north-america/usa/amtrak/slm-v2.png"
+    },
+    {
+      "id": "SWC",
+      "name": "Southwest Chief",
+      "keywords": [
+        "Southwest Chief",
+        "SWC",
+        "SWC Line"
+      ],
+      "order": 39,
+      "icon": "north-america/usa/amtrak/swc-v2.png"
+    },
+    {
+      "id": "SSL",
+      "name": "Sunset Limited",
+      "keywords": [
+        "Sunset Limited",
+        "SSL",
+        "SSL Line"
+      ],
+      "order": 40,
+      "icon": "north-america/usa/amtrak/ssl-v2.png"
+    },
+    {
+      "id": "TXE",
+      "name": "Texas Eagle",
+      "keywords": [
+        "Texas Eagle",
+        "TXE",
+        "TXE Line"
+      ],
+      "order": 41,
+      "icon": "north-america/usa/amtrak/txe-v2.png"
+    },
+    {
+      "id": "CPL",
+      "name": "Capitol Limited",
+      "keywords": [
+        "Capitol Limited",
+        "CPL",
+        "CPL Line"
+      ],
+      "order": 42,
+      "icon": "north-america/usa/amtrak/cpl.png"
+    },
+    {
+      "id": "CST",
+      "name": "Coast Starlight",
+      "keywords": [
+        "Coast Starlight",
+        "CST",
+        "CST Line"
+      ],
+      "order": 43,
+      "icon": "north-america/usa/amtrak/csl-v2.png"
+    },
+    {
+      "id": "EAX",
+      "name": "Ethan Allen Express",
+      "keywords": [
+        "Ethan Allen Express",
+        "EAX",
+        "EAX Line"
+      ],
+      "order": 44,
+      "icon": "north-america/usa/amtrak/eax-v2.png"
+    },
+    {
+      "id": "HOS",
+      "name": "Hoosier State",
+      "keywords": [
+        "Hoosier State",
+        "HOS",
+        "HOS Line"
+      ],
+      "order": 45,
+      "icon": "north-america/usa/amtrak/hos.png"
+    },
+    {
+      "id": "PSL",
+      "name": "Pacific Surfliner",
+      "keywords": [
+        "Pacific Surfliner",
+        "PSL",
+        "PSL Line"
+      ],
+      "order": 46,
+      "icon": "north-america/usa/amtrak/psl-v2.png"
+    },
+    {
+      "id": "SLS",
+      "name": "Silver Star",
+      "keywords": [
+        "Silver Star",
+        "SLS",
+        "SLS Line"
+      ],
+      "order": 47,
+      "icon": "north-america/usa/amtrak/sls.png"
+    }
+  ],
+  "stationAliases": {},
+  "stationLocalNames": {},
+  "manualCoords": {}
+}

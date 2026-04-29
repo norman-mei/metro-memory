@@ -1,0 +1,49 @@
+{
+  "city": "glasgow",
+  "continent": "europe",
+  "bbox": [
+    55.8496557,
+    -4.3123302,
+    55.8758916,
+    -4.2529241
+  ],
+  "localLanguages": [
+    "en"
+  ],
+  "modes": [
+    "subway",
+    "light_rail",
+    "tram",
+    "rail",
+    "funicular",
+    "monorail",
+    "cable_car",
+    "gondola",
+    "chair_lift"
+  ],
+  "lines": [
+    {
+      "id": "glasgowIC",
+      "name": "Inner Circle",
+      "keywords": [
+        "Inner Circle",
+        "glasgow IC"
+      ],
+      "order": 0,
+      "icon": "europe/uk/glasgow/glasgowIC.png"
+    },
+    {
+      "id": "glasgowOC",
+      "name": "Outer Circle",
+      "keywords": [
+        "Outer Circle",
+        "glasgow OC"
+      ],
+      "order": 1,
+      "icon": "europe/uk/glasgow/glasgowOC.png"
+    }
+  ],
+  "stationAliases": {},
+  "stationLocalNames": {},
+  "manualCoords": {}
+}

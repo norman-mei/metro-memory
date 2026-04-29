@@ -1,0 +1,1224 @@
+generator client {
+  provider = "prisma-client-js"
+  binaryTargets = ["native", "windows", "rhel-openssl-3.0.x"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+enum VerificationType {
+  EMAIL
+}
+
+enum RankedRuleset {
+  CLASSIC
+  NO_LINE_COLORS
+  STRICT_SPELLING
+  ONE_LIFE
+}
+
+enum RankedRunSource {
+  FREE_PLAY
+  DAILY
+  CHALLENGE
+  BATTLE
+}
+
+enum RankedRunStatus {
+  ACTIVE
+  COMPLETED
+  ABANDONED
+}
+
+enum BattleStatus {
+  OPEN
+  READY
+  ACTIVE
+  COMPLETED
+  EXPIRED
+  CANCELED
+}
+
+enum PlaylistLaunchMode {
+  CASUAL
+  RANKED_CLASSIC
+  RANKED_RULESET
+}
+
+enum PlaylistRunStatus {
+  ACTIVE
+  COMPLETED
+  ABANDONED
+}
+
+enum AutomationRunStatus {
+  PENDING_REVIEW
+  PARTIALLY_REVIEWED
+  REVIEWED
+  PARTIALLY_APPLIED
+  APPLIED
+  FAILED
+}
+
+enum AutomationCandidateType {
+  NEW_STATION
+  REMOVED_STATION
+  UPDATED_STATION
+  NEW_LINE
+  LINE_RENAME_CANDIDATE
+  LINE_COLOR_CANDIDATE
+  OPERATOR_SUGGESTION
+  HEADER_SUGGESTION
+  IMAGE_CANDIDATE
+  METADATA_CANDIDATE
+  OPERATOR_METADATA_CANDIDATE
+}
+
+enum AutomationDecisionStatus {
+  PENDING
+  APPROVED
+  REJECTED
+}
+
+enum AutomationLane {
+  GREEN
+  YELLOW
+  RED
+}
+
+enum AutomationClaimStatus {
+  PENDING_REVIEW
+  APPROVED
+  REJECTED
+  APPLIED
+  SKIPPED
+  FAILED
+}
+
+enum AutomationArtifactType {
+  OSM_OVERPASS
+  SEARCH_RESULT
+  IMAGE_PREVIEW
+  REPORT_MARKDOWN
+  GTFS_FEED
+  OFFICIAL_PAGE
+  PRESS_RELEASE
+  MAP_PDF
+}
+
+enum AutomationSourceTier {
+  OFFICIAL
+  ESTABLISHED
+  COMMUNITY
+  UNKNOWN
+  BLOCKED
+}
+
+enum AutomationMetricScope {
+  DOMAIN
+  CITY
+  CLAIM_TYPE
+}
+
+enum AutomationResearchRunStatus {
+  PENDING
+  RUNNING
+  COMPLETED
+  FAILED
+  BLOCKED
+  EXHAUSTED
+}
+
+enum AutomationResearchTaskStatus {
+  PENDING
+  RUNNING
+  SATISFIED
+  BLOCKED
+  FAILED
+  EXHAUSTED
+}
+
+enum AutomationResearchTaskType {
+  FIND_OFFICIAL_OPERATOR_PAGE
+  FIND_MAP_PDF
+  FIND_GTFS_FEED
+  FIND_PRESS_PAGE
+  VERIFY_STATION_RENAME
+  VERIFY_LINE_RENAME
+  VERIFY_LINE_COLOR
+  VERIFY_OPERATOR
+  VERIFY_METADATA
+}
+
+enum AutomationEvidenceNodeType {
+  CLAIM
+  ARTIFACT
+  FACT
+  TASK
+}
+
+enum AutomationEvidenceEdgeType {
+  SUPPORTS
+  CONTRADICTS
+  DERIVES
+  REQUESTED_BY
+  SATISFIES
+  SUPERSEDES
+}
+
+enum AutomationAgentSessionType {
+  CHAT
+  TARGETED_RUN
+  MANUAL_UPDATE
+}
+
+enum AutomationAgentMessageRole {
+  USER
+  ASSISTANT
+  SYSTEM
+  TOOL
+}
+
+enum AutomationAgentMessageStatus {
+  PENDING
+  STREAMING
+  COMPLETED
+  FAILED
+  CANCELED
+}
+
+enum AutomationAgentOutcomeType {
+  EXPLAIN_ACTION
+  DIRECT_ACTION
+  BRANCH_PROMPT_USEFUL
+  RUN_REQUEST_USEFUL
+  FOLLOW_UP_IMPROVEMENT
+  PLANNER_DEFAULT
+}
+
+enum AutomationAgentActionStatus {
+  PENDING_APPROVAL
+  APPROVED
+  REJECTED
+  EXECUTED
+  CANCELED
+}
+
+enum AutomationAgentActionSafety {
+  SAFE
+  CONFIRMATION_REQUIRED
+  ADMIN_RATIONALE_REQUIRED
+}
+
+enum AutomationAgentEventType {
+  MESSAGE_STREAMED
+  RUN_REQUEST_QUEUED
+  RESEARCH_STARTED
+  CLAIM_IMPROVED
+  DOMAIN_BLOCKED
+  DIRECT_ACTION_REQUESTED
+  DIRECT_ACTION_APPROVED
+  DIRECT_ACTION_REJECTED
+  DIRECT_ACTION_EXECUTED
+  REPLAY_EVAL_RECORDED
+}
+
+enum AutomationRunRequestMode {
+  SCHEDULED
+  TARGETED_RESEARCH
+  MANUAL_UPDATE
+  FOLLOW_UP
+  EXPLAIN
+}
+
+enum AutomationRunRequestStatus {
+  DRAFT
+  QUEUED
+  RUNNING
+  COMPLETED
+  FAILED
+  CANCELED
+}
+
+enum AutomationApplyPolicy {
+  REVIEW_ONLY
+  AUTO_APPLY_GREEN_ONLY
+}
+
+enum AutomationResearchMemoryKind {
+  CITY_ALIAS
+  OPERATOR_SOURCE
+  DOMAIN_RECIPE
+  HISTORICAL_FACT
+}
+
+enum AutomationCitationLocatorType {
+  TEXT
+  HTML_SELECTOR
+  PDF_PAGE
+  OCR_TEXT
+}
+
+model User {
+  id                String                 @id @default(cuid())
+  email             String                 @unique
+  displayName       String?
+  pendingEmail      String?
+  passwordHash      String
+  emailVerifiedAt   DateTime?
+  adFree            Boolean                @default(false)
+  createdAt         DateTime               @default(now())
+  updatedAt         DateTime               @updatedAt
+  uiPreferences     Json?
+  progress          Progress[]
+  runSessions       RunSession[]
+  challengesCreated ChallengeDefinition[]  @relation("ChallengeCreator")
+  battlesCreated    Battle[]               @relation("BattleCreator")
+  battlesInvited    Battle[]               @relation("BattleOpponent")
+  careerState       PlayerCareerState?
+  streakState       PlayerStreakState?
+  xpLedgerEntries   XpLedgerEntry[]
+  licenses          PlayerLicense[]
+  badges            PlayerBadge[]
+  campaignProgress  CampaignProgress[]
+  seasonProgress    SeasonProgress[]
+  playlists         Playlist[]
+  playlistRuns      PlaylistRun[]
+  sessions          Session[]
+  verification      VerificationToken[]
+  passwordResets    PasswordResetToken[]
+}
+
+model Session {
+  id        String   @id @default(cuid())
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId    String
+  tokenHash String   @unique
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+}
+
+model VerificationToken {
+  id        String            @id @default(cuid())
+  tokenHash String            @unique
+  type      VerificationType  @default(EMAIL)
+  user      User              @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId    String
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+}
+
+model PasswordResetToken {
+  id        String   @id @default(cuid())
+  tokenHash String   @unique
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId    String
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+}
+
+model CaptchaChallenge {
+  id         String   @id
+  answerHash String
+  expiresAt  DateTime
+  createdAt  DateTime @default(now())
+}
+
+model Progress {
+  id              String   @id @default(cuid())
+  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId          String
+  citySlug        String
+  foundIds        Json
+  foundTimestamps Json?
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  @@unique([userId, citySlug])
+}
+
+model MissedGuessInput {
+  id              String   @id @default(cuid())
+  citySlug        String
+  rawInput        String
+  normalizedInput String
+  suggestions     Json     @default("[]")
+  createdAt       DateTime @default(now())
+
+  @@index([citySlug, createdAt])
+  @@index([citySlug, normalizedInput])
+}
+
+model DailyChallenge {
+  id          String        @id @default(cuid())
+  dateKey     String        @unique
+  citySlug    String
+  cityPath    String
+  ruleset     RankedRuleset @default(CLASSIC)
+  seed        String
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+  runSessions RunSession[]
+}
+
+model ChallengeDefinition {
+  id          String        @id @default(cuid())
+  slug        String        @unique
+  title       String
+  description String?
+  citySlug    String
+  cityPath    String
+  ruleset     RankedRuleset @default(CLASSIC)
+  seed        String
+  active      Boolean       @default(true)
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+  creator     User?         @relation("ChallengeCreator", fields: [creatorId], references: [id], onDelete: SetNull)
+  creatorId   String?
+  battles     Battle[]
+  runSessions RunSession[]
+
+  @@index([citySlug, active])
+  @@index([createdAt])
+}
+
+model Battle {
+  id            String               @id @default(cuid())
+  slug          String               @unique
+  inviteToken   String               @unique
+  challenge     ChallengeDefinition? @relation(fields: [challengeId], references: [id], onDelete: SetNull)
+  challengeId   String?
+  citySlug      String
+  cityPath      String
+  ruleset       RankedRuleset        @default(CLASSIC)
+  seed          String
+  status        BattleStatus         @default(OPEN)
+  createdAt     DateTime             @default(now())
+  updatedAt     DateTime             @updatedAt
+  joinedAt      DateTime?
+  expiresAt     DateTime?
+  completedAt   DateTime?
+  creator       User                 @relation("BattleCreator", fields: [creatorId], references: [id], onDelete: Cascade)
+  creatorId     String
+  opponent      User?                @relation("BattleOpponent", fields: [opponentId], references: [id], onDelete: SetNull)
+  opponentId    String?
+  creatorRunId  String?
+  opponentRunId String?
+  winnerUserId  String?
+  winnerReason  String?
+  runSessions   RunSession[]
+
+  @@index([creatorId, createdAt])
+  @@index([opponentId, createdAt])
+  @@index([status, expiresAt])
+}
+
+model RunSession {
+  id                     String               @id @default(cuid())
+  user                   User                 @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId                 String
+  citySlug               String
+  cityPath               String
+  ruleset                RankedRuleset        @default(CLASSIC)
+  sourceType             RankedRunSource      @default(FREE_PLAY)
+  status                 RankedRunStatus      @default(ACTIVE)
+  seed                   String
+  startedAt              DateTime             @default(now())
+  firstCorrectAt         DateTime?
+  endedAt                DateTime?
+  completionPercent      Float                @default(0)
+  completionMs           Int?
+  first50Ms              Int?
+  correctGuessCount      Int                  @default(0)
+  correctStationCount    Int                  @default(0)
+  wrongGuessCount        Int                  @default(0)
+  repeatedGuessCount     Int                  @default(0)
+  hintCount              Int                  @default(0)
+  revealUsed             Boolean              @default(false)
+  rankedEligible         Boolean              @default(true)
+  disqualificationReason String?
+  xpAwarded              Int                  @default(0)
+  countedForStreak       Boolean              @default(false)
+  metadataJson           Json?
+  createdAt              DateTime             @default(now())
+  updatedAt              DateTime             @updatedAt
+  dailyChallenge         DailyChallenge?      @relation(fields: [dailyChallengeId], references: [id], onDelete: SetNull)
+  dailyChallengeId       String?
+  challenge              ChallengeDefinition? @relation(fields: [challengeId], references: [id], onDelete: SetNull)
+  challengeId            String?
+  battle                 Battle?              @relation(fields: [battleId], references: [id], onDelete: SetNull)
+  battleId               String?
+  playlistRun            PlaylistRun?         @relation(fields: [playlistRunId], references: [id], onDelete: SetNull)
+  playlistRunId          String?
+  season                 Season?              @relation(fields: [seasonId], references: [id], onDelete: SetNull)
+  seasonId               String?
+  xpLedgerEntries        XpLedgerEntry[]
+
+  @@index([userId, createdAt])
+  @@index([citySlug, ruleset, completionMs])
+  @@index([sourceType, createdAt])
+  @@index([dailyChallengeId, rankedEligible, completionMs])
+  @@index([challengeId, rankedEligible, completionMs])
+  @@index([battleId, rankedEligible, completionMs])
+  @@index([playlistRunId, createdAt])
+  @@index([seasonId, createdAt])
+}
+
+model PlayerCareerState {
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId    String   @id
+  lifetimeXp Int     @default(0)
+  level     Int      @default(1)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model PlayerStreakState {
+  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId          String   @id
+  currentStreak   Int      @default(0)
+  bestStreak      Int      @default(0)
+  lastCountedDate String?
+  freezeTokens    Int      @default(0)
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+}
+
+model XpLedgerEntry {
+  id          String      @id @default(cuid())
+  user        User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId      String
+  runSession  RunSession? @relation(fields: [runSessionId], references: [id], onDelete: SetNull)
+  runSessionId String?
+  season      Season?     @relation(fields: [seasonId], references: [id], onDelete: SetNull)
+  seasonId    String?
+  sourceKey   String
+  amount      Int
+  summary     String
+  metadataJson Json?
+  createdAt   DateTime    @default(now())
+
+  @@index([userId, createdAt])
+  @@index([runSessionId])
+  @@index([seasonId, createdAt])
+}
+
+model PlayerLicense {
+  id          String   @id @default(cuid())
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId      String
+  key         String
+  title       String
+  description String?
+  awardedAt   DateTime @default(now())
+
+  @@unique([userId, key])
+}
+
+model PlayerBadge {
+  id          String   @id @default(cuid())
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId      String
+  season      Season?  @relation(fields: [seasonId], references: [id], onDelete: SetNull)
+  seasonId    String?
+  key         String
+  title       String
+  description String?
+  awardedAt   DateTime @default(now())
+
+  @@unique([userId, key])
+  @@index([seasonId, awardedAt])
+}
+
+model Campaign {
+  id          String             @id @default(cuid())
+  slug        String             @unique
+  title       String
+  description String?
+  themeColor  String?
+  active      Boolean            @default(true)
+  createdAt   DateTime           @default(now())
+  updatedAt   DateTime           @updatedAt
+  cities      CampaignCity[]
+  progress    CampaignProgress[]
+}
+
+model CampaignCity {
+  id         String   @id @default(cuid())
+  campaign   Campaign @relation(fields: [campaignId], references: [id], onDelete: Cascade)
+  campaignId String
+  citySlug   String
+  cityPath   String
+  orderIndex Int      @default(0)
+
+  @@unique([campaignId, citySlug])
+  @@index([citySlug])
+}
+
+model CampaignProgress {
+  id                 String   @id @default(cuid())
+  user               User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId             String
+  campaign           Campaign @relation(fields: [campaignId], references: [id], onDelete: Cascade)
+  campaignId         String
+  completedCitySlugs Json
+  progressCount      Int      @default(0)
+  completedAt        DateTime?
+  createdAt          DateTime @default(now())
+  updatedAt          DateTime @updatedAt
+
+  @@unique([userId, campaignId])
+}
+
+model Season {
+  id          String         @id @default(cuid())
+  slug        String         @unique
+  title       String
+  description String?
+  themeColor  String?
+  startDate   DateTime
+  endDate     DateTime
+  active      Boolean        @default(true)
+  createdAt   DateTime       @default(now())
+  updatedAt   DateTime       @updatedAt
+  events      SeasonEvent[]
+  progress    SeasonProgress[]
+  runSessions RunSession[]
+  xpLedgerEntries XpLedgerEntry[]
+  badges      PlayerBadge[]
+}
+
+model SeasonEvent {
+  id          String        @id @default(cuid())
+  season      Season        @relation(fields: [seasonId], references: [id], onDelete: Cascade)
+  seasonId    String
+  slug        String
+  title       String
+  description String?
+  eventType   String
+  citySlug    String?
+  cityPath    String?
+  ruleset     RankedRuleset?
+  targetCount Int           @default(1)
+  rewardXp    Int           @default(0)
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+
+  @@unique([seasonId, slug])
+}
+
+model SeasonProgress {
+  id                  String   @id @default(cuid())
+  user                User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId              String
+  season              Season   @relation(fields: [seasonId], references: [id], onDelete: Cascade)
+  seasonId            String
+  seasonXp            Int      @default(0)
+  dailyParticipationCount Int  @default(0)
+  battleWinCount      Int      @default(0)
+  completedEventSlugs Json
+  completedEventCount Int      @default(0)
+  createdAt           DateTime @default(now())
+  updatedAt           DateTime @updatedAt
+
+  @@unique([userId, seasonId])
+}
+
+model Playlist {
+  id          String        @id @default(cuid())
+  user        User          @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId      String
+  name        String
+  description String?
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+  items       PlaylistItem[]
+  runs        PlaylistRun[]
+
+  @@index([userId, updatedAt])
+}
+
+model PlaylistItem {
+  id         String   @id @default(cuid())
+  playlist   Playlist @relation(fields: [playlistId], references: [id], onDelete: Cascade)
+  playlistId String
+  citySlug   String
+  cityPath   String
+  orderIndex Int
+
+  @@unique([playlistId, orderIndex])
+}
+
+model PlaylistRun {
+  id                  String             @id @default(cuid())
+  playlist            Playlist           @relation(fields: [playlistId], references: [id], onDelete: Cascade)
+  playlistId          String
+  user                User               @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId              String
+  mode                PlaylistLaunchMode
+  ruleset             RankedRuleset?
+  status              PlaylistRunStatus  @default(ACTIVE)
+  currentIndex        Int                @default(0)
+  completedLegs       Int                @default(0)
+  totalLegs           Int                @default(0)
+  aggregateCompletionMs Int             @default(0)
+  aggregateAccuracy   Float              @default(0)
+  lastCompletedCitySlug String?
+  startedAt           DateTime           @default(now())
+  completedAt         DateTime?
+  createdAt           DateTime           @default(now())
+  updatedAt           DateTime           @updatedAt
+  runSessions         RunSession[]
+
+  @@index([playlistId, createdAt])
+  @@index([userId, updatedAt])
+}
+
+model AutomationRun {
+  id             String                @id @default(cuid())
+  source         String                @default("metro-sync")
+  scope          String?
+  status         AutomationRunStatus   @default(PENDING_REVIEW)
+  startedAt      DateTime
+  finishedAt     DateTime?
+  appliedAt      DateTime?
+  appliedBy      String?
+  appliedRef     String?
+  branchName     String?
+  commitSha      String?
+  pullRequestUrl String?
+  pullRequestNumber Int?
+  revertedAt     DateTime?
+  revertedBy     String?
+  revertRef      String?
+  revertBranchName String?
+  revertCommitSha String?
+  revertPullRequestUrl String?
+  revertPullRequestNumber Int?
+  reportMarkdown String?
+  summary        Json?
+  errorLog       Json?
+  createdAt      DateTime              @default(now())
+  updatedAt      DateTime              @updatedAt
+  candidates     AutomationCandidate[]
+  artifacts      AutomationArtifact[]
+  claims         AutomationClaim[]
+  researchRuns   AutomationResearchRun[]
+}
+
+model AutomationCandidate {
+  id             String                   @id @default(cuid())
+  run            AutomationRun            @relation(fields: [runId], references: [id], onDelete: Cascade)
+  runId          String
+  citySlug       String
+  type           AutomationCandidateType
+  status         AutomationDecisionStatus @default(PENDING)
+  entityKey      String?
+  title          String
+  summary        String?
+  confidence     Float?
+  beforeValue    Json?
+  afterValue     Json?
+  diff           Json?
+  metadata       Json?
+  reviewedAt     DateTime?
+  reviewedBy     String?
+  reviewNote     String?
+  appliedAt      DateTime?
+  appliedBy      String?
+  appliedRef     String?
+  applyNote      String?
+  createdAt      DateTime                 @default(now())
+  updatedAt      DateTime                 @updatedAt
+  sources        AutomationSource[]
+  decisions      AutomationDecision[]
+  claim          AutomationClaim?
+
+  @@index([runId, citySlug])
+  @@index([status, citySlug])
+  @@index([type, citySlug])
+}
+
+model AutomationSource {
+  id          String              @id @default(cuid())
+  candidate   AutomationCandidate @relation(fields: [candidateId], references: [id], onDelete: Cascade)
+  candidateId String
+  sourceType  String
+  label       String?
+  url         String?
+  snippet     String?
+  metadata    Json?
+  createdAt   DateTime            @default(now())
+
+  @@index([candidateId])
+}
+
+model AutomationDecision {
+  id          String                   @id @default(cuid())
+  candidate   AutomationCandidate      @relation(fields: [candidateId], references: [id], onDelete: Cascade)
+  candidateId String
+  status      AutomationDecisionStatus
+  note        String?
+  reviewer    String?
+  createdAt   DateTime                 @default(now())
+
+  @@index([candidateId, createdAt])
+}
+
+model AutomationArtifact {
+  id           String                 @id @default(cuid())
+  run          AutomationRun          @relation(fields: [runId], references: [id], onDelete: Cascade)
+  runId        String
+  citySlug     String?
+  artifactType AutomationArtifactType
+  sourceUrl    String?
+  sourceDomain String?
+  mimeType     String?
+  localPath    String?
+  contentHash  String?
+  fetchedAt    DateTime?
+  metadataJson Json?
+  createdAt    DateTime               @default(now())
+  claimLinks   AutomationClaimArtifact[]
+  researchTaskLinks AutomationResearchTaskArtifact[]
+  citations    AutomationArtifactCitation[]
+
+  @@index([runId, citySlug])
+  @@index([artifactType, citySlug])
+}
+
+model AutomationClaim {
+  id               String                     @id @default(cuid())
+  run              AutomationRun              @relation(fields: [runId], references: [id], onDelete: Cascade)
+  runId            String
+  candidate        AutomationCandidate?       @relation(fields: [candidateId], references: [id], onDelete: SetNull)
+  candidateId      String?                    @unique
+  citySlug         String
+  claimType        String
+  title            String
+  summary          String?
+  beforeValueJson  Json?
+  afterValueJson   Json?
+  reason           String?
+  confidence       Float?
+  lane             AutomationLane
+  status           AutomationClaimStatus      @default(PENDING_REVIEW)
+  autoApplyEligible Boolean                   @default(false)
+  verificationNotes Json?
+  metadataJson     Json?
+  createdAt        DateTime                   @default(now())
+  updatedAt        DateTime                   @updatedAt
+  artifactLinks    AutomationClaimArtifact[]
+  verifications    AutomationVerification[]
+  policyDecisions  AutomationPolicyDecision[]
+  researchRuns     AutomationResearchRun[]
+  researchTasks    AutomationResearchTask[]
+  evidenceNodes    AutomationEvidenceNode[]
+  evidenceEdges    AutomationEvidenceEdge[]
+  citations        AutomationArtifactCitation[]
+  outcomes         AutomationAgentOutcome[]
+  actionRequests   AutomationAgentActionRequest[]
+  events           AutomationAgentEvent[]
+
+  @@index([runId, citySlug])
+  @@index([lane, citySlug])
+}
+
+model AutomationClaimArtifact {
+  id         String             @id @default(cuid())
+  claim      AutomationClaim    @relation(fields: [claimId], references: [id], onDelete: Cascade)
+  claimId    String
+  artifact   AutomationArtifact @relation(fields: [artifactId], references: [id], onDelete: Cascade)
+  artifactId String
+
+  @@unique([claimId, artifactId])
+  @@index([artifactId])
+}
+
+model AutomationVerification {
+  id                String          @id @default(cuid())
+  claim             AutomationClaim @relation(fields: [claimId], references: [id], onDelete: Cascade)
+  claimId           String
+  sourceTierScore   Float?
+  evidenceCount     Int             @default(0)
+  recencyScore      Float?
+  consistencyScore  Float?
+  contradictionFlag Boolean         @default(false)
+  verifierVersion   String?
+  verificationJson  Json?
+  createdAt         DateTime        @default(now())
+
+  @@index([claimId, createdAt])
+}
+
+model AutomationPolicyDecision {
+  id               String          @id @default(cuid())
+  claim            AutomationClaim @relation(fields: [claimId], references: [id], onDelete: Cascade)
+  claimId          String
+  lane             AutomationLane
+  decisionReason   String
+  autoApplyAllowed Boolean         @default(false)
+  policyVersion    String
+  createdAt        DateTime        @default(now())
+
+  @@index([claimId, createdAt])
+}
+
+model AutomationResearchRun {
+  id            String                      @id @default(cuid())
+  parentRun     AutomationRun               @relation(fields: [parentRunId], references: [id], onDelete: Cascade)
+  parentRunId   String
+  claim         AutomationClaim?            @relation(fields: [claimId], references: [id], onDelete: Cascade)
+  claimId       String?
+  citySlug      String
+  status        AutomationResearchRunStatus @default(PENDING)
+  attemptNumber Int                         @default(1)
+  triggerReason String
+  summary       Json?
+  errorLog      Json?
+  nextAttemptAt DateTime?
+  startedAt     DateTime?
+  finishedAt    DateTime?
+  createdAt     DateTime                    @default(now())
+  updatedAt     DateTime                    @updatedAt
+  tasks         AutomationResearchTask[]
+
+  @@index([parentRunId, citySlug])
+  @@index([claimId, createdAt])
+}
+
+model AutomationResearchTask {
+  id             String                       @id @default(cuid())
+  researchRun    AutomationResearchRun        @relation(fields: [researchRunId], references: [id], onDelete: Cascade)
+  researchRunId  String
+  claim          AutomationClaim?             @relation(fields: [claimId], references: [id], onDelete: Cascade)
+  claimId        String?
+  citySlug       String
+  taskType       AutomationResearchTaskType
+  status         AutomationResearchTaskStatus @default(PENDING)
+  priority       Int                          @default(0)
+  retryCount     Int                          @default(0)
+  satisfied      Boolean                      @default(false)
+  goalJson       Json?
+  resultJson     Json?
+  blockedReason  String?
+  nextActionHint String?
+  nextAttemptAt  DateTime?
+  lastAttemptAt  DateTime?
+  lastError      String?
+  createdAt      DateTime                     @default(now())
+  updatedAt      DateTime                     @updatedAt
+  artifactLinks  AutomationResearchTaskArtifact[]
+  evidenceNodes  AutomationEvidenceNode[]     @relation("ResearchTaskEvidenceNode")
+  citations      AutomationArtifactCitation[]
+
+  @@index([researchRunId, status])
+  @@index([claimId, status])
+}
+
+model AutomationResearchTaskArtifact {
+  id             String                 @id @default(cuid())
+  researchTask    AutomationResearchTask @relation(fields: [researchTaskId], references: [id], onDelete: Cascade)
+  researchTaskId  String
+  artifact        AutomationArtifact     @relation(fields: [artifactId], references: [id], onDelete: Cascade)
+  artifactId      String
+
+  @@unique([researchTaskId, artifactId])
+  @@index([artifactId])
+}
+
+model AutomationEvidenceNode {
+  id            String                     @id @default(cuid())
+  claim         AutomationClaim            @relation(fields: [claimId], references: [id], onDelete: Cascade)
+  claimId       String
+  researchTask  AutomationResearchTask?    @relation("ResearchTaskEvidenceNode", fields: [researchTaskId], references: [id], onDelete: SetNull)
+  researchTaskId String?
+  nodeType      AutomationEvidenceNodeType
+  referenceKey  String?
+  summaryJson   Json?
+  createdAt     DateTime                   @default(now())
+  outgoingEdges AutomationEvidenceEdge[]   @relation("EvidenceEdgeFrom")
+  incomingEdges AutomationEvidenceEdge[]   @relation("EvidenceEdgeTo")
+
+  @@index([claimId, nodeType])
+  @@index([researchTaskId])
+}
+
+model AutomationEvidenceEdge {
+  id         String                    @id @default(cuid())
+  claim      AutomationClaim           @relation(fields: [claimId], references: [id], onDelete: Cascade)
+  claimId    String
+  fromNode   AutomationEvidenceNode    @relation("EvidenceEdgeFrom", fields: [fromNodeId], references: [id], onDelete: Cascade)
+  fromNodeId String
+  toNode     AutomationEvidenceNode    @relation("EvidenceEdgeTo", fields: [toNodeId], references: [id], onDelete: Cascade)
+  toNodeId   String
+  edgeType   AutomationEvidenceEdgeType
+  weight     Float?
+  notesJson  Json?
+  createdAt  DateTime                  @default(now())
+
+  @@index([claimId, edgeType])
+  @@index([fromNodeId])
+  @@index([toNodeId])
+}
+
+model AutomationSourceDomain {
+  id         String               @id @default(cuid())
+  domain     String               @unique
+  tier       AutomationSourceTier @default(UNKNOWN)
+  trustScore Float?
+  autoTrustScore Float?
+  blocked    Boolean              @default(false)
+  autoBlocked Boolean             @default(false)
+  manualBlocked Boolean?
+  manualTrustScore Float?
+  notes      String?
+  overrideReason String?
+  lastSeenAt DateTime?
+  createdAt  DateTime             @default(now())
+  updatedAt  DateTime             @updatedAt
+}
+
+model AutomationPolicyMetric {
+  id            String                @id @default(cuid())
+  scope         AutomationMetricScope
+  key           String
+  reviewedCount Int                   @default(0)
+  approvedCount Int                   @default(0)
+  rejectedCount Int                   @default(0)
+  appliedCount  Int                   @default(0)
+  revertedCount Int                   @default(0)
+  approvalRate  Float?
+  rejectionRate Float?
+  revertRate    Float?
+  trustScore    Float?
+  autoTrustScore Float?
+  manualTrustScore Float?
+  forcedLane    AutomationLane?
+  notes         String?
+  overrideReason String?
+  createdAt     DateTime              @default(now())
+  updatedAt     DateTime              @updatedAt
+
+  @@unique([scope, key])
+  @@index([scope, trustScore])
+}
+
+model AutomationAgentSession {
+  id            String                     @id @default(cuid())
+  sessionType   AutomationAgentSessionType @default(CHAT)
+  status        String                     @default("ACTIVE")
+  title         String?
+  summary       String?
+  createdBy     String?
+  contextJson   Json?
+  createdAt     DateTime                   @default(now())
+  updatedAt     DateTime                   @updatedAt
+  messages      AutomationAgentMessage[]
+  runRequests   AutomationRunRequest[]
+  outcomes      AutomationAgentOutcome[]
+  actionRequests AutomationAgentActionRequest[]
+  events        AutomationAgentEvent[]
+
+  @@index([createdAt])
+}
+
+model AutomationAgentMessage {
+  id                  String                       @id @default(cuid())
+  session             AutomationAgentSession       @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+  sessionId           String
+  role                AutomationAgentMessageRole
+  status              AutomationAgentMessageStatus @default(COMPLETED)
+  content             String
+  branchId            String?
+  branchRootMessageId String?
+  parentMessageId     String?
+  revisionOfMessageId String?
+  metadataJson        Json?
+  structuredJson      Json?
+  citationsJson       Json?
+  createdAt           DateTime                     @default(now())
+  updatedAt           DateTime                     @updatedAt
+  parentMessage       AutomationAgentMessage?      @relation("AutomationAgentMessageParent", fields: [parentMessageId], references: [id], onDelete: SetNull)
+  childMessages       AutomationAgentMessage[]     @relation("AutomationAgentMessageParent")
+  revisionOfMessage   AutomationAgentMessage?      @relation("AutomationAgentMessageRevision", fields: [revisionOfMessageId], references: [id], onDelete: SetNull)
+  revisedMessages     AutomationAgentMessage[]     @relation("AutomationAgentMessageRevision")
+  runRequests         AutomationRunRequest[]
+  outcomes            AutomationAgentOutcome[]
+  actionRequests      AutomationAgentActionRequest[]
+  events              AutomationAgentEvent[]
+
+  @@index([sessionId, createdAt])
+  @@index([sessionId, branchId, createdAt])
+  @@index([parentMessageId])
+  @@index([revisionOfMessageId])
+}
+
+model AutomationRunRequest {
+  id            String                     @id @default(cuid())
+  session       AutomationAgentSession?    @relation(fields: [sessionId], references: [id], onDelete: SetNull)
+  sessionId     String?
+  message       AutomationAgentMessage?    @relation(fields: [messageId], references: [id], onDelete: SetNull)
+  messageId     String?
+  branchId      String?
+  requestedBy   String?
+  mode          AutomationRunRequestMode
+  scope         String?
+  citySlugsJson Json?
+  claimTypesJson Json?
+  applyPolicy   AutomationApplyPolicy      @default(REVIEW_ONLY)
+  status        AutomationRunRequestStatus @default(DRAFT)
+  prompt        String?
+  contextJson   Json?
+  createdRunId  String?
+  errorMessage  String?
+  startedAt     DateTime?
+  finishedAt    DateTime?
+  createdAt     DateTime                   @default(now())
+  updatedAt     DateTime                   @updatedAt
+  outcomes      AutomationAgentOutcome[]
+  actionRequests AutomationAgentActionRequest[]
+  events        AutomationAgentEvent[]
+
+  @@index([status, createdAt])
+  @@index([mode, createdAt])
+  @@index([messageId])
+  @@index([branchId, createdAt])
+}
+
+model AutomationAgentOutcome {
+  id           String                    @id @default(cuid())
+  session      AutomationAgentSession?   @relation(fields: [sessionId], references: [id], onDelete: SetNull)
+  sessionId    String?
+  message      AutomationAgentMessage?   @relation(fields: [messageId], references: [id], onDelete: SetNull)
+  messageId    String?
+  runRequest   AutomationRunRequest?     @relation(fields: [runRequestId], references: [id], onDelete: SetNull)
+  runRequestId String?
+  claim        AutomationClaim?          @relation(fields: [claimId], references: [id], onDelete: SetNull)
+  claimId      String?
+  outcomeType  AutomationAgentOutcomeType
+  branchId     String?
+  summaryJson  Json?
+  createdAt    DateTime                  @default(now())
+
+  @@index([sessionId, createdAt])
+  @@index([messageId, createdAt])
+  @@index([runRequestId, createdAt])
+  @@index([claimId, createdAt])
+  @@index([outcomeType, createdAt])
+}
+
+model AutomationAgentActionRequest {
+  id           String                      @id @default(cuid())
+  session      AutomationAgentSession?     @relation(fields: [sessionId], references: [id], onDelete: SetNull)
+  sessionId    String?
+  message      AutomationAgentMessage?     @relation(fields: [messageId], references: [id], onDelete: SetNull)
+  messageId    String?
+  runRequest   AutomationRunRequest?       @relation(fields: [runRequestId], references: [id], onDelete: SetNull)
+  runRequestId String?
+  claim        AutomationClaim?            @relation(fields: [claimId], references: [id], onDelete: SetNull)
+  claimId      String?
+  actionType   String
+  safety       AutomationAgentActionSafety
+  status       AutomationAgentActionStatus @default(PENDING_APPROVAL)
+  branchId     String?
+  payloadJson  Json?
+  rationale    String?
+  requestedBy  String?
+  reviewedBy   String?
+  reviewNote   String?
+  reviewedAt   DateTime?
+  executedAt   DateTime?
+  resultJson   Json?
+  createdAt    DateTime                    @default(now())
+  updatedAt    DateTime                    @updatedAt
+
+  @@index([sessionId, createdAt])
+  @@index([messageId, createdAt])
+  @@index([runRequestId, createdAt])
+  @@index([claimId, createdAt])
+  @@index([status, createdAt])
+  @@index([branchId, createdAt])
+}
+
+model AutomationAgentEvent {
+  id           String                   @id @default(cuid())
+  session      AutomationAgentSession?  @relation(fields: [sessionId], references: [id], onDelete: SetNull)
+  sessionId    String?
+  message      AutomationAgentMessage?  @relation(fields: [messageId], references: [id], onDelete: SetNull)
+  messageId    String?
+  runRequest   AutomationRunRequest?    @relation(fields: [runRequestId], references: [id], onDelete: SetNull)
+  runRequestId String?
+  claim        AutomationClaim?         @relation(fields: [claimId], references: [id], onDelete: SetNull)
+  claimId      String?
+  branchId     String?
+  eventType    AutomationAgentEventType
+  createdBy    String?
+  summaryJson  Json?
+  createdAt    DateTime                 @default(now())
+
+  @@index([sessionId, createdAt])
+  @@index([messageId, createdAt])
+  @@index([runRequestId, createdAt])
+  @@index([claimId, createdAt])
+  @@index([eventType, createdAt])
+  @@index([branchId, createdAt])
+}
+
+model AutomationResearchMemory {
+  id          String                       @id @default(cuid())
+  kind        AutomationResearchMemoryKind
+  key         String
+  citySlug    String?
+  operatorKey String?
+  domain      String?
+  valueJson   Json?
+  trustScore  Float?
+  lastSeenAt  DateTime?
+  createdAt   DateTime                     @default(now())
+  updatedAt   DateTime                     @updatedAt
+
+  @@unique([kind, key])
+  @@index([citySlug, kind])
+  @@index([domain, kind])
+}
+
+model AutomationArtifactCitation {
+  id            String                        @id @default(cuid())
+  artifact      AutomationArtifact?           @relation(fields: [artifactId], references: [id], onDelete: Cascade)
+  artifactId    String?
+  claim         AutomationClaim?              @relation(fields: [claimId], references: [id], onDelete: Cascade)
+  claimId       String?
+  researchTask  AutomationResearchTask?       @relation(fields: [researchTaskId], references: [id], onDelete: Cascade)
+  researchTaskId String?
+  sourceUrl     String?
+  locatorType   AutomationCitationLocatorType @default(TEXT)
+  excerpt       String
+  excerptHash   String
+  pageNumber    Int?
+  domSelector   String?
+  startOffset   Int?
+  endOffset     Int?
+  ocrConfidence Float?
+  metadataJson  Json?
+  createdAt     DateTime                      @default(now())
+
+  @@index([artifactId])
+  @@index([claimId])
+  @@index([researchTaskId])
+  @@index([excerptHash])
+}
+
+model AutomationEvalRun {
+  id          String   @id @default(cuid())
+  label       String
+  requestedBy String?
+  inputJson   Json?
+  summaryJson Json?
+  createdAt   DateTime @default(now())
+
+  @@index([createdAt])
+}

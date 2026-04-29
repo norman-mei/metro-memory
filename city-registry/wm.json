@@ -1,0 +1,53 @@
+{
+  "city": "wm",
+  "continent": "europe",
+  "bbox": [
+    52.4504445,
+    -2.124524,
+    52.587144,
+    -1.726363
+  ],
+  "localLanguages": [
+    "en"
+  ],
+  "modes": [
+    "subway",
+    "light_rail",
+    "tram",
+    "rail",
+    "funicular",
+    "monorail",
+    "cable_car",
+    "gondola",
+    "chair_lift"
+  ],
+  "lines": [
+    {
+      "id": "Line1",
+      "name": "Line 1",
+      "keywords": [],
+      "order": 0
+    },
+    {
+      "id": "Line2",
+      "name": "Line 2",
+      "keywords": [],
+      "order": 1
+    },
+    {
+      "id": "EastsideExtension",
+      "name": "Eastside Extension",
+      "keywords": [],
+      "order": 2
+    },
+    {
+      "id": "AirRailLink",
+      "name": "Air-Rail Link",
+      "keywords": [],
+      "order": 3
+    }
+  ],
+  "stationAliases": {},
+  "stationLocalNames": {},
+  "manualCoords": {}
+}

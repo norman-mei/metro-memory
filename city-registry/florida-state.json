@@ -1,0 +1,410 @@
+{
+  "city": "florida-state",
+  "continent": "north america",
+  "bbox": [
+    25.68322565358954,
+    -82.53885337851153,
+    30.333193019369787,
+    -80.05226640477639
+  ],
+  "localLanguages": [
+    "en"
+  ],
+  "modes": [
+    "subway",
+    "light_rail",
+    "tram",
+    "rail",
+    "funicular",
+    "monorail",
+    "cable_car",
+    "gondola",
+    "chair_lift"
+  ],
+  "lines": [
+    {
+      "id": "floridaGR",
+      "name": "Green",
+      "keywords": [
+        "Green",
+        "Green Line",
+        "florida GR"
+      ],
+      "order": 0,
+      "icon": "north-america/usa/florida-state/floridaGR.png"
+    },
+    {
+      "id": "floridaOR",
+      "name": "Orange",
+      "keywords": [
+        "Orange",
+        "Orange Line",
+        "florida OR"
+      ],
+      "order": 1,
+      "icon": "north-america/usa/florida-state/floridaOR.png"
+    },
+    {
+      "id": "floridaOM",
+      "name": "Omni Loop",
+      "keywords": [
+        "Omni Loop",
+        "florida OM"
+      ],
+      "order": 2,
+      "icon": "north-america/usa/florida-state/floridaOM.png"
+    },
+    {
+      "id": "floridaBR",
+      "name": "Brickell Loop",
+      "keywords": [
+        "Brickell Loop",
+        "florida BR"
+      ],
+      "order": 3,
+      "icon": "north-america/usa/florida-state/floridaBR.png"
+    },
+    {
+      "id": "floridaIN",
+      "name": "Inner Loop",
+      "keywords": [
+        "Inner Loop",
+        "florida IN"
+      ],
+      "order": 4,
+      "icon": "north-america/usa/florida-state/floridaIN.png"
+    },
+    {
+      "id": "brightline",
+      "name": "Brightline",
+      "keywords": [
+        "Brightline",
+        "Brightline Line"
+      ],
+      "order": 5,
+      "icon": "north-america/usa/florida-state/brightline.svg"
+    },
+    {
+      "id": "Tri-Rail",
+      "name": "Tri-Rail",
+      "keywords": [
+        "Tri-Rail"
+      ],
+      "order": 6,
+      "icon": "north-america/usa/florida-state/Tri-Rail.svg"
+    },
+    {
+      "id": "floridaSUN",
+      "name": "SunRail",
+      "keywords": [
+        "Sun Rail",
+        "florida SUN"
+      ],
+      "order": 7,
+      "icon": "north-america/usa/florida-state/floridaSUN.png"
+    },
+    {
+      "id": "DisneyDRR",
+      "name": "Disneyland Railroad",
+      "keywords": [
+        "Disneyland Railroad",
+        "Disney DRR"
+      ],
+      "order": 8,
+      "icon": "north-america/usa/florida-state/DisneyDRR.png"
+    },
+    {
+      "id": "DisneyMKR",
+      "name": "Magic Kingdom Resort",
+      "keywords": [
+        "Magic Kingdom Resort",
+        "Disney MKR"
+      ],
+      "order": 9,
+      "icon": "north-america/usa/florida-state/DisneyMKR.png"
+    },
+    {
+      "id": "DisneyMKX",
+      "name": "Magic Kingdom Express",
+      "keywords": [
+        "Magic Kingdom Express",
+        "Disney MKX"
+      ],
+      "order": 10,
+      "icon": "north-america/usa/florida-state/DisneyMKX.png"
+    },
+    {
+      "id": "DisneyEPC",
+      "name": "EPCOT",
+      "keywords": [
+        "EPCOT",
+        "EPCOT Line",
+        "Disney EPC"
+      ],
+      "order": 11,
+      "icon": "north-america/usa/florida-state/DisneyEPC.png"
+    },
+    {
+      "id": "DisneySKYEPC",
+      "name": "Riviera Resort and EPCOT",
+      "keywords": [
+        "Riviera Resort and EPCOT",
+        "Disney SKYEPC"
+      ],
+      "order": 12,
+      "icon": "north-america/usa/florida-state/DisneySKYEPC.png"
+    },
+    {
+      "id": "DisneySKYHS",
+      "name": "Hollywood Studios",
+      "keywords": [
+        "Hollywood Studios",
+        "Disney SKYHS"
+      ],
+      "order": 13,
+      "icon": "north-america/usa/florida-state/DisneySKYHS.png"
+    },
+    {
+      "id": "DisneySKYPOP",
+      "name": "Pop Century/Art of Animation",
+      "keywords": [
+        "Pop Century/Art of Animation",
+        "Disney SKYPOP"
+      ],
+      "order": 14,
+      "icon": "north-america/usa/florida-state/DisneySKYPOP.png"
+    },
+    {
+      "id": "floridaTECO",
+      "name": "TECO Line Streetcar",
+      "keywords": [
+        "TECO Line Streetcar",
+        "TECO Streetcar",
+        "florida TECO"
+      ],
+      "order": 15,
+      "icon": "north-america/usa/florida-state/floridaTECO.png"
+    },
+    {
+      "id": "floridaSKYTRAIN",
+      "name": "MIA Skytrain",
+      "keywords": [
+        "MIA Skytrain",
+        "florida SKYTRAIN"
+      ],
+      "order": 16,
+      "icon": "north-america/usa/florida-state/floridaSKYTRAIN.png"
+    },
+    {
+      "id": "floridaMET",
+      "name": "MIA e Train",
+      "keywords": [
+        "MIA e Train",
+        "Line E",
+        "E Line",
+        "Route E",
+        "Line E Line",
+        "Route E Line",
+        "florida MET"
+      ],
+      "order": 17,
+      "icon": "north-america/usa/florida-state/floridaMET.png"
+    },
+    {
+      "id": "floridaMIA",
+      "name": "MIA Mover",
+      "keywords": [
+        "MIA Mover",
+        "florida MIA"
+      ],
+      "order": 18,
+      "icon": "north-america/usa/florida-state/floridaMIA.png"
+    },
+    {
+      "id": "floridaASA",
+      "name": "Airside A APM",
+      "keywords": [
+        "Airside A APM",
+        "Line A",
+        "A Line",
+        "Route A",
+        "Line A Line",
+        "Route A Line",
+        "florida ASA"
+      ],
+      "order": 19,
+      "icon": "north-america/usa/florida-state/floridaASA.png"
+    },
+    {
+      "id": "floridaASC",
+      "name": "Airside C APM",
+      "keywords": [
+        "Airside C APM",
+        "Line C",
+        "C Line",
+        "Route C",
+        "Line C Line",
+        "Route C Line",
+        "florida ASC"
+      ],
+      "order": 20,
+      "icon": "north-america/usa/florida-state/floridaASC.png"
+    },
+    {
+      "id": "floridaASE",
+      "name": "Airside E APM",
+      "keywords": [
+        "Airside E APM",
+        "Line E",
+        "E Line",
+        "Route E",
+        "Line E Line",
+        "Route E Line",
+        "florida ASE"
+      ],
+      "order": 21,
+      "icon": "north-america/usa/florida-state/floridaASE.png"
+    },
+    {
+      "id": "floridaASF",
+      "name": "Airside F APM",
+      "keywords": [
+        "Airside F APM",
+        "Line F",
+        "F Line",
+        "Route F",
+        "Line F Line",
+        "Route F Line",
+        "florida ASF"
+      ],
+      "order": 22,
+      "icon": "north-america/usa/florida-state/floridaASF.png"
+    },
+    {
+      "id": "floridaSKYCONNECT",
+      "name": "SkyConnect",
+      "keywords": [
+        "Sky Connect",
+        "florida SKYCONNECT"
+      ],
+      "order": 23,
+      "icon": "north-america/usa/florida-state/floridaSKYCONNECT.png"
+    },
+    {
+      "id": "floridaAS1",
+      "name": "Airside 1 APM",
+      "keywords": [
+        "Airside 1 APM",
+        "Line 1",
+        "1 Line",
+        "L1",
+        "1号线",
+        "地铁1号线",
+        "1号線",
+        "1호선",
+        "Route 1",
+        "Tram Route 1",
+        "florida AS1"
+      ],
+      "order": 24,
+      "icon": "north-america/usa/florida-state/floridaAS1.png"
+    },
+    {
+      "id": "floridaAS2",
+      "name": "Airside 2 APM",
+      "keywords": [
+        "Airside 2 APM",
+        "Line 2",
+        "2 Line",
+        "L2",
+        "2号线",
+        "地铁2号线",
+        "2号線",
+        "2호선",
+        "Route 2",
+        "Tram Route 2",
+        "florida AS2"
+      ],
+      "order": 25,
+      "icon": "north-america/usa/florida-state/floridaAS2.png"
+    },
+    {
+      "id": "floridaAS3",
+      "name": "Airside 3 APM",
+      "keywords": [
+        "Airside 3 APM",
+        "Line 3",
+        "3 Line",
+        "L3",
+        "3号线",
+        "地铁3号线",
+        "3号線",
+        "3호선",
+        "Route 3",
+        "Tram Route 3",
+        "florida AS3"
+      ],
+      "order": 26,
+      "icon": "north-america/usa/florida-state/floridaAS3.png"
+    },
+    {
+      "id": "floridaAS4",
+      "name": "Airside 4 APM",
+      "keywords": [
+        "Airside 4 APM",
+        "Line 4",
+        "4 Line",
+        "L4",
+        "4号线",
+        "地铁4号线",
+        "4号線",
+        "4호선",
+        "Route 4",
+        "Tram Route 4",
+        "florida AS4"
+      ],
+      "order": 27,
+      "icon": "north-america/usa/florida-state/floridaAS4.png"
+    },
+    {
+      "id": "floridaTL",
+      "name": "Terminal Link",
+      "keywords": [
+        "Terminal Link",
+        "florida TL"
+      ],
+      "order": 28,
+      "icon": "north-america/usa/florida-state/floridaTL.png"
+    },
+    {
+      "id": "NB",
+      "name": "Northbank",
+      "keywords": [
+        "Northbank",
+        "Northbank Line",
+        "NB"
+      ],
+      "order": 29,
+      "icon": "north-america/usa/florida-state/NB.png"
+    },
+    {
+      "id": "SB",
+      "name": "Southbank",
+      "keywords": [
+        "Southbank",
+        "Southbank Line",
+        "SB",
+        "Line B",
+        "B Line",
+        "Route B",
+        "Line B Line",
+        "Route B Line"
+      ],
+      "order": 30,
+      "icon": "north-america/usa/florida-state/SB.png"
+    }
+  ],
+  "stationAliases": {},
+  "stationLocalNames": {},
+  "manualCoords": {}
+}

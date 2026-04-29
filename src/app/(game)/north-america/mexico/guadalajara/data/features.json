@@ -1,0 +1,1163 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -103.35073539999999,
+          20.735510414285717
+        ]
+      },
+      "properties": {
+        "id": 0,
+        "name": "Auditorio",
+        "line": "gdl1",
+        "order": 0,
+        "alternate_names": [
+          "Estación Auditorio (Guadalajara)",
+          "Estacion Auditorio (Guadalajara)"
+        ]
+      },
+      "id": 0
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -103.35226613846156,
+          20.73087103846154
+        ]
+      },
+      "properties": {
+        "id": 1,
+        "name": "Periférico Norte",
+        "line": "gdl1",
+        "order": 1,
+        "alternate_names": [
+          "Estación Periférico Norte",
+          "Estacion Periferico Norte"
+        ]
+      },
+      "id": 1
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -103.3533354142857,
+          20.721080385714284
+        ]
+      },
+      "properties": {
+        "id": 2,
+        "name": "Dermatológico",
+        "line": "gdl1",
+        "order": 2,
+        "alternate_names": [
+          "Estación Dermatológico",
+          "Estacion Dermatologico"
+        ]
+      },
+      "id": 2
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -103.35443305714286,
+          20.716017600000004
+        ]
+      },
+      "properties": {
+        "id": 3,
+        "name": "Atemajac",
+        "line": "gdl1",
+        "order": 3,
+        "alternate_names": [
+          "Estación Atemajac",
+          "Estacion Atemajac"
+        ]
+      },
+      "id": 3
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -103.35559569999998,
+          20.70791616
+        ]
+      },
+      "properties": {
+        "id": 4,
+        "name": "División del Norte",
+        "line": "gdl1",
+        "order": 4,
+        "alternate_names": [
+          "Estación División del Norte (Guadalajara)",
+          "Estacion Division del Norte (Guadalajara)"
+        ]
+      },
+      "id": 4
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -103.35498404,
+          20.698308500000003
+        ]
+      },
+      "properties": {
+        "id": 5,
+        "name": "Ávila Camacho",
+        "line": "gdl1",
+        "order": 5,
+        "alternate_names": [
+          "Avila Camacho",
+          "Estación Ávila Camacho",
+          "Estacion Avila Camacho"
+        ]
+      },
+      "id": 5
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -103.35392801999998,
+          20.691588919999997
+        ]
+      },
+      "properties": {
+        "id": 6,
+        "name": "Mezquitán",
+        "line": "gdl1",
+        "order": 6,
+        "alternate_names": [
+          "Estación Mezquitán",
+          "Estacion Mezquitan"
+        ]
+      },
+      "id": 6
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -103.3540945,
+          20.68247496
+        ]
+      },
+      "properties": {
+        "id": 7,
+        "name": "Refugio",
+        "line": "gdl1",
+        "order": 7,
+        "alternate_names": [
+          "Estación Refugio (Guadalajara)",
+          "Estacion Refugio (Guadalajara)"
+        ]
+      },
+      "id": 7
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -103.35476702000001,
+          20.67482734
+        ]
+      },
+      "properties": {
+        "id": 8,
+        "name": "Juárez",
+        "line": "gdl1",
+        "order": 8,
+        "alternate_names": [
+          "Estación Juárez (Guadalajara)",
+          "Estacion Juarez (Guadalajara)"
+        ]
+      },
+      "id": 8
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -103.35542054,
+          20.66681656
+        ]
+      },
+      "properties": {
+        "id": 9,
+        "name": "Mexicaltzingo",
+        "line": "gdl1",
+        "order": 9,
+        "alternate_names": [
+          "Estación Mexicaltzingo (Guadalajara)",
+          "Estacion Mexicaltzingo (Guadalajara)"
+        ]
+      },
+      "id": 9
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -103.35748406,
+          20.66102558
+        ]
+      },
+      "properties": {
+        "id": 10,
+        "name": "Washington",
+        "line": "gdl1",
+        "order": 10,
+        "alternate_names": [
+          "Estación Washington (Guadalajara)",
+          "Estacion Washington (Guadalajara)"
+        ]
+      },
+      "id": 10
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -103.36361305714286,
+          20.654410242857143
+        ]
+      },
+      "properties": {
+        "id": 11,
+        "name": "Santa Filomena",
+        "line": "gdl1",
+        "order": 11,
+        "alternate_names": []
+      },
+      "id": 11
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -103.36943935714284,
+          20.647058185714286
+        ]
+      },
+      "properties": {
+        "id": 12,
+        "name": "Unidad Deportiva",
+        "line": "gdl1",
+        "order": 12,
+        "alternate_names": [
+          "Estación Unidad Deportiva (Guadalajara)",
+          "Estacion Unidad Deportiva (Guadalajara)"
+        ]
+      },
+      "id": 12
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -103.37289522857142,
+          20.643012828571425
+        ]
+      },
+      "properties": {
+        "id": 13,
+        "name": "Urdaneta",
+        "line": "gdl1",
+        "order": 13,
+        "alternate_names": [
+          "Estación Urdaneta",
+          "Estacion Urdaneta"
+        ]
+      },
+      "id": 13
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -103.37697490000001,
+          20.63815719
+        ]
+      },
+      "properties": {
+        "id": 14,
+        "name": "18 de Marzo",
+        "line": "gdl1",
+        "order": 14,
+        "alternate_names": [
+          "Estación 18 de Marzo",
+          "Estacion 18 de Marzo"
+        ]
+      },
+      "id": 14
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -103.38074907142857,
+          20.632630714285714
+        ]
+      },
+      "properties": {
+        "id": 15,
+        "name": "Isla Raza",
+        "line": "gdl1",
+        "order": 15,
+        "alternate_names": [
+          "Estación Isla Raza",
+          "Estacion Isla Raza"
+        ]
+      },
+      "id": 15
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -103.38525994285715,
+          20.62653627142857
+        ]
+      },
+      "properties": {
+        "id": 16,
+        "name": "Patria",
+        "line": "gdl1",
+        "order": 16,
+        "alternate_names": [
+          "Estación Patria",
+          "Estacion Patria"
+        ]
+      },
+      "id": 16
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -103.38931164285715,
+          20.62155561428571
+        ]
+      },
+      "properties": {
+        "id": 17,
+        "name": "España",
+        "line": "gdl1",
+        "order": 17,
+        "alternate_names": [
+          "Estación España",
+          "Estacion Espana"
+        ]
+      },
+      "id": 17
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -103.39573307142858,
+          20.613683685714285
+        ]
+      },
+      "properties": {
+        "id": 18,
+        "name": "Santuario Mártires de Cristo Rey",
+        "line": "gdl1",
+        "order": 18,
+        "alternate_names": [
+          "Tesoro",
+          "Estación Santuario Mártires de Cristo Rey",
+          "Estacion Santuario Martires de Cristo Rey"
+        ]
+      },
+      "id": 18
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -103.40100090555558,
+          20.60710833333333
+        ]
+      },
+      "properties": {
+        "id": 19,
+        "name": "Periférico Sur",
+        "line": "gdl1",
+        "order": 19,
+        "alternate_names": [
+          "Estación Periférico Sur",
+          "Estacion Periferico Sur"
+        ]
+      },
+      "id": 19
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -103.3553801,
+          20.67487988
+        ]
+      },
+      "properties": {
+        "id": 20,
+        "name": "Juárez",
+        "line": "gdl2",
+        "order": 0,
+        "alternate_names": [
+          "Juárez II",
+          "Juarez II",
+          "Estación Juárez (Guadalajara)",
+          "Estacion Juarez (Guadalajara)"
+        ]
+      },
+      "id": 20
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -103.34821199999999,
+          20.67515138
+        ]
+      },
+      "properties": {
+        "id": 21,
+        "name": "Plaza Universidad",
+        "line": "gdl2",
+        "order": 1,
+        "alternate_names": [
+          "Estación Plaza Universidad",
+          "Estacion Plaza Universidad"
+        ]
+      },
+      "id": 21
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -103.34052354,
+          20.675129119999998
+        ]
+      },
+      "properties": {
+        "id": 22,
+        "name": "San Juan de Dios",
+        "line": "gdl2",
+        "order": 2,
+        "alternate_names": [
+          "San Juan De Dios",
+          "Estación San Juan de Dios (Guadalajara)",
+          "Estacion San Juan de Dios (Guadalajara)"
+        ]
+      },
+      "id": 22
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -103.33153014,
+          20.672783799999998
+        ]
+      },
+      "properties": {
+        "id": 23,
+        "name": "Belisario Domínguez",
+        "line": "gdl2",
+        "order": 3,
+        "alternate_names": [
+          "Belisario Dominguez",
+          "Estación Belisario Domínguez",
+          "Estacion Belisario Dominguez"
+        ]
+      },
+      "id": 23
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -103.32257892,
+          20.67032372
+        ]
+      },
+      "properties": {
+        "id": 24,
+        "name": "Oblatos",
+        "line": "gdl2",
+        "order": 4,
+        "alternate_names": [
+          "Estación Oblatos",
+          "Estacion Oblatos"
+        ]
+      },
+      "id": 24
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -103.31347312,
+          20.66759024
+        ]
+      },
+      "properties": {
+        "id": 25,
+        "name": "Cristóbal de Oñate",
+        "line": "gdl2",
+        "order": 5,
+        "alternate_names": [
+          "Cristobal de Oñate",
+          "Cristobal de Onate",
+          "Estación Cristóbal de Oñate",
+          "Estacion Cristobal de Onate"
+        ]
+      },
+      "id": 25
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -103.30612586,
+          20.665320899999998
+        ]
+      },
+      "properties": {
+        "id": 26,
+        "name": "San Andrés",
+        "line": "gdl2",
+        "order": 6,
+        "alternate_names": [
+          "Estación San Andrés (Guadalajara)",
+          "Estacion San Andres (Guadalajara)"
+        ]
+      },
+      "id": 26
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -103.29735084,
+          20.663891720000002
+        ]
+      },
+      "properties": {
+        "id": 27,
+        "name": "San Jacinto",
+        "line": "gdl2",
+        "order": 7,
+        "alternate_names": [
+          "Estación San Jacinto (Guadalajara)",
+          "Estacion San Jacinto (Guadalajara)"
+        ]
+      },
+      "id": 27
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -103.28565364,
+          20.66247396
+        ]
+      },
+      "properties": {
+        "id": 28,
+        "name": "La Aurora",
+        "line": "gdl2",
+        "order": 8,
+        "alternate_names": [
+          "Estación La Aurora (Guadalajara)",
+          "Estacion La Aurora (Guadalajara)"
+        ]
+      },
+      "id": 28
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -103.27601861999999,
+          20.659817999999998
+        ]
+      },
+      "properties": {
+        "id": 29,
+        "name": "Tetlán",
+        "line": "gdl2",
+        "order": 9,
+        "alternate_names": [
+          "Estación Tetlán",
+          "Estacion Tetlan"
+        ]
+      },
+      "id": 29
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -103.40749595238097,
+          20.7412732
+        ]
+      },
+      "properties": {
+        "id": 30,
+        "name": "Arcos de Zapopan",
+        "line": "gdl3",
+        "order": 0,
+        "alternate_names": [
+          "Estación Arcos de Zapopan",
+          "Estacion Arcos de Zapopan"
+        ]
+      },
+      "id": 30
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -103.40314202500004,
+          20.73824331
+        ]
+      },
+      "properties": {
+        "id": 31,
+        "name": "Periférico Belenes",
+        "line": "gdl3",
+        "order": 1,
+        "alternate_names": [
+          "Estación Periférico Belenes",
+          "Estacion Periferico Belenes"
+        ]
+      },
+      "id": 31
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -103.38937062187502,
+          20.728844737499998
+        ]
+      },
+      "properties": {
+        "id": 32,
+        "name": "Mercado del Mar",
+        "line": "gdl3",
+        "order": 2,
+        "alternate_names": [
+          "Estación Mercado del Mar",
+          "Estacion Mercado del Mar"
+        ]
+      },
+      "id": 32
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -103.386879,
+          20.720650842105265
+        ]
+      },
+      "properties": {
+        "id": 33,
+        "name": "Zapopan Centro",
+        "line": "gdl3",
+        "order": 3,
+        "alternate_names": [
+          "Estación Zapopan Centro",
+          "Estacion Zapopan Centro"
+        ]
+      },
+      "id": 33
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -103.3752800848485,
+          20.712375254545453
+        ]
+      },
+      "properties": {
+        "id": 34,
+        "name": "Plaza Patria",
+        "line": "gdl3",
+        "order": 4,
+        "alternate_names": [
+          "Estación Plaza Patria",
+          "Estacion Plaza Patria"
+        ]
+      },
+      "id": 34
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -103.36601533478259,
+          20.706442008695653
+        ]
+      },
+      "properties": {
+        "id": 35,
+        "name": "Circunvalación Country",
+        "line": "gdl3",
+        "order": 5,
+        "alternate_names": [
+          "Estación Circunvalación Country",
+          "Estacion Circunvalacion Country"
+        ]
+      },
+      "id": 35
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -103.35472968888888,
+          20.699240418518507
+        ]
+      },
+      "properties": {
+        "id": 36,
+        "name": "Ávila Camacho",
+        "line": "gdl3",
+        "order": 6,
+        "alternate_names": [
+          "Estación Ávila Camacho",
+          "Estacion Avila Camacho"
+        ]
+      },
+      "id": 36
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -103.34836545,
+          20.6930099
+        ]
+      },
+      "properties": {
+        "id": 37,
+        "name": "La Normal",
+        "line": "gdl3",
+        "order": 7,
+        "alternate_names": [
+          "La Normal (CETRAM)",
+          "Estación La Normal",
+          "Estacion La Normal"
+        ]
+      },
+      "id": 37
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -103.34787071999999,
+          20.68412246
+        ]
+      },
+      "properties": {
+        "id": 38,
+        "name": "Santuario",
+        "line": "gdl3",
+        "order": 8,
+        "alternate_names": [
+          "Estación Santuario",
+          "Estacion Santuario"
+        ]
+      },
+      "id": 38
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -103.34736351666668,
+          20.675689033333335
+        ]
+      },
+      "properties": {
+        "id": 39,
+        "name": "Guadalajara Centro",
+        "line": "gdl3",
+        "order": 9,
+        "alternate_names": [
+          "Estación Guadalajara Centro",
+          "Estacion Guadalajara Centro"
+        ]
+      },
+      "id": 39
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -103.344699,
+          20.6709675
+        ]
+      },
+      "properties": {
+        "id": 40,
+        "name": "Independencia",
+        "line": "gdl3",
+        "order": 10,
+        "alternate_names": [
+          "Estación Independencia (Guadalajara)",
+          "Estacion Independencia (Guadalajara)"
+        ]
+      },
+      "id": 40
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -103.33260393999998,
+          20.665062260000003
+        ]
+      },
+      "properties": {
+        "id": 41,
+        "name": "Plaza de la Bandera",
+        "line": "gdl3",
+        "order": 11,
+        "alternate_names": [
+          "Estación Plaza de la Bandera",
+          "Estacion Plaza de la Bandera"
+        ]
+      },
+      "id": 41
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -103.32397813999998,
+          20.65962722
+        ]
+      },
+      "properties": {
+        "id": 42,
+        "name": "CUCEI",
+        "line": "gdl3",
+        "order": 12,
+        "alternate_names": [
+          "Estación CUCEI",
+          "Estacion CUCEI"
+        ]
+      },
+      "id": 42
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -103.31027577391305,
+          20.65101728695652
+        ]
+      },
+      "properties": {
+        "id": 43,
+        "name": "Revolución",
+        "line": "gdl3",
+        "order": 13,
+        "alternate_names": [
+          "Estación Revolución",
+          "Estacion Revolucion"
+        ]
+      },
+      "id": 43
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -103.30412900454544,
+          20.64484506818182
+        ]
+      },
+      "properties": {
+        "id": 44,
+        "name": "Río Nilo",
+        "line": "gdl3",
+        "order": 14,
+        "alternate_names": [
+          "Estación Río Nilo",
+          "Estacion Rio Nilo"
+        ]
+      },
+      "id": 44
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -103.30004507692306,
+          20.637733061538462
+        ]
+      },
+      "properties": {
+        "id": 45,
+        "name": "Tlaquepaque Centro",
+        "line": "gdl3",
+        "order": 15,
+        "alternate_names": [
+          "Estación Tlaquepaque Centro",
+          "Estacion Tlaquepaque Centro"
+        ]
+      },
+      "id": 45
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -103.2962705888889,
+          20.63228217777778
+        ]
+      },
+      "properties": {
+        "id": 46,
+        "name": "Lázaro Cárdenas",
+        "line": "gdl3",
+        "order": 16,
+        "alternate_names": [
+          "Estación Lázaro Cárdenas",
+          "Estacion Lazaro Cardenas"
+        ]
+      },
+      "id": 46
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -103.2851207769231,
+          20.62320420769231
+        ]
+      },
+      "properties": {
+        "id": 47,
+        "name": "Central de Autobuses",
+        "line": "gdl3",
+        "order": 17,
+        "alternate_names": [
+          "Estación Central de Autobuses",
+          "Estacion Central de Autobuses"
+        ]
+      },
+      "id": 47
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -103.34085486,
+          20.6075515
+        ]
+      },
+      "properties": {
+        "id": 48,
+        "name": "Las Juntas",
+        "line": "gdl4",
+        "order": 0,
+        "alternate_names": []
+      },
+      "id": 48
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -103.3559411,
+          20.574998033333333
+        ]
+      },
+      "properties": {
+        "id": 49,
+        "name": "Jalisco 200 Años",
+        "line": "gdl4",
+        "order": 1,
+        "alternate_names": []
+      },
+      "id": 49
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -103.36561783333332,
+          20.559341149999998
+        ]
+      },
+      "properties": {
+        "id": 50,
+        "name": "Real del Valle",
+        "line": "gdl4",
+        "order": 2,
+        "alternate_names": []
+      },
+      "id": 50
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -103.3839935,
+          20.5287434
+        ]
+      },
+      "properties": {
+        "id": 51,
+        "name": "Concepción del Valle",
+        "line": "gdl4",
+        "order": 3,
+        "alternate_names": []
+      },
+      "id": 51
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -103.3937496,
+          20.50684156
+        ]
+      },
+      "properties": {
+        "id": 52,
+        "name": "El Cuervo",
+        "line": "gdl4",
+        "order": 4,
+        "alternate_names": []
+      },
+      "id": 52
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -103.40426418,
+          20.48666674
+        ]
+      },
+      "properties": {
+        "id": 53,
+        "name": "Lomas del Sur",
+        "line": "gdl4",
+        "order": 5,
+        "alternate_names": []
+      },
+      "id": 53
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -103.41467706,
+          20.46936462
+        ]
+      },
+      "properties": {
+        "id": 54,
+        "name": "CUTLAJO",
+        "line": "gdl4",
+        "order": 6,
+        "alternate_names": []
+      },
+      "id": 54
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -103.43678681428572,
+          20.46844895714286
+        ]
+      },
+      "properties": {
+        "id": 55,
+        "name": "Tlajomulco Centro",
+        "line": "gdl4",
+        "order": 7,
+        "alternate_names": []
+      },
+      "id": 55
+    }
+  ]
+}

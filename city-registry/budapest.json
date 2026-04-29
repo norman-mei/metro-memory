@@ -1,0 +1,155 @@
+{
+  "city": "budapest",
+  "continent": "europe",
+  "bbox": [
+    47.175450975,
+    18.940061975,
+    47.6610471,
+    19.358009225
+  ],
+  "localLanguages": [
+    "hu"
+  ],
+  "modes": [
+    "subway",
+    "light_rail",
+    "tram",
+    "rail",
+    "funicular",
+    "monorail",
+    "cable_car",
+    "gondola",
+    "chair_lift"
+  ],
+  "lines": [
+    {
+      "id": "BudapestMetro1",
+      "name": "M1",
+      "keywords": [
+        "M1",
+        "Budapest Metro1",
+        "Line 1",
+        "1 Line",
+        "L1",
+        "1号线",
+        "地铁1号线",
+        "1号線",
+        "1호선",
+        "Route 1",
+        "Tram Route 1"
+      ],
+      "order": 0,
+      "icon": "europe/hungary/budapest/BudapestMetro1.svg"
+    },
+    {
+      "id": "BudapestMetro2",
+      "name": "M2",
+      "keywords": [
+        "M2",
+        "Budapest Metro2",
+        "Line 2",
+        "2 Line",
+        "L2",
+        "2号线",
+        "地铁2号线",
+        "2号線",
+        "2호선",
+        "Route 2",
+        "Tram Route 2"
+      ],
+      "order": 1,
+      "icon": "europe/hungary/budapest/BudapestMetro2.svg"
+    },
+    {
+      "id": "BudapestMetro3",
+      "name": "M3",
+      "keywords": [
+        "M3",
+        "Budapest Metro3",
+        "Line 3",
+        "3 Line",
+        "L3",
+        "3号线",
+        "地铁3号线",
+        "3号線",
+        "3호선",
+        "Route 3",
+        "Tram Route 3"
+      ],
+      "order": 2,
+      "icon": "europe/hungary/budapest/BudapestMetro3.svg"
+    },
+    {
+      "id": "BudapestMetro4",
+      "name": "M4",
+      "keywords": [
+        "M4",
+        "Budapest Metro4",
+        "Line 4",
+        "4 Line",
+        "L4",
+        "4号线",
+        "地铁4号线",
+        "4号線",
+        "4호선",
+        "Route 4",
+        "Tram Route 4"
+      ],
+      "order": 3,
+      "icon": "europe/hungary/budapest/BudapestMetro4.svg"
+    },
+    {
+      "id": "BudapestHEV5",
+      "name": "H5",
+      "keywords": [
+        "H5",
+        "Budapest HEV5"
+      ],
+      "order": 4,
+      "icon": "europe/hungary/budapest/BudapestHEV5.svg"
+    },
+    {
+      "id": "BudapestHEV6",
+      "name": "H6",
+      "keywords": [
+        "H6",
+        "Budapest HEV6"
+      ],
+      "order": 5,
+      "icon": "europe/hungary/budapest/BudapestHEV6.svg"
+    },
+    {
+      "id": "BudapestHEV7",
+      "name": "H7",
+      "keywords": [
+        "H7",
+        "Budapest HEV7"
+      ],
+      "order": 6,
+      "icon": "europe/hungary/budapest/BudapestHEV7.svg"
+    },
+    {
+      "id": "BudapestHEV8",
+      "name": "H8",
+      "keywords": [
+        "H8",
+        "Budapest HEV8"
+      ],
+      "order": 7,
+      "icon": "europe/hungary/budapest/BudapestHEV8.svg"
+    },
+    {
+      "id": "BudapestHEV9",
+      "name": "H9",
+      "keywords": [
+        "H9",
+        "Budapest HEV9"
+      ],
+      "order": 8,
+      "icon": "europe/hungary/budapest/BudapestHEV9.svg"
+    }
+  ],
+  "stationAliases": {},
+  "stationLocalNames": {},
+  "manualCoords": {}
+}

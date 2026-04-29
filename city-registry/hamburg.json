@@ -1,0 +1,221 @@
+{
+  "city": "hamburg",
+  "continent": "europe",
+  "bbox": [
+    53.456624,
+    9.477929,
+    53.707523,
+    10.314604
+  ],
+  "localLanguages": [
+    "de"
+  ],
+  "modes": [
+    "subway",
+    "light_rail",
+    "tram",
+    "rail",
+    "funicular",
+    "monorail",
+    "cable_car",
+    "gondola",
+    "chair_lift"
+  ],
+  "lines": [
+    {
+      "id": "HamburgSBahnS1",
+      "name": "S1",
+      "keywords": [
+        "S1",
+        "Line 1",
+        "1 Line",
+        "L1",
+        "1号线",
+        "地铁1号线",
+        "1号線",
+        "1호선",
+        "Route 1",
+        "Tram Route 1",
+        "Hamburg S Bahn S1",
+        "Line S",
+        "S Line",
+        "Route S",
+        "Line S Line",
+        "Route S Line"
+      ],
+      "order": 0,
+      "icon": "europe/germany/hamburg/HamburgSBahnS1.svg"
+    },
+    {
+      "id": "HamburgSBahnS2",
+      "name": "S2",
+      "keywords": [
+        "S2",
+        "Line 2",
+        "2 Line",
+        "L2",
+        "2号线",
+        "地铁2号线",
+        "2号線",
+        "2호선",
+        "Route 2",
+        "Tram Route 2",
+        "Hamburg S Bahn S2",
+        "Line S",
+        "S Line",
+        "Route S",
+        "Line S Line",
+        "Route S Line"
+      ],
+      "order": 1,
+      "icon": "europe/germany/hamburg/HamburgSBahnS2.svg"
+    },
+    {
+      "id": "HamburgSBahnS3",
+      "name": "S3",
+      "keywords": [
+        "S3",
+        "Line 3",
+        "3 Line",
+        "L3",
+        "3号线",
+        "地铁3号线",
+        "3号線",
+        "3호선",
+        "Route 3",
+        "Tram Route 3",
+        "Hamburg S Bahn S3",
+        "Line S",
+        "S Line",
+        "Route S",
+        "Line S Line",
+        "Route S Line"
+      ],
+      "order": 2,
+      "icon": "europe/germany/hamburg/HamburgSBahnS3.svg"
+    },
+    {
+      "id": "HamburgSBahnS5",
+      "name": "S5",
+      "keywords": [
+        "S5",
+        "Line 5",
+        "5 Line",
+        "L5",
+        "5号线",
+        "地铁5号线",
+        "5号線",
+        "5호선",
+        "Route 5",
+        "Tram Route 5",
+        "Hamburg S Bahn S5",
+        "Line S",
+        "S Line",
+        "Route S",
+        "Line S Line",
+        "Route S Line"
+      ],
+      "order": 3,
+      "icon": "europe/germany/hamburg/HamburgSBahnS5.svg"
+    },
+    {
+      "id": "HamburgUBahnU1",
+      "name": "U1",
+      "keywords": [
+        "U1",
+        "Line 1",
+        "1 Line",
+        "L1",
+        "1号线",
+        "地铁1号线",
+        "1号線",
+        "1호선",
+        "Route 1",
+        "Tram Route 1",
+        "Hamburg U Bahn U1",
+        "Line U",
+        "U Line",
+        "Route U",
+        "Line U Line",
+        "Route U Line"
+      ],
+      "order": 4,
+      "icon": "europe/germany/hamburg/HamburgUBahnU1.svg"
+    },
+    {
+      "id": "HamburgUBahnU2",
+      "name": "U2",
+      "keywords": [
+        "U2",
+        "Line 2",
+        "2 Line",
+        "L2",
+        "2号线",
+        "地铁2号线",
+        "2号線",
+        "2호선",
+        "Route 2",
+        "Tram Route 2",
+        "Hamburg U Bahn U2",
+        "Line U",
+        "U Line",
+        "Route U",
+        "Line U Line",
+        "Route U Line"
+      ],
+      "order": 5,
+      "icon": "europe/germany/hamburg/HamburgUBahnU2.svg"
+    },
+    {
+      "id": "HamburgUBahnU3",
+      "name": "U3",
+      "keywords": [
+        "U3",
+        "Line 3",
+        "3 Line",
+        "L3",
+        "3号线",
+        "地铁3号线",
+        "3号線",
+        "3호선",
+        "Route 3",
+        "Tram Route 3",
+        "Hamburg U Bahn U3",
+        "Line U",
+        "U Line",
+        "Route U",
+        "Line U Line",
+        "Route U Line"
+      ],
+      "order": 6,
+      "icon": "europe/germany/hamburg/HamburgUBahnU3.svg"
+    },
+    {
+      "id": "HamburgUBahnU4",
+      "name": "U4",
+      "keywords": [
+        "U4",
+        "Line 4",
+        "4 Line",
+        "L4",
+        "4号线",
+        "地铁4号线",
+        "4号線",
+        "4호선",
+        "Route 4",
+        "Tram Route 4",
+        "Hamburg U Bahn U4",
+        "Line U",
+        "U Line",
+        "Route U",
+        "Line U Line",
+        "Route U Line"
+      ],
+      "order": 7,
+      "icon": "europe/germany/hamburg/HamburgUBahnU4.svg"
+    }
+  ],
+  "stationAliases": {},
+  "stationLocalNames": {},
+  "manualCoords": {}
+}

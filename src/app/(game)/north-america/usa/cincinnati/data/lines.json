@@ -1,0 +1,18 @@
+{
+  "100": {
+    "name": "Connector",
+    "color": "#41B4E8",
+    "backgroundColor": "#41B4E8",
+    "textColor": "#000000",
+    "order": 0,
+    "icon": "north-america/usa/cincinnati/100.png"
+  },
+  "CincinnatiAPM": {
+    "name": "Cincinnati Airport People Mover",
+    "color": "#004DA3",
+    "backgroundColor": "#00326C",
+    "textColor": "#FFFFFF",
+    "order": 1,
+    "icon": "north-america/usa/cincinnati/CincinnatiAPM.png"
+  }
+}

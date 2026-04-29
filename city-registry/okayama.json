@@ -1,0 +1,53 @@
+{
+  "city": "okayama",
+  "continent": "asia",
+  "bbox": [
+    34.6517066,
+    133.9196063,
+    34.665664,
+    133.9426758
+  ],
+  "localLanguages": [
+    "ja"
+  ],
+  "modes": [
+    "subway",
+    "light_rail",
+    "tram",
+    "rail",
+    "funicular",
+    "monorail",
+    "cable_car",
+    "gondola",
+    "chair_lift"
+  ],
+  "lines": [
+    {
+      "id": "Higashiyama",
+      "name": "東山本線 Higashiyama Line",
+      "keywords": [
+        "東山本線 Higashiyama Line",
+        "東山本線 Higashiyama",
+        "Higashiyama",
+        "Higashiyama Line"
+      ],
+      "order": 0,
+      "icon": "asia/japan/okayama/higashiyama.png"
+    },
+    {
+      "id": "Seikibashi",
+      "name": "清輝橋線 Seikibashi Line",
+      "keywords": [
+        "清輝橋線 Seikibashi Line",
+        "清輝橋線 Seikibashi",
+        "Seikibashi",
+        "Seikibashi Line"
+      ],
+      "order": 1,
+      "icon": "asia/japan/okayama/seikibashi.png"
+    }
+  ],
+  "stationAliases": {},
+  "stationLocalNames": {},
+  "manualCoords": {}
+}

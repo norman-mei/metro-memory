@@ -1,0 +1,47 @@
+{
+  "city": "lijiang",
+  "continent": "asia",
+  "bbox": [
+    26.3586,
+    99.7253,
+    27.3586,
+    100.7253
+  ],
+  "localLanguages": [
+    "zh"
+  ],
+  "modes": [
+    "subway",
+    "light_rail",
+    "tram",
+    "rail",
+    "funicular",
+    "monorail",
+    "cable_car",
+    "gondola",
+    "chair_lift"
+  ],
+  "lines": [
+    {
+      "id": "lijiang1",
+      "name": "Line 1",
+      "keywords": [
+        "Line 1",
+        "1 Line",
+        "L1",
+        "1号线",
+        "地铁1号线",
+        "1号線",
+        "1호선",
+        "Route 1",
+        "Tram Route 1",
+        "lijiang1"
+      ],
+      "order": 1,
+      "icon": "asia/china/lijiang/lijiang1.png"
+    }
+  ],
+  "stationAliases": {},
+  "stationLocalNames": {},
+  "manualCoords": {}
+}

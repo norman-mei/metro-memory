@@ -1,0 +1,305 @@
+{
+  "city": "boston",
+  "continent": "north america",
+  "bbox": [
+    41.580341,
+    -71.848764,
+    42.799592,
+    -70.25694983786123
+  ],
+  "localLanguages": [
+    "en"
+  ],
+  "modes": [
+    "subway",
+    "light_rail",
+    "tram",
+    "rail",
+    "funicular",
+    "monorail",
+    "cable_car",
+    "gondola",
+    "chair_lift"
+  ],
+  "lines": [
+    {
+      "id": "MBTATMetroBlueLine",
+      "name": "Blue",
+      "keywords": [
+        "Blue",
+        "Blue Line",
+        "MBTAT Metro Blue Line",
+        "MBTAT Blue"
+      ],
+      "order": 0,
+      "icon": "north-america/usa/boston/MBTATMetroBlueLine.svg"
+    },
+    {
+      "id": "MBTATMetroGreenBLine",
+      "name": "Green B",
+      "keywords": [
+        "Green B",
+        "Green B Line",
+        "Line B",
+        "B Line",
+        "Route B",
+        "Line B Line",
+        "Route B Line",
+        "MBTAT Metro Green B Line",
+        "MBTAT Green B"
+      ],
+      "order": 1,
+      "icon": "north-america/usa/boston/MBTATMetroGreenBLine.svg"
+    },
+    {
+      "id": "MBTATGreenCLine",
+      "name": "Green C",
+      "keywords": [
+        "Green C",
+        "Green C Line",
+        "Line C",
+        "C Line",
+        "Route C",
+        "Line C Line",
+        "Route C Line",
+        "MBTAT Green C Line",
+        "MBTAT Green C"
+      ],
+      "order": 2,
+      "icon": "north-america/usa/boston/MBTATGreenCLine.svg"
+    },
+    {
+      "id": "MBTATGreenDLine",
+      "name": "Green D",
+      "keywords": [
+        "Green D",
+        "Green D Line",
+        "Line D",
+        "D Line",
+        "Route D",
+        "Line D Line",
+        "Route D Line",
+        "MBTAT Green D Line",
+        "MBTAT Green D"
+      ],
+      "order": 3,
+      "icon": "north-america/usa/boston/MBTATGreenDLine.svg"
+    },
+    {
+      "id": "MBTATGreenELine",
+      "name": "Green E",
+      "keywords": [
+        "Green E",
+        "Green E Line",
+        "Line E",
+        "E Line",
+        "Route E",
+        "Line E Line",
+        "Route E Line",
+        "MBTAT Green E Line",
+        "MBTAT Green E"
+      ],
+      "order": 4,
+      "icon": "north-america/usa/boston/MBTATGreenELine.svg"
+    },
+    {
+      "id": "MBTATMetroOrangeLine",
+      "name": "Orange",
+      "keywords": [
+        "Orange",
+        "Orange Line",
+        "MBTAT Metro Orange Line",
+        "MBTAT Orange"
+      ],
+      "order": 5,
+      "icon": "north-america/usa/boston/MBTATMetroOrangeLine.svg"
+    },
+    {
+      "id": "MBTATMetroRedLine",
+      "name": "Red",
+      "keywords": [
+        "Red",
+        "Red Line",
+        "MBTAT Metro Red Line",
+        "MBTAT Red"
+      ],
+      "order": 6,
+      "icon": "north-america/usa/boston/MBTATMetroRedLine.svg"
+    },
+    {
+      "id": "MBTATMetroRedMLine",
+      "name": "Mattapan",
+      "keywords": [
+        "Mattapan",
+        "Mattapan Line",
+        "MBTAT Metro Red M Line",
+        "MBTAT Red M",
+        "Line M",
+        "M Line",
+        "Route M",
+        "Line M Line",
+        "Route M Line"
+      ],
+      "order": 7,
+      "icon": "north-america/usa/boston/MBTATMetroRedMLine.svg"
+    },
+    {
+      "id": "Fa",
+      "name": "Fairmount",
+      "keywords": [
+        "Fairmount",
+        "Fairmount Line",
+        "Fa"
+      ],
+      "order": 8,
+      "icon": "north-america/usa/boston/Fa.png"
+    },
+    {
+      "id": "Fb",
+      "name": "Fitchburg",
+      "keywords": [
+        "Fitchburg",
+        "Fitchburg Line",
+        "Fb"
+      ],
+      "order": 9,
+      "icon": "north-america/usa/boston/Fb.png"
+    },
+    {
+      "id": "Fr",
+      "name": "Franklin/Foxboro",
+      "keywords": [
+        "Franklin/Foxboro",
+        "Fr"
+      ],
+      "order": 10,
+      "icon": "north-america/usa/boston/Fr.png"
+    },
+    {
+      "id": "H",
+      "name": "Haverhill",
+      "keywords": [
+        "Haverhill",
+        "Haverhill Line",
+        "H",
+        "Line H",
+        "H Line",
+        "Route H",
+        "Line H Line",
+        "Route H Line"
+      ],
+      "order": 11,
+      "icon": "north-america/usa/boston/H.png"
+    },
+    {
+      "id": "L",
+      "name": "Lowell",
+      "keywords": [
+        "Lowell",
+        "Lowell Line",
+        "L",
+        "Line L",
+        "L Line",
+        "Route L",
+        "Line L Line",
+        "Route L Line"
+      ],
+      "order": 12,
+      "icon": "north-america/usa/boston/L.png"
+    },
+    {
+      "id": "Ne",
+      "name": "Needham",
+      "keywords": [
+        "Needham",
+        "Needham Line",
+        "Ne"
+      ],
+      "order": 13,
+      "icon": "north-america/usa/boston/Ne.png"
+    },
+    {
+      "id": "Nr",
+      "name": "Newburyport/Rockport",
+      "keywords": [
+        "Newburyport/Rockport",
+        "Nr"
+      ],
+      "order": 14,
+      "icon": "north-america/usa/boston/Nr.png"
+    },
+    {
+      "id": "GB",
+      "name": "Greenbush",
+      "keywords": [
+        "Greenbush",
+        "Greenbush Line",
+        "GB"
+      ],
+      "order": 15,
+      "icon": "north-america/usa/boston/GB.png"
+    },
+    {
+      "id": "KT",
+      "name": "Kingston",
+      "keywords": [
+        "Kingston",
+        "Kingston Line",
+        "KT"
+      ],
+      "order": 16,
+      "icon": "north-america/usa/boston/KT.png"
+    },
+    {
+      "id": "P",
+      "name": "Providence/Stoughton",
+      "keywords": [
+        "Providence/Stoughton",
+        "P",
+        "Line P",
+        "P Line",
+        "Route P",
+        "Line P Line",
+        "Route P Line"
+      ],
+      "order": 18,
+      "icon": "north-america/usa/boston/P.png"
+    },
+    {
+      "id": "W",
+      "name": "Framingham/Worcester",
+      "keywords": [
+        "Framingham/Worcester",
+        "W",
+        "Line W",
+        "W Line",
+        "Route W",
+        "Line W Line",
+        "Route W Line"
+      ],
+      "order": 19,
+      "icon": "north-america/usa/boston/W.png"
+    },
+    {
+      "id": "CapeFlyer",
+      "name": "CapeFLYER",
+      "keywords": [
+        "Cape FLYER"
+      ],
+      "order": 20,
+      "icon": "north-america/usa/boston/CapeFlyer.png"
+    },
+    {
+      "id": "MBTA_CR",
+      "name": "Commuter Rail",
+      "keywords": [
+        "Commuter Rail",
+        "MBTA CR"
+      ],
+      "order": 99
+    }
+  ],
+  "stationAliases": {},
+  "stationLocalNames": {},
+  "manualCoords": {}
+}

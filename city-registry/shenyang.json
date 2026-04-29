@@ -1,0 +1,195 @@
+{
+  "city": "shenyang",
+  "continent": "asia",
+  "bbox": [
+    41.6494768,
+    123.1197855,
+    41.9593561,
+    123.7230596
+  ],
+  "localLanguages": [
+    "zh"
+  ],
+  "modes": [
+    "subway",
+    "light_rail",
+    "tram",
+    "rail",
+    "funicular",
+    "monorail",
+    "cable_car",
+    "gondola",
+    "chair_lift"
+  ],
+  "lines": [
+    {
+      "id": "shenyang1",
+      "name": "Line 1",
+      "keywords": [
+        "Line 1",
+        "1 Line",
+        "L1",
+        "1号线",
+        "地铁1号线",
+        "1号線",
+        "1호선",
+        "Route 1",
+        "Tram Route 1",
+        "shenyang1"
+      ],
+      "order": 1,
+      "icon": "asia/china/shenyang/shenyang1.png"
+    },
+    {
+      "id": "shenyang2",
+      "name": "Line 2",
+      "keywords": [
+        "Line 2",
+        "2 Line",
+        "L2",
+        "2号线",
+        "地铁2号线",
+        "2号線",
+        "2호선",
+        "Route 2",
+        "Tram Route 2",
+        "shenyang2"
+      ],
+      "order": 2,
+      "icon": "asia/china/shenyang/shenyang2.png"
+    },
+    {
+      "id": "shenyang3",
+      "name": "Line 3",
+      "keywords": [
+        "Line 3",
+        "3 Line",
+        "L3",
+        "3号线",
+        "地铁3号线",
+        "3号線",
+        "3호선",
+        "Route 3",
+        "Tram Route 3",
+        "shenyang3"
+      ],
+      "order": 3,
+      "icon": "asia/china/shenyang/shenyang3.png"
+    },
+    {
+      "id": "shenyang4",
+      "name": "Line 4",
+      "keywords": [
+        "Line 4",
+        "4 Line",
+        "L4",
+        "4号线",
+        "地铁4号线",
+        "4号線",
+        "4호선",
+        "Route 4",
+        "Tram Route 4",
+        "shenyang4"
+      ],
+      "order": 4,
+      "icon": "asia/china/shenyang/shenyang4.png"
+    },
+    {
+      "id": "shenyang9",
+      "name": "Line 9",
+      "keywords": [
+        "Line 9",
+        "9 Line",
+        "L9",
+        "9号线",
+        "地铁9号线",
+        "9号線",
+        "9호선",
+        "Route 9",
+        "Tram Route 9",
+        "shenyang9"
+      ],
+      "order": 5,
+      "icon": "asia/china/shenyang/shenyang9.png"
+    },
+    {
+      "id": "shenyang10",
+      "name": "Line 10",
+      "keywords": [
+        "Line 10",
+        "10",
+        "10 Line",
+        "L10",
+        "10号线",
+        "地铁10号线",
+        "10号線",
+        "10호선",
+        "Route 10",
+        "Tram Route 10",
+        "shenyang10"
+      ],
+      "order": 6,
+      "icon": "asia/china/shenyang/shenyang10.png"
+    },
+    {
+      "id": "shenyangtram1",
+      "name": "Tram Line 1",
+      "keywords": [
+        "Tram Line 1",
+        "Line 1",
+        "1 Line",
+        "L1",
+        "1号线",
+        "地铁1号线",
+        "1号線",
+        "1호선",
+        "Route 1",
+        "Tram Route 1",
+        "shenyangtram1"
+      ],
+      "order": 7,
+      "icon": "asia/china/shenyang/shenyangtram1.png"
+    },
+    {
+      "id": "shenyangtram3",
+      "name": "Tram Line 3",
+      "keywords": [
+        "Tram Line 3",
+        "Line 3",
+        "3 Line",
+        "L3",
+        "3号线",
+        "地铁3号线",
+        "3号線",
+        "3호선",
+        "Route 3",
+        "Tram Route 3",
+        "shenyangtram3"
+      ],
+      "order": 8,
+      "icon": "asia/china/shenyang/shenyangtram3.png"
+    },
+    {
+      "id": "shenyangtram5",
+      "name": "Tram Line 5",
+      "keywords": [
+        "Tram Line 5",
+        "Line 5",
+        "5 Line",
+        "L5",
+        "5号线",
+        "地铁5号线",
+        "5号線",
+        "5호선",
+        "Route 5",
+        "Tram Route 5",
+        "shenyangtram5"
+      ],
+      "order": 9,
+      "icon": "asia/china/shenyang/shenyangtram5.png"
+    }
+  ],
+  "stationAliases": {},
+  "stationLocalNames": {},
+  "manualCoords": {}
+}

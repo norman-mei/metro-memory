@@ -1,0 +1,87 @@
+{
+  "city": "houston",
+  "continent": "north america",
+  "bbox": [
+    29.673289736432793,
+    -95.4056102604674,
+    29.987465421976722,
+    -95.30257879656325
+  ],
+  "localLanguages": [
+    "en"
+  ],
+  "modes": [
+    "subway",
+    "light_rail",
+    "tram",
+    "rail",
+    "funicular",
+    "monorail",
+    "cable_car",
+    "gondola",
+    "chair_lift"
+  ],
+  "lines": [
+    {
+      "id": "Houston_METRORail_Red_Line_icon",
+      "name": "Red Line",
+      "keywords": [
+        "Red Line",
+        "Red",
+        "Houston METRO Rail Red Line icon",
+        "Houston Rail Red icon"
+      ],
+      "order": 0,
+      "icon": "north-america/usa/houston/Houston_METRORail_Red_Line_icon.svg"
+    },
+    {
+      "id": "Houston_METRORail_Green_Line_icon",
+      "name": "Green Line",
+      "keywords": [
+        "Green Line",
+        "Green",
+        "Houston METRO Rail Green Line icon",
+        "Houston Rail Green icon"
+      ],
+      "order": 1,
+      "icon": "north-america/usa/houston/Houston_METRORail_Green_Line_icon.svg"
+    },
+    {
+      "id": "Houston_METRORail_Purple_Line_icon",
+      "name": "Purple Line",
+      "keywords": [
+        "Purple Line",
+        "Purple",
+        "Houston METRO Rail Purple Line icon",
+        "Houston Rail Purple icon"
+      ],
+      "order": 2,
+      "icon": "north-america/usa/houston/Houston_METRORail_Purple_Line_icon.svg"
+    },
+    {
+      "id": "houstonSUB",
+      "name": "Subway",
+      "keywords": [
+        "Subway",
+        "Subway Line",
+        "houston SUB"
+      ],
+      "order": 3,
+      "icon": "north-america/usa/houston/houstonSUB.png"
+    },
+    {
+      "id": "houstonSKY",
+      "name": "Skyway",
+      "keywords": [
+        "Skyway",
+        "Skyway Line",
+        "houston SKY"
+      ],
+      "order": 4,
+      "icon": "north-america/usa/houston/houstonSKY.png"
+    }
+  ],
+  "stationAliases": {},
+  "stationLocalNames": {},
+  "manualCoords": {}
+}

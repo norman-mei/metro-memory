@@ -1,0 +1,46 @@
+{
+  "gdl1": {
+    "name": "Line 1",
+    "color": "#EE161F",
+    "backgroundColor": "#EE161F",
+    "textColor": "#FFFFFF",
+    "progressOutlineColor": "#EE161F",
+    "order": 0,
+    "icon": "north-america/mexico/guadalajara/Guadalajara1.png",
+    "badgeShape": "square",
+    "badgeFit": "contain"
+  },
+  "gdl2": {
+    "name": "Line 2",
+    "color": "#1CB34B",
+    "backgroundColor": "#1CB34B",
+    "textColor": "#FFFFFF",
+    "progressOutlineColor": "#1CB34B",
+    "order": 1,
+    "icon": "north-america/mexico/guadalajara/Guadalajara2.png",
+    "badgeShape": "square",
+    "badgeFit": "contain"
+  },
+  "gdl3": {
+    "name": "Line 3",
+    "color": "#EC3F71",
+    "backgroundColor": "#EC3F71",
+    "textColor": "#FFFFFF",
+    "progressOutlineColor": "#EC3F71",
+    "order": 2,
+    "icon": "north-america/mexico/guadalajara/Guadalajara3.png",
+    "badgeShape": "square",
+    "badgeFit": "contain"
+  },
+  "gdl4": {
+    "name": "Line 4",
+    "color": "#EE921B",
+    "backgroundColor": "#EE921B",
+    "textColor": "#1F1F1F",
+    "progressOutlineColor": "#EE921B",
+    "order": 3,
+    "icon": "north-america/mexico/guadalajara/Guadalajara4.png",
+    "badgeShape": "square",
+    "badgeFit": "contain"
+  }
+}

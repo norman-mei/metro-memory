@@ -1,0 +1,740 @@
+{
+  "city": "california-state",
+  "continent": "north america",
+  "bbox": [
+    32.54408952249234,
+    -123.0120644,
+    38.9612829,
+    -116.9756645291548
+  ],
+  "localLanguages": [
+    "en"
+  ],
+  "modes": [
+    "subway",
+    "light_rail",
+    "tram",
+    "rail",
+    "funicular",
+    "monorail",
+    "cable_car",
+    "gondola",
+    "chair_lift"
+  ],
+  "lines": [
+    {
+      "id": "LACMTA_A",
+      "name": "A Line",
+      "keywords": [
+        "A Line",
+        "Line A",
+        "Route A",
+        "Line A Line",
+        "Route A Line",
+        "LACMTA A",
+        "LACMTA A Line"
+      ],
+      "order": 0,
+      "icon": "north-america/usa/california-state/LACMTA_Circle_A_Line.svg"
+    },
+    {
+      "id": "MTSBlue",
+      "name": "Blue",
+      "keywords": [
+        "Blue",
+        "Blue Line",
+        "MTS Blue"
+      ],
+      "order": 0,
+      "icon": "north-america/usa/california-state/MTSBlue.svg"
+    },
+    {
+      "id": "BARTYellow",
+      "name": "Yellow",
+      "keywords": [
+        "Yellow",
+        "Yellow Line",
+        "BART Yellow"
+      ],
+      "order": 0,
+      "icon": "north-america/usa/california-state/Yellow_Line_(BART).svg"
+    },
+    {
+      "id": "LACMTA_B",
+      "name": "B Line",
+      "keywords": [
+        "B Line",
+        "Line B",
+        "Route B",
+        "Line B Line",
+        "Route B Line",
+        "LACMTA B",
+        "LACMTA B Line"
+      ],
+      "order": 1,
+      "icon": "north-america/usa/california-state/LACMTA_Circle_B_Line.svg"
+    },
+    {
+      "id": "BARTOrange",
+      "name": "Orange",
+      "keywords": [
+        "Orange",
+        "Orange Line",
+        "BART Orange"
+      ],
+      "order": 1,
+      "icon": "north-america/usa/california-state/Orange_Line_(BART).svg"
+    },
+    {
+      "id": "MTSOrange",
+      "name": "Orange",
+      "keywords": [
+        "Orange",
+        "Orange Line",
+        "MTS Orange"
+      ],
+      "order": 1,
+      "icon": "north-america/usa/california-state/MTSOrange.svg"
+    },
+    {
+      "id": "BARTBlue",
+      "name": "Blue",
+      "keywords": [
+        "Blue",
+        "Blue Line",
+        "BART Blue"
+      ],
+      "order": 2,
+      "icon": "north-america/usa/california-state/Blue_Line_(BART).svg"
+    },
+    {
+      "id": "LACMTA_C",
+      "name": "C Line",
+      "keywords": [
+        "C Line",
+        "Line C",
+        "Route C",
+        "Line C Line",
+        "Route C Line",
+        "LACMTA C",
+        "LACMTA C Line"
+      ],
+      "order": 2,
+      "icon": "north-america/usa/california-state/LACMTA_Circle_C_Line.svg"
+    },
+    {
+      "id": "MTSGreen",
+      "name": "Green",
+      "keywords": [
+        "Green",
+        "Green Line",
+        "MTS Green"
+      ],
+      "order": 2,
+      "icon": "north-america/usa/california-state/MTSGreen.svg"
+    },
+    {
+      "id": "LACMTA_D",
+      "name": "D Line",
+      "keywords": [
+        "D Line",
+        "Line D",
+        "Route D",
+        "Line D Line",
+        "Route D Line",
+        "LACMTA D",
+        "LACMTA D Line"
+      ],
+      "order": 3,
+      "icon": "north-america/usa/california-state/LACMTA_Circle_D_Line.svg"
+    },
+    {
+      "id": "BARTGreen",
+      "name": "Green",
+      "keywords": [
+        "Green",
+        "Green Line",
+        "BART Green"
+      ],
+      "order": 3,
+      "icon": "north-america/usa/california-state/Green_Line_(BART).svg"
+    },
+    {
+      "id": "MTSSilver",
+      "name": "Silver",
+      "keywords": [
+        "Silver",
+        "Silver Line",
+        "MTS Silver"
+      ],
+      "order": 3,
+      "icon": "north-america/usa/california-state/MTSSilver.svg"
+    },
+    {
+      "id": "LACMTA_E",
+      "name": "E Line",
+      "keywords": [
+        "E Line",
+        "Line E",
+        "Route E",
+        "Line E Line",
+        "Route E Line",
+        "LACMTA E",
+        "LACMTA E Line"
+      ],
+      "order": 4,
+      "icon": "north-america/usa/california-state/LACMTA_Circle_E_Line.svg"
+    },
+    {
+      "id": "BARTRed",
+      "name": "Red",
+      "keywords": [
+        "Red",
+        "Red Line",
+        "BART Red"
+      ],
+      "order": 4,
+      "icon": "north-america/usa/california-state/Red_Line_(BART).svg"
+    },
+    {
+      "id": "MTSSpecialEvents",
+      "name": "Special Events",
+      "keywords": [
+        "Special Events",
+        "MTS Special Events"
+      ],
+      "order": 4,
+      "icon": "north-america/usa/california-state/MTSSpecialEvents.svg"
+    },
+    {
+      "id": "MTSCopper",
+      "name": "Copper",
+      "keywords": [
+        "Copper",
+        "Copper Line",
+        "MTS Copper"
+      ],
+      "order": 5,
+      "icon": "north-america/usa/california-state/MTSCopper.svg"
+    },
+    {
+      "id": "LACMTA_K",
+      "name": "K Line",
+      "keywords": [
+        "K Line",
+        "Line K",
+        "Route K",
+        "Line K Line",
+        "Route K Line",
+        "LACMTA K",
+        "LACMTA K Line"
+      ],
+      "order": 5,
+      "icon": "north-america/usa/california-state/LACMTA_Circle_K_Line.svg"
+    },
+    {
+      "id": "BARTOAC",
+      "name": "Oakland Airport Connector",
+      "keywords": [
+        "Oakland Airport Connector",
+        "BARTOAC",
+        "BARTOAC Line"
+      ],
+      "order": 5,
+      "icon": "north-america/usa/california-state/Oakland_Airport_Connector.svg"
+    },
+    {
+      "id": "COASTER",
+      "name": "COASTER",
+      "keywords": [
+        "COASTER",
+        "COASTER Line"
+      ],
+      "order": 6,
+      "icon": "north-america/usa/california-state/COASTER.svg"
+    },
+    {
+      "id": "CaltrainLocal",
+      "name": "Local",
+      "keywords": [
+        "Local",
+        "Local Line",
+        "Caltrain Local"
+      ],
+      "order": 6,
+      "icon": "north-america/usa/california-state/CaltrainLocal.png"
+    },
+    {
+      "id": "OCStreetcar",
+      "name": "OC Streetcar",
+      "keywords": [
+        "OC Streetcar"
+      ],
+      "order": 6,
+      "icon": "north-america/usa/california-state/OCStreetcar.png"
+    },
+    {
+      "id": "CaltrainLimited",
+      "name": "Limited",
+      "keywords": [
+        "Limited",
+        "Limited Line",
+        "Caltrain Limited"
+      ],
+      "order": 7,
+      "icon": "north-america/usa/california-state/CaltrainLimited.png"
+    },
+    {
+      "id": "SPRINTER",
+      "name": "SPRINTER",
+      "keywords": [
+        "SPRINTER",
+        "SPRINTER Line"
+      ],
+      "order": 7,
+      "icon": "north-america/usa/california-state/SPRINTER.svg"
+    },
+    {
+      "id": "CaltrainExpress",
+      "name": "Express",
+      "keywords": [
+        "Express",
+        "Express Line",
+        "Caltrain Express"
+      ],
+      "order": 8,
+      "icon": "north-america/usa/california-state/CaltrainExpress.png"
+    },
+    {
+      "id": "MuniE",
+      "name": "Embarcadero",
+      "keywords": [
+        "Embarcadero",
+        "Embarcadero Line",
+        "Muni E",
+        "Muni E Line",
+        "Line E",
+        "E Line",
+        "Route E",
+        "Line E Line",
+        "Route E Line"
+      ],
+      "order": 9,
+      "icon": "north-america/usa/california-state/E_Embarcadero_logo.svg"
+    },
+    {
+      "id": "CaltrainSouth",
+      "name": "South County Connector",
+      "keywords": [
+        "South County Connector",
+        "Caltrain South"
+      ],
+      "order": 9,
+      "icon": "north-america/usa/california-state/CaltrainSouth.png"
+    },
+    {
+      "id": "MetrolinkAV",
+      "name": "Antelope Valley Line",
+      "keywords": [
+        "Antelope Valley Line",
+        "Antelope Valley",
+        "Metrolink AV"
+      ],
+      "order": 10,
+      "icon": "north-america/usa/california-state/MetrolinkAV.png"
+    },
+    {
+      "id": "MuniF",
+      "name": "Market & Wharves",
+      "keywords": [
+        "Market & Wharves",
+        "Muni F",
+        "Muni F Line",
+        "Line F",
+        "F Line",
+        "Route F",
+        "Line F Line",
+        "Route F Line"
+      ],
+      "order": 10,
+      "icon": "north-america/usa/california-state/F_Market_&_Wharves_logo.svg"
+    },
+    {
+      "id": "SMART",
+      "name": "SMART",
+      "keywords": [
+        "SMART",
+        "SMART Line"
+      ],
+      "order": 10,
+      "icon": "north-america/usa/california-state/SMART.svg"
+    },
+    {
+      "id": "ACE",
+      "name": "Altamont Corridor Express",
+      "keywords": [
+        "Altamont Corridor Express",
+        "ACE",
+        "ACE Line"
+      ],
+      "order": 11,
+      "icon": "north-america/usa/california-state/ACE.svg"
+    },
+    {
+      "id": "MuniJ",
+      "name": "Church",
+      "keywords": [
+        "Church",
+        "Church Line",
+        "Muni J",
+        "Muni J Line",
+        "Line J",
+        "J Line",
+        "Route J",
+        "Line J Line",
+        "Route J Line"
+      ],
+      "order": 11,
+      "icon": "north-america/usa/california-state/J_Church_logo.svg"
+    },
+    {
+      "id": "MetrolinkVC",
+      "name": "Ventura County Line",
+      "keywords": [
+        "Ventura County Line",
+        "Ventura County",
+        "Metrolink VC"
+      ],
+      "order": 11,
+      "icon": "north-america/usa/california-state/MetrolinkVC.png"
+    },
+    {
+      "id": "MuniK",
+      "name": "Ingleside",
+      "keywords": [
+        "Ingleside",
+        "Ingleside Line",
+        "Muni K",
+        "Muni K Line",
+        "Line K",
+        "K Line",
+        "Route K",
+        "Line K Line",
+        "Route K Line"
+      ],
+      "order": 12,
+      "icon": "north-america/usa/california-state/K_Ingleside_logo.svg"
+    },
+    {
+      "id": "MetrolinkSB",
+      "name": "San Bernardino Line",
+      "keywords": [
+        "San Bernardino Line",
+        "San Bernardino",
+        "Metrolink SB",
+        "Line B",
+        "B Line",
+        "Route B",
+        "Line B Line",
+        "Route B Line"
+      ],
+      "order": 12,
+      "icon": "north-america/usa/california-state/MetrolinkSB.png"
+    },
+    {
+      "id": "MetrolinkRIV",
+      "name": "Riverside Line",
+      "keywords": [
+        "Riverside Line",
+        "Riverside",
+        "Metrolink RIV"
+      ],
+      "order": 13,
+      "icon": "north-america/usa/california-state/MetrolinkRIV.png"
+    },
+    {
+      "id": "MuniL",
+      "name": "Taraval",
+      "keywords": [
+        "Taraval",
+        "Taraval Line",
+        "Muni L",
+        "Muni L Line",
+        "Line L",
+        "L Line",
+        "Route L",
+        "Line L Line",
+        "Route L Line"
+      ],
+      "order": 13,
+      "icon": "north-america/usa/california-state/L_Taraval_logo.svg"
+    },
+    {
+      "id": "MuniM",
+      "name": "Ocean View",
+      "keywords": [
+        "Ocean View",
+        "Muni M",
+        "Muni M Line",
+        "Line M",
+        "M Line",
+        "Route M",
+        "Line M Line",
+        "Route M Line"
+      ],
+      "order": 14,
+      "icon": "north-america/usa/california-state/M_Ocean_View_logo.svg"
+    },
+    {
+      "id": "MetrolinkOC",
+      "name": "Orange County Line",
+      "keywords": [
+        "Orange County Line",
+        "Orange County",
+        "Metrolink OC"
+      ],
+      "order": 14,
+      "icon": "north-america/usa/california-state/MetrolinkOC.png"
+    },
+    {
+      "id": "Metrolink91PV",
+      "name": "91/Perris Valley Line",
+      "keywords": [
+        "91/Perris Valley Line",
+        "91/Perris Valley",
+        "Line 91",
+        "91 Line",
+        "L91",
+        "91号线",
+        "地铁91号线",
+        "91号線",
+        "91호선",
+        "Route 91",
+        "Tram Route 91",
+        "91",
+        "Metrolink91 PV"
+      ],
+      "order": 15,
+      "icon": "north-america/usa/california-state/Metrolink91PV.png"
+    },
+    {
+      "id": "MuniN",
+      "name": "Judah",
+      "keywords": [
+        "Judah",
+        "Judah Line",
+        "Muni N",
+        "Muni N Line",
+        "Line N",
+        "N Line",
+        "Route N",
+        "Line N Line",
+        "Route N Line"
+      ],
+      "order": 15,
+      "icon": "north-america/usa/california-state/N_Judah_logo.svg"
+    },
+    {
+      "id": "MetrolinkIEOC",
+      "name": "Inland Empire–Orange County Line",
+      "keywords": [
+        "Inland Empire–Orange County Line",
+        "Inland Empire–Orange County",
+        "Metrolink IEOC"
+      ],
+      "order": 16,
+      "icon": "north-america/usa/california-state/MetrolinkIEOC.png"
+    },
+    {
+      "id": "MuniS",
+      "name": "Shuttle",
+      "keywords": [
+        "Shuttle",
+        "Shuttle Line",
+        "Muni S",
+        "Muni S Line",
+        "Line S",
+        "S Line",
+        "Route S",
+        "Line S Line",
+        "Route S Line"
+      ],
+      "order": 16,
+      "icon": "north-america/usa/california-state/S_Shuttle_logo.svg"
+    },
+    {
+      "id": "Arrow",
+      "name": "Arrow",
+      "keywords": [
+        "Arrow",
+        "Arrow Line"
+      ],
+      "order": 17,
+      "icon": "north-america/usa/california-state/Arrow.png"
+    },
+    {
+      "id": "MuniT",
+      "name": "Third Street",
+      "keywords": [
+        "Third Street",
+        "Muni T",
+        "Muni T Line",
+        "Line T",
+        "T Line",
+        "Route T",
+        "Line T Line",
+        "Route T Line"
+      ],
+      "order": 17,
+      "icon": "north-america/usa/california-state/T_Third_Street_logo.svg"
+    },
+    {
+      "id": "LAXAPM",
+      "name": "LAX Automated People Mover",
+      "keywords": [
+        "LAX Automated People Mover",
+        "LAXAPM",
+        "LAXAPM Line"
+      ],
+      "order": 18,
+      "icon": "north-america/usa/california-state/LAXAPM.png"
+    },
+    {
+      "id": "MuniC",
+      "name": "California Cable Car",
+      "keywords": [
+        "California Cable Car",
+        "Muni C",
+        "Muni C Line",
+        "Line C",
+        "C Line",
+        "Route C",
+        "Line C Line",
+        "Route C Line"
+      ],
+      "order": 19,
+      "icon": "north-america/usa/california-state/MuniC.png"
+    },
+    {
+      "id": "MuniPH",
+      "name": "Powell-Hyde Cable Car",
+      "keywords": [
+        "Powell-Hyde Cable Car",
+        "Muni PH"
+      ],
+      "order": 20,
+      "icon": "north-america/usa/california-state/MuniPH.png"
+    },
+    {
+      "id": "MuniPM",
+      "name": "Powell-Mason Cable Car",
+      "keywords": [
+        "Powell-Mason Cable Car",
+        "Muni PM"
+      ],
+      "order": 21,
+      "icon": "north-america/usa/california-state/MuniPM.png"
+    },
+    {
+      "id": "VTABlue",
+      "name": "Blue",
+      "keywords": [
+        "Blue",
+        "Blue Line",
+        "VTA Blue"
+      ],
+      "order": 30,
+      "icon": "north-america/usa/california-state/VTA-Blue-icon.svg"
+    },
+    {
+      "id": "VTAGreen",
+      "name": "Green",
+      "keywords": [
+        "Green",
+        "Green Line",
+        "VTA Green"
+      ],
+      "order": 31,
+      "icon": "north-america/usa/california-state/VTA-Green-icon.svg"
+    },
+    {
+      "id": "VTAOrange",
+      "name": "Orange",
+      "keywords": [
+        "Orange",
+        "Orange Line",
+        "VTA Orange"
+      ],
+      "order": 32,
+      "icon": "north-america/usa/california-state/VTA-Orange-icon.svg"
+    },
+    {
+      "id": "SacRTGold",
+      "name": "Gold",
+      "keywords": [
+        "Gold",
+        "Gold Line",
+        "Sac RT Gold"
+      ],
+      "order": 40,
+      "icon": "north-america/usa/california-state/SacRTGold.png"
+    },
+    {
+      "id": "SacRTBlue",
+      "name": "Blue",
+      "keywords": [
+        "Blue",
+        "Blue Line",
+        "Sac RT Blue"
+      ],
+      "order": 41,
+      "icon": "north-america/usa/california-state/SacRTBlue.png"
+    },
+    {
+      "id": "SacRTGreen",
+      "name": "Green",
+      "keywords": [
+        "Green",
+        "Green Line",
+        "Sac RT Green"
+      ],
+      "order": 42,
+      "icon": "north-america/usa/california-state/SacRTGreen.png"
+    },
+    {
+      "id": "SFOBlue",
+      "name": "Blue",
+      "keywords": [
+        "Blue",
+        "Blue Line",
+        "SFO Blue"
+      ],
+      "order": 60,
+      "icon": "north-america/usa/california-state/SFOBlue.png"
+    },
+    {
+      "id": "SFORed",
+      "name": "Red",
+      "keywords": [
+        "Red",
+        "Red Line",
+        "SFO Red"
+      ],
+      "order": 61,
+      "icon": "north-america/usa/california-state/SFORed.png"
+    },
+    {
+      "id": "CAHSR",
+      "name": "CAHSR",
+      "keywords": [
+        "CAHSR",
+        "CAHSR Line"
+      ],
+      "order": 70,
+      "icon": "north-america/usa/california-state/CAHSR.png"
+    }
+  ],
+  "stationAliases": {},
+  "stationLocalNames": {},
+  "manualCoords": {}
+}

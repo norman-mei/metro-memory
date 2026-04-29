@@ -1,0 +1,817 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-111.884, 40.761]
+      },
+      "properties": {
+        "station_name": "Library",
+        "address": "225 E 400 S",
+        "park_and_ride": false,
+        "route_name": "TRAX Red Line",
+        "status": "in service"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-111.873, 40.761]
+      },
+      "properties": {
+        "station_name": "Trolley",
+        "address": "625 E 400 S",
+        "park_and_ride": false,
+        "route_name": "TRAX Red Line",
+        "status": "in service"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-111.866, 40.761]
+      },
+      "properties": {
+        "station_name": "900 East",
+        "address": "875 E 400 S",
+        "park_and_ride": false,
+        "route_name": "TRAX Red Line",
+        "status": "in service"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-111.852, 40.76]
+      },
+      "properties": {
+        "station_name": "Stadium",
+        "address": "1349 E 500 S",
+        "park_and_ride": false,
+        "route_name": "TRAX Red Line",
+        "status": "in service"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-111.897, 40.688]
+      },
+      "properties": {
+        "station_name": "Meadowbrook",
+        "address": "188 W 3900 S",
+        "park_and_ride": true,
+        "route_name": "TRAX Blue, Red Line",
+        "status": "in service"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-111.894, 40.677]
+      },
+      "properties": {
+        "station_name": "Murray North",
+        "address": "71 W Fireclay Ave",
+        "park_and_ride": true,
+        "route_name": "TRAX Blue, Red Line",
+        "status": "in service"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-111.895, 40.66]
+      },
+      "properties": {
+        "station_name": "Murray Central",
+        "address": "140 W Vine St",
+        "park_and_ride": true,
+        "route_name": "TRAX Blue, Red Line",
+        "status": "in service"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-111.898, 40.634]
+      },
+      "properties": {
+        "station_name": "Fashion Place West",
+        "address": "222 W Winchester St",
+        "park_and_ride": true,
+        "route_name": "TRAX Blue, Red Line",
+        "status": "in service"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-111.898, 40.619]
+      },
+      "properties": {
+        "station_name": "Midvale Fort Union",
+        "address": "180 W 7250 S",
+        "park_and_ride": true,
+        "route_name": "TRAX Blue Line",
+        "status": "in service"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-111.893, 40.61]
+      },
+      "properties": {
+        "station_name": "Midvale Center",
+        "address": "95 W 7720 S",
+        "park_and_ride": true,
+        "route_name": "TRAX Blue Line",
+        "status": "in service"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-111.886, 40.589]
+      },
+      "properties": {
+        "station_name": "Historic Sandy",
+        "address": "165 E 9000 S",
+        "park_and_ride": true,
+        "route_name": "TRAX Blue Line",
+        "status": "in service"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-111.885, 40.571]
+      },
+      "properties": {
+        "station_name": "Sandy Civic Center",
+        "address": "115 E Sego Lily Dr",
+        "park_and_ride": true,
+        "route_name": "TRAX Blue Line",
+        "status": "in service"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-111.897, 40.742]
+      },
+      "properties": {
+        "station_name": "Ballpark",
+        "address": "180 W 1300 S",
+        "park_and_ride": true,
+        "route_name": "TRAX Red, Blue, Green Line",
+        "status": "in service"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-111.897, 40.724]
+      },
+      "properties": {
+        "station_name": "Central Pointe",
+        "address": "221 W 2100 S",
+        "park_and_ride": true,
+        "route_name": "TRAX Red, Blue, Green Line",
+        "status": "in service"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-111.897, 40.701]
+      },
+      "properties": {
+        "station_name": "Millcreek",
+        "address": "210 W 3300 S",
+        "park_and_ride": true,
+        "route_name": "TRAX Blue, Red Line",
+        "status": "in service"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-111.891, 40.768]
+      },
+      "properties": {
+        "station_name": "City Center",
+        "address": "15 S Main St",
+        "park_and_ride": false,
+        "route_name": "TRAX Blue, Green Line",
+        "status": "in service"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-111.891, 40.763]
+      },
+      "properties": {
+        "station_name": "Gallivan Plaza",
+        "address": "239 S Main St",
+        "park_and_ride": false,
+        "route_name": "TRAX Blue, Green Line",
+        "status": "in service"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-111.895, 40.769]
+      },
+      "properties": {
+        "station_name": "Temple Square",
+        "address": "132 W South Temple",
+        "park_and_ride": false,
+        "route_name": "TRAX Blue, Green Line",
+        "status": "in service"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-111.901, 40.769]
+      },
+      "properties": {
+        "station_name": "Arena",
+        "address": "301 W South Temple",
+        "park_and_ride": false,
+        "route_name": "TRAX Blue, Green Line",
+        "status": "in service"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-111.891, 40.759]
+      },
+      "properties": {
+        "station_name": "Courthouse",
+        "address": "450 S Main St",
+        "park_and_ride": false,
+        "route_name": "TRAX Red, Blue, Green Line",
+        "status": "in service"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-111.84, 40.76]
+      },
+      "properties": {
+        "station_name": "University South Campus",
+        "address": "1790 S Campus Dr",
+        "park_and_ride": false,
+        "route_name": "TRAX Red Line",
+        "status": "in service"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-111.839, 40.77]
+      },
+      "properties": {
+        "station_name": "University Medical Center",
+        "address": "10 N Medical Dr",
+        "park_and_ride": false,
+        "route_name": "TRAX Red Line",
+        "status": "in service"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-111.837, 40.764]
+      },
+      "properties": {
+        "station_name": "Fort Douglas",
+        "address": "200 S Wasatch Dr",
+        "park_and_ride": false,
+        "route_name": "TRAX Red Line",
+        "status": "in service"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-111.897, 40.75]
+      },
+      "properties": {
+        "station_name": "900 South",
+        "address": "860 S 200 W",
+        "park_and_ride": false,
+        "route_name": "TRAX Red, Blue, Green Line, S...",
+        "status": "in service"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-111.886, 40.581]
+      },
+      "properties": {
+        "station_name": "Sandy Expo",
+        "address": "150 East 9400 South",
+        "park_and_ride": false,
+        "route_name": "TRAX Blue Line",
+        "status": "in service"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-111.906, 40.765]
+      },
+      "properties": {
+        "station_name": "Old Greektown",
+        "address": "450 West 200 South",
+        "park_and_ride": false,
+        "route_name": "TRAX Blue Line",
+        "status": "in service"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-111.908, 40.762]
+      },
+      "properties": {
+        "station_name": "Salt Lake Central",
+        "address": "250 South 600 West",
+        "park_and_ride": true,
+        "route_name": "TRAX Blue Line",
+        "status": "in service"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-111.903, 40.766]
+      },
+      "properties": {
+        "station_name": "Planetarium",
+        "address": "150 South 400 West",
+        "park_and_ride": false,
+        "route_name": "TRAX Blue, Green Line",
+        "status": "in service"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-111.859, 40.526]
+      },
+      "properties": {
+        "station_name": "Draper Town Center",
+        "address": "1131 E Pioneer Road",
+        "park_and_ride": true,
+        "route_name": "TRAX Blue Line",
+        "status": "in service"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-111.872, 40.536]
+      },
+      "properties": {
+        "station_name": "Kimballs Lane",
+        "address": "11796 South 700 East",
+        "park_and_ride": true,
+        "route_name": "TRAX Blue Line",
+        "status": "in service"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-111.879, 40.545]
+      },
+      "properties": {
+        "station_name": "Crescent View",
+        "address": "361 East 11400 South",
+        "park_and_ride": true,
+        "route_name": "TRAX Blue Line",
+        "status": "in service"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-112.014, 40.544]
+      },
+      "properties": {
+        "station_name": "Daybreak Parkway",
+        "address": "11405 S Grandville Ave",
+        "park_and_ride": true,
+        "route_name": "TRAX Red Line",
+        "status": "in service"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-112.025, 40.559]
+      },
+      "properties": {
+        "station_name": "South Jordan Parkway",
+        "address": "10605 S Grandville Ave",
+        "park_and_ride": true,
+        "route_name": "TRAX Red Line",
+        "status": "in service"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-112.025, 40.569]
+      },
+      "properties": {
+        "station_name": "5600 W. Old Bingham ...",
+        "address": "5651 W Old Bingham Hwy",
+        "park_and_ride": true,
+        "route_name": "TRAX Red Line",
+        "status": "in service"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-112.004, 40.582]
+      },
+      "properties": {
+        "station_name": "4800 W. Old Bingham ...",
+        "address": "4773 W Old Bingham Hwy",
+        "park_and_ride": true,
+        "route_name": "TRAX Red Line",
+        "status": "in service"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-111.972, 40.595]
+      },
+      "properties": {
+        "station_name": "Jordan Valley",
+        "address": "8600 South 3200 West",
+        "park_and_ride": true,
+        "route_name": "TRAX Red Line",
+        "status": "in service"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-111.957, 40.599]
+      },
+      "properties": {
+        "station_name": "2700 W. Sugar Factory ...",
+        "address": "8351 South 2700 West",
+        "park_and_ride": true,
+        "route_name": "TRAX Red Line",
+        "status": "in service"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-111.936, 40.605]
+      },
+      "properties": {
+        "station_name": "West Jordan City Center",
+        "address": "8021 S Redwood Rd",
+        "park_and_ride": true,
+        "route_name": "TRAX Red Line",
+        "status": "in service"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-111.924, 40.608]
+      },
+      "properties": {
+        "station_name": "Historic Gardner",
+        "address": "1127 West 7800 South",
+        "park_and_ride": true,
+        "route_name": "TRAX Red Line",
+        "status": "in service"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-111.915, 40.617]
+      },
+      "properties": {
+        "station_name": "Bingham Junction",
+        "address": "7387 S Bingham Junction Blvd",
+        "park_and_ride": true,
+        "route_name": "TRAX Red Line",
+        "status": "in service"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-111.959, 40.694]
+      },
+      "properties": {
+        "station_name": "West Valley Central",
+        "address": "2750 West 3590 South",
+        "park_and_ride": true,
+        "route_name": "TRAX Green Line",
+        "status": "in service"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-111.949, 40.705]
+      },
+      "properties": {
+        "station_name": "Decker Lake",
+        "address": "3070 South 2200 West",
+        "park_and_ride": true,
+        "route_name": "TRAX Green Line",
+        "status": "in service"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-111.94, 40.711]
+      },
+      "properties": {
+        "station_name": "Redwood Junction",
+        "address": "1740 W Research Way",
+        "park_and_ride": false,
+        "route_name": "TRAX Green Line",
+        "status": "in service"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-111.924, 40.72]
+      },
+      "properties": {
+        "station_name": "River Trail",
+        "address": "2340 South 1070 West",
+        "park_and_ride": false,
+        "route_name": "TRAX Green Line",
+        "status": "in service"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-111.89, 40.722]
+      },
+      "properties": {
+        "station_name": "South Salt Lake City",
+        "address": "30 East",
+        "park_and_ride": false,
+        "route_name": "S Line",
+        "status": "in service"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-111.882, 40.722]
+      },
+      "properties": {
+        "station_name": "300 East",
+        "address": "300 East",
+        "park_and_ride": false,
+        "route_name": "S Line",
+        "status": "in service"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-111.877, 40.722]
+      },
+      "properties": {
+        "station_name": "500 East",
+        "address": "500 East",
+        "park_and_ride": false,
+        "route_name": "S Line",
+        "status": "in service"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-111.872, 40.723]
+      },
+      "properties": {
+        "station_name": "700 East",
+        "address": "700 East",
+        "park_and_ride": false,
+        "route_name": "S Line",
+        "status": "in service"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-111.865, 40.723]
+      },
+      "properties": {
+        "station_name": "Sugarmont",
+        "address": "910 East",
+        "park_and_ride": false,
+        "route_name": "S Line",
+        "status": "in service"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-111.862, 40.723]
+      },
+      "properties": {
+        "station_name": "Fairmont",
+        "address": "1040 East",
+        "park_and_ride": false,
+        "route_name": "S Line",
+        "status": "in service"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-111.905, 40.772]
+      },
+      "properties": {
+        "station_name": "North Temple Bridge",
+        "address": "490 W North Temple",
+        "park_and_ride": false,
+        "route_name": "TRAX Green Line",
+        "status": "in service"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-111.915, 40.772]
+      },
+      "properties": {
+        "station_name": "Jackson/Euclid",
+        "address": "820 W North Temple",
+        "park_and_ride": false,
+        "route_name": "TRAX Green Line",
+        "status": "in service"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-111.924, 40.771]
+      },
+      "properties": {
+        "station_name": "Fairpark",
+        "address": "1150 W North Temple",
+        "park_and_ride": false,
+        "route_name": "TRAX Green Line",
+        "status": "in service"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-111.934, 40.772]
+      },
+      "properties": {
+        "station_name": "Power",
+        "address": "1480 W North Temple",
+        "park_and_ride": false,
+        "route_name": "TRAX Green Line",
+        "status": "in service"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-111.946, 40.772]
+      },
+      "properties": {
+        "station_name": "1940 W. North Temple",
+        "address": "1940 W North Temple",
+        "park_and_ride": false,
+        "route_name": "TRAX Green Line",
+        "status": "in service"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-111.98, 40.784]
+      },
+      "properties": {
+        "station_name": "Airport",
+        "address": "700 N Terminal Dr",
+        "park_and_ride": false,
+        "route_name": "TRAX Green Line",
+        "status": "in service"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-111.891, 40.756]
+      },
+      "properties": {
+        "station_name": "600 South",
+        "address": "600 South Station",
+        "park_and_ride": false,
+        "route_name": "TRAX Red, Blue, Green Line",
+        "status": "in service"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-112.02, 40.55]
+      },
+      "properties": {
+        "station_name": "South Jordan Downtown",
+        "address": "10351 South Jordan Gateway",
+        "park_and_ride": true,
+        "route_name": "TRAX Red Line",
+        "status": "in service"
+      }
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+:root {
+    --font-family-zh: Arial, SimHei, STHeitiSC-Medium, 'PingFang SC';
+    --font-family-en: Arial;
+}
+
+.rmg-name__zh {
+    dominant-baseline: central;
+    font-family: var(--font-family-zh), sans-serif;
+    font-weight: normal;
+}
+
+.rmg-name__en {
+    dominant-baseline: middle;
+    font-family: var(--font-family-en), sans-serif;
+}
+
+.rmg-font__zh {
+    font-family: var(--font-family-zh), sans-serif;
+    font-weight: normal;
+}
+
+.rmg-font__en {
+    font-family: var(--font-family-en), sans-serif;
+}
+
+rect#strip_gz {
+    fill: var(--rmg-theme-colour);
+    width: var(--rmg-svg-width);
+    transform: translateY(calc(var(--rmg-svg-height) - var(--strip-height)));
+    height: var(--strip-height);
+}
+
+.gz1-gap {
+    width: var(--rmg-svg-width);
+    transform: translateY(calc(var(--rmg-svg-height) - var(--strip-height) - 2px));
+    height: 2px;
+}
+
+.rmg-name__gzmtr--white-fg {
+    fill: #fff;
+}
+
+/* for runin */
+.rmg-name__en.rmg-name__gzmtr--next2-dest {
+    font-size: 8.5px;
+}
+
+g#big_sec {
+    transform: translate(var(--translate-x), var(--translate-y, 125px));
+    --translate-x: calc(var(--rmg-svg-width) / 2);
+}
+
+/* for railmap */
+.Name.Pass {
+    fill: #aaa;
+}
+
+.Name.Current {
+    fill: #fff;
+}
+
+.Name.CurrentGZ {
+    fill: #f00;
+}
+
+.Name.Future {
+    fill: #000;
+}
+
+.line_name {
+    transform: translate(var(--translate-x, 0px), -18px) scale(1.5);
+}
+
+g#direction_gz {
+    transform: translate(var(--translate-x), var(--translate-y));
+    --translate-x: calc(var(--rmg-svg-width) * var(--x-percentage, 50) / 100);
+    --translate-y: calc(var(--rmg-svg-height) * var(--y-percentage, 70) / 100);
+}
+
+g#terminus_gz {
+    transform: translate(var(--translate-x), var(--translate-y));
+    --translate-x: calc(var(--rmg-svg-width) / 2);
+    --translate-y: calc(var(--rmg-svg-height) / 2 - 50px);
+}
+
+g.note-box {
+    transform: translate(var(--translate-x), var(--translate-y));
+    --translate-x: calc(var(--x-percentage, 0) * var(--rmg-svg-width) / 100);
+    --translate-y: calc(var(--y-percentage, 0) * var(--rmg-svg-height) / 100);
+}

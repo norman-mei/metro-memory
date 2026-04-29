@@ -1,0 +1,6594 @@
+'use client'
+
+import AccountDashboard from '@/app/(website)/account/panel'
+import AchievementToast from '@/components/AchievementToast'
+import AdSlot from '@/components/ads/AdSlot'
+import CityStatsPanel from '@/components/CityStatsPanel'
+import FoundList from '@/components/FoundList'
+import FoundSummary from '@/components/FoundSummary'
+import Input from '@/components/Input'
+import IntroModal from '@/components/IntroModal'
+import MenuComponent from '@/components/Menu'
+import MiniCityLinksPanel from '@/components/MiniCityLinksPanel'
+import CustomGameModal from '@/components/CustomGameModal'
+import MissedGuessInputsModal from '@/components/MissedGuessInputsModal'
+import PrivacyPanel from '@/components/PrivacyPanel'
+import SettingsPanel from '@/components/SettingsPanel'
+import SpeedrunToast from '@/components/SpeedrunToast'
+import ThemeToggleButton from '@/components/ThemeToggleButton'
+
+import ZenModeToast from '@/components/ZenModeToast'
+import { useAuth } from '@/context/AuthContext'
+import { KeybindingAction, useSettings } from '@/context/SettingsContext'
+import useHideLabels from '@/hooks/useHideLabels'
+import useNormalizeString from '@/hooks/useNormalizeString'
+import { useShouldShowAds } from '@/hooks/useShouldShowAds'
+import useTranslation from '@/hooks/useTranslation'
+import { getAchievementForCity } from '@/lib/achievements'
+import { useConfig } from '@/lib/configContext'
+import { getCityStationAliases } from '@/lib/cityStationAliases'
+import { getKeystrokeFromEvent } from '@/lib/keyboardUtils'
+import { rememberLastPlayedCity } from '@/lib/lastPlayedCities'
+import { disableMapboxTelemetry } from '@/lib/mapboxTelemetry'
+import { loadMiniCityStationIdSet } from '@/lib/miniCityProgress'
+import { getMiniCityLinksForSlug, isMiniCitySlug } from '@/lib/miniCities'
+import { repairMojibakeArray, repairMojibakeString } from '@/lib/repairMojibake'
+import {
+    DEFAULT_RANKED_RULESET,
+    DEFAULT_RANKED_SOURCE,
+    RANKED_REVEAL_REASON,
+    formatRankedRuleset,
+    formatRankedRunSource,
+    parseRankedRuleset,
+    parseRankedRunSource,
+} from '@/lib/ranked'
+import {
+    clearAutoRevealSuppressionForCity,
+    readSolutionsAccess,
+    shouldAutoRevealSolutions,
+    suppressAutoRevealForCity,
+    writeSolutionsAccess,
+} from '@/lib/solutionsAccess'
+import {
+    autoClusterAliasSetsOverlap,
+    buildAutoClusterAliases,
+} from '@/lib/stationComplexes'
+import { getStationKey } from '@/lib/stationUtils'
+import {
+    DataFeature,
+    DataFeatureCollection,
+    RoutesFeatureCollection,
+} from '@/lib/types'
+import { useLocalStorageValue } from '@react-hookz/web'
+import { coordEach } from '@turf/meta'
+import { bbox } from '@turf/turf'
+import Fuse from 'fuse.js'
+import mapboxgl from 'mapbox-gl'
+import 'mapbox-gl/dist/mapbox-gl.css'
+import { useTheme } from 'next-themes'
+import Link from 'next/link'
+import { usePathname, useRouter, useSearchParams } from 'next/navigation'
+import {
+    CSSProperties,
+    ChangeEvent,
+    ComponentPropsWithoutRef,
+    FormEvent,
+    Suspense,
+    useCallback,
+    useEffect,
+    useMemo,
+    useRef,
+    useState,
+} from 'react'
+import 'react-circular-progressbar/dist/styles.css'
+
+function SidebarArrowUpIcon(props: ComponentPropsWithoutRef<'svg'>) {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
+      <path
+        d="M12 19.5v-15m0 0L5.25 11.25M12 4.5l6.75 6.75"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  )
+}
+
+const CONNECTOR_CONFIG = [
+  { delimiter: ' - ', joiner: ' - ' },
+  { delimiter: ' / ', joiner: ' / ' },
+  { delimiter: ' & ', joiner: ' & ' },
+]
+
+const ACHIEVEMENT_COMPLETION_THRESHOLD = 0.9999
+const INLINE_AD_SLOT = process.env.NEXT_PUBLIC_ADSENSE_SLOT_INLINE
+
+type StoredMapView = {
+  zoom: number
+  center: [number, number]
+}
+
+const isStoredMapView = (value: unknown): value is StoredMapView => {
+  if (!value || typeof value !== 'object') {
+    return false
+  }
+
+  const candidate = value as { zoom?: unknown; center?: unknown }
+  return (
+    typeof candidate.zoom === 'number' &&
+    Number.isFinite(candidate.zoom) &&
+    Array.isArray(candidate.center) &&
+    candidate.center.length === 2 &&
+    candidate.center.every((coordinate) =>
+      typeof coordinate === 'number' && Number.isFinite(coordinate),
+    )
+  )
+}
+
+const getStoredMapViewFromMap = (map: mapboxgl.Map): StoredMapView | null => {
+  try {
+    const center = map.getCenter()
+    const view = {
+      zoom: map.getZoom(),
+      center: [center.lng, center.lat] as [number, number],
+    }
+
+    return isStoredMapView(view) ? view : null
+  } catch {
+    return null
+  }
+}
+
+const safeSetMapLayoutProperty = (
+  map: mapboxgl.Map,
+  layerId: string,
+  property: string,
+  value: unknown,
+) => {
+  try {
+    if (!map.getStyle()?.layers || !map.getLayer(layerId)) {
+      return
+    }
+
+    if (map.getLayoutProperty(layerId, property) !== value) {
+      map.setLayoutProperty(layerId, property, value as any)
+    }
+  } catch (error) {
+    const message = error instanceof Error ? error.message : String(error)
+    if (!message.toLowerCase().includes('style')) {
+      console.warn(`Failed to update map layer "${layerId}"`, error)
+    }
+  }
+}
+
+const mapUnavailableMessage =
+  'This browser lost the WebGL map context, so the map cannot be displayed right now. Please reload the page, enable hardware acceleration, or try a different browser.'
+
+type AchievementToastState = {
+  slug: string
+  cityName: string
+  title: string
+  description: string
+}
+
+type MapCoordsMenuState = {
+  x: number
+  y: number
+  lng: number
+  lat: number
+}
+
+const achievementToastStorageKey = (slug: string) => `achievement-toast-hidden-${slug}`
+const speedrunStartStorageKey = (city: string) => `${city}-speedrun-start`
+const FAVORITES_STORAGE_PREFIX = 'favorites-v1'
+const getFavoritesStorageKey = (userId?: string | null) =>
+  `${FAVORITES_STORAGE_PREFIX}-${userId || 'anon'}`
+
+const deriveCityDisplayName = (title?: string, fallback?: string) => {
+  const repairedTitle = title ? repairMojibakeString(title) : title
+  if (!repairedTitle) {
+    return fallback ?? ''
+  }
+  const stripped = repairedTitle
+    .replace(/\s*\|\s*.*$/, '')
+    .replace(/Metro Memory/gi, '')
+    .trim()
+  if (stripped.length > 0) {
+    return stripped
+  }
+  return repairedTitle
+}
+
+const extractMetadataTitle = (title: unknown): string | undefined => {
+  if (!title) {
+    return undefined
+  }
+  if (typeof title === 'string') {
+    return repairMojibakeString(title)
+  }
+  if (typeof title === 'object') {
+    const candidate = title as { absolute?: unknown; default?: unknown }
+    if (typeof candidate.absolute === 'string') {
+      return repairMojibakeString(candidate.absolute)
+    }
+    if (typeof candidate.default === 'string') {
+      return repairMojibakeString(candidate.default)
+    }
+  }
+  return undefined
+}
+
+const EMPTY_TIMESTAMPS: Record<string, string> = {}
+const EM_DASH = '\u2014'
+const BULLET = '\u2022'
+const RETURN_SYMBOL = '\u23ce'
+
+const formatMs = (ms: number | null | undefined) => {
+  if (!Number.isFinite(ms ?? NaN)) return EM_DASH
+  const totalSeconds = Math.max(0, Math.round((ms ?? 0) / 1000))
+  const minutes = Math.floor(totalSeconds / 60)
+  const seconds = totalSeconds % 60
+  return `${minutes}:${seconds.toString().padStart(2, '0')}`
+}
+const GLOBAL_SATELLITE_STORAGE_KEY = 'global-satellite-enabled'
+const GLOBAL_MAP_NAMES_STORAGE_KEY = 'global-map-names-enabled'
+const RANKED_COMPLETION_TARGET = 0.9999
+
+const toMutedLineColor = () => '#94a3b8'
+
+type RenderBounds = [number, number, number, number]
+
+const EMPTY_DATA_FEATURE_COLLECTION = {
+  type: 'FeatureCollection',
+  features: [],
+} as DataFeatureCollection
+
+const EMPTY_ROUTES_FEATURE_COLLECTION = {
+  type: 'FeatureCollection',
+  features: [],
+} as RoutesFeatureCollection
+
+const normalizeMapStyleOverride = (style?: string | null) => {
+  if (!style) {
+    return null
+  }
+
+  const trimmed = style.trim()
+  if (!trimmed) {
+    return null
+  }
+
+  if (
+    trimmed.includes('/your-account/') ||
+    trimmed.endsWith('/light-style') ||
+    trimmed.endsWith('/dark-style')
+  ) {
+    return null
+  }
+
+  return trimmed
+}
+
+const MAP_COORDS_TOAST_DISMISS_MS = 5000
+const collectGeometryBounds = (
+  coordinates: unknown,
+  currentBounds: RenderBounds | null = null,
+): RenderBounds | null => {
+  if (!Array.isArray(coordinates)) {
+    return currentBounds
+  }
+
+  if (
+    typeof coordinates[0] === 'number' &&
+    typeof coordinates[1] === 'number'
+  ) {
+    const [lng, lat] = coordinates as [number, number]
+    if (!currentBounds) {
+      return [lng, lat, lng, lat]
+    }
+    return [
+      Math.min(currentBounds[0], lng),
+      Math.min(currentBounds[1], lat),
+      Math.max(currentBounds[2], lng),
+      Math.max(currentBounds[3], lat),
+    ]
+  }
+
+  let nextBounds = currentBounds
+  coordinates.forEach((child) => {
+    nextBounds = collectGeometryBounds(child, nextBounds)
+  })
+  return nextBounds
+}
+
+const getFeatureBounds = (
+  feature: DataFeature | RoutesFeatureCollection['features'][number],
+): RenderBounds | null => collectGeometryBounds(feature.geometry?.coordinates)
+
+const expandRenderBounds = (
+  bounds: RenderBounds,
+  paddingFactor: number,
+): RenderBounds => {
+  const width = bounds[2] - bounds[0]
+  const height = bounds[3] - bounds[1]
+  const paddingLng = width * paddingFactor
+  const paddingLat = height * paddingFactor
+  return [
+    bounds[0] - paddingLng,
+    bounds[1] - paddingLat,
+    bounds[2] + paddingLng,
+    bounds[3] + paddingLat,
+  ]
+}
+
+const intersectsRenderBounds = (
+  a: RenderBounds,
+  b: RenderBounds,
+): boolean => a[0] <= b[2] && a[2] >= b[0] && a[1] <= b[3] && a[3] >= b[1]
+
+const getMapBoundsTuple = (bounds: mapboxgl.LngLatBounds): RenderBounds => {
+  const sw = bounds.getSouthWest()
+  const ne = bounds.getNorthEast()
+  return [sw.lng, sw.lat, ne.lng, ne.lat]
+}
+
+const repairStringArrayRecord = (record: Record<string, string[]>) =>
+  Object.fromEntries(
+    Object.entries(record).map(([key, values]) => [
+      repairMojibakeString(key),
+      repairMojibakeArray(values),
+    ]),
+  ) as Record<string, string[]>
+
+const MANUAL_ALTERNATE_NAMES: Record<string, string[]> = repairStringArrayRecord({
+  '42 St - Port Authority Bus Terminal': [
+    'Port Authority Bus Terminal',
+    'Port Authority Bus Terminal 42 St',
+    '42 St Port Authority Bus Terminal',
+    'PABT',
+    '42 St PABT',
+    'PABT 42 St',
+  ],
+  'New York Penn Station': [
+    'New York Penn',
+    'Penn Station',
+    'Penn',
+    'NYP',
+    'NY Penn Station',
+    'NY Penn',
+  ],
+  'Newark Airport': [
+    'EWR',
+    'Newark Liberty International Airport',
+    'Newark Liberty Airport',
+    'Newark Liberty Intl Airport',
+  ],
+  'South Station': ['Boston South Station'],
+  'North Station': ['Boston North Station'],
+  Airport: [
+    'Boston Logan International Airport',
+    'Logan Airport',
+    'Boston Airport',
+  ],
+  'Newark Penn Station': ['Newark Penn'],
+  'Grand Central - 42 St': ['Grand Central'],
+  'Grand Central': ['Grand Central - 42 St'],
+  'Bedford Park Blvd - Lehman College': [
+    'Bedford Park Blvd',
+    'Bedford Pk Blvd',
+    'Bedford Pk Blvd - Lehman College',
+  ],
+  'Bedford Park Blvd': ['Bedford Pk Blvd'],
+  'Briarwood': ['Briarwood - Van Wyck Blvd'],
+  'Court Sq': [
+    'Court Sq-23 St',
+    'Court Sq - 23 St',
+    'Court Square',
+    'Court Square - 23 St',
+    'Court Square - 23rd St',
+  ],
+  'Disneyland Resort (迪士尼)': ['Disneyland', 'Hong Kong Disneyland'],
+  'Lexington Av/53 St': [
+    'Lex Av/53 St',
+    'Lexington Ave/53 St',
+    'Lexington Avenue/53rd St',
+  ],
+  'Lexington Av/63 St': [
+    'Lex Av/63 St',
+    'Lexington Ave/63 St',
+    'Lexington Avenue/63rd St',
+    '63 St Lex Av',
+  ],
+  '5 Av/53 St': ['5 Ave/53 St', '5 Av - 53 St', '5 Avenue/53 Street'],
+  'Inwood - 207 St': ['Inwood'],
+  'W 125 St': ['125 St'],
+  'W 62 St': ['62 St'],
+  'Astoria - Ditmars Blvd': ['Astoria'],
+  'Queens Plaza': ['Queens Plz'],
+  'Sutphin Blvd': ['Sutphin Boulevard'],
+  'Parsons Blvd': ['Parsons Boulevard'],
+  'Jamaica - 179 St': ['179 St', '179 Street', 'Jamaica 179 St', 'Jamiaca'],
+  'Ozone Park - Lefferts Blvd': ['Ozone Park'],
+  'Rockaway Park - Beach 116 St': ['Rockaway Park'],
+  'Canarsie - Rockaway Pkwy': ['Canarsie'],
+  'Flushing - Main St': ['Flushing'],
+  'Mount Dennis': ['Mt. Dennis', 'Mt Dennis'],
+  'St. Clair West': ['St Clair West'],
+  'St. Clair': ['St Clair'],
+  'St. Clair West Station': ['St Clair West', 'St. Clair West'],
+  'St. Clair Station': ['St Clair', 'St. Clair'],
+  'Bellevue Downtown': ['Downtown Bellevue'],
+  'International District / Chinatown': [
+    'CID',
+    'International District/CID',
+    'CID/International District',
+    'International District CID',
+    'CID International District',
+    'International District',
+  ],
+  'U District': ['University District'],
+  'Hamilton GO Centre': ['Hamilton'],
+  'Niagara Falls, Ontario': ['Niagara Falls'],
+  Bresalu: ['Breslau'],
+  'Wakefield - 241 St': ['Wakefield'],
+  'Van Cortlandt Park - 242 St': ['Van Cortlandt Park'],
+  'Eastchester - Dyre Av': ['Eastchester'],
+  'Harlem-125 St': ['Harlem'],
+  'Harlem - 148 St': ['Harlem'],
+  'Flatbush Av - Brooklyn College': ['Brooklyn College'],
+  'Crown Hts - Utica Av': ['Crown Heights'],
+  'Middle Village - Metropolitan Av': ['Middle Village'],
+  'Metropolitan Av': ['Parkside'],
+  'P4': ['P4 Station'],
+  "E 143 St - St Mary's St": ["E 143 St - St Marys St"],
+  'Jackson Hts - Roosevelt Av': [
+    'Jackson Heights - Roosevelt Av',
+    'Jackson Heights - Roosevelt Avenue',
+  ],
+  '74 St - Broadway': ['74 Street - Broadway'],
+  '4 Av - 9 St': ['4 Av', '4 Ave', '4 Av 9 St', '4 Ave 9 St', '9 St'],
+  'Sutphin Blvd - Archer Av - JFK Airport': ['Jamaica Station'],
+  '110 St - Malcolm X Plaza': ['110 St Central Park North'],
+  'Terminal A': [
+    'EWR Terminal A',
+    'Newark Terminal A',
+    'Newark Airport Terminal A',
+    'Newark Liberty Terminal A',
+  ],
+  'Terminal B': [
+    'EWR Terminal B',
+    'Newark Terminal B',
+    'Newark Airport Terminal B',
+    'Newark Liberty Terminal B',
+  ],
+  'Terminal C': [
+    'EWR Terminal C',
+    'Newark Terminal C',
+    'Newark Airport Terminal C',
+    'Newark Liberty Terminal C',
+  ],
+  'Terminal 1': ['JFK Terminal 1'],
+  'Terminal 4': ['JFK Terminal 4'],
+  'Terminal 5': ['JFK Terminal 5'],
+  'Terminal 7': ['JFK Terminal 7'],
+  'Terminal 8': ['JFK Terminal 8'],
+  'Glen Rock-Boro Hall': ['Boro Hall - Glen Rock'],
+  'Lo Wu (羅湖)': ['Lo Hu', 'Lo Hu Station'],
+  'Luohu (罗湖)': ['Lo Wu', 'Lo Hu', 'Lo Wu Station', 'Lo Hu Station'],
+  'Lok Ma Chau (落馬洲)': ['Futian Checkpoint', 'Futian Checkpoint Station'],
+  'Futian Checkpoint (福田口岸)': ['Lok Ma Chau', 'Lok Ma Chau Station'],
+})
+
+const AMTRAK_MANUAL_ALTERNATE_NAMES: Record<string, string[]> = {
+  'Boston South Station, MA': ['Boston'],
+  'Boston North Station, MA': ['Boston'],
+  'Philadelphia, PA': ['Philly'],
+  'Newark Liberty International Airport, NJ': [
+    'Newark Airport',
+    'Newark Liberty',
+    'Newark International Airport',
+    'RailLink',
+    'Rail Link',
+  ],
+  'Albany-Rensselaer, NY': ['Albany'],
+  'Oakland-Jack London Square, CA': ['Oakland'],
+  'San Diego - Santa Fe Depot, CA': ['San Diego'],
+  'New Haven - State St, CT': ['New Haven', 'New Haven State Street'],
+  'New Haven Union Station, CT': ['New Haven'],
+}
+
+const AMTRAK_BLOCKED_ALTERNATE_NAMES: Record<string, string[]> = {
+  'Back Bay, MA': ['Boston'],
+  'Route 128, MA': ['Boston'],
+}
+
+type ManualComplexSelector = {
+  name: string
+  line?: string
+  linePrefix?: string
+}
+
+const repairManualComplexGroups = (groups: ManualComplexSelector[][]) =>
+  groups.map((group) =>
+    group.map((selector) => ({
+      ...selector,
+      name: repairMojibakeString(selector.name),
+    })),
+  )
+
+const MANUAL_COMPLEX_GROUPS: ManualComplexSelector[][] = repairManualComplexGroups([
+    [
+      { name: 'Westlake Hub', line: 'SeattleStreetcarSLU' },
+      { name: 'Westlake Center', line: 'SeattleCenterMonorail' },
+      { name: 'Westlake' },
+    ],
+    [
+      { name: 'Capitol Hill' },
+      { name: 'Broadway & Howell', line: 'SeattleStreetcarFirstHill' },
+    ],
+    [
+      { name: 'International District / Chinatown' },
+      { name: '5th & Jackson', line: 'SeattleStreetcarFirstHill' },
+    ],
+    [
+      { name: 'Metropolitan Av', line: 'IBX' },
+      { name: 'Middle Village - Metropolitan Av', line: 'NewYorkSubwayM' },
+    ],
+  [
+    { name: 'Kew Gardens', linePrefix: 'LIRR' },
+    { name: 'Kew Gardens - Union Tpke' },
+  ],
+  [
+    { name: 'McDonald Av', line: 'IBX' },
+    { name: 'Avenue I' },
+  ],
+  [
+    { name: 'Flatbush Av - Brooklyn College' },
+    { name: 'Flatbush-Nostrand Av', line: 'IBX' },
+  ],
+  [
+    { name: 'East New York', linePrefix: 'LIRR' },
+    { name: 'Broadway Jct' },
+  ],
+  [
+    { name: 'Metropolitan Av', line: 'NewYorkSubwayG' },
+    { name: 'Lorimer St', line: 'NewYorkSubwayL' },
+  ],
+  [
+    { name: 'Hunterspoint Av', line: 'LIRRPortJefferson' },
+    { name: 'Hunterspoint Av', line: 'LIRROysterBay' },
+    { name: 'Hunterspoint Av', line: 'LIRRMontauk' },
+    { name: 'Hunters Point Av', line: 'NewYorkSubway7' },
+    { name: 'Hunters Point Av', line: 'NewYorkSubway7X' },
+  ],
+  [
+    { name: 'Hunts Point Av', line: 'NewYorkSubway6' },
+    { name: 'Hunts Point Av', line: 'NewYorkSubway6X' },
+    { name: 'Hunts Point', line: 'MNRRNewHaven' },
+  ],
+  [
+    { name: 'Livonia Av', line: 'NewYorkSubwayL' },
+    { name: 'Livonia Av', line: 'IBX' },
+    { name: 'Junius St', line: 'NewYorkSubway4' },
+  ],
+  [
+    { name: 'Lorimer St', line: 'NewYorkSubwayJ' },
+    { name: 'Lorimer St', line: 'NewYorkSubwayM' },
+    { name: 'Broadway', line: 'NewYorkSubwayG' },
+  ],
+  [
+    { name: '2 Av', line: 'NewYorkSubwayF' },
+    { name: '2 Av', line: 'NewYorkSubwayFX' },
+    { name: 'Houston St', line: 'NewYorkSubwayT' },
+  ],
+  [
+    { name: '42 St', line: 'NewYorkSubwayT' },
+    { name: 'Grand Central - 42 St' },
+  ],
+  [
+    { name: 'Far Rockaway - Mott Av', line: 'NewYorkSubwayA' },
+    { name: 'Far Rockaway', line: 'LIRRFarRockaway' },
+  ],
+  [
+    { name: 'Marble Hill', line: 'MNRRHudson' },
+    { name: 'Marble Hill - 225 St', line: 'NewYorkSubway1' },
+  ],
+  [
+    { name: 'Harlem-125 St', line: 'MNRRHarlem' },
+    { name: '125 St', line: 'NewYorkSubway4' },
+    { name: '125 St', line: 'NewYorkSubway5' },
+    { name: '125 St', line: 'NewYorkSubway6' },
+    { name: '125 St', line: 'NewYorkSubway6X' },
+    { name: '125 St', line: 'NewYorkSubwayQ' },
+    { name: '125 St', line: 'NewYorkSubwayT' },
+  ],
+  [
+    { name: 'Times Sq - 42 St' },
+    { name: '42 St - Port Authority Bus Terminal' },
+    { name: '42 St - Bryant Pk' },
+    { name: '5 Av', line: 'NewYorkSubway7' },
+    { name: '5 Av', line: 'NewYorkSubway7X' },
+  ],
+  [
+    { name: 'South China Normal University (华师)', line: 'gzline10' },
+    { name: 'South China Normal University (华师)', line: 'gzline11' },
+  ],
+  [
+    { name: 'Taipei Zoo (動物園)', line: 'wenhu' },
+    { name: 'Taipei Zoo (動物園)', line: 'maokong' },
+  ],
+  [
+    { name: 'Zhonghe (中和)', line: 'circular' },
+    { name: 'Zhonghe (中和)', line: 'wanda' },
+  ],
+  [
+    { name: 'Plaza Universidad', line: 'gdl2' },
+    { name: 'Guadalajara Centro', line: 'gdl3' },
+  ],
+  [
+    { name: 'Félix U. Gomez', line: 'mty1' },
+    { name: 'Félix U. Gomez', line: 'mty3' },
+  ],
+  [
+    { name: 'Airport (机场)', line: 'szline11' },
+    { name: 'Terminal 3 (3号航站楼)', line: 'szairportapm' },
+  ],
+  [
+    { name: 'Terminal 1 (第一航廈)', line: 'skytrain' },
+    { name: 'Airport Terminal 1 (機場第一航廈)', line: 'taoyuanairport' },
+  ],
+  [
+    { name: 'Terminal 2 (第二航廈)', line: 'skytrain' },
+    { name: 'Airport Terminal 2 (機場第二航廈)', line: 'taoyuanairport' },
+  ],
+  [
+    { name: 'Cotai East (路氹東)', line: 'TPA' },
+    { name: 'Skycab Station (觀光纜車站)', line: 'wynnskycab' },
+  ],
+  [
+    { name: '34 St - Penn Station' },
+    { name: 'New York Penn Station' },
+  ],
+  [
+    { name: 'Sutphin Blvd - Archer Av - JFK Airport' },
+    { name: 'Jamaica', linePrefix: 'LIRR' },
+    { name: 'Jamaica', linePrefix: 'AirTrainJFK' },
+  ],
+  [
+    { name: 'Franklin Av - Medgar Evers College' },
+    { name: 'Botanic Garden', line: 'NewYorkSubwayFS' },
+  ],
+  [
+    { name: 'Court St', line: 'NewYorkSubwayR' },
+    { name: 'Borough Hall' },
+  ],
+  [
+    { name: 'Whitehall St' },
+    { name: 'South Ferry' },
+  ],
+  [
+    { name: 'Broadway-Lafayette St' },
+    { name: 'Bleecker St', line: 'NewYorkSubway6' },
+    { name: 'Bleecker St', line: 'NewYorkSubway6X' },
+  ],
+  [
+    { name: 'Lexington Av/53 St' },
+    { name: '51 St', line: 'NewYorkSubway6' },
+  ],
+  [
+    { name: '59 St', line: 'NewYorkSubway4' },
+    { name: '59 St', line: 'NewYorkSubway5' },
+    { name: '59 St', line: 'NewYorkSubway6' },
+    { name: 'Lexington Av/59 St' },
+  ],
+  [
+    { name: '33 St', line: 'NewYorkSubway6' },
+    { name: '34 St - Herald Sq' },
+  ],
+  [
+    { name: 'Chambers St', line: 'NewYorkSubway1' },
+    { name: 'Chambers St', line: 'NewYorkSubway2' },
+    { name: 'Chambers St', line: 'NewYorkSubway3' },
+    { name: 'Chambers St', line: 'NewYorkSubwayA' },
+    { name: 'Chambers St', line: 'NewYorkSubwayC' },
+    { name: 'Park Pl', line: 'NewYorkSubway2' },
+    { name: 'Park Pl', line: 'NewYorkSubway3' },
+    { name: 'World Trade Center', line: 'NewYorkSubwayE' },
+    { name: 'World Trade Center', line: 'NewYorkSubwayPATHHobwtc' },
+    { name: 'World Trade Center', line: 'NewYorkSubwayPATHNwkwtc' },
+    { name: 'Cortlandt St', line: 'NewYorkSubwayN' },
+    { name: 'Cortlandt St', line: 'NewYorkSubwayR' },
+    { name: 'Cortlandt St', line: 'NewYorkSubwayW' },
+    { name: 'WTC Cortlandt', line: 'NewYorkSubway1' },
+  ],
+  [
+    { name: 'Concourse T', line: 'atlantaTPT' },
+    { name: 'Airport', line: 'MARTARD' },
+  ],
+  [
+    { name: 'Denver Airport', line: 'Denver_RTD_A' },
+    { name: 'Main Terminal', line: 'DenverAGTS' },
+  ],
+  [
+    { name: 'Airport (機場)', line: 'AEL' },
+    { name: 'Terminal 2 Interchange (二號客運大樓站)', line: 'HKAPMT1' },
+    { name: 'Terminal 2 Interchange (二號客運大樓站)', line: 'HKAPMT2' },
+    { name: 'Terminal 2 Interchange (二號客運大樓站)', line: 'HKAPMSKY' },
+  ],
+  [
+    { name: 'Hong Kong West Kowloon (香港西九龍)', line: 'XRL' },
+    { name: 'Kowloon (九龍)', line: 'TCL' },
+    { name: 'Kowloon (九龍)', line: 'AEL' },
+    { name: 'Austin (柯士甸)', line: 'TML' },
+  ],
+  [
+    { name: 'Tsim Sha Tsui (尖沙咀)', line: 'TWL' },
+    { name: 'East Tsim Sha Tsui (尖東)', line: 'TML' },
+  ],
+  [
+    { name: 'Lok Ma Chau (落馬洲)', line: 'EAL' },
+    { name: 'Futian Checkpoint (福田口岸)', line: 'szline4' },
+  ],
+  [
+    { name: 'Lo Wu (羅湖)', line: 'EAL' },
+    { name: 'Luohu (罗湖)', line: 'szline1' },
+    { name: 'Luohu West (罗湖西)', line: 'szline17' },
+    { name: 'Renmin South (人民南)', line: 'szline9' },
+  ],
+  [
+    { name: 'Shenzhen North Station West Square (北站西广场)', line: 'szline27' },
+    { name: 'Shenzhen North (深圳北)', line: 'szline4' },
+    { name: 'Shenzhen North (深圳北)', line: 'szline5' },
+    { name: 'Shenzhen North (深圳北)', line: 'szline6' },
+    { name: 'Shenzhen North (深圳北)', line: 'XRL' },
+  ],
+  [
+    { name: 'Guahu (观湖)', line: 'szline22' },
+    { name: 'HTIP East (高新区东)', line: 'sztram1' },
+  ],
+  [
+    { name: 'Tuen Mun South (屯門南)', line: 'TML' },
+    { name: 'Tuen Mun Ferry Pier (屯門碼頭)', line: 'MTR507' },
+    { name: 'Tuen Mun Ferry Pier (屯門碼頭)', line: 'MTR610' },
+    { name: 'Tuen Mun Ferry Pier (屯門碼頭)', line: 'MTR614' },
+    { name: 'Tuen Mun Ferry Pier (屯門碼頭)', line: 'MTR614P' },
+    { name: 'Tuen Mun Ferry Pier (屯門碼頭)', line: 'MTR615' },
+    { name: 'Tuen Mun Ferry Pier (屯門碼頭)', line: 'MTR615P' },
+    { name: 'Siu Hei (兆禧)', line: 'MTR507' },
+    { name: 'Siu Hei (兆禧)', line: 'MTR614' },
+    { name: 'Siu Hei (兆禧)', line: 'MTR614P' },
+  ],
+  [
+    { name: 'Ho Tin (河田)', line: 'MTR507' },
+    { name: 'Tuen Mun (屯門)', line: 'TML' },
+    { name: 'Tuen Mun (屯門)', line: 'MTR505' },
+    { name: 'Tuen Mun (屯門)', line: 'MTR507' },
+    { name: 'Tuen Mun (屯門)', line: 'MTR751' },
+  ],
+  [
+    { name: 'Hub Building', line: 'HubTram' },
+    { name: 'Terminal 2-Humphrey', line: 'MAXBlue' },
+  ],
+  [
+    { name: 'Terminal 1', line: 'HubTram' },
+    { name: 'Terminal 1-Lindbergh', line: 'MAXBlue' },
+  ],
+])
+
+const MANUAL_AUTO_COMPLEX_EXCLUSIONS: ManualComplexSelector[][] =
+  repairManualComplexGroups([
+    [
+      {
+        name: 'Estrada Governador Nobre de Carvalho Station (嘉樂庇總督馬路站)',
+        line: 'mab_taipa',
+      },
+      {
+        name: 'Grand Taipa Viewing Platform Station (大潭山觀景台站)',
+        line: 'mab_taipa',
+      },
+    ],
+  ])
+
+const shouldApplyNyRouteOverrides = (cityName: string) =>
+  cityName === 'nyc' || cityName === 'regional-rail'
+
+const applyCityRouteOverrides = (
+  routes: RoutesFeatureCollection | undefined,
+  cityName: string,
+): RoutesFeatureCollection | undefined => {
+  if (!routes || !shouldApplyNyRouteOverrides(cityName)) {
+    return routes
+  }
+
+  let changed = false
+  const nextFeatures = routes.features.map((feature) => {
+    const line = feature.properties?.line
+    if (!line) {
+      return feature
+    }
+
+    let nextProperties = feature.properties
+    let nextGeometry = feature.geometry
+
+    if (line === 'NewYorkSubwaySI' && feature.properties?.color !== '#0178C6') {
+      nextProperties = {
+        ...feature.properties,
+        color: '#0178C6',
+      }
+      changed = true
+    }
+
+    if (nextProperties === feature.properties && nextGeometry === feature.geometry) {
+      return feature
+    }
+
+    return {
+      ...feature,
+      properties: nextProperties,
+      geometry: nextGeometry,
+    }
+  })
+
+  if (!changed) {
+    return routes
+  }
+
+  return {
+    ...routes,
+    features: nextFeatures,
+  }
+}
+
+const DIRECTIONAL_ABBREVIATIONS: Record<string, string> = {
+  east: 'E',
+  west: 'W',
+  north: 'N',
+  south: 'S',
+}
+
+const CARDINAL_DIRECTIONS = Object.keys(DIRECTIONAL_ABBREVIATIONS)
+const CARDINAL_DIRECTIONS_PATTERN = CARDINAL_DIRECTIONS.join('|')
+const DIRECTION_SUFFIX_REGEX = new RegExp(
+  `^(.*\\S)\\s+(${CARDINAL_DIRECTIONS_PATTERN})$`,
+  'i',
+)
+const DIRECTION_PREFIX_REGEX = new RegExp(
+  `^(${CARDINAL_DIRECTIONS_PATTERN})\\s+(.*\\S)$`,
+  'i',
+)
+
+const STREET_SEGMENT_KEYWORDS = [
+  ' st',
+  ' street',
+  ' av',
+  ' ave',
+  ' avenue',
+  ' blvd',
+  ' boulevard',
+  ' rd',
+  ' road',
+  ' dr',
+  ' drive',
+  ' pkwy',
+  ' parkway',
+  ' way',
+  ' wy',
+  ' lane',
+  ' ln',
+  ' court',
+  ' ct',
+  ' place',
+  ' pl',
+  ' plaza',
+  ' plz',
+  ' terrace',
+  ' ter',
+  ' circle',
+  ' cir',
+  ' ferry',
+  ' highway',
+  ' hwy',
+  ' expressway',
+  ' expwy',
+  ' center',
+  ' centre',
+  ' ctr',
+  ' mall',
+  ' bridge',
+  ' broadway',
+]
+
+const shouldIncludeStandaloneSegment = (value: string) => {
+  const normalized = value.trim().toLowerCase()
+  if (!normalized) {
+    return false
+  }
+  if (/\d/.test(normalized)) {
+    return true
+  }
+  return STREET_SEGMENT_KEYWORDS.some((keyword) =>
+    normalized.includes(keyword),
+  )
+}
+
+const BLOCKED_HYPHEN_STANDALONE_SEGMENTS = new Set([
+  'center',
+  'centre',
+  'central',
+  'north',
+  'south',
+  'east',
+  'west',
+  'station',
+  'gare',
+  'saint',
+  'sainte',
+  'st',
+  'ste',
+  'nord',
+  'sud',
+  'est',
+  'ouest',
+])
+
+const shouldIncludeHyphenStandaloneSegment = (value: string) => {
+  const normalized = value.trim().toLowerCase()
+  if (!normalized) return false
+  if (BLOCKED_HYPHEN_STANDALONE_SEGMENTS.has(normalized)) return false
+  const compact = normalized.replace(/[^a-z0-9]/gi, '')
+  return compact.length >= 4 && /[a-z]/i.test(compact)
+}
+
+const generateHyphenSegmentAlternates = (name?: string): string[] => {
+  const input = repairMojibakeString(name ?? '').trim()
+  if (!input) return []
+
+  const parts = input
+    .split(/\s*[-–]\s*/)
+    .map((part) => part.trim())
+    .filter(Boolean)
+
+  if (parts.length !== 2) return []
+
+  const alternates = new Set<string>()
+  parts.forEach((part) => {
+    const withoutState = part.split(',')[0]?.trim() ?? ''
+    ;[part, withoutState].forEach((candidate) => {
+      if (shouldIncludeHyphenStandaloneSegment(candidate)) {
+        alternates.add(candidate)
+      }
+    })
+  })
+
+  return Array.from(alternates)
+}
+
+const applyDirectionalAbbreviation = (value?: string) => {
+  const input = (value ?? '').trim()
+  if (!input || !/\s/.test(input)) {
+    return input
+  }
+
+  return input.replace(/\b(East|West|North|South)\b/gi, (match) => {
+    const key = match.toLowerCase()
+    return DIRECTIONAL_ABBREVIATIONS[key] ?? match
+  })
+}
+
+const generateAlternateNames = (name?: string): string[] => {
+  if (!name) return []
+  const trimmed = repairMojibakeString(name).trim()
+  if (!trimmed) return []
+
+  const directionalName = applyDirectionalAbbreviation(trimmed)
+  const canonical = directionalName
+
+  const alternates = new Set<string>()
+  const englishPortion = trimmed.replace(/\s*\(.*?\)\s*$/, '').trim()
+  const parentheticalMatch = trimmed.match(/\((.*?)\)/)
+  const parenthetical = parentheticalMatch?.[1]?.trim() ?? ''
+
+  const addSaintVariants = (value: string) => {
+    const source = value.trim()
+    if (!source) return
+    const variants = new Set<string>([source])
+    variants.forEach((variant) => {
+      const st = variant
+        .replace(/\bSainte\b/g, 'Ste')
+        .replace(/\bSaint\b/g, 'St')
+      const stWithPeriod = variant
+        .replace(/\bSainte\b/g, 'Ste.')
+        .replace(/\bSaint\b/g, 'St.')
+      if (st !== variant) alternates.add(st)
+      if (stWithPeriod !== variant) alternates.add(stWithPeriod)
+    })
+  }
+
+  const HIGH_SPEED_ENGLISH_PATTERNS = [
+    /\s+High[- ]Speed Railway Station$/i,
+    /\s+High[- ]Speed Rail(?:way)? Station$/i,
+    /\s+HSR Station$/i,
+  ]
+  const HIGH_SPEED_CHINESE_PATTERNS = [/\u9ad8\u94c1\u7ad9$/, /\u9ad8\u9435\u7ad9$/]
+
+  const addHighSpeedShortcuts = (value: string, patterns: RegExp[]) => {
+    const source = value.trim()
+    if (!source) return
+    patterns.forEach((pattern) => {
+      if (pattern.test(source)) {
+        const shortened = source.replace(pattern, '').trim()
+        if (shortened) {
+          alternates.add(shortened)
+        }
+      }
+    })
+  }
+
+  const formatDirection = (direction: string) =>
+    direction.charAt(0).toUpperCase() + direction.slice(1).toLowerCase()
+
+  const baseForCrossNames = englishPortion || trimmed
+
+  if (baseForCrossNames) {
+    const crossParts = baseForCrossNames
+      .split(/\s*(?:&|\/| and )\s*/i)
+      .map((part) => part.trim())
+      .filter(Boolean)
+
+    if (crossParts.length >= 2) {
+      const [first, second] = crossParts
+      const separators = [' & ', ' and ', ' / ']
+      const compactSeparators = ['&', '/', ' and ']
+
+      const addCrossAlternate = (a: string, b: string) => {
+        separators.forEach((sep) => alternates.add(`${a}${sep}${b}`.trim()))
+        compactSeparators.forEach((sep) =>
+          alternates.add(`${a}${sep}${b}`.trim()),
+        )
+      }
+
+      addCrossAlternate(first, second)
+      addCrossAlternate(second, first)
+    }
+  }
+
+  if (englishPortion) {
+    addHighSpeedShortcuts(englishPortion, HIGH_SPEED_ENGLISH_PATTERNS)
+  }
+  if (parenthetical) {
+    addHighSpeedShortcuts(parenthetical, HIGH_SPEED_CHINESE_PATTERNS)
+  }
+
+  if (englishPortion) {
+    const suffixMatch = englishPortion.match(DIRECTION_SUFFIX_REGEX)
+    if (suffixMatch) {
+      const baseSegment = suffixMatch[1]?.replace(/\s+/g, ' ').trim()
+      const directionSegment = suffixMatch[2]
+      if (baseSegment && directionSegment) {
+        alternates.add(`${formatDirection(directionSegment)} ${baseSegment}`)
+      }
+    }
+
+    const prefixMatch = englishPortion.match(DIRECTION_PREFIX_REGEX)
+    if (prefixMatch) {
+      const directionSegment = prefixMatch[1]
+      const baseSegment = prefixMatch[2]?.replace(/\s+/g, ' ').trim()
+      if (baseSegment && directionSegment) {
+        alternates.add(`${baseSegment} ${formatDirection(directionSegment)}`)
+      }
+    }
+  }
+
+  if (directionalName !== trimmed) {
+    alternates.add(directionalName)
+  }
+
+  addSaintVariants(trimmed)
+  if (directionalName !== trimmed) {
+    addSaintVariants(directionalName)
+  }
+
+  if (canonical !== trimmed && canonical !== directionalName) {
+    alternates.add(canonical)
+  }
+
+  for (const { delimiter, joiner } of CONNECTOR_CONFIG) {
+    if (canonical.includes(delimiter)) {
+      const parts = canonical
+        .split(delimiter)
+        .map((part) => part.trim())
+        .filter(Boolean)
+
+      if (parts.length >= 2) {
+        const reversed = [...parts].reverse()
+
+        alternates.add(reversed.join(joiner))
+        alternates.add(parts.join(' '))
+        alternates.add(reversed.join(' '))
+
+        parts.forEach((part) => {
+          if (shouldIncludeStandaloneSegment(part)) {
+            alternates.add(part)
+          }
+        })
+      }
+    }
+  }
+
+  if (/port authority bus terminal/i.test(canonical)) {
+    alternates.add(canonical.replace(/port authority bus terminal/gi, 'PABT'))
+    alternates.add('PABT')
+  }
+
+  const beachMatch = canonical.match(/^Beach\s+(\d+)\s*St\b(.*)$/i)
+  if (beachMatch) {
+    const suffix = beachMatch[2] ?? ''
+    const suffixTrimmed = suffix.trim()
+    const number = beachMatch[1]
+    alternates.add(`B ${number} St`)
+    alternates.add(`B ${number}th St`)
+    if (suffixTrimmed) {
+      const withDash = suffix.startsWith(' ') ? suffix : ` ${suffix}`
+      alternates.add(`B ${number} St${withDash}`)
+      alternates.add(`B ${number}th St${withDash}`)
+    }
+  }
+
+  const replacementPatterns: Array<{ regex: RegExp; replacement: string }> = [
+    { regex: /\bCrescent\b/g, replacement: 'Cr' },
+    { regex: /\bCr\b/g, replacement: 'Crescent' },
+    { regex: /\bPark\b/g, replacement: 'Pk' },
+    { regex: /\bPlaza\b/g, replacement: 'Plz' },
+    { regex: /\bPoint\b/g, replacement: 'Pt' },
+    { regex: /\bRoute\b/g, replacement: 'Rte' },
+    { regex: /\bGymnasium\b/g, replacement: 'Gym' },
+  ]
+
+  for (const { regex, replacement } of replacementPatterns) {
+    const replacedOriginal = trimmed.replace(regex, replacement)
+    if (replacedOriginal !== trimmed) {
+      alternates.add(replacedOriginal)
+    }
+
+    const replacedDirectional = directionalName.replace(regex, replacement)
+    if (
+      directionalName !== trimmed &&
+      replacedDirectional !== directionalName
+    ) {
+      alternates.add(replacedDirectional)
+    }
+
+    const replacedCanonical = canonical.replace(regex, replacement)
+    if (replacedCanonical !== canonical) {
+      alternates.add(replacedCanonical)
+    }
+  }
+
+  if (/broadway/i.test(canonical)) {
+    const lower = canonical.toLowerCase()
+    alternates.add(canonical.replace(/Broadway/gi, 'Bway'))
+    alternates.add(canonical.replace(/Broadway/gi, "B'way"))
+    alternates.add(lower.replace(/broadway/g, 'bway'))
+    alternates.add(lower.replace(/broadway/g, "b'way"))
+  }
+
+  MANUAL_ALTERNATE_NAMES[trimmed]?.forEach((alias) => {
+    if (alias) {
+      alternates.add(repairMojibakeString(alias))
+    }
+  })
+
+  if (directionalName !== trimmed) {
+  MANUAL_ALTERNATE_NAMES[directionalName]?.forEach((alias) => {
+    if (alias) {
+      alternates.add(repairMojibakeString(alias))
+    }
+  })
+  }
+
+  if (canonical !== trimmed && canonical !== directionalName) {
+  MANUAL_ALTERNATE_NAMES[canonical]?.forEach((alias) => {
+    if (alias) {
+      alternates.add(repairMojibakeString(alias))
+    }
+  })
+  }
+
+  return Array.from(alternates)
+}
+
+const normalizeAliasSpacing = (value: string) =>
+  value
+    .replace(/\s+/g, ' ')
+    .replace(/\s+,/g, ',')
+    .replace(/\(\s*\)/g, '')
+    .replace(/\s+-\s+/g, ' - ')
+    .replace(/^[,\-]\s*/g, '')
+    .replace(/\s*[,\-]\s*$/g, '')
+    .trim()
+
+const generateStationlessAlternates = (value?: string): string[] => {
+  const input = (value ?? '').trim()
+  if (!input || !/\bstation(s)?\b/i.test(input)) {
+    return []
+  }
+
+  const stripped = normalizeAliasSpacing(
+    input.replace(/\bstations?\b/gi, ' '),
+  )
+  if (!stripped || stripped.toLowerCase() === input.toLowerCase()) {
+    return []
+  }
+
+  return [stripped]
+}
+
+const USPS_STREET_SUFFIX_GROUPS = [
+  ['ALLEY', 'ALLEE', 'ALLEY', 'ALLY', 'ALY'],
+  ['ANEX', 'ANEX', 'ANNEX', 'ANNX', 'ANX'],
+  ['ARCADE', 'ARC', 'ARCADE'],
+  ['AVENUE', 'AV', 'AVE', 'AVEN', 'AVENU', 'AVENUE', 'AVN', 'AVNUE'],
+  ['BAYOU', 'BAYOO', 'BAYOU', 'BYU'],
+  ['BEACH', 'BCH', 'BEACH'],
+  ['BEND', 'BEND', 'BND'],
+  ['BLUFF', 'BLF', 'BLUF', 'BLUFF'],
+  ['BLUFFS', 'BLUFFS', 'BLFS'],
+  ['BOTTOM', 'BOT', 'BOTTOM', 'BOTTM', 'BTM'],
+  ['BOULEVARD', 'BLVD', 'BOUL', 'BOULEVARD', 'BOULV'],
+  ['BRANCH', 'BR', 'BRANCH', 'BRNCH'],
+  ['BRIDGE', 'BRDGE', 'BRG', 'BRIDGE'],
+  ['BROOK', 'BRK', 'BROOK'],
+  ['BROOKS', 'BROOKS', 'BRKS'],
+  ['BURG', 'BURG', 'BG'],
+  ['BURGS', 'BURGS', 'BGS'],
+  ['BYPASS', 'BYP', 'BYPA', 'BYPAS', 'BYPASS', 'BYPS'],
+  ['CAMP', 'CAMP', 'CMP', 'CP'],
+  ['CANYON', 'CANYN', 'CANYON', 'CNYN', 'CYN'],
+  ['CAPE', 'CAPE', 'CPE'],
+  ['CAUSEWAY', 'CAUSEWAY', 'CAUSWA', 'CSWY'],
+  ['CENTER', 'CEN', 'CENT', 'CENTER', 'CENTR', 'CENTRE', 'CNTER', 'CNTR', 'CTR'],
+  ['CENTERS', 'CENTERS', 'CTRS'],
+  ['CIRCLE', 'CIR', 'CIRC', 'CIRCL', 'CIRCLE', 'CRCL', 'CRCLE'],
+  ['CIRCLES', 'CIRCLES', 'CIRS'],
+  ['CLIFF', 'CLF', 'CLIFF'],
+  ['CLIFFS', 'CLFS', 'CLIFFS'],
+  ['CLUB', 'CLB', 'CLUB'],
+  ['COMMON', 'COMMON', 'CMN'],
+  ['COMMONS', 'COMMONS', 'CMNS'],
+  ['CORNER', 'COR', 'CORNER'],
+  ['CORNERS', 'CORNERS', 'CORS'],
+  ['COURSE', 'COURSE', 'CRSE'],
+  ['COURT', 'COURT', 'CT'],
+  ['COURTS', 'COURTS', 'CTS'],
+  ['COVE', 'COVE', 'CV'],
+  ['COVES', 'COVES', 'CVS'],
+  ['CREEK', 'CREEK', 'CRK'],
+  ['CRESCENT', 'CRES', 'CRESCENT', 'CRSENT', 'CRSNT'],
+  ['CREST', 'CREST', 'CRST'],
+  ['CROSSING', 'CROSSING', 'CRSSNG', 'XING'],
+  ['CROSSROAD', 'CROSSROAD', 'XRD'],
+  ['CROSSROADS', 'CROSSROADS', 'XRDS'],
+  ['CURVE', 'CURVE', 'CURV'],
+  ['DALE', 'DALE', 'DL'],
+  ['DAM', 'DAM', 'DM'],
+  ['DIVIDE', 'DIV', 'DIVIDE', 'DV', 'DVD'],
+  ['DRIVE', 'DR', 'DRIV', 'DRIVE', 'DRV'],
+  ['DRIVES', 'DRIVES', 'DRS'],
+  ['ESTATE', 'EST', 'ESTATE'],
+  ['ESTATES', 'ESTATES', 'ESTS'],
+  ['EXPRESSWAY', 'EXP', 'EXPRESS', 'EXPRESSWAY', 'EXPR', 'EXPW', 'EXPY'],
+  ['EXTENSION', 'EXT', 'EXTENSION', 'EXTN', 'EXTNSN'],
+  ['EXTENSIONS', 'EXTS'],
+  ['FALL', 'FALL'],
+  ['FALLS', 'FALLS', 'FLS'],
+  ['FERRY', 'FERRY', 'FRRY', 'FRY'],
+  ['FIELD', 'FIELD', 'FLD'],
+  ['FIELDS', 'FIELDS', 'FLDS'],
+  ['FLAT', 'FLAT', 'FLT'],
+  ['FLATS', 'FLATS', 'FLTS'],
+  ['FORD', 'FORD', 'FRD'],
+  ['FORDS', 'FORDS', 'FRDS'],
+  ['FOREST', 'FOREST', 'FORESTS', 'FRST'],
+  ['FORGE', 'FORG', 'FORGE', 'FRG'],
+  ['FORGES', 'FORGES', 'FRGS'],
+  ['FORK', 'FORK', 'FRK'],
+  ['FORKS', 'FORKS', 'FRKS'],
+  ['FORT', 'FORT', 'FRT', 'FT'],
+  ['FREEWAY', 'FREEWAY', 'FREEWY', 'FRWAY', 'FRWY', 'FWY'],
+  ['GARDEN', 'GARDEN', 'GARDN', 'GDN', 'GRDEN', 'GRDN'],
+  ['GARDENS', 'GARDENS', 'GDNS', 'GRDNS'],
+  ['GATEWAY', 'GATEWAY', 'GATEWY', 'GATWAY', 'GTWAY', 'GTWY'],
+  ['GLEN', 'GLEN', 'GLN'],
+  ['GLENS', 'GLENS', 'GLNS'],
+  ['GREEN', 'GREEN', 'GRN'],
+  ['GREENS', 'GREENS', 'GRNS'],
+  ['GROVE', 'GROV', 'GROVE', 'GRV'],
+  ['GROVES', 'GROVES', 'GRVS'],
+  ['HARBOR', 'HARB', 'HARBOR', 'HARBR', 'HBR', 'HRBOR'],
+  ['HARBORS', 'HARBORS', 'HBRS'],
+  ['HAVEN', 'HAVEN', 'HVN'],
+  ['HEIGHTS', 'HT', 'HTS'],
+  ['HIGHWAY', 'HIGHWAY', 'HIGHWY', 'HIWAY', 'HIWY', 'HWAY', 'HWY'],
+  ['HILL', 'HILL', 'HL'],
+  ['HILLS', 'HILLS', 'HLS'],
+  ['HOLLOW', 'HLLW', 'HOLLOW', 'HOLLOWS', 'HOLW', 'HOLWS'],
+  ['INLET', 'INLT'],
+  ['ISLAND', 'IS', 'ISLAND', 'ISLND'],
+  ['ISLANDS', 'ISLANDS', 'ISLNDS', 'ISS'],
+  ['ISLE', 'ISLE', 'ISLES'],
+  ['JUNCTION', 'JCT', 'JCTION', 'JCTN', 'JUNCTION', 'JUNCTN', 'JUNCTON'],
+  ['JUNCTIONS', 'JCTNS', 'JCTS', 'JUNCTIONS'],
+  ['KEY', 'KEY', 'KY'],
+  ['KEYS', 'KEYS', 'KYS'],
+  ['KNOLL', 'KNL', 'KNOL', 'KNOLL'],
+  ['KNOLLS', 'KNLS', 'KNOLLS'],
+  ['LAKE', 'LAKE', 'LK'],
+  ['LAKES', 'LAKES', 'LKS'],
+  ['LAND', 'LAND'],
+  ['LANDING', 'LANDING', 'LNDG', 'LNDNG'],
+  ['LANE', 'LANE', 'LN'],
+  ['LIGHT', 'LGT', 'LIGHT'],
+  ['LIGHTS', 'LIGHTS', 'LGTS'],
+  ['LOAF', 'LF', 'LOAF'],
+  ['LOCK', 'LCK', 'LOCK'],
+  ['LOCKS', 'LCKS', 'LOCKS'],
+  ['LODGE', 'LDG', 'LDGE', 'LODG', 'LODGE'],
+  ['LOOP', 'LOOP', 'LOOPS'],
+  ['MALL', 'MALL'],
+  ['MANOR', 'MANOR', 'MNR'],
+  ['MANORS', 'MANORS', 'MNRS'],
+  ['MEADOW', 'MEADOW', 'MDW'],
+  ['MEADOWS', 'MDW', 'MDWS', 'MEADOWS', 'MEDOWS'],
+  ['MEWS', 'MEWS'],
+  ['MILL', 'MILL', 'ML'],
+  ['MILLS', 'MILLS', 'MLS'],
+  ['MISSION', 'MISSN', 'MSN', 'MSSN'],
+  ['MOTORWAY', 'MOTORWAY', 'MTWY'],
+  ['MOUNT', 'MNT', 'MOUNT', 'MT'],
+  ['MOUNTAIN', 'MNTAIN', 'MNTN', 'MOUNTAIN', 'MOUNTIN', 'MTIN', 'MTN'],
+  ['MOUNTAINS', 'MNTNS', 'MOUNTAINS', 'MTNS'],
+  ['NECK', 'NCK', 'NECK'],
+  ['ORCHARD', 'ORCH', 'ORCHARD', 'ORCHRD'],
+  ['OVAL', 'OVAL', 'OVL'],
+  ['OVERPASS', 'OVERPASS', 'OPAS'],
+  ['PARK', 'PARK', 'PARKS', 'PRK'],
+  ['PARKWAY', 'PARKWAY', 'PARKWAYS', 'PARKWY', 'PKWAY', 'PKWY', 'PKWYS', 'PKY'],
+  ['PASS', 'PASS'],
+  ['PASSAGE', 'PASSAGE', 'PSGE'],
+  ['PATH', 'PATH', 'PATHS'],
+  ['PIKE', 'PIKE', 'PIKES'],
+  ['PINE', 'PINE', 'PNE'],
+  ['PINES', 'PINES', 'PNES'],
+  ['PLACE', 'PL', 'PLACE'],
+  ['PLAIN', 'PLAIN', 'PLN'],
+  ['PLAINS', 'PLAINS', 'PLNS'],
+  ['PLAZA', 'PLAZA', 'PLZ', 'PLZA'],
+  ['POINT', 'POINT', 'PT'],
+  ['POINTS', 'POINTS', 'PTS'],
+  ['PORT', 'PORT', 'PRT'],
+  ['PORTS', 'PORTS', 'PRTS'],
+  ['PRAIRIE', 'PR', 'PRAIRIE', 'PRR'],
+  ['RADIAL', 'RAD', 'RADIAL', 'RADIEL', 'RADL'],
+  ['RAMP', 'RAMP'],
+  ['RANCH', 'RANCH', 'RANCHES', 'RNCH', 'RNCHS'],
+  ['RAPID', 'RAPID', 'RPD'],
+  ['RAPIDS', 'RAPIDS', 'RPDS'],
+  ['REST', 'REST', 'RST'],
+  ['RIDGE', 'RDG', 'RDGE', 'RIDGE'],
+  ['RIDGES', 'RDGS', 'RIDGES'],
+  ['RIVER', 'RIV', 'RIVER', 'RIVR', 'RVR'],
+  ['ROAD', 'RD', 'ROAD'],
+  ['ROADS', 'RDS', 'ROADS'],
+  ['ROUTE', 'ROUTE', 'RTE'],
+  ['ROW', 'ROW'],
+  ['RUE', 'RUE'],
+  ['RUN', 'RUN'],
+  ['SHOAL', 'SHL', 'SHOAL'],
+  ['SHOALS', 'SHLS', 'SHOALS'],
+  ['SHORE', 'SHOAR', 'SHORE', 'SHR'],
+  ['SHORES', 'SHOARS', 'SHORES', 'SHRS'],
+  ['SKYWAY', 'SKYWAY', 'SKWY'],
+  ['SPRING', 'SPG', 'SPNG', 'SPRING', 'SPRNG'],
+  ['SPRINGS', 'SPGS', 'SPNGS', 'SPRINGS', 'SPRNGS'],
+  ['SPUR', 'SPUR', 'SPURS'],
+  ['SQUARE', 'SQ', 'SQR', 'SQRE', 'SQU', 'SQUARE'],
+  ['SQUARES', 'SQRS', 'SQS', 'SQUARES'],
+  ['STATION', 'STA', 'STATION', 'STATN', 'STN'],
+  ['STRAVENUE', 'STRA', 'STRAV', 'STRAVEN', 'STRAVENUE', 'STRAVN', 'STRVN', 'STRVNUE'],
+  ['STREAM', 'STREAM', 'STREME', 'STRM'],
+  ['STREET', 'ST', 'STR', 'STREET', 'STRT'],
+  ['STREETS', 'STREETS', 'STS'],
+  ['SUMMIT', 'SMT', 'SUMIT', 'SUMITT', 'SUMMIT'],
+  ['TERRACE', 'TER', 'TERR', 'TERRACE'],
+  ['THROUGHWAY', 'THROUGHWAY', 'TRWY'],
+  ['TRACE', 'TRACE', 'TRACES', 'TRCE'],
+  ['TRACK', 'TRACK', 'TRACKS', 'TRAK', 'TRK', 'TRKS'],
+  ['TRAFFICWAY', 'TRAFFICWAY', 'TRFY'],
+  ['TRAIL', 'TRAIL', 'TRAILS', 'TRL', 'TRLS'],
+  ['TRAILER', 'TRAILER', 'TRLR', 'TRLRS'],
+  ['TUNNEL', 'TUNEL', 'TUNL', 'TUNLS', 'TUNNEL', 'TUNNELS', 'TUNNL'],
+  ['TURNPIKE', 'TRNPK', 'TURNPIKE', 'TURNPK', 'TPKE'],
+  ['UNDERPASS', 'UNDERPASS', 'UPAS'],
+  ['UNION', 'UN', 'UNION'],
+  ['UNIONS', 'UNIONS', 'UNS'],
+  ['VALLEY', 'VALLEY', 'VALLY', 'VLLY', 'VLY'],
+  ['VALLEYS', 'VALLEYS', 'VLYS'],
+  ['VIADUCT', 'VDCT', 'VIA', 'VIADCT', 'VIADUCT'],
+  ['VIEW', 'VIEW', 'VW'],
+  ['VIEWS', 'VIEWS', 'VWS'],
+  ['VILLAGE', 'VILL', 'VILLAG', 'VILLAGE', 'VILLG', 'VILLIAGE', 'VLG'],
+  ['VILLAGES', 'VILLAGES', 'VLGS'],
+  ['VILLE', 'VILLE', 'VL'],
+  ['VISTA', 'VIS', 'VIST', 'VISTA', 'VST', 'VSTA'],
+  ['WALK', 'WALK', 'WALKS'],
+  ['WALL', 'WALL'],
+  ['WAY', 'WAY', 'WY'],
+  ['WAYS', 'WAYS'],
+  ['WELL', 'WELL', 'WL'],
+  ['WELLS', 'WELLS', 'WLS'],
+] as const
+
+const STREET_SUFFIX_ALIAS_GROUPS = USPS_STREET_SUFFIX_GROUPS.map((group) =>
+  Array.from(new Set(group)),
+)
+
+const FACILITY_SUFFIX_PATTERNS = [
+  /\bTransit Cent(?:er|re)$/i,
+  /\bTransportation Cent(?:er|re)$/i,
+  /\bTransport Centre$/i,
+  /\bGO Cent(?:er|re)$/i,
+  /\bBus Terminal$/i,
+  /\bRail Terminal$/i,
+  /\bTerminal$/i,
+  /\bDepot$/i,
+]
+
+const SHORT_SUFFIX_ALIAS_BLOCKLIST = new Set([
+  'center',
+  'centre',
+  'depot',
+  'downtown',
+  'east',
+  'main',
+  'north',
+  'south',
+  'station',
+  'terminal',
+  'transit',
+  'west',
+])
+
+const escapeRegExp = (value: string) =>
+  value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+
+const formatStreetSuffixAlias = (value: string) =>
+  value.toLowerCase().replace(/^[a-z]/, (char) => char.toUpperCase())
+
+const shouldIncludeShortSuffixAlias = (value: string) => {
+  const normalized = value.trim().toLowerCase()
+  return (
+    normalized.length >= 4 &&
+    /[a-z0-9]/i.test(normalized) &&
+    !SHORT_SUFFIX_ALIAS_BLOCKLIST.has(normalized)
+  )
+}
+
+const generateStreetSuffixAlternates = (value?: string): string[] => {
+  const input = normalizeAliasSpacing(repairMojibakeString(value ?? ''))
+  if (!input) {
+    return []
+  }
+
+  const alternates = new Set<string>()
+  const addBareAlias = (candidate: string) => {
+    const alias = normalizeAliasSpacing(candidate)
+    if (alias && shouldIncludeShortSuffixAlias(alias)) {
+      alternates.add(alias)
+    }
+  }
+
+  STREET_SUFFIX_ALIAS_GROUPS.forEach((terms) => {
+    const suffixRegex = new RegExp(
+      `\\b(?:${terms.map(escapeRegExp).join('|')})\\.?$`,
+      'i',
+    )
+    if (!suffixRegex.test(input)) {
+      return
+    }
+
+    const base = normalizeAliasSpacing(input.replace(suffixRegex, ''))
+    if (!base) {
+      return
+    }
+
+    terms.forEach((term) => {
+      alternates.add(`${base} ${formatStreetSuffixAlias(term)}`)
+    })
+    addBareAlias(base)
+  })
+
+  FACILITY_SUFFIX_PATTERNS.forEach((pattern) => {
+    if (!pattern.test(input)) {
+      return
+    }
+
+    addBareAlias(input.replace(pattern, ''))
+  })
+
+  return Array.from(alternates).filter(
+    (alternate) => alternate.toLowerCase() !== input.toLowerCase(),
+  )
+}
+
+const buildLineImageConfetti = (
+  lines: Record<string, { icon?: string } | undefined>,
+) => {
+  const images: { src: string; width: number; height: number }[] = []
+  const seen = new Set<string>()
+
+  Object.values(lines || {}).forEach((line) => {
+    const icon = line?.icon
+    if (!icon || typeof icon !== 'string') return
+    const src = `/images/${icon}`
+    if (seen.has(src)) return
+    seen.add(src)
+    images.push({ src, width: 64, height: 64 })
+  })
+
+  return images.length > 0 ? images : null
+}
+
+
+const shouldAutoFocus = () => {
+  if (typeof window === 'undefined') return false
+  return window.matchMedia('(hover: hover) and (pointer: fine)').matches
+}
+
+export default function GamePage({
+  fc,
+  routes,
+}: {
+  fc: DataFeatureCollection
+  routes?: RoutesFeatureCollection
+}) {
+  return (
+    <Suspense fallback={null}>
+      <GamePageContent fc={fc} routes={routes} />
+    </Suspense>
+  )
+}
+
+function GamePageContent({
+  fc,
+  routes,
+}: {
+  fc: DataFeatureCollection
+  routes?: RoutesFeatureCollection
+}) {
+  const {
+    CITY_NAME,
+    ASSET_BASE_PATH,
+    MAP_CONFIG,
+    LINES,
+    MAP_FROM_DATA,
+    MAP_RENDER_CULLING,
+    METADATA,
+  } =
+    useConfig()
+  const pathname = usePathname()
+  const router = useRouter()
+  const searchParams = useSearchParams()
+  const cityPath = useMemo(
+    () => ASSET_BASE_PATH ?? pathname?.replace(/^\//, '') ?? null,
+    [ASSET_BASE_PATH, pathname],
+  )
+  const miniCityLinks = useMemo(() => getMiniCityLinksForSlug(CITY_NAME), [CITY_NAME])
+  const isMiniCity = useMemo(() => isMiniCitySlug(CITY_NAME), [CITY_NAME])
+  const customParentSlug = searchParams.get('parent')?.trim() || null
+  const progressScopeSlug = useMemo(() => {
+    if (pathname === '/custom' && customParentSlug) {
+      return customParentSlug
+    }
+    if (miniCityLinks?.mode === 'child') {
+      return miniCityLinks.parent?.parentSlug ?? CITY_NAME
+    }
+    return CITY_NAME
+  }, [CITY_NAME, customParentSlug, miniCityLinks, pathname])
+  const rankedMode = searchParams.get('ranked') === '1'
+  const rankedRuleset = useMemo(
+    () =>
+      rankedMode
+        ? parseRankedRuleset(searchParams.get('ruleset') ?? DEFAULT_RANKED_RULESET)
+        : DEFAULT_RANKED_RULESET,
+    [rankedMode, searchParams],
+  )
+  const rankedSource = useMemo(
+    () =>
+      rankedMode
+        ? parseRankedRunSource(searchParams.get('source') ?? DEFAULT_RANKED_SOURCE)
+        : DEFAULT_RANKED_SOURCE,
+    [rankedMode, searchParams],
+  )
+  const rankedSeed = searchParams.get('seed')?.trim() || `${CITY_NAME}-${rankedRuleset}`
+  const rankedDailyChallengeId = searchParams.get('dailyChallengeId')?.trim() || null
+  const rankedChallengeId = searchParams.get('challengeId')?.trim() || null
+  const rankedBattleId = searchParams.get('battleId')?.trim() || null
+  const playlistRunId = searchParams.get('playlistRunId')?.trim() || null
+  const { t } = useTranslation()
+  const { resolvedTheme } = useTheme()
+  const { settings } = useSettings()
+  const { showAds } = useShouldShowAds()
+  const mapContainerRef = useRef<HTMLDivElement | null>(null)
+  
+  const [zenMode, setZenMode] = useState(false)
+  const [customModalOpen, setCustomModalOpen] = useState(false)
+  const [speedrunMode, setSpeedrunMode] = useState(false)
+  const [speedrunAvailable, setSpeedrunAvailable] = useState(true)
+  const [bestSpeedrunMs, setBestSpeedrunMs] = useState<number | null>(null)
+  const [speedrunElapsedMs, setSpeedrunElapsedMs] = useState<number | null>(null)
+  const speedrunStartRef = useRef<number | null>(null)
+  const speedrunFinishedRef = useRef(false)
+  const speedrunTimerRef = useRef<number | null>(null)
+  const clearSpeedrunStartStorage = useCallback(() => {
+    if (typeof window === 'undefined') return
+    try {
+      window.localStorage.removeItem(speedrunStartStorageKey(CITY_NAME))
+    } catch {
+      // ignore
+    }
+  }, [CITY_NAME])
+  useEffect(() => {
+    if (!cityPath) return
+
+    rememberLastPlayedCity({
+      slug: CITY_NAME,
+      path: `/${cityPath}`,
+    })
+  }, [CITY_NAME, cityPath])
+  const [mistakes, setMistakes] = useState(0)
+  const savedMapViewRef = useRef<StoredMapView | null>(null)
+  const initialMapViewRef = useRef<StoredMapView | null>(null)
+  const mapPersistTimeoutRef = useRef<number | null>(null)
+  const lastPersistTsRef = useRef<number>(0)
+  const mapUnavailableRef = useRef(false)
+  const comebackTriggeredRef = useRef(false)
+  const comebackArmedRef = useRef(false)
+  const earnedAchievementsRef = useRef<Set<string>>(new Set())
+  const lineMasterEarnedRef = useRef<Set<string>>(new Set())
+  const lastPlayDateRef = useRef<string | null>(null)
+  const achievementsHydratedRef = useRef(false)
+  const perfectStartEligibleRef = useRef(true)
+  const perfectStartCountRef = useRef(0)
+  const perfectStartInitializedRef = useRef(false)
+  const neverRepeatRef = useRef(true)
+  const typoFreeRef = useRef(true)
+  const speedrunIntegrityRef = useRef(true)
+  const recentCorrectTimesRef = useRef<number[]>([])
+  const lineMasterSyncRef = useRef(false)
+
+  // Hydrate globally earned achievements so one-offs (e.g., comeback-kid) never re-award across cities
+  useEffect(() => {
+    if (typeof window === 'undefined') return
+    try {
+      const raw = window.localStorage.getItem('mm-achievements-earned')
+      if (raw) {
+        const parsed = JSON.parse(raw)
+        if (Array.isArray(parsed)) {
+          earnedAchievementsRef.current = new Set(
+            parsed.filter((slug): slug is string => typeof slug === 'string'),
+          )
+        }
+      }
+    } catch {
+      // ignore malformed storage
+    }
+    achievementsHydratedRef.current = true
+  }, [])
+
+  const normalizeString = useNormalizeString()
+  const { featureCollection, clusterGroups, clusterMembersById } = useMemo(() => {
+    const cityStationAliases = getCityStationAliases(CITY_NAME)
+    const primaryNameOwners = new Map<string, Set<string>>()
+    fc.features.forEach((feature) => {
+      const name = typeof feature.properties.name === 'string' ? feature.properties.name : ''
+      const key = normalizeString(name)
+      if (!key) return
+      const owners = primaryNameOwners.get(key) ?? new Set<string>()
+      owners.add(name)
+      primaryNameOwners.set(key, owners)
+    })
+    const hyphenSegmentOwners = new Map<string, Set<string>>()
+    fc.features.forEach((feature) => {
+      const name = typeof feature.properties.name === 'string' ? feature.properties.name : ''
+      generateHyphenSegmentAlternates(name).forEach((alternate) => {
+        const key = normalizeString(alternate)
+        if (!key) return
+        const owners = hyphenSegmentOwners.get(key) ?? new Set<string>()
+        owners.add(name)
+        hyphenSegmentOwners.set(key, owners)
+      })
+    })
+    const streetSuffixAliasOwners = new Map<string, Set<string>>()
+    fc.features.forEach((feature) => {
+      const name = typeof feature.properties.name === 'string' ? feature.properties.name : ''
+      generateStreetSuffixAlternates(name).forEach((alternate) => {
+        const key = normalizeString(alternate)
+        if (!key) return
+        const owners = streetSuffixAliasOwners.get(key) ?? new Set<string>()
+        owners.add(name)
+        streetSuffixAliasOwners.set(key, owners)
+      })
+    })
+
+    const collidesWithDifferentPrimaryName = (alias: string, originalName: string) => {
+      const owners = primaryNameOwners.get(normalizeString(alias))
+      if (!owners) return false
+      return owners.size > 1 || !owners.has(originalName)
+    }
+
+    const collidesWithDifferentHyphenSegment = (alias: string, originalName: string) => {
+      const owners = hyphenSegmentOwners.get(normalizeString(alias))
+      if (!owners) return false
+      return owners.size > 1 || !owners.has(originalName)
+    }
+
+    const collidesWithDifferentStreetSuffixAlias = (alias: string, originalName: string) => {
+      const owners = streetSuffixAliasOwners.get(normalizeString(alias))
+      if (!owners) return false
+      return owners.size > 1 || !owners.has(originalName)
+    }
+
+    const featuresWithAlternates = fc.features.map((feature) => {
+      const originalName =
+        typeof feature.properties.name === 'string'
+          ? feature.properties.name
+          : ''
+
+      const propertiesWithAlternates = feature.properties as typeof feature.properties & {
+        alternate_names?: string[]
+        line?: string
+      }
+      const lineId =
+        typeof propertiesWithAlternates.line === 'string'
+          ? propertiesWithAlternates.line
+          : undefined
+
+      const existingAlternates = Array.isArray(
+        propertiesWithAlternates.alternate_names,
+      )
+        ? propertiesWithAlternates.alternate_names.filter(
+            (alt): alt is string =>
+              typeof alt === 'string' && alt.trim().length > 0,
+          )
+        : []
+
+      const generatedAlternates = generateAlternateNames(originalName)
+      const cityConfiguredAlternates = cityStationAliases[originalName] ?? []
+      const streetSuffixAlternates = generateStreetSuffixAlternates(originalName)
+      const cityConfiguredAlternateKeys = new Set(
+        cityConfiguredAlternates.map((alternate) => normalizeString(alternate)),
+      )
+      const streetSuffixAlternateKeys = new Set(
+        streetSuffixAlternates.map((alternate) => normalizeString(alternate)),
+      )
+      const hyphenSegmentAlternates = generateHyphenSegmentAlternates(originalName).filter(
+        (alternate) =>
+          !collidesWithDifferentPrimaryName(alternate, originalName) &&
+          !collidesWithDifferentHyphenSegment(alternate, originalName),
+      )
+
+      const amtrakAliasSource =
+        CITY_NAME === 'amtrak'
+          ? [originalName, ...existingAlternates, ...generatedAlternates]
+          : []
+      const stationlessAliasSource = [
+        originalName,
+        ...existingAlternates,
+        ...generatedAlternates,
+        ...cityConfiguredAlternates,
+      ]
+
+      const mergedAlternates = Array.from(
+        new Set([
+          ...existingAlternates,
+          ...cityConfiguredAlternates,
+          ...hyphenSegmentAlternates,
+          ...streetSuffixAlternates,
+          ...generatedAlternates.filter(
+            (alt) => typeof alt === 'string' && alt.trim().length > 0,
+          ),
+          ...stationlessAliasSource.flatMap((value) =>
+            generateStationlessAlternates(value),
+          ),
+          ...(CITY_NAME === 'amtrak'
+            ? AMTRAK_MANUAL_ALTERNATE_NAMES[originalName] ?? []
+            : []),
+          ...(CITY_NAME === 'amtrak'
+            ? [
+                ...amtrakAliasSource.flatMap((value) =>
+                  generateStationlessAlternates(value),
+                ),
+              ]
+            : []),
+        ]),
+      )
+      const filteredAlternates = mergedAlternates.filter((alternate) => {
+        if (CITY_NAME === 'amtrak') {
+          const blockedAlternates =
+            AMTRAK_BLOCKED_ALTERNATE_NAMES[originalName] ?? []
+          if (
+            blockedAlternates.some(
+              (blockedAlternate) =>
+                blockedAlternate.trim().toLowerCase() ===
+                alternate.trim().toLowerCase(),
+            )
+          ) {
+            return false
+          }
+        }
+        if (CITY_NAME === 'nyc' || CITY_NAME === 'regional-rail') {
+          if (
+            (lineId === 'NewYorkSubwayE' ||
+              lineId === 'NewYorkSubwayF' ||
+              lineId === 'NewYorkSubwayFX') &&
+            originalName === 'Forest Hills - 71 Av' &&
+            /^forest hills$/i.test(alternate.trim())
+          ) {
+            return false
+          }
+          if (
+            (lineId === 'NewYorkSubwayE' ||
+              lineId === 'NewYorkSubwayF' ||
+              lineId === 'NewYorkSubwayFX') &&
+            originalName === 'Kew Gardens - Union Tpke' &&
+            /^kew gardens$/i.test(alternate.trim())
+          ) {
+            return false
+          }
+          if (lineId === 'AirTrainEWR') {
+            if (
+              /^terminal [abc]$/i.test(originalName) &&
+              /\bterminal\s*[1-8]\b/i.test(alternate)
+            ) {
+              return false
+            }
+          }
+        }
+        if (
+          streetSuffixAlternateKeys.has(normalizeString(alternate)) &&
+          !cityConfiguredAlternateKeys.has(normalizeString(alternate)) &&
+          collidesWithDifferentStreetSuffixAlias(alternate, originalName)
+        ) {
+          return false
+        }
+        return true
+      })
+
+      const nextProperties: typeof feature.properties & {
+        alternate_names?: string[]
+      } = {
+        ...feature.properties,
+      }
+
+      if (filteredAlternates.length > 0) {
+        nextProperties.alternate_names = filteredAlternates
+      } else if ('alternate_names' in nextProperties) {
+        delete nextProperties.alternate_names
+      }
+
+      return {
+        ...feature,
+        properties: nextProperties,
+      } as DataFeature
+    })
+
+    type PointFeatureEntry = {
+      feature: DataFeature
+      id: number
+      lng: number
+      lat: number
+      name: string
+      autoClusterAliases: Set<string>
+    }
+
+    const pointFeatures: PointFeatureEntry[] = featuresWithAlternates
+      .map((feature) => {
+        if (
+          feature.geometry?.type !== 'Point' ||
+          !Array.isArray(feature.geometry.coordinates) ||
+          typeof feature.id !== 'number'
+        ) {
+          return null
+        }
+
+        const [lng, lat] = feature.geometry.coordinates as number[]
+        return {
+          feature,
+          id: feature.id as number,
+          lng,
+          lat,
+          name: (feature.properties.name ?? '').trim(),
+          autoClusterAliases: buildAutoClusterAliases(feature, normalizeString),
+        }
+      })
+      .filter((entry): entry is PointFeatureEntry => entry !== null)
+
+    const parent = new Map<number, number>()
+
+    const find = (id: number): number => {
+      const current = parent.get(id)
+      if (current === undefined) {
+        parent.set(id, id)
+        return id
+      }
+      if (current === id) {
+        return id
+      }
+      const root = find(current)
+      parent.set(id, root)
+      return root
+    }
+
+    const union = (a: number, b: number) => {
+      const rootA = find(a)
+      const rootB = find(b)
+      if (rootA === rootB) {
+        return
+      }
+      if (rootA < rootB) {
+        parent.set(rootB, rootA)
+      } else {
+        parent.set(rootA, rootB)
+      }
+    }
+
+    const COMPLEX_THRESHOLD = 0.00075
+
+    const explicitClusterMembers = new Map<string | number, number[]>()
+
+    const matchesManualSelector = (
+      entry: PointFeatureEntry,
+      selector: ManualComplexSelector,
+    ) => {
+      const entryName = entry.name.trim().toLowerCase()
+      const selectorName = selector.name.trim().toLowerCase()
+      if (entryName !== selectorName) {
+        return false
+      }
+
+      const line = entry.feature.properties?.line
+      if (selector.line && line !== selector.line) {
+        return false
+      }
+      if (selector.linePrefix && !(line && line.startsWith(selector.linePrefix))) {
+        return false
+      }
+      return true
+    }
+
+    const isAutoComplexExcluded = (
+      current: PointFeatureEntry,
+      other: PointFeatureEntry,
+    ) =>
+      MANUAL_AUTO_COMPLEX_EXCLUSIONS.some(
+        ([first, second]) =>
+          (matchesManualSelector(current, first) &&
+            matchesManualSelector(other, second)) ||
+          (matchesManualSelector(current, second) &&
+            matchesManualSelector(other, first)),
+      )
+
+    pointFeatures.forEach((entry) => {
+      const propertiesWithCluster = entry.feature.properties as typeof entry.feature.properties & {
+        cluster_key?: number | string
+      }
+
+      const clusterKey = propertiesWithCluster?.cluster_key
+      const normalizedKey =
+        typeof clusterKey === 'string' ? clusterKey.trim() : clusterKey
+
+      if (normalizedKey === undefined || normalizedKey === null || normalizedKey === '') {
+        return
+      }
+
+      const members = explicitClusterMembers.get(normalizedKey) ?? []
+      members.push(entry.id)
+      explicitClusterMembers.set(normalizedKey, members)
+    })
+
+    explicitClusterMembers.forEach((members) => {
+      if (members.length <= 1) {
+        return
+      }
+
+      const [first, ...rest] = members
+      rest.forEach((id) => union(first, id))
+    })
+
+    for (let i = 0; i < pointFeatures.length; i++) {
+      const current = pointFeatures[i]
+      for (let j = i + 1; j < pointFeatures.length; j++) {
+        const other = pointFeatures[j]
+        const distance = Math.hypot(current.lng - other.lng, current.lat - other.lat)
+        if (
+          distance <= COMPLEX_THRESHOLD &&
+          !isAutoComplexExcluded(current, other) &&
+          autoClusterAliasSetsOverlap(
+            current.autoClusterAliases,
+            other.autoClusterAliases,
+          )
+        ) {
+          union(current.id, other.id)
+        }
+      }
+    }
+
+    const pointFeaturesByName = new Map<string, PointFeatureEntry[]>()
+    pointFeatures.forEach((entry) => {
+      const key = entry.name.trim().toLowerCase()
+      if (!key) {
+        return
+      }
+      if (!pointFeaturesByName.has(key)) {
+        pointFeaturesByName.set(key, [])
+      }
+      pointFeaturesByName.get(key)!.push(entry)
+    })
+
+    const collectMatches = (selector: ManualComplexSelector) => {
+      const key = selector.name.trim().toLowerCase()
+      const candidates = pointFeaturesByName.get(key) ?? []
+      return candidates.filter((entry) => matchesManualSelector(entry, selector))
+    }
+
+    MANUAL_COMPLEX_GROUPS.forEach((group) => {
+      const memberIds = new Set<number>()
+      group.forEach((selector) => {
+        collectMatches(selector).forEach((entry) => memberIds.add(entry.id))
+      })
+      const ids = Array.from(memberIds)
+      if (ids.length <= 1) {
+        return
+      }
+      const [first, ...rest] = ids
+      rest.forEach((id) => union(first, id))
+    })
+
+    const clusters = new Map<number, PointFeatureEntry[]>()
+    pointFeatures.forEach((entry) => {
+      const root = find(entry.id)
+      if (!clusters.has(root)) {
+        clusters.set(root, [])
+      }
+      clusters.get(root)!.push(entry)
+    })
+
+    const clusterKeyById = new Map<number, number>()
+    const additionalAlternateNames = new Map<number, Set<string>>()
+    const clusterGroups = new Map<number, number[]>()
+
+    clusters.forEach((members, root) => {
+      if (members.length <= 1) {
+        return
+      }
+
+      const clusterIds = members
+        .map((member) => member.id)
+        .filter((id): id is number => typeof id === 'number')
+      if (clusterIds.length > 1) {
+        clusterGroups.set(root, clusterIds)
+      }
+
+      const uniqueNames = Array.from(
+        new Set(
+          members
+            .map((member) => member.name)
+            .filter((name): name is string => name.length > 0),
+        ),
+      )
+
+      const globalAlias =
+        uniqueNames.length > 1 ? uniqueNames.join(' - ') : undefined
+
+      members.forEach((member) => {
+        const memberId = member.id
+        clusterKeyById.set(memberId, root)
+
+        if (uniqueNames.length <= 1) {
+          return
+        }
+
+        const additionalAlternates =
+          additionalAlternateNames.get(memberId) ?? new Set<string>()
+
+        const memberName = member.name
+        const sortedOthers = uniqueNames
+          .filter((name) => name !== memberName)
+          .sort((a, b) => a.localeCompare(b))
+
+        if (globalAlias && globalAlias !== memberName) {
+          additionalAlternates.add(globalAlias)
+        }
+
+        if (memberName && sortedOthers.length > 0) {
+          additionalAlternates.add([memberName, ...sortedOthers].join(' - '))
+        }
+
+        additionalAlternateNames.set(memberId, additionalAlternates)
+      })
+    })
+
+    const clusterMembersById = new Map<number, number[]>()
+
+    clusterGroups.forEach((members) => {
+      members.forEach((memberId) => {
+        clusterMembersById.set(memberId, members)
+      })
+    })
+
+    const finalFeatures = featuresWithAlternates.map((feature) => {
+      const id = feature.id
+      if (typeof id !== 'number') {
+        return feature
+      }
+
+      const propertiesWithExtras = feature.properties as typeof feature.properties & {
+        alternate_names?: string[]
+        cluster_key?: number | string
+      }
+
+      const baseAlternates = Array.isArray(propertiesWithExtras.alternate_names)
+        ? propertiesWithExtras.alternate_names.filter(
+            (alt): alt is string =>
+              typeof alt === 'string' && alt.trim().length > 0,
+          )
+        : []
+
+      const extraAlternates = additionalAlternateNames.get(id)
+      const mergedAlternates = Array.from(
+        new Set([
+          ...baseAlternates,
+          ...(extraAlternates ? Array.from(extraAlternates) : []),
+        ]),
+      )
+
+      const nextProperties: typeof propertiesWithExtras = {
+        ...feature.properties,
+      }
+
+      if (mergedAlternates.length > 0) {
+        nextProperties.alternate_names = mergedAlternates
+      } else if ('alternate_names' in nextProperties) {
+        delete nextProperties.alternate_names
+      }
+
+      const clusterKey = clusterKeyById.get(id)
+      if (clusterKey !== undefined && clusterKey !== null) {
+        nextProperties.cluster_key = clusterKey
+      } else if ('cluster_key' in nextProperties) {
+        delete nextProperties.cluster_key
+      }
+
+      return {
+        ...feature,
+        properties: nextProperties,
+      } as DataFeature
+    })
+
+    return {
+      featureCollection: {
+        ...fc,
+        features: finalFeatures,
+      },
+      clusterGroups,
+      clusterMembersById,
+    }
+  }, [CITY_NAME, fc, normalizeString])
+
+  const displayLines = useMemo(() => {
+    if (rankedRuleset !== 'no-line-colors') {
+      return LINES
+    }
+    return Object.fromEntries(
+      Object.entries(LINES ?? {}).map(([lineId, line]) => [
+        lineId,
+        {
+          ...line,
+          color: toMutedLineColor(),
+          backgroundColor: '#475569',
+        },
+      ]),
+    )
+  }, [LINES, rankedRuleset])
+
+  const displayRoutes = useMemo(() => {
+    const baseRoutes = applyCityRouteOverrides(routes, CITY_NAME)
+    if (!baseRoutes || rankedRuleset !== 'no-line-colors') {
+      return baseRoutes
+    }
+    return {
+      ...baseRoutes,
+      features: baseRoutes.features.map((feature) => ({
+        ...feature,
+        properties: {
+          ...feature.properties,
+          color: toMutedLineColor(),
+        },
+      })),
+    }
+  }, [routes, CITY_NAME, rankedRuleset])
+
+  const renderCullingEnabled = Boolean(
+    MAP_FROM_DATA && MAP_RENDER_CULLING?.enabled && displayRoutes,
+  )
+  const renderCullingPaddingFactor = MAP_RENDER_CULLING?.paddingFactor ?? 0.5
+
+  const stationRenderEntries = useMemo(
+    () =>
+      featureCollection.features
+        .map((feature) => ({
+          feature,
+          bounds: getFeatureBounds(feature),
+        }))
+        .filter(
+          (
+            entry,
+          ): entry is {
+            feature: DataFeature
+            bounds: RenderBounds
+          } => entry.bounds !== null,
+        ),
+    [featureCollection.features],
+  )
+
+  const routeRenderEntries = useMemo(
+    () =>
+      (displayRoutes?.features ?? [])
+        .map((feature) => ({
+          feature,
+          bounds: getFeatureBounds(feature),
+        }))
+        .filter(
+          (
+            entry,
+          ): entry is {
+            feature: RoutesFeatureCollection['features'][number]
+            bounds: RenderBounds
+          } => entry.bounds !== null,
+        ),
+    [displayRoutes],
+  )
+
+  const getRenderedCollections = useCallback(
+    (mapBounds: RenderBounds) => {
+      if (!renderCullingEnabled) {
+        return {
+          features: featureCollection,
+          routes: displayRoutes ?? EMPTY_ROUTES_FEATURE_COLLECTION,
+        }
+      }
+
+      const expandedBounds = expandRenderBounds(
+        mapBounds,
+        renderCullingPaddingFactor,
+      )
+
+      return {
+        features: {
+          ...featureCollection,
+          features: stationRenderEntries
+            .filter((entry) => intersectsRenderBounds(entry.bounds, expandedBounds))
+            .map((entry) => entry.feature),
+        } as DataFeatureCollection,
+        routes: displayRoutes
+          ? ({
+              ...displayRoutes,
+              features: routeRenderEntries
+                .filter((entry) => intersectsRenderBounds(entry.bounds, expandedBounds))
+                .map((entry) => entry.feature),
+            } as RoutesFeatureCollection)
+          : EMPTY_ROUTES_FEATURE_COLLECTION,
+      }
+    },
+    [
+      displayRoutes,
+      featureCollection,
+      renderCullingEnabled,
+      renderCullingPaddingFactor,
+      routeRenderEntries,
+      stationRenderEntries,
+    ],
+  )
+
+  const allStationIds = useMemo(() => {
+    const ids = featureCollection.features
+      .map((feature) => feature.id)
+      .filter((id): id is number => typeof id === 'number')
+    return Array.from(new Set(ids))
+  }, [featureCollection.features])
+
+  useEffect(() => {
+    if (typeof window === 'undefined') {
+      return
+    }
+
+    const total = allStationIds.length
+    const storageKey = `${CITY_NAME}-station-total`
+
+    try {
+      if (total <= 0) {
+        window.localStorage.removeItem(storageKey)
+        return
+      }
+
+      const stored = Number(window.localStorage.getItem(storageKey))
+      if (!Number.isFinite(stored) || stored !== total) {
+        window.localStorage.setItem(storageKey, String(total))
+      }
+    } catch (error) {
+      if (process.env.NODE_ENV !== 'production') {
+        console.warn(`Unable to persist station total for ${CITY_NAME}`, error)
+      }
+    }
+  }, [CITY_NAME, allStationIds])
+
+  const [map, setMap] = useState<mapboxgl.Map | null>(null)
+  const [mapBearing, setMapBearing] = useState(0)
+  const [hoveredId, setHoveredId] = useState<number | null>(null)
+  const inputRef = useRef<HTMLInputElement | null>(null)
+  const { hideLabels, setHideLabels } = useHideLabels(map)
+  const { user, updateProgressSummary, uiPreferences, updateUiPreferences } = useAuth()
+  const [rankedSessionId, setRankedSessionId] = useState<string | null>(null)
+  const [rankedDisqualificationReason, setRankedDisqualificationReason] = useState<string | null>(null)
+  const [rankedFinishSummary, setRankedFinishSummary] = useState<{
+    completionMs: number | null
+    rankedEligible: boolean
+    disqualificationReason: string | null
+  } | null>(null)
+  const [sessionFoundState, setSessionFoundState] = useState<number[]>([])
+  const [sessionFoundTimestampsState, setSessionFoundTimestampsState] = useState<Record<string, string>>({})
+  const [sessionIsNewPlayerState, setSessionIsNewPlayerState] = useState(true)
+  const [rankedHintCount, setRankedHintCount] = useState(0)
+  const rankedCorrectGuessCountRef = useRef(0)
+  const rankedCorrectStationCountRef = useRef(0)
+  const rankedWrongGuessCountRef = useRef(0)
+  const rankedRepeatedGuessCountRef = useRef(0)
+  const rankedFirstCorrectAtRef = useRef<number | null>(null)
+  const rankedFirst50MsRef = useRef<number | null>(null)
+  const rankedRunFinishedRef = useRef(false)
+  const casualPlaylistAdvanceRef = useRef(false)
+  const [solutionsPromptOpen, setSolutionsPromptOpen] = useState(false)
+  const [solutionsPassword, setSolutionsPassword] = useState('')
+  const [solutionsAccessPassword, setSolutionsAccessPassword] = useState('')
+  const [solutionsError, setSolutionsError] = useState(false)
+  const [solutionsUnlocked, setSolutionsUnlocked] = useState(false)
+  const [showSatellite, setShowSatellite] = useState(false)
+  const [showMapNames, setShowMapNames] = useState(false)
+  const [actionType, setActionType] = useState<'solutions' | 'satellite' | 'mapNames' | null>(null)
+  const pendingActionRef = useRef<(() => void) | null>(null)
+  const satelliteHydratedRef = useRef(false)
+  const mapNamesHydratedRef = useRef(false)
+  const mapCoordsToastTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
+  const canCopyMapCoords = showSatellite || showMapNames
+  const { value: storedSidebarOpen, set: setStoredSidebarOpen } =
+    useLocalStorageValue<boolean>(`${CITY_NAME}-sidebar-open`, {
+      defaultValue: true,
+      initializeWithValue: false,
+    })
+  const [sidebarOpenState, setSidebarOpenState] = useState(true)
+  const [mobileSidebarOpen, setMobileSidebarOpen] = useState(false)
+  const sidebarScrollRef = useRef<HTMLDivElement | null>(null)
+  const [sidebarScrolled, setSidebarScrolled] = useState(false)
+  const [activeFoundId, setActiveFoundId] = useState<number | null>(null)
+  const [achievementToast, setAchievementToast] = useState<AchievementToastState | null>(null)
+  const [mapCoordsMenu, setMapCoordsMenu] = useState<MapCoordsMenuState | null>(null)
+  const [mapCoordsToast, setMapCoordsToast] = useState<string | null>(null)
+  const [settingsModalOpen, setSettingsModalOpen] = useState(false)
+  const [cityStatsOpen, setCityStatsOpen] = useState(false)
+  const [missedGuessInputsOpen, setMissedGuessInputsOpen] = useState(false)
+  const [accountModalOpen, setAccountModalOpen] = useState(false)
+  const [privacyModalOpen, setPrivacyModalOpen] = useState(false)
+  const [resetConfirmOpen, setResetConfirmOpen] = useState(false)
+  const [mapError, setMapError] = useState<string | null>(null)
+  const [highlightedLineId, setHighlightedLineId] = useState<string | null>(null)
+  const disableRouteLineHighlightInteraction =
+    CITY_NAME === 'nyc' || CITY_NAME === 'amtrak'
+  const foundRef = useRef<number[]>([])
+
+  // Speedrun preference hydration
+  useEffect(() => {
+    if (typeof window === 'undefined') return
+    const key = `${CITY_NAME}-speedrun-enabled`
+    let initial = false
+    if (uiPreferences.speedrunByCity && typeof uiPreferences.speedrunByCity[CITY_NAME] === 'boolean') {
+      initial = uiPreferences.speedrunByCity[CITY_NAME] as boolean
+    } else {
+      const raw = window.localStorage.getItem(key)
+      if (raw === '1' || raw === 'true') {
+        initial = true
+      }
+    }
+    setSpeedrunMode(initial)
+  }, [CITY_NAME, uiPreferences.speedrunByCity])
+
+  // Best speedrun hydration
+  useEffect(() => {
+    if (typeof window === 'undefined') return
+    try {
+      const raw = window.localStorage.getItem(`speedrun-best-${CITY_NAME}`)
+      if (raw && Number.isFinite(Number(raw))) {
+        setBestSpeedrunMs(Number(raw))
+      }
+    } catch {
+      // ignore
+    }
+  }, [CITY_NAME])
+
+  // Hydrate in-progress speedrun (start timestamp)
+  useEffect(() => {
+    if (!speedrunMode) return
+    if (typeof window === 'undefined') return
+    try {
+      const raw = window.localStorage.getItem(speedrunStartStorageKey(CITY_NAME))
+      if (!raw) return
+      const startedAt = Number(raw)
+      if (!Number.isFinite(startedAt)) return
+      const elapsed = Math.max(0, Date.now() - startedAt)
+      speedrunStartRef.current = performance.now() - elapsed
+      setSpeedrunElapsedMs(elapsed)
+      speedrunFinishedRef.current = false
+    } catch {
+      // ignore
+    }
+  }, [CITY_NAME, speedrunMode])
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      window.localStorage.setItem(`${CITY_NAME}-speedrun-enabled`, speedrunMode ? '1' : '0')
+    }
+    updateUiPreferences({ speedrunByCity: { [CITY_NAME]: speedrunMode } })
+    if (!speedrunMode) {
+      speedrunStartRef.current = null
+      speedrunFinishedRef.current = false
+      if (speedrunTimerRef.current) {
+        window.clearInterval(speedrunTimerRef.current)
+        speedrunTimerRef.current = null
+      }
+      setSpeedrunElapsedMs(null)
+      clearSpeedrunStartStorage()
+      setMistakes(0)
+      comebackArmedRef.current = false
+      comebackTriggeredRef.current = false
+    }
+  }, [CITY_NAME, clearSpeedrunStartStorage, speedrunMode, updateUiPreferences])
+
+  // Hydrate saved map view (local only)
+  useEffect(() => {
+    if (typeof window === 'undefined') return
+    try {
+      const raw = window.localStorage.getItem(`map-view-${CITY_NAME}`)
+      if (raw) {
+        const parsed = JSON.parse(raw)
+        if (isStoredMapView(parsed)) {
+          savedMapViewRef.current = parsed
+        } else {
+          window.localStorage.removeItem(`map-view-${CITY_NAME}`)
+        }
+      }
+    } catch {
+      // ignore
+    }
+  }, [CITY_NAME])
+
+  useEffect(() => {
+    if (highlightedLineId) {
+        const timer = setTimeout(() => {
+            setHighlightedLineId(null)
+        }, 3000)
+        return () => clearTimeout(timer)
+    }
+  }, [highlightedLineId])
+
+  useEffect(() => {
+    let nextSatellite = showSatellite
+
+    if (typeof uiPreferences.cityViewSatellite === 'boolean') {
+      nextSatellite = uiPreferences.cityViewSatellite
+    } else if (!satelliteHydratedRef.current && typeof window !== 'undefined') {
+      const stored = window.localStorage.getItem(GLOBAL_SATELLITE_STORAGE_KEY)
+      if (stored === '1' || stored === 'true') {
+        nextSatellite = true
+      } else if (stored === '0' || stored === 'false') {
+        nextSatellite = false
+      }
+    }
+
+    if (nextSatellite !== showSatellite) {
+      setShowSatellite(nextSatellite)
+    }
+
+    if (!satelliteHydratedRef.current) {
+      satelliteHydratedRef.current = true
+    }
+  }, [showSatellite, uiPreferences.cityViewSatellite])
+
+  useEffect(() => {
+    if (!satelliteHydratedRef.current) return
+    if (typeof window !== 'undefined') {
+      window.localStorage.setItem(
+        GLOBAL_SATELLITE_STORAGE_KEY,
+        showSatellite ? '1' : '0',
+      )
+    }
+    updateUiPreferences({ cityViewSatellite: showSatellite })
+  }, [showSatellite, updateUiPreferences])
+
+  useEffect(() => {
+    let nextMapNames = showMapNames
+
+    if (!mapNamesHydratedRef.current && typeof window !== 'undefined') {
+      const stored = window.localStorage.getItem(GLOBAL_MAP_NAMES_STORAGE_KEY)
+      if (stored === '1' || stored === 'true') {
+        nextMapNames = true
+      } else if (stored === '0' || stored === 'false') {
+        nextMapNames = false
+      }
+    }
+
+    if (nextMapNames !== showMapNames) {
+      setShowMapNames(nextMapNames)
+    }
+
+    if (!mapNamesHydratedRef.current) {
+      mapNamesHydratedRef.current = true
+    }
+  }, [showMapNames])
+
+  useEffect(() => {
+    if (solutionsUnlocked || typeof window === 'undefined') {
+      return
+    }
+
+    if (
+      readSolutionsAccess() ||
+      (satelliteHydratedRef.current && showSatellite) ||
+      (mapNamesHydratedRef.current && showMapNames)
+    ) {
+      setSolutionsUnlocked(true)
+    }
+  }, [showMapNames, showSatellite, solutionsUnlocked])
+
+  useEffect(() => {
+    if (!mapNamesHydratedRef.current) return
+    if (typeof window !== 'undefined') {
+      window.localStorage.setItem(
+        GLOBAL_MAP_NAMES_STORAGE_KEY,
+        showMapNames ? '1' : '0',
+      )
+    }
+  }, [showMapNames])
+  const completionConfettiStorageKey = useMemo(
+    () => `${CITY_NAME}-completion-confetti-shown`,
+    [CITY_NAME],
+  )
+  const [cityCompletionConfettiSeen, setCityCompletionConfettiSeen] = useState(false)
+
+  useEffect(() => {
+    if (typeof window === 'undefined') {
+      return
+    }
+    try {
+      setCityCompletionConfettiSeen(
+        window.localStorage.getItem(completionConfettiStorageKey) === '1',
+      )
+    } catch {
+      setCityCompletionConfettiSeen(false)
+    }
+  }, [completionConfettiStorageKey])
+
+  const markCityCompletionConfettiSeen = useCallback(() => {
+    setCityCompletionConfettiSeen(true)
+    if (typeof window === 'undefined') {
+      return
+    }
+    try {
+      window.localStorage.setItem(completionConfettiStorageKey, '1')
+    } catch {
+      // ignore storage errors
+    }
+  }, [completionConfettiStorageKey])
+
+  useEffect(() => {
+    if (typeof storedSidebarOpen === 'boolean') {
+      setSidebarOpenState(storedSidebarOpen)
+    }
+  }, [storedSidebarOpen])
+
+  const setSidebarOpen = useCallback(
+    (next: boolean | ((prev: boolean) => boolean)) => {
+      setSidebarOpenState((prev) => {
+        const resolved =
+          typeof next === 'function' ? (next as (prev: boolean) => boolean)(prev) : next
+        setStoredSidebarOpen(resolved)
+        return resolved
+      })
+    },
+    [setStoredSidebarOpen],
+  )
+
+  const sidebarOpen = sidebarOpenState
+  useEffect(() => {
+    const el = sidebarScrollRef.current
+    if (!el) {
+      setSidebarScrolled(false)
+      return
+    }
+    const onScroll = () => setSidebarScrolled(el.scrollTop > 120)
+    onScroll()
+    el.addEventListener('scroll', onScroll, { passive: true })
+    return () => {
+      el.removeEventListener('scroll', onScroll)
+    }
+  }, [sidebarOpen])
+
+  const scrollSidebarToTop = useCallback(() => {
+    sidebarScrollRef.current?.scrollTo({ top: 0, behavior: 'smooth' })
+  }, [])
+
+  const handleAchievementToastClose = useCallback(() => {
+    setAchievementToast(null)
+  }, [])
+
+  const handleAchievementToastNever = useCallback((slug: string) => {
+    if (typeof window !== 'undefined') {
+      try {
+        window.localStorage.setItem(achievementToastStorageKey(slug), '1')
+        if (slug.startsWith('line-master') || slug.includes('line-master')) {
+          window.localStorage.setItem(achievementToastStorageKey('line-master'), '1')
+        }
+      } catch {
+        // ignore storage errors
+      }
+    }
+    setAchievementToast(null)
+  }, [])
+
+  const closeMapCoordsMenu = useCallback(() => {
+    setMapCoordsMenu(null)
+  }, [])
+
+  const showMapCoordsCopiedToast = useCallback((message: string) => {
+    if (mapCoordsToastTimeoutRef.current) {
+      clearTimeout(mapCoordsToastTimeoutRef.current)
+    }
+    setMapCoordsToast(message)
+    mapCoordsToastTimeoutRef.current = setTimeout(() => {
+      setMapCoordsToast(null)
+      mapCoordsToastTimeoutRef.current = null
+    }, MAP_COORDS_TOAST_DISMISS_MS)
+  }, [])
+
+  const copyMapCoords = useCallback(async () => {
+    if (!mapCoordsMenu) return
+    const lat = mapCoordsMenu.lat.toFixed(7)
+    const lng = mapCoordsMenu.lng.toFixed(7)
+    const text = `${lat}, ${lng}`
+
+    try {
+      if (
+        typeof navigator !== 'undefined' &&
+        navigator.clipboard &&
+        typeof navigator.clipboard.writeText === 'function'
+      ) {
+        await navigator.clipboard.writeText(text)
+        showMapCoordsCopiedToast(`Copied ${text}`)
+      } else {
+        showMapCoordsCopiedToast(`Copy unavailable: ${text}`)
+      }
+    } catch {
+      showMapCoordsCopiedToast(`Copy failed: ${text}`)
+    } finally {
+      closeMapCoordsMenu()
+    }
+  }, [closeMapCoordsMenu, mapCoordsMenu, showMapCoordsCopiedToast])
+
+  useEffect(() => {
+    if (!mapCoordsMenu) return
+
+    const handlePointerDown = () => {
+      setMapCoordsMenu(null)
+    }
+
+    const handleEscape = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setMapCoordsMenu(null)
+      }
+    }
+
+    window.addEventListener('pointerdown', handlePointerDown)
+    window.addEventListener('keydown', handleEscape)
+    return () => {
+      window.removeEventListener('pointerdown', handlePointerDown)
+      window.removeEventListener('keydown', handleEscape)
+    }
+  }, [mapCoordsMenu])
+
+  useEffect(() => {
+    if (canCopyMapCoords) return
+    setMapCoordsMenu(null)
+  }, [canCopyMapCoords])
+
+  useEffect(() => {
+    return () => {
+      if (mapCoordsToastTimeoutRef.current) {
+        clearTimeout(mapCoordsToastTimeoutRef.current)
+      }
+    }
+  }, [])
+
+  const openSettingsModal = useCallback(() => setSettingsModalOpen(true), [])
+  const closeSettingsModal = useCallback(() => setSettingsModalOpen(false), [])
+  const openAccountModal = useCallback(() => setAccountModalOpen(true), [])
+  const closeAccountModal = useCallback(() => setAccountModalOpen(false), [])
+  const openPrivacyModal = useCallback(() => setPrivacyModalOpen(true), [])
+  const closePrivacyModal = useCallback(() => setPrivacyModalOpen(false), [])
+
+  const idMap = useMemo(() => {
+    const map = new Map<number, DataFeature>()
+    featureCollection.features.forEach((feature) => {
+      map.set(feature.id! as number, feature)
+    })
+    return map
+  }, [featureCollection.features])
+
+  const stationsPerLine = useMemo(() => {
+    const lineMap = new Map<string, Set<string>>()
+    for (let feature of featureCollection.features) {
+      const line = feature.properties.line
+      if (!line) {
+        continue
+      }
+      const key = getStationKey(feature)
+      if (!lineMap.has(line)) {
+        lineMap.set(line, new Set<string>())
+      }
+      lineMap.get(line)!.add(key)
+    }
+
+    const result: Record<string, number> = {}
+    lineMap.forEach((keys, line) => {
+      result[line] = keys.size
+    })
+    return result
+  }, [featureCollection.features])
+
+  const { value: localFound, set: setStoredFound } = useLocalStorageValue<
+    number[] | null
+  >(`${progressScopeSlug}-stations`, {
+    defaultValue: null,
+    initializeWithValue: false,
+  })
+
+  const {
+    value: storedFoundTimestampsRaw,
+    set: setStoredFoundTimestamps,
+  } = useLocalStorageValue<Record<string, string> | null>(
+    `${progressScopeSlug}-stations-found-at`,
+    {
+      defaultValue: null,
+      initializeWithValue: false,
+    },
+  )
+
+  const storedFoundTimestamps: Record<string, string> | null =
+    storedFoundTimestampsRaw ?? null
+
+  const { value: storedIsNewPlayer, set: setStoredIsNewPlayer } =
+    useLocalStorageValue<boolean>(`${progressScopeSlug}-stations-is-new-player`, {
+      defaultValue: true,
+      initializeWithValue: false,
+    })
+
+  const mergeScopeFoundIds = useCallback(
+    (nextVisibleFound: number[], scopeSource?: number[] | null) => {
+      const seen = new Set<number>()
+      const merged: number[] = []
+
+      ;(scopeSource ?? localFound ?? []).forEach((id) => {
+        if (idMap.has(id) || seen.has(id)) {
+          return
+        }
+        seen.add(id)
+        merged.push(id)
+      })
+
+      nextVisibleFound.forEach((id) => {
+        if (!idMap.has(id) || seen.has(id)) {
+          return
+        }
+        seen.add(id)
+        merged.push(id)
+      })
+
+      return merged
+    },
+    [idMap, localFound],
+  )
+
+  const setFound = useCallback(
+    (nextFound: number[]) => {
+      if (rankedMode) {
+        setSessionFoundState(nextFound)
+        return
+      }
+      if (nextFound.length === 0) {
+        setStoredFound([])
+        return
+      }
+      setStoredFound(mergeScopeFoundIds(nextFound))
+    },
+    [mergeScopeFoundIds, rankedMode, setStoredFound],
+  )
+
+  const foundTimestamps = rankedMode
+    ? sessionFoundTimestampsState
+    : storedFoundTimestamps ?? EMPTY_TIMESTAMPS
+
+  const [siblingMiniCityStationIds, setSiblingMiniCityStationIds] = useState<
+    Record<string, Set<number>>
+  >({})
+
+  const setFoundTimestamps = useCallback(
+    (updater: (prev: Record<string, string>) => Record<string, string>) => {
+      if (rankedMode) {
+        setSessionFoundTimestampsState((prev) => updater(prev ?? {}))
+        return
+      }
+      setStoredFoundTimestamps((prev) => updater(prev ?? {}))
+    },
+    [rankedMode, setStoredFoundTimestamps],
+  )
+
+  const isNewPlayer = rankedMode ? sessionIsNewPlayerState : storedIsNewPlayer
+
+  const setIsNewPlayer = useCallback(
+    (nextValue: boolean) => {
+      if (rankedMode) {
+        setSessionIsNewPlayerState(nextValue)
+        return
+      }
+      setStoredIsNewPlayer(nextValue)
+    },
+    [rankedMode, setStoredIsNewPlayer],
+  )
+
+  const found: number[] = useMemo(() => {
+    const activeFound = rankedMode ? sessionFoundState : localFound || []
+    return activeFound.filter((f) => idMap.has(f))
+  }, [idMap, localFound, rankedMode, sessionFoundState])
+  const scopeFound: number[] = useMemo(
+    () => (rankedMode ? sessionFoundState : localFound || []),
+    [localFound, rankedMode, sessionFoundState],
+  )
+
+  useEffect(() => {
+    foundRef.current = found
+  }, [found])
+
+  useEffect(() => {
+    if (rankedMode || miniCityLinks?.mode !== 'child') {
+      setSiblingMiniCityStationIds({})
+      return
+    }
+
+    const siblingSlugs = miniCityLinks.siblings
+      .map((miniCity) => miniCity.slug)
+      .filter((slug) => slug !== CITY_NAME)
+
+    if (siblingSlugs.length === 0) {
+      setSiblingMiniCityStationIds({})
+      return
+    }
+
+    setSiblingMiniCityStationIds({})
+
+    let cancelled = false
+
+    Promise.all(
+      siblingSlugs.map(async (slug) => [slug, await loadMiniCityStationIdSet(slug)] as const),
+    )
+      .then((entries) => {
+        if (cancelled) {
+          return
+        }
+        setSiblingMiniCityStationIds(Object.fromEntries(entries))
+      })
+      .catch((error) => {
+        if (process.env.NODE_ENV !== 'production') {
+          console.warn('Unable to load sibling mini-city station ids', error)
+        }
+      })
+
+    return () => {
+      cancelled = true
+    }
+  }, [CITY_NAME, miniCityLinks, rankedMode])
+
+  const reapplyFoundFeatureState = useCallback(
+    (targetMap: mapboxgl.Map) => {
+      if (!targetMap.getSource('features')) {
+        return
+      }
+
+      targetMap.removeFeatureState({ source: 'features' })
+
+      for (let id of foundRef.current) {
+        targetMap.setFeatureState({ source: 'features', id }, { found: true })
+      }
+    },
+    [],
+  )
+
+  const refreshRenderedSources = useCallback(
+    (targetMap: mapboxgl.Map, boundsOverride?: RenderBounds) => {
+      if (!renderCullingEnabled) {
+        return
+      }
+
+      const { features, routes: renderedRoutes } = getRenderedCollections(
+        boundsOverride ?? getMapBoundsTuple(targetMap.getBounds()),
+      )
+
+      const featuresSource = targetMap.getSource('features') as
+        | mapboxgl.GeoJSONSource
+        | undefined
+
+      if (featuresSource) {
+        featuresSource.setData(features)
+      }
+
+      const routesSource = targetMap.getSource('game-routes') as
+        | mapboxgl.GeoJSONSource
+        | undefined
+
+      if (routesSource) {
+        routesSource.setData(renderedRoutes)
+      }
+
+      if (typeof window !== 'undefined') {
+        window.requestAnimationFrame(() => {
+          reapplyFoundFeatureState(targetMap)
+        })
+      } else {
+        reapplyFoundFeatureState(targetMap)
+      }
+    },
+    [getRenderedCollections, reapplyFoundFeatureState, renderCullingEnabled],
+  )
+
+  const zoomToFeatures = useCallback(
+    (ids: number[]) => {
+      if (!map || ids.length === 0) {
+        return
+      }
+
+      const uniqueStationKeys = new Set<string>()
+      const validIds: number[] = []
+
+      ids.forEach((id) => {
+        const feature = idMap.get(id)
+        if (!feature) {
+          return
+        }
+        validIds.push(id)
+        uniqueStationKeys.add(getStationKey(feature))
+      })
+
+      if (validIds.length === 0) {
+        return
+      }
+
+      if (uniqueStationKeys.size === 1) {
+        const primaryId = validIds.find((id) => {
+          const feature = idMap.get(id)
+          return feature?.geometry?.type === 'Point'
+        }) ?? validIds[0]
+
+        const primaryFeature = idMap.get(primaryId)
+        if (!primaryFeature) {
+          return
+        }
+
+        if (primaryFeature.geometry.type === 'Point') {
+          map.easeTo({
+            center: primaryFeature.geometry.coordinates as [number, number],
+            zoom: 14,
+            duration: 900,
+            essential: true,
+          })
+          return
+        }
+      }
+
+      const coords: [number, number][] = []
+
+      validIds.forEach((id) => {
+        const feature = idMap.get(id)
+        if (!feature) {
+          return
+        }
+
+        coordEach(feature, (coord) => {
+          if (
+            Array.isArray(coord) &&
+            coord.length >= 2 &&
+            Number.isFinite(coord[0]) &&
+            Number.isFinite(coord[1])
+          ) {
+            coords.push([coord[0], coord[1]])
+          }
+        })
+      })
+
+      if (coords.length === 0) {
+        return
+      }
+
+      const center = coords.reduce<[number, number]>(
+        (acc, [lng, lat]) => [acc[0] + lng, acc[1] + lat],
+        [0, 0],
+      )
+
+      const averagedCenter: [number, number] = [
+        center[0] / coords.length,
+        center[1] / coords.length,
+      ]
+
+      map.easeTo({
+        center: averagedCenter,
+        zoom: coords.length > 1 ? 13.5 : 14,
+        duration: 900,
+        essential: true,
+      })
+    },
+    [idMap, map],
+  )
+
+  const localFoundRef = useRef<number[] | null>(null)
+  const localTimestampsRef = useRef<Record<string, string> | null>(null)
+
+  useEffect(() => {
+    localFoundRef.current = Array.isArray(localFound) ? [...localFound] : null
+  }, [localFound])
+
+  useEffect(() => {
+    localTimestampsRef.current = storedFoundTimestamps
+  }, [storedFoundTimestamps])
+
+  useEffect(() => {
+    setRankedSessionId(null)
+    setRankedDisqualificationReason(null)
+    setRankedFinishSummary(null)
+    setRankedHintCount(0)
+    setSessionFoundState([])
+    setSessionFoundTimestampsState({})
+    setSessionIsNewPlayerState(true)
+    rankedCorrectGuessCountRef.current = 0
+    rankedCorrectStationCountRef.current = 0
+    rankedWrongGuessCountRef.current = 0
+    rankedRepeatedGuessCountRef.current = 0
+    rankedFirstCorrectAtRef.current = null
+    rankedFirst50MsRef.current = null
+    rankedRunFinishedRef.current = false
+    casualPlaylistAdvanceRef.current = false
+  }, [
+    CITY_NAME,
+    rankedBattleId,
+    rankedChallengeId,
+    rankedDailyChallengeId,
+    rankedMode,
+    rankedRuleset,
+    rankedSeed,
+    rankedSource,
+    playlistRunId,
+  ])
+
+  useEffect(() => {
+    if (!rankedMode || !user || !cityPath || rankedSessionId) {
+      return
+    }
+
+    let cancelled = false
+    ;(async () => {
+      try {
+        const response = await fetch('/api/runs/start', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            citySlug: CITY_NAME,
+            cityPath: `/${cityPath}`,
+            ruleset: rankedRuleset,
+            source: rankedSource,
+            seed: rankedSeed,
+            dailyChallengeId: rankedDailyChallengeId,
+            challengeId: rankedChallengeId,
+            battleId: rankedBattleId,
+            playlistRunId,
+          }),
+        })
+        if (!response.ok) {
+          return
+        }
+        const data = await response.json()
+        if (!cancelled && data?.session?.id) {
+          setRankedSessionId(data.session.id)
+        }
+      } catch (error) {
+        if (process.env.NODE_ENV !== 'production') {
+          console.warn('Unable to start ranked session', error)
+        }
+      }
+    })()
+
+    return () => {
+      cancelled = true
+    }
+  }, [
+    CITY_NAME,
+    cityPath,
+    rankedBattleId,
+    rankedChallengeId,
+    rankedDailyChallengeId,
+    rankedMode,
+    rankedRuleset,
+    rankedSeed,
+    rankedSessionId,
+    rankedSource,
+    playlistRunId,
+    user,
+  ])
+
+  useEffect(() => {
+    if (rankedMode) {
+      return
+    }
+    if (!Array.isArray(localFound)) {
+      return
+    }
+
+    const hidden = localFound.filter((id) => !idMap.has(id))
+    const visible = localFound.filter((id) => idMap.has(id))
+    const visibleSet = new Set<number>()
+    const expandedVisible: number[] = []
+
+    const addVisibleId = (id: number) => {
+      if (!idMap.has(id) || visibleSet.has(id)) {
+        return
+      }
+      visibleSet.add(id)
+      expandedVisible.push(id)
+    }
+
+    visible.forEach((id) => {
+      addVisibleId(id)
+      const clusterMembers = clusterMembersById.get(id)
+      if (clusterMembers && clusterMembers.length > 0) {
+        clusterMembers.forEach(addVisibleId)
+      }
+    })
+
+    const expanded = [...hidden, ...expandedVisible]
+    const hasDifference =
+      expanded.length !== localFound.length ||
+      expanded.some((id) => !localFound.includes(id))
+
+    if (hasDifference) {
+      setStoredFound(expanded)
+    }
+  }, [clusterMembersById, idMap, localFound, rankedMode, setStoredFound])
+
+  const syncTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
+  const legacyMiniCityMigrationRef = useRef<string | null>(null)
+
+  const submitProgress = useCallback(
+    async (
+      ids: number[],
+      timestamps: Record<string, string>,
+      immediate = false,
+    ) => {
+      if (rankedMode) {
+        return
+      }
+      if (!user) {
+        return
+      }
+
+      const payload = {
+        foundIds: ids,
+        foundTimestamps: timestamps,
+      }
+
+      const send = async () => {
+        try {
+          const response = await fetch(`/api/progress/${progressScopeSlug}`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload),
+          })
+          if (response.ok) {
+            updateProgressSummary(progressScopeSlug, ids.length)
+          }
+        } catch (error) {
+          if (process.env.NODE_ENV !== 'production') {
+            console.warn('Unable to sync progress', error)
+          }
+        }
+      }
+
+      if (syncTimeoutRef.current) {
+        clearTimeout(syncTimeoutRef.current)
+        syncTimeoutRef.current = null
+      }
+
+      if (immediate) {
+        await send()
+        return
+      }
+
+      syncTimeoutRef.current = setTimeout(() => {
+        void send()
+      }, 1200)
+    },
+    [progressScopeSlug, rankedMode, updateProgressSummary, user],
+  )
+
+  useEffect(() => {
+    return () => {
+      if (syncTimeoutRef.current) {
+        clearTimeout(syncTimeoutRef.current)
+      }
+    }
+  }, [])
+
+  useEffect(() => {
+    if (rankedMode) {
+      return
+    }
+    if (!user) {
+      return
+    }
+
+    let cancelled = false
+    ;(async () => {
+      try {
+        const response = await fetch(`/api/progress/${progressScopeSlug}`, {
+          cache: 'no-store',
+        })
+        if (!response.ok) {
+          return
+        }
+        const data = await response.json()
+        if (cancelled) {
+          return
+        }
+        if (data?.progress) {
+          const remoteFound = Array.isArray(data.progress.foundIds)
+            ? data.progress.foundIds.filter(
+                (id: unknown): id is number => typeof id === 'number',
+              )
+            : []
+          if (remoteFound.length > 0) {
+            setStoredFound(remoteFound)
+            if (
+              data.progress.foundTimestamps &&
+              typeof data.progress.foundTimestamps === 'object'
+            ) {
+              setFoundTimestamps(
+                () =>
+                  data.progress
+                    .foundTimestamps as Record<string, string>,
+              )
+            }
+            updateProgressSummary(progressScopeSlug, remoteFound.length)
+            return
+          }
+        }
+        const fallbackIds = localFoundRef.current ?? []
+        if (fallbackIds.length > 0) {
+          await submitProgress(
+            fallbackIds,
+            localTimestampsRef.current ?? {},
+            true,
+          )
+        }
+      } catch (error) {
+        if (process.env.NODE_ENV !== 'production') {
+          console.warn('Unable to load synced progress', error)
+        }
+      }
+    })()
+
+    return () => {
+      cancelled = true
+    }
+  }, [
+    progressScopeSlug,
+    setFoundTimestamps,
+    setStoredFound,
+    submitProgress,
+    updateProgressSummary,
+    user,
+    rankedMode,
+  ])
+
+  useEffect(() => {
+    if (rankedMode) {
+      return
+    }
+    if (!user) {
+      return
+    }
+    void submitProgress(scopeFound, foundTimestamps)
+  }, [foundTimestamps, rankedMode, scopeFound, submitProgress, user])
+
+  useEffect(() => {
+    if (rankedMode || progressScopeSlug === CITY_NAME) {
+      return
+    }
+    if (typeof window === 'undefined') {
+      return
+    }
+
+    const migrationScopeKey = `${progressScopeSlug}->${CITY_NAME}`
+    if (legacyMiniCityMigrationRef.current === migrationScopeKey) {
+      return
+    }
+    legacyMiniCityMigrationRef.current = migrationScopeKey
+
+    try {
+      const legacyFoundRaw = window.localStorage.getItem(`${CITY_NAME}-stations`)
+      const legacyTimestampsRaw = window.localStorage.getItem(
+        `${CITY_NAME}-stations-found-at`,
+      )
+      const legacyIsNewPlayerRaw = window.localStorage.getItem(
+        `${CITY_NAME}-stations-is-new-player`,
+      )
+
+      const legacyFound = legacyFoundRaw ? JSON.parse(legacyFoundRaw) : null
+      const legacyTimestamps = legacyTimestampsRaw
+        ? (JSON.parse(legacyTimestampsRaw) as Record<string, string>)
+        : null
+
+      const hasLegacyFound =
+        Array.isArray(legacyFound) &&
+        legacyFound.some((id) => typeof id === 'number')
+      const hasLegacyTimestamps =
+        legacyTimestamps && typeof legacyTimestamps === 'object'
+      const legacyMarkedAsReturning = legacyIsNewPlayerRaw === 'false'
+
+      if (!hasLegacyFound && !hasLegacyTimestamps && !legacyMarkedAsReturning) {
+        return
+      }
+
+      if (hasLegacyFound) {
+        const merged = mergeScopeFoundIds(
+          legacyFound.filter((id): id is number => typeof id === 'number'),
+          localFound,
+        )
+        setStoredFound(merged)
+      }
+
+      if (hasLegacyTimestamps) {
+        setStoredFoundTimestamps((prev) => ({
+          ...(legacyTimestamps as Record<string, string>),
+          ...(prev ?? {}),
+        }))
+      }
+
+      if (legacyMarkedAsReturning) {
+        setStoredIsNewPlayer(false)
+      }
+
+      window.localStorage.removeItem(`${CITY_NAME}-stations`)
+      window.localStorage.removeItem(`${CITY_NAME}-stations-found-at`)
+      window.localStorage.removeItem(`${CITY_NAME}-stations-is-new-player`)
+    } catch {
+      // ignore storage migration errors
+    }
+  }, [
+    CITY_NAME,
+    localFound,
+    mergeScopeFoundIds,
+    progressScopeSlug,
+    rankedMode,
+    setStoredFound,
+    setStoredFoundTimestamps,
+    setStoredIsNewPlayer,
+  ])
+
+  useEffect(() => {
+    if (rankedMode || typeof window === 'undefined') {
+      return
+    }
+
+    const persistSnapshot = (
+      slug: string,
+      ids: number[],
+      timestamps: Record<string, string>,
+    ) => {
+      window.localStorage.setItem(`${slug}-stations`, JSON.stringify(ids))
+      window.localStorage.setItem(
+        `${slug}-stations-found-at`,
+        JSON.stringify(timestamps),
+      )
+      window.localStorage.setItem(
+        `${slug}-stations-is-new-player`,
+        ids.length > 0 ? 'false' : String(isNewPlayer),
+      )
+    }
+
+    const buildScopedTimestamps = (ids: number[]) =>
+      Object.fromEntries(
+        Object.entries(foundTimestamps).filter(([id]) =>
+          ids.includes(Number(id)),
+        ),
+      )
+
+    if (miniCityLinks?.mode === 'parent') {
+      miniCityLinks.siblings.forEach((miniCity) => {
+        const includeLines = new Set(miniCity.includeLines)
+        const scopedIds = scopeFound.filter((id) => {
+          const feature = idMap.get(id)
+          const line = feature?.properties?.line
+          return typeof line === 'string' && includeLines.has(line)
+        })
+        persistSnapshot(miniCity.slug, scopedIds, buildScopedTimestamps(scopedIds))
+      })
+      return
+    }
+
+    if (miniCityLinks?.mode === 'child') {
+      miniCityLinks.siblings.forEach((miniCity) => {
+        if (miniCity.slug === CITY_NAME) {
+          persistSnapshot(miniCity.slug, found, buildScopedTimestamps(found))
+          return
+        }
+
+        const stationIds = siblingMiniCityStationIds[miniCity.slug]
+        if (!stationIds) {
+          return
+        }
+
+        const scopedIds = scopeFound.filter((id) => stationIds.has(id))
+        persistSnapshot(miniCity.slug, scopedIds, buildScopedTimestamps(scopedIds))
+      })
+      return
+    }
+
+    if (progressScopeSlug !== CITY_NAME) {
+      persistSnapshot(CITY_NAME, found, buildScopedTimestamps(found))
+    }
+  }, [
+    CITY_NAME,
+    found,
+    foundTimestamps,
+    idMap,
+    isNewPlayer,
+    miniCityLinks,
+    progressScopeSlug,
+    rankedMode,
+    siblingMiniCityStationIds,
+    scopeFound,
+  ])
+
+  useEffect(() => {
+    if (found.length === 0) {
+      return
+    }
+
+    const now = new Date().toISOString()
+    setFoundTimestamps((prev) => {
+      const next = { ...prev }
+      let changed = false
+
+      for (const id of found) {
+        const key = String(id)
+        if (!next[key]) {
+          next[key] = now
+          changed = true
+        }
+      }
+
+      return changed ? next : prev
+    })
+  }, [found, setFoundTimestamps])
+
+  const clearStoredProgress = useCallback(() => {
+    if (typeof window === 'undefined') {
+      return
+    }
+    try {
+      window.localStorage.removeItem(`${progressScopeSlug}-stations`)
+      window.localStorage.removeItem(`${progressScopeSlug}-stations-found-at`)
+      window.localStorage.removeItem(`${progressScopeSlug}-stations-is-new-player`)
+      miniCityLinks?.siblings.forEach((miniCity) => {
+        window.localStorage.removeItem(`${miniCity.slug}-stations`)
+        window.localStorage.removeItem(`${miniCity.slug}-stations-found-at`)
+        window.localStorage.removeItem(`${miniCity.slug}-stations-is-new-player`)
+      })
+      if (progressScopeSlug !== CITY_NAME) {
+        window.localStorage.removeItem(`${CITY_NAME}-stations`)
+        window.localStorage.removeItem(`${CITY_NAME}-stations-found-at`)
+        window.localStorage.removeItem(`${CITY_NAME}-stations-is-new-player`)
+      }
+    } catch {
+      // ignore storage errors
+    }
+  }, [CITY_NAME, miniCityLinks, progressScopeSlug])
+
+  const performReset = useCallback(() => {
+    suppressAutoRevealForCity(CITY_NAME)
+    if (map && map.getSource('features')) {
+      map.removeFeatureState({ source: 'features' })
+    }
+    setFound([])
+    setIsNewPlayer(true)
+    setFoundTimestamps(() => ({}))
+    setSolutionsUnlocked(false)
+    setSolutionsPromptOpen(false)
+    setSolutionsPassword('')
+    setSolutionsError(false)
+    setMobileSidebarOpen(false)
+    setHoveredId(null)
+    setActiveFoundId(null)
+    setRankedDisqualificationReason(null)
+    setRankedFinishSummary(null)
+    setRankedHintCount(0)
+    rankedCorrectGuessCountRef.current = 0
+    rankedCorrectStationCountRef.current = 0
+    rankedWrongGuessCountRef.current = 0
+    rankedRepeatedGuessCountRef.current = 0
+    rankedFirstCorrectAtRef.current = null
+    rankedFirst50MsRef.current = null
+    rankedRunFinishedRef.current = false
+    setMistakes(0)
+    perfectStartEligibleRef.current = true
+    perfectStartCountRef.current = 0
+    neverRepeatRef.current = true
+    typoFreeRef.current = true
+    speedrunIntegrityRef.current = true
+    recentCorrectTimesRef.current = []
+    speedrunStartRef.current = null
+    speedrunFinishedRef.current = false
+    if (speedrunTimerRef.current) {
+      window.clearInterval(speedrunTimerRef.current)
+      speedrunTimerRef.current = null
+    }
+    setSpeedrunElapsedMs(null)
+    clearSpeedrunStartStorage()
+    comebackArmedRef.current = false
+    comebackTriggeredRef.current = false
+    if (!rankedMode) {
+      clearStoredProgress()
+      void submitProgress([], {}, true)
+    }
+    if (shouldAutoFocus()) {
+      setTimeout(() => {
+        inputRef.current?.focus()
+      }, 0)
+    }
+  }, [
+    map,
+    setFound,
+    setIsNewPlayer,
+    setFoundTimestamps,
+    setSolutionsUnlocked,
+    setSolutionsPromptOpen,
+    setSolutionsPassword,
+    setSolutionsError,
+    setMobileSidebarOpen,
+    setHoveredId,
+    setActiveFoundId,
+    clearStoredProgress,
+    clearSpeedrunStartStorage,
+    rankedMode,
+    submitProgress,
+    inputRef,
+    CITY_NAME,
+  ])
+
+  const onReset = useCallback(() => {
+    setResetConfirmOpen(true)
+  }, [])
+
+  const handleResetCancel = useCallback(() => {
+    setResetConfirmOpen(false)
+    if (shouldAutoFocus()) {
+      setTimeout(() => {
+        inputRef.current?.focus()
+      }, 0)
+    }
+  }, [inputRef, shouldAutoFocus])
+
+  const handleResetConfirm = useCallback(() => {
+    setResetConfirmOpen(false)
+    performReset()
+  }, [performReset])
+
+  useEffect(() => {
+    if (!resetConfirmOpen) {
+      return
+    }
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        event.preventDefault()
+        handleResetCancel()
+      }
+    }
+
+    window.addEventListener('keydown', handleKeyDown)
+    return () => window.removeEventListener('keydown', handleKeyDown)
+  }, [handleResetCancel, resetConfirmOpen])
+
+  const foundStationsPerLine = useMemo(() => {
+    const lineMap = new Map<string, Set<string>>()
+    for (let id of found || []) {
+      const feature = idMap.get(id)
+      if (!feature) {
+        continue
+      }
+      const line = feature.properties.line
+      if (!line) {
+        continue
+      }
+      const key = getStationKey(feature)
+      if (!lineMap.has(line)) {
+        lineMap.set(line, new Set<string>())
+      }
+      lineMap.get(line)!.add(key)
+    }
+
+    const result: Record<string, number> = {}
+    lineMap.forEach((keys, line) => {
+      result[line] = keys.size
+    })
+    return result
+  }, [found, idMap])
+
+  const launchCompletionConfetti = useCallback(() => {
+    if (
+      !settings.confettiEnabled ||
+      (settings.stopConfettiAfterCompletion && cityCompletionConfettiSeen)
+    ) {
+      return
+    }
+    const lineColors = Object.values(displayLines ?? {})
+      .map((line) => line?.color)
+      .filter((color): color is string => typeof color === 'string' && color.length > 0)
+    const images = buildLineImageConfetti(displayLines ?? {})
+
+    const makeConfetti = async () => {
+      const confetti = (await import('tsparticles-confetti')).confetti
+      confetti({
+        spread: 130,
+        ticks: 200,
+        particleCount: 220,
+        origin: { y: 0.2 },
+        decay: 0.88,
+        gravity: 1.8,
+        startVelocity: 55,
+        scalar: 1.4,
+        shapes: images ? ['image'] : ['circle', 'square'],
+        shapeOptions: images ? { image: images } : undefined,
+        colors: images ? undefined : lineColors.length > 0 ? lineColors : undefined,
+      })
+    }
+
+    void makeConfetti()
+
+    if (!cityCompletionConfettiSeen) {
+      markCityCompletionConfettiSeen()
+    }
+  }, [
+    cityCompletionConfettiSeen,
+    displayLines,
+    markCityCompletionConfettiSeen,
+    settings.confettiEnabled,
+    settings.stopConfettiAfterCompletion,
+  ])
+
+  const markRankedRunDisqualified = useCallback(
+    async (reason: string = RANKED_REVEAL_REASON) => {
+      if (!rankedMode) {
+        return
+      }
+      setRankedDisqualificationReason(reason)
+      if (!rankedSessionId) {
+        return
+      }
+      try {
+        await fetch('/api/runs/event', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            sessionId: rankedSessionId,
+            type: reason === RANKED_REVEAL_REASON ? 'reveal' : 'mapNames',
+          }),
+        })
+      } catch (error) {
+        if (process.env.NODE_ENV !== 'production') {
+          console.warn('Unable to record ranked disqualification', error)
+        }
+      }
+    },
+    [rankedMode, rankedSessionId],
+  )
+
+  const revealAllStations = useCallback(() => {
+    void markRankedRunDisqualified(RANKED_REVEAL_REASON)
+    setFound(allStationIds)
+    setIsNewPlayer(false)
+    setHideLabels(false)
+    setFoundTimestamps((prev) => {
+      const next = { ...prev }
+      const timestamp = new Date().toISOString()
+      for (const id of allStationIds) {
+        const key = String(id)
+        if (!next[key]) {
+          next[key] = timestamp
+        }
+      }
+      return next
+    })
+    launchCompletionConfetti()
+  }, [
+    allStationIds,
+    setFound,
+    setIsNewPlayer,
+    setHideLabels,
+    setFoundTimestamps,
+    launchCompletionConfetti,
+    markRankedRunDisqualified,
+  ])
+
+  const handleProtectedAction = useCallback(
+    (action: () => void, type: 'solutions' | 'satellite' | 'mapNames') => {
+      if (solutionsUnlocked) {
+        action()
+        return
+      }
+
+      pendingActionRef.current = action
+      setActionType(type)
+      setSolutionsPassword('')
+      setSolutionsError(false)
+      setSolutionsPromptOpen(true)
+    },
+    [solutionsUnlocked, setSolutionsPassword, setSolutionsError, setSolutionsPromptOpen],
+  )
+
+  const handleRevealSolutions = useCallback(() => {
+    handleProtectedAction(() => {
+        clearAutoRevealSuppressionForCity(CITY_NAME)
+        revealAllStations()
+        if (shouldAutoFocus()) {
+          setTimeout(() => {
+            inputRef.current?.focus()
+          }, 0)
+        }
+    }, 'solutions')
+  }, [
+    CITY_NAME,
+    handleProtectedAction,
+    revealAllStations,
+    inputRef,
+  ])
+
+  const handleToggleSatellite = useCallback(() => {
+    handleProtectedAction(() => {
+      setShowSatellite((prev) => !prev)
+    }, 'satellite')
+  }, [handleProtectedAction])
+
+  const handleToggleZen = useCallback(() => {
+    setZenMode((prev) => !prev)
+  }, [])
+
+  const handleSolutionsClose = useCallback(() => {
+    setSolutionsPromptOpen(false)
+    setSolutionsPassword('')
+    setSolutionsError(false)
+    if (shouldAutoFocus()) {
+      setTimeout(() => {
+        inputRef.current?.focus()
+      }, 0)
+    }
+  }, [setSolutionsPromptOpen, setSolutionsPassword, setSolutionsError])
+
+  const handleSolutionsPasswordChange = useCallback(
+    (event: ChangeEvent<HTMLInputElement>) => {
+      setSolutionsPassword(event.target.value)
+    },
+    [setSolutionsPassword],
+  )
+
+  const handleSolutionsSubmit = useCallback(
+    async (event: FormEvent<HTMLFormElement>) => {
+      event.preventDefault()
+      const password = solutionsPassword.trim()
+      if (!password) {
+        setSolutionsError(true)
+        return
+      }
+      try {
+        const response = await fetch('/api/solutions', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ password }),
+        })
+        const json = await response.json().catch(() => ({}))
+        if (!response.ok || !json?.success) {
+          setSolutionsError(true)
+          return
+        }
+        clearAutoRevealSuppressionForCity(CITY_NAME)
+        writeSolutionsAccess(true)
+        setSolutionsUnlocked(true)
+        setSolutionsAccessPassword(password)
+        if (pendingActionRef.current) {
+            pendingActionRef.current()
+            pendingActionRef.current = null
+        } else {
+             // Fallback if no specific action was pending, though technically should allow just unlocking
+             // But for now, if they just hit unlock without a pending action (not possible via UI currently), do nothing special
+        }
+        
+        setSolutionsPromptOpen(false)
+        setSolutionsPassword('')
+        setSolutionsError(false)
+        if (shouldAutoFocus()) {
+          setTimeout(() => {
+            inputRef.current?.focus()
+          }, 0)
+        }
+      } catch (error) {
+        setSolutionsError(true)
+        if (process.env.NODE_ENV !== 'production') {
+          console.error('Unable to validate solutions password', error)
+        }
+      }
+    },
+    [
+      CITY_NAME,
+      solutionsPassword,
+      revealAllStations,
+      setSolutionsPromptOpen,
+      setSolutionsPassword,
+      setSolutionsError,
+    ],
+  )
+
+  const autoRevealRef = useRef(false)
+
+  useEffect(() => {
+    if (autoRevealRef.current) {
+      return
+    }
+    if (shouldAutoRevealSolutions(CITY_NAME)) {
+      autoRevealRef.current = true
+      setSolutionsUnlocked(true)
+      revealAllStations()
+    }
+  }, [CITY_NAME, revealAllStations, setSolutionsUnlocked])
+
+  const fuse = useMemo(
+    () =>
+      new Fuse(featureCollection.features, {
+        includeScore: true,
+        includeMatches: true,
+        keys: [
+          'properties.name',
+          'properties.long_name',
+          'properties.short_name',
+          'properties.alternate_names',
+        ],
+        minMatchCharLength: 2,
+        threshold: settings.stationMatchingMode === 'forgiving' ? 0.22 : 0.15,
+        distance: settings.stationMatchingMode === 'forgiving' ? 20 : 10,
+        getFn: (obj, path) => {
+          const value = Fuse.config.getFn(obj, path)
+          if (value === undefined) {
+            return ''
+          } else if (Array.isArray(value)) {
+            return value.map((el) => normalizeString(el))
+          } else if (typeof value === 'string') {
+            return normalizeString(value)
+          } else {
+            return normalizeString(String(value ?? ''))
+          }
+        },
+      }),
+    [featureCollection.features, normalizeString, settings.stationMatchingMode],
+  )
+
+  const uniqueStationsMap = useMemo(() => {
+    const map = new Map<string, DataFeature>()
+    for (const feature of featureCollection.features) {
+      const key = getStationKey(feature)
+      if (!map.has(key)) {
+        map.set(key, feature)
+      }
+    }
+    return map
+  }, [featureCollection.features])
+
+  const totalUniqueStations = uniqueStationsMap.size
+
+  const metadataTitle = useMemo(
+    () => extractMetadataTitle(METADATA?.title),
+    [METADATA?.title],
+  )
+
+  const cityDisplayName = useMemo(
+    () => deriveCityDisplayName(metadataTitle, CITY_NAME),
+    [metadataTitle, CITY_NAME],
+  )
+  const relatedVersionsPanel = useMemo(() => {
+    if (!miniCityLinks) {
+      return null
+    }
+
+    if (miniCityLinks.mode === 'parent' && miniCityLinks.siblings.length > 0) {
+      return {
+        title: 'Play smaller versions',
+        description: `Try focused versions of ${cityDisplayName}.`,
+        items: miniCityLinks.siblings.map((item) => ({
+          slug: item.slug,
+          name: item.name,
+          link: item.link,
+        })),
+        currentSlug: null,
+      }
+    }
+
+    if (miniCityLinks.mode === 'child') {
+      const items = []
+      if (miniCityLinks.parent) {
+        items.push({
+          slug: miniCityLinks.parent.parentSlug,
+          name: miniCityLinks.parent.parentName,
+          link: miniCityLinks.parent.parentLink,
+        })
+      }
+      miniCityLinks.siblings.forEach((item) => {
+        items.push({
+          slug: item.slug,
+          name: item.name,
+          link: item.link,
+        })
+      })
+
+      return {
+        title: 'Related versions',
+        description: `Switch between ${miniCityLinks.parent?.parentName ?? cityDisplayName} and its smaller versions.`,
+        items,
+        currentSlug: CITY_NAME,
+      }
+    }
+
+    return null
+  }, [CITY_NAME, cityDisplayName, miniCityLinks])
+
+  const awardAchievement = useCallback(
+    (id: string, title: string, description: string) => {
+      if (earnedAchievementsRef.current.has(id)) return
+      earnedAchievementsRef.current.add(id)
+      if (id.startsWith(`${CITY_NAME}-line-master-`)) {
+        earnedAchievementsRef.current.add('line-master')
+      }
+      if (typeof window !== 'undefined') {
+        try {
+          window.localStorage.setItem(
+            'mm-achievements-earned',
+            JSON.stringify(Array.from(earnedAchievementsRef.current)),
+          )
+        } catch {
+          // ignore
+        }
+      }
+      if (!settings.achievementToastsEnabled) return
+
+      let hidden = false
+      const isLineMaster =
+        id.startsWith(`${CITY_NAME}-line-master-`) || id === 'line-master'
+      if (typeof window !== 'undefined') {
+        try {
+          const specificHidden =
+            window.localStorage.getItem(achievementToastStorageKey(id)) === '1'
+          const globalLineMasterHidden =
+            isLineMaster &&
+            window.localStorage.getItem(achievementToastStorageKey('line-master')) === '1'
+          hidden = specificHidden || globalLineMasterHidden
+        } catch {
+          hidden = false
+        }
+      }
+      if (hidden) return
+
+      setAchievementToast({
+        slug: id,
+        cityName: cityDisplayName,
+        title,
+        description,
+      })
+    },
+    [CITY_NAME, cityDisplayName, settings.achievementToastsEnabled],
+  )
+
+  useEffect(() => {
+    const available = totalUniqueStations <= 1000
+    setSpeedrunAvailable(available)
+    if (!available) {
+      setSpeedrunMode(false)
+      clearSpeedrunStartStorage()
+    }
+  }, [clearSpeedrunStartStorage, totalUniqueStations])
+
+  // Live speedrun timer
+  useEffect(() => {
+    if (!speedrunMode) {
+      if (speedrunTimerRef.current) {
+        window.clearInterval(speedrunTimerRef.current)
+        speedrunTimerRef.current = null
+      }
+      setSpeedrunElapsedMs(null)
+      return
+    }
+
+    const tick = () => {
+      const start = speedrunStartRef.current
+      if (start !== null) {
+        setSpeedrunElapsedMs(performance.now() - start)
+      } else {
+        setSpeedrunElapsedMs(0)
+      }
+    }
+
+    tick()
+    speedrunTimerRef.current = window.setInterval(tick, 200)
+
+    return () => {
+      if (speedrunTimerRef.current) {
+        window.clearInterval(speedrunTimerRef.current)
+        speedrunTimerRef.current = null
+      }
+    }
+  }, [speedrunMode])
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return
+    const handleBlur = () => {
+      if (speedrunStartRef.current !== null && !speedrunFinishedRef.current) {
+        speedrunIntegrityRef.current = false
+      }
+    }
+    const handleVisibility = () => {
+      if (
+        document.visibilityState === 'hidden' &&
+        speedrunStartRef.current !== null &&
+        !speedrunFinishedRef.current
+      ) {
+        speedrunIntegrityRef.current = false
+      }
+    }
+    window.addEventListener('blur', handleBlur)
+    document.addEventListener('visibilitychange', handleVisibility)
+    return () => {
+      window.removeEventListener('blur', handleBlur)
+      document.removeEventListener('visibilitychange', handleVisibility)
+    }
+  }, [])
+
+
+
+  const recordLineMaster = useCallback(
+    (key: string) => {
+      if (typeof window === 'undefined') return
+      if (isMiniCity) return
+      try {
+        const raw = window.localStorage.getItem('mm-line-master-keys')
+        const parsed = raw ? JSON.parse(raw) : []
+        const entries = Array.isArray(parsed) ? parsed.filter((id) => typeof id === 'string') : []
+        const set = new Set(entries)
+        const initialSize = set.size
+        set.add(key)
+        if (set.size !== initialSize) {
+          window.localStorage.setItem('mm-line-master-keys', JSON.stringify(Array.from(set)))
+        }
+        if (set.size >= 5) {
+          awardAchievement('line-finisher', 'Line Finisher', 'Complete 5 different lines.')
+        }
+      } catch {
+        // ignore storage errors
+      }
+    },
+    [awardAchievement, isMiniCity],
+  )
+
+  const registerMapNamesToggle = useCallback(() => {
+    if (typeof window === 'undefined') return
+    try {
+      const raw = window.localStorage.getItem('mm-map-names-toggles')
+      const current = Number(raw)
+      const next = Number.isFinite(current) ? current + 1 : 1
+      window.localStorage.setItem('mm-map-names-toggles', String(next))
+      if (next >= 20) {
+        awardAchievement('the-cartographer', 'The Cartographer', 'Toggle map names 20 times.')
+      }
+    } catch {
+      // ignore
+    }
+  }, [awardAchievement])
+
+  const handleToggleMapNames = useCallback(() => {
+    handleProtectedAction(() => {
+      void markRankedRunDisqualified('MAP_NAMES_USED')
+      setShowMapNames((prev) => !prev)
+      registerMapNamesToggle()
+    }, 'mapNames')
+  }, [handleProtectedAction, markRankedRunDisqualified, registerMapNamesToggle])
+
+  useEffect(() => {
+    if (!achievementsHydratedRef.current || lineMasterSyncRef.current) return
+    if (typeof window === 'undefined') return
+    lineMasterSyncRef.current = true
+    try {
+      const raw = window.localStorage.getItem('mm-line-master-keys')
+      const parsed = raw ? JSON.parse(raw) : []
+      const stored = Array.isArray(parsed) ? parsed.filter((id) => typeof id === 'string') : []
+      const earnedLineMasters = Array.from(earnedAchievementsRef.current).filter((slug) =>
+        slug.includes('-line-master-'),
+      )
+      const merged = new Set([...stored, ...earnedLineMasters])
+      window.localStorage.setItem('mm-line-master-keys', JSON.stringify(Array.from(merged)))
+      if (merged.size >= 5) {
+        awardAchievement('line-finisher', 'Line Finisher', 'Complete 5 different lines.')
+      }
+    } catch {
+      // ignore
+    }
+  }, [awardAchievement])
+
+  useEffect(() => {
+    Object.entries(foundStationsPerLine).forEach(([line, count]) => {
+      const total = stationsPerLine[line]
+      if (!total || count < total) return
+      const key = `${CITY_NAME}-line-master-${line}`
+      if (lineMasterEarnedRef.current.has(key)) return
+      lineMasterEarnedRef.current.add(key)
+      const lineLabel =
+        (LINES && LINES[line]?.name) || line
+      awardAchievement(
+        key,
+        'Line Master',
+        `Completed every station on ${lineLabel} in ${cityDisplayName}.`,
+      )
+      recordLineMaster(key)
+    })
+  }, [
+    CITY_NAME,
+    LINES,
+    awardAchievement,
+    cityDisplayName,
+    foundStationsPerLine,
+    stationsPerLine,
+    recordLineMaster,
+  ])
+
+  const registerPlayDay = useCallback(() => {
+    if (typeof window === 'undefined') return
+    const today = new Date()
+    const todayStr = today.toISOString().slice(0, 10)
+    const yesterday = new Date(today)
+    yesterday.setDate(today.getDate() - 1)
+    const yStr = yesterday.toISOString().slice(0, 10)
+
+    let playDays = new Set<string>()
+    try {
+      const raw = window.localStorage.getItem('mm-play-days')
+      if (raw) {
+        const parsed = JSON.parse(raw)
+        if (Array.isArray(parsed)) {
+          playDays = new Set(parsed.filter((v) => typeof v === 'string'))
+        }
+      }
+    } catch {
+      // ignore
+    }
+    playDays.add(todayStr)
+    window.localStorage.setItem('mm-play-days', JSON.stringify(Array.from(playDays)))
+
+    let streak = 1
+    if (lastPlayDateRef.current === todayStr) {
+      streak = Number(window.localStorage.getItem('mm-streak-count') || '1')
+    } else if (lastPlayDateRef.current === yStr) {
+      streak = Number(window.localStorage.getItem('mm-streak-count') || '1') + 1
+    } else {
+      streak = 1
+    }
+    lastPlayDateRef.current = todayStr
+    window.localStorage.setItem('mm-last-play-date', todayStr)
+    window.localStorage.setItem('mm-streak-count', String(streak))
+
+    const totalDays = playDays.size
+    if (totalDays >= 30)
+      awardAchievement('daily-ultimate', 'Ultimate Daily Grinder', 'Played on 30 different days.')
+    else if (totalDays >= 15)
+      awardAchievement('daily-ultra', 'Ultra Daily Grinder', 'Played on 15 different days.')
+    else if (totalDays >= 5)
+      awardAchievement('daily-super', 'Super Daily Grinder', 'Played on 5 different days.')
+    else if (totalDays >= 1)
+      awardAchievement('daily-normal', 'Daily Grinder', 'Played on 1 day.')
+
+    if (streak >= 180)
+      awardAchievement('streak-180', 'Streak Saver IV', 'Maintained a 180-day streak.')
+    else if (streak >= 90)
+      awardAchievement('streak-90', 'Streak Saver III', 'Maintained a 90-day streak.')
+    else if (streak >= 30)
+      awardAchievement('streak-30', 'Streak Saver II', 'Maintained a 30-day streak.')
+    else if (streak >= 7)
+      awardAchievement('streak-7', 'Streak Saver I', 'Maintained a 7-day streak.')
+
+    const monthKey = today.toISOString().slice(0, 7)
+    try {
+      const rawMonths = window.localStorage.getItem('mm-play-months')
+      const parsedMonths = rawMonths ? JSON.parse(rawMonths) : []
+      const entries = Array.isArray(parsedMonths)
+        ? parsedMonths.filter((value) => typeof value === 'string')
+        : []
+      const monthSet = new Set(entries)
+      monthSet.add(monthKey)
+      window.localStorage.setItem('mm-play-months', JSON.stringify(Array.from(monthSet)))
+      if (monthSet.size >= 3) {
+        awardAchievement('monthly-commuter', 'Monthly Commuter', 'Play in 3 different months.')
+      }
+    } catch {
+      // ignore
+    }
+
+    const dayOfWeek = today.getDay()
+    const isWeekend = dayOfWeek === 0 || dayOfWeek === 6
+    if (isWeekend) {
+      const weekStart = new Date(today)
+      const offset = (dayOfWeek + 6) % 7
+      weekStart.setDate(weekStart.getDate() - offset)
+      weekStart.setHours(0, 0, 0, 0)
+      const weekKey = weekStart.toISOString().slice(0, 10)
+      const lastWeekendKey = window.localStorage.getItem('mm-weekend-last')
+      let weekendStreak = Number(window.localStorage.getItem('mm-weekend-streak') || '0')
+      if (lastWeekendKey !== weekKey) {
+        const prevWeek = new Date(weekStart)
+        prevWeek.setDate(prevWeek.getDate() - 7)
+        const prevKey = prevWeek.toISOString().slice(0, 10)
+        weekendStreak = lastWeekendKey === prevKey ? weekendStreak + 1 : 1
+        window.localStorage.setItem('mm-weekend-last', weekKey)
+        window.localStorage.setItem('mm-weekend-streak', String(weekendStreak))
+      }
+      if (weekendStreak >= 8) {
+        awardAchievement('weekend-warrior', 'Weekend Warrior', 'Play on 8 consecutive weekends.')
+      }
+    }
+  }, [awardAchievement])
+
+  const handleGuessResult = useCallback(
+    (result: { type: 'correct' | 'already' | 'wrong'; addedIds?: number[] }) => {
+      if (result.type === 'wrong') {
+        rankedWrongGuessCountRef.current += 1
+        setMistakes((m) => m + 1)
+        if (rankedMode && rankedRuleset === 'one-life' && !rankedRunFinishedRef.current) {
+          rankedRunFinishedRef.current = true
+          setRankedFinishSummary({
+            completionMs: null,
+            rankedEligible: false,
+            disqualificationReason: 'ONE_LIFE_FAILED',
+          })
+        }
+        if (perfectStartEligibleRef.current) {
+          perfectStartEligibleRef.current = false
+        }
+      }
+      if (result.type === 'correct') {
+        rankedCorrectGuessCountRef.current += 1
+        rankedCorrectStationCountRef.current += result.addedIds?.length ?? 0
+        if (result.addedIds && result.addedIds.length > 0) {
+          zoomToFeatures(result.addedIds)
+        }
+        if (rankedFirstCorrectAtRef.current === null) {
+          rankedFirstCorrectAtRef.current = performance.now()
+        }
+        if (
+          rankedFirst50MsRef.current === null &&
+          rankedCorrectStationCountRef.current >= 50 &&
+          rankedFirstCorrectAtRef.current !== null
+        ) {
+          rankedFirst50MsRef.current = Math.max(
+            1,
+            Math.round(performance.now() - rankedFirstCorrectAtRef.current),
+          )
+        }
+        if (speedrunMode && speedrunStartRef.current === null) {
+          speedrunStartRef.current = performance.now()
+          speedrunFinishedRef.current = false
+          speedrunIntegrityRef.current = true
+          setSpeedrunElapsedMs(0)
+          if (typeof window !== 'undefined') {
+            try {
+              window.localStorage.setItem(
+                speedrunStartStorageKey(CITY_NAME),
+                String(Date.now()),
+              )
+            } catch {
+              // ignore
+            }
+          }
+        }
+        registerPlayDay()
+        if (perfectStartEligibleRef.current) {
+          perfectStartCountRef.current += 1
+          if (perfectStartCountRef.current >= 25) {
+            awardAchievement(
+              'perfect-start',
+              'Perfect Start',
+              'Make 25 correct guesses in a row to start a city.',
+            )
+            perfectStartEligibleRef.current = false
+          }
+        }
+        if (result.addedIds && result.addedIds.length > 0) {
+          const now = Date.now()
+          const uniqueKeys = new Set<string>()
+          result.addedIds.forEach((id) => {
+            const feature = idMap.get(id)
+            if (feature) {
+              uniqueKeys.add(getStationKey(feature))
+            }
+          })
+          if (uniqueKeys.size > 0) {
+            const updated = recentCorrectTimesRef.current.filter((ts) => now - ts <= 7 * 60 * 1000)
+            uniqueKeys.forEach(() => updated.push(now))
+            recentCorrectTimesRef.current = updated
+            if (recentCorrectTimesRef.current.length >= 7) {
+              awardAchievement('the-commuter', 'The Commuter', 'Make 7 correct guesses within 7 minutes.')
+            }
+          }
+        }
+      }
+      if (result.type === 'already') {
+        rankedRepeatedGuessCountRef.current += 1
+        neverRepeatRef.current = false
+        if (perfectStartEligibleRef.current) {
+          perfectStartEligibleRef.current = false
+        }
+        registerPlayDay()
+      }
+    },
+    [CITY_NAME, awardAchievement, idMap, rankedMode, rankedRuleset, registerPlayDay, speedrunMode, zoomToFeatures],
+  )
+
+  const handleInputEdit = useCallback(() => {
+    typoFreeRef.current = false
+  }, [])
+
+  const foundStationKeys = useMemo(() => {
+    const keys = new Set<string>()
+    for (const id of found) {
+      const feature = idMap.get(id)
+      if (!feature) continue
+      keys.add(getStationKey(feature))
+    }
+    return keys
+  }, [found, idMap])
+
+  useEffect(() => {
+    if (perfectStartInitializedRef.current) return
+    if (foundStationKeys.size > 0) {
+      perfectStartEligibleRef.current = false
+    }
+    perfectStartInitializedRef.current = true
+  }, [foundStationKeys.size])
+
+  const foundProportion =
+    totalUniqueStations === 0
+      ? 0
+      : foundStationKeys.size / totalUniqueStations
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return
+    if (isMiniCity) return
+    const cityKey = `mm-city-unique-stations-${CITY_NAME}`
+    const prevRaw = window.localStorage.getItem(cityKey)
+    const prev = Number(prevRaw)
+    const previousCount = Number.isFinite(prev) && prev >= 0 ? prev : 0
+    const currentCount = foundStationKeys.size
+    if (currentCount === previousCount) {
+      return
+    }
+    const globalRaw = window.localStorage.getItem('mm-global-unique-stations')
+    const globalPrev = Number(globalRaw)
+    const globalCount = Number.isFinite(globalPrev) && globalPrev >= 0 ? globalPrev : 0
+    const nextGlobal = Math.max(0, globalCount + (currentCount - previousCount))
+    try {
+      window.localStorage.setItem(cityKey, String(currentCount))
+      window.localStorage.setItem('mm-global-unique-stations', String(nextGlobal))
+    } catch {
+      // ignore
+    }
+    if (nextGlobal >= 1000) {
+      awardAchievement('station-collector', 'Station Collector', 'Find 1,000 stations across all cities.')
+    }
+    if (nextGlobal >= 10000) {
+      awardAchievement('marathoner', 'Marathoner', 'Find 10,000 stations across all cities.')
+    }
+  }, [CITY_NAME, awardAchievement, foundStationKeys.size, isMiniCity])
+
+  useEffect(() => {
+    if (foundProportion < 0.5) {
+      comebackArmedRef.current = true
+    }
+  }, [foundProportion])
+
+  useEffect(() => {
+    if (totalUniqueStations === 0) return
+    const ratio = foundStationKeys.size / totalUniqueStations
+    if (Math.abs(ratio - 0.618) <= 0.003) {
+      awardAchievement('golden-ratio', 'Golden Ratio', 'Reach 61.8% completion in any city.')
+    }
+  }, [awardAchievement, foundStationKeys.size, totalUniqueStations])
+
+  const completionProgressRef = useRef(foundProportion)
+
+  useEffect(() => {
+    const previous = completionProgressRef.current ?? 0
+    const reachedCompletion =
+      previous < ACHIEVEMENT_COMPLETION_THRESHOLD &&
+      foundProportion >= ACHIEVEMENT_COMPLETION_THRESHOLD
+
+    if (reachedCompletion) {
+      const isFlawless = mistakes === 0
+      const isAlmostFlawless = mistakes <= 2
+      if (isFlawless) {
+        awardAchievement('flawless', 'Flawless Route', 'Completed a city with zero mistakes.')
+      } else if (isAlmostFlawless) {
+        awardAchievement('almost-flawless', 'Almost Flawless', 'Completed a city with two or fewer mistakes.')
+      }
+      if (comebackArmedRef.current && !comebackTriggeredRef.current) {
+        awardAchievement('comeback-kid', 'Comeback Kid', 'Came back from under 50% to complete the city.')
+        comebackTriggeredRef.current = true
+      }
+      if (typoFreeRef.current) {
+        awardAchievement('typo-free', 'Typo Free', 'Complete a city without using backspace or delete.')
+      }
+      if (neverRepeatRef.current) {
+        awardAchievement('never-repeat', 'Never Repeat', 'Complete a city without guessing an already-found station.')
+      }
+      if (totalUniqueStations >= 1500) {
+        awardAchievement('big-city-tamer', 'Big City Tamer', 'Complete a city with 1,500+ stations.')
+      }
+      if (totalUniqueStations > 0 && totalUniqueStations < 20) {
+        awardAchievement('underdog', 'Underdog', 'Complete a city with fewer than 20 stations.')
+      }
+
+      if (speedrunMode && speedrunAvailable && speedrunStartRef.current !== null && !speedrunFinishedRef.current) {
+        const elapsedMs = performance.now() - speedrunStartRef.current
+        speedrunFinishedRef.current = true
+        setSpeedrunElapsedMs(elapsedMs)
+        if (speedrunTimerRef.current) {
+          window.clearInterval(speedrunTimerRef.current)
+          speedrunTimerRef.current = null
+        }
+        clearSpeedrunStartStorage()
+
+        if (totalUniqueStations < 150 && elapsedMs <= 10 * 60 * 1000) {
+          awardAchievement('speedrunner-1', 'Speedrunner I', 'Complete a city (<150 stations) in under 10 minutes with Speedrun Mode.')
+        } else if (totalUniqueStations >= 150 && totalUniqueStations <= 500 && elapsedMs <= 30 * 60 * 1000) {
+          awardAchievement('speedrunner-2', 'Speedrunner II', 'Complete a city (150-500 stations) in under 30 minutes with Speedrun Mode.')
+        } else if (totalUniqueStations > 500 && totalUniqueStations <= 1000 && elapsedMs <= 75 * 60 * 1000) {
+          awardAchievement(
+            'speedrunner-3',
+            'Speedrunner III',
+            'Complete a city (\u22641000 stations) in under 75 minutes with Speedrun Mode.',
+          )
+        } else if (totalUniqueStations > 1000 && elapsedMs <= 90 * 60 * 1000) {
+          awardAchievement('speedrunner-4', 'Speedrunner IV', 'Complete a city (1000+ stations) in under 90 minutes with Speedrun Mode.')
+        }
+        if (speedrunIntegrityRef.current) {
+          awardAchievement(
+            'consistent-runner',
+            'Consistent Runner',
+            'Finish a speedrun without leaving the tab.',
+          )
+        }
+
+        const prevBestRaw =
+          typeof window !== 'undefined' ? window.localStorage.getItem(`speedrun-best-${CITY_NAME}`) : null
+        const prevBest = prevBestRaw ? Number(prevBestRaw) : null
+        if (typeof window !== 'undefined') {
+          if (prevBest === null || elapsedMs < prevBest) {
+            window.localStorage.setItem(`speedrun-best-${CITY_NAME}`, String(elapsedMs))
+            setBestSpeedrunMs(elapsedMs)
+          }
+        }
+      }
+
+      // Main-city-only global completion tracking
+      if (typeof window !== 'undefined' && !isMiniCity) {
+        const today = new Date().toISOString().slice(0, 10)
+        const continent = (cityPath?.split('/')?.[0] ?? 'Global')
+        let completions: { city: string; continent: string; date: string }[] = []
+        try {
+          const raw = window.localStorage.getItem('mm-completions')
+          if (raw) {
+            const parsed = JSON.parse(raw)
+            if (Array.isArray(parsed)) {
+              completions = parsed.filter(
+                (c) =>
+                  c &&
+                  typeof c.city === 'string' &&
+                  typeof c.continent === 'string' &&
+                  typeof c.date === 'string',
+              )
+            }
+          }
+        } catch {}
+        completions.push({ city: CITY_NAME, continent, date: today })
+        window.localStorage.setItem('mm-completions', JSON.stringify(completions))
+
+        const uniqueCities = new Set(completions.map((c) => c.city))
+        const uniqueContinents = new Set(completions.map((c) => c.continent))
+        const completedToday = completions.filter((c) => c.date === today)
+        const hasOtherContinent = completedToday.some((c) => c.city !== CITY_NAME && c.continent !== continent)
+        if (hasOtherContinent) {
+          awardAchievement('twin-city', 'Twin City', 'Completed two cities from different continents on the same day.')
+        }
+        if (uniqueContinents.size >= 6) {
+          awardAchievement('globe-trotter', 'Globe Trotter', 'Complete cities on 6 different continents.')
+        }
+        if (uniqueContinents.size >= 3) {
+          awardAchievement('all-rounder', 'All Rounder', 'Complete cities on 3 different continents.')
+        }
+        if (uniqueCities.size >= 50) {
+          awardAchievement('explorer-50', 'Ultimate Explorer', 'Completed 50 different cities.')
+        } else if (uniqueCities.size >= 25) {
+          awardAchievement('explorer-25', 'Seasoned Explorer', 'Completed 25 different cities.')
+        } else if (uniqueCities.size >= 10) {
+          awardAchievement('explorer-10', 'Explorer', 'Completed 10 different cities.')
+        } else if (uniqueCities.size >= 3) {
+          awardAchievement('explorer-3', 'Rookie Explorer', 'Completed 3 different cities.')
+        }
+
+        const favoritesKey = getFavoritesStorageKey(user?.id)
+        try {
+          const rawFavorites = window.localStorage.getItem(favoritesKey)
+          const parsedFavorites = rawFavorites ? JSON.parse(rawFavorites) : []
+          const favorites = Array.isArray(parsedFavorites)
+            ? parsedFavorites.filter((slug) => typeof slug === 'string')
+            : []
+          if (favorites.includes(CITY_NAME)) {
+            const rawCompleted = window.localStorage.getItem('mm-favorites-completed')
+            const parsedCompleted = rawCompleted ? JSON.parse(rawCompleted) : []
+            const completed = Array.isArray(parsedCompleted)
+              ? parsedCompleted.filter((slug) => typeof slug === 'string')
+              : []
+            const completedSet = new Set(completed)
+            completedSet.add(CITY_NAME)
+            window.localStorage.setItem(
+              'mm-favorites-completed',
+              JSON.stringify(Array.from(completedSet)),
+            )
+            if (completedSet.size >= 5) {
+              awardAchievement('favorites-first', 'Favorites First', 'Complete 5 favorited cities.')
+            }
+          }
+        } catch {
+          // ignore
+        }
+      }
+
+      const shouldSuppressGlobal = !settings.achievementToastsEnabled
+      const shouldSuppressCity =
+        typeof window !== 'undefined' &&
+        window.localStorage.getItem(achievementToastStorageKey(CITY_NAME)) === '1'
+      if (shouldSuppressGlobal || shouldSuppressCity) {
+        completionProgressRef.current = foundProportion
+        return
+      }
+      const achievementMeta = getAchievementForCity(CITY_NAME, cityDisplayName)
+      setAchievementToast({
+        slug: CITY_NAME,
+        cityName: cityDisplayName,
+        title: achievementMeta.title,
+        description: achievementMeta.description,
+      })
+    }
+
+    completionProgressRef.current = foundProportion
+  }, [
+    CITY_NAME,
+    awardAchievement,
+    cityDisplayName,
+    cityPath,
+    clearSpeedrunStartStorage,
+    foundProportion,
+    isMiniCity,
+    mistakes,
+    settings.achievementToastsEnabled,
+    speedrunAvailable,
+    speedrunMode,
+    totalUniqueStations,
+    user?.id,
+  ])
+
+  useEffect(() => {
+    if (!rankedMode || !user || !rankedSessionId) {
+      return
+    }
+    if (foundProportion < RANKED_COMPLETION_TARGET || rankedRunFinishedRef.current) {
+      return
+    }
+
+    rankedRunFinishedRef.current = true
+
+    ;(async () => {
+      try {
+        const response = await fetch('/api/runs/finish', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            sessionId: rankedSessionId,
+            completionPercent: foundProportion,
+            correctGuessCount: rankedCorrectGuessCountRef.current,
+            correctStationCount: rankedCorrectStationCountRef.current,
+            wrongGuessCount: rankedWrongGuessCountRef.current,
+            repeatedGuessCount: rankedRepeatedGuessCountRef.current,
+            hintCount: rankedHintCount,
+            first50Ms: rankedFirst50MsRef.current,
+            completionMs:
+              speedrunMode && speedrunElapsedMs !== null
+                ? Math.round(speedrunElapsedMs)
+                : null,
+          }),
+        })
+        const payload = await response.json().catch(() => ({}))
+        if (!response.ok) {
+          rankedRunFinishedRef.current = false
+          return
+        }
+        setRankedFinishSummary({
+          completionMs: payload?.result?.completionMs ?? null,
+          rankedEligible: Boolean(payload?.result?.rankedEligible),
+          disqualificationReason:
+            payload?.result?.disqualificationReason ?? rankedDisqualificationReason,
+        })
+      } catch (error) {
+        rankedRunFinishedRef.current = false
+        if (process.env.NODE_ENV !== 'production') {
+          console.warn('Unable to finish ranked run', error)
+        }
+      }
+    })()
+  }, [
+    foundProportion,
+    rankedDisqualificationReason,
+    rankedHintCount,
+    rankedMode,
+    rankedSessionId,
+    speedrunElapsedMs,
+    speedrunMode,
+    user,
+  ])
+
+  useEffect(() => {
+    if (rankedMode || !playlistRunId) {
+      return
+    }
+    if (foundProportion < RANKED_COMPLETION_TARGET || casualPlaylistAdvanceRef.current) {
+      return
+    }
+
+    casualPlaylistAdvanceRef.current = true
+
+    ;(async () => {
+      try {
+        const response = await fetch('/api/playlists/runs/advance', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            playlistRunId,
+            citySlug: CITY_NAME,
+            completionMs:
+              speedrunMode && speedrunElapsedMs !== null
+                ? Math.round(speedrunElapsedMs)
+                : null,
+            accuracy:
+              rankedCorrectGuessCountRef.current + rankedWrongGuessCountRef.current + rankedRepeatedGuessCountRef.current > 0
+                ? rankedCorrectGuessCountRef.current /
+                  (rankedCorrectGuessCountRef.current +
+                    rankedWrongGuessCountRef.current +
+                    rankedRepeatedGuessCountRef.current)
+                : 0,
+          }),
+        })
+        const payload = await response.json().catch(() => ({}))
+        if (!response.ok) {
+          casualPlaylistAdvanceRef.current = false
+          return
+        }
+        if (payload?.nextHref) {
+          router.push(payload.nextHref)
+        }
+      } catch (error) {
+        casualPlaylistAdvanceRef.current = false
+        if (process.env.NODE_ENV !== 'production') {
+          console.warn('Unable to advance casual playlist run', error)
+        }
+      }
+    })()
+  }, [
+    CITY_NAME,
+    foundProportion,
+    playlistRunId,
+    rankedMode,
+    router,
+    speedrunElapsedMs,
+    speedrunMode,
+  ])
+
+  useEffect(() => {
+    const shouldSubmitOneLifeFailure =
+      rankedMode &&
+      rankedRuleset === 'one-life' &&
+      mistakes > 0 &&
+      foundProportion < RANKED_COMPLETION_TARGET
+
+    if (!rankedMode || !user || !rankedSessionId || !shouldSubmitOneLifeFailure) {
+      return
+    }
+    if (rankedFinishSummary) {
+      return
+    }
+
+    ;(async () => {
+      try {
+        const response = await fetch('/api/runs/finish', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            sessionId: rankedSessionId,
+            completionPercent: foundProportion,
+            correctGuessCount: rankedCorrectGuessCountRef.current,
+            correctStationCount: rankedCorrectStationCountRef.current,
+            wrongGuessCount: rankedWrongGuessCountRef.current,
+            repeatedGuessCount: rankedRepeatedGuessCountRef.current,
+            hintCount: rankedHintCount,
+            first50Ms: rankedFirst50MsRef.current,
+            completionMs: null,
+          }),
+        })
+        const payload = await response.json().catch(() => ({}))
+        if (!response.ok) {
+          return
+        }
+        setRankedFinishSummary({
+          completionMs: payload?.result?.completionMs ?? null,
+          rankedEligible: Boolean(payload?.result?.rankedEligible),
+          disqualificationReason:
+            payload?.result?.disqualificationReason ?? 'ONE_LIFE_FAILED',
+        })
+      } catch (error) {
+        if (process.env.NODE_ENV !== 'production') {
+          console.warn('Unable to record one-life finish', error)
+        }
+      }
+    })()
+  }, [
+    foundProportion,
+    mistakes,
+    rankedFinishSummary,
+    rankedHintCount,
+    rankedMode,
+    rankedRuleset,
+    rankedSessionId,
+    user,
+  ])
+
+  useEffect(() => {
+    if (!settings.achievementToastsEnabled) {
+      setAchievementToast(null)
+    }
+  }, [settings.achievementToastsEnabled])
+
+  const mapOptions = useMemo(() => {
+    const fallbackLightStyle =
+      normalizeMapStyleOverride(process.env.NEXT_PUBLIC_MAPBOX_STYLE) ??
+      'mapbox://styles/mapbox/light-v11'
+
+    let baseStyle: string | undefined
+    if (typeof MAP_CONFIG.style === 'string') {
+      baseStyle = MAP_CONFIG.style.includes('mapbox://styles/benjamintd/')
+        ? fallbackLightStyle
+        : MAP_CONFIG.style
+    }
+
+    const darkStyle =
+      normalizeMapStyleOverride(process.env.NEXT_PUBLIC_MAPBOX_STYLE_DARK) ??
+      'mapbox://styles/mapbox/dark-v11'
+
+    const satelliteStyle = 'mapbox://styles/mapbox/satellite-streets-v12'
+    const resolvedStyle =
+      showSatellite
+        ? satelliteStyle
+        : resolvedTheme === 'dark'
+          ? darkStyle
+          : baseStyle ?? fallbackLightStyle
+
+    const { container: _ignored, ...rest } = MAP_CONFIG as typeof MAP_CONFIG & {
+      container?: unknown
+    }
+
+    return {
+      ...rest,
+      style: resolvedStyle,
+    }
+  }, [MAP_CONFIG, resolvedTheme, showSatellite])
+
+  useEffect(() => {
+    disableMapboxTelemetry()
+    mapboxgl.accessToken = process.env.NEXT_PUBLIC_MAPBOX_TOKEN!
+
+    if (!mapContainerRef.current) {
+      return
+    }
+
+    if (mapUnavailableRef.current) {
+      return
+    }
+
+    setMapError(null)
+
+    const supported =
+      typeof mapboxgl.supported === 'function'
+        ? mapboxgl.supported({ failIfMajorPerformanceCaveat: false })
+        : true
+
+    if (!supported) {
+      setMapError(
+        'This browser cannot initialize WebGL, so the map cannot be displayed. Please enable hardware acceleration or try a different browser.',
+      )
+      return
+    }
+
+    let mapboxMap: mapboxgl.Map | null = null
+    let mapFailed = false
+    let contextLostHandler: (() => void) | null = null
+
+    let initialBounds: [number, number, number, number] | undefined
+    const restoredMapView = savedMapViewRef.current
+
+    if (MAP_FROM_DATA && displayRoutes) {
+      const box = bbox(displayRoutes)
+      if (
+        box.length === 4 &&
+        box.every((n) => Number.isFinite(n)) &&
+        box[2] > box[0] &&
+        box[3] > box[1]
+      ) {
+        initialBounds = box as [number, number, number, number]
+      }
+    }
+
+    try {
+      const options = {
+        ...mapOptions,
+        container: mapContainerRef.current,
+      }
+
+      if (restoredMapView) {
+        options.center = restoredMapView.center
+        options.zoom = restoredMapView.zoom
+      } else if (initialBounds) {
+        const [minLng, minLat, maxLng, maxLat] = initialBounds
+        options.bounds = [
+          [minLng, minLat],
+          [maxLng, maxLat],
+        ]
+        options.fitBoundsOptions = { padding: 100 }
+      }
+
+      mapboxMap = new mapboxgl.Map(options)
+    } catch (error) {
+      console.error('Failed to initialize map', error)
+      setMapError(
+        'Failed to initialize the map in this environment. Please check WebGL support.',
+      )
+      return
+    }
+
+    if (!mapboxMap) {
+      return
+    }
+
+    const failMapOnce = (message = mapUnavailableMessage) => {
+      if (mapFailed) {
+        return
+      }
+
+      mapFailed = true
+      mapUnavailableRef.current = true
+      setMapError(message)
+      setMap(null)
+
+      try {
+        mapboxMap?.remove()
+      } catch {
+        // The context is already gone; there is nothing useful to clean up here.
+      } finally {
+        mapboxMap = null
+      }
+    }
+
+    contextLostHandler = () => {
+      failMapOnce()
+    }
+
+    mapboxMap.on('webglcontextlost', contextLostHandler)
+
+    const handleMapError = (event: mapboxgl.MapboxEvent & { error?: unknown }) => {
+      const message =
+        (event?.error as { message?: string })?.message ??
+        (event?.error ? String(event.error) : '')
+      if (message.toLowerCase().includes('webgl')) {
+        failMapOnce(
+          'This browser cannot initialize WebGL, so the map cannot be displayed. Please enable hardware acceleration or try a different browser.',
+        )
+      }
+    }
+
+    mapboxMap.on('error', handleMapError)
+
+    let ensureRouteLayers: (() => void) | null = null
+    let persistMapView: (() => void) | null = null
+    let refreshVisibleMapData: (() => void) | null = null
+
+    mapboxMap.on('load', () => {
+      if (!mapboxMap || mapFailed) return
+      mapboxMap.doubleClickZoom.disable()
+      const isDarkTheme = resolvedTheme === 'dark' || showSatellite
+      const foundTextColor = isDarkTheme
+        ? 'rgb(255, 255, 255)'
+        : 'rgb(29, 40, 53)'
+      const foundHaloColor = isDarkTheme
+        ? 'rgba(0, 0, 0, 0.85)'
+        : 'rgba(255, 255, 255, 0.8)'
+      const hoverTextColor = foundTextColor
+      const hoverHaloColor = isDarkTheme
+        ? 'rgba(0, 0, 0, 0.85)'
+        : 'rgb(255, 255, 255)'
+      const routeColorExpression: any =
+        rankedRuleset === 'no-line-colors' ? toMutedLineColor() : ['get', 'color']
+      const initialRenderedCollections = renderCullingEnabled
+        ? getRenderedCollections(getMapBoundsTuple(mapboxMap.getBounds()))
+        : {
+            features: featureCollection,
+            routes: displayRoutes ?? EMPTY_ROUTES_FEATURE_COLLECTION,
+          }
+
+      mapboxMap.addSource('features', {
+        type: 'geojson',
+        data: initialRenderedCollections.features,
+      })
+
+      mapboxMap.addSource('hovered', {
+        type: 'geojson',
+        data: {
+          type: 'FeatureCollection',
+          features: [],
+        },
+      })
+
+      const ROUTES_SOURCE_ID = 'game-routes'
+      const ROUTES_LAYER_ID = 'game-routes-line'
+      const ROUTES_LAYER_CASING_ID = 'game-routes-line-casing'
+      const SIR_LOCAL_LAYER_ID = 'sir-local-line'
+      const SIR_LOCAL_CASING_LAYER_ID = 'sir-local-line-casing'
+      const PASCACK_LAYER_ID = 'pascack-line'
+      const PASCACK_CASING_LAYER_ID = 'pascack-line-casing'
+      const SIR_LOCAL_FILTER: any = [
+        '==',
+        ['get', 'line'],
+        'NewYorkSubwaySI',
+      ]
+      const PASCACK_FILTER: any = [
+        '==',
+        ['get', 'line'],
+        'NJTPascackValley',
+      ]
+
+      ensureRouteLayers = () => {
+        const mbMap = mapboxMap
+        if (!mbMap) return
+
+        if (!MAP_FROM_DATA || !displayRoutes) {
+          return
+        }
+
+        if (mbMap.getLayer(ROUTES_LAYER_ID)) {
+          return
+        }
+
+        const lineWidthExpression: any = [
+          'interpolate',
+          ['linear'],
+          ['zoom'],
+          9,
+          2.5,
+          16,
+          6,
+          22,
+          8,
+        ]
+        const casingLineWidthExpression: any = [
+          'interpolate',
+          ['linear'],
+          ['zoom'],
+          9,
+          3.2,
+          16,
+          7,
+          22,
+          9.5,
+        ]
+        const lineOffsetExpression: any = ['match', ['get', 'line'], '', 2, 0]
+        const lineSortKeyExpression: any = [
+          'case',
+          ['==', ['get', 'line'], 'NewYorkSubwaySI'],
+          1_000,
+          ['==', ['get', 'line'], 'NewYorkSubwaySIExpress'],
+          999,
+          ['==', ['get', 'line'], 'NJTPascackValley'],
+          900,
+          ['==', ['get', 'line'], 'NJTMeadowlands'],
+          899,
+          ['-', 100, ['coalesce', ['get', 'order'], 100]],
+        ]
+
+        if (!mbMap.getSource(ROUTES_SOURCE_ID)) {
+          const routeData = JSON.parse(
+            JSON.stringify(initialRenderedCollections.routes),
+          )
+          mbMap.addSource(ROUTES_SOURCE_ID, {
+            type: 'geojson',
+            data: routeData,
+          })
+        }
+
+        try {
+          const ensureOverlayPair = (
+            lineId: string,
+            casingId: string,
+            filter: any,
+            sortKeyBase: number,
+          ) => {
+            if (!mbMap.getSource(ROUTES_SOURCE_ID)) return
+
+            if (!mbMap.getLayer(casingId)) {
+              mbMap.addLayer({
+                id: casingId,
+                type: 'line',
+                paint: {
+                  'line-width': casingLineWidthExpression,
+                  'line-color': 'rgba(24,24,27,0.45)',
+                  'line-opacity': 0.65,
+                  'line-offset': lineOffsetExpression,
+                },
+                layout: {
+                  'line-sort-key': sortKeyBase,
+                  'line-cap': 'round',
+                  'line-join': 'round',
+                },
+                filter,
+                source: ROUTES_SOURCE_ID,
+              })
+            }
+
+            if (!mbMap.getLayer(lineId)) {
+              mbMap.addLayer({
+                id: lineId,
+                type: 'line',
+                paint: {
+                  'line-width': lineWidthExpression,
+                  'line-color': routeColorExpression,
+                  'line-opacity': 0.95,
+                  'line-offset': lineOffsetExpression,
+                },
+                layout: {
+                  'line-sort-key': sortKeyBase + 1,
+                  'line-cap': 'round',
+                  'line-join': 'round',
+                },
+                filter,
+                source: ROUTES_SOURCE_ID,
+              })
+            }
+          }
+
+          if (!mbMap.getLayer(ROUTES_LAYER_CASING_ID)) {
+            mbMap.addLayer({
+              id: ROUTES_LAYER_CASING_ID,
+              type: 'line',
+              paint: {
+                'line-width': casingLineWidthExpression,
+                'line-color': 'rgba(24,24,27,0.45)',
+                'line-opacity': 0.6,
+                'line-offset': lineOffsetExpression,
+              },
+              layout: {
+                'line-sort-key': lineSortKeyExpression,
+                'line-cap': 'round',
+                'line-join': 'round',
+              },
+              source: ROUTES_SOURCE_ID,
+            })
+          }
+
+          if (!mbMap.getLayer(ROUTES_LAYER_ID)) {
+            mbMap.addLayer({
+              id: ROUTES_LAYER_ID,
+              type: 'line',
+              paint: {
+                'line-width': lineWidthExpression,
+                'line-color': routeColorExpression,
+                'line-opacity': 0.9,
+                'line-offset': lineOffsetExpression,
+              },
+              layout: {
+                'line-sort-key': lineSortKeyExpression,
+                'line-cap': 'round',
+                'line-join': 'round',
+              },
+              source: ROUTES_SOURCE_ID,
+            })
+          }
+
+          ensureOverlayPair(
+            SIR_LOCAL_LAYER_ID,
+            SIR_LOCAL_CASING_LAYER_ID,
+            SIR_LOCAL_FILTER,
+            10_000,
+          )
+          ensureOverlayPair(
+            PASCACK_LAYER_ID,
+            PASCACK_CASING_LAYER_ID,
+            PASCACK_FILTER,
+            9_100,
+          )
+        } catch (error) {
+          console.error('Failed to add route layer', error)
+        }
+      }
+
+      ensureRouteLayers()
+
+      if (renderCullingEnabled) {
+        refreshVisibleMapData = () => {
+          if (!mapboxMap) {
+            return
+          }
+          refreshRenderedSources(mapboxMap)
+        }
+        mapboxMap.on('moveend', refreshVisibleMapData)
+      }
+
+      if (MAP_FROM_DATA) {
+        mapboxMap.addLayer({
+          type: 'circle',
+          source: 'features',
+          id: 'stations',
+          paint: {
+            'circle-radius': [
+              'interpolate',
+              ['linear'],
+              ['zoom'],
+              9,
+              1.5,
+              16,
+              10,
+            ],
+            'circle-color': '#ffffff',
+            'circle-stroke-color': 'rgb(122, 122, 122)',
+            'circle-stroke-width': [
+              'interpolate',
+              ['linear'],
+              ['zoom'],
+              8,
+              0.5,
+              22,
+              2,
+            ],
+          },
+        })
+
+        if (displayRoutes) {
+          const box = bbox(displayRoutes)
+          const [minLng, minLat, maxLng, maxLat] = box
+          const hasValidBox =
+            Number.isFinite(minLng) &&
+            Number.isFinite(minLat) &&
+            Number.isFinite(maxLng) &&
+            Number.isFinite(maxLat) &&
+            maxLng > minLng &&
+            maxLat > minLat &&
+            minLat >= -90 &&
+            minLat <= 90 &&
+            maxLat >= -90 &&
+            maxLat <= 90
+
+          if (hasValidBox) {
+            if (!restoredMapView) {
+              mapboxMap.fitBounds(
+                [
+                  [minLng, minLat],
+                  [maxLng, maxLat],
+                ],
+                { padding: 100, duration: 0 },
+              )
+            }
+
+            mapboxMap.setMaxBounds([
+              [minLng - 1, minLat - 1],
+              [maxLng + 1, maxLat + 1],
+            ])
+          }
+        }
+      }
+
+      if (ensureRouteLayers) {
+        mapboxMap.on('styledata', ensureRouteLayers)
+      }
+
+      mapboxMap.addLayer({
+        id: 'stations-hovered',
+        type: 'circle',
+        paint: {
+          'circle-radius': 16,
+          'circle-color': '#fde047',
+          'circle-blur-transition': {
+            duration: 100,
+          },
+          'circle-blur': 1,
+        },
+        source: 'hovered',
+        filter: ['==', '$type', 'Point'],
+      })
+
+      mapboxMap.addLayer({
+        type: 'circle',
+        source: 'features',
+        id: 'stations-circles',
+        paint: {
+          'circle-radius': [
+            'interpolate',
+            ['linear'],
+            ['zoom'],
+            9,
+            ['case', ['to-boolean', ['feature-state', 'found']], 2, 1],
+            16,
+            ['case', ['to-boolean', ['feature-state', 'found']], 6, 4],
+          ],
+          'circle-color': [
+            'case',
+            ['to-boolean', ['feature-state', 'found']],
+            [
+              'match',
+              ['get', 'line'],
+              ...Object.keys(displayLines).flatMap((line) => [
+                [line],
+                displayLines[line].color,
+              ]),
+              'rgba(255, 255, 255, 0.8)',
+            ],
+            'rgba(255, 255, 255, 0.8)',
+          ],
+          'circle-stroke-color': [
+            'case',
+            ['to-boolean', ['feature-state', 'found']],
+            [
+              'match',
+              ['get', 'line'],
+              ...Object.keys(displayLines).flatMap((line) => [
+                [line],
+                displayLines[line].backgroundColor,
+              ]),
+              'rgba(255, 255, 255, 0.8)',
+            ],
+            'rgba(120, 120, 120, 0.6)',
+          ],
+          'circle-stroke-width': [
+            'case',
+            ['to-boolean', ['feature-state', 'found']],
+            1,
+            0.75,
+          ],
+        },
+        layout: {
+          'circle-sort-key': ['-', 100, ['get', 'order']],
+        },
+      })
+
+      mapboxMap.addLayer({
+        minzoom: 11,
+        layout: {
+          'text-field': [
+            'to-string',
+            ['coalesce', ['get', 'display_name'], ['get', 'name']],
+          ],
+          'text-font': ['Cabin Regular', 'Arial Unicode MS Regular'],
+          'text-anchor': 'bottom',
+          'text-offset': [0, -0.5],
+          'text-size': ['interpolate', ['linear'], ['zoom'], 11, 12, 22, 14],
+        },
+        type: 'symbol',
+        source: 'features',
+        id: 'stations-labels',
+          paint: {
+            'text-color': [
+              'case',
+              ['to-boolean', ['feature-state', 'found']],
+              foundTextColor,
+              'rgba(0, 0, 0, 0)',
+            ],
+            'text-halo-color': [
+              'case',
+              ['to-boolean', ['feature-state', 'found']],
+              foundHaloColor,
+              'rgba(0, 0, 0, 0)',
+            ],
+            'text-halo-blur': 1,
+            'text-halo-width': 1,
+          },
+      })
+
+      mapboxMap.addLayer({
+        id: 'hover-label-point',
+        type: 'symbol',
+          paint: {
+            'text-halo-color': hoverHaloColor,
+            'text-halo-width': 2,
+            'text-halo-blur': 1,
+            'text-color': hoverTextColor,
+          },
+          layout: {
+            'text-field': [
+              'to-string',
+              ['coalesce', ['get', 'display_name'], ['get', 'name']],
+          ],
+          'text-font': ['Cabin Bold', 'Arial Unicode MS Regular'],
+          'text-anchor': 'bottom',
+          'text-offset': [0, -0.6],
+          'text-size': ['interpolate', ['linear'], ['zoom'], 11, 14, 22, 16],
+          'symbol-placement': 'point',
+        },
+        source: 'hovered',
+        filter: ['==', '$type', 'Point'],
+      })
+
+      mapboxMap.once('data', () => {
+        setMap((map) => (map === null ? mapboxMap : map))
+      })
+
+      mapboxMap.once('idle', () => {
+        const mbMap = mapboxMap
+        if (!mbMap) return
+        if (!initialMapViewRef.current) {
+          const center = mbMap.getCenter()
+          initialMapViewRef.current = {
+            zoom: mbMap.getZoom(),
+            center: [center.lng, center.lat],
+          }
+        }
+        setMap((map) => (map === null ? mbMap : map))
+        mbMap.on('mousemove', ['stations-circles'], (e) => {
+          if (e.features && e.features.length > 0) {
+            const feature = e.features.find(
+              (candidate) => typeof candidate.id === 'number',
+            )
+            if (feature && typeof feature.id === 'number') {
+              setHoveredId(feature.id as number)
+              return
+            }
+          }
+
+          setHoveredId(null)
+        })
+
+        mbMap.on('mouseleave', ['stations-circles'], () => {
+          setHoveredId(null)
+        })
+      })
+
+      persistMapView = () => {
+        if (!mapboxMap) return
+        const center = mapboxMap.getCenter()
+        const zoom = mapboxMap.getZoom()
+        const view = { zoom, center: [center.lng, center.lat] as [number, number] }
+        if (!isStoredMapView(view)) return
+        savedMapViewRef.current = view
+        if (typeof window !== 'undefined') {
+          window.localStorage.setItem(`map-view-${CITY_NAME}`, JSON.stringify(view))
+        }
+        const now = Date.now()
+        if (now - lastPersistTsRef.current > 1000) {
+          lastPersistTsRef.current = now
+          updateUiPreferences({ mapViewByCity: { [CITY_NAME]: view } })
+        } else {
+          if (mapPersistTimeoutRef.current) {
+            window.clearTimeout(mapPersistTimeoutRef.current)
+          }
+          mapPersistTimeoutRef.current = window.setTimeout(() => {
+            updateUiPreferences({ mapViewByCity: { [CITY_NAME]: view } })
+            lastPersistTsRef.current = Date.now()
+            mapPersistTimeoutRef.current = null
+          }, 1000)
+        }
+      }
+
+      mapboxMap.on('moveend', persistMapView)
+      mapboxMap.on('zoomend', persistMapView)
+    })
+
+    return () => {
+      if (!mapboxMap) {
+        return
+      }
+      const currentMapView = getStoredMapViewFromMap(mapboxMap)
+      if (currentMapView) {
+        savedMapViewRef.current = currentMapView
+        if (typeof window !== 'undefined') {
+          window.localStorage.setItem(
+            `map-view-${CITY_NAME}`,
+            JSON.stringify(currentMapView),
+          )
+        }
+      }
+      if (ensureRouteLayers) {
+        mapboxMap.off('styledata', ensureRouteLayers)
+      }
+      if (refreshVisibleMapData) {
+        mapboxMap.off('moveend', refreshVisibleMapData)
+      }
+      if (contextLostHandler) {
+        mapboxMap.off('webglcontextlost', contextLostHandler)
+      }
+      mapboxMap.off('error', handleMapError)
+      if (persistMapView) {
+        mapboxMap.off('moveend', persistMapView)
+        mapboxMap.off('zoomend', persistMapView)
+      }
+      if (mapPersistTimeoutRef.current) {
+        window.clearTimeout(mapPersistTimeoutRef.current)
+        mapPersistTimeoutRef.current = null
+      }
+      mapboxMap.remove()
+      setMap(null)
+    }
+  }, [setMap, featureCollection, displayLines, mapOptions, MAP_FROM_DATA, displayRoutes, renderCullingEnabled, getRenderedCollections, refreshRenderedSources, resolvedTheme, CITY_NAME, updateUiPreferences])
+
+  useEffect(() => {
+    if (!map) {
+      setMapBearing(0)
+      return
+    }
+
+    const syncBearing = () => {
+      const bearing = map.getBearing()
+      setMapBearing((current) =>
+        Math.abs(current - bearing) < 0.1 ? current : bearing,
+      )
+    }
+
+    syncBearing()
+    map.on('rotate', syncBearing)
+    map.on('pitch', syncBearing)
+
+    return () => {
+      map.off('rotate', syncBearing)
+      map.off('pitch', syncBearing)
+    }
+  }, [map])
+
+  useEffect(() => {
+    if (!map) return
+
+    const applyVisibility = () => {
+      let style: ReturnType<mapboxgl.Map['getStyle']>
+      try {
+        style = map.getStyle()
+      } catch {
+        return
+      }
+      if (!style?.layers) return
+
+      for (const layer of style.layers) {
+        if (layer.type === 'symbol') {
+          if (
+            layer.source === 'features' ||
+            layer.source === 'hovered' ||
+            layer.source === 'game-routes' ||
+            layer.id === 'stations-labels' ||
+            layer.id === 'hover-label-point'
+          ) {
+            continue
+          }
+          const targetVisibility = showMapNames ? 'visible' : 'none'
+          safeSetMapLayoutProperty(map, layer.id, 'visibility', targetVisibility)
+        }
+      }
+    }
+
+    applyVisibility()
+    map.on('styledata', applyVisibility)
+
+    return () => {
+      map.off('styledata', applyVisibility)
+    }
+  }, [map, showMapNames])
+
+  useEffect(() => {
+    if (!map) return
+
+    const handleMapContextMenu = (event: mapboxgl.MapMouseEvent) => {
+      if (!canCopyMapCoords) {
+        setMapCoordsMenu(null)
+        return
+      }
+
+      event.preventDefault()
+      event.originalEvent.preventDefault()
+      setMapCoordsMenu({
+        x: event.originalEvent.clientX,
+        y: event.originalEvent.clientY,
+        lng: event.lngLat.lng,
+        lat: event.lngLat.lat,
+      })
+    }
+
+    map.on('contextmenu', handleMapContextMenu)
+    return () => {
+      map.off('contextmenu', handleMapContextMenu)
+    }
+  }, [canCopyMapCoords, map])
+
+  useEffect(() => {
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      // Ignore if user is typing in an input
+      const activeTag = document.activeElement?.tagName.toLowerCase()
+      const isInputActive = activeTag === 'input' || activeTag === 'textarea'
+      
+      const combo = getKeystrokeFromEvent(event)
+      if (!combo) return
+
+      // Allow Escape to clear from input even if active
+      if (isInputActive && combo !== 'Escape') {
+        return
+      }
+
+      // Check for matching action
+      const actionEntry = Object.entries(settings.keybindings).find(
+        ([_, boundKey]) => boundKey === combo
+      )
+
+      if (actionEntry) {
+        const action = actionEntry[0] as KeybindingAction
+        
+        if (action === 'FOCUS_INPUT') {
+            event.preventDefault()
+            if (shouldAutoFocus()) {
+                inputRef.current?.focus()
+            }
+        } else if (action === 'CLEAR_INPUT') {
+            event.preventDefault()
+            if (activeFoundId) {
+                setActiveFoundId(null)
+            } else if (sidebarOpen) {
+                setSidebarOpen(false)
+            } else {
+                inputRef.current?.blur()
+            }
+        } else if (action === 'TOGGLE_ZEN_MODE') {
+            event.preventDefault()
+            setZenMode(prev => !prev)
+        } else if (action === 'TOGGLE_SPEEDRUN') {
+            event.preventDefault()
+            if (speedrunAvailable) {
+              setSpeedrunMode(prev => !prev)
+            }
+        } else if (action === 'TOGGLE_SIDEBAR') {
+            event.preventDefault()
+            setSidebarOpen(prev => !prev)
+        } else if (action === 'TOGGLE_SOLUTIONS') {
+            event.preventDefault()
+            handleRevealSolutions()
+        } else if (action === 'TOGGLE_LABELS') {
+            event.preventDefault()
+            setHideLabels(prev => !prev)
+        } else if (action === 'TOGGLE_MAP_NAMES') {
+            event.preventDefault()
+            handleToggleMapNames()
+        } else if (action === 'TOGGLE_SATELLITE') {
+            event.preventDefault()
+            handleToggleSatellite()
+        } else if (action === 'OPEN_CITY_STATS') {
+            event.preventDefault()
+            setCityStatsOpen(true)
+        } else if (action === 'OPEN_ACHIEVEMENTS') {
+            event.preventDefault()
+            router.push('/metro-memory?tab=achievements')
+        } else if (action === 'OPEN_ACCOUNT') {
+            event.preventDefault()
+            openAccountModal()
+        } else if (action === 'OPEN_SETTINGS') {
+            event.preventDefault()
+            openSettingsModal()
+        }
+      }
+    }
+
+    window.addEventListener('keydown', handleKeyDown)
+    return () => window.removeEventListener('keydown', handleKeyDown)
+  }, [
+    settings.keybindings,
+    activeFoundId,
+    sidebarOpen,
+    handleRevealSolutions,
+    handleToggleMapNames,
+    handleToggleSatellite,
+    openAccountModal,
+    openSettingsModal,
+    router,
+    setHideLabels,
+    setCityStatsOpen,
+    setSpeedrunMode,
+    speedrunAvailable,
+  ])
+
+
+  useEffect(() => {
+    if (!map || !(map as any).style) {
+      return
+    }
+
+    const hoveredSource = map.getSource('hovered') as
+      | mapboxgl.GeoJSONSource
+      | undefined
+
+    if (!hoveredSource) {
+      return
+    }
+
+    const isFoundHover =
+      hoveredId !== null && found.includes(hoveredId) && idMap.has(hoveredId)
+
+    hoveredSource.setData({
+      type: 'FeatureCollection',
+      features: isFoundHover ? [idMap.get(hoveredId)!] : [],
+    })
+  }, [map, hoveredId, idMap, found])
+
+  useEffect(() => {
+    if (!map || !(map as any).style || !found) return
+
+    reapplyFoundFeatureState(map)
+  }, [found, map, reapplyFoundFeatureState])
+
+  useEffect(() => {
+    if (!map) {
+      return
+    }
+
+    const handleDoubleClick = (event: mapboxgl.MapLayerMouseEvent) => {
+      if (typeof event.preventDefault === 'function') {
+        event.preventDefault()
+      }
+
+      const feature = event.features?.find(
+        (candidate) => typeof candidate.id === 'number',
+      )
+
+      if (!feature || typeof feature.id !== 'number') {
+        return
+      }
+
+      const featureId = feature.id as number
+
+      if (!found.includes(featureId)) {
+        return
+      }
+
+      setSidebarOpen(true)
+
+      if (typeof window !== 'undefined' && window.innerWidth < 1024) {
+        setMobileSidebarOpen(true)
+      }
+
+      setActiveFoundId(featureId)
+      setHoveredId(featureId)
+    }
+
+    map.on('dblclick', 'stations-circles', handleDoubleClick)
+    
+    const handleLineDoubleClick = (event: mapboxgl.MapLayerMouseEvent) => {
+        if (typeof event.preventDefault === 'function') {
+            event.preventDefault()
+        }
+        
+        const feature = event.features?.[0]
+        if (!feature) return
+
+        const lineId = feature.properties?.line
+        if (typeof lineId === 'string' && lineId) {
+            setHighlightedLineId(lineId)
+            setSidebarOpen(true)
+            if (typeof window !== 'undefined' && window.innerWidth < 1024) {
+                setMobileSidebarOpen(true)
+            }
+        }
+    }
+
+    if (!disableRouteLineHighlightInteraction) {
+      map.on('dblclick', 'game-routes-line', handleLineDoubleClick)
+    }
+
+    return () => {
+      map.off('dblclick', 'stations-circles', handleDoubleClick)
+      if (!disableRouteLineHighlightInteraction) {
+        map.off('dblclick', 'game-routes-line', handleLineDoubleClick)
+      }
+    }
+  }, [
+    map,
+    found,
+    setSidebarOpen,
+    setMobileSidebarOpen,
+    setActiveFoundId,
+    setHoveredId,
+    disableRouteLineHighlightInteraction,
+  ])
+
+  const zoomToFeature = useCallback(
+    (id: number) => {
+      if (!map) return
+
+      const feature = idMap.get(id)
+      if (!feature) return
+
+      if (feature.geometry.type === 'Point') {
+        map.flyTo({
+          center: feature.geometry.coordinates as [number, number],
+          zoom: 14,
+        })
+      } else {
+        const bounds = new mapboxgl.LngLatBounds()
+        coordEach(feature, (coord) => {
+          bounds.extend(coord as [number, number])
+        })
+        map.fitBounds(bounds, { padding: 100 })
+      }
+    },
+    [map, idMap],
+  )
+
+  useEffect(() => {
+    if (!map) {
+      return
+    }
+
+    map.resize()
+
+    if (typeof window !== 'undefined') {
+      const raf = window.requestAnimationFrame(() => {
+        map.resize()
+      })
+
+      return () => {
+        window.cancelAnimationFrame(raf)
+      }
+    }
+  }, [map, sidebarOpen, zenMode])
+
+  useEffect(() => {
+    if (activeFoundId !== null && !found.includes(activeFoundId)) {
+      setActiveFoundId(null)
+    }
+  }, [activeFoundId, found])
+
+  const sidebarStyle = useMemo<CSSProperties | undefined>(() => {
+    if (sidebarOpen) {
+      return undefined
+    }
+    return { width: 0, flexBasis: 0 }
+  }, [sidebarOpen])
+
+  const oneLifeFailed =
+    rankedMode &&
+    rankedRuleset === 'one-life' &&
+    mistakes > 0 &&
+    foundProportion < RANKED_COMPLETION_TARGET
+
+    return (
+      <div className="relative flex h-screen flex-row items-start justify-start bg-zinc-50 text-zinc-900 dark:bg-zinc-950 dark:text-zinc-100">
+        <ZenModeToast zenMode={zenMode} toggleKey={settings.keybindings.TOGGLE_ZEN_MODE} />
+        <SpeedrunToast speedrunMode={speedrunMode} />
+        {mapCoordsToast ? (
+          <div className="pointer-events-none fixed bottom-32 left-1/2 z-[110] -translate-x-1/2">
+            <div className="rounded-full bg-sky-600/95 px-6 py-2 text-sm font-semibold text-white shadow-xl backdrop-blur dark:bg-sky-400/95 dark:text-zinc-950">
+              {mapCoordsToast}
+            </div>
+          </div>
+        ) : null}
+        {mapCoordsMenu ? (
+          <>
+            <div
+              className="pointer-events-none fixed z-[119] h-4 w-4 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-sky-500 bg-sky-500/20 shadow-[0_0_0_4px_rgba(14,165,233,0.16)] dark:border-sky-300 dark:bg-sky-300/20 dark:shadow-[0_0_0_4px_rgba(125,211,252,0.18)]"
+              style={{
+                left: mapCoordsMenu.x,
+                top: mapCoordsMenu.y,
+              }}
+            />
+            <div
+              className="fixed z-[120]"
+              style={{
+                left: mapCoordsMenu.x + 10,
+                top: mapCoordsMenu.y + 10,
+              }}
+            >
+              <div
+                className="min-w-[140px] rounded-lg border border-zinc-200 bg-white/95 p-1.5 shadow-xl backdrop-blur dark:border-zinc-700 dark:bg-zinc-900/95"
+                onPointerDown={(event) => event.stopPropagation()}
+              >
+                <button
+                  type="button"
+                  onClick={() => void copyMapCoords()}
+                  className="flex w-full items-center justify-between rounded-md px-2 py-1.5 text-left text-xs font-medium text-zinc-900 transition hover:bg-zinc-100 dark:text-zinc-100 dark:hover:bg-zinc-800"
+                >
+                  <span>Copy coords</span>
+                  <span className="ml-3 text-[10px] text-zinc-500 dark:text-zinc-400">
+                    {mapCoordsMenu.lat.toFixed(4)}, {mapCoordsMenu.lng.toFixed(4)}
+                  </span>
+                </button>
+              </div>
+            </div>
+          </>
+        ) : null}
+        <div className="relative flex-1 min-w-0 h-full">
+          <div ref={mapContainerRef} className="absolute inset-0 h-full w-full" />
+        {mapError ? (
+          <div className="absolute inset-0 z-50 flex items-center justify-center px-4">
+            <div className="max-w-lg rounded-lg bg-white/95 p-4 text-sm font-semibold text-red-700 shadow-lg dark:bg-zinc-900/95 dark:text-red-200 dark:shadow-black/40">
+              {mapError}
+            </div>
+          </div>
+        ) : null}
+        {!zenMode && map ? (
+          <div className="pointer-events-auto absolute bottom-10 left-3 z-30 flex flex-col overflow-hidden rounded-[1.5rem] bg-white/90 text-zinc-700 shadow-lg ring-1 ring-white/60 backdrop-blur dark:bg-zinc-900/80 dark:text-zinc-100 dark:ring-black/50">
+            <button
+              type="button"
+              onClick={() =>
+                map.easeTo({
+                  bearing: 0,
+                  pitch: 0,
+                  duration: 700,
+                  essential: true,
+                })
+              }
+              className="flex h-10 w-10 items-center justify-center border-b border-zinc-200/80 bg-transparent text-zinc-700 transition hover:bg-white focus:outline-none focus:ring-2 focus:ring-[var(--accent-ring)] dark:border-zinc-700/80 dark:text-zinc-100 dark:hover:bg-zinc-800/80"
+              aria-label="Reset orientation"
+              title="Reset orientation"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                className="h-6 w-6"
+                aria-hidden="true"
+              >
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="8.5"
+                  stroke="currentColor"
+                  strokeWidth="1.4"
+                  opacity="0.55"
+                />
+                <circle cx="12" cy="12" r="1.5" fill="currentColor" opacity="0.7" />
+                <g
+                  style={{
+                    transform: `rotate(${-mapBearing}deg)`,
+                    transformOrigin: '12px 12px',
+                  }}
+                >
+                  <polygon points="12,3.5 15.6,12 12,10.5 8.4,12" fill="#ef4444" />
+                  <polygon
+                    points="12,20.5 15.6,12 12,13.5 8.4,12"
+                    fill="currentColor"
+                    opacity="0.75"
+                  />
+                </g>
+                <circle
+                  cx="12"
+                  cy="3.8"
+                  r="2.3"
+                  fill="#ef4444"
+                  stroke="#ffffff"
+                  strokeWidth="0.7"
+                />
+                <text
+                  x="12"
+                  y="3.9"
+                  textAnchor="middle"
+                  dominantBaseline="central"
+                  fontSize="3.1"
+                  fontWeight="800"
+                  fill="#ffffff"
+                  fontFamily="system-ui, -apple-system, Segoe UI, sans-serif"
+                >
+                  N
+                </text>
+              </svg>
+            </button>
+            <button
+              type="button"
+              onClick={() => {
+                const view = initialMapViewRef.current
+                if (!map || !view) {
+                  return
+                }
+                map.flyTo({
+                  center: view.center,
+                  zoom: view.zoom,
+                  speed: 1.2,
+                  essential: true,
+                })
+              }}
+              className="flex h-10 w-10 items-center justify-center border-b border-zinc-200/80 bg-transparent text-zinc-700 transition hover:bg-white focus:outline-none focus:ring-2 focus:ring-[var(--accent-ring)] dark:border-zinc-700/80 dark:text-zinc-100 dark:hover:bg-zinc-800/80"
+              aria-label="Reset zoom"
+              title="Reset zoom"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                className="h-5 w-5"
+              >
+                <path d="M12 5V2L8 6l4 4V7c3.31 0 6 2.69 6 6a6 6 0 0 1-6 6c-2.97 0-5.43-2.16-5.91-5H4.07c.5 3.95 3.86 7 7.93 7 4.42 0 8-3.58 8-8s-3.58-8-8-8z" />
+              </svg>
+            </button>
+            <button
+              type="button"
+              onClick={() => map.zoomIn()}
+              className="flex h-10 w-10 items-center justify-center border-b border-zinc-200/80 bg-transparent text-lg font-semibold text-zinc-700 transition hover:bg-white focus:outline-none focus:ring-2 focus:ring-[var(--accent-ring)] dark:border-zinc-700/80 dark:text-zinc-100 dark:hover:bg-zinc-800/80"
+              aria-label="Zoom in"
+            >
+              +
+            </button>
+            <button
+              type="button"
+              onClick={() => map.zoomOut()}
+              className="flex h-10 w-10 items-center justify-center bg-transparent text-lg font-semibold text-zinc-700 transition hover:bg-white focus:outline-none focus:ring-2 focus:ring-[var(--accent-ring)] dark:text-zinc-100 dark:hover:bg-zinc-800/80"
+              aria-label="Zoom out"
+            >
+              -
+            </button>
+          </div>
+        ) : null}
+        {!zenMode && (
+          <div className="pointer-events-none absolute inset-x-0 top-[calc(0.75rem+env(safe-area-inset-top))] px-3 transition-all lg:top-6 lg:px-6">
+            <div className="pointer-events-auto mx-auto flex w-full max-w-3xl flex-col gap-2 lg:gap-3">
+              {rankedMode && (
+                <div className="rounded-2xl border border-amber-200 bg-white/95 px-4 py-3 text-sm shadow-md backdrop-blur-sm dark:border-amber-500/40 dark:bg-zinc-900/95 dark:text-zinc-100 dark:shadow-black/40">
+                  <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
+                    <span className="font-semibold text-zinc-900 dark:text-zinc-100">
+                      {formatRankedRunSource(rankedSource)}
+                    </span>
+                    <span className="text-zinc-500 dark:text-zinc-400">{BULLET}</span>
+                    <span>{formatRankedRuleset(rankedRuleset)}</span>
+                    <span className="text-zinc-500 dark:text-zinc-400">{BULLET}</span>
+                    <span>
+                      {user
+                        ? rankedFinishSummary?.rankedEligible
+                          ? 'Ranked result recorded.'
+                          : rankedDisqualificationReason || rankedFinishSummary?.disqualificationReason
+                            ? 'Practice only after answer reveal.'
+                            : oneLifeFailed
+                              ? 'Run failed.'
+                              : 'Ranked session active.'
+                        : 'Sign in to place on leaderboards.'}
+                    </span>
+                  </div>
+                  <p className="mt-1 text-xs text-zinc-600 dark:text-zinc-400">
+                    Revealing answers or turning on map-name assists disqualifies the current ranked run.
+                  </p>
+                </div>
+              )}
+              <div className="max-h-[60vh] overflow-y-auto rounded-lg bg-white/95 p-3 shadow-md backdrop-blur-sm dark:bg-zinc-900/95 dark:text-zinc-100 dark:shadow-black/40 lg:hidden">
+                <FoundSummary
+                  foundProportion={foundProportion}
+                  foundStationsPerLine={foundStationsPerLine}
+                  stationsPerLine={stationsPerLine}
+                  cityCompletionConfettiSeen={cityCompletionConfettiSeen}
+                  onCityCompletionConfettiSeen={markCityCompletionConfettiSeen}
+                  minimizable
+                  defaultMinimized
+                  highlightedLineId={highlightedLineId}
+                  iconBasePath={cityPath}
+                  onReset={found.length > 0 ? onReset : undefined}
+                />
+              </div>
+            <div className="flex items-center gap-2 lg:gap-3">
+              <button
+                type="button"
+                onClick={() => setMobileSidebarOpen((open) => !open)}
+                className="inline-flex h-10 items-center gap-2 rounded-full bg-white px-3 text-sm font-semibold text-zinc-700 shadow-lg transition hover:bg-zinc-100 focus:outline-none focus:ring-2 focus:ring-[var(--accent-ring)] dark:bg-zinc-800 dark:text-zinc-100 dark:hover:bg-zinc-700 lg:hidden shrink-0"
+                aria-label={`${mobileSidebarOpen ? 'Hide sidebar' : 'Show sidebar'} (${foundStationKeys.size} found)`}
+              >
+                <span className="flex flex-col items-start leading-none">
+                  <span className="text-sm font-bold">{foundStationKeys.size}</span>
+                </span>
+                <span className="text-sm font-semibold">
+                  {mobileSidebarOpen ? (
+                    'CLOSE'
+                  ) : (
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="h-5 w-5" fill="currentColor">
+                      <path d="M0 0h24v24H0V0z" fill="none"/>
+                      <path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+                    </svg>
+                  )}
+                </span>
+              </button>
+              {!mobileSidebarOpen && (
+                <Input
+                  fuse={fuse}
+                  found={found}
+                  setFound={setFound}
+                  setFoundTimestamps={setFoundTimestamps}
+                  setIsNewPlayer={setIsNewPlayer}
+                  inputRef={inputRef}
+                  map={map}
+                  idMap={idMap}
+                  clusterGroups={clusterGroups}
+                  autoFocus={!solutionsPromptOpen && !resetConfirmOpen}
+                  disabled={solutionsPromptOpen || resetConfirmOpen || oneLifeFailed}
+                  onGuessResult={handleGuessResult}
+                  onInputEdit={handleInputEdit}
+                  autoSubmitOnMatch={settings.autoSubmitOnMatch}
+                  strictMatching={
+                    rankedRuleset === 'strict-spelling' ||
+                    settings.stationMatchingMode === 'strict'
+                  }
+                  forgivingMatching={
+                    rankedRuleset !== 'strict-spelling' &&
+                    settings.stationMatchingMode === 'forgiving'
+                  }
+                />
+              )}
+              {speedrunMode && (
+                <div className="flex items-center gap-2 rounded-full bg-amber-500/90 px-3 py-2 text-xs font-semibold text-white shadow-lg ring-1 ring-white/30 backdrop-blur dark:bg-amber-400/90 dark:text-zinc-950">
+                  <span>Speedrun</span>
+                  <span className="tabular-nums text-sm">
+                    {formatMs(speedrunElapsedMs ?? 0)}
+                  </span>
+                </div>
+              )}
+              <MenuComponent
+                hideLabels={hideLabels}
+                setHideLabels={setHideLabels}
+                onRevealSolutions={handleRevealSolutions}
+                foundProportion={foundProportion}
+                onOpenSettings={openSettingsModal}
+                onOpenCityStats={() => setCityStatsOpen(true)}
+                onOpenAccount={openAccountModal}
+                onOpenPrivacy={openPrivacyModal}
+                onOpenMissedGuessInputs={() => setMissedGuessInputsOpen(true)}
+                showMissedGuessInputs={solutionsUnlocked}
+                zenMode={zenMode}
+                onToggleZen={handleToggleZen}
+                speedrunMode={speedrunMode}
+                speedrunDisabled={!speedrunAvailable}
+                onToggleSpeedrun={() => setSpeedrunMode((prev) => !prev)}
+                bestSpeedrunMs={bestSpeedrunMs}
+                showSatellite={showSatellite}
+                onToggleSatellite={handleToggleSatellite}
+                showMapNames={showMapNames}
+                onToggleMapNames={handleToggleMapNames}
+              />
+              <div className="hidden items-center gap-2 lg:flex">
+                {found.length > 0 && (
+                  <button
+                    type="button"
+                    onClick={onReset}
+                    className="rounded-full border border-red-200 px-4 py-2 text-sm font-medium text-red-600 transition hover:bg-red-50 focus:outline-none focus:ring-2 focus:ring-red-300 dark:border-red-500/40 dark:text-red-300 dark:hover:bg-red-500/10"
+                  >
+                    {t('resetProgress')}
+                  </button>
+                )}
+                <ThemeToggleButton className="h-10 w-10 p-0" />
+              </div>
+
+            </div>
+            {showAds && INLINE_AD_SLOT ? (
+              <div className="pointer-events-auto">
+                <AdSlot
+                  slot={INLINE_AD_SLOT}
+                  format="horizontal"
+                  style={{ height: 100 }}
+                  className="w-full"
+                  layoutKey={`inline-${CITY_NAME}`}
+                />
+              </div>
+            ) : null}
+          </div>
+        </div>
+      )}
+      </div>
+      {!zenMode && (
+      <div
+        className={`relative hidden h-full min-w-0 overflow-visible lg:flex ${
+          sidebarOpen ? 'w-96 xl:w-[32rem]' : 'w-0'
+        }`}
+        style={sidebarStyle}
+      >
+        <div className="absolute left-0 top-1/2 z-20 flex -translate-y-1/2 -translate-x-[65%] flex-col gap-3">
+          <button
+            type="button"
+            onClick={() => setSidebarOpen((open) => !open)}
+            className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-zinc-700 shadow-lg transition hover:bg-zinc-100 focus:outline-none focus:ring-2 focus:ring-[var(--accent-ring)] dark:bg-zinc-800 dark:text-zinc-100 dark:hover:bg-zinc-700"
+            aria-label={sidebarOpen ? 'Hide sidebar' : 'Show sidebar'}
+          >
+            {sidebarOpen ? '<' : '>'}
+          </button>
+          {sidebarOpen ? (
+            <button
+              type="button"
+              onClick={scrollSidebarToTop}
+              aria-label="Back to top"
+              className={`flex h-10 w-10 items-center justify-center rounded-full bg-white text-zinc-700 shadow-lg transition hover:bg-zinc-100 focus:outline-none focus:ring-2 focus:ring-[var(--accent-ring)] dark:bg-zinc-800 dark:text-zinc-100 dark:hover:bg-zinc-700 ${
+                sidebarScrolled ? 'opacity-100' : 'opacity-0 pointer-events-none translate-y-2'
+              }`}
+            >
+              <SidebarArrowUpIcon className="h-6 w-6" />
+            </button>
+          ) : null}
+        </div>
+        {sidebarOpen ? (
+          <div
+            ref={sidebarScrollRef}
+            className="flex h-full w-full flex-col overflow-y-auto bg-white p-6 shadow-lg dark:bg-zinc-900/95 dark:shadow-black/40"
+          >
+            <FoundSummary
+              className="rounded-lg bg-white p-4 shadow-md dark:bg-zinc-900 dark:text-zinc-100 dark:shadow-black/40"
+              foundProportion={foundProportion}
+              foundStationsPerLine={foundStationsPerLine}
+              stationsPerLine={stationsPerLine}
+              cityCompletionConfettiSeen={cityCompletionConfettiSeen}
+              onCityCompletionConfettiSeen={markCityCompletionConfettiSeen}
+              minimizable
+              defaultMinimized
+              highlightedLineId={highlightedLineId}
+              iconBasePath={cityPath}
+            />
+            {relatedVersionsPanel ? (
+              <>
+                <hr className="my-4 w-full border-b border-zinc-100 dark:border-[#18181b]" />
+                <MiniCityLinksPanel
+                  title={relatedVersionsPanel.title}
+                  description={relatedVersionsPanel.description}
+                  items={relatedVersionsPanel.items}
+                  currentSlug={relatedVersionsPanel.currentSlug}
+                />
+              </>
+            ) : null}
+            <hr className="my-4 w-full border-b border-zinc-100 dark:border-[#18181b]" />
+            <FoundList
+              found={found}
+              idMap={idMap}
+              setHoveredId={setHoveredId}
+              hoveredId={hoveredId}
+              hideLabels={hideLabels}
+              foundTimestamps={foundTimestamps}
+              zoomToFeature={zoomToFeature}
+              onStationFocus={setActiveFoundId}
+              activeStationId={activeFoundId}
+              disabled={solutionsPromptOpen}
+              iconBasePath={cityPath}
+            />
+          </div>
+        ) : null}
+      </div>
+      )}
+      {mobileSidebarOpen && (
+        <div
+          className="fixed inset-0 z-30 flex flex-col bg-zinc-900/50 backdrop-blur-sm lg:hidden"
+          onClick={() => setMobileSidebarOpen(false)}
+          role="presentation"
+        >
+          <div
+            className="mt-auto flex max-h-[85vh] w-full flex-col rounded-t-3xl bg-white shadow-2xl dark:bg-zinc-900 dark:text-zinc-100"
+            onClick={(event) => event.stopPropagation()}
+            style={{ paddingBottom: 'env(safe-area-inset-bottom, 20px)' }}
+          >
+            <div className="relative flex-none px-6 pt-5 pb-2">
+              <div className="flex items-center justify-between">
+                <h2 className="text-lg font-bold text-zinc-900 dark:text-zinc-100 sr-only">
+                  {t('stationsFound')}
+                </h2>
+                <button
+                  type="button"
+                  onClick={() => setMobileSidebarOpen(false)}
+                  className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-zinc-100 text-zinc-600 transition hover:bg-zinc-200 dark:bg-zinc-800 dark:text-zinc-300 dark:hover:bg-zinc-700"
+                  aria-label="Hide sidebar"
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    className="h-5 w-5"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div className="flex-1 overflow-y-auto px-4 pb-4">
+              <FoundSummary
+                className="mb-4 rounded-xl border border-zinc-100 bg-white p-3 shadow-sm dark:border-[#18181b] dark:bg-zinc-800/80"
+                foundProportion={foundProportion}
+                foundStationsPerLine={foundStationsPerLine}
+                stationsPerLine={stationsPerLine}
+                cityCompletionConfettiSeen={cityCompletionConfettiSeen}
+                onCityCompletionConfettiSeen={markCityCompletionConfettiSeen}
+                highlightedLineId={highlightedLineId}
+                iconBasePath={cityPath}
+              />
+              {relatedVersionsPanel ? (
+                <div className="mb-4">
+                  <MiniCityLinksPanel
+                    title={relatedVersionsPanel.title}
+                    description={relatedVersionsPanel.description}
+                    items={relatedVersionsPanel.items}
+                    currentSlug={relatedVersionsPanel.currentSlug}
+                    onOpenCustomModal={() => setCustomModalOpen(true)}
+                  />
+                </div>
+              ) : null}
+              <FoundList
+                found={found}
+                idMap={idMap}
+                setHoveredId={setHoveredId}
+                hoveredId={hoveredId}
+                hideLabels={hideLabels}
+                foundTimestamps={foundTimestamps}
+                zoomToFeature={zoomToFeature}
+                onStationFocus={setActiveFoundId}
+                activeStationId={activeFoundId}
+                disabled={solutionsPromptOpen}
+                iconBasePath={cityPath}
+              />
+            </div>
+          </div>
+        </div>
+      )}
+      <IntroModal
+        inputRef={inputRef}
+        open={isNewPlayer}
+        setOpen={setIsNewPlayer}
+      >
+        {repairMojibakeString(t('introInstruction'))} {RETURN_SYMBOL}
+      </IntroModal>
+      {settingsModalOpen && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-zinc-900/60 backdrop-blur-sm"
+          onClick={closeSettingsModal}
+        >
+          <div
+            className="mx-4 w-full max-w-3xl rounded-3xl border border-zinc-200 bg-white p-6 shadow-2xl dark:border-[#18181b] dark:bg-zinc-900"
+            onClick={(event) => event.stopPropagation()}
+          >
+            <div className="flex items-center justify-between">
+              <h2 className="text-2xl font-semibold text-zinc-900 dark:text-zinc-50">
+                {t('settings')}
+              </h2>
+              <button
+                type="button"
+                onClick={closeSettingsModal}
+                className="rounded-full border border-zinc-300 px-3 py-1 text-sm font-semibold text-zinc-700 hover:bg-zinc-100 focus:outline-none focus:ring-2 focus:ring-[var(--accent-ring)] dark:border-[#18181b] dark:text-zinc-100 dark:hover:bg-zinc-800"
+              >
+                Close
+              </button>
+            </div>
+            <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">
+              Changes here are synced with the main site settings.
+            </p>
+            <SettingsPanel className="mt-4" showHeading={false} />
+            <div className="mt-6 flex flex-wrap justify-end gap-3">
+              <Link
+                href="/metro-memory?tab=settings"
+                className="inline-flex items-center justify-center rounded-full border border-zinc-300 px-4 py-2 text-sm font-semibold text-zinc-700 transition hover:bg-zinc-100 focus:outline-none focus:ring-2 focus:ring-[var(--accent-ring)] dark:border-[#18181b] dark:text-zinc-100 dark:hover:bg-zinc-800"
+              >
+                Open main page settings
+              </Link>
+              <button
+                type="button"
+                onClick={closeSettingsModal}
+                className="inline-flex items-center justify-center rounded-full bg-[var(--accent-600)] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[var(--accent-500)] focus:outline-none focus:ring-2 focus:ring-[var(--accent-ring)] dark:bg-[var(--accent-600)] dark:hover:bg-[var(--accent-500)]"
+              >
+                Done
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+      {accountModalOpen && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-zinc-900/60 backdrop-blur-sm"
+          onClick={closeAccountModal}
+        >
+          <div
+            className="mx-4 w-full max-w-3xl rounded-3xl border border-zinc-200 bg-white p-6 shadow-2xl dark:border-[#18181b] dark:bg-zinc-900"
+            onClick={(event) => event.stopPropagation()}
+          >
+            <div className="flex items-center justify-between">
+              <h2 className="text-2xl font-semibold text-zinc-900 dark:text-zinc-50">
+                {t('account')}
+              </h2>
+              <button
+                type="button"
+                onClick={closeAccountModal}
+                className="rounded-full border border-zinc-300 px-3 py-1 text-sm font-semibold text-zinc-700 hover:bg-zinc-100 focus:outline-none focus:ring-2 focus:ring-[var(--accent-ring)] dark:border-[#18181b] dark:text-zinc-100 dark:hover:bg-zinc-800"
+              >
+                Close
+              </button>
+            </div>
+            <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">
+              Manage your Metro Memory account without leaving the map.
+            </p>
+            <div className="mt-4 max-h-[70vh] overflow-y-auto">
+              <AccountDashboard showHeading={false} />
+            </div>
+          </div>
+        </div>
+      )}
+      {privacyModalOpen && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-zinc-900/60 backdrop-blur-sm"
+          onClick={closePrivacyModal}
+        >
+          <div
+            className="mx-4 w-full max-w-3xl rounded-3xl border border-zinc-200 bg-white p-6 shadow-2xl dark:border-[#18181b] dark:bg-zinc-900"
+            onClick={(event) => event.stopPropagation()}
+          >
+            <div className="flex items-center justify-between">
+              <h2 className="text-2xl font-semibold text-zinc-900 dark:text-zinc-50">
+                {t('privacy')}
+              </h2>
+              <button
+                type="button"
+                onClick={closePrivacyModal}
+                className="rounded-full border border-zinc-300 px-3 py-1 text-sm font-semibold text-zinc-700 hover:bg-zinc-100 focus:outline-none focus:ring-2 focus:ring-[var(--accent-ring)] dark:border-[#18181b] dark:text-zinc-100 dark:hover:bg-zinc-800"
+              >
+                Close
+              </button>
+            </div>
+            <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">
+              Review privacy details right from the game.
+            </p>
+            <div className="mt-4 max-h-[70vh] overflow-y-auto">
+              <PrivacyPanel />
+            </div>
+          </div>
+        </div>
+      )}
+      <CityStatsPanel
+        cityDisplayName={cityDisplayName}
+        slug={CITY_NAME}
+        cityPath={cityPath}
+        open={cityStatsOpen}
+        onClose={() => setCityStatsOpen(false)}
+      />
+      <MissedGuessInputsModal
+        city={CITY_NAME}
+        open={missedGuessInputsOpen}
+        accessPassword={solutionsAccessPassword}
+        onClose={() => setMissedGuessInputsOpen(false)}
+      />
+      {achievementToast && (
+        <AchievementToast
+          open
+          slug={achievementToast.slug}
+          cityName={achievementToast.cityName}
+          title={achievementToast.title}
+          description={achievementToast.description}
+          durationMs={Math.max(3000, (settings.achievementToastDurationSec || 15) * 1000)}
+          onClose={handleAchievementToastClose}
+          onDontShowAgain={() => handleAchievementToastNever(achievementToast.slug)}
+        />
+      )}
+      {resetConfirmOpen && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-zinc-950/60 p-4 backdrop-blur-lg"
+          onClick={handleResetCancel}
+        >
+          <div
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="reset-progress-title"
+            className="relative w-full max-w-[26rem] overflow-hidden rounded-3xl border border-white/15 bg-white/90 shadow-[0_25px_60px_-12px_rgba(0,0,0,0.35)] backdrop-blur-xl dark:border-white/10 dark:bg-zinc-900/90"
+            onClick={(event) => event.stopPropagation()}
+            style={{ animation: 'resetDialogIn 0.25s cubic-bezier(0.16,1,0.3,1)' }}
+          >
+            {/* Animated gradient accent stripe */}
+            <div
+              className="h-1 w-full"
+              style={{
+                background: 'linear-gradient(90deg, #ef4444, #f97316, #eab308, #ef4444)',
+                backgroundSize: '200% 100%',
+                animation: 'resetGradientShift 3s linear infinite',
+              }}
+            />
+
+            <div className="relative px-7 pb-7 pt-6">
+              {/* Icon with soft glow */}
+              <div className="mb-5 flex justify-center">
+                <div className="relative flex h-14 w-14 items-center justify-center rounded-full bg-red-100 text-red-500 dark:bg-red-500/15 dark:text-red-400">
+                  <div className="absolute inset-0 rounded-full bg-red-400/20 blur-lg dark:bg-red-500/20" />
+                  <svg viewBox="0 0 24 24" aria-hidden="true" className="relative h-7 w-7">
+                    <path
+                      d="M12 9v4m0 4h.01M10.29 3.86l-7.4 12.82A2 2 0 0 0 4.6 20h14.8a2 2 0 0 0 1.72-3.32l-7.4-12.82a2 2 0 0 0-3.46 0Z"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="1.8"
+                    />
+                  </svg>
+                </div>
+              </div>
+
+              {/* Content — centered */}
+              <div className="space-y-2 text-center">
+                <p className="text-[11px] font-bold uppercase tracking-[0.25em] text-red-500/80 dark:text-red-400/80">
+                  {t('resetProgress')}
+                </p>
+                <h2
+                  id="reset-progress-title"
+                  className="text-[22px] font-bold tracking-tight text-zinc-900 dark:text-white"
+                >
+                  {t('startOver')}?
+                </h2>
+                <p className="mx-auto max-w-[18rem] text-[13px] leading-relaxed text-zinc-500 dark:text-zinc-400">
+                  {t('restartWarning')}
+                </p>
+              </div>
+
+              {/* Divider */}
+              <div className="my-5 h-px bg-zinc-200/80 dark:bg-zinc-700/50" />
+
+              {/* Actions — Start over on the LEFT */}
+              <div className="flex flex-col-reverse gap-2.5 sm:flex-row sm:justify-center">
+                <button
+                  type="button"
+                  onClick={handleResetConfirm}
+                  className="inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-red-600 to-orange-500 px-5 py-2.5 text-sm font-semibold text-white shadow-md shadow-red-500/20 transition-all hover:shadow-lg hover:shadow-red-500/30 hover:brightness-110 focus:outline-none focus:ring-2 focus:ring-red-400/50 focus:ring-offset-2 focus:ring-offset-white active:scale-[0.97] dark:focus:ring-offset-zinc-900"
+                >
+                  {t('startOver')}
+                </button>
+                <button
+                  type="button"
+                  autoFocus
+                  onClick={handleResetCancel}
+                  className="inline-flex items-center justify-center rounded-xl border border-zinc-200 bg-zinc-50 px-5 py-2.5 text-sm font-medium text-zinc-600 transition-all hover:border-zinc-300 hover:bg-zinc-100 hover:text-zinc-800 focus:outline-none focus:ring-2 focus:ring-zinc-400/40 focus:ring-offset-2 focus:ring-offset-white active:scale-[0.97] dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-300 dark:hover:border-zinc-600 dark:hover:bg-zinc-700 dark:hover:text-zinc-100 dark:focus:ring-offset-zinc-900"
+                >
+                  {t('backToTheGame')}
+                </button>
+              </div>
+            </div>
+          </div>
+
+          {/* Keyframe animations */}
+          <style>{`
+            @keyframes resetDialogIn {
+              from { opacity: 0; transform: scale(0.92) translateY(12px); }
+              to { opacity: 1; transform: scale(1) translateY(0); }
+            }
+            @keyframes resetGradientShift {
+              0% { background-position: 0% 0; }
+              100% { background-position: 200% 0; }
+            }
+          `}</style>
+        </div>
+      )}
+      {solutionsPromptOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-zinc-900/60 backdrop-blur-sm">
+          <div
+            role="dialog"
+            aria-modal="true"
+            className="w-full max-w-sm rounded-2xl bg-white p-6 shadow-xl dark:bg-zinc-900 dark:text-zinc-100"
+          >
+            <h2 className="text-lg font-semibold text-zinc-900 dark:text-zinc-100">
+              {actionType === 'satellite'
+                ? 'Show satellite'
+                : actionType === 'mapNames'
+                  ? 'Show map names'
+                  : t('showSolutions')}
+            </h2>
+            <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-300">
+              {actionType === 'satellite'
+                ? 'Enter the password to view the satellite map.'
+                : actionType === 'mapNames'
+                  ? rankedMode
+                    ? 'Enter the password to see map labels. This will disqualify the current ranked run.'
+                    : 'Enter the password to see map labels.'
+                  : rankedMode
+                    ? 'Enter the password to reveal every station. This will disqualify the current ranked run.'
+                    : 'Enter the password to reveal every station.'}
+            </p>
+            <form className="mt-4 space-y-4" onSubmit={handleSolutionsSubmit}>
+              <input
+                type="password"
+                autoFocus
+                value={solutionsPassword}
+                onChange={handleSolutionsPasswordChange}
+                className="w-full rounded-lg border border-zinc-300 px-4 py-2 text-base text-zinc-900 focus:border-zinc-900 focus:outline-none focus:ring-2 focus:ring-zinc-900/20 dark:border-[#18181b] dark:bg-zinc-900 dark:text-zinc-100 dark:focus:border-[var(--accent-400)] dark:focus:ring-[var(--accent-ring)]"
+                placeholder="Password"
+                autoComplete="off"
+              />
+              {solutionsError && (
+                <p className="text-sm font-medium text-red-600">
+                  Incorrect password. Try again.
+                </p>
+              )}
+              <div className="flex justify-end gap-2">
+                <button
+                  type="button"
+                  onClick={handleSolutionsClose}
+                  className="rounded-full border border-zinc-300 px-4 py-2 text-sm font-medium text-zinc-700 hover:bg-zinc-100 focus:outline-none focus:ring-2 focus:ring-zinc-500/40 dark:border-[#18181b] dark:bg-zinc-900 dark:text-zinc-100 dark:hover:bg-zinc-800"
+                >
+                  {t('backToTheGame')}
+                </button>
+                <button
+                  type="submit"
+                  className="rounded-full bg-zinc-900 px-4 py-2 text-sm font-semibold text-white shadow hover:bg-zinc-800 focus:outline-none focus:ring-2 focus:ring-zinc-500/40 dark:bg-[var(--accent-600)] dark:hover:bg-[var(--accent-500)]"
+                >
+                  Unlock
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      )}
+      {customModalOpen && (
+        <CustomGameModal
+          isOpen={customModalOpen}
+          onCloseAction={() => setCustomModalOpen(false)}
+          parentSlug={miniCityLinks?.mode === 'parent' ? CITY_NAME : (miniCityLinks?.parent?.parentSlug ?? CITY_NAME)}
+          iconBasePath={cityPath}
+        />
+      )}
+    </div>
+  )
+}

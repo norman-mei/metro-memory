@@ -1,0 +1,177 @@
+{
+  "city": "changchun",
+  "continent": "asia",
+  "bbox": [
+    43.749932,
+    125.1610619,
+    44.0092201,
+    125.550358
+  ],
+  "localLanguages": [
+    "zh"
+  ],
+  "modes": [
+    "subway",
+    "light_rail",
+    "tram",
+    "rail",
+    "funicular",
+    "monorail",
+    "cable_car",
+    "gondola",
+    "chair_lift"
+  ],
+  "lines": [
+    {
+      "id": "changchun1",
+      "name": "Line 1",
+      "keywords": [
+        "Line 1",
+        "1 Line",
+        "L1",
+        "1号线",
+        "地铁1号线",
+        "1号線",
+        "1호선",
+        "Route 1",
+        "Tram Route 1",
+        "changchun1"
+      ],
+      "order": 1,
+      "icon": "asia/china/changchun/changchun1.png"
+    },
+    {
+      "id": "changchun2",
+      "name": "Line 2",
+      "keywords": [
+        "Line 2",
+        "2 Line",
+        "L2",
+        "2号线",
+        "地铁2号线",
+        "2号線",
+        "2호선",
+        "Route 2",
+        "Tram Route 2",
+        "changchun2"
+      ],
+      "order": 2,
+      "icon": "asia/china/changchun/changchun2.png"
+    },
+    {
+      "id": "changchun3",
+      "name": "Line 3",
+      "keywords": [
+        "Line 3",
+        "3 Line",
+        "L3",
+        "3号线",
+        "地铁3号线",
+        "3号線",
+        "3호선",
+        "Route 3",
+        "Tram Route 3",
+        "changchun3"
+      ],
+      "order": 3,
+      "icon": "asia/china/changchun/changchun3.png"
+    },
+    {
+      "id": "changchun4",
+      "name": "Line 4",
+      "keywords": [
+        "Line 4",
+        "4 Line",
+        "L4",
+        "4号线",
+        "地铁4号线",
+        "4号線",
+        "4호선",
+        "Route 4",
+        "Tram Route 4",
+        "changchun4"
+      ],
+      "order": 4,
+      "icon": "asia/china/changchun/changchun4.png"
+    },
+    {
+      "id": "changchun6",
+      "name": "Line 6",
+      "keywords": [
+        "Line 6",
+        "6 Line",
+        "L6",
+        "6号线",
+        "地铁6号线",
+        "6号線",
+        "6호선",
+        "Route 6",
+        "Tram Route 6",
+        "changchun6"
+      ],
+      "order": 5,
+      "icon": "asia/china/changchun/changchun6.png"
+    },
+    {
+      "id": "changchun8",
+      "name": "Line 8",
+      "keywords": [
+        "Line 8",
+        "8 Line",
+        "L8",
+        "8号线",
+        "地铁8号线",
+        "8号線",
+        "8호선",
+        "Route 8",
+        "Tram Route 8",
+        "changchun8"
+      ],
+      "order": 6,
+      "icon": "asia/china/changchun/changchun8.png"
+    },
+    {
+      "id": "changchun54",
+      "name": "Tram Line 54",
+      "keywords": [
+        "Tram Line 54",
+        "54",
+        "Line 54",
+        "54 Line",
+        "L54",
+        "54号线",
+        "地铁54号线",
+        "54号線",
+        "54호선",
+        "Route 54",
+        "Tram Route 54",
+        "changchun54"
+      ],
+      "order": 7,
+      "icon": "asia/china/changchun/changchun54.png"
+    },
+    {
+      "id": "changchun55",
+      "name": "Tram Line 55",
+      "keywords": [
+        "Tram Line 55",
+        "55",
+        "Line 55",
+        "55 Line",
+        "L55",
+        "55号线",
+        "地铁55号线",
+        "55号線",
+        "55호선",
+        "Route 55",
+        "Tram Route 55",
+        "changchun55"
+      ],
+      "order": 8,
+      "icon": "asia/china/changchun/changchun55.png"
+    }
+  ],
+  "stationAliases": {},
+  "stationLocalNames": {},
+  "manualCoords": {}
+}

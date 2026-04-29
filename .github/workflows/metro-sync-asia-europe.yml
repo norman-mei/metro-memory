@@ -1,0 +1,77 @@
+name: Metro Sync (Asia + Europe)
+
+on:
+  schedule:
+    - cron: '0 9 1 * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  metro-sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Apply Prisma migrations
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+        run: npx prisma migrate deploy
+
+      - name: Run metro sync
+        env:
+          METRO_SYNC_SCOPE: asia-europe
+          METRO_SYNC_APPLY: '0'
+          METRO_SYNC_AUTO_APPLY_GREEN: '1'
+          METRO_SYNC_DEEP_RESEARCH_MODE: batch
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          GITHUB_TOKEN: ${{ github.token }}
+          AUTOMATION_GITHUB_REPO: ${{ github.repository }}
+          SERPAPI_API_KEY: ${{ secrets.SERPAPI_API_KEY }}
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASS: ${{ secrets.SMTP_PASS }}
+          SMTP_TO: ${{ secrets.SMTP_TO }}
+          SMTP_FROM: ${{ secrets.SMTP_FROM }}
+        run: node scripts/run-ts.js scripts/metro-sync/run.ts
+
+  follow-up-research:
+    needs: metro-sync
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Apply Prisma migrations
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+        run: npx prisma migrate deploy
+
+      - name: Drain follow-up research queue
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          GITHUB_TOKEN: ${{ github.token }}
+          AUTOMATION_GITHUB_REPO: ${{ github.repository }}
+          METRO_SYNC_AUTO_APPLY_GREEN: '1'
+          SERPAPI_API_KEY: ${{ secrets.SERPAPI_API_KEY }}
+        run: npm run metro-sync:research-loop -- --max-rounds=8 --limit=8

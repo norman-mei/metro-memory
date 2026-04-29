@@ -1,0 +1,300 @@
+{
+  "city": "stockholm",
+  "continent": "europe",
+  "bbox": [
+    59.235453,
+    17.814916,
+    59.413848,
+    18.135025
+  ],
+  "localLanguages": [
+    "sv"
+  ],
+  "modes": [
+    "subway",
+    "light_rail",
+    "tram",
+    "rail",
+    "funicular",
+    "monorail",
+    "cable_car",
+    "gondola",
+    "chair_lift"
+  ],
+  "lines": [
+    {
+      "id": "Tunnelbana10",
+      "name": "T10",
+      "keywords": [
+        "T10",
+        "Tunnelbana10"
+      ],
+      "order": 0,
+      "icon": "europe/sweden/stockholm/Tunnelbana10.svg"
+    },
+    {
+      "id": "Tunnelbana11",
+      "name": "T11",
+      "keywords": [
+        "T11",
+        "Tunnelbana11"
+      ],
+      "order": 1,
+      "icon": "europe/sweden/stockholm/Tunnelbana11.svg"
+    },
+    {
+      "id": "Tunnelbana13",
+      "name": "T13",
+      "keywords": [
+        "T13",
+        "Tunnelbana13"
+      ],
+      "order": 2,
+      "icon": "europe/sweden/stockholm/Tunnelbana13.svg"
+    },
+    {
+      "id": "Tunnelbana14",
+      "name": "T14",
+      "keywords": [
+        "T14",
+        "Tunnelbana14"
+      ],
+      "order": 3,
+      "icon": "europe/sweden/stockholm/Tunnelbana14.svg"
+    },
+    {
+      "id": "Tunnelbana17",
+      "name": "T17",
+      "keywords": [
+        "T17",
+        "Tunnelbana17"
+      ],
+      "order": 4,
+      "icon": "europe/sweden/stockholm/Tunnelbana17.svg"
+    },
+    {
+      "id": "Tunnelbana18",
+      "name": "T18",
+      "keywords": [
+        "T18",
+        "Tunnelbana18"
+      ],
+      "order": 5,
+      "icon": "europe/sweden/stockholm/Tunnelbana18.svg"
+    },
+    {
+      "id": "Tunnelbana19",
+      "name": "T19",
+      "keywords": [
+        "T19",
+        "Tunnelbana19"
+      ],
+      "order": 6,
+      "icon": "europe/sweden/stockholm/Tunnelbana19.svg"
+    },
+    {
+      "id": "Lokalbana30",
+      "name": "30",
+      "keywords": [
+        "30",
+        "Line 30",
+        "30 Line",
+        "L30",
+        "30号线",
+        "地铁30号线",
+        "30号線",
+        "30호선",
+        "Route 30",
+        "Tram Route 30",
+        "Lokalbana30"
+      ],
+      "order": 7
+    },
+    {
+      "id": "Lokalbana31",
+      "name": "31",
+      "keywords": [
+        "31",
+        "Line 31",
+        "31 Line",
+        "L31",
+        "31号线",
+        "地铁31号线",
+        "31号線",
+        "31호선",
+        "Route 31",
+        "Tram Route 31",
+        "Lokalbana31"
+      ],
+      "order": 8
+    },
+    {
+      "id": "LokalbanaL12",
+      "name": "L12",
+      "keywords": [
+        "L12",
+        "Lokalbana L12"
+      ],
+      "order": 9
+    },
+    {
+      "id": "LokalbanaL21",
+      "name": "L21",
+      "keywords": [
+        "L21",
+        "Lokalbana L21"
+      ],
+      "order": 10
+    },
+    {
+      "id": "LokalbanaL27",
+      "name": "L27",
+      "keywords": [
+        "L27",
+        "Lokalbana L27"
+      ],
+      "order": 11
+    },
+    {
+      "id": "LokalbanaL28",
+      "name": "L28",
+      "keywords": [
+        "L28",
+        "Lokalbana L28"
+      ],
+      "order": 12
+    },
+    {
+      "id": "LokalbanaL29",
+      "name": "L29",
+      "keywords": [
+        "L29",
+        "Lokalbana L29"
+      ],
+      "order": 13
+    },
+    {
+      "id": "Pendeltag40",
+      "name": "40",
+      "keywords": [
+        "40",
+        "Line 40",
+        "40 Line",
+        "L40",
+        "40号线",
+        "地铁40号线",
+        "40号線",
+        "40호선",
+        "Route 40",
+        "Tram Route 40",
+        "Pendeltag40"
+      ],
+      "order": 14
+    },
+    {
+      "id": "Pendeltag41",
+      "name": "41",
+      "keywords": [
+        "41",
+        "Line 41",
+        "41 Line",
+        "L41",
+        "41号线",
+        "地铁41号线",
+        "41号線",
+        "41호선",
+        "Route 41",
+        "Tram Route 41",
+        "Pendeltag41"
+      ],
+      "order": 15
+    },
+    {
+      "id": "Pendeltag42X",
+      "name": "42X",
+      "keywords": [
+        "42 X",
+        "Line 42",
+        "42 Line",
+        "L42",
+        "42号线",
+        "地铁42号线",
+        "42号線",
+        "42호선",
+        "Route 42",
+        "Tram Route 42",
+        "Line X",
+        "X Line",
+        "Route X",
+        "42",
+        "Line X Line",
+        "Route X Line",
+        "Pendeltag42 X"
+      ],
+      "order": 16
+    },
+    {
+      "id": "Pendeltag43",
+      "name": "43",
+      "keywords": [
+        "43",
+        "Line 43",
+        "43 Line",
+        "L43",
+        "43号线",
+        "地铁43号线",
+        "43号線",
+        "43호선",
+        "Route 43",
+        "Tram Route 43",
+        "Pendeltag43"
+      ],
+      "order": 17
+    },
+    {
+      "id": "Pendeltag43X",
+      "name": "43X",
+      "keywords": [
+        "43 X",
+        "Line 43",
+        "43 Line",
+        "L43",
+        "43号线",
+        "地铁43号线",
+        "43号線",
+        "43호선",
+        "Route 43",
+        "Tram Route 43",
+        "Line X",
+        "X Line",
+        "Route X",
+        "43",
+        "Line X Line",
+        "Route X Line",
+        "Pendeltag43 X"
+      ],
+      "order": 18
+    },
+    {
+      "id": "Pendeltag48",
+      "name": "48",
+      "keywords": [
+        "48",
+        "Line 48",
+        "48 Line",
+        "L48",
+        "48号线",
+        "地铁48号线",
+        "48号線",
+        "48호선",
+        "Route 48",
+        "Tram Route 48",
+        "Pendeltag48"
+      ],
+      "order": 19
+    }
+  ],
+  "stationAliases": {},
+  "stationLocalNames": {},
+  "manualCoords": {}
+}

@@ -1,0 +1,10 @@
+{
+  "RD": {
+    "name": "Red Line",
+    "color": "#FF0000",
+    "backgroundColor": "#FF0000",
+    "textColor": "#FFFFFF",
+    "order": 0,
+    "icon": "north-america/usa/austin/AustinRed.png"
+  }
+}

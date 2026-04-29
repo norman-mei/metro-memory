@@ -1,0 +1,90 @@
+{
+  "city": "phoenix",
+  "continent": "north america",
+  "bbox": [
+    33.3779368,
+    -112.1199655,
+    33.575182,
+    -111.7885636
+  ],
+  "localLanguages": [
+    "en"
+  ],
+  "modes": [
+    "subway",
+    "light_rail",
+    "tram",
+    "rail",
+    "funicular",
+    "monorail",
+    "cable_car",
+    "gondola",
+    "chair_lift"
+  ],
+  "lines": [
+    {
+      "id": "ValleyMetroA",
+      "name": "A Line",
+      "keywords": [
+        "A Line",
+        "Line A",
+        "Route A",
+        "Line A Line",
+        "Route A Line",
+        "Valley Metro A",
+        "Valley A",
+        "Valley A Line"
+      ],
+      "order": 0,
+      "icon": "north-america/usa/phoenix/ValleyMetroA.svg"
+    },
+    {
+      "id": "ValleyMetroB",
+      "name": "B Line",
+      "keywords": [
+        "B Line",
+        "Line B",
+        "Route B",
+        "Line B Line",
+        "Route B Line",
+        "Valley Metro B",
+        "Valley B",
+        "Valley B Line"
+      ],
+      "order": 1,
+      "icon": "north-america/usa/phoenix/ValleyMetroB.svg"
+    },
+    {
+      "id": "ValleyMetroS",
+      "name": "S Line Streetcar",
+      "keywords": [
+        "S Line Streetcar",
+        "S Streetcar",
+        "Line S",
+        "S Line",
+        "Route S",
+        "Line S Line",
+        "Route S Line",
+        "Valley Metro S",
+        "Valley S",
+        "Valley S Line"
+      ],
+      "order": 2,
+      "icon": "north-america/usa/phoenix/ValleyMetroS.svg"
+    },
+    {
+      "id": "PHXSKY",
+      "name": "PHX SkyTrain",
+      "keywords": [
+        "PHX Sky Train",
+        "PHXSKY",
+        "PHXSKY Line"
+      ],
+      "order": 3,
+      "icon": "north-america/usa/phoenix/PHXSKY.png"
+    }
+  ],
+  "stationAliases": {},
+  "stationLocalNames": {},
+  "manualCoords": {}
+}

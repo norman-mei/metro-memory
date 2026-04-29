@@ -1,0 +1,51 @@
+{
+  "city": "okc",
+  "continent": "north america",
+  "bbox": [
+    35.462399,
+    -97.5227141,
+    35.4802214,
+    -97.5060616
+  ],
+  "localLanguages": [
+    "en"
+  ],
+  "modes": [
+    "subway",
+    "light_rail",
+    "tram",
+    "rail",
+    "funicular",
+    "monorail",
+    "cable_car",
+    "gondola",
+    "chair_lift"
+  ],
+  "lines": [
+    {
+      "id": "OKCSDL",
+      "name": "Downtown Loop (DL)",
+      "keywords": [
+        "Downtown Loop DL",
+        "OKCSDL",
+        "OKCSDL Line"
+      ],
+      "order": 0,
+      "icon": "north-america/usa/okc/OKCSDL.png"
+    },
+    {
+      "id": "OKCSBL",
+      "name": "Bricktown Loop (BL)",
+      "keywords": [
+        "Bricktown Loop BL",
+        "OKCSBL",
+        "OKCSBL Line"
+      ],
+      "order": 1,
+      "icon": "north-america/usa/okc/OKCSBL.png"
+    }
+  ],
+  "stationAliases": {},
+  "stationLocalNames": {},
+  "manualCoords": {}
+}

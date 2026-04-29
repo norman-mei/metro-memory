@@ -1,0 +1,497 @@
+{
+  "city": "toronto-waterloo",
+  "continent": "north america",
+  "bbox": [
+    43.2686308,
+    -80.6023484,
+    44.3733799,
+    -79.1021918
+  ],
+  "localLanguages": [
+    "en",
+    "fr"
+  ],
+  "modes": [
+    "subway",
+    "light_rail",
+    "tram",
+    "rail",
+    "funicular",
+    "monorail",
+    "cable_car",
+    "gondola",
+    "chair_lift"
+  ],
+  "lines": [
+    {
+      "id": "TTC1",
+      "name": "Line 1 (Yonge-University)",
+      "keywords": [
+        "Line 1 Yonge-University",
+        "1 Yonge-University",
+        "Line 1",
+        "1 Line",
+        "L1",
+        "1号线",
+        "地铁1号线",
+        "1号線",
+        "1호선",
+        "Route 1",
+        "Tram Route 1",
+        "TTC1"
+      ],
+      "order": 0,
+      "icon": "north-america/canada/toronto-waterloo/TTCLine1.svg"
+    },
+    {
+      "id": "TTC2",
+      "name": "Line 2 (Bloor-Danforth)",
+      "keywords": [
+        "Line 2 Bloor-Danforth",
+        "2 Bloor-Danforth",
+        "Line 2",
+        "2 Line",
+        "L2",
+        "2号线",
+        "地铁2号线",
+        "2号線",
+        "2호선",
+        "Route 2",
+        "Tram Route 2",
+        "TTC2"
+      ],
+      "order": 1,
+      "icon": "north-america/canada/toronto-waterloo/TTCLine2.svg"
+    },
+    {
+      "id": "TTC3",
+      "name": "Line 3 (Ontario)",
+      "keywords": [
+        "Line 3 Ontario",
+        "3 Ontario",
+        "Line 3",
+        "3 Line",
+        "L3",
+        "3号线",
+        "地铁3号线",
+        "3号線",
+        "3호선",
+        "Route 3",
+        "Tram Route 3",
+        "TTC3"
+      ],
+      "order": 2,
+      "icon": "north-america/canada/toronto-waterloo/TTCLine3.svg"
+    },
+    {
+      "id": "TTC4",
+      "name": "Line 4 (Sheppard)",
+      "keywords": [
+        "Line 4 Sheppard",
+        "4 Sheppard",
+        "Line 4",
+        "4 Line",
+        "L4",
+        "4号线",
+        "地铁4号线",
+        "4号線",
+        "4호선",
+        "Route 4",
+        "Tram Route 4",
+        "TTC4"
+      ],
+      "order": 3,
+      "icon": "north-america/canada/toronto-waterloo/TTCLine4.svg"
+    },
+    {
+      "id": "TTC5",
+      "name": "Line 5 (Eglinton)",
+      "keywords": [
+        "Line 5 Eglinton",
+        "5 Eglinton",
+        "Line 5",
+        "5 Line",
+        "L5",
+        "5号线",
+        "地铁5号线",
+        "5号線",
+        "5호선",
+        "Route 5",
+        "Tram Route 5",
+        "TTC5"
+      ],
+      "order": 4,
+      "icon": "north-america/canada/toronto-waterloo/TTCLine5.svg"
+    },
+    {
+      "id": "TTC6",
+      "name": "Line 6 (Finch West)",
+      "keywords": [
+        "Line 6 Finch West",
+        "6 Finch West",
+        "Line 6",
+        "6 Line",
+        "L6",
+        "6号线",
+        "地铁6号线",
+        "6号線",
+        "6호선",
+        "Route 6",
+        "Tram Route 6",
+        "TTC6"
+      ],
+      "order": 5,
+      "icon": "north-america/canada/toronto-waterloo/TTCLine6.svg"
+    },
+    {
+      "id": "TTC501",
+      "name": "501",
+      "keywords": [
+        "501",
+        "Line 501",
+        "501 Line",
+        "L501",
+        "501号线",
+        "地铁501号线",
+        "501号線",
+        "501호선",
+        "Route 501",
+        "Tram Route 501",
+        "TTC501"
+      ],
+      "order": 6,
+      "icon": "north-america/canada/toronto-waterloo/TTC501.png"
+    },
+    {
+      "id": "TTC503",
+      "name": "503",
+      "keywords": [
+        "503",
+        "Line 503",
+        "503 Line",
+        "L503",
+        "503号线",
+        "地铁503号线",
+        "503号線",
+        "503호선",
+        "Route 503",
+        "Tram Route 503",
+        "TTC503"
+      ],
+      "order": 7,
+      "icon": "north-america/canada/toronto-waterloo/TTC503.png"
+    },
+    {
+      "id": "TTC504",
+      "name": "504",
+      "keywords": [
+        "504",
+        "Line 504",
+        "504 Line",
+        "L504",
+        "504号线",
+        "地铁504号线",
+        "504号線",
+        "504호선",
+        "Route 504",
+        "Tram Route 504",
+        "TTC504"
+      ],
+      "order": 8,
+      "icon": "north-america/canada/toronto-waterloo/TTC504.png"
+    },
+    {
+      "id": "TTC505",
+      "name": "505",
+      "keywords": [
+        "505",
+        "Line 505",
+        "505 Line",
+        "L505",
+        "505号线",
+        "地铁505号线",
+        "505号線",
+        "505호선",
+        "Route 505",
+        "Tram Route 505",
+        "TTC505"
+      ],
+      "order": 9,
+      "icon": "north-america/canada/toronto-waterloo/TTC505.png"
+    },
+    {
+      "id": "TTC506",
+      "name": "506",
+      "keywords": [
+        "506",
+        "Line 506",
+        "506 Line",
+        "L506",
+        "506号线",
+        "地铁506号线",
+        "506号線",
+        "506호선",
+        "Route 506",
+        "Tram Route 506",
+        "TTC506"
+      ],
+      "order": 10,
+      "icon": "north-america/canada/toronto-waterloo/TTC506.png"
+    },
+    {
+      "id": "TTC507",
+      "name": "507",
+      "keywords": [
+        "507",
+        "Line 507",
+        "507 Line",
+        "L507",
+        "507号线",
+        "地铁507号线",
+        "507号線",
+        "507호선",
+        "Route 507",
+        "Tram Route 507",
+        "TTC507"
+      ],
+      "order": 11,
+      "icon": "north-america/canada/toronto-waterloo/TTC507.png"
+    },
+    {
+      "id": "TTC508",
+      "name": "508",
+      "keywords": [
+        "508",
+        "Line 508",
+        "508 Line",
+        "L508",
+        "508号线",
+        "地铁508号线",
+        "508号線",
+        "508호선",
+        "Route 508",
+        "Tram Route 508",
+        "TTC508"
+      ],
+      "order": 12,
+      "icon": "north-america/canada/toronto-waterloo/TTC508.png"
+    },
+    {
+      "id": "TTC509",
+      "name": "509",
+      "keywords": [
+        "509",
+        "Line 509",
+        "509 Line",
+        "L509",
+        "509号线",
+        "地铁509号线",
+        "509号線",
+        "509호선",
+        "Route 509",
+        "Tram Route 509",
+        "TTC509"
+      ],
+      "order": 13,
+      "icon": "north-america/canada/toronto-waterloo/TTC509.png"
+    },
+    {
+      "id": "TTC510",
+      "name": "510",
+      "keywords": [
+        "510",
+        "Line 510",
+        "510 Line",
+        "L510",
+        "510号线",
+        "地铁510号线",
+        "510号線",
+        "510호선",
+        "Route 510",
+        "Tram Route 510",
+        "TTC510"
+      ],
+      "order": 14,
+      "icon": "north-america/canada/toronto-waterloo/TTC510.png"
+    },
+    {
+      "id": "TTC511",
+      "name": "511",
+      "keywords": [
+        "511",
+        "Line 511",
+        "511 Line",
+        "L511",
+        "511号线",
+        "地铁511号线",
+        "511号線",
+        "511호선",
+        "Route 511",
+        "Tram Route 511",
+        "TTC511"
+      ],
+      "order": 15,
+      "icon": "north-america/canada/toronto-waterloo/TTC511.png"
+    },
+    {
+      "id": "TTC512",
+      "name": "512",
+      "keywords": [
+        "512",
+        "Line 512",
+        "512 Line",
+        "L512",
+        "512号线",
+        "地铁512号线",
+        "512号線",
+        "512호선",
+        "Route 512",
+        "Tram Route 512",
+        "TTC512"
+      ],
+      "order": 16,
+      "icon": "north-america/canada/toronto-waterloo/TTC512.png"
+    },
+    {
+      "id": "UPExpress",
+      "name": "Union Pearson Express",
+      "keywords": [
+        "Union Pearson Express",
+        "UP Express",
+        "Line P",
+        "P Line",
+        "Route P",
+        "Line P Line",
+        "Route P Line"
+      ],
+      "order": 20,
+      "icon": "north-america/canada/toronto-waterloo/UPExpress.png"
+    },
+    {
+      "id": "GOLW",
+      "name": "Lakeshore West",
+      "keywords": [
+        "Lakeshore West",
+        "GOLW",
+        "GOLW Line"
+      ],
+      "order": 21,
+      "icon": "north-america/canada/toronto-waterloo/GOLW.svg"
+    },
+    {
+      "id": "GOLE",
+      "name": "Lakeshore East",
+      "keywords": [
+        "Lakeshore East",
+        "GOLE",
+        "GOLE Line"
+      ],
+      "order": 22,
+      "icon": "north-america/canada/toronto-waterloo/GOLE.svg"
+    },
+    {
+      "id": "GOMI",
+      "name": "Milton",
+      "keywords": [
+        "Milton",
+        "Milton Line",
+        "GOMI",
+        "GOMI Line"
+      ],
+      "order": 23,
+      "icon": "north-america/canada/toronto-waterloo/GOMI.svg"
+    },
+    {
+      "id": "GOKI",
+      "name": "Kitchener",
+      "keywords": [
+        "Kitchener",
+        "Kitchener Line",
+        "GOKI",
+        "GOKI Line"
+      ],
+      "order": 24,
+      "icon": "north-america/canada/toronto-waterloo/GOKI.svg"
+    },
+    {
+      "id": "GOBR",
+      "name": "Barrie",
+      "keywords": [
+        "Barrie",
+        "Barrie Line",
+        "GOBR",
+        "GOBR Line"
+      ],
+      "order": 25,
+      "icon": "north-america/canada/toronto-waterloo/GOBR.svg"
+    },
+    {
+      "id": "GORH",
+      "name": "Richmond Hill",
+      "keywords": [
+        "Richmond Hill",
+        "GORH",
+        "GORH Line"
+      ],
+      "order": 26,
+      "icon": "north-america/canada/toronto-waterloo/GORH.svg"
+    },
+    {
+      "id": "GOST",
+      "name": "Stouffville",
+      "keywords": [
+        "Stouffville",
+        "Stouffville Line",
+        "GOST",
+        "GOST Line"
+      ],
+      "order": 27,
+      "icon": "north-america/canada/toronto-waterloo/GOST.svg"
+    },
+    {
+      "id": "Hazel",
+      "name": "Hazel McCallion Line",
+      "keywords": [
+        "Hazel Mc Callion Line",
+        "Hazel Mc Callion",
+        "Hazel",
+        "Hazel Line"
+      ],
+      "order": 28,
+      "icon": "north-america/canada/toronto-waterloo/HM.png"
+    },
+    {
+      "id": "TerminalLink",
+      "name": "Terminal Link",
+      "keywords": [
+        "Terminal Link"
+      ],
+      "order": 29,
+      "icon": "north-america/canada/toronto-waterloo/TL.png"
+    },
+    {
+      "id": "ION",
+      "name": "301 ION Light Rail",
+      "keywords": [
+        "301 ION Light Rail",
+        "Line 301",
+        "301 Line",
+        "L301",
+        "301号线",
+        "地铁301号线",
+        "301号線",
+        "301호선",
+        "Route 301",
+        "Tram Route 301",
+        "301",
+        "ION",
+        "ION Line"
+      ],
+      "order": 30,
+      "icon": "north-america/canada/toronto-waterloo/WaterlooION.png"
+    }
+  ],
+  "stationAliases": {},
+  "stationLocalNames": {},
+  "manualCoords": {}
+}

@@ -1,0 +1,481 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -106.4887283,
+          31.7612013
+        ]
+      },
+      "properties": {
+        "name": "San Jacinto",
+        "line": "Elpasodowntownloop",
+        "id": 0,
+        "alternate_names": []
+      },
+      "id": 0
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -106.4855598,
+          31.7600557
+        ]
+      },
+      "properties": {
+        "name": "City Hall",
+        "line": "Elpasodowntownloop",
+        "id": 1,
+        "alternate_names": []
+      },
+      "id": 1
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -106.4847466,
+          31.7582713
+        ]
+      },
+      "properties": {
+        "name": "Courthouse",
+        "line": "Elpasodowntownloop",
+        "id": 2,
+        "alternate_names": []
+      },
+      "id": 2
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -106.4842811,
+          31.7567437
+        ]
+      },
+      "properties": {
+        "name": "1st Avenue",
+        "line": "Elpasodowntownloop",
+        "id": 3,
+        "alternate_names": []
+      },
+      "id": 3
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -106.4840708,
+          31.7532808
+        ]
+      },
+      "properties": {
+        "name": "Stanton",
+        "line": "Elpasodowntownloop",
+        "id": 4,
+        "alternate_names": []
+      },
+      "id": 4
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -106.4876914,
+          31.7524653
+        ]
+      },
+      "properties": {
+        "name": "El Paso",
+        "line": "Elpasodowntownloop",
+        "id": 5,
+        "alternate_names": []
+      },
+      "id": 5
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -106.488598,
+          31.7529997
+        ]
+      },
+      "properties": {
+        "name": "Downtown Transit Center",
+        "line": "Elpasodowntownloop",
+        "id": 6,
+        "alternate_names": []
+      },
+      "id": 6
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -106.4897545,
+          31.7566754
+        ]
+      },
+      "properties": {
+        "name": "Overland",
+        "line": "Elpasodowntownloop",
+        "id": 7,
+        "alternate_names": []
+      },
+      "id": 7
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -106.4903292,
+          31.7579672
+        ]
+      },
+      "properties": {
+        "name": "Convention Center",
+        "line": "Elpasodowntownloop",
+        "id": 8,
+        "alternate_names": []
+      },
+      "id": 8
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -106.4909164,
+          31.7597721
+        ]
+      },
+      "properties": {
+        "name": "Cleveland Square",
+        "line": "Elpasodowntownloop",
+        "id": 9,
+        "alternate_names": []
+      },
+      "id": 9
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -106.4887283,
+          31.7612013
+        ]
+      },
+      "properties": {
+        "name": "San Jacinto",
+        "line": "Elpasouptownloop",
+        "id": 10,
+        "alternate_names": []
+      },
+      "id": 10
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -106.4904303,
+          31.7609852
+        ]
+      },
+      "properties": {
+        "name": "Arts District",
+        "line": "Elpasouptownloop",
+        "id": 11,
+        "alternate_names": []
+      },
+      "id": 11
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -106.4922085,
+          31.7629491
+        ]
+      },
+      "properties": {
+        "name": "Yandell",
+        "line": "Elpasouptownloop",
+        "id": 12,
+        "alternate_names": []
+      },
+      "id": 12
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -106.4933271,
+          31.7642102
+        ]
+      },
+      "properties": {
+        "name": "Rio Grande",
+        "line": "Elpasouptownloop",
+        "id": 13,
+        "alternate_names": []
+      },
+      "id": 13
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -106.4965072,
+          31.7678433
+        ]
+      },
+      "properties": {
+        "name": "Cliff",
+        "line": "Elpasouptownloop",
+        "id": 14,
+        "alternate_names": []
+      },
+      "id": 14
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -106.4980687,
+          31.7696027
+        ]
+      },
+      "properties": {
+        "name": "Schuster",
+        "line": "Elpasouptownloop",
+        "id": 15,
+        "alternate_names": []
+      },
+      "id": 15
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -106.499487,
+          31.7712235
+        ]
+      },
+      "properties": {
+        "name": "Hague",
+        "line": "Elpasouptownloop",
+        "id": 16,
+        "alternate_names": []
+      },
+      "id": 16
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -106.5011185,
+          31.773074
+        ]
+      },
+      "properties": {
+        "name": "University",
+        "line": "Elpasouptownloop",
+        "id": 17,
+        "alternate_names": []
+      },
+      "id": 17
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -106.5023106,
+          31.7744362
+        ]
+      },
+      "properties": {
+        "name": "Boston",
+        "line": "Elpasouptownloop",
+        "id": 18,
+        "alternate_names": []
+      },
+      "id": 18
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -106.5044066,
+          31.7768128
+        ]
+      },
+      "properties": {
+        "name": "Glory Road Transit Center",
+        "line": "Elpasouptownloop",
+        "id": 19,
+        "alternate_names": []
+      },
+      "id": 19
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -106.5035533,
+          31.7778492
+        ]
+      },
+      "properties": {
+        "name": "Baltimore",
+        "line": "Elpasouptownloop",
+        "id": 20,
+        "alternate_names": []
+      },
+      "id": 20
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -106.5022218,
+          31.7773899
+        ]
+      },
+      "properties": {
+        "name": "Cincinnati",
+        "line": "Elpasouptownloop",
+        "id": 21,
+        "alternate_names": []
+      },
+      "id": 21
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -106.499929,
+          31.7747908
+        ]
+      },
+      "properties": {
+        "name": "Kern",
+        "line": "Elpasouptownloop",
+        "id": 22,
+        "alternate_names": []
+      },
+      "id": 22
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -106.4967446,
+          31.7711528
+        ]
+      },
+      "properties": {
+        "name": "Rim",
+        "line": "Elpasouptownloop",
+        "id": 23,
+        "alternate_names": []
+      },
+      "id": 23
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -106.4935521,
+          31.767555
+        ]
+      },
+      "properties": {
+        "name": "Cathedral",
+        "line": "Elpasouptownloop",
+        "id": 24,
+        "alternate_names": []
+      },
+      "id": 24
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -106.4922712,
+          31.766081
+        ]
+      },
+      "properties": {
+        "name": "Arizona",
+        "line": "Elpasouptownloop",
+        "id": 25,
+        "alternate_names": []
+      },
+      "id": 25
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -106.4903644,
+          31.7640207
+        ]
+      },
+      "properties": {
+        "name": "Montana",
+        "line": "Elpasouptownloop",
+        "id": 26,
+        "alternate_names": []
+      },
+      "id": 26
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -106.4890344,
+          31.7625146
+        ]
+      },
+      "properties": {
+        "name": "Missouri",
+        "line": "Elpasouptownloop",
+        "id": 27,
+        "alternate_names": []
+      },
+      "id": 27
+    }
+  ]
+}

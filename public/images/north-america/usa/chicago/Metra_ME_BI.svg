@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="200"
+   height="200"
+   viewBox="0 0 52.916665 52.916668"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   sodipodi:docname="Metra ME_BI.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="1"
+     inkscape:cx="68.5"
+     inkscape:cy="89.5"
+     inkscape:window-width="1366"
+     inkscape:window-height="697"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     inkscape:object-paths="true"
+     inkscape:snap-intersection-paths="true"
+     inkscape:snap-smooth-nodes="true"
+     inkscape:snap-midpoints="true"
+     units="px" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <circle
+       style="fill:#c5e9ea;fill-opacity:1;stroke:none;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:4.53543;paint-order:stroke fill markers;stop-color:#000000"
+       id="path1129"
+       cx="26.458334"
+       cy="26.458334"
+       r="26.458334" />
+    <g
+       aria-label="ME
+BI"
+       id="text2210"
+       style="font-weight:bold;font-size:21.1667px;line-height:0.9;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed,  Bold';letter-spacing:-0.529167px;stroke-width:0.264583">
+      <path
+         d="m 15.457438,9.4092193 h 2.656173 L 21.183196,19.703181 24.242445,9.4092193 h 2.346114 L 22.309744,24.45742 h -2.263432 z m -1.074872,0 h 2.532149 l 0.392742,9.9218907 v 5.12631 h -2.924891 z m 11.048439,0 H 27.97349 V 24.45742 h -2.914556 v -5.12631 z"
+         style="text-align:center;text-anchor:middle"
+         id="path4471" />
+      <path
+         d="M 38.534103,21.956277 V 24.45742 H 31.991856 V 21.956277 Z M 32.932369,9.4092193 V 24.45742 H 29.904125 V 9.4092193 Z m 4.723233,6.0978287 v 2.428796 h -5.663746 v -2.428796 z m 0.85783,-6.0978287 V 11.920698 H 31.991856 V 9.4092193 Z"
+         style="text-align:center;text-anchor:middle"
+         id="path4473" />
+      <path
+         d="m 23.626461,36.944533 h -3.090255 l -0.01034,-2.191084 h 2.625166 q 0.620119,0 1.01286,-0.206706 0.403077,-0.217042 0.589112,-0.630454 0.196371,-0.423747 0.196371,-1.023195 0,-0.692465 -0.186035,-1.105877 -0.1757,-0.423748 -0.568442,-0.620119 -0.382406,-0.19637 -1.01286,-0.19637 H 21.569736 V 43.50745 H 18.541492 V 28.459249 h 4.640551 q 1.116213,0 2.005049,0.248047 0.888836,0.248048 1.508954,0.764813 0.620119,0.50643 0.950848,1.281577 0.33073,0.764813 0.33073,1.819014 0,0.930177 -0.372071,1.71566 -0.372071,0.785483 -1.167889,1.291913 -0.795819,0.496094 -2.056725,0.547771 z m -0.113688,6.562917 h -3.834397 l 1.20923,-2.501143 h 2.625167 q 0.609783,0 0.971519,-0.258383 0.361735,-0.258382 0.5271,-0.692465 0.1757,-0.444418 0.1757,-1.01286 0,-0.640788 -0.155029,-1.116212 -0.144695,-0.475424 -0.48576,-0.723472 -0.341065,-0.258382 -0.919842,-0.258382 h -2.604496 l 0.02067,-2.191084 h 3.162602 l 0.713136,0.868165 q 1.209231,-0.04134 1.932702,0.465089 0.723471,0.496094 1.03353,1.302248 0.320395,0.795818 0.320395,1.69499 0,1.446942 -0.547771,2.439131 -0.537436,0.981854 -1.581302,1.488284 -1.043865,0.496094 -2.563155,0.496094 z"
+         style="text-align:center;text-anchor:middle"
+         id="path4475" />
+      <path
+         d="M 33.029521,28.459249 V 43.50745 H 30.021947 V 28.459249 Z"
+         style="text-align:center;text-anchor:middle"
+         id="path4477" />
+    </g>
+  </g>
+</svg>

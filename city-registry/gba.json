@@ -1,0 +1,2690 @@
+{
+  "city": "gba",
+  "continent": "asia",
+  "bbox": [
+    22.0135188,
+    112.4443499,
+    23.7450738,
+    114.5172712
+  ],
+  "localLanguages": [
+    "zh"
+  ],
+  "modes": [
+    "subway",
+    "light_rail",
+    "tram",
+    "rail",
+    "funicular",
+    "monorail",
+    "cable_car",
+    "gondola",
+    "chair_lift"
+  ],
+  "lines": [
+    {
+      "id": "dongguanline1",
+      "name": "Line 1",
+      "keywords": [
+        "Line 1",
+        "1 Line",
+        "L1",
+        "1号线",
+        "地铁1号线",
+        "1号線",
+        "1호선",
+        "Route 1",
+        "Tram Route 1",
+        "dongguanline1"
+      ],
+      "order": 0,
+      "icon": "asia/china/gba/dongguanline1.png"
+    },
+    {
+      "id": "EAL",
+      "name": "East Rail",
+      "keywords": [
+        "East Rail",
+        "EAL",
+        "EAL Line"
+      ],
+      "order": 0,
+      "icon": "asia/china/gba/EAL.png"
+    },
+    {
+      "id": "TPA",
+      "name": "Taipa",
+      "keywords": [
+        "Taipa",
+        "Taipa Line",
+        "TPA",
+        "TPA Line"
+      ],
+      "order": 0,
+      "icon": "asia/china/gba/TPA.png"
+    },
+    {
+      "id": "dongguanline2",
+      "name": "Line 2",
+      "keywords": [
+        "Line 2",
+        "2 Line",
+        "L2",
+        "2号线",
+        "地铁2号线",
+        "2号線",
+        "2호선",
+        "Route 2",
+        "Tram Route 2",
+        "dongguanline2"
+      ],
+      "order": 1,
+      "icon": "asia/china/gba/dongguanline2.png"
+    },
+    {
+      "id": "HNQ",
+      "name": "Hengqin",
+      "keywords": [
+        "Hengqin",
+        "Hengqin Line",
+        "HNQ",
+        "HNQ Line"
+      ],
+      "order": 1,
+      "icon": "asia/china/gba/HNQ.png"
+    },
+    {
+      "id": "TCL",
+      "name": "Tung Chung",
+      "keywords": [
+        "Tung Chung",
+        "TCL",
+        "TCL Line"
+      ],
+      "order": 1,
+      "icon": "asia/china/gba/TCL.png"
+    },
+    {
+      "id": "SPV",
+      "name": "Seac Pai Van",
+      "keywords": [
+        "Seac Pai Van",
+        "SPV",
+        "SPV Line"
+      ],
+      "order": 2,
+      "icon": "asia/china/gba/SPV.png"
+    },
+    {
+      "id": "TML",
+      "name": "Tuen Ma",
+      "keywords": [
+        "Tuen Ma",
+        "TML",
+        "TML Line"
+      ],
+      "order": 2,
+      "icon": "asia/china/gba/TML.png"
+    },
+    {
+      "id": "NOL",
+      "name": "Northern Link",
+      "keywords": [
+        "Northern Link",
+        "NOL",
+        "NOL Line"
+      ],
+      "order": 3,
+      "icon": "asia/china/gba/NOL.png"
+    },
+    {
+      "id": "KTL",
+      "name": "Kwun Tong",
+      "keywords": [
+        "Kwun Tong",
+        "KTL",
+        "KTL Line"
+      ],
+      "order": 4,
+      "icon": "asia/china/gba/KTL.png"
+    },
+    {
+      "id": "TWL",
+      "name": "Tsuen Wan",
+      "keywords": [
+        "Tsuen Wan",
+        "TWL",
+        "TWL Line"
+      ],
+      "order": 5,
+      "icon": "asia/china/gba/TWL.png"
+    },
+    {
+      "id": "ISL",
+      "name": "Island",
+      "keywords": [
+        "Island",
+        "Island Line",
+        "ISL",
+        "ISL Line"
+      ],
+      "order": 6,
+      "icon": "asia/china/gba/ISL.png"
+    },
+    {
+      "id": "TKL",
+      "name": "Tseung Kwan O",
+      "keywords": [
+        "Tseung Kwan O",
+        "Line O",
+        "O Line",
+        "Route O",
+        "Line O Line",
+        "Route O Line",
+        "TKL",
+        "TKL Line"
+      ],
+      "order": 7,
+      "icon": "asia/china/gba/TKL.png"
+    },
+    {
+      "id": "SIL",
+      "name": "South Island",
+      "keywords": [
+        "South Island",
+        "SIL",
+        "SIL Line"
+      ],
+      "order": 8,
+      "icon": "asia/china/gba/SIL.png"
+    },
+    {
+      "id": "AEL",
+      "name": "Airport Express",
+      "keywords": [
+        "Airport Express",
+        "AEL",
+        "AEL Line"
+      ],
+      "order": 9,
+      "icon": "asia/china/gba/AEL.png"
+    },
+    {
+      "id": "DRL",
+      "name": "Disneyland Resort",
+      "keywords": [
+        "Disneyland Resort",
+        "DRL",
+        "DRL Line"
+      ],
+      "order": 10,
+      "icon": "asia/china/gba/DRL.png"
+    },
+    {
+      "id": "XRL",
+      "name": "Express Rail Link",
+      "keywords": [
+        "Express Rail Link",
+        "XRL",
+        "XRL Line"
+      ],
+      "order": 11,
+      "icon": "asia/china/gba/XRL.png"
+    },
+    {
+      "id": "HKNP360",
+      "name": "Ngong Ping 360",
+      "keywords": [
+        "Ngong Ping 360",
+        "Line 360",
+        "360 Line",
+        "L360",
+        "360号线",
+        "地铁360号线",
+        "360号線",
+        "360호선",
+        "Route 360",
+        "Tram Route 360",
+        "360",
+        "HKNP360"
+      ],
+      "order": 12,
+      "icon": "asia/china/gba/HKNP360.png"
+    },
+    {
+      "id": "HKAPMT1",
+      "name": "T1 Line",
+      "keywords": [
+        "T1 Line",
+        "T1",
+        "HKAPMT1"
+      ],
+      "order": 13,
+      "icon": "asia/china/gba/HKAPMT1.png"
+    },
+    {
+      "id": "HKAPMT2",
+      "name": "T2 Line",
+      "keywords": [
+        "T2 Line",
+        "T2",
+        "HKAPMT2"
+      ],
+      "order": 14,
+      "icon": "asia/china/gba/HKAPMT2.png"
+    },
+    {
+      "id": "HKAPMSKY",
+      "name": "SkyPier Line",
+      "keywords": [
+        "Sky Pier Line",
+        "Sky Pier",
+        "HKAPMSKY",
+        "HKAPMSKY Line"
+      ],
+      "order": 15,
+      "icon": "asia/china/gba/HKAPMSKY.png"
+    },
+    {
+      "id": "MTR505",
+      "name": "Sam Shing — Siu Hong",
+      "keywords": [
+        "Sam Shing — Siu Hong",
+        "MTR505"
+      ],
+      "order": 16,
+      "icon": "asia/china/gba/MTR505.png"
+    },
+    {
+      "id": "MTR507",
+      "name": "Tuen Mun Ferry Pier — Tin King",
+      "keywords": [
+        "Tuen Mun Ferry Pier — Tin King",
+        "MTR507"
+      ],
+      "order": 17,
+      "icon": "asia/china/gba/MTR507.png"
+    },
+    {
+      "id": "MTR610",
+      "name": "Tuen Mun Ferry Pier — Yuen Long",
+      "keywords": [
+        "Tuen Mun Ferry Pier — Yuen Long",
+        "MTR610"
+      ],
+      "order": 18,
+      "icon": "asia/china/gba/MTR610.png"
+    },
+    {
+      "id": "MTR614",
+      "name": "Tuen Mun Ferry Pier — Yuen Long",
+      "keywords": [
+        "Tuen Mun Ferry Pier — Yuen Long",
+        "MTR614"
+      ],
+      "order": 19,
+      "icon": "asia/china/gba/MTR614.png"
+    },
+    {
+      "id": "MTR614P",
+      "name": "Tuen Mun Ferry Pier — Siu Hong",
+      "keywords": [
+        "Tuen Mun Ferry Pier — Siu Hong",
+        "MTR614 P",
+        "Line P",
+        "P Line",
+        "Route P",
+        "Line P Line",
+        "Route P Line"
+      ],
+      "order": 20,
+      "icon": "asia/china/gba/MTR614P.png"
+    },
+    {
+      "id": "MTR615",
+      "name": "Tuen Mun Ferry Pier — Yuen Long",
+      "keywords": [
+        "Tuen Mun Ferry Pier — Yuen Long",
+        "MTR615"
+      ],
+      "order": 21,
+      "icon": "asia/china/gba/MTR615.png"
+    },
+    {
+      "id": "MTR615P",
+      "name": "Tuen Mun Ferry Pier — Siu Hong",
+      "keywords": [
+        "Tuen Mun Ferry Pier — Siu Hong",
+        "MTR615 P",
+        "Line P",
+        "P Line",
+        "Route P",
+        "Line P Line",
+        "Route P Line"
+      ],
+      "order": 22,
+      "icon": "asia/china/gba/MTR615P.png"
+    },
+    {
+      "id": "MTR705",
+      "name": "Tin Shui Wai — Counterclockwise",
+      "keywords": [
+        "Tin Shui Wai — Counterclockwise",
+        "MTR705"
+      ],
+      "order": 23,
+      "icon": "asia/china/gba/MTR705.png"
+    },
+    {
+      "id": "MTR706",
+      "name": "Tin Shui Wai — Clockwise",
+      "keywords": [
+        "Tin Shui Wai — Clockwise",
+        "MTR706"
+      ],
+      "order": 24,
+      "icon": "asia/china/gba/MTR706.png"
+    },
+    {
+      "id": "MTR751",
+      "name": "Yau Oi — Tin Yat",
+      "keywords": [
+        "Yau Oi — Tin Yat",
+        "MTR751"
+      ],
+      "order": 25,
+      "icon": "asia/china/gba/MTR751.png"
+    },
+    {
+      "id": "MTR751P",
+      "name": "Tin Shui Wai — Tin Yat",
+      "keywords": [
+        "Tin Shui Wai — Tin Yat",
+        "MTR751 P",
+        "Line P",
+        "P Line",
+        "Route P",
+        "Line P Line",
+        "Route P Line"
+      ],
+      "order": 26,
+      "icon": "asia/china/gba/MTR751P.png"
+    },
+    {
+      "id": "MTR761P",
+      "name": "Yuen Long — Tin Yat",
+      "keywords": [
+        "Yuen Long — Tin Yat",
+        "MTR761 P",
+        "Line P",
+        "P Line",
+        "Route P",
+        "Line P Line",
+        "Route P Line"
+      ],
+      "order": 27,
+      "icon": "asia/china/gba/MTR761P.png"
+    },
+    {
+      "id": "HKTPT",
+      "name": "Peak Tram",
+      "keywords": [
+        "Peak Tram",
+        "Peak",
+        "Peak Line",
+        "HKTPT",
+        "HKTPT Line"
+      ],
+      "order": 28,
+      "icon": "asia/china/gba/HKTPT.png"
+    },
+    {
+      "id": "HKOEX",
+      "name": "Ocean Express",
+      "keywords": [
+        "Ocean Express",
+        "HKOEX",
+        "HKOEX Line"
+      ],
+      "order": 29,
+      "icon": "asia/china/gba/HKOEX.png"
+    },
+    {
+      "id": "HKOCC",
+      "name": "Ocean Park Gondola",
+      "keywords": [
+        "Ocean Park Gondola",
+        "HKOCC",
+        "HKOCC Line"
+      ],
+      "order": 30,
+      "icon": "asia/china/gba/HKOCC.png"
+    },
+    {
+      "id": "HKT",
+      "name": "Hong Kong Tramways",
+      "keywords": [
+        "Hong Kong Tramways",
+        "HKT",
+        "HKT Line"
+      ],
+      "order": 31,
+      "icon": "asia/china/gba/HKT.png"
+    },
+    {
+      "id": "gzline1",
+      "name": "Line 1",
+      "keywords": [
+        "Line 1",
+        "1 Line",
+        "L1",
+        "1号线",
+        "地铁1号线",
+        "1号線",
+        "1호선",
+        "Route 1",
+        "Tram Route 1",
+        "gzline1"
+      ],
+      "order": 32,
+      "icon": "asia/china/gba/gzline1.png"
+    },
+    {
+      "id": "gzline2",
+      "name": "Line 2",
+      "keywords": [
+        "Line 2",
+        "2 Line",
+        "L2",
+        "2号线",
+        "地铁2号线",
+        "2号線",
+        "2호선",
+        "Route 2",
+        "Tram Route 2",
+        "gzline2"
+      ],
+      "order": 33,
+      "icon": "asia/china/gba/gzline2.png"
+    },
+    {
+      "id": "gzline3",
+      "name": "Line 3",
+      "keywords": [
+        "Line 3",
+        "3 Line",
+        "L3",
+        "3号线",
+        "地铁3号线",
+        "3号線",
+        "3호선",
+        "Route 3",
+        "Tram Route 3",
+        "gzline3"
+      ],
+      "order": 34,
+      "icon": "asia/china/gba/gzline3.png"
+    },
+    {
+      "id": "gzline4",
+      "name": "Line 4",
+      "keywords": [
+        "Line 4",
+        "4 Line",
+        "L4",
+        "4号线",
+        "地铁4号线",
+        "4号線",
+        "4호선",
+        "Route 4",
+        "Tram Route 4",
+        "gzline4"
+      ],
+      "order": 35,
+      "icon": "asia/china/gba/gzline4.png"
+    },
+    {
+      "id": "gzline5",
+      "name": "Line 5",
+      "keywords": [
+        "Line 5",
+        "5 Line",
+        "L5",
+        "5号线",
+        "地铁5号线",
+        "5号線",
+        "5호선",
+        "Route 5",
+        "Tram Route 5",
+        "gzline5"
+      ],
+      "order": 36,
+      "icon": "asia/china/gba/gzline5.png"
+    },
+    {
+      "id": "gzline6",
+      "name": "Line 6",
+      "keywords": [
+        "Line 6",
+        "6 Line",
+        "L6",
+        "6号线",
+        "地铁6号线",
+        "6号線",
+        "6호선",
+        "Route 6",
+        "Tram Route 6",
+        "gzline6"
+      ],
+      "order": 37,
+      "icon": "asia/china/gba/gzline6.png"
+    },
+    {
+      "id": "gzline7",
+      "name": "Line 7",
+      "keywords": [
+        "Line 7",
+        "7 Line",
+        "L7",
+        "7号线",
+        "地铁7号线",
+        "7号線",
+        "7호선",
+        "Route 7",
+        "Tram Route 7",
+        "gzline7"
+      ],
+      "order": 38,
+      "icon": "asia/china/gba/gzline7.png"
+    },
+    {
+      "id": "gzline8",
+      "name": "Line 8",
+      "keywords": [
+        "Line 8",
+        "8 Line",
+        "L8",
+        "8号线",
+        "地铁8号线",
+        "8号線",
+        "8호선",
+        "Route 8",
+        "Tram Route 8",
+        "gzline8"
+      ],
+      "order": 39,
+      "icon": "asia/china/gba/gzline8.png"
+    },
+    {
+      "id": "gzline9",
+      "name": "Line 9",
+      "keywords": [
+        "Line 9",
+        "9 Line",
+        "L9",
+        "9号线",
+        "地铁9号线",
+        "9号線",
+        "9호선",
+        "Route 9",
+        "Tram Route 9",
+        "gzline9"
+      ],
+      "order": 40,
+      "icon": "asia/china/gba/gzline9.png"
+    },
+    {
+      "id": "gzline10",
+      "name": "Line 10",
+      "keywords": [
+        "Line 10",
+        "10",
+        "10 Line",
+        "L10",
+        "10号线",
+        "地铁10号线",
+        "10号線",
+        "10호선",
+        "Route 10",
+        "Tram Route 10",
+        "gzline10"
+      ],
+      "order": 41,
+      "icon": "asia/china/gba/gzline10.png"
+    },
+    {
+      "id": "gzline11",
+      "name": "Line 11",
+      "keywords": [
+        "Line 11",
+        "11",
+        "11 Line",
+        "L11",
+        "11号线",
+        "地铁11号线",
+        "11号線",
+        "11호선",
+        "Route 11",
+        "Tram Route 11",
+        "gzline11"
+      ],
+      "order": 42,
+      "icon": "asia/china/gba/gzline11.png"
+    },
+    {
+      "id": "gzline12",
+      "name": "Line 12",
+      "keywords": [
+        "Line 12",
+        "12",
+        "12 Line",
+        "L12",
+        "12号线",
+        "地铁12号线",
+        "12号線",
+        "12호선",
+        "Route 12",
+        "Tram Route 12",
+        "gzline12"
+      ],
+      "order": 43,
+      "icon": "asia/china/gba/gzline12.png"
+    },
+    {
+      "id": "gzline13",
+      "name": "Line 13",
+      "keywords": [
+        "Line 13",
+        "13",
+        "13 Line",
+        "L13",
+        "13号线",
+        "地铁13号线",
+        "13号線",
+        "13호선",
+        "Route 13",
+        "Tram Route 13",
+        "gzline13"
+      ],
+      "order": 44,
+      "icon": "asia/china/gba/gzline13.png"
+    },
+    {
+      "id": "gzline14",
+      "name": "Line 14",
+      "keywords": [
+        "Line 14",
+        "14",
+        "14 Line",
+        "L14",
+        "14号线",
+        "地铁14号线",
+        "14号線",
+        "14호선",
+        "Route 14",
+        "Tram Route 14",
+        "gzline14"
+      ],
+      "order": 45,
+      "icon": "asia/china/gba/gzline14.png"
+    },
+    {
+      "id": "gzline18",
+      "name": "Line 18",
+      "keywords": [
+        "Line 18",
+        "18",
+        "18 Line",
+        "L18",
+        "18号线",
+        "地铁18号线",
+        "18号線",
+        "18호선",
+        "Route 18",
+        "Tram Route 18",
+        "gzline18"
+      ],
+      "order": 46,
+      "icon": "asia/china/gba/gzline18.png"
+    },
+    {
+      "id": "gzline21",
+      "name": "Line 21",
+      "keywords": [
+        "Line 21",
+        "21",
+        "21 Line",
+        "L21",
+        "21号线",
+        "地铁21号线",
+        "21号線",
+        "21호선",
+        "Route 21",
+        "Tram Route 21",
+        "gzline21"
+      ],
+      "order": 47,
+      "icon": "asia/china/gba/gzline21.png"
+    },
+    {
+      "id": "gzline22",
+      "name": "Line 22",
+      "keywords": [
+        "Line 22",
+        "22",
+        "22 Line",
+        "L22",
+        "22号线",
+        "地铁22号线",
+        "22号線",
+        "22호선",
+        "Route 22",
+        "Tram Route 22",
+        "gzline22"
+      ],
+      "order": 48,
+      "icon": "asia/china/gba/gzline22.png"
+    },
+    {
+      "id": "gzapm",
+      "name": "Zhujiang New Town Automated People Mover System",
+      "keywords": [
+        "Zhujiang New Town Automated People Mover System",
+        "gzapm",
+        "gzapm Line"
+      ],
+      "order": 49,
+      "icon": "asia/china/gba/gzapm.png"
+    },
+    {
+      "id": "gzt_thp1",
+      "name": "Huangpu Tram Line 1",
+      "keywords": [
+        "Huangpu Tram Line 1",
+        "Huangpu 1",
+        "Line 1",
+        "1 Line",
+        "L1",
+        "1号线",
+        "地铁1号线",
+        "1号線",
+        "1호선",
+        "Route 1",
+        "Tram Route 1",
+        "gzt thp1"
+      ],
+      "order": 50,
+      "icon": "asia/china/gba/gzt_thp1.png"
+    },
+    {
+      "id": "gzt_thp2",
+      "name": "Huangpu Tram Line 2",
+      "keywords": [
+        "Huangpu Tram Line 2",
+        "Huangpu 2",
+        "Line 2",
+        "2 Line",
+        "L2",
+        "2号线",
+        "地铁2号线",
+        "2号線",
+        "2호선",
+        "Route 2",
+        "Tram Route 2",
+        "gzt thp2"
+      ],
+      "order": 51,
+      "icon": "asia/china/gba/gzt_thp2.png"
+    },
+    {
+      "id": "gzt_thz1",
+      "name": "Haizhu Tram Line 1",
+      "keywords": [
+        "Haizhu Tram Line 1",
+        "Haizhu 1",
+        "Line 1",
+        "1 Line",
+        "L1",
+        "1号线",
+        "地铁1号线",
+        "1号線",
+        "1호선",
+        "Route 1",
+        "Tram Route 1",
+        "gzt thz1"
+      ],
+      "order": 52,
+      "icon": "asia/china/gba/gzt_thz1.png"
+    },
+    {
+      "id": "fs_guangfo",
+      "name": "Guangfo",
+      "keywords": [
+        "Guangfo",
+        "Guangfo Line",
+        "fs guangfo"
+      ],
+      "order": 53,
+      "icon": "asia/china/gba/fs_guangfo.png"
+    },
+    {
+      "id": "fs_line2",
+      "name": "Line 2",
+      "keywords": [
+        "Line 2",
+        "2 Line",
+        "L2",
+        "2号线",
+        "地铁2号线",
+        "2号線",
+        "2호선",
+        "Route 2",
+        "Tram Route 2",
+        "fs line2"
+      ],
+      "order": 54,
+      "icon": "asia/china/gba/fs_line2.png"
+    },
+    {
+      "id": "fs_line3",
+      "name": "Line 3",
+      "keywords": [
+        "Line 3",
+        "3 Line",
+        "L3",
+        "3号线",
+        "地铁3号线",
+        "3号線",
+        "3호선",
+        "Route 3",
+        "Tram Route 3",
+        "fs line3"
+      ],
+      "order": 55,
+      "icon": "asia/china/gba/fs_line3.png"
+    },
+    {
+      "id": "fs_tnh1",
+      "name": "Nanhai Tram Line 1",
+      "keywords": [
+        "Nanhai Tram Line 1",
+        "Nanhai 1",
+        "Line 1",
+        "1 Line",
+        "L1",
+        "1号线",
+        "地铁1号线",
+        "1号線",
+        "1호선",
+        "Route 1",
+        "Tram Route 1",
+        "fs tnh1"
+      ],
+      "order": 56,
+      "icon": "asia/china/gba/fs_tnh1.png"
+    },
+    {
+      "id": "gzline24",
+      "name": "Line 24",
+      "keywords": [
+        "Line 24",
+        "24",
+        "24 Line",
+        "L24",
+        "24号线",
+        "地铁24号线",
+        "24号線",
+        "24호선",
+        "Route 24",
+        "Tram Route 24",
+        "gzline24"
+      ],
+      "order": 63,
+      "icon": "asia/china/gba/gzline24.png"
+    },
+    {
+      "id": "szline1",
+      "name": "Line 1",
+      "keywords": [
+        "Line 1",
+        "1 Line",
+        "L1",
+        "1号线",
+        "地铁1号线",
+        "1号線",
+        "1호선",
+        "Route 1",
+        "Tram Route 1",
+        "szline1"
+      ],
+      "order": 100,
+      "icon": "asia/china/gba/szline1.png"
+    },
+    {
+      "id": "szline2",
+      "name": "Line 2",
+      "keywords": [
+        "Line 2",
+        "2 Line",
+        "L2",
+        "2号线",
+        "地铁2号线",
+        "2号線",
+        "2호선",
+        "Route 2",
+        "Tram Route 2",
+        "szline2"
+      ],
+      "order": 101,
+      "icon": "asia/china/gba/szline2.png"
+    },
+    {
+      "id": "szline3",
+      "name": "Line 3",
+      "keywords": [
+        "Line 3",
+        "3 Line",
+        "L3",
+        "3号线",
+        "地铁3号线",
+        "3号線",
+        "3호선",
+        "Route 3",
+        "Tram Route 3",
+        "szline3"
+      ],
+      "order": 102,
+      "icon": "asia/china/gba/szline3.png"
+    },
+    {
+      "id": "szline4",
+      "name": "Line 4",
+      "keywords": [
+        "Line 4",
+        "4 Line",
+        "L4",
+        "4号线",
+        "地铁4号线",
+        "4号線",
+        "4호선",
+        "Route 4",
+        "Tram Route 4",
+        "szline4"
+      ],
+      "order": 103,
+      "icon": "asia/china/gba/szline4.png"
+    },
+    {
+      "id": "szline5",
+      "name": "Line 5",
+      "keywords": [
+        "Line 5",
+        "5 Line",
+        "L5",
+        "5号线",
+        "地铁5号线",
+        "5号線",
+        "5호선",
+        "Route 5",
+        "Tram Route 5",
+        "szline5"
+      ],
+      "order": 104,
+      "icon": "asia/china/gba/szline5.png"
+    },
+    {
+      "id": "szline6",
+      "name": "Line 6",
+      "keywords": [
+        "Line 6",
+        "6 Line",
+        "L6",
+        "6号线",
+        "地铁6号线",
+        "6号線",
+        "6호선",
+        "Route 6",
+        "Tram Route 6",
+        "szline6"
+      ],
+      "order": 105,
+      "icon": "asia/china/gba/szline6.png"
+    },
+    {
+      "id": "szline6b",
+      "name": "Line 6B",
+      "keywords": [
+        "Line 6 B",
+        "6 B",
+        "Line 6",
+        "6 Line",
+        "L6",
+        "6号线",
+        "地铁6号线",
+        "6号線",
+        "6호선",
+        "Route 6",
+        "Tram Route 6",
+        "Line B",
+        "B Line",
+        "Route B",
+        "Line B Line",
+        "Route B Line",
+        "szline6b"
+      ],
+      "order": 106,
+      "icon": "asia/china/gba/szline6b.png"
+    },
+    {
+      "id": "szline7",
+      "name": "Line 7",
+      "keywords": [
+        "Line 7",
+        "7 Line",
+        "L7",
+        "7号线",
+        "地铁7号线",
+        "7号線",
+        "7호선",
+        "Route 7",
+        "Tram Route 7",
+        "szline7"
+      ],
+      "order": 107,
+      "icon": "asia/china/gba/szline7.png"
+    },
+    {
+      "id": "szline8",
+      "name": "Line 8",
+      "keywords": [
+        "Line 8",
+        "8 Line",
+        "L8",
+        "8号线",
+        "地铁8号线",
+        "8号線",
+        "8호선",
+        "Route 8",
+        "Tram Route 8",
+        "szline8"
+      ],
+      "order": 108,
+      "icon": "asia/china/gba/szline8.png"
+    },
+    {
+      "id": "szline9",
+      "name": "Line 9",
+      "keywords": [
+        "Line 9",
+        "9 Line",
+        "L9",
+        "9号线",
+        "地铁9号线",
+        "9号線",
+        "9호선",
+        "Route 9",
+        "Tram Route 9",
+        "szline9"
+      ],
+      "order": 109,
+      "icon": "asia/china/gba/szline9.png"
+    },
+    {
+      "id": "szline10",
+      "name": "Line 10",
+      "keywords": [
+        "Line 10",
+        "10",
+        "10 Line",
+        "L10",
+        "10号线",
+        "地铁10号线",
+        "10号線",
+        "10호선",
+        "Route 10",
+        "Tram Route 10",
+        "szline10"
+      ],
+      "order": 110,
+      "icon": "asia/china/gba/szline10.png"
+    },
+    {
+      "id": "szline11",
+      "name": "Line 11",
+      "keywords": [
+        "Line 11",
+        "11",
+        "11 Line",
+        "L11",
+        "11号线",
+        "地铁11号线",
+        "11号線",
+        "11호선",
+        "Route 11",
+        "Tram Route 11",
+        "szline11"
+      ],
+      "order": 111,
+      "icon": "asia/china/gba/szline11.png"
+    },
+    {
+      "id": "szline12",
+      "name": "Line 12",
+      "keywords": [
+        "Line 12",
+        "12",
+        "12 Line",
+        "L12",
+        "12号线",
+        "地铁12号线",
+        "12号線",
+        "12호선",
+        "Route 12",
+        "Tram Route 12",
+        "szline12"
+      ],
+      "order": 112,
+      "icon": "asia/china/gba/szline12.png"
+    },
+    {
+      "id": "szline13",
+      "name": "Line 13",
+      "keywords": [
+        "Line 13",
+        "13",
+        "13 Line",
+        "L13",
+        "13号线",
+        "地铁13号线",
+        "13号線",
+        "13호선",
+        "Route 13",
+        "Tram Route 13",
+        "szline13"
+      ],
+      "order": 113,
+      "icon": "asia/china/gba/szline13.png"
+    },
+    {
+      "id": "szline14",
+      "name": "Line 14",
+      "keywords": [
+        "Line 14",
+        "14",
+        "14 Line",
+        "L14",
+        "14号线",
+        "地铁14号线",
+        "14号線",
+        "14호선",
+        "Route 14",
+        "Tram Route 14",
+        "szline14"
+      ],
+      "order": 114,
+      "icon": "asia/china/gba/szline14.png"
+    },
+    {
+      "id": "szline15",
+      "name": "Line 15",
+      "keywords": [
+        "Line 15",
+        "15",
+        "15 Line",
+        "L15",
+        "15号线",
+        "地铁15号线",
+        "15号線",
+        "15호선",
+        "Route 15",
+        "Tram Route 15",
+        "szline15"
+      ],
+      "order": 115,
+      "icon": "asia/china/gba/szline15.png"
+    },
+    {
+      "id": "szline16",
+      "name": "Line 16",
+      "keywords": [
+        "Line 16",
+        "16",
+        "16 Line",
+        "L16",
+        "16号线",
+        "地铁16号线",
+        "16号線",
+        "16호선",
+        "Route 16",
+        "Tram Route 16",
+        "szline16"
+      ],
+      "order": 116,
+      "icon": "asia/china/gba/szline16.png"
+    },
+    {
+      "id": "szline17",
+      "name": "Line 17",
+      "keywords": [
+        "Line 17",
+        "17",
+        "17 Line",
+        "L17",
+        "17号线",
+        "地铁17号线",
+        "17号線",
+        "17호선",
+        "Route 17",
+        "Tram Route 17",
+        "szline17"
+      ],
+      "order": 117,
+      "icon": "asia/china/gba/szline17.png"
+    },
+    {
+      "id": "szline20",
+      "name": "Line 20",
+      "keywords": [
+        "Line 20",
+        "20",
+        "20 Line",
+        "L20",
+        "20号线",
+        "地铁20号线",
+        "20号線",
+        "20호선",
+        "Route 20",
+        "Tram Route 20",
+        "szline20"
+      ],
+      "order": 118,
+      "icon": "asia/china/gba/szline20.png"
+    },
+    {
+      "id": "szline25",
+      "name": "Line 25",
+      "keywords": [
+        "Line 25",
+        "25",
+        "25 Line",
+        "L25",
+        "25号线",
+        "地铁25号线",
+        "25号線",
+        "25호선",
+        "Route 25",
+        "Tram Route 25",
+        "szline25"
+      ],
+      "order": 119,
+      "icon": "asia/china/gba/szline25.png"
+    },
+    {
+      "id": "szline27",
+      "name": "Line 27",
+      "keywords": [
+        "Line 27",
+        "27",
+        "27 Line",
+        "L27",
+        "27号线",
+        "地铁27号线",
+        "27号線",
+        "27호선",
+        "Route 27",
+        "Tram Route 27",
+        "szline27"
+      ],
+      "order": 120,
+      "icon": "asia/china/gba/szline27.png"
+    },
+    {
+      "id": "szline29",
+      "name": "Line 29",
+      "keywords": [
+        "Line 29",
+        "29",
+        "29 Line",
+        "L29",
+        "29号线",
+        "地铁29号线",
+        "29号線",
+        "29호선",
+        "Route 29",
+        "Tram Route 29",
+        "szline29"
+      ],
+      "order": 121,
+      "icon": "asia/china/gba/szline29.png"
+    },
+    {
+      "id": "szline32",
+      "name": "Line 32",
+      "keywords": [
+        "Line 32",
+        "32",
+        "32 Line",
+        "L32",
+        "32号线",
+        "地铁32号线",
+        "32号線",
+        "32호선",
+        "Route 32",
+        "Tram Route 32",
+        "szline32"
+      ],
+      "order": 122,
+      "icon": "asia/china/gba/szline32.png"
+    },
+    {
+      "id": "sztram1",
+      "name": "Line 1",
+      "keywords": [
+        "Line 1",
+        "1 Line",
+        "L1",
+        "1号线",
+        "地铁1号线",
+        "1号線",
+        "1호선",
+        "Route 1",
+        "Tram Route 1",
+        "sztram1"
+      ],
+      "order": 123,
+      "icon": "asia/china/gba/sztram1.png"
+    },
+    {
+      "id": "sztram2",
+      "name": "Line 2",
+      "keywords": [
+        "Line 2",
+        "2 Line",
+        "L2",
+        "2号线",
+        "地铁2号线",
+        "2号線",
+        "2호선",
+        "Route 2",
+        "Tram Route 2",
+        "sztram2"
+      ],
+      "order": 124,
+      "icon": "asia/china/gba/sztram2.png"
+    },
+    {
+      "id": "szbyd1",
+      "name": "Pingshan SkyShuttle Line 1",
+      "keywords": [
+        "Pingshan Sky Shuttle Line 1",
+        "Pingshan Sky Shuttle 1",
+        "Line 1",
+        "1 Line",
+        "L1",
+        "1号线",
+        "地铁1号线",
+        "1号線",
+        "1호선",
+        "Route 1",
+        "Tram Route 1",
+        "szbyd1"
+      ],
+      "order": 125,
+      "icon": "asia/china/gba/szbyd1.png"
+    },
+    {
+      "id": "szline22",
+      "name": "Line 22",
+      "keywords": [
+        "Line 22",
+        "22",
+        "22 Line",
+        "L22",
+        "22号线",
+        "地铁22号线",
+        "22号線",
+        "22호선",
+        "Route 22",
+        "Tram Route 22",
+        "szline22"
+      ],
+      "order": 126,
+      "icon": "asia/china/gba/szline22.png"
+    },
+    {
+      "id": "moeast",
+      "name": "East",
+      "keywords": [
+        "East",
+        "East Line",
+        "moeast",
+        "moeast Line"
+      ],
+      "order": 127,
+      "icon": "asia/china/gba/moeast.png"
+    },
+    {
+      "id": "prdir_guangzhu",
+      "name": "Guangzhu",
+      "keywords": [
+        "Guangzhu",
+        "Guangzhu Line",
+        "prdir guangzhu"
+      ],
+      "order": 128,
+      "icon": "asia/china/gba/prdir_guangzhu.png"
+    },
+    {
+      "id": "prdir_suishen",
+      "name": "Suishen",
+      "keywords": [
+        "Suishen",
+        "Suishen Line",
+        "prdir suishen"
+      ],
+      "order": 129,
+      "icon": "asia/china/gba/prdir_suishen.png"
+    },
+    {
+      "id": "prdir_zhuji",
+      "name": "Zhuji",
+      "keywords": [
+        "Zhuji",
+        "Zhuji Line",
+        "prdir zhuji"
+      ],
+      "order": 130,
+      "icon": "asia/china/gba/prdir_zhuji.png"
+    },
+    {
+      "id": "prdir_guanghui",
+      "name": "Guanghui",
+      "keywords": [
+        "Guanghui",
+        "Guanghui Line",
+        "prdir guanghui"
+      ],
+      "order": 131,
+      "icon": "asia/china/gba/prdir_guanghui.png"
+    },
+    {
+      "id": "prdir_guangzhao",
+      "name": "Guangzhao",
+      "keywords": [
+        "Guangzhao",
+        "Guangzhao Line",
+        "prdir guangzhao"
+      ],
+      "order": 132,
+      "icon": "asia/china/gba/prdir_guangzhao.png"
+    },
+    {
+      "id": "prdir_guangqing",
+      "name": "Guangqing",
+      "keywords": [
+        "Guangqing",
+        "Guangqing Line",
+        "prdir guangqing"
+      ],
+      "order": 133,
+      "icon": "asia/china/gba/prdir_guangqing.png"
+    },
+    {
+      "id": "prdir_guangforing",
+      "name": "Guangfo Ring",
+      "keywords": [
+        "Guangfo Ring",
+        "prdir guangforing"
+      ],
+      "order": 134,
+      "icon": "asia/china/gba/prdir_guangforing.png"
+    },
+    {
+      "id": "qymaglev",
+      "name": "Qingyuan Maglev Tourist Line",
+      "keywords": [
+        "Qingyuan Maglev Tourist Line",
+        "Qingyuan Maglev Tourist",
+        "qymaglev",
+        "qymaglev Line"
+      ],
+      "order": 134,
+      "icon": "asia/china/gba/qymaglev.png"
+    },
+    {
+      "id": "gzsp_cable",
+      "name": "Safari Park Cable Car",
+      "keywords": [
+        "Safari Park Cable Car",
+        "gzsp cable"
+      ],
+      "order": 135,
+      "icon": "asia/china/gba/GZSP.png"
+    },
+    {
+      "id": "gzcw_cable",
+      "name": "Baiyun Mountain Cableway",
+      "keywords": [
+        "Baiyun Mountain Cableway",
+        "gzcw cable"
+      ],
+      "order": 136,
+      "icon": "asia/china/gba/GZCW.png"
+    },
+    {
+      "id": "prdir_guangshen",
+      "name": "Guangshen",
+      "keywords": [
+        "Guangshen",
+        "Guangshen Line",
+        "prdir guangshen"
+      ],
+      "order": 137,
+      "icon": "asia/china/gba/prdir_guangshen.svg"
+    },
+    {
+      "id": "szairportapm",
+      "name": "Shenzhen Airport APM",
+      "keywords": [
+        "Shenzhen Airport APM",
+        "Airport APM",
+        "Shenzhen Airport Automated People Mover",
+        "szairportapm"
+      ],
+      "order": 138,
+      "icon": "asia/china/gba/ShenzhenAirport.png"
+    },
+    {
+      "id": "wynnskycab",
+      "name": "Wynn Palace Skycab",
+      "keywords": [
+        "Wynn Palace Skycab",
+        "Skycab",
+        "Wynn Skycab",
+        "wynnskycab"
+      ],
+      "order": 139,
+      "icon": "asia/china/gba/Wynn.png"
+    },
+    {
+      "id": "mab_guia",
+      "name": "Guia Hill Cable Car",
+      "keywords": [
+        "Guia Hill Cable Car",
+        "Guia Cable Car",
+        "Guia Hill",
+        "mab_guia"
+      ],
+      "order": 140,
+      "icon": "asia/china/gba/guiahill.png"
+    },
+    {
+      "id": "mab_taipa",
+      "name": "Taipa Grande Hill Inclined Lift",
+      "keywords": [
+        "Taipa Grande Hill Inclined Lift",
+        "Taipa Grande Inclined Lift",
+        "Taipa Inclined Lift",
+        "mab_taipa"
+      ],
+      "order": 141,
+      "icon": "asia/china/gba/taipagrande.png"
+    }
+  ],
+  "stationAliases": {},
+  "stationLocalNames": {},
+  "manualCoords": {
+    "gzline11|Datang (大塘)": [
+      [
+        113.3162554,
+        23.080576
+      ]
+    ],
+    "gzline3|Datang (大塘)": [
+      [
+        113.3162554,
+        23.080576
+      ]
+    ],
+    "gzline10|Wufeng (五凤)": [
+      [
+        113.2901215,
+        23.0847073
+      ]
+    ],
+    "gzline11|Wufeng (五凤)": [
+      [
+        113.2901215,
+        23.0847073
+      ]
+    ],
+    "gzline11|Jiangtai Road (江泰路)": [
+      [
+        113.2752059,
+        23.084776
+      ]
+    ],
+    "gzline2|Jiangtai Road (江泰路)": [
+      [
+        113.2752059,
+        23.084776
+      ]
+    ],
+    "gzline11|Yangang (燕岗)": [
+      [
+        113.2657542,
+        23.0787198
+      ]
+    ],
+    "fs_guangfo|Yangang (燕岗)": [
+      [
+        113.2657542,
+        23.0787198
+      ]
+    ],
+    "gzline11|Shachong (沙涌)": [
+      [
+        113.2418254,
+        23.086617
+      ]
+    ],
+    "fs_guangfo|Shachong (沙涌)": [
+      [
+        113.2418254,
+        23.086617
+      ]
+    ],
+    "gzline1|Fangcun (芳村)": [
+      [
+        113.2306132,
+        23.1013409
+      ]
+    ],
+    "gzline11|Fangcun (芳村)": [
+      [
+        113.2306132,
+        23.1013409
+      ]
+    ],
+    "gzline22|Fangcun (芳村)": [
+      [
+        113.2302136,
+        23.1015381
+      ]
+    ],
+    "gzline22|Airport South (Terminal 1) (机场南（1号航站楼）)": [
+      [
+        113.2959395,
+        23.3890027
+      ]
+    ],
+    "gzline22|Airport North (Terminal 2) (机场北（2号航站楼）)": [
+      [
+        113.2978235,
+        23.3993964
+      ]
+    ],
+    "gzline18|Huachengjie (花城街)": [
+      [
+        113.2294973,
+        23.4280039
+      ]
+    ],
+    "prdir_guangforing|Huachengjie (花城街)": [
+      [
+        113.2294973,
+        23.4280039
+      ]
+    ],
+    "prdir_guangshen|Guangzhou Xintang (广州新塘)": [
+      [
+        113.6005538,
+        23.1364703
+      ]
+    ],
+    "fs_line2|Zhangcha (张槎)": [
+      [
+        113.0629721,
+        23.013646
+      ]
+    ],
+    "prdir_guangzhao|Zhangcha (张槎)": [
+      [
+        113.0629721,
+        23.013646
+      ]
+    ],
+    "prdir_guangforing|Zhangcha (张槎)": [
+      [
+        113.0629721,
+        23.013646
+      ]
+    ],
+    "fs_line3|Foshan West Railway Station (佛山西站)": [
+      [
+        113.0281226,
+        23.0827166
+      ]
+    ],
+    "gzline7|Changzhou (长洲)": [
+      [
+        113.4237338,
+        23.0785272
+      ]
+    ],
+    "gzline8|Changzhou (长洲)": [
+      [
+        113.4237338,
+        23.0785272
+      ]
+    ],
+    "gzline1|Guangzhou East Railway Station (广州东站)": [
+      [
+        113.3186484,
+        23.1528445
+      ]
+    ],
+    "gzline11|Guangzhou Railway Station (广州火车站)": [
+      [
+        113.252486,
+        23.1501877
+      ]
+    ],
+    "gzline14|Guangzhou Railway Station (广州火车站)": [
+      [
+        113.252486,
+        23.1501877
+      ]
+    ],
+    "gzline2|Guangzhou Railway Station (广州火车站)": [
+      113.251276,
+      23.1505869
+    ],
+    "gzline22|Guangzhou Railway Station (广州火车站)": [
+      113.2489966,
+      23.1506253
+    ],
+    "gzline5|Guangzhou Railway Station (广州火车站)": [
+      [
+        113.252486,
+        23.1501877
+      ]
+    ],
+    "prdir_guangqing|Guangzhou (广州)": [
+      [
+        113.2522077,
+        23.1523657
+      ]
+    ],
+    "prdir_guangshen|Guangzhou (广州)": [
+      [
+        113.2522077,
+        23.1523657
+      ]
+    ],
+    "gzline5|Xicun (西村)": [
+      [
+        113.2361066,
+        23.1445293
+      ]
+    ],
+    "gzline8|Xicun (西村)": [
+      [
+        113.2361066,
+        23.1445293
+      ]
+    ],
+    "gzline11|Caihong Bridge (彩虹桥)": [
+      [
+        113.2404564,
+        23.1377877
+      ]
+    ],
+    "gzline8|Caihong Bridge (彩虹桥)": [
+      [
+        113.2404564,
+        23.1377877
+      ]
+    ],
+    "gzline13|Caihong Bridge (彩虹桥)": [
+      [
+        113.2404564,
+        23.1377877
+      ]
+    ],
+    "gzline22|Caihong Bridge (彩虹桥)": [
+      [
+        113.23716,
+        23.138788
+      ]
+    ],
+    "gzline1|Xilang (西塱)": [
+      [
+        113.226382,
+        23.068901
+      ]
+    ],
+    "fs_guangfo|Xilang (西塱)": [
+      [
+        113.226382,
+        23.068901
+      ]
+    ],
+    "gzline10|Xilang (西塱)": [
+      [
+        113.2268581,
+        23.0686561
+      ]
+    ],
+    "gzline22|Xilang (西塱)": [
+      [
+        113.2259084,
+        23.0686961
+      ]
+    ],
+    "fs_line3|Shunde College Railway Station (顺德学院站)": [
+      [
+        113.316685,
+        22.8241866
+      ]
+    ],
+    "gzline18|Zhongshan (中山)": [
+      [
+        113.4262435,
+        22.548833
+      ]
+    ],
+    "prdir_guangzhu|Zhongshan (中山)": [
+      [
+        113.4262435,
+        22.548833
+      ]
+    ],
+    "gzline14|Baiyun Dongping (白云东平)": [
+      [
+        113.3121761,
+        23.2530177
+      ]
+    ],
+    "gzline18|Baiyun Dongping (白云东平)": [
+      [
+        113.3121761,
+        23.2530177
+      ]
+    ],
+    "gzline8|Jianggao (江高)": [
+      [
+        113.219773,
+        23.2791627
+      ]
+    ],
+    "prdir_guangqing|Jianggao (江高)": [
+      [
+        113.219773,
+        23.2791627
+      ]
+    ],
+    "gzline21|Suyuan (苏元)": [
+      [
+        113.4625449,
+        23.1732776
+      ]
+    ],
+    "gzline6|Suyuan (苏元)": [
+      [
+        113.4625449,
+        23.1732776
+      ]
+    ],
+    "prdir_guangzhao|Shishan (鑽石山)": [
+      [
+        112.978742,
+        23.125269
+      ]
+    ],
+    "szline10|Gangxia North (岗厦北)": [
+      [
+        114.06283,
+        22.5427894
+      ]
+    ],
+    "szline11|Gangxia North (岗厦北)": [
+      [
+        114.06283,
+        22.5427894
+      ]
+    ],
+    "szline14|Gangxia North (岗厦北)": [
+      [
+        114.06283,
+        22.5427894
+      ]
+    ],
+    "szline2|Gangxia North (岗厦北)": [
+      [
+        114.0628124,
+        22.5434448
+      ]
+    ],
+    "szline7|Huaqiang South (华强南)": [
+      [
+        114.0816886,
+        22.5406951
+      ]
+    ],
+    "szline11|Huaqiang South (华强南)": [
+      [
+        114.0816886,
+        22.5406951
+      ]
+    ],
+    "szline4|Futian Checkpoint (福田口岸)": [
+      [
+        114.0636747,
+        22.5187227
+      ]
+    ],
+    "szline10|Futian Checkpoint (福田口岸)": [
+      [
+        114.0636747,
+        22.5187227
+      ]
+    ],
+    "szline7|Shangsha (上沙)": [
+      [
+        114.0325655,
+        22.5262265
+      ]
+    ],
+    "szline22|Shangsha (上沙)": [
+      [
+        114.0325655,
+        22.5262265
+      ]
+    ],
+    "szline1|Chegongmiao (车公庙)": [
+      [
+        114.0230201,
+        22.5393974
+      ]
+    ],
+    "szline7|Chegongmiao (车公庙)": [
+      [
+        114.0230201,
+        22.5393974
+      ]
+    ],
+    "szline9|Chegongmiao (车公庙)": [
+      [
+        114.0230201,
+        22.5393974
+      ]
+    ],
+    "szline11|Chegongmiao (车公庙)": [
+      [
+        114.0230201,
+        22.5393974
+      ]
+    ],
+    "szline29|Baishizhou (白石洲)": [
+      [
+        113.96316,
+        22.5421531
+      ]
+    ],
+    "szline9|Yuehaimen (粤海门)": [
+      [
+        113.9407436,
+        22.5357104
+      ]
+    ],
+    "szline13|Yuehaimen (粤海门)": [
+      [
+        113.9407436,
+        22.5357104
+      ]
+    ],
+    "szline12|Sea World (海上世界)": [
+      [
+        113.9090735,
+        22.4884204
+      ]
+    ],
+    "szline5|Railway Park (铁路公园)": [
+      [
+        113.8858137,
+        22.5045721
+      ]
+    ],
+    "szline15|Railway Park (铁路公园)": [
+      [
+        113.8858137,
+        22.5045721
+      ]
+    ],
+    "szline13|Xili High Speed Railway Station (西丽高铁站)": [
+      [
+        113.9403591,
+        22.5688097
+      ]
+    ],
+    "szline29|Xili High Speed Railway Station (西丽高铁站)": [
+      [
+        113.9403591,
+        22.5688097
+      ]
+    ],
+    "szline15|Xili High Speed Railway Station (西丽高铁站)": [
+      [
+        113.9399541,
+        22.5687949
+      ]
+    ],
+    "szline27|Xili High Speed Railway Station (西丽高铁站)": [
+      [
+        113.9412132,
+        22.5688282
+      ]
+    ],
+    "szline6|Shangwu (上屋)": [
+      [
+        113.9348666,
+        22.691463
+      ]
+    ],
+    "szline13|Shangwu (上屋)": [
+      [
+        113.9348666,
+        22.691463
+      ]
+    ],
+    "szline6|Fenghuang Town (凤凰城)": [
+      [
+        113.928779,
+        22.7515809
+      ]
+    ],
+    "szline13|Fenghuang Town (凤凰城)": [
+      [
+        113.928779,
+        22.7515809
+      ]
+    ],
+    "szline6|Gongming Square (公明广场)": [
+      [
+        113.888338,
+        22.7800584
+      ]
+    ],
+    "szline13|Gongming Square (公明广场)": [
+      [
+        113.888338,
+        22.7800584
+      ]
+    ],
+    "szline5|Bantian (坂田)": [
+      [
+        114.0484341,
+        22.6271196
+      ]
+    ],
+    "szline5|Wuhe (五和)": [
+      [
+        114.0556459,
+        22.629395
+      ]
+    ],
+    "szline10|Wuhe (五和)": [
+      [
+        114.0556459,
+        22.629395
+      ]
+    ],
+    "szline4|Longhua (龙华)": [
+      [
+        114.0185691,
+        22.6552181
+      ]
+    ],
+    "szline25|Longhua (龙华)": [
+      [
+        114.0185691,
+        22.6552181
+      ]
+    ],
+    "szline14|Shiyaling (石芽岭)": [
+      [
+        114.1325803,
+        22.63095
+      ]
+    ],
+    "szline17|Shiyaling (石芽岭)": [
+      [
+        114.1325803,
+        22.63095
+      ]
+    ],
+    "szline3|Danzhutou (丹竹头)": [
+      [
+        114.1431609,
+        22.6224998
+      ]
+    ],
+    "szline17|Danzhutou (丹竹头)": [
+      [
+        114.1431609,
+        22.6224998
+      ]
+    ],
+    "szline3|Buji (布吉)": [
+      [
+        114.1172258,
+        22.6051503
+      ]
+    ],
+    "szline5|Buji (布吉)": [
+      [
+        114.1172258,
+        22.6051503
+      ]
+    ],
+    "szline14|Buji (布吉)": [
+      [
+        114.1172258,
+        22.6051503
+      ]
+    ],
+    "szline5|Baigelong (百鸽笼)": [
+      [
+        114.1252836,
+        22.5977831
+      ]
+    ],
+    "szline17|Baigelong (百鸽笼)": [
+      [
+        114.1252836,
+        22.5977831
+      ]
+    ],
+    "szline3|Laojie (老街)": [
+      [
+        114.1097952,
+        22.5477035
+      ]
+    ],
+    "szline17|Laojie (老街)": [
+      [
+        114.1097952,
+        22.5477035
+      ]
+    ],
+    "szline1|Laojie (老街)": [
+      [
+        114.1097317,
+        22.5474266
+      ]
+    ],
+    "szline2|Civic Center (市民中心)": [
+      [
+        114.0558945,
+        22.5433282
+      ]
+    ],
+    "szline4|Civic Center (市民中心)": [
+      [
+        114.0558945,
+        22.5433282
+      ]
+    ],
+    "szline3|Shuanglong (双龙)": [
+      [
+        114.2749598,
+        22.7327797
+      ]
+    ],
+    "szline16|Shuanglong (双龙)": [
+      [
+        114.2749598,
+        22.7327797
+      ]
+    ],
+    "szline14|Universiade (大运)": [
+      [
+        114.2224274,
+        22.6885654
+      ]
+    ],
+    "szline16|Universiade (大运)": [
+      [
+        114.2224274,
+        22.6885654
+      ]
+    ],
+    "szbyd1|Pingshan Center (坪山中心)": [
+      [
+        114.3466173,
+        22.7137266
+      ]
+    ],
+    "dongguanline1|Civic Center (市民中心)": [
+      [
+        113.7549702,
+        23.0143528
+      ]
+    ],
+    "dongguanline2|Civic Center (市民中心)": [
+      [
+        113.7549702,
+        23.0143528
+      ]
+    ],
+    "dongguanline2|Xiping (西平)": [
+      [
+        113.741324,
+        22.9968757
+      ]
+    ],
+    "dongguanline1|Dongguan West Railway Station (东莞西站)": [
+      [
+        113.620683,
+        23.0119401
+      ]
+    ],
+    "prdir_suishen|Dongguan West (东莞西)": [
+      [
+        113.620683,
+        23.0119401
+      ]
+    ],
+    "prdir_guanghui|Dongguan West (东莞西)": [
+      [
+        113.620683,
+        23.0119401
+      ]
+    ],
+    "TML|A16": [
+      [
+        113.9690705,
+        22.3847502
+      ]
+    ],
+    "EAL|Admiralty (金鐘)": [
+      [
+        114.1659256,
+        22.278329
+      ]
+    ],
+    "SIL|Admiralty (金鐘)": [
+      [
+        114.1659256,
+        22.278329
+      ]
+    ],
+    "ISL|Quarry Bay (鰂魚湧)": [
+      [
+        114.208996,
+        22.2881888
+      ]
+    ],
+    "TKL|Quarry Bay (鰂魚湧)": [
+      [
+        114.208996,
+        22.2881888
+      ]
+    ],
+    "TKL|North Point (北角)": [
+      [
+        114.200525,
+        22.2903819
+      ]
+    ],
+    "ISL|North Point (北角)": [
+      [
+        114.2004405,
+        22.2911361
+      ]
+    ],
+    "KTL|Diamond Hill (鑽石山)": [
+      [
+        114.1990366,
+        22.3413835
+      ]
+    ],
+    "TML|Diamond Hill (鑽石山)": [
+      [
+        114.1990366,
+        22.3413835
+      ]
+    ],
+    "TML|Mei Foo (美孚)": [
+      [
+        114.1365456,
+        22.3390727
+      ]
+    ],
+    "TWL|Mei Foo (美孚)": [
+      [
+        114.1365456,
+        22.3390727
+      ]
+    ],
+    "TWL|Central (中環總站)": [
+      [
+        114.1583571,
+        22.2818238
+      ]
+    ],
+    "ISL|Central (中環總站)": [
+      [
+        114.1578838,
+        22.2817959
+      ]
+    ],
+    "HKTPT|Central (中環總站)": [
+      [
+        114.1592153,
+        22.2776657
+      ]
+    ],
+    "szline1|Grand Theater (大剧院)": [
+      [
+        114.1024012,
+        22.5443188
+      ]
+    ],
+    "szline2|Grand Theater (大剧院)": [
+      [
+        114.1029063,
+        22.5437514
+      ]
+    ],
+    "szline3|Hongling (红岭)": [
+      [
+        114.099432,
+        22.5517252
+      ]
+    ],
+    "szline9|Hongling (红岭)": [
+      [
+        114.099432,
+        22.5517252
+      ]
+    ],
+    "szline3|Huaxin (华新)": [
+      [
+        114.0815688,
+        22.5517849
+      ]
+    ],
+    "szline7|Huaxin (华新)": [
+      [
+        114.0815688,
+        22.5517849
+      ]
+    ],
+    "szline12|Nantou Ancient City (南头古城)": [
+      [
+        113.9191073,
+        22.5430951
+      ]
+    ],
+    "szline20|Nantou Ancient City (南头古城)": [
+      [
+        113.9191073,
+        22.5430951
+      ]
+    ],
+    "szline5|Baohua (宝华)": [
+      [
+        113.8802371,
+        22.5530667
+      ]
+    ],
+    "szline11|Fuyong (福永)": [
+      [
+        113.8010255,
+        22.6781993
+      ]
+    ],
+    "szline12|Fuyong (福永)": [
+      [
+        113.8010255,
+        22.6781993
+      ]
+    ],
+    "XRL|Guangmingcheng (光明城)": [
+      [
+        113.9495858,
+        22.7356182
+      ]
+    ],
+    "szline13|Guangmingcheng (光明城)": [
+      [
+        113.948696,
+        22.7355922
+      ]
+    ],
+    "szline6b|Guangmingcheng (光明城)": [
+      [
+        113.948696,
+        22.7355922
+      ]
+    ],
+    "gzline12|Xinshixu (新市墟)": [
+      [
+        113.2582312,
+        23.1973633
+      ]
+    ],
+    "gzline14|Xinshixu (新市墟)": [
+      [
+        113.2582312,
+        23.1973633
+      ]
+    ],
+    "gzline12|Chigang (赤岗)": [
+      [
+        113.330166,
+        23.0997286
+      ]
+    ],
+    "gzline8|Chigang (赤岗)": [
+      [
+        113.330166,
+        23.0997286
+      ]
+    ],
+    "prdir_guangqing|Shiling (狮岭)": [
+      [
+        113.142951,
+        23.456695
+      ]
+    ],
+    "gzline1|Martyrs' Park (烈士陵园)": [
+      [
+        113.2813298,
+        23.1290112
+      ]
+    ],
+    "gzline12|Martyrs' Park (烈士陵园)": [
+      [
+        113.2813298,
+        23.1290112
+      ]
+    ],
+    "gzline2|Sun Yat-Sen Memorial Hall (纪念堂)": [
+      [
+        113.258031,
+        23.1342456
+      ]
+    ],
+    "gzline13|Sun Yat-Sen Memorial Hall (纪念堂)": [
+      [
+        113.258031,
+        23.1342456
+      ]
+    ],
+    "gzline24|Sun Yat-Sen Memorial Hall (纪念堂)": [
+      [
+        113.2565514,
+        23.1344546
+      ]
+    ],
+    "gzline1|Chen Clan Academy (陈家祠)": [
+      [
+        113.2416327,
+        23.1284186
+      ]
+    ],
+    "gzline8|Chen Clan Academy (陈家祠)": [
+      [
+        113.2416327,
+        23.1284186
+      ]
+    ],
+    "gzline3|Haibang (海傍)": [
+      [
+        113.4695829,
+        22.9427478
+      ]
+    ],
+    "gzline4|Haibang (海傍)": [
+      [
+        113.4695829,
+        22.9427478
+      ]
+    ],
+    "gzline12|Xizhou (西洲)": [
+      [
+        113.217647,
+        23.1869349
+      ]
+    ],
+    "gzline13|Xizhou (西洲)": [
+      [
+        113.217647,
+        23.1869349
+      ]
+    ],
+    "gzline11|Pazhou (琶洲)": [
+      [
+        113.3629724,
+        23.100962
+      ]
+    ],
+    "gzline8|Pazhou (琶洲)": [
+      [
+        113.3629724,
+        23.100962
+      ]
+    ],
+    "prdir_guangforing|Pazhou (琶洲)": [
+      [
+        113.3629724,
+        23.100962
+      ]
+    ],
+    "gzline10|Wuyangcun (五羊邨)": [
+      [
+        113.3079157,
+        23.1224733
+      ]
+    ],
+    "gzline5|Wuyangcun (五羊邨)": [
+      [
+        113.3079157,
+        23.1224733
+      ]
+    ],
+    "gzline10|Donghu (东湖)": [
+      [
+        113.2839784,
+        23.1173237
+      ]
+    ],
+    "gzline12|Donghu (东湖)": [
+      [
+        113.2839784,
+        23.1173237
+      ]
+    ],
+    "gzline6|Donghu (东湖)": [
+      [
+        113.2839784,
+        23.1173237
+      ]
+    ],
+    "gzline2|Haizhu Square (海珠广场)": [
+      [
+        113.260181,
+        23.1174303
+      ]
+    ],
+    "gzline6|Haizhu Square (海珠广场)": [
+      [
+        113.260181,
+        23.1174303
+      ]
+    ],
+    "AEL|Tsing Yi (青衣)": [
+      [
+        114.107487,
+        22.3583503
+      ]
+    ],
+    "TCL|Tsing Yi (青衣)": [
+      [
+        114.107487,
+        22.3583503
+      ]
+    ],
+    "gzline3|Renhe (人和)": [
+      113.2891456,
+      23.3393839
+    ],
+    "gzline22|Renhe (人和)": [
+      113.2891456,
+      23.3393839
+    ],
+    "gzline6|Luogang (??)": [
+      113.4765858,
+      23.1783967
+    ],
+    "gzline7|Luogang (??)": [
+      113.4765858,
+      23.1783967
+    ],
+    "gzline11|Yuancun (??)": [
+      113.3582833,
+      23.1181519
+    ],
+    "gzline5|Yuancun (??)": [
+      113.3582833,
+      23.1181519
+    ],
+    "gzline5|Dashadong (???)": [
+      113.4517081,
+      23.1087659
+    ],
+    "gzline7|Dashadong (???)": [
+      113.4517081,
+      23.1087659
+    ],
+    "gzline7|Yufengwei (???)": [
+      113.4502228,
+      23.0973955
+    ],
+    "gzline13|Yufengwei (???)": [
+      113.4502228,
+      23.0973955
+    ],
+    "gzline3|Hanxi Changlong (????)": [
+      113.3237292,
+      22.9961325
+    ],
+    "gzline7|Hanxi Changlong (????)": [
+      113.3237292,
+      22.9961325
+    ]
+  }
+}

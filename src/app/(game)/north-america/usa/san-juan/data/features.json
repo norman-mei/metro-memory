@@ -1,0 +1,219 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-66.15388442536343, 18.4006155135973]
+      },
+      "properties": {
+        "name": "Bayamón",
+        "line": "TU",
+        "id": 0,
+        "alternate_names": ["Bayamon"]
+      },
+      "id": 0
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-66.14935267127329, 18.394588436633043]
+      },
+      "properties": {
+        "name": "Deportivo",
+        "line": "TU",
+        "id": 1
+      },
+      "id": 1
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-66.12838054423709, 18.394456324390354]
+      },
+      "properties": {
+        "name": "Jardines",
+        "line": "TU",
+        "id": 2
+      },
+      "id": 2
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-66.1192867530827, 18.392116689173776]
+      },
+      "properties": {
+        "name": "Torrimar",
+        "line": "TU",
+        "id": 3
+      },
+      "id": 3
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-66.10153440972563, 18.39145423179672]
+      },
+      "properties": {
+        "name": "Martínez Nadal",
+        "line": "TU",
+        "id": 4,
+        "alternate_names": ["Martinez Nadal"]
+      },
+      "id": 4
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-66.09394803872446, 18.3909936533523]
+      },
+      "properties": {
+        "name": "Las Lomas",
+        "line": "TU",
+        "id": 5
+      },
+      "id": 5
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-66.08299326653298, 18.39119525479201]
+      },
+      "properties": {
+        "name": "San Francisco",
+        "line": "TU",
+        "id": 6
+      },
+      "id": 6
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-66.07479992779696, 18.391799936929154]
+      },
+      "properties": {
+        "name": "Centro Médico",
+        "line": "TU",
+        "id": 7,
+        "alternate_names": ["Centro Medico", "Medical Center"]
+      },
+      "id": 7
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-66.06305610766593, 18.3907344955497]
+      },
+      "properties": {
+        "name": "Cupey",
+        "line": "TU",
+        "id": 8
+      },
+      "id": 8
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-66.05228338327419, 18.399805010411463]
+      },
+      "properties": {
+        "name": "Río Piedras",
+        "line": "TU",
+        "id": 9,
+        "alternate_names": ["Rio Piedras"]
+      },
+      "id": 9
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-66.05191929861857, 18.40596690214425]
+      },
+      "properties": {
+        "name": "Universidad",
+        "line": "TU",
+        "id": 10
+      },
+      "id": 10
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-66.0556214667169, 18.41117834259581]
+      },
+      "properties": {
+        "name": "Piñero",
+        "line": "TU",
+        "id": 11,
+        "alternate_names": ["Pinero"]
+      },
+      "id": 11
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-66.05650144056733, 18.4159290536466]
+      },
+      "properties": {
+        "name": "Domenech",
+        "line": "TU",
+        "id": 12
+      },
+      "id": 12
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-66.05892912949948, 18.423702664517013]
+      },
+      "properties": {
+        "name": "Roosevelt",
+        "line": "TU",
+        "id": 13
+      },
+      "id": 13
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-66.06032500275502, 18.429748516552138]
+      },
+      "properties": {
+        "name": "Hato Rey",
+        "line": "TU",
+        "id": 14
+      },
+      "id": 14
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-66.06087117506011, 18.436945744901927]
+      },
+      "properties": {
+        "name": "Sagrado Corazón",
+        "line": "TU",
+        "id": 15,
+        "alternate_names": ["Sagrado Corazon"]
+      },
+      "id": 15
+    }
+  ]
+}

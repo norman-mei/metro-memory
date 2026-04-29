@@ -1,0 +1,85 @@
+{
+  "city": "neworleans",
+  "continent": "north america",
+  "bbox": [
+    29.926108145791773,
+    -90.1340578443786,
+    29.983847488386246,
+    -90.05717295243936
+  ],
+  "localLanguages": [
+    "en"
+  ],
+  "modes": [
+    "subway",
+    "light_rail",
+    "tram",
+    "rail",
+    "funicular",
+    "monorail",
+    "cable_car",
+    "gondola",
+    "chair_lift"
+  ],
+  "lines": [
+    {
+      "id": "RTA12",
+      "name": "St. Charles",
+      "keywords": [
+        "St. Charles",
+        "Line T",
+        "T Line",
+        "Route T",
+        "Line T Line",
+        "Route T Line",
+        "RTA12"
+      ],
+      "order": 0,
+      "icon": "north-america/usa/neworleans/RTA12.png"
+    },
+    {
+      "id": "RTA46",
+      "name": "Rampart-Loyola",
+      "keywords": [
+        "Rampart-Loyola",
+        "RTA46"
+      ],
+      "order": 1,
+      "icon": "north-america/usa/neworleans/RTA46.png"
+    },
+    {
+      "id": "RTA47",
+      "name": "Canal / Cemeteries",
+      "keywords": [
+        "Canal / Cemeteries",
+        "RTA47"
+      ],
+      "order": 2,
+      "icon": "north-america/usa/neworleans/RTA47.png"
+    },
+    {
+      "id": "RTA48",
+      "name": "Canal / City Park",
+      "keywords": [
+        "Canal / City Park",
+        "RTA48"
+      ],
+      "order": 3,
+      "icon": "north-america/usa/neworleans/RTA48.png"
+    },
+    {
+      "id": "RTA49",
+      "name": "Riverfront",
+      "keywords": [
+        "Riverfront",
+        "Riverfront Line",
+        "RTA49"
+      ],
+      "order": 4,
+      "icon": "north-america/usa/neworleans/RTA49.png"
+    }
+  ],
+  "stationAliases": {},
+  "stationLocalNames": {},
+  "manualCoords": {}
+}

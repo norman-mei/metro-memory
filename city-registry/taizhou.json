@@ -1,0 +1,49 @@
+{
+  "city": "taizhou",
+  "continent": "asia",
+  "bbox": [
+    28.3096079,
+    121.3196903,
+    28.6724717,
+    121.4119396
+  ],
+  "localLanguages": [
+    "zh"
+  ],
+  "modes": [
+    "subway",
+    "light_rail",
+    "tram",
+    "rail",
+    "funicular",
+    "monorail",
+    "cable_car",
+    "gondola",
+    "chair_lift"
+  ],
+  "lines": [
+    {
+      "id": "taizhous1",
+      "name": "S1",
+      "keywords": [
+        "台州市域铁路S1线",
+        "Line 1",
+        "1 Line",
+        "L1",
+        "1号线",
+        "地铁1号线",
+        "1号線",
+        "1호선",
+        "Route 1",
+        "Tram Route 1",
+        "Taizhou S1",
+        "S1",
+        "taizhous1"
+      ],
+      "order": 1
+    }
+  ],
+  "stationAliases": {},
+  "stationLocalNames": {},
+  "manualCoords": {}
+}

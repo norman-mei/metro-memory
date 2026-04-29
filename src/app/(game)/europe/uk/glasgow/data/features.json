@@ -1,0 +1,505 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.255292009895209,
+          55.85726810026046
+        ]
+      },
+      "properties": {
+        "name": "St. Enoch",
+        "line": "glasgowIC",
+        "id": 0,
+        "alternate_names": [
+          "St Enoch"
+        ]
+      },
+      "id": 0
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.258562847006879,
+          55.85215431821505
+        ]
+      },
+      "properties": {
+        "name": "Bridge Street",
+        "line": "glasgowIC",
+        "id": 1
+      },
+      "id": 1
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.266075798707212,
+          55.84957880775309
+        ]
+      },
+      "properties": {
+        "name": "West Street",
+        "line": "glasgowIC",
+        "id": 2
+      },
+      "id": 2
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.275325029063206,
+          55.85005557028236
+        ]
+      },
+      "properties": {
+        "name": "Shields Road",
+        "line": "glasgowIC",
+        "id": 3
+      },
+      "id": 3
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.287795223850724,
+          55.850361934499816
+        ]
+      },
+      "properties": {
+        "name": "Kinning Park",
+        "line": "glasgowIC",
+        "id": 4
+      },
+      "id": 4
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.29441445394669,
+          55.85228240305129
+        ]
+      },
+      "properties": {
+        "name": "Cessnock",
+        "line": "glasgowIC",
+        "id": 5
+      },
+      "id": 5
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.304719106915903,
+          55.85470129671429
+        ]
+      },
+      "properties": {
+        "name": "Ibrox",
+        "line": "glasgowIC",
+        "id": 6
+      },
+      "id": 6
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.31068018024375,
+          55.86234268539639
+        ]
+      },
+      "properties": {
+        "name": "Govan",
+        "line": "glasgowIC",
+        "id": 7
+      },
+      "id": 7
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.308686021945298,
+          55.86986123161453
+        ]
+      },
+      "properties": {
+        "name": "Partick",
+        "line": "glasgowIC",
+        "id": 8,
+        "alternate_names": [
+          "Patrick"
+        ]
+      },
+      "id": 8
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.299916846253452,
+          55.87111619067872
+        ]
+      },
+      "properties": {
+        "name": "Kelvinhall",
+        "line": "glasgowIC",
+        "id": 9
+      },
+      "id": 9
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.293450057320105,
+          55.87527563687951
+        ]
+      },
+      "properties": {
+        "name": "Hillhead",
+        "line": "glasgowIC",
+        "id": 10
+      },
+      "id": 10
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.279819564370527,
+          55.87438939085287
+        ]
+      },
+      "properties": {
+        "name": "Kelvinbridge",
+        "line": "glasgowIC",
+        "id": 11
+      },
+      "id": 11
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.269247384243953,
+          55.87121913561549
+        ]
+      },
+      "properties": {
+        "name": "St. George's Cross",
+        "line": "glasgowIC",
+        "id": 12,
+        "alternate_names": [
+          "St George's Cross",
+          "St Georges Cross"
+        ]
+      },
+      "id": 12
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.260011628409525,
+          55.868037247434486
+        ]
+      },
+      "properties": {
+        "name": "Cowcaddens",
+        "line": "glasgowIC",
+        "id": 13
+      },
+      "id": 13
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.2533856147602505,
+          55.86239924433184
+        ]
+      },
+      "properties": {
+        "name": "Buchanan Street",
+        "line": "glasgowIC",
+        "id": 14
+      },
+      "id": 14
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.255292009895209,
+          55.85726810026046
+        ]
+      },
+      "properties": {
+        "name": "St. Enoch",
+        "line": "glasgowOC",
+        "id": 15,
+        "alternate_names": [
+          "St Enoch"
+        ]
+      },
+      "id": 15
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.258562847006879,
+          55.85215431821505
+        ]
+      },
+      "properties": {
+        "name": "Bridge Street",
+        "line": "glasgowOC",
+        "id": 16
+      },
+      "id": 16
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.266075798707212,
+          55.84957880775309
+        ]
+      },
+      "properties": {
+        "name": "West Street",
+        "line": "glasgowOC",
+        "id": 17
+      },
+      "id": 17
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.275325029063206,
+          55.85005557028236
+        ]
+      },
+      "properties": {
+        "name": "Shields Road",
+        "line": "glasgowOC",
+        "id": 18
+      },
+      "id": 18
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.287795223850724,
+          55.850361934499816
+        ]
+      },
+      "properties": {
+        "name": "Kinning Park",
+        "line": "glasgowOC",
+        "id": 19
+      },
+      "id": 19
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.29441445394669,
+          55.85228240305129
+        ]
+      },
+      "properties": {
+        "name": "Cessnock",
+        "line": "glasgowOC",
+        "id": 20
+      },
+      "id": 20
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.304719106915903,
+          55.85470129671429
+        ]
+      },
+      "properties": {
+        "name": "Ibrox",
+        "line": "glasgowOC",
+        "id": 21
+      },
+      "id": 21
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.31068018024375,
+          55.86234268539639
+        ]
+      },
+      "properties": {
+        "name": "Govan",
+        "line": "glasgowOC",
+        "id": 22
+      },
+      "id": 22
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.308686021945298,
+          55.86986123161453
+        ]
+      },
+      "properties": {
+        "name": "Partick",
+        "line": "glasgowOC",
+        "id": 23,
+        "alternate_names": [
+          "Patrick"
+        ]
+      },
+      "id": 23
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.299916846253452,
+          55.87111619067872
+        ]
+      },
+      "properties": {
+        "name": "Kelvinhall",
+        "line": "glasgowOC",
+        "id": 24
+      },
+      "id": 24
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.293450057320105,
+          55.87527563687951
+        ]
+      },
+      "properties": {
+        "name": "Hillhead",
+        "line": "glasgowOC",
+        "id": 25
+      },
+      "id": 25
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.279819564370527,
+          55.87438939085287
+        ]
+      },
+      "properties": {
+        "name": "Kelvinbridge",
+        "line": "glasgowOC",
+        "id": 26
+      },
+      "id": 26
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.269247384243953,
+          55.87121913561549
+        ]
+      },
+      "properties": {
+        "name": "St. George's Cross",
+        "line": "glasgowOC",
+        "id": 27,
+        "alternate_names": [
+          "St George's Cross",
+          "St Georges Cross"
+        ]
+      },
+      "id": 27
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.260011628409525,
+          55.868037247434486
+        ]
+      },
+      "properties": {
+        "name": "Cowcaddens",
+        "line": "glasgowOC",
+        "id": 28
+      },
+      "id": 28
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.2533856147602505,
+          55.86239924433184
+        ]
+      },
+      "properties": {
+        "name": "Buchanan Street",
+        "line": "glasgowOC",
+        "id": 29
+      },
+      "id": 29
+    }
+  ]
+}

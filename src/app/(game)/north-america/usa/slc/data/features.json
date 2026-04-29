@@ -1,0 +1,1518 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.66053134688673,
+          40.22555867470135
+        ]
+      },
+      "properties": {
+        "name": "Provo Central",
+        "line": "UTAFR",
+        "id": 0
+      },
+      "id": 0
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.7254822829087,
+          40.280000356804486
+        ]
+      },
+      "properties": {
+        "name": "Orem Central",
+        "line": "UTAFR",
+        "id": 1,
+        "alternate_names": [
+          "Orem"
+        ]
+      },
+      "id": 1
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.75030867332812,
+          40.31278396829707
+        ]
+      },
+      "properties": {
+        "name": "Vineyard",
+        "line": "UTAFR",
+        "id": 2
+      },
+      "id": 2
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.82067116299497,
+          40.37478688858316
+        ]
+      },
+      "properties": {
+        "name": "American Fork",
+        "line": "UTAFR",
+        "id": 3
+      },
+      "id": 3
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.89652418691932,
+          40.42538712569031
+        ]
+      },
+      "properties": {
+        "name": "Lehi",
+        "line": "UTAFR",
+        "id": 4
+      },
+      "id": 4
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.90442792426212,
+          40.51565767369808
+        ]
+      },
+      "properties": {
+        "name": "Draper",
+        "line": "UTAFR",
+        "id": 5
+      },
+      "id": 5
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.90074091593891,
+          40.5635118571487
+        ]
+      },
+      "properties": {
+        "name": "South Jordan",
+        "line": "UTAFR",
+        "id": 6
+      },
+      "id": 6
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.89644017339957,
+          40.66007006825093
+        ]
+      },
+      "properties": {
+        "name": "Murray Central",
+        "line": "UTAFR",
+        "id": 7
+      },
+      "id": 7
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.9091725068949,
+          40.762533136386885
+        ]
+      },
+      "properties": {
+        "name": "Salt Lake Central",
+        "line": "UTAFR",
+        "id": 8
+      },
+      "id": 8
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.90524574914615,
+          40.77289815566132
+        ]
+      },
+      "properties": {
+        "name": "North Temple",
+        "line": "UTAFR",
+        "id": 9
+      },
+      "id": 9
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.90339666236083,
+          40.88034626258611
+        ]
+      },
+      "properties": {
+        "name": "Woods Cross",
+        "line": "UTAFR",
+        "id": 10
+      },
+      "id": 10
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.90497505604645,
+          40.98809391060511
+        ]
+      },
+      "properties": {
+        "name": "Farmington",
+        "line": "UTAFR",
+        "id": 11
+      },
+      "id": 11
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.96490492401225,
+          41.056932553774026
+        ]
+      },
+      "properties": {
+        "name": "Layton",
+        "line": "UTAFR",
+        "id": 12
+      },
+      "id": 12
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.01378169537314,
+          41.094765502307794
+        ]
+      },
+      "properties": {
+        "name": "Clearfield",
+        "line": "UTAFR",
+        "id": 13
+      },
+      "id": 13
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.03962495856628,
+          41.18899554418491
+        ]
+      },
+      "properties": {
+        "name": "Roy",
+        "line": "UTAFR",
+        "id": 14
+      },
+      "id": 14
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.98074473884397,
+          41.22460198094304
+        ]
+      },
+      "properties": {
+        "name": "Ogden Central",
+        "line": "UTAFR",
+        "id": 15,
+        "alternate_names": [
+          "Ogden"
+        ]
+      },
+      "id": 15
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.884,
+          40.761
+        ]
+      },
+      "properties": {
+        "name": "Library",
+        "line": "UTARed",
+        "id": 16
+      },
+      "id": 16
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.873,
+          40.761
+        ]
+      },
+      "properties": {
+        "name": "Trolley",
+        "line": "UTARed",
+        "id": 17
+      },
+      "id": 17
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.866,
+          40.761
+        ]
+      },
+      "properties": {
+        "name": "900 East",
+        "line": "UTARed",
+        "id": 18
+      },
+      "id": 18
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.852,
+          40.76
+        ]
+      },
+      "properties": {
+        "name": "Stadium",
+        "line": "UTARed",
+        "id": 19
+      },
+      "id": 19
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.897,
+          40.688
+        ]
+      },
+      "properties": {
+        "name": "Meadowbrook",
+        "line": "UTARed",
+        "id": 20
+      },
+      "id": 20
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.897,
+          40.688
+        ]
+      },
+      "properties": {
+        "name": "Meadowbrook",
+        "line": "UTABlue",
+        "id": 21
+      },
+      "id": 21
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.894,
+          40.677
+        ]
+      },
+      "properties": {
+        "name": "Murray North",
+        "line": "UTARed",
+        "id": 22
+      },
+      "id": 22
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.894,
+          40.677
+        ]
+      },
+      "properties": {
+        "name": "Murray North",
+        "line": "UTABlue",
+        "id": 23
+      },
+      "id": 23
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.895,
+          40.66
+        ]
+      },
+      "properties": {
+        "name": "Murray Central",
+        "line": "UTARed",
+        "id": 24
+      },
+      "id": 24
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.895,
+          40.66
+        ]
+      },
+      "properties": {
+        "name": "Murray Central",
+        "line": "UTABlue",
+        "id": 25
+      },
+      "id": 25
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.898,
+          40.634
+        ]
+      },
+      "properties": {
+        "name": "Fashion Place West",
+        "line": "UTARed",
+        "id": 26
+      },
+      "id": 26
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.898,
+          40.634
+        ]
+      },
+      "properties": {
+        "name": "Fashion Place West",
+        "line": "UTABlue",
+        "id": 27
+      },
+      "id": 27
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.898,
+          40.619
+        ]
+      },
+      "properties": {
+        "name": "Midvale Fort Union",
+        "line": "UTABlue",
+        "id": 28
+      },
+      "id": 28
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.893,
+          40.61
+        ]
+      },
+      "properties": {
+        "name": "Midvale Center",
+        "line": "UTABlue",
+        "id": 29
+      },
+      "id": 29
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.886,
+          40.589
+        ]
+      },
+      "properties": {
+        "name": "Historic Sandy",
+        "line": "UTABlue",
+        "id": 30
+      },
+      "id": 30
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.885,
+          40.571
+        ]
+      },
+      "properties": {
+        "name": "Sandy Civic Center",
+        "line": "UTABlue",
+        "id": 31
+      },
+      "id": 31
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.897,
+          40.742
+        ]
+      },
+      "properties": {
+        "name": "Ballpark",
+        "line": "UTARed",
+        "id": 32
+      },
+      "id": 32
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.897,
+          40.742
+        ]
+      },
+      "properties": {
+        "name": "Ballpark",
+        "line": "UTABlue",
+        "id": 33
+      },
+      "id": 33
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.897,
+          40.742
+        ]
+      },
+      "properties": {
+        "name": "Ballpark",
+        "line": "UTAGreen",
+        "id": 34
+      },
+      "id": 34
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.897,
+          40.724
+        ]
+      },
+      "properties": {
+        "name": "Central Pointe",
+        "line": "UTARed",
+        "id": 35
+      },
+      "id": 35
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.897,
+          40.724
+        ]
+      },
+      "properties": {
+        "name": "Central Pointe",
+        "line": "UTABlue",
+        "id": 36
+      },
+      "id": 36
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.897,
+          40.724
+        ]
+      },
+      "properties": {
+        "name": "Central Pointe",
+        "line": "UTAGreen",
+        "id": 37
+      },
+      "id": 37
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.897,
+          40.701
+        ]
+      },
+      "properties": {
+        "name": "Millcreek",
+        "line": "UTARed",
+        "id": 38
+      },
+      "id": 38
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.897,
+          40.701
+        ]
+      },
+      "properties": {
+        "name": "Millcreek",
+        "line": "UTABlue",
+        "id": 39
+      },
+      "id": 39
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.891,
+          40.768
+        ]
+      },
+      "properties": {
+        "name": "City Center",
+        "line": "UTABlue",
+        "id": 40
+      },
+      "id": 40
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.891,
+          40.768
+        ]
+      },
+      "properties": {
+        "name": "City Center",
+        "line": "UTAGreen",
+        "id": 41
+      },
+      "id": 41
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.891,
+          40.763
+        ]
+      },
+      "properties": {
+        "name": "Gallivan Plaza",
+        "line": "UTABlue",
+        "id": 42
+      },
+      "id": 42
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.891,
+          40.763
+        ]
+      },
+      "properties": {
+        "name": "Gallivan Plaza",
+        "line": "UTAGreen",
+        "id": 43
+      },
+      "id": 43
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.895,
+          40.769
+        ]
+      },
+      "properties": {
+        "name": "Temple Square",
+        "line": "UTABlue",
+        "id": 44
+      },
+      "id": 44
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.895,
+          40.769
+        ]
+      },
+      "properties": {
+        "name": "Temple Square",
+        "line": "UTAGreen",
+        "id": 45
+      },
+      "id": 45
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.901,
+          40.769
+        ]
+      },
+      "properties": {
+        "name": "Arena",
+        "line": "UTABlue",
+        "id": 46
+      },
+      "id": 46
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.901,
+          40.769
+        ]
+      },
+      "properties": {
+        "name": "Arena",
+        "line": "UTAGreen",
+        "id": 47
+      },
+      "id": 47
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.891,
+          40.759
+        ]
+      },
+      "properties": {
+        "name": "Courthouse",
+        "line": "UTARed",
+        "id": 48
+      },
+      "id": 48
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.891,
+          40.759
+        ]
+      },
+      "properties": {
+        "name": "Courthouse",
+        "line": "UTABlue",
+        "id": 49
+      },
+      "id": 49
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.891,
+          40.759
+        ]
+      },
+      "properties": {
+        "name": "Courthouse",
+        "line": "UTAGreen",
+        "id": 50
+      },
+      "id": 50
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.84,
+          40.76
+        ]
+      },
+      "properties": {
+        "name": "University South Campus",
+        "line": "UTARed",
+        "id": 51
+      },
+      "id": 51
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.839,
+          40.77
+        ]
+      },
+      "properties": {
+        "name": "University Medical Center",
+        "line": "UTARed",
+        "id": 52
+      },
+      "id": 52
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.837,
+          40.764
+        ]
+      },
+      "properties": {
+        "name": "Fort Douglas",
+        "line": "UTARed",
+        "id": 53
+      },
+      "id": 53
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.897,
+          40.75
+        ]
+      },
+      "properties": {
+        "name": "900 South",
+        "line": "UTARed",
+        "id": 54
+      },
+      "id": 54
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.897,
+          40.75
+        ]
+      },
+      "properties": {
+        "name": "900 South",
+        "line": "UTABlue",
+        "id": 55
+      },
+      "id": 55
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.897,
+          40.75
+        ]
+      },
+      "properties": {
+        "name": "900 South",
+        "line": "UTAGreen",
+        "id": 56
+      },
+      "id": 56
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.886,
+          40.581
+        ]
+      },
+      "properties": {
+        "name": "Sandy Expo",
+        "line": "UTABlue",
+        "id": 57
+      },
+      "id": 57
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.906,
+          40.765
+        ]
+      },
+      "properties": {
+        "name": "Old Greektown",
+        "line": "UTABlue",
+        "id": 58
+      },
+      "id": 58
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.908,
+          40.762
+        ]
+      },
+      "properties": {
+        "name": "Salt Lake Central",
+        "line": "UTABlue",
+        "id": 59
+      },
+      "id": 59
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.903,
+          40.766
+        ]
+      },
+      "properties": {
+        "name": "Planetarium",
+        "line": "UTABlue",
+        "id": 60
+      },
+      "id": 60
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.903,
+          40.766
+        ]
+      },
+      "properties": {
+        "name": "Planetarium",
+        "line": "UTAGreen",
+        "id": 61
+      },
+      "id": 61
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.859,
+          40.526
+        ]
+      },
+      "properties": {
+        "name": "Draper Town Center",
+        "line": "UTABlue",
+        "id": 62
+      },
+      "id": 62
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.872,
+          40.536
+        ]
+      },
+      "properties": {
+        "name": "Kimballs Lane",
+        "line": "UTABlue",
+        "id": 63
+      },
+      "id": 63
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.879,
+          40.545
+        ]
+      },
+      "properties": {
+        "name": "Crescent View",
+        "line": "UTABlue",
+        "id": 64
+      },
+      "id": 64
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.014,
+          40.544
+        ]
+      },
+      "properties": {
+        "name": "Daybreak Parkway",
+        "line": "UTARed",
+        "id": 65
+      },
+      "id": 65
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.025,
+          40.559
+        ]
+      },
+      "properties": {
+        "name": "South Jordan Parkway",
+        "line": "UTARed",
+        "id": 66
+      },
+      "id": 66
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.025,
+          40.569
+        ]
+      },
+      "properties": {
+        "name": "5600 W. Old Bingham ...",
+        "line": "UTARed",
+        "id": 67
+      },
+      "id": 67
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.004,
+          40.582
+        ]
+      },
+      "properties": {
+        "name": "4800 W. Old Bingham ...",
+        "line": "UTARed",
+        "id": 68
+      },
+      "id": 68
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.972,
+          40.595
+        ]
+      },
+      "properties": {
+        "name": "Jordan Valley",
+        "line": "UTARed",
+        "id": 69
+      },
+      "id": 69
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.957,
+          40.599
+        ]
+      },
+      "properties": {
+        "name": "2700 W. Sugar Factory ...",
+        "line": "UTARed",
+        "id": 70
+      },
+      "id": 70
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.936,
+          40.605
+        ]
+      },
+      "properties": {
+        "name": "West Jordan City Center",
+        "line": "UTARed",
+        "id": 71
+      },
+      "id": 71
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.924,
+          40.608
+        ]
+      },
+      "properties": {
+        "name": "Historic Gardner",
+        "line": "UTARed",
+        "id": 72
+      },
+      "id": 72
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.915,
+          40.617
+        ]
+      },
+      "properties": {
+        "name": "Bingham Junction",
+        "line": "UTARed",
+        "id": 73
+      },
+      "id": 73
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.959,
+          40.694
+        ]
+      },
+      "properties": {
+        "name": "West Valley Central",
+        "line": "UTAGreen",
+        "id": 74
+      },
+      "id": 74
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.949,
+          40.705
+        ]
+      },
+      "properties": {
+        "name": "Decker Lake",
+        "line": "UTAGreen",
+        "id": 75
+      },
+      "id": 75
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.94,
+          40.711
+        ]
+      },
+      "properties": {
+        "name": "Redwood Junction",
+        "line": "UTAGreen",
+        "id": 76
+      },
+      "id": 76
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.924,
+          40.72
+        ]
+      },
+      "properties": {
+        "name": "River Trail",
+        "line": "UTAGreen",
+        "id": 77
+      },
+      "id": 77
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.89,
+          40.722
+        ]
+      },
+      "properties": {
+        "name": "South Salt Lake City",
+        "line": "UTASLine",
+        "id": 78,
+        "alternate_names": [
+          "South Salt Lake"
+        ]
+      },
+      "id": 78
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.882,
+          40.722
+        ]
+      },
+      "properties": {
+        "name": "300 East",
+        "line": "UTASLine",
+        "id": 79
+      },
+      "id": 79
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.877,
+          40.722
+        ]
+      },
+      "properties": {
+        "name": "500 East",
+        "line": "UTASLine",
+        "id": 80
+      },
+      "id": 80
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.872,
+          40.723
+        ]
+      },
+      "properties": {
+        "name": "700 East",
+        "line": "UTASLine",
+        "id": 81
+      },
+      "id": 81
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.865,
+          40.723
+        ]
+      },
+      "properties": {
+        "name": "Sugarmont",
+        "line": "UTASLine",
+        "id": 82
+      },
+      "id": 82
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.862,
+          40.723
+        ]
+      },
+      "properties": {
+        "name": "Fairmont",
+        "line": "UTASLine",
+        "id": 83
+      },
+      "id": 83
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.905,
+          40.772
+        ]
+      },
+      "properties": {
+        "name": "North Temple Bridge",
+        "line": "UTAGreen",
+        "id": 84
+      },
+      "id": 84
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.915,
+          40.772
+        ]
+      },
+      "properties": {
+        "name": "Jackson/Euclid",
+        "line": "UTAGreen",
+        "id": 85
+      },
+      "id": 85
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.924,
+          40.771
+        ]
+      },
+      "properties": {
+        "name": "Fairpark",
+        "line": "UTAGreen",
+        "id": 86
+      },
+      "id": 86
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.934,
+          40.772
+        ]
+      },
+      "properties": {
+        "name": "Power",
+        "line": "UTAGreen",
+        "id": 87
+      },
+      "id": 87
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.946,
+          40.772
+        ]
+      },
+      "properties": {
+        "name": "1940 W. North Temple",
+        "line": "UTAGreen",
+        "id": 88
+      },
+      "id": 88
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.98,
+          40.784
+        ]
+      },
+      "properties": {
+        "name": "Airport",
+        "line": "UTAGreen",
+        "id": 89
+      },
+      "id": 89
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.891,
+          40.756
+        ]
+      },
+      "properties": {
+        "name": "600 South",
+        "line": "UTARed",
+        "id": 90
+      },
+      "id": 90
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.891,
+          40.756
+        ]
+      },
+      "properties": {
+        "name": "600 South",
+        "line": "UTABlue",
+        "id": 91
+      },
+      "id": 91
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.891,
+          40.756
+        ]
+      },
+      "properties": {
+        "name": "600 South",
+        "line": "UTAGreen",
+        "id": 92
+      },
+      "id": 92
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.02,
+          40.55
+        ]
+      },
+      "properties": {
+        "name": "South Jordan Downtown",
+        "line": "UTARed",
+        "id": 93
+      },
+      "id": 93
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "city": "sapporo",
+  "continent": "asia",
+  "bbox": [
+    42.9871845,
+    141.2768834,
+    43.1136584,
+    141.4742812
+  ],
+  "localLanguages": [
+    "ja"
+  ],
+  "modes": [
+    "subway",
+    "light_rail",
+    "tram",
+    "rail",
+    "funicular",
+    "monorail",
+    "cable_car",
+    "gondola",
+    "chair_lift"
+  ],
+  "lines": [
+    {
+      "id": "Namboku",
+      "name": "南北線 Namboku Line",
+      "keywords": [
+        "南北線 Namboku Line",
+        "南北線 Namboku",
+        "Namboku",
+        "Namboku Line"
+      ],
+      "order": 0,
+      "icon": "asia/japan/sapporo/namboku.png"
+    },
+    {
+      "id": "Tozai",
+      "name": "東西線 Tōzai Line",
+      "keywords": [
+        "東西線 Tōzai Line",
+        "東西線 Tōzai",
+        "Line T",
+        "T Line",
+        "Route T",
+        "Line T Line",
+        "Route T Line",
+        "Tozai",
+        "Tozai Line"
+      ],
+      "order": 1,
+      "icon": "asia/japan/sapporo/tozai.png"
+    },
+    {
+      "id": "Toho",
+      "name": "東豊線 Tōhō Line",
+      "keywords": [
+        "東豊線 Tōhō Line",
+        "東豊線 Tōhō",
+        "Line T",
+        "T Line",
+        "Route T",
+        "Line H",
+        "H Line",
+        "Route H",
+        "Line T Line",
+        "Route T Line",
+        "Line H Line",
+        "Route H Line",
+        "Toho",
+        "Toho Line"
+      ],
+      "order": 2,
+      "icon": "asia/japan/sapporo/toho.png"
+    },
+    {
+      "id": "Streetcar",
+      "name": "札幌市電 Streetcar",
+      "keywords": [
+        "札幌市電 Streetcar",
+        "Streetcar",
+        "Streetcar Line"
+      ],
+      "order": 3,
+      "icon": "asia/japan/sapporo/sapporosc.png"
+    }
+  ],
+  "stationAliases": {},
+  "stationLocalNames": {},
+  "manualCoords": {}
+}

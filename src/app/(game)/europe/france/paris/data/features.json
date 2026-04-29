@@ -1,0 +1,6308 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.295801222351868, 48.87481054018848],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100153,
+        "name": "Charles-de-Gaulle Étoile",
+        "long_name": "Charles De Gaulle-Étoile",
+        "short_name": "Charles-de-Gaulle Étoile",
+        "type": "METRO",
+        "line": "METRO 2"
+      },
+      "id": 100153
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.32754308172697, 48.873513388661024],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100344,
+        "name": "Haussmann Saint-Lazare",
+        "long_name": "Havre-Caumartin",
+        "short_name": "Haussmann Saint-Lazare",
+        "type": "METRO",
+        "line": "METRO 3"
+      },
+      "id": 100344
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.373922590316754, 48.8434867608722],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100317,
+        "name": "Gare de Lyon",
+        "long_name": "Gare de Lyon",
+        "short_name": "Gare de Lyon",
+        "type": "METRO",
+        "line": "METRO 14"
+      },
+      "id": 100317
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.313915119203154, 48.860028457267546],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100362,
+        "name": "Invalides",
+        "long_name": "Invalides",
+        "short_name": "Invalides",
+        "type": "METRO",
+        "line": "METRO 13"
+      },
+      "id": 100362
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.395461994832739, 48.84737487779481],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100585,
+        "name": "Nation",
+        "long_name": "Nation",
+        "short_name": "Nation",
+        "type": "METRO",
+        "line": "METRO 6"
+      },
+      "id": 100585
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.389625539975954, 48.85216836871572],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 10098,
+        "name": "Rue des Boulets",
+        "long_name": "Rue des Boulets",
+        "short_name": "Rue des Boulets",
+        "type": "METRO",
+        "line": "METRO 9"
+      },
+      "id": 10098
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.285009501382413, 48.892082785032315],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 10016,
+        "name": "Anatole France",
+        "long_name": "Anatole France",
+        "short_name": "Anatole France",
+        "type": "METRO",
+        "line": "METRO 3"
+      },
+      "id": 10016
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.368736572626168, 48.85343696136713],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 10055,
+        "name": "Bastille",
+        "long_name": "Bastille",
+        "short_name": "Bastille",
+        "type": "METRO",
+        "line": "METRO 5"
+      },
+      "id": 10055
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.400918536779802, 48.841338248197566],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 10059,
+        "name": "Bel-Air",
+        "long_name": "Bel-Air",
+        "short_name": "Bel-Air",
+        "type": "METRO",
+        "line": "METRO 6"
+      },
+      "id": 10059
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.380542586000036, 48.869091161091255],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100220,
+        "name": "Couronnes",
+        "long_name": "Couronnes",
+        "short_name": "Couronnes",
+        "type": "METRO",
+        "line": "METRO 2"
+      },
+      "id": 100220
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.386632402066985, 48.83333855831707],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100221,
+        "name": "Cour Saint-Emilion",
+        "long_name": "Cour Saint-Émilion",
+        "short_name": "Cour Saint-Emilion",
+        "type": "METRO",
+        "line": "METRO 14"
+      },
+      "id": 100221
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.396182886452632, 48.839445427444936],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100234,
+        "name": "Daumesnil",
+        "long_name": "Daumesnil",
+        "short_name": "Daumesnil",
+        "type": "METRO",
+        "line": "METRO 8"
+      },
+      "id": 100234
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.293612437187802, 48.85043454807889],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100245,
+        "name": "Dupleix",
+        "long_name": "Dupleix",
+        "short_name": "Dupleix",
+        "type": "METRO",
+        "line": "METRO 6"
+      },
+      "id": 100245
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.301678555482428, 48.81074648584623],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100171,
+        "name": "Châtillon Montrouge",
+        "long_name": "Châtillon-Montrouge",
+        "short_name": "Châtillon-Montrouge",
+        "type": "METRO",
+        "line": "METRO 13"
+      },
+      "id": 100171
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.368126330413209, 48.83494772231993],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100183,
+        "name": "Chevaleret",
+        "long_name": "Chevaleret",
+        "short_name": "Chevaleret",
+        "type": "METRO",
+        "line": "METRO 6"
+      },
+      "id": 100183
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.293951963648717, 48.844794762777255],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100197,
+        "name": "Commerce",
+        "long_name": "Commerce",
+        "short_name": "Commerce",
+        "type": "METRO",
+        "line": "METRO 8"
+      },
+      "id": 100197
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.398746593442591, 48.86516343394703],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100302,
+        "name": "Gambetta",
+        "long_name": "Gambetta",
+        "short_name": "Gambetta",
+        "type": "METRO",
+        "line": "METRO 3bis"
+      },
+      "id": 100302
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.317852783041331, 48.84447014036132],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100280,
+        "name": "Falguière",
+        "long_name": "Falguière",
+        "short_name": "Falguière",
+        "type": "METRO",
+        "line": "METRO 12"
+      },
+      "id": 100280
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.294162015394278, 48.86479406396573],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100359,
+        "name": "Iéna",
+        "long_name": "Iéna",
+        "short_name": "Iéna",
+        "type": "METRO",
+        "line": "METRO 9"
+      },
+      "id": 100359
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.344764611738356, 48.89241892201138],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100382,
+        "name": "Jules Joffrin",
+        "long_name": "Jules Joffrin",
+        "short_name": "Jules Joffrin",
+        "type": "METRO",
+        "line": "METRO 12"
+      },
+      "id": 100382
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.406089161868772, 48.8527251192356],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100509,
+        "name": "Maraîchers",
+        "long_name": "Maraîchers",
+        "short_name": "Maraîchers",
+        "type": "METRO",
+        "line": "METRO 9"
+      },
+      "id": 100509
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.35999576639462, 48.89048545381225],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100519,
+        "name": "Marx Dormoy",
+        "long_name": "Marx Dormoy",
+        "short_name": "Marx Dormoy",
+        "type": "METRO",
+        "line": "METRO 12"
+      },
+      "id": 100519
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.261623492404885, 48.84524756452023],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100544,
+        "name": "Michel-Ange - Molitor",
+        "long_name": "Michel Ange-Molitor",
+        "short_name": "Michel-Ange - Molitor",
+        "type": "METRO",
+        "line": "METRO 10"
+      },
+      "id": 100544
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.31445603617697, 48.873769988661],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100548,
+        "name": "Miromesnil",
+        "long_name": "Miromesnil",
+        "short_name": "Miromesnil",
+        "type": "METRO",
+        "line": "METRO 13"
+      },
+      "id": 100548
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.341108591634066, 48.86080629033762],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100481,
+        "name": "Louvre Rivoli",
+        "long_name": "Louvre-Rivoli",
+        "short_name": "Louvre Rivoli",
+        "type": "METRO",
+        "line": "METRO 1"
+      },
+      "id": 100481
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.333924890479715, 48.91196489694664],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100493,
+        "name": "Mairie de Saint-Ouen",
+        "long_name": "Mairie de Saint-Ouen",
+        "short_name": "Mairie de Saint-Ouen",
+        "type": "METRO",
+        "line": "METRO 13"
+      },
+      "id": 100493
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.385913174273275, 48.88685693056751],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100614,
+        "name": "Ourcq",
+        "long_name": "Ourcq",
+        "short_name": "Ourcq",
+        "type": "METRO",
+        "line": "METRO 5"
+      },
+      "id": 100614
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.312812774836901, 48.84267681904916],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100629,
+        "name": "Pasteur",
+        "long_name": "Pasteur",
+        "short_name": "Pasteur",
+        "type": "METRO",
+        "line": "METRO 6"
+      },
+      "id": 100629
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.385882449326147, 48.8631232137076],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100634,
+        "name": "Père Lachaise",
+        "long_name": "Père Lachaise",
+        "short_name": "Père Lachaise",
+        "type": "METRO",
+        "line": "METRO 3"
+      },
+      "id": 100634
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.392983964817393, 48.87694984717581],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100651,
+        "name": "Place des Fêtes",
+        "long_name": "Place des Fêtes",
+        "short_name": "Place des Fêtes",
+        "type": "METRO",
+        "line": "METRO 7bis"
+      },
+      "id": 100651
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.352224728183083, 48.842866829748104],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100655,
+        "name": "Place Monge",
+        "long_name": "Place Monge",
+        "short_name": "Place Monge",
+        "type": "METRO",
+        "line": "METRO 7"
+      },
+      "id": 100655
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.367901414841736, 48.86496414484482],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100602,
+        "name": "Oberkampf",
+        "long_name": "Oberkampf",
+        "short_name": "Oberkampf",
+        "type": "METRO",
+        "line": "METRO 5"
+      },
+      "id": 100602
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.33149398708709, 48.87130850207131],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100606,
+        "name": "Opéra",
+        "long_name": "Opéra",
+        "short_name": "Opéra",
+        "type": "METRO",
+        "line": "METRO 3"
+      },
+      "id": 100606
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.411894837056435, 48.85377278708037],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100693,
+        "name": "Porte de Montreuil",
+        "long_name": "Porte de Montreuil",
+        "short_name": "Porte de Montreuil",
+        "type": "METRO",
+        "line": "METRO 9"
+      },
+      "id": 100693
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.360956490023828, 48.85523625186787],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100777,
+        "name": "Saint-Paul (Le Marais)",
+        "long_name": "Saint-Paul",
+        "short_name": "Saint-Paul (Le Marais)",
+        "type": "METRO",
+        "line": "METRO 1"
+      },
+      "id": 100777
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.391784450963432, 48.888417477833464],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100694,
+        "name": "Porte de Pantin",
+        "long_name": "Porte de Pantin",
+        "short_name": "Porte de Pantin",
+        "type": "METRO",
+        "line": "METRO 5"
+      },
+      "id": 100694
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.25712222983262, 48.83796121350173],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100695,
+        "name": "Porte de Saint-Cloud",
+        "long_name": "Porte de Saint-Cloud",
+        "short_name": "Porte de Saint-Cloud",
+        "type": "METRO",
+        "line": "METRO 9"
+      },
+      "id": 100695
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.305534669653894, 48.827795542560736],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100700,
+        "name": "Porte de Vanves",
+        "long_name": "Porte de Vanves",
+        "short_name": "Porte de Vanves",
+        "type": "METRO",
+        "line": "METRO 13"
+      },
+      "id": 100700
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.35970521674602, 48.81922334867439],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100703,
+        "name": "Porte d'Italie",
+        "long_name": "Porte d'Italie",
+        "short_name": "Porte d'Italie",
+        "type": "METRO",
+        "line": "METRO 7"
+      },
+      "id": 100703
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.334437714865551, 48.865737865732086],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100715,
+        "name": "Pyramides",
+        "long_name": "Pyramides",
+        "short_name": "Pyramides",
+        "type": "METRO",
+        "line": "METRO 7"
+      },
+      "id": 100715
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.270109138941893, 48.85548504946991],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100722,
+        "name": "Ranelagh",
+        "long_name": "Ranelagh",
+        "short_name": "Ranelagh",
+        "type": "METRO",
+        "line": "METRO 9"
+      },
+      "id": 100722
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.351358915532991, 48.866496342855754],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100725,
+        "name": "Réaumur Sébastopol",
+        "long_name": "Réaumur Sébastopol",
+        "short_name": "Réaumur Sébastopol",
+        "type": "METRO",
+        "line": "METRO 3"
+      },
+      "id": 100725
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.364247995104706, 48.867026787539906],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100730,
+        "name": "République",
+        "long_name": "République",
+        "short_name": "République",
+        "type": "METRO",
+        "line": "METRO 3"
+      },
+      "id": 100730
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.333776138218466, 48.853718933065686],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100767,
+        "name": "Saint-Germain-des-Prés",
+        "long_name": "Saint-Germain-des-Prés",
+        "short_name": "Saint-Germain-des-Prés",
+        "type": "METRO",
+        "line": "METRO 4"
+      },
+      "id": 100767
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.379741893177553, 48.86428575771083],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100774,
+        "name": "Rue Saint-Maur",
+        "long_name": "Rue Saint-Maur",
+        "short_name": "Rue Saint-Maur",
+        "type": "METRO",
+        "line": "METRO 3"
+      },
+      "id": 100774
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.287580162529652, 48.86361093671121],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100862,
+        "name": "Trocadéro",
+        "long_name": "Trocadéro",
+        "short_name": "Trocadéro",
+        "type": "METRO",
+        "line": "METRO 6"
+      },
+      "id": 100862
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.319740313298555, 48.818676408977936],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 1001134,
+        "name": "Mairie de Montrouge",
+        "long_name": "Mairie de Montrouge",
+        "short_name": "Mairie de Montrouge",
+        "type": "METRO",
+        "line": "METRO 4"
+      },
+      "id": 1001134
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.344847748752398, 48.89740222196378],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100690,
+        "name": "Porte de Clignancourt",
+        "long_name": "Porte de Clignancourt",
+        "short_name": "Porte de Clignancourt",
+        "type": "METRO",
+        "line": "METRO 4"
+      },
+      "id": 100690
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.359507868815593, 48.89724528715874],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100691,
+        "name": "Porte de La Chapelle",
+        "long_name": "Porte de la Chapelle",
+        "short_name": "Porte de La Chapelle",
+        "type": "METRO",
+        "line": "METRO 12"
+      },
+      "id": 100691
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.358047505360746, 48.876126352014495],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100314,
+        "name": "Gare de l'Est",
+        "long_name": "Gare de l'Est",
+        "short_name": "Gare de l'Est",
+        "type": "METRO",
+        "line": "METRO 5"
+      },
+      "id": 100314
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.320984834266813, 48.84232743679192],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100563,
+        "name": "Gare Montparnasse",
+        "long_name": "Montparnasse-Bienvenüe",
+        "short_name": "Montparnasse Bienvenue",
+        "type": "METRO",
+        "line": "METRO 13"
+      },
+      "id": 100563
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.337949775692069, 48.884594207093436],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 1002,
+        "name": "Abbesses",
+        "long_name": "Abbesses",
+        "short_name": "Abbesses",
+        "type": "METRO",
+        "line": "METRO 12"
+      },
+      "id": 1002
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.320998191954084, 48.860786962592236],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 10030,
+        "name": "Assemblée Nationale / Lille - Université",
+        "long_name": "Assemblée Nationale",
+        "short_name": "Assemblée Nationale",
+        "type": "METRO",
+        "line": "METRO 12"
+      },
+      "id": 10030
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.351008461406026, 48.85745183080862],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100353,
+        "name": "Hôtel de Ville de Paris - 4ème Arrondissement",
+        "long_name": "Hôtel de Ville",
+        "short_name": "Hôtel de Ville",
+        "type": "METRO",
+        "line": "METRO 11"
+      },
+      "id": 100353
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.298464191958534, 48.822583706802426],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100504,
+        "name": "Malakoff - Plateau De Vanves",
+        "long_name": "Malakoff - Plateau de Vanves",
+        "short_name": "Malakoff - Plateau De Vanves",
+        "type": "METRO",
+        "line": "METRO 13"
+      },
+      "id": 100504
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.364378741179748, 48.8811921181366],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100477,
+        "name": "Louis Blanc",
+        "long_name": "Louis Blanc",
+        "short_name": "Louis Blanc",
+        "type": "METRO",
+        "line": "METRO 7bis"
+      },
+      "id": 100477
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.358551348202203, 48.82218265762191],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100497,
+        "name": "Maison Blanche",
+        "long_name": "Maison Blanche",
+        "short_name": "Maison Blanche",
+        "type": "METRO",
+        "line": "METRO 7"
+      },
+      "id": 100497
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.298310373761528, 48.87797270048515],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100850,
+        "name": "Ternes",
+        "long_name": "Ternes",
+        "short_name": "Ternes",
+        "type": "METRO",
+        "line": "METRO 2"
+      },
+      "id": 100850
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.373456887852549, 48.88796756081547],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100739,
+        "name": "Riquet",
+        "long_name": "Riquet",
+        "short_name": "Riquet",
+        "type": "METRO",
+        "line": "METRO 7"
+      },
+      "id": 100739
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.286243169328236, 48.86306501928347],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100863,
+        "name": "Trocadéro",
+        "long_name": "Trocadéro",
+        "short_name": "Trocadéro",
+        "type": "METRO",
+        "line": "METRO 9"
+      },
+      "id": 100863
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.257744680363202, 48.84797154056247],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100683,
+        "name": "Porte d'Auteuil",
+        "long_name": "Porte d'Auteuil",
+        "short_name": "Porte d'Auteuil",
+        "type": "METRO",
+        "line": "METRO 10"
+      },
+      "id": 100683
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.283162242230229, 48.87755125086984],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 1001,
+        "name": "Porte Maillot",
+        "long_name": "Porte Maillot",
+        "short_name": "Porte Maillot",
+        "type": "METRO",
+        "line": "METRO 1"
+      },
+      "id": 1001
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.312791961501291, 48.894980809790994],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 1001227,
+        "name": "Porte de Clichy",
+        "long_name": "Porte de Clichy",
+        "short_name": "Porte de Clichy",
+        "type": "METRO",
+        "line": "METRO 14"
+      },
+      "id": 1001227
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.31489073005888, 48.860381278263674],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100363,
+        "name": "Invalides",
+        "long_name": "Invalides",
+        "short_name": "Invalides (r. Esnault-Pelterie)",
+        "type": "METRO",
+        "line": "METRO 8"
+      },
+      "id": 100363
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.361965302229959, 48.87844429946005],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100161,
+        "name": "Château Landon",
+        "long_name": "Château-Landon",
+        "short_name": "Gare de l'Est",
+        "type": "METRO",
+        "line": "METRO 7"
+      },
+      "id": 100161
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.304070391218759, 48.87932978774786],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100218,
+        "name": "Courcelles",
+        "long_name": "Courcelles",
+        "short_name": "Courcelles",
+        "type": "METRO",
+        "line": "METRO 2"
+      },
+      "id": 100218
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.449412805145807, 48.7966821340621],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100223,
+        "name": "Créteil L'Échat",
+        "long_name": "Créteil–L’Échat",
+        "short_name": "Créteil L'Échat",
+        "type": "METRO",
+        "line": "METRO 8"
+      },
+      "id": 100223
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.377090439088875, 48.89090644862382],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100227,
+        "name": "Crimée",
+        "long_name": "Crimée",
+        "short_name": "Crimée",
+        "type": "METRO",
+        "line": "METRO 7"
+      },
+      "id": 100227
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.35160647530219, 48.84023383539418],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100127,
+        "name": "Censier Daubenton",
+        "long_name": "Censier-Daubenton",
+        "short_name": "Censier Daubenton",
+        "type": "METRO",
+        "line": "METRO 7"
+      },
+      "id": 100127
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.349559430194617, 48.88671096710697],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100162,
+        "name": "Château Rouge",
+        "long_name": "Château Rouge",
+        "short_name": "Château Rouge",
+        "type": "METRO",
+        "line": "METRO 4"
+      },
+      "id": 100162
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.348147481005499, 48.856942735225],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100169,
+        "name": "Châtelet",
+        "long_name": "Châtelet",
+        "short_name": "Châtelet",
+        "type": "METRO",
+        "line": "METRO 7"
+      },
+      "id": 100169
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.334456291376851, 48.87280447497173],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100174,
+        "name": "Chaussée d'Antin - La Fayette",
+        "long_name": "Chaussée d'Antin - La Fayette",
+        "short_name": "Chaussée d'Antin - La Fayette",
+        "type": "METRO",
+        "line": "METRO 9"
+      },
+      "id": 100174
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.382160158371537, 48.89465585739898],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100209,
+        "name": "Corentin Cariou",
+        "long_name": "Corentin Cariou",
+        "short_name": "Corentin Cariou",
+        "type": "METRO",
+        "line": "METRO 7"
+      },
+      "id": 100209
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.298625127144873, 48.849575212975026],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100420,
+        "name": "La Motte Picquet - Grenelle",
+        "long_name": "La Motte Picquet-Grenelle",
+        "short_name": "La Motte Picquet - Grenelle",
+        "type": "METRO",
+        "line": "METRO 10"
+      },
+      "id": 100420
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.328530139890379, 48.88399982396176],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100649,
+        "name": "Place de Clichy",
+        "long_name": "Place de Clichy",
+        "short_name": "Place de Clichy",
+        "type": "METRO",
+        "line": "METRO 2"
+      },
+      "id": 100649
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.365821546282088, 48.884284149322156],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100808,
+        "name": "Stalingrad",
+        "long_name": "Stalingrad",
+        "short_name": "Stalingrad",
+        "type": "METRO",
+        "line": "METRO 2"
+      },
+      "id": 100808
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.369580855577829, 48.884798251049716],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100810,
+        "name": "Stalingrad",
+        "long_name": "Stalingrad",
+        "short_name": "Stalingrad",
+        "type": "METRO",
+        "line": "METRO 7"
+      },
+      "id": 100810
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.321801731063168, 48.88233342277264],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100746,
+        "name": "Rome",
+        "long_name": "Rome",
+        "short_name": "Rome",
+        "type": "METRO",
+        "line": "METRO 2"
+      },
+      "id": 100746
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.359366296360598, 48.93677678897849],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100761,
+        "name": "Basilique de Saint-Denis",
+        "long_name": "Basilique de Saint-Denis",
+        "short_name": "Basilique de Saint-Denis",
+        "type": "METRO",
+        "line": "METRO 13"
+      },
+      "id": 100761
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.237436786980606, 48.83173796343587],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 10074,
+        "name": "Billancourt",
+        "long_name": "Billancourt",
+        "short_name": "Billancourt",
+        "type": "METRO",
+        "line": "METRO 9"
+      },
+      "id": 10074
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.278330259866023, 48.836295300607894],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 10047,
+        "name": "Balard",
+        "long_name": "Balard",
+        "short_name": "Balard",
+        "type": "METRO",
+        "line": "METRO 8"
+      },
+      "id": 10047
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.384699760132843, 48.85509449354248],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100156,
+        "name": "Charonne",
+        "long_name": "Charonne",
+        "short_name": "Charonne",
+        "type": "METRO",
+        "line": "METRO 9"
+      },
+      "id": 100156
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.317360296897531, 48.803489717990644],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 1001250,
+        "name": "Bagneux - Lucie Aubrac",
+        "long_name": "Bagneux - Lucie Aubrac",
+        "short_name": "Bagneux - Lucie Aubrac",
+        "type": "METRO",
+        "line": "METRO 4"
+      },
+      "id": 1001250
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.33285230996089, 48.834292979538596],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100237,
+        "name": "Denfert Rochereau",
+        "long_name": "Denfert-Rochereau",
+        "short_name": "Denfert-Rochereau",
+        "type": "METRO",
+        "line": "METRO 6"
+      },
+      "id": 100237
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.327695409630173, 48.87371340577332],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100345,
+        "name": "Haussmann Saint-Lazare",
+        "long_name": "Havre-Caumartin",
+        "short_name": "Haussmann Saint-Lazare",
+        "type": "METRO",
+        "line": "METRO 9"
+      },
+      "id": 100345
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.355791907531139, 48.87979369318188],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100318,
+        "name": "Gare du Nord",
+        "long_name": "Gare du Nord",
+        "short_name": "Gare de l'Est",
+        "type": "METRO",
+        "line": "METRO 4"
+      },
+      "id": 100318
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.395879435185688, 48.84894464412929],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100586,
+        "name": "Nation",
+        "long_name": "Nation",
+        "short_name": "Nation",
+        "type": "METRO",
+        "line": "METRO 9"
+      },
+      "id": 100586
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.237018056395013, 48.89218707551516],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100414,
+        "name": "La Défense (Grande Arche)",
+        "long_name": "La Défense",
+        "short_name": "La Défense",
+        "type": "METRO",
+        "line": "METRO 1"
+      },
+      "id": 100414
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.313772157405781, 48.8942522613044],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100689,
+        "name": "Porte de Clichy",
+        "long_name": "Porte de Clichy",
+        "short_name": "Porte de Clichy",
+        "type": "METRO",
+        "line": "METRO 13"
+      },
+      "id": 100689
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.370209339755371, 48.8561407102205],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100107,
+        "name": "Bréguet-Sabin",
+        "long_name": "Bréguet-Sabin",
+        "short_name": "Bréguet-Sabin",
+        "type": "METRO",
+        "line": "METRO 5"
+      },
+      "id": 100107
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.289334532778806, 48.85394260527926],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 10075,
+        "name": "Bir-Hakeim",
+        "long_name": "Bir-Hakeim",
+        "short_name": "Bir-Hakeim",
+        "type": "METRO",
+        "line": "METRO 6"
+      },
+      "id": 10075
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.449189904479335, 48.906374770235026],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 10079,
+        "name": "Bobigny Pablo Picasso",
+        "long_name": "Bobigny Pablo Picasso",
+        "short_name": "Bobigny Pablo Picasso",
+        "type": "METRO",
+        "line": "METRO 5"
+      },
+      "id": 10079
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.356736756794993, 48.86558647756452],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 10028,
+        "name": "Arts et Métiers",
+        "long_name": "Arts et Métiers",
+        "short_name": "Arts et Métiers",
+        "type": "METRO",
+        "line": "METRO 3"
+      },
+      "id": 10028
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.350414872010463, 48.82979051275835],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100212,
+        "name": "Corvisart",
+        "long_name": "Corvisart",
+        "short_name": "Corvisart",
+        "type": "METRO",
+        "line": "METRO 6"
+      },
+      "id": 100212
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.395703289436392, 48.8395496446341],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100233,
+        "name": "Daumesnil",
+        "long_name": "Daumesnil",
+        "short_name": "Daumesnil",
+        "type": "METRO",
+        "line": "METRO 6"
+      },
+      "id": 100233
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.422376142845622, 48.81480300606579],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 10012,
+        "name": "École Vétérinaire de Maisons-Alfort",
+        "long_name": "École Vétérinaire de Maisons-Alfort",
+        "short_name": "École Vétérinaire de Maisons-Alfort",
+        "type": "METRO",
+        "line": "METRO 8"
+      },
+      "id": 10012
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.381614511928965, 48.87851411308943],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100120,
+        "name": "Buttes Chaumont",
+        "long_name": "Buttes-Chaumont",
+        "short_name": "Buttes Chaumont",
+        "type": "METRO",
+        "line": "METRO 7bis"
+      },
+      "id": 100120
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.302968297817313, 48.84750708106227],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100123,
+        "name": "Cambronne",
+        "long_name": "Cambronne",
+        "short_name": "Cambronne",
+        "type": "METRO",
+        "line": "METRO 6"
+      },
+      "id": 100123
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.347321317067426, 48.854936377424146],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100188,
+        "name": "Cité",
+        "long_name": "Cité",
+        "short_name": "Cité",
+        "type": "METRO",
+        "line": "METRO 4"
+      },
+      "id": 100188
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.294685111702554, 48.91638230898788],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100297,
+        "name": "Gabriel Péri",
+        "long_name": "Gabriel Péri",
+        "short_name": "Gabriel Péri",
+        "type": "METRO",
+        "line": "METRO 13"
+      },
+      "id": 100297
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.355050264434754, 48.84595066481561],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100384,
+        "name": "Jussieu",
+        "long_name": "Jussieu",
+        "short_name": "Jussieu",
+        "type": "METRO",
+        "line": "METRO 7"
+      },
+      "id": 100384
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.297077796972984, 48.815307530265535],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100505,
+        "name": "Malakoff - Étienne Dolet",
+        "long_name": "Malakoff - Rue Étienne Dolet",
+        "short_name": "Malakoff Rue Étienne Dolet",
+        "type": "METRO",
+        "line": "METRO 13"
+      },
+      "id": 100505
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.348208774185468, 48.85008987711798],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100525,
+        "name": "Maubert Mutualité",
+        "long_name": "Maubert-Mutualité",
+        "short_name": "Maubert Mutualité",
+        "type": "METRO",
+        "line": "METRO 10"
+      },
+      "id": 100525
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.264082030746221, 48.84789564927389],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100543,
+        "name": "Michel-Ange - Auteuil",
+        "long_name": "Michel Ange-Auteuil",
+        "short_name": "Michel-Ange - Auteuil",
+        "type": "METRO",
+        "line": "METRO 9"
+      },
+      "id": 100543
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.261745124963671, 48.84505817137918],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100545,
+        "name": "Michel-Ange - Molitor",
+        "long_name": "Michel Ange-Molitor",
+        "short_name": "Michel-Ange - Molitor",
+        "type": "METRO",
+        "line": "METRO 9"
+      },
+      "id": 100545
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.272763753316159, 48.8471310072617],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100547,
+        "name": "Mirabeau",
+        "long_name": "Mirabeau",
+        "short_name": "Mirabeau",
+        "type": "METRO",
+        "line": "METRO 10"
+      },
+      "id": 100547
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.298930911748061, 48.84874166478328],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100421,
+        "name": "La Motte Picquet - Grenelle",
+        "long_name": "La Motte Picquet-Grenelle",
+        "short_name": "La Motte Picquet - Grenelle",
+        "type": "METRO",
+        "line": "METRO 6"
+      },
+      "id": 100421
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.405851943981901, 48.82662006452886],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100466,
+        "name": "Liberté",
+        "long_name": "Liberté",
+        "short_name": "Liberté",
+        "type": "METRO",
+        "line": "METRO 8"
+      },
+      "id": 100466
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.327022200889502, 48.879634759722414],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100467,
+        "name": "Liège",
+        "long_name": "Liège",
+        "short_name": "Liège",
+        "type": "METRO",
+        "line": "METRO 13"
+      },
+      "id": 100467
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.336496460942477, 48.862348029905775],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100618,
+        "name": "Palais Royal - Musée Du Louvre",
+        "long_name": "Palais Royal - Musée du Louvre",
+        "short_name": "Palais Royal - Musée Du Louvre",
+        "type": "METRO",
+        "line": "METRO 1"
+      },
+      "id": 100618
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.401289019827348, 48.84506157901035],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100641,
+        "name": "Picpus",
+        "long_name": "Picpus",
+        "short_name": "Picpus",
+        "type": "METRO",
+        "line": "METRO 6"
+      },
+      "id": 100641
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.35558027407791, 48.830972672053754],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100652,
+        "name": "Place d'Italie - Italie 2",
+        "long_name": "Place d'Italie",
+        "short_name": "Place d'Italie",
+        "type": "METRO",
+        "line": "METRO 5"
+      },
+      "id": 100652
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.35564364303371, 48.831433629197946],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100654,
+        "name": "Place d'Italie - Italie 2",
+        "long_name": "Place d'Italie",
+        "short_name": "Place d'Italie",
+        "type": "METRO",
+        "line": "METRO 7"
+      },
+      "id": 100654
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.231028100202621, 48.829746119059685],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100671,
+        "name": "Pont de Sèvres",
+        "long_name": "Pont de Sèvres",
+        "short_name": "Pont de Sèvres",
+        "type": "METRO",
+        "line": "METRO 9"
+      },
+      "id": 100671
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.310018932408273, 48.872045861792856],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100778,
+        "name": "Saint-Philippe du Roule",
+        "long_name": "Saint-Philippe du Roule",
+        "short_name": "Saint-Philippe du Roule",
+        "type": "METRO",
+        "line": "METRO 9"
+      },
+      "id": 100778
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.326792785027681, 48.846878237916876],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100779,
+        "name": "Saint-Placide",
+        "long_name": "Saint-Placide",
+        "short_name": "Saint-Placide",
+        "type": "METRO",
+        "line": "METRO 4"
+      },
+      "id": 100779
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.326822568897497, 48.851762051560954],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100799,
+        "name": "Sèvres Babylone",
+        "long_name": "Sèvres-Babylone",
+        "short_name": "Sèvres Babylone",
+        "type": "METRO",
+        "line": "METRO 12"
+      },
+      "id": 100799
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.328942812768302, 48.89737479549444],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100696,
+        "name": "Porte de Saint-Ouen",
+        "long_name": "Porte de Saint-Ouen",
+        "short_name": "Porte de Saint-Ouen",
+        "type": "METRO",
+        "line": "METRO 13"
+      },
+      "id": 100696
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.406480156998485, 48.87717481837107],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100697,
+        "name": "Porte des Lilas",
+        "long_name": "Porte des Lilas",
+        "short_name": "Porte des Lilas",
+        "type": "METRO",
+        "line": "METRO 11"
+      },
+      "id": 100697
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.369290587346029, 48.82135578287942],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100704,
+        "name": "Porte d'Ivry",
+        "long_name": "Porte d'Ivry",
+        "short_name": "Porte d'Ivry",
+        "type": "METRO",
+        "line": "METRO 7"
+      },
+      "id": 100704
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.325575636212245, 48.82341162805273],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100706,
+        "name": "Porte d'Orléans",
+        "long_name": "Porte d'Orléans",
+        "short_name": "Porte d'Orléans (Général Leclerc)",
+        "type": "METRO",
+        "line": "METRO 4"
+      },
+      "id": 100706
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.330754192086215, 48.838964279775986],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100723,
+        "name": "Raspail",
+        "long_name": "Raspail",
+        "short_name": "Raspail",
+        "type": "METRO",
+        "line": "METRO 4"
+      },
+      "id": 100723
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.363740437195039, 48.867827098792525],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100731,
+        "name": "République",
+        "long_name": "République",
+        "short_name": "République",
+        "type": "METRO",
+        "line": "METRO 5"
+      },
+      "id": 100731
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.362757380002762, 48.86760087916799],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100732,
+        "name": "République",
+        "long_name": "République",
+        "short_name": "République",
+        "type": "METRO",
+        "line": "METRO 8"
+      },
+      "id": 100732
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.387025242098631, 48.84712872130608],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100735,
+        "name": "Reuilly Diderot",
+        "long_name": "Reuilly-Diderot",
+        "short_name": "Reuilly Diderot",
+        "type": "METRO",
+        "line": "METRO 8"
+      },
+      "id": 100735
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.278441648833148, 48.86394012976092],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100751,
+        "name": "Rue de la Pompe",
+        "long_name": "Rue de la Pompe",
+        "short_name": "Rue de la Pompe",
+        "type": "METRO",
+        "line": "METRO 9"
+      },
+      "id": 100751
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.360967167698854, 48.838427296033],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100773,
+        "name": "Saint-Marcel",
+        "long_name": "Saint-Marcel",
+        "short_name": "Saint-Marcel",
+        "type": "METRO",
+        "line": "METRO 5"
+      },
+      "id": 100773
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.307948677974289, 48.8415055214255],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100919,
+        "name": "Volontaires",
+        "long_name": "Volontaires",
+        "short_name": "Volontaires",
+        "type": "METRO",
+        "line": "METRO 12"
+      },
+      "id": 100919
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.304674440528395, 48.883809200299005],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100923,
+        "name": "Wagram",
+        "long_name": "Wagram",
+        "short_name": "Wagram",
+        "type": "METRO",
+        "line": "METRO 3"
+      },
+      "id": 100923
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.315056637317088, 48.856871378314686],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100873,
+        "name": "Varenne",
+        "long_name": "Varenne",
+        "short_name": "Varenne",
+        "type": "METRO",
+        "line": "METRO 13"
+      },
+      "id": 100873
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.286279577529782, 48.923103778731836],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 1001007,
+        "name": "Les Agnettes",
+        "long_name": "Les Agnettes",
+        "short_name": "Les Agnettes",
+        "type": "METRO",
+        "line": "METRO 13"
+      },
+      "id": 1001007
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.367804105603498, 48.78756279201086],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100897,
+        "name": "Villejuif Louis Aragon",
+        "long_name": "Villejuif - Louis Aragon",
+        "short_name": "Villejuif Louis Aragon",
+        "type": "METRO",
+        "line": "METRO 7"
+      },
+      "id": 100897
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.367210867785615, 48.86116886366122],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100780,
+        "name": "Saint-Sébastien Froissart",
+        "long_name": "Saint-Sébastien-Froissart",
+        "short_name": "Saint-Sébastien Froissart",
+        "type": "METRO",
+        "line": "METRO 8"
+      },
+      "id": 100780
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.37955401121414, 48.840001387714224],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 10066,
+        "name": "Gare de Bercy",
+        "long_name": "Bercy",
+        "short_name": "Bercy",
+        "type": "METRO",
+        "line": "METRO 14"
+      },
+      "id": 10066
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.425326890166255, 48.89545467211839],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 10080,
+        "name": "Bobigny - Pantin - Raymond Queneau",
+        "long_name": "Bobigny-Pantin - Raymond Queneau",
+        "short_name": "Bobigny-Pantin - Raymond Queneau",
+        "type": "METRO",
+        "line": "METRO 5"
+      },
+      "id": 10080
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.390482133980388, 48.844065596373376],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100555,
+        "name": "Montgallet",
+        "long_name": "Montgallet",
+        "short_name": "Montgallet",
+        "type": "METRO",
+        "line": "METRO 8"
+      },
+      "id": 100555
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.408031037075815, 48.86460037244116],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100684,
+        "name": "Porte de Bagnolet",
+        "long_name": "Porte de Bagnolet",
+        "short_name": "Porte de Bagnolet",
+        "type": "METRO",
+        "line": "METRO 3"
+      },
+      "id": 100684
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.293529966337255, 48.88600615057262],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100685,
+        "name": "Porte de Champerret",
+        "long_name": "Porte de Champerret",
+        "short_name": "Porte de Champerret",
+        "type": "METRO",
+        "line": "METRO 3"
+      },
+      "id": 100685
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.282143378170891, 48.838734857902175],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100479,
+        "name": "Lourmel",
+        "long_name": "Lourmel",
+        "short_name": "Lourmel",
+        "type": "METRO",
+        "line": "METRO 8"
+      },
+      "id": 100479
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.335502051727558, 48.85301676698268],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100486,
+        "name": "Mabillon",
+        "long_name": "Mabillon",
+        "short_name": "Mabillon",
+        "type": "METRO",
+        "line": "METRO 10"
+      },
+      "id": 100486
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.390860952323608, 48.85806226082792],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100640,
+        "name": "Philippe Auguste",
+        "long_name": "Philippe Auguste",
+        "short_name": "Philippe Auguste",
+        "type": "METRO",
+        "line": "METRO 2"
+      },
+      "id": 100640
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.280413812210845, 48.89715409503059],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100668,
+        "name": "Pont de Levallois",
+        "long_name": "Pont de Levallois",
+        "short_name": "Pont de Levallois - Bécon",
+        "type": "METRO",
+        "line": "METRO 3"
+      },
+      "id": 100668
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.36591010685298, 48.84648464963565],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100718,
+        "name": "Quai de la Rapée",
+        "long_name": "Quai de la Rapée",
+        "short_name": "Quai de la Rapée",
+        "type": "METRO",
+        "line": "METRO 5"
+      },
+      "id": 100718
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.367173024477846, 48.8271636169609],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 1001006,
+        "name": "Olympiades",
+        "long_name": "Olympiades",
+        "short_name": "Olympiades",
+        "type": "METRO",
+        "line": "METRO 14"
+      },
+      "id": 1001006
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.445574101030144, 48.803355236116154],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100499,
+        "name": "Maisons-Alfort Les Juilliottes",
+        "long_name": "Maisons-Alfort-Les Juilliottes",
+        "short_name": "Maisons-Alfort Les Juilliottes",
+        "type": "METRO",
+        "line": "METRO 8"
+      },
+      "id": 100499
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.278400386366102, 48.84615720389792],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100377,
+        "name": "Javel",
+        "long_name": "Javel - André Citroën",
+        "short_name": "Javel",
+        "type": "METRO",
+        "line": "METRO 10"
+      },
+      "id": 100377
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.434538451473473, 48.85778351365199],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100228,
+        "name": "Croix de Chavaux",
+        "long_name": "Croix de Chavaux",
+        "short_name": "Croix de Chavaux",
+        "type": "METRO",
+        "line": "METRO 9"
+      },
+      "id": 100228
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.344572482089328, 48.87600859287756],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100122,
+        "name": "Cadet",
+        "long_name": "Cadet",
+        "short_name": "Cadet",
+        "type": "METRO",
+        "line": "METRO 7"
+      },
+      "id": 100122
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.345803056189526, 48.85928732423646],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100166,
+        "name": "Châtelet",
+        "long_name": "Châtelet",
+        "short_name": "Châtelet",
+        "type": "METRO",
+        "line": "METRO 1"
+      },
+      "id": 100166
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.333946682528629, 48.87325274554992],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100173,
+        "name": "Chaussée d'Antin - La Fayette",
+        "long_name": "Chaussée d'Antin - La Fayette",
+        "short_name": "Chaussée d'Antin - La Fayette",
+        "type": "METRO",
+        "line": "METRO 7"
+      },
+      "id": 100173
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.298625127144873, 48.849575212975026],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100422,
+        "name": "La Motte Picquet - Grenelle",
+        "long_name": "La Motte Picquet-Grenelle",
+        "short_name": "La Motte Picquet - Grenelle",
+        "type": "METRO",
+        "line": "METRO 8"
+      },
+      "id": 100422
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.344561060662729, 48.871256545007405],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100754,
+        "name": "Grands Boulevards",
+        "long_name": "Grands Boulevards",
+        "short_name": "Grands Boulevards",
+        "type": "METRO",
+        "line": "METRO 8"
+      },
+      "id": 100754
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.325476374447049, 48.87542071571821],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100770,
+        "name": "Gare Saint-Lazare",
+        "long_name": "Saint-Lazare",
+        "short_name": "Saint-Lazare",
+        "type": "METRO",
+        "line": "METRO 13"
+      },
+      "id": 100770
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.368184114950699, 48.85710325722025],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100180,
+        "name": "Chemin Vert",
+        "long_name": "Chemin Vert",
+        "short_name": "Chemin Vert",
+        "type": "METRO",
+        "line": "METRO 8"
+      },
+      "id": 100180
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.396912847086626, 48.86497810694326],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100301,
+        "name": "Gambetta",
+        "long_name": "Gambetta",
+        "short_name": "Gambetta",
+        "type": "METRO",
+        "line": "METRO 3"
+      },
+      "id": 100301
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.360399500808731, 48.88439967613092],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100409,
+        "name": "La Chapelle",
+        "long_name": "La Chapelle",
+        "short_name": "La Chapelle",
+        "type": "METRO",
+        "line": "METRO 2"
+      },
+      "id": 100409
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.353818793592879, 48.86940219572108],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100838,
+        "name": "Strasbourg - Saint-Denis",
+        "long_name": "Strasbourg-Saint-Denis",
+        "short_name": "Strasbourg Saint-Denis",
+        "type": "METRO",
+        "line": "METRO 9"
+      },
+      "id": 100838
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.314721004746195, 48.881094426231876],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100907,
+        "name": "Villiers",
+        "long_name": "Villiers",
+        "short_name": "Villiers",
+        "type": "METRO",
+        "line": "METRO 2"
+      },
+      "id": 100907
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.348491131078988, 48.87059047707668],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 10090,
+        "name": "Bonne Nouvelle",
+        "long_name": "Bonne Nouvelle",
+        "short_name": "Bonne Nouvelle",
+        "type": "METRO",
+        "line": "METRO 8"
+      },
+      "id": 10090
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.308607493526255, 48.86943888072466],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100293,
+        "name": "Franklin D. Roosevelt",
+        "long_name": "Franklin D. Roosevelt",
+        "short_name": "Franklin D. Roosevelt",
+        "type": "METRO",
+        "line": "METRO 1"
+      },
+      "id": 100293
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.380735606395094, 48.913710544615356],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 1001252,
+        "name": "Mairie d'Aubervilliers",
+        "long_name": "Mairie d'Aubervilliers",
+        "short_name": "Mairie d'Aubervilliers",
+        "type": "METRO",
+        "line": "METRO 12"
+      },
+      "id": 1001252
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.331740130985349, 48.83345085727892],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100236,
+        "name": "Denfert Rochereau",
+        "long_name": "Denfert-Rochereau",
+        "short_name": "Denfert-Rochereau",
+        "type": "METRO",
+        "line": "METRO 4"
+      },
+      "id": 100236
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.295560256213147, 48.874748649745484],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100154,
+        "name": "Charles-de-Gaulle Étoile",
+        "long_name": "Charles De Gaulle-Étoile",
+        "short_name": "Charles-de-Gaulle Étoile",
+        "type": "METRO",
+        "line": "METRO 6"
+      },
+      "id": 100154
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.357633204680053, 48.880195486201494],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100319,
+        "name": "Gare du Nord",
+        "long_name": "Gare du Nord",
+        "short_name": "Magenta",
+        "type": "METRO",
+        "line": "METRO 5"
+      },
+      "id": 100319
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.39506230542588, 48.84847428503984],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100584,
+        "name": "Nation",
+        "long_name": "Nation",
+        "short_name": "Nation",
+        "type": "METRO",
+        "line": "METRO 2"
+      },
+      "id": 100584
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.287945766487377, 48.84109405631434],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 10094,
+        "name": "Boucicaut",
+        "long_name": "Boucicaut",
+        "short_name": "Boucicaut",
+        "type": "METRO",
+        "line": "METRO 8"
+      },
+      "id": 10094
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.238887327153073, 48.842005346355],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 10099,
+        "name": "Boulogne Jean Jaurès",
+        "long_name": "Boulogne - Jean Jaurès",
+        "short_name": "Boulogne Jean Jaurès",
+        "type": "METRO",
+        "line": "METRO 10"
+      },
+      "id": 10099
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.228536981491631, 48.8407450151916],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100100,
+        "name": "Boulogne Pont de Saint-Cloud / Rhin et Danube",
+        "long_name": "Boulogne - Pont de Saint-Cloud",
+        "short_name": "Boulogne Pont de Saint-Cloud - Albert Kahn",
+        "type": "METRO",
+        "line": "METRO 10"
+      },
+      "id": 100100
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.290058833580487, 48.86698310851503],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 10084,
+        "name": "Boissière",
+        "long_name": "Boissière",
+        "short_name": "Boissière",
+        "type": "METRO",
+        "line": "METRO 6"
+      },
+      "id": 10084
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.327164649607823, 48.82818847537889],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 10010,
+        "name": "Alésia",
+        "long_name": "Alésia",
+        "short_name": "Alésia",
+        "type": "METRO",
+        "line": "METRO 4"
+      },
+      "id": 10010
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.295019130476361, 48.84699703040198],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 10043,
+        "name": "Avenue Émile Zola",
+        "long_name": "Avenue Émile Zola",
+        "short_name": "Avenue Émile Zola",
+        "type": "METRO",
+        "line": "METRO 10"
+      },
+      "id": 10043
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.369513568156525, 48.853439426633884],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 10056,
+        "name": "Bastille",
+        "long_name": "Bastille",
+        "short_name": "Bastille",
+        "type": "METRO",
+        "line": "METRO 8"
+      },
+      "id": 10056
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.429205166347999, 48.84547070664901],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 10065,
+        "name": "Bérault",
+        "long_name": "Bérault",
+        "short_name": "Bérault",
+        "type": "METRO",
+        "line": "METRO 1"
+      },
+      "id": 10065
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.394012398359363, 48.881816107252455],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100232,
+        "name": "Danube",
+        "long_name": "Danube",
+        "short_name": "Danube",
+        "type": "METRO",
+        "line": "METRO 7bis"
+      },
+      "id": 100232
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.32017475715155, 48.89058718567746],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100113,
+        "name": "Brochant",
+        "long_name": "Brochant",
+        "short_name": "Brochant",
+        "type": "METRO",
+        "line": "METRO 13"
+      },
+      "id": 100113
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.285999222059007, 48.846534635796644],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100155,
+        "name": "Charles Michels",
+        "long_name": "Charles Michels",
+        "short_name": "Charles Michels",
+        "type": "METRO",
+        "line": "METRO 10"
+      },
+      "id": 100155
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.322082848676169, 48.86681836891563],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100201,
+        "name": "Concorde",
+        "long_name": "Concorde",
+        "short_name": "Concorde",
+        "type": "METRO",
+        "line": "METRO 8"
+      },
+      "id": 100201
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.343511657749775, 48.831129547092026],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100331,
+        "name": "Glacière",
+        "long_name": "Glacière",
+        "short_name": "Glacière",
+        "type": "METRO",
+        "line": "METRO 6"
+      },
+      "id": 100331
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.3710948397312, 48.86995751176857],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100332,
+        "name": "Goncourt",
+        "long_name": "Goncourt",
+        "short_name": "Goncourt",
+        "type": "METRO",
+        "line": "METRO 11"
+      },
+      "id": 100332
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.322491748462238, 48.83863164530258],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100299,
+        "name": "Gaîté",
+        "long_name": "Gaîté",
+        "short_name": "Gaîté",
+        "type": "METRO",
+        "line": "METRO 13"
+      },
+      "id": 100299
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.351577562994996, 48.857477981594855],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100352,
+        "name": "Hôtel de Ville de Paris - 4ème Arrondissement",
+        "long_name": "Hôtel de Ville",
+        "short_name": "Hôtel de Ville",
+        "type": "METRO",
+        "line": "METRO 1"
+      },
+      "id": 100352
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.322265213130597, 48.878770366653185],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100275,
+        "name": "Europe",
+        "long_name": "Europe",
+        "short_name": "Europe",
+        "type": "METRO",
+        "line": "METRO 3"
+      },
+      "id": 100275
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.384092210055667, 48.85017786186515],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100279,
+        "name": "Faidherbe Chaligny",
+        "long_name": "Faidherbe Chaligny",
+        "short_name": "Faidherbe Chaligny",
+        "type": "METRO",
+        "line": "METRO 8"
+      },
+      "id": 100279
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.291912413317875, 48.84274677885832],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100282,
+        "name": "Félix Faure",
+        "long_name": "Félix Faure",
+        "short_name": "Félix Faure",
+        "type": "METRO",
+        "line": "METRO 8"
+      },
+      "id": 100282
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.361400210432777, 48.870396388290395],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100370,
+        "name": "Jacques Bonsergent",
+        "long_name": "Jacques Bonsergent",
+        "short_name": "Jacques Bonsergent",
+        "type": "METRO",
+        "line": "METRO 5"
+      },
+      "id": 100370
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.37015796173961, 48.882465244637686],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100375,
+        "name": "Jaurès",
+        "long_name": "Jaurès",
+        "short_name": "Jaurès",
+        "type": "METRO",
+        "line": "METRO 7bis"
+      },
+      "id": 100375
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.389415032035527, 48.87511181602157],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100379,
+        "name": "Jourdain",
+        "long_name": "Jourdain",
+        "short_name": "Jourdain",
+        "type": "METRO",
+        "line": "METRO 11"
+      },
+      "id": 100379
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.243578628739329, 48.83362878011957],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100513,
+        "name": "Marcel Sembat",
+        "long_name": "Marcel Sembat",
+        "short_name": "Marcel Sembat",
+        "type": "METRO",
+        "line": "METRO 9"
+      },
+      "id": 100513
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.362263387127348, 48.810129956339246],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100442,
+        "name": "Le Kremlin - Bicêtre",
+        "long_name": "Le Kremlin-Bicêtre",
+        "short_name": "Le Kremlin - Bicêtre",
+        "type": "METRO",
+        "line": "METRO 7"
+      },
+      "id": 100442
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.34057598204372, 48.874971744608764],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100443,
+        "name": "Le Peletier",
+        "long_name": "Le Peletier",
+        "short_name": "Le Peletier",
+        "type": "METRO",
+        "line": "METRO 7"
+      },
+      "id": 100443
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.352542266262701, 48.83593030194427],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100459,
+        "name": "Les Gobelins",
+        "long_name": "Les Gobelins",
+        "short_name": "Les Gobelins",
+        "type": "METRO",
+        "line": "METRO 7"
+      },
+      "id": 100459
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.288083633048503, 48.888706018840786],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100478,
+        "name": "Louise Michel",
+        "long_name": "Louise Michel",
+        "short_name": "Louise Michel",
+        "type": "METRO",
+        "line": "METRO 3"
+      },
+      "id": 100478
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.336878400334199, 48.8628296709713],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100619,
+        "name": "Palais Royal - Musée Du Louvre",
+        "long_name": "Palais Royal - Musée du Louvre",
+        "short_name": "Palais Royal - Musée Du Louvre",
+        "type": "METRO",
+        "line": "METRO 7"
+      },
+      "id": 100619
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.374581969996412, 48.86525378511986],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100625,
+        "name": "Parmentier",
+        "long_name": "Parmentier",
+        "short_name": "Parmentier",
+        "type": "METRO",
+        "line": "METRO 3"
+      },
+      "id": 100625
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.312447513065986, 48.84287127407178],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100628,
+        "name": "Pasteur",
+        "long_name": "Pasteur",
+        "short_name": "Pasteur",
+        "type": "METRO",
+        "line": "METRO 12"
+      },
+      "id": 100628
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.318616414425383, 48.83422588174329],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100636,
+        "name": "Pernety",
+        "long_name": "Pernety",
+        "short_name": "Pernety",
+        "type": "METRO",
+        "line": "METRO 13"
+      },
+      "id": 100636
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.327243410587406, 48.883804527099414],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100648,
+        "name": "Place de Clichy",
+        "long_name": "Place de Clichy",
+        "short_name": "Place de Clichy",
+        "type": "METRO",
+        "line": "METRO 13"
+      },
+      "id": 100648
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.329705012620184, 48.83111265944071],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100573,
+        "name": "Mouton Duvernet",
+        "long_name": "Mouton-Duvernet",
+        "short_name": "Mouton Duvernet",
+        "type": "METRO",
+        "line": "METRO 4"
+      },
+      "id": 100573
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.32877802689008, 48.8449426324914],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100601,
+        "name": "Notre-Dame-des-Champs",
+        "long_name": "Notre-Dame-des-Champs",
+        "short_name": "Notre-Dame-des-Champs",
+        "type": "METRO",
+        "line": "METRO 12"
+      },
+      "id": 100601
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.331186346851651, 48.87048333199217],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100608,
+        "name": "Opéra",
+        "long_name": "Opéra",
+        "short_name": "Opéra",
+        "type": "METRO",
+        "line": "METRO 8"
+      },
+      "id": 100608
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.3645319531092, 48.81987622012246],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100687,
+        "name": "Porte de Choisy",
+        "long_name": "Porte de Choisy",
+        "short_name": "Porte de Choisy",
+        "type": "METRO",
+        "line": "METRO 7"
+      },
+      "id": 100687
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.32610231282419, 48.85103175030478],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100798,
+        "name": "Sèvres Babylone",
+        "long_name": "Sèvres-Babylone",
+        "short_name": "Sèvres Babylone",
+        "type": "METRO",
+        "line": "METRO 10"
+      },
+      "id": 100798
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.354468813108208, 48.869628862844074],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100836,
+        "name": "Strasbourg - Saint-Denis",
+        "long_name": "Strasbourg-Saint-Denis",
+        "short_name": "Strasbourg Saint-Denis",
+        "type": "METRO",
+        "line": "METRO 4"
+      },
+      "id": 100836
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.361524965507838, 48.85162059003447],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100842,
+        "name": "Sully Morland",
+        "long_name": "Sully-Morland",
+        "short_name": "Sully Morland",
+        "type": "METRO",
+        "line": "METRO 7"
+      },
+      "id": 100842
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.398867596625601, 48.87547445574476],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100848,
+        "name": "Télégraphe",
+        "long_name": "Télégraphe",
+        "short_name": "Télégraphe",
+        "type": "METRO",
+        "line": "METRO 11"
+      },
+      "id": 100848
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.40672924554309, 48.87711051082896],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100698,
+        "name": "Porte des Lilas",
+        "long_name": "Porte des Lilas",
+        "short_name": "Porte des Lilas",
+        "type": "METRO",
+        "line": "METRO 3bis"
+      },
+      "id": 100698
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.352829461254394, 48.86673355502223],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100726,
+        "name": "Réaumur Sébastopol",
+        "long_name": "Réaumur Sébastopol",
+        "short_name": "Réaumur Sébastopol",
+        "type": "METRO",
+        "line": "METRO 4"
+      },
+      "id": 100726
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.32778212849858, 48.84845784851418],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100728,
+        "name": "Rennes",
+        "long_name": "Rennes",
+        "short_name": "Rennes",
+        "type": "METRO",
+        "line": "METRO 12"
+      },
+      "id": 100728
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.385243715115071, 48.84717990913505],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100734,
+        "name": "Reuilly Diderot",
+        "long_name": "Reuilly-Diderot",
+        "short_name": "Reuilly Diderot",
+        "type": "METRO",
+        "line": "METRO 1"
+      },
+      "id": 100734
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.337857510381017, 48.87817339012215],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100766,
+        "name": "Saint-Georges",
+        "long_name": "Saint-Georges",
+        "short_name": "Saint-Georges",
+        "type": "METRO",
+        "line": "METRO 12"
+      },
+      "id": 100766
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.368269540049694, 48.79648308361576],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100898,
+        "name": "Paul Vaillant Couturier",
+        "long_name": "Villejuif Paul Vaillant-Couturier",
+        "short_name": "Paul Vaillant Couturier",
+        "type": "METRO",
+        "line": "METRO 7"
+      },
+      "id": 100898
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.324380555428911, 48.87515128697581],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100771,
+        "name": "Gare Saint-Lazare",
+        "long_name": "Saint-Lazare",
+        "short_name": "Saint-Lazare",
+        "type": "METRO",
+        "line": "METRO 3"
+      },
+      "id": 100771
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.358057907074738, 48.87627270166968],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100315,
+        "name": "Gare de l'Est",
+        "long_name": "Gare de l'Est",
+        "short_name": "Gare de l'Est",
+        "type": "METRO",
+        "line": "METRO 7"
+      },
+      "id": 100315
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.313545549946741, 48.867905343962654],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100144,
+        "name": "Champs-Élysées Clemenceau",
+        "long_name": "Champs-Élysées – Clemenceau",
+        "short_name": "Champs-Élysées Clemenceau",
+        "type": "METRO",
+        "line": "METRO 1"
+      },
+      "id": 100144
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.41669727284764, 48.86533531722583],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100300,
+        "name": "Gallieni",
+        "long_name": "Gallieni",
+        "short_name": "Gallieni",
+        "type": "METRO",
+        "line": "METRO 3"
+      },
+      "id": 100300
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.410598616469425, 48.920785968128676],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100412,
+        "name": "La Courneuve - 8 Mai 1945",
+        "long_name": "La Courneuve 8 Mai 1945",
+        "short_name": "La Courneuve - 8 Mai 1945",
+        "type": "METRO",
+        "line": "METRO 7"
+      },
+      "id": 100412
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.383599109573657, 48.86644680513255],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100533,
+        "name": "Ménilmontant",
+        "long_name": "Ménilmontant",
+        "short_name": "Ménilmontant",
+        "type": "METRO",
+        "line": "METRO 2"
+      },
+      "id": 100533
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.364993472400181, 48.88094656262635],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100476,
+        "name": "Louis Blanc",
+        "long_name": "Louis Blanc",
+        "short_name": "Louis Blanc",
+        "type": "METRO",
+        "line": "METRO 7"
+      },
+      "id": 100476
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.441521809411031, 48.86229941188523],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100492,
+        "name": "Mairie de Montreuil",
+        "long_name": "Mairie de Montreuil",
+        "short_name": "Mairie de Montreuil",
+        "type": "METRO",
+        "line": "METRO 9"
+      },
+      "id": 100492
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.2605150792517, 48.88470820039658],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100669,
+        "name": "Pont de Neuilly",
+        "long_name": "Pont de Neuilly",
+        "short_name": "Pont de Neuilly",
+        "type": "METRO",
+        "line": "METRO 1"
+      },
+      "id": 100669
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.342232759368107, 48.8585538254322],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100674,
+        "name": "Pont Neuf",
+        "long_name": "Pont Neuf",
+        "short_name": "Pont Neuf",
+        "type": "METRO",
+        "line": "METRO 7"
+      },
+      "id": 100674
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.373943508245182, 48.86147646279582],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100758,
+        "name": "Saint-Ambroise",
+        "long_name": "Saint-Ambroise",
+        "short_name": "Saint-Ambroise",
+        "type": "METRO",
+        "line": "METRO 9"
+      },
+      "id": 100758
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.418759786698671, 48.8464230763525],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100772,
+        "name": "Saint-Mandé",
+        "long_name": "Saint-Mandé",
+        "short_name": "Saint-Mandé",
+        "type": "METRO",
+        "line": "METRO 1"
+      },
+      "id": 100772
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.357245650758685, 48.82642600994104],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100855,
+        "name": "Tolbiac",
+        "long_name": "Tolbiac",
+        "short_name": "Tolbiac",
+        "type": "METRO",
+        "line": "METRO 7"
+      },
+      "id": 100855
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.317005235737245, 48.84698910520499],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100246,
+        "name": "Duroc",
+        "long_name": "Duroc",
+        "short_name": "Duroc",
+        "type": "METRO",
+        "line": "METRO 10"
+      },
+      "id": 100246
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.27941168205042, 48.82708544796182],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100210,
+        "name": "Corentin Celton",
+        "long_name": "Corentin Celton",
+        "short_name": "Corentin Celton",
+        "type": "METRO",
+        "line": "METRO 12"
+      },
+      "id": 100210
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.273665557499754, 48.82430937015939],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100495,
+        "name": "Mairie d'Issy",
+        "long_name": "Mairie d'Issy",
+        "short_name": "Mairie d'Issy",
+        "type": "METRO",
+        "line": "METRO 12"
+      },
+      "id": 100495
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.348775557476846, 48.877100184864226],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100659,
+        "name": "Poissonnière",
+        "long_name": "Poissonnière",
+        "short_name": "Poissonnière",
+        "type": "METRO",
+        "line": "METRO 7"
+      },
+      "id": 100659
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.385508387668672, 48.89738989064754],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100692,
+        "name": "Porte de La Villette",
+        "long_name": "Porte de la Villette",
+        "short_name": "Porte de La Villette",
+        "type": "METRO",
+        "line": "METRO 7"
+      },
+      "id": 100692
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.405383210626771, 48.834785157146825],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100705,
+        "name": "Porte Dorée",
+        "long_name": "Porte Dorée",
+        "short_name": "Porte Dorée",
+        "type": "METRO",
+        "line": "METRO 8"
+      },
+      "id": 100705
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.333108893760544, 48.8763302640252],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100861,
+        "name": "Trinité d'Estienne d'Orves",
+        "long_name": "Trinité d'Estienne d'Orves",
+        "short_name": "Trinité d'Estienne d'Orves",
+        "type": "METRO",
+        "line": "METRO 12"
+      },
+      "id": 100861
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.365581702747743, 48.84236008153237],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100312,
+        "name": "Gare d'Austerlitz",
+        "long_name": "Gare d'Austerlitz",
+        "short_name": "Gare d'Austerlitz",
+        "type": "METRO",
+        "line": "METRO 5"
+      },
+      "id": 100312
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.326384610792846, 48.840663228364996],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100250,
+        "name": "Edgar Quinet",
+        "long_name": "Edgar Quinet",
+        "short_name": "Edgar Quinet",
+        "type": "METRO",
+        "line": "METRO 6"
+      },
+      "id": 100250
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.394675654792045, 48.856228090321636],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 10011,
+        "name": "Alexandre Dumas",
+        "long_name": "Alexandre Dumas",
+        "short_name": "Alexandre Dumas",
+        "type": "METRO",
+        "line": "METRO 2"
+      },
+      "id": 10011
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.397997314830746, 48.85190531802241],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 10044,
+        "name": "Buzenval / Avron",
+        "long_name": "Avron",
+        "short_name": "Avron",
+        "type": "METRO",
+        "line": "METRO 2"
+      },
+      "id": 10044
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.413132938342708, 48.821897938499944],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100150,
+        "name": "Charenton - Écoles",
+        "long_name": "Charenton-Écoles",
+        "short_name": "Charenton Écoles",
+        "type": "METRO",
+        "line": "METRO 8"
+      },
+      "id": 100150
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.346478183587594, 48.85958965464833],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100167,
+        "name": "Châtelet",
+        "long_name": "Châtelet",
+        "short_name": "Châtelet",
+        "type": "METRO",
+        "line": "METRO 14"
+      },
+      "id": 100167
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.346768285736698, 48.85971866106072],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100168,
+        "name": "Châtelet",
+        "long_name": "Châtelet",
+        "short_name": "Châtelet",
+        "type": "METRO",
+        "line": "METRO 4"
+      },
+      "id": 100168
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.327219867919128, 48.89220682681276],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100342,
+        "name": "Guy-Môquet",
+        "long_name": "Guy Môquet",
+        "short_name": "Guy Môquet",
+        "type": "METRO",
+        "line": "METRO 13"
+      },
+      "id": 100342
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.378716923224645, 48.884970561831835],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100426,
+        "name": "Laumière",
+        "long_name": "Laumière",
+        "short_name": "Laumière",
+        "type": "METRO",
+        "line": "METRO 5"
+      },
+      "id": 100426
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.259608472752571, 48.842412769424165],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100278,
+        "name": "Exelmans",
+        "long_name": "Exelmans",
+        "short_name": "Exelmans",
+        "type": "METRO",
+        "line": "METRO 9"
+      },
+      "id": 100278
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.314721004746195, 48.881094426231876],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100908,
+        "name": "Villiers",
+        "long_name": "Villiers",
+        "short_name": "Villiers",
+        "type": "METRO",
+        "line": "METRO 3"
+      },
+      "id": 100908
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.348491131078988, 48.87059047707668],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 10091,
+        "name": "Bonne Nouvelle",
+        "long_name": "Bonne Nouvelle",
+        "short_name": "Bonne Nouvelle",
+        "type": "METRO",
+        "line": "METRO 9"
+      },
+      "id": 10091
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.317449187923372, 48.809703996598586],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 1001249,
+        "name": "Barbara",
+        "long_name": "Barbara",
+        "short_name": "Barbara",
+        "type": "METRO",
+        "line": "METRO 4"
+      },
+      "id": 1001249
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.377741481106109, 48.90808243688599],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 1001251,
+        "name": "Aimé Césaire",
+        "long_name": "Aimé Césaire",
+        "short_name": "Aimé Césaire",
+        "type": "METRO",
+        "line": "METRO 12"
+      },
+      "id": 1001251
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.295904904713175, 48.8751498187932],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100152,
+        "name": "Charles-de-Gaulle Étoile",
+        "long_name": "Charles De Gaulle-Étoile",
+        "short_name": "Charles-de-Gaulle Étoile",
+        "type": "METRO",
+        "line": "METRO 1"
+      },
+      "id": 100152
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.343285978923923, 48.8531679839561],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100776,
+        "name": "Saint-Michel Notre-Dame",
+        "long_name": "Saint-Michel",
+        "short_name": "Saint-Michel Notre-Dame",
+        "type": "METRO",
+        "line": "METRO 4"
+      },
+      "id": 100776
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.395554512170687, 48.84757936654253],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100583,
+        "name": "Nation",
+        "long_name": "Nation",
+        "short_name": "Nation",
+        "type": "METRO",
+        "line": "METRO 1"
+      },
+      "id": 100583
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.388566870479196, 48.87949310699919],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 10093,
+        "name": "Botzaris",
+        "long_name": "Botzaris",
+        "short_name": "Botzaris",
+        "type": "METRO",
+        "line": "METRO 7bis"
+      },
+      "id": 10093
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.341376051143573, 48.86865415090181],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100104,
+        "name": "Bourse",
+        "long_name": "Bourse",
+        "short_name": "Bourse",
+        "type": "METRO",
+        "line": "METRO 3"
+      },
+      "id": 100104
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.374495966260425, 48.88066746252183],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 10088,
+        "name": "Bolivar",
+        "long_name": "Bolivar",
+        "short_name": "Bolivar",
+        "type": "METRO",
+        "line": "METRO 7bis"
+      },
+      "id": 10088
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.300991003495584, 48.864766844037305],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 10014,
+        "name": "Alma - Marceau",
+        "long_name": "Alma-Marceau",
+        "short_name": "Alma - Marceau",
+        "type": "METRO",
+        "line": "METRO 9"
+      },
+      "id": 10014
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.392221222535116, 48.90378388011768],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 10035,
+        "name": "Aubervilliers Pantin Quatre Chemins",
+        "long_name": "Aubervilliers Pantin - Quatre Chemins",
+        "short_name": "Aubervilliers Pantin Quatre Chemins",
+        "type": "METRO",
+        "line": "METRO 7"
+      },
+      "id": 10035
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.376593684096822, 48.87184879372683],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 10060,
+        "name": "Belleville",
+        "long_name": "Belleville",
+        "short_name": "Belleville",
+        "type": "METRO",
+        "line": "METRO 11"
+      },
+      "id": 10060
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.269135872742879, 48.847150053875964],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100251,
+        "name": "Église d'Auteuil",
+        "long_name": "Église d'Auteuil",
+        "short_name": "Église d'Auteuil",
+        "type": "METRO",
+        "line": "METRO 10"
+      },
+      "id": 100251
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.440439978057246, 48.844456393634566],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100160,
+        "name": "Château de Vincennes",
+        "long_name": "Château de Vincennes",
+        "short_name": "Château de Vincennes",
+        "type": "METRO",
+        "line": "METRO 1"
+      },
+      "id": 100160
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.348036565400401, 48.85763140976555],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100165,
+        "name": "Châtelet",
+        "long_name": "Châtelet",
+        "short_name": "Châtelet",
+        "type": "METRO",
+        "line": "METRO 11"
+      },
+      "id": 100165
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.370811395312745, 48.877610186483444],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100195,
+        "name": "Colonel Fabien",
+        "long_name": "Colonel Fabien",
+        "short_name": "Colonel Fabien",
+        "type": "METRO",
+        "line": "METRO 2"
+      },
+      "id": 100195
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.322943412243541, 48.86628580364943],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100199,
+        "name": "Concorde",
+        "long_name": "Concorde",
+        "short_name": "Concorde",
+        "type": "METRO",
+        "line": "METRO 1"
+      },
+      "id": 100199
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.323175680856618, 48.86616711401473],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100200,
+        "name": "Concorde",
+        "long_name": "Concorde",
+        "short_name": "Concorde",
+        "type": "METRO",
+        "line": "METRO 12"
+      },
+      "id": 100200
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.34961756415984, 48.863972477882776],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100273,
+        "name": "Étienne Marcel",
+        "long_name": "Étienne Marcel",
+        "short_name": "Étienne Marcel",
+        "type": "METRO",
+        "line": "METRO 4"
+      },
+      "id": 100273
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.26817674942333, 48.852504090577646],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100372,
+        "name": "Jasmin",
+        "long_name": "Jasmin",
+        "short_name": "Jasmin",
+        "type": "METRO",
+        "line": "METRO 9"
+      },
+      "id": 100372
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.354917983707403, 48.846151121246784],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100383,
+        "name": "Jussieu",
+        "long_name": "Jussieu",
+        "short_name": "Jussieu",
+        "type": "METRO",
+        "line": "METRO 10"
+      },
+      "id": 100383
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.349815453218361, 48.89146499939834],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100510,
+        "name": "Marcadet Poissonniers",
+        "long_name": "Marcadet-Poissonniers",
+        "short_name": "Marcadet Poissonniers",
+        "type": "METRO",
+        "line": "METRO 12"
+      },
+      "id": 100510
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.314743542030632, 48.873733164672636],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100549,
+        "name": "Miromesnil",
+        "long_name": "Miromesnil",
+        "short_name": "Miromesnil",
+        "type": "METRO",
+        "line": "METRO 9"
+      },
+      "id": 100549
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.325779674806892, 48.88718394593143],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100416,
+        "name": "La Fourche",
+        "long_name": "La Fourche",
+        "short_name": "La Fourche",
+        "type": "METRO",
+        "line": "METRO 13"
+      },
+      "id": 100416
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.272238940611056, 48.881016496556725],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100463,
+        "name": "Les Sablons",
+        "long_name": "Les Sablons",
+        "short_name": "Les Sablons",
+        "type": "METRO",
+        "line": "METRO 1"
+      },
+      "id": 100463
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.384289600960821, 48.81052080334999],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100496,
+        "name": "Mairie d'Ivry",
+        "long_name": "Mairie d'Ivry",
+        "short_name": "Mairie d'Ivry",
+        "type": "METRO",
+        "line": "METRO 7"
+      },
+      "id": 100496
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.387835956453657, 48.86218374694281],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100633,
+        "name": "Père Lachaise",
+        "long_name": "Père Lachaise",
+        "short_name": "Père Lachaise",
+        "type": "METRO",
+        "line": "METRO 2"
+      },
+      "id": 100633
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.362856399519012, 48.83321671877524],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100587,
+        "name": "Nationale",
+        "long_name": "Nationale",
+        "short_name": "Nationale",
+        "type": "METRO",
+        "line": "METRO 6"
+      },
+      "id": 100587
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.377267201513738, 48.815930762121624],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100642,
+        "name": "Pierre et Marie Curie",
+        "long_name": "Pierre et Marie Curie",
+        "short_name": "Pierre et Marie Curie",
+        "type": "METRO",
+        "line": "METRO 7"
+      },
+      "id": 100642
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.393056091960662, 48.876806388278496],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100650,
+        "name": "Place des Fêtes",
+        "long_name": "Place des Fêtes",
+        "short_name": "Place des Fêtes",
+        "type": "METRO",
+        "line": "METRO 11"
+      },
+      "id": 100650
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.337495844533764, 48.876047495071],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100600,
+        "name": "Notre-Dame-de-Lorette",
+        "long_name": "Notre-Dame-de-Lorette",
+        "short_name": "Notre-Dame-de-Lorette",
+        "type": "METRO",
+        "line": "METRO 12"
+      },
+      "id": 100600
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.368011378256502, 48.865019008102834],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100603,
+        "name": "Oberkampf",
+        "long_name": "Oberkampf",
+        "short_name": "Oberkampf",
+        "type": "METRO",
+        "line": "METRO 9"
+      },
+      "id": 100603
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.314122323459022, 48.83182564955102],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100656,
+        "name": "Plaisance / Vercingétorix",
+        "long_name": "Plaisance",
+        "short_name": "Plaisance",
+        "type": "METRO",
+        "line": "METRO 13"
+      },
+      "id": 100656
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.309531491460945, 48.845626965812635],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100800,
+        "name": "Sèvres Lecourbe",
+        "long_name": "Sèvres-Lecourbe",
+        "short_name": "Sèvres Lecourbe",
+        "type": "METRO",
+        "line": "METRO 6"
+      },
+      "id": 100800
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.347430779960205, 48.89434384790808],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100802,
+        "name": "Simplon",
+        "long_name": "Simplon",
+        "short_name": "Simplon",
+        "type": "METRO",
+        "line": "METRO 4"
+      },
+      "id": 100802
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.371913980100837, 48.859873622536846],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100736,
+        "name": "Richard Lenoir",
+        "long_name": "Richard Lenoir",
+        "short_name": "Richard Lenoir",
+        "type": "METRO",
+        "line": "METRO 5"
+      },
+      "id": 100736
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.372825724542571, 48.83704511922334],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100717,
+        "name": "Quai de la Gare",
+        "long_name": "Quai de la Gare",
+        "short_name": "Quai de la Gare",
+        "type": "METRO",
+        "line": "METRO 6"
+      },
+      "id": 100717
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.336232756868916, 48.86963799595273],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100719,
+        "name": "Quatre Septembre",
+        "long_name": "Quatre Septembre",
+        "short_name": "Quatre Septembre",
+        "type": "METRO",
+        "line": "METRO 3"
+      },
+      "id": 100719
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.330754192086215, 48.838964279775986],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100724,
+        "name": "Raspail",
+        "long_name": "Raspail",
+        "short_name": "Raspail",
+        "type": "METRO",
+        "line": "METRO 6"
+      },
+      "id": 100724
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.365074861082764, 48.86799910798849],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100729,
+        "name": "République",
+        "long_name": "République",
+        "short_name": "République",
+        "type": "METRO",
+        "line": "METRO 11"
+      },
+      "id": 100729
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.362928700156112, 48.86778029961571],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100733,
+        "name": "République",
+        "long_name": "République",
+        "short_name": "République",
+        "type": "METRO",
+        "line": "METRO 9"
+      },
+      "id": 100733
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.422983216145875, 48.85572642769865],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100741,
+        "name": "Robespierre",
+        "long_name": "Robespierre",
+        "short_name": "Robespierre",
+        "type": "METRO",
+        "line": "METRO 9"
+      },
+      "id": 100741
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.356035794172796, 48.929935888744524],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100762,
+        "name": "Saint-Denis Porte de Paris",
+        "long_name": "Saint-Denis - Porte de Paris",
+        "short_name": "Saint-Denis Porte de Paris",
+        "type": "METRO",
+        "line": "METRO 13"
+      },
+      "id": 100762
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.404514942379104, 48.87210144119713],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100764,
+        "name": "Saint-Fargeau",
+        "long_name": "Saint-Fargeau",
+        "short_name": "Saint-Fargeau",
+        "type": "METRO",
+        "line": "METRO 3bis"
+      },
+      "id": 100764
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.3371351933439, 48.83290081472565],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100768,
+        "name": "Saint-Jacques",
+        "long_name": "Saint-Jacques",
+        "short_name": "Saint-Jacques",
+        "type": "METRO",
+        "line": "METRO 6"
+      },
+      "id": 100768
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.324353041157966, 48.84373548838398],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100562,
+        "name": "Gare Montparnasse",
+        "long_name": "Montparnasse Bienvenüe",
+        "short_name": "Montparnasse Bienvenue",
+        "type": "METRO",
+        "line": "METRO 12"
+      },
+      "id": 100562
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.321278562744627, 48.842102206274035],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100565,
+        "name": "Gare Montparnasse",
+        "long_name": "Montparnasse-Bienvenüe",
+        "short_name": "Montparnasse Bienvenue",
+        "type": "METRO",
+        "line": "METRO 6"
+      },
+      "id": 100565
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.331830837962409, 48.90609404931435],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100323,
+        "name": "Garibaldi",
+        "long_name": "Garibaldi",
+        "short_name": "Garibaldi",
+        "type": "METRO",
+        "line": "METRO 13"
+      },
+      "id": 100323
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.402352143900472, 48.89122859226912],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100348,
+        "name": "Hoche",
+        "long_name": "Hoche",
+        "short_name": "Hoche",
+        "type": "METRO",
+        "line": "METRO 5"
+      },
+      "id": 100348
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.293240649947313, 48.87126214352652],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100389,
+        "name": "Kléber",
+        "long_name": "Kléber",
+        "short_name": "Kléber",
+        "type": "METRO",
+        "line": "METRO 6"
+      },
+      "id": 100389
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.43450989592394, 48.8091443609007],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100500,
+        "name": "Maisons-Alfort - Stade",
+        "long_name": "Maisons-Alfort-Stade",
+        "short_name": "Maisons-Alfort - Stade",
+        "type": "METRO",
+        "line": "METRO 8"
+      },
+      "id": 100500
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.330700709954214, 48.85107136943748],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100781,
+        "name": "Saint-Sulpice",
+        "long_name": "Saint-Sulpice",
+        "short_name": "Saint-Sulpice",
+        "type": "METRO",
+        "line": "METRO 4"
+      },
+      "id": 100781
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.285335094686168, 48.869798555526245],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100892,
+        "name": "Victor Hugo",
+        "long_name": "Victor Hugo",
+        "short_name": "Victor Hugo",
+        "type": "METRO",
+        "line": "METRO 2"
+      },
+      "id": 100892
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.309052264550478, 48.88289191651976],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100506,
+        "name": "Malesherbes",
+        "long_name": "Malesherbes",
+        "short_name": "Malesherbes",
+        "type": "METRO",
+        "line": "METRO 3"
+      },
+      "id": 100506
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.400310403025077, 48.832736700820156],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100686,
+        "name": "Porte de Charenton",
+        "long_name": "Porte de Charenton",
+        "short_name": "Porte de Charenton",
+        "type": "METRO",
+        "line": "METRO 8"
+      },
+      "id": 100686
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.375747983215603, 48.82999019896456],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 10072,
+        "name": "Bibliothèque François Mitterrand Emile Durkheim",
+        "long_name": "Bibliothèque François Mitterrand",
+        "short_name": "Bibliothèque François Mitterrand",
+        "type": "METRO",
+        "line": "METRO 14"
+      },
+      "id": 10072
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.36518481199338, 48.84243679699021],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100311,
+        "name": "Gare d'Austerlitz",
+        "long_name": "Gare d'Austerlitz",
+        "short_name": "Gare d'Austerlitz",
+        "type": "METRO",
+        "line": "METRO 10"
+      },
+      "id": 100311
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.373774422563834, 48.845868977751635],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100962,
+        "name": "Gare de Lyon",
+        "long_name": "Gare de Lyon",
+        "short_name": "Gare de Lyon",
+        "type": "METRO",
+        "line": "METRO 1"
+      },
+      "id": 100962
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.334663150119757, 48.9132020942236],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 1001229,
+        "name": "Mairie de Saint-Ouen",
+        "long_name": "Mairie de Saint-Ouen",
+        "short_name": "Mairie de Saint-Ouen",
+        "type": "METRO",
+        "line": "METRO 14"
+      },
+      "id": 1001229
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.37673072170184, 48.872283107993574],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 10061,
+        "name": "Belleville",
+        "long_name": "Belleville",
+        "short_name": "Belleville",
+        "type": "METRO",
+        "line": "METRO 2"
+      },
+      "id": 10061
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.401927284511546, 48.85197520839108],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100121,
+        "name": "Buzenval / Avron",
+        "long_name": "Buzenval",
+        "short_name": "Buzenval",
+        "type": "METRO",
+        "line": "METRO 9"
+      },
+      "id": 100121
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.358566256349466, 48.835152534806205],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100124,
+        "name": "Campo Formio",
+        "long_name": "Campo Formio",
+        "short_name": "Campo Formio",
+        "type": "METRO",
+        "line": "METRO 5"
+      },
+      "id": 100124
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.356153947450339, 48.87262083899373],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100159,
+        "name": "Château d'Eau / Mairie du 10e",
+        "long_name": "Château d'Eau",
+        "short_name": "Château d'Eau",
+        "type": "METRO",
+        "line": "METRO 4"
+      },
+      "id": 100159
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.296231386803388, 48.837099427289054],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100206,
+        "name": "Convention",
+        "long_name": "Convention",
+        "short_name": "Convention",
+        "type": "METRO",
+        "line": "METRO 12"
+      },
+      "id": 100206
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.371933128614294, 48.883193320365734],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100374,
+        "name": "Jaurès",
+        "long_name": "Jaurès",
+        "short_name": "Jaurès",
+        "type": "METRO",
+        "line": "METRO 5"
+      },
+      "id": 100374
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.308773835955806, 48.88032518553965],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100552,
+        "name": "Monceau",
+        "long_name": "Monceau",
+        "short_name": "Monceau",
+        "type": "METRO",
+        "line": "METRO 2"
+      },
+      "id": 100552
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.367372038565468, 48.88432566211362],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100809,
+        "name": "Stalingrad",
+        "long_name": "Stalingrad",
+        "short_name": "Stalingrad",
+        "type": "METRO",
+        "line": "METRO 5"
+      },
+      "id": 100809
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.306403485736516, 48.85489056594407],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100248,
+        "name": "École Militaire",
+        "long_name": "École Militaire",
+        "short_name": "École Militaire",
+        "type": "METRO",
+        "line": "METRO 8"
+      },
+      "id": 100248
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.338857159453805, 48.872190907714405],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100738,
+        "name": "Richelieu Drouot",
+        "long_name": "Richelieu-Drouot",
+        "short_name": "Richelieu Drouot",
+        "type": "METRO",
+        "line": "METRO 9"
+      },
+      "id": 100738
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.333379672422159, 48.88355628923431],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 10076,
+        "name": "Blanche",
+        "long_name": "Blanche",
+        "short_name": "Blanche",
+        "type": "METRO",
+        "line": "METRO 2"
+      },
+      "id": 10076
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.353818793592879, 48.86940219572108],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100837,
+        "name": "Strasbourg - Saint-Denis",
+        "long_name": "Strasbourg-Saint-Denis",
+        "short_name": "Strasbourg Saint-Denis",
+        "type": "METRO",
+        "line": "METRO 8"
+      },
+      "id": 100837
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.249792769009765, 48.88813847667783],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100269,
+        "name": "Esplanade de La Défense",
+        "long_name": "Esplanade de la Défense",
+        "short_name": "Esplanade de La Défense",
+        "type": "METRO",
+        "line": "METRO 1"
+      },
+      "id": 100269
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.344273345421351, 48.85105028137978],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100192,
+        "name": "Cluny La Sorbonne",
+        "long_name": "Cluny-La Sorbonne",
+        "short_name": "Saint-Michel Notre-Dame",
+        "type": "METRO",
+        "line": "METRO 10"
+      },
+      "id": 100192
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.274154629736558, 48.85804605444998],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100423,
+        "name": "La Muette",
+        "long_name": "La Muette",
+        "short_name": "Boulainvilliers",
+        "type": "METRO",
+        "line": "METRO 9"
+      },
+      "id": 100423
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.34578586003918, 48.86251523404101],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100460,
+        "name": "Les Halles",
+        "long_name": "Les Halles",
+        "short_name": "Châtelet les Halles",
+        "type": "METRO",
+        "line": "METRO 4"
+      },
+      "id": 100460
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.297724346480177, 48.88489625421614],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100631,
+        "name": "Péreire",
+        "long_name": "Pereire-Levallois",
+        "short_name": "Péreire Levallois",
+        "type": "METRO",
+        "line": "METRO 3"
+      },
+      "id": 100631
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.324224580938852, 48.87571908888893],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 1001000,
+        "name": "Gare Saint-Lazare",
+        "long_name": "Saint-Lazare",
+        "short_name": "Gare Saint-Lazare",
+        "type": "METRO",
+        "line": "METRO 14"
+      },
+      "id": 1001000
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.321743589558778, 48.90449641964034],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 1001228,
+        "name": "Saint-Ouen",
+        "long_name": "Saint-Ouen",
+        "short_name": "Saint-Ouen",
+        "type": "METRO",
+        "line": "METRO 14"
+      },
+      "id": 1001228
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.2901275088247, 48.875336841182126],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 10025,
+        "name": "Argentine",
+        "long_name": "Argentine",
+        "short_name": "Argentine",
+        "type": "METRO",
+        "line": "METRO 1"
+      },
+      "id": 10025
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.3567298691737, 48.8653227107436],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 10027,
+        "name": "Arts et Métiers",
+        "long_name": "Arts et Métiers",
+        "short_name": "Arts et Métiers",
+        "type": "METRO",
+        "line": "METRO 11"
+      },
+      "id": 10027
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.350612999325322, 48.88380394146675],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 10049,
+        "name": "Barbès Rochechouart",
+        "long_name": "Barbès-Rochechouart",
+        "short_name": "Barbès Rochechouart",
+        "type": "METRO",
+        "line": "METRO 2"
+      },
+      "id": 10049
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.459363129076404, 48.78000282797376],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100224,
+        "name": "Créteil Préfecture",
+        "long_name": "Créteil–Préfecture",
+        "short_name": "Créteil Préfecture",
+        "type": "METRO",
+        "line": "METRO 8"
+      },
+      "id": 100224
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.45051152829059, 48.78992046595464],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100226,
+        "name": "Créteil Université",
+        "long_name": "Créteil-Université",
+        "short_name": "Créteil Université",
+        "type": "METRO",
+        "line": "METRO 8"
+      },
+      "id": 100226
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.389620014061438, 48.839041142779394],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100244,
+        "name": "Dugommier",
+        "long_name": "Dugommier",
+        "short_name": "Dugommier",
+        "type": "METRO",
+        "line": "METRO 6"
+      },
+      "id": 100244
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.316424352050892, 48.84705255449363],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100247,
+        "name": "Duroc",
+        "long_name": "Duroc",
+        "short_name": "Duroc",
+        "type": "METRO",
+        "line": "METRO 13"
+      },
+      "id": 100247
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.351623255016012, 48.846656850308115],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100125,
+        "name": "Cardinal Lemoine",
+        "long_name": "Cardinal Lemoine",
+        "short_name": "Cardinal Lemoine",
+        "type": "METRO",
+        "line": "METRO 10"
+      },
+      "id": 100125
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.342608014423155, 48.919007554283056],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100126,
+        "name": "Carrefour Pleyel",
+        "long_name": "Carrefour Pleyel",
+        "short_name": "Carrefour Pleyel",
+        "type": "METRO",
+        "line": "METRO 13"
+      },
+      "id": 100126
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.313894130481614, 48.86760214428706],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100145,
+        "name": "Champs-Élysées Clemenceau",
+        "long_name": "Champs-Élysées – Clemenceau",
+        "short_name": "Champs-Élysées Clemenceau",
+        "type": "METRO",
+        "line": "METRO 13"
+      },
+      "id": 100145
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.300560451236721, 48.87202380946529],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100329,
+        "name": "George V",
+        "long_name": "George V",
+        "short_name": "George V",
+        "type": "METRO",
+        "line": "METRO 1"
+      },
+      "id": 100329
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.309505157337886, 48.86869984641849],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100294,
+        "name": "Franklin D. Roosevelt",
+        "long_name": "Franklin D. Roosevelt",
+        "short_name": "Franklin D. Roosevelt",
+        "type": "METRO",
+        "line": "METRO 9"
+      },
+      "id": 100294
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.366661093353451, 48.863257944024426],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100283,
+        "name": "Filles Du Calvaire",
+        "long_name": "Filles du Calvaire",
+        "short_name": "Filles du Calvaire",
+        "type": "METRO",
+        "line": "METRO 8"
+      },
+      "id": 100283
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.349627158227452, 48.89143955394805],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100511,
+        "name": "Marcadet Poissonniers",
+        "long_name": "Marcadet-Poissonniers",
+        "short_name": "Marcadet Poissonniers",
+        "type": "METRO",
+        "line": "METRO 4"
+      },
+      "id": 100511
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.264218775687729, 48.847934806957525],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100542,
+        "name": "Michel-Ange - Auteuil",
+        "long_name": "Michel Ange-Auteuil",
+        "short_name": "Michel-Ange - Auteuil",
+        "type": "METRO",
+        "line": "METRO 10"
+      },
+      "id": 100542
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.402333164555185, 48.83711700605412],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100546,
+        "name": "Michel Bizot",
+        "long_name": "Michel Bizot",
+        "short_name": "Michel Bizot",
+        "type": "METRO",
+        "line": "METRO 8"
+      },
+      "id": 100546
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.310565960946845, 48.85772541195898],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100425,
+        "name": "La Tour Maubourg",
+        "long_name": "La Tour Maubourg",
+        "short_name": "La Tour Maubourg",
+        "type": "METRO",
+        "line": "METRO 8"
+      },
+      "id": 100425
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.338760650528742, 48.889674072959075],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100419,
+        "name": "Lamarck Caulaincourt",
+        "long_name": "Lamarck-Caulaincourt",
+        "short_name": "Lamarck Caulaincourt",
+        "type": "METRO",
+        "line": "METRO 12"
+      },
+      "id": 100419
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.375101033755616, 48.85152370749983],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100441,
+        "name": "Ledru Rollin",
+        "long_name": "Ledru Rollin",
+        "short_name": "Ledru Rollin",
+        "type": "METRO",
+        "line": "METRO 8"
+      },
+      "id": 100441
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.325163546827897, 48.87023324246549],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100487,
+        "name": "Madeleine",
+        "long_name": "Madeleine",
+        "short_name": "Madeleine",
+        "type": "METRO",
+        "line": "METRO 12"
+      },
+      "id": 100487
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.325752635286725, 48.870667019963506],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100488,
+        "name": "Madeleine",
+        "long_name": "Madeleine",
+        "short_name": "Madeleine",
+        "type": "METRO",
+        "line": "METRO 14"
+      },
+      "id": 100488
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.326272274027748, 48.86963317209047],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100489,
+        "name": "Madeleine",
+        "long_name": "Madeleine",
+        "short_name": "Madeleine",
+        "type": "METRO",
+        "line": "METRO 8"
+      },
+      "id": 100489
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.306010915009082, 48.90323367785232],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100491,
+        "name": "Mairie de Clichy",
+        "long_name": "Mairie de Clichy",
+        "short_name": "Mairie de Clichy",
+        "type": "METRO",
+        "line": "METRO 13"
+      },
+      "id": 100491
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.416479643681515, 48.87976125216355],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100494,
+        "name": "Mairie des Lilas",
+        "long_name": "Mairie des Lilas",
+        "short_name": "Mairie des Lilas",
+        "type": "METRO",
+        "line": "METRO 11"
+      },
+      "id": 100494
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.285812444146408, 48.85744868914132],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100626,
+        "name": "Passy",
+        "long_name": "Passy",
+        "short_name": "Passy",
+        "type": "METRO",
+        "line": "METRO 6"
+      },
+      "id": 100626
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.401561712742541, 48.868440162341024],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100630,
+        "name": "Pelleport",
+        "long_name": "Pelleport",
+        "short_name": "Pelleport",
+        "type": "METRO",
+        "line": "METRO 3bis"
+      },
+      "id": 100630
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.356121938797104, 48.8309272400659],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100653,
+        "name": "Place d'Italie - Italie 2",
+        "long_name": "Place d'Italie",
+        "short_name": "Place d'Italie",
+        "type": "METRO",
+        "line": "METRO 6"
+      },
+      "id": 100653
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.340613006406504, 48.85193594110045],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100604,
+        "name": "Odéon",
+        "long_name": "Odéon",
+        "short_name": "Odéon",
+        "type": "METRO",
+        "line": "METRO 10"
+      },
+      "id": 100604
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.339727781593095, 48.852300762159715],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100605,
+        "name": "Odéon",
+        "long_name": "Odéon",
+        "short_name": "Odéon",
+        "type": "METRO",
+        "line": "METRO 4"
+      },
+      "id": 100605
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.332592489355911, 48.869939034252084],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100607,
+        "name": "Opéra",
+        "long_name": "Opéra",
+        "short_name": "Opéra",
+        "type": "METRO",
+        "line": "METRO 7"
+      },
+      "id": 100607
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.357162571618336, 48.85357547156908],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100673,
+        "name": "Pont Marie (Cité des Arts)",
+        "long_name": "Pont Marie",
+        "short_name": "Pont Marie (Cité des Arts)",
+        "type": "METRO",
+        "line": "METRO 7"
+      },
+      "id": 100673
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.30740224061964, 48.847066132217904],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100791,
+        "name": "Ségur",
+        "long_name": "Ségur",
+        "short_name": "Ségur",
+        "type": "METRO",
+        "line": "METRO 10"
+      },
+      "id": 100791
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.346552336353211, 48.867513024064],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100792,
+        "name": "Sentier",
+        "long_name": "Sentier",
+        "short_name": "Sentier",
+        "type": "METRO",
+        "line": "METRO 3"
+      },
+      "id": 100792
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.323167611246745, 48.85849912278188],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100803,
+        "name": "Solférino",
+        "long_name": "Solférino",
+        "short_name": "Solférino",
+        "type": "METRO",
+        "line": "METRO 12"
+      },
+      "id": 100803
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.360803503275268, 48.86651446080855],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100849,
+        "name": "Temple",
+        "long_name": "Temple",
+        "short_name": "Temple",
+        "type": "METRO",
+        "line": "METRO 3"
+      },
+      "id": 100849
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.288022141100324, 48.83244909820875],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100701,
+        "name": "Porte de Versailles",
+        "long_name": "Porte de Versailles",
+        "short_name": "Porte de Versailles",
+        "type": "METRO",
+        "line": "METRO 12"
+      },
+      "id": 100701
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.334189541968249, 48.86590673865971],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100714,
+        "name": "Pyramides",
+        "long_name": "Pyramides",
+        "short_name": "Pyramides",
+        "type": "METRO",
+        "line": "METRO 14"
+      },
+      "id": 100714
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.385316215101792, 48.87388185322374],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100716,
+        "name": "Pyrenées",
+        "long_name": "Pyrénées",
+        "short_name": "Pyrénées",
+        "type": "METRO",
+        "line": "METRO 11"
+      },
+      "id": 100716
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.353495741491145, 48.861204989395915],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100721,
+        "name": "Rambuteau",
+        "long_name": "Rambuteau",
+        "short_name": "Rambuteau",
+        "type": "METRO",
+        "line": "METRO 11"
+      },
+      "id": 100721
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.364636482504226, 48.945867271208414],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100763,
+        "name": "Saint-Denis Université (Paris 8)",
+        "long_name": "Saint-Denis - Université",
+        "short_name": "Saint-Denis - Université",
+        "type": "METRO",
+        "line": "METRO 13"
+      },
+      "id": 100763
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.314408121472487, 48.85144170650579],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100765,
+        "name": "Saint-François Xavier",
+        "long_name": "Saint-François-Xavier",
+        "short_name": "Saint-François Xavier",
+        "type": "METRO",
+        "line": "METRO 13"
+      },
+      "id": 100765
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.321257862893747, 48.84881637243505],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100871,
+        "name": "Vaneau",
+        "long_name": "Vaneau",
+        "short_name": "Vaneau",
+        "type": "METRO",
+        "line": "METRO 10"
+      },
+      "id": 100871
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.301107516242396, 48.83951658446791],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100877,
+        "name": "Vaugirard",
+        "long_name": "Vaugirard",
+        "short_name": "Vaugirard",
+        "type": "METRO",
+        "line": "METRO 12"
+      },
+      "id": 100877
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.329008926235402, 48.84221841267896],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100879,
+        "name": "Vavin",
+        "long_name": "Vavin",
+        "short_name": "Vavin",
+        "type": "METRO",
+        "line": "METRO 4"
+      },
+      "id": 100879
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.284174448270923, 48.930757003301366],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 1001008,
+        "name": "Asnières - Gennevilliers Les Courtilles",
+        "long_name": "Les Courtilles",
+        "short_name": "Asnières - Gennevilliers Les Courtilles",
+        "type": "METRO",
+        "line": "METRO 13"
+      },
+      "id": 1001008
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.365920319400959, 48.90656714504601],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 1001073,
+        "name": "Front Populaire",
+        "long_name": "Front Populaire",
+        "short_name": "Front Populaire",
+        "type": "METRO",
+        "line": "METRO 12"
+      },
+      "id": 1001073
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.357880771925327, 48.87599106387279],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100313,
+        "name": "Gare de l'Est",
+        "long_name": "Gare de l'Est",
+        "short_name": "Gare de l'Est",
+        "type": "METRO",
+        "line": "METRO 4"
+      },
+      "id": 100313
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.324397012385794, 48.8437813048013],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100564,
+        "name": "Gare Montparnasse",
+        "long_name": "Montparnasse-Bienvenüe",
+        "short_name": "Montparnasse Bienvenue",
+        "type": "METRO",
+        "line": "METRO 4"
+      },
+      "id": 100564
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.337164539445146, 48.882249532253695],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100646,
+        "name": "Pigalle",
+        "long_name": "Pigalle",
+        "short_name": "Pigalle",
+        "type": "METRO",
+        "line": "METRO 12"
+      },
+      "id": 100646
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.408089407236094, 48.84733558368036],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100702,
+        "name": "Porte de Vincennes",
+        "long_name": "Porte de Vincennes",
+        "short_name": "Porte de Vincennes",
+        "type": "METRO",
+        "line": "METRO 1"
+      },
+      "id": 100702
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.398468172268172, 48.88027195609515],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100709,
+        "name": "Pré Saint-Gervais",
+        "long_name": "Pré Saint-Gervais",
+        "short_name": "Pré Saint-Gervais",
+        "type": "METRO",
+        "line": "METRO 7bis"
+      },
+      "id": 100709
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.325815566511529, 48.855196323880406],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100752,
+        "name": "Rue du Bac",
+        "long_name": "Rue du Bac",
+        "short_name": "Rue du Bac",
+        "type": "METRO",
+        "line": "METRO 12"
+      },
+      "id": 100752
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.363953196602165, 48.80468811997663],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100896,
+        "name": "Villejuif Léo Lagrange",
+        "long_name": "Villejuif - Léo Lagrange",
+        "short_name": "Villejuif Léo Lagrange",
+        "type": "METRO",
+        "line": "METRO 7"
+      },
+      "id": 100896
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.2664415417194, 48.84520470264663],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100149,
+        "name": "Chardon Lagache",
+        "long_name": "Chardon Lagache",
+        "short_name": "Chardon Lagache",
+        "type": "METRO",
+        "line": "METRO 10"
+      },
+      "id": 100149
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.404409088781863, 48.91494975634199],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100290,
+        "name": "Fort d'Aubervilliers",
+        "long_name": "Fort d'Aubervilliers",
+        "short_name": "Fort d'Aubervilliers",
+        "type": "METRO",
+        "line": "METRO 7"
+      },
+      "id": 100290
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.277083018415724, 48.87146657720145],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100682,
+        "name": "Porte Dauphine",
+        "long_name": "Porte Dauphine",
+        "short_name": "Porte Dauphine",
+        "type": "METRO",
+        "line": "METRO 2"
+      },
+      "id": 100682
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.380020644247982, 48.85787849393227],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100920,
+        "name": "Voltaire",
+        "long_name": "Voltaire",
+        "short_name": "Voltaire",
+        "type": "METRO",
+        "line": "METRO 9"
+      },
+      "id": 100920
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.33012987711286, 48.864343777799434],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100864,
+        "name": "Tuileries",
+        "long_name": "Tuileries",
+        "short_name": "Tuileries",
+        "type": "METRO",
+        "line": "METRO 1"
+      },
+      "id": 100864
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.379911271454398, 48.84038874716129],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 10067,
+        "name": "Gare de Bercy",
+        "long_name": "Bercy",
+        "short_name": "Bercy",
+        "type": "METRO",
+        "line": "METRO 6"
+      },
+      "id": 10067
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.315176897304783, 48.889560827381025],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 1001226,
+        "name": "Pont Cardinet",
+        "long_name": "Pont Cardinet",
+        "short_name": "Pont Cardinet",
+        "type": "METRO",
+        "line": "METRO 14"
+      },
+      "id": 1001226
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.327842235259621, 48.875672106146304],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100769,
+        "name": "Gare Saint-Lazare",
+        "long_name": "Saint-Lazare",
+        "short_name": "Haussmann Saint-Lazare",
+        "type": "METRO",
+        "line": "METRO 12"
+      },
+      "id": 100769
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.3446670737483, 48.88297276689289],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 10021,
+        "name": "Anvers",
+        "long_name": "Anvers",
+        "short_name": "Anvers",
+        "type": "METRO",
+        "line": "METRO 2"
+      },
+      "id": 10021
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.349674832582202, 48.88341808759222],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 10050,
+        "name": "Barbès Rochechouart",
+        "long_name": "Barbès-Rochechouart",
+        "short_name": "Barbès Rochechouart",
+        "type": "METRO",
+        "line": "METRO 4"
+      },
+      "id": 10050
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.412763044547626, 48.8931499848255],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100253,
+        "name": "Église de Pantin",
+        "long_name": "Église de Pantin",
+        "short_name": "Église de Pantin",
+        "type": "METRO",
+        "line": "METRO 5"
+      },
+      "id": 100253
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.37025905675539, 48.881624028056386],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100373,
+        "name": "Jaurès",
+        "long_name": "Jaurès",
+        "short_name": "Jaurès",
+        "type": "METRO",
+        "line": "METRO 2"
+      },
+      "id": 100373
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.344561060662729, 48.871256545007405],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100755,
+        "name": "Grands Boulevards",
+        "long_name": "Grands Boulevards",
+        "short_name": "Grands Boulevards",
+        "type": "METRO",
+        "line": "METRO 9"
+      },
+      "id": 100755
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.322001788877925, 48.87447567571325],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100759,
+        "name": "Saint-Augustin",
+        "long_name": "Saint-Augustin",
+        "short_name": "Saint-Augustin",
+        "type": "METRO",
+        "line": "METRO 9"
+      },
+      "id": 100759
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.464280070543357, 48.76881073327119],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 1001072,
+        "name": "Pointe du Lac",
+        "long_name": "Créteil - Pointe du Lac",
+        "short_name": "Pointe du Lac",
+        "type": "METRO",
+        "line": "METRO 8"
+      },
+      "id": 1001072
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.36867458439179, 48.85200902958603],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 10054,
+        "name": "Bastille",
+        "long_name": "Bastille",
+        "short_name": "Bastille",
+        "type": "METRO",
+        "line": "METRO 1"
+      },
+      "id": 10054
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.338233468504617, 48.88222543299418],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100647,
+        "name": "Pigalle",
+        "long_name": "Pigalle",
+        "short_name": "Pigalle",
+        "type": "METRO",
+        "line": "METRO 2"
+      },
+      "id": 100647
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [2.338463081008744, 48.871692983636265],
+        "type": "Point"
+      },
+      "properties": {
+        "id": 100737,
+        "name": "Richelieu Drouot",
+        "long_name": "Richelieu-Drouot",
+        "short_name": "Richelieu Drouot",
+        "type": "METRO",
+        "line": "METRO 8"
+      },
+      "id": 100737
+    }
+  ],
+  "properties": {
+    "totalStations": 1158,
+    "stationsPerLine": {
+      "RER C": 84,
+      "RER D": 59,
+      "TRAIN J": 52,
+      "RER A": 46,
+      "RER B": 47,
+      "TRAIN P": 36,
+      "TRAIN H": 50,
+      "RER E": 22,
+      "TRAIN N": 35,
+      "TRAIN R": 24,
+      "TRAIN K": 10,
+      "TRAIN L": 36,
+      "TRAIN U": 10,
+      "TRAM 2": 24,
+      "METRO 2": 25,
+      "METRO 3": 25,
+      "METRO 14": 13,
+      "METRO 13": 32,
+      "METRO 6": 28,
+      "TRAM 1": 38,
+      "METRO 9": 37,
+      "METRO 5": 22,
+      "METRO 8": 38,
+      "METRO 3bis": 4,
+      "METRO 12": 31,
+      "METRO 10": 23,
+      "METRO 1": 25,
+      "METRO 7bis": 8,
+      "METRO 7": 38,
+      "METRO 4": 29,
+      "METRO 11": 13,
+      "TRAM 3b": 26,
+      "TRAM 6": 21,
+      "TRAM 4": 20,
+      "TRAM 3a": 25,
+      "TRAM 5": 16,
+      "TRAM 7": 18,
+      "TRAM 8": 17,
+      "TRAM 9": 19,
+      "TRAM 13": 12,
+      "TRAM 11": 7,
+      "TRAM 10": 13
+    }
+  }
+}

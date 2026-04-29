@@ -1,0 +1,40 @@
+{
+  "city": "edinburgh",
+  "continent": "europe",
+  "bbox": [
+    55.92741534496179,
+    -3.3606278733877155,
+    55.980228320398666,
+    -3.166391022555652
+  ],
+  "localLanguages": [
+    "en"
+  ],
+  "modes": [
+    "subway",
+    "light_rail",
+    "tram",
+    "rail",
+    "funicular",
+    "monorail",
+    "cable_car",
+    "gondola",
+    "chair_lift"
+  ],
+  "lines": [
+    {
+      "id": "EdinburghTram",
+      "name": "Edinburgh Tram",
+      "keywords": [
+        "Edinburgh Tram",
+        "Edinburgh",
+        "Edinburgh Line"
+      ],
+      "order": 0,
+      "icon": "europe/uk/edinburgh/EdinburghTram.png"
+    }
+  ],
+  "stationAliases": {},
+  "stationLocalNames": {},
+  "manualCoords": {}
+}

@@ -1,0 +1,40 @@
+{
+  "city": "albuquerque",
+  "continent": "north america",
+  "bbox": [
+    34.6616272,
+    -106.7665843,
+    35.6850072,
+    -105.9249073
+  ],
+  "localLanguages": [
+    "en"
+  ],
+  "modes": [
+    "subway",
+    "light_rail",
+    "tram",
+    "rail",
+    "funicular",
+    "monorail",
+    "cable_car",
+    "gondola",
+    "chair_lift"
+  ],
+  "lines": [
+    {
+      "id": "RRX",
+      "name": "Rail Runner Express",
+      "keywords": [
+        "Rail Runner Express",
+        "RRX",
+        "RRX Line"
+      ],
+      "order": 0,
+      "icon": "north-america/usa/albuquerque/RRX.png"
+    }
+  ],
+  "stationAliases": {},
+  "stationLocalNames": {},
+  "manualCoords": {}
+}

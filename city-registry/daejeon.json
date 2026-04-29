@@ -1,0 +1,65 @@
+{
+  "city": "daejeon",
+  "continent": "asia",
+  "bbox": [
+    35.8504,
+    126.8845,
+    36.8504,
+    127.8845
+  ],
+  "localLanguages": [
+    "ko"
+  ],
+  "modes": [
+    "subway",
+    "light_rail",
+    "tram",
+    "rail",
+    "funicular",
+    "monorail",
+    "cable_car",
+    "gondola",
+    "chair_lift"
+  ],
+  "lines": [
+    {
+      "id": "daejeon1",
+      "name": "Line 1",
+      "keywords": [
+        "Line 1",
+        "1 Line",
+        "L1",
+        "1号线",
+        "地铁1号线",
+        "1号線",
+        "1호선",
+        "Route 1",
+        "Tram Route 1",
+        "daejeon1"
+      ],
+      "order": 0,
+      "icon": "asia/south-korea/daejeon/daejeon1.png"
+    },
+    {
+      "id": "daejeon2",
+      "name": "Line 2",
+      "keywords": [
+        "Line 2",
+        "2 Line",
+        "L2",
+        "2号线",
+        "地铁2号线",
+        "2号線",
+        "2호선",
+        "Route 2",
+        "Tram Route 2",
+        "daejeon2"
+      ],
+      "order": 1,
+      "icon": "asia/south-korea/daejeon/daejeon2.png"
+    }
+  ],
+  "stationAliases": {},
+  "stationLocalNames": {},
+  "manualCoords": {}
+}

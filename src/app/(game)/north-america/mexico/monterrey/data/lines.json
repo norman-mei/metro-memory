@@ -1,0 +1,35 @@
+{
+  "mty1": {
+    "name": "Line 1",
+    "color": "#E8B62D",
+    "backgroundColor": "#E8B62D",
+    "textColor": "#1F1F1F",
+    "progressOutlineColor": "#E8B62D",
+    "order": 0,
+    "icon": "north-america/mexico/monterrey/Monterrey1.png",
+    "badgeShape": "circle",
+    "badgeFit": "contain"
+  },
+  "mty2": {
+    "name": "Line 2",
+    "color": "#78C56D",
+    "backgroundColor": "#78C56D",
+    "textColor": "#1F1F1F",
+    "progressOutlineColor": "#78C56D",
+    "order": 1,
+    "icon": "north-america/mexico/monterrey/Monterrey2.png",
+    "badgeShape": "circle",
+    "badgeFit": "contain"
+  },
+  "mty3": {
+    "name": "Line 3",
+    "color": "#EA4E0F",
+    "backgroundColor": "#EA4E0F",
+    "textColor": "#FFFFFF",
+    "progressOutlineColor": "#EA4E0F",
+    "order": 2,
+    "icon": "north-america/mexico/monterrey/Monterrey3.png",
+    "badgeShape": "circle",
+    "badgeFit": "contain"
+  }
+}

@@ -1,0 +1,302 @@
+{
+  "city": "madrid",
+  "continent": "europe",
+  "bbox": [
+    40.281634,
+    -3.903977,
+    40.559837,
+    -3.447473
+  ],
+  "localLanguages": [
+    "es"
+  ],
+  "modes": [
+    "subway",
+    "light_rail",
+    "tram",
+    "rail",
+    "funicular",
+    "monorail",
+    "cable_car",
+    "gondola",
+    "chair_lift"
+  ],
+  "lines": [
+    {
+      "id": "MadridMetroL1",
+      "name": "1",
+      "keywords": [
+        "1",
+        "Line 1",
+        "1 Line",
+        "L1",
+        "1号线",
+        "地铁1号线",
+        "1号線",
+        "1호선",
+        "Route 1",
+        "Tram Route 1",
+        "Madrid Metro L1",
+        "Madrid L1"
+      ],
+      "order": 0,
+      "icon": "europe/spain/madrid/MadridMetroL1.svg"
+    },
+    {
+      "id": "MadridMetroL2",
+      "name": "2",
+      "keywords": [
+        "2",
+        "Line 2",
+        "2 Line",
+        "L2",
+        "2号线",
+        "地铁2号线",
+        "2号線",
+        "2호선",
+        "Route 2",
+        "Tram Route 2",
+        "Madrid Metro L2",
+        "Madrid L2"
+      ],
+      "order": 1,
+      "icon": "europe/spain/madrid/MadridMetroL2.svg"
+    },
+    {
+      "id": "MadridMetroL3",
+      "name": "3",
+      "keywords": [
+        "3",
+        "Line 3",
+        "3 Line",
+        "L3",
+        "3号线",
+        "地铁3号线",
+        "3号線",
+        "3호선",
+        "Route 3",
+        "Tram Route 3",
+        "Madrid Metro L3",
+        "Madrid L3"
+      ],
+      "order": 2,
+      "icon": "europe/spain/madrid/MadridMetroL3.svg"
+    },
+    {
+      "id": "MadridMetroL4",
+      "name": "4",
+      "keywords": [
+        "4",
+        "Line 4",
+        "4 Line",
+        "L4",
+        "4号线",
+        "地铁4号线",
+        "4号線",
+        "4호선",
+        "Route 4",
+        "Tram Route 4",
+        "Madrid Metro L4",
+        "Madrid L4"
+      ],
+      "order": 3,
+      "icon": "europe/spain/madrid/MadridMetroL4.svg"
+    },
+    {
+      "id": "MadridMetroL5",
+      "name": "5",
+      "keywords": [
+        "5",
+        "Line 5",
+        "5 Line",
+        "L5",
+        "5号线",
+        "地铁5号线",
+        "5号線",
+        "5호선",
+        "Route 5",
+        "Tram Route 5",
+        "Madrid Metro L5",
+        "Madrid L5"
+      ],
+      "order": 4,
+      "icon": "europe/spain/madrid/MadridMetroL5.svg"
+    },
+    {
+      "id": "MadridMetroL6",
+      "name": "6",
+      "keywords": [
+        "6",
+        "Line 6",
+        "6 Line",
+        "L6",
+        "6号线",
+        "地铁6号线",
+        "6号線",
+        "6호선",
+        "Route 6",
+        "Tram Route 6",
+        "Madrid Metro L6",
+        "Madrid L6"
+      ],
+      "order": 5,
+      "icon": "europe/spain/madrid/MadridMetroL6.svg"
+    },
+    {
+      "id": "MadridMetroL7",
+      "name": "7",
+      "keywords": [
+        "7",
+        "Line 7",
+        "7 Line",
+        "L7",
+        "7号线",
+        "地铁7号线",
+        "7号線",
+        "7호선",
+        "Route 7",
+        "Tram Route 7",
+        "Madrid Metro L7",
+        "Madrid L7"
+      ],
+      "order": 6,
+      "icon": "europe/spain/madrid/MadridMetroL7.svg"
+    },
+    {
+      "id": "MadridMetroL8",
+      "name": "8",
+      "keywords": [
+        "8",
+        "Line 8",
+        "8 Line",
+        "L8",
+        "8号线",
+        "地铁8号线",
+        "8号線",
+        "8호선",
+        "Route 8",
+        "Tram Route 8",
+        "Madrid Metro L8",
+        "Madrid L8"
+      ],
+      "order": 7,
+      "icon": "europe/spain/madrid/MadridMetroL8.svg"
+    },
+    {
+      "id": "MadridMetroL9",
+      "name": "9",
+      "keywords": [
+        "9",
+        "Line 9",
+        "9 Line",
+        "L9",
+        "9号线",
+        "地铁9号线",
+        "9号線",
+        "9호선",
+        "Route 9",
+        "Tram Route 9",
+        "Madrid Metro L9",
+        "Madrid L9"
+      ],
+      "order": 8,
+      "icon": "europe/spain/madrid/MadridMetroL9.svg"
+    },
+    {
+      "id": "MadridMetroL10",
+      "name": "10",
+      "keywords": [
+        "10",
+        "Line 10",
+        "10 Line",
+        "L10",
+        "10号线",
+        "地铁10号线",
+        "10号線",
+        "10호선",
+        "Route 10",
+        "Tram Route 10",
+        "Madrid Metro L10",
+        "Madrid L10"
+      ],
+      "order": 9,
+      "icon": "europe/spain/madrid/MadridMetroL10.svg"
+    },
+    {
+      "id": "MadridMetroL11",
+      "name": "11",
+      "keywords": [
+        "11",
+        "Line 11",
+        "11 Line",
+        "L11",
+        "11号线",
+        "地铁11号线",
+        "11号線",
+        "11호선",
+        "Route 11",
+        "Tram Route 11",
+        "Madrid Metro L11",
+        "Madrid L11"
+      ],
+      "order": 10,
+      "icon": "europe/spain/madrid/MadridMetroL11.svg"
+    },
+    {
+      "id": "MadridMetroL12",
+      "name": "12",
+      "keywords": [
+        "12",
+        "Line 12",
+        "12 Line",
+        "L12",
+        "12号线",
+        "地铁12号线",
+        "12号線",
+        "12호선",
+        "Route 12",
+        "Tram Route 12",
+        "Madrid Metro L12",
+        "Madrid L12"
+      ],
+      "order": 11,
+      "icon": "europe/spain/madrid/MadridMetroL12.svg"
+    },
+    {
+      "id": "MetroLigeroMl1",
+      "name": "ML1",
+      "keywords": [
+        "ML1",
+        "Metro Ligero Ml1",
+        "Ligero Ml1"
+      ],
+      "order": 12,
+      "icon": "europe/spain/madrid/MetroLigeroMl1.svg"
+    },
+    {
+      "id": "MetroLigeroMl2",
+      "name": "ML2",
+      "keywords": [
+        "ML2",
+        "Metro Ligero Ml2",
+        "Ligero Ml2"
+      ],
+      "order": 13,
+      "icon": "europe/spain/madrid/MetroLigeroMl2.svg"
+    },
+    {
+      "id": "MetroLigeroMl3",
+      "name": "ML3",
+      "keywords": [
+        "ML3",
+        "Metro Ligero Ml3",
+        "Ligero Ml3"
+      ],
+      "order": 14,
+      "icon": "europe/spain/madrid/MetroLigeroMl3.svg"
+    }
+  ],
+  "stationAliases": {},
+  "stationLocalNames": {},
+  "manualCoords": {}
+}

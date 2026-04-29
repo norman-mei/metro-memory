@@ -1,0 +1,514 @@
+{
+  "city": "karlsruhe",
+  "continent": "europe",
+  "bbox": [
+    48.442815474999996,
+    8.065263025,
+    49.352306875000004,
+    9.527279850000001
+  ],
+  "localLanguages": [
+    "de"
+  ],
+  "modes": [
+    "subway",
+    "light_rail",
+    "tram",
+    "rail",
+    "funicular",
+    "monorail",
+    "cable_car",
+    "gondola",
+    "chair_lift"
+  ],
+  "lines": [
+    {
+      "id": "Karlsruhe1",
+      "name": "1",
+      "keywords": [
+        "1",
+        "Line 1",
+        "1 Line",
+        "L1",
+        "1号线",
+        "地铁1号线",
+        "1号線",
+        "1호선",
+        "Route 1",
+        "Tram Route 1",
+        "Karlsruhe1"
+      ],
+      "order": 1,
+      "icon": "europe/germany/karlsruhe/Karlsruhe1.svg"
+    },
+    {
+      "id": "Karlsruhe17",
+      "name": "17",
+      "keywords": [
+        "17",
+        "Line 17",
+        "17 Line",
+        "L17",
+        "17号线",
+        "地铁17号线",
+        "17号線",
+        "17호선",
+        "Route 17",
+        "Tram Route 17",
+        "Karlsruhe17"
+      ],
+      "order": 2,
+      "icon": "europe/germany/karlsruhe/Karlsruhe17.svg"
+    },
+    {
+      "id": "Karlsruhe18",
+      "name": "18",
+      "keywords": [
+        "18",
+        "Line 18",
+        "18 Line",
+        "L18",
+        "18号线",
+        "地铁18号线",
+        "18号線",
+        "18호선",
+        "Route 18",
+        "Tram Route 18",
+        "Karlsruhe18"
+      ],
+      "order": 3,
+      "icon": "europe/germany/karlsruhe/Karlsruhe18.svg"
+    },
+    {
+      "id": "Karlsruhe2",
+      "name": "2",
+      "keywords": [
+        "2",
+        "Line 2",
+        "2 Line",
+        "L2",
+        "2号线",
+        "地铁2号线",
+        "2号線",
+        "2호선",
+        "Route 2",
+        "Tram Route 2",
+        "Karlsruhe2"
+      ],
+      "order": 4,
+      "icon": "europe/germany/karlsruhe/Karlsruhe2.svg"
+    },
+    {
+      "id": "Karlsruhe3",
+      "name": "3",
+      "keywords": [
+        "3",
+        "Line 3",
+        "3 Line",
+        "L3",
+        "3号线",
+        "地铁3号线",
+        "3号線",
+        "3호선",
+        "Route 3",
+        "Tram Route 3",
+        "Karlsruhe3"
+      ],
+      "order": 5,
+      "icon": "europe/germany/karlsruhe/Karlsruhe3.svg"
+    },
+    {
+      "id": "Karlsruhe4",
+      "name": "4",
+      "keywords": [
+        "4",
+        "Line 4",
+        "4 Line",
+        "L4",
+        "4号线",
+        "地铁4号线",
+        "4号線",
+        "4호선",
+        "Route 4",
+        "Tram Route 4",
+        "Karlsruhe4"
+      ],
+      "order": 6,
+      "icon": "europe/germany/karlsruhe/Karlsruhe4.svg"
+    },
+    {
+      "id": "Karlsruhe5",
+      "name": "5",
+      "keywords": [
+        "5",
+        "Line 5",
+        "5 Line",
+        "L5",
+        "5号线",
+        "地铁5号线",
+        "5号線",
+        "5호선",
+        "Route 5",
+        "Tram Route 5",
+        "Karlsruhe5"
+      ],
+      "order": 7,
+      "icon": "europe/germany/karlsruhe/Karlsruhe5.svg"
+    },
+    {
+      "id": "Karlsruhe8",
+      "name": "8",
+      "keywords": [
+        "8",
+        "Line 8",
+        "8 Line",
+        "L8",
+        "8号线",
+        "地铁8号线",
+        "8号線",
+        "8호선",
+        "Route 8",
+        "Tram Route 8",
+        "Karlsruhe8"
+      ],
+      "order": 8,
+      "icon": "europe/germany/karlsruhe/Karlsruhe8.svg"
+    },
+    {
+      "id": "KarlsruheS1",
+      "name": "S1",
+      "keywords": [
+        "S1",
+        "Line 1",
+        "1 Line",
+        "L1",
+        "1号线",
+        "地铁1号线",
+        "1号線",
+        "1호선",
+        "Route 1",
+        "Tram Route 1",
+        "Karlsruhe S1"
+      ],
+      "order": 9,
+      "icon": "europe/germany/karlsruhe/KarlsruheS1.svg"
+    },
+    {
+      "id": "KarlsruheS11",
+      "name": "S11",
+      "keywords": [
+        "S11",
+        "Line 11",
+        "11 Line",
+        "L11",
+        "11号线",
+        "地铁11号线",
+        "11号線",
+        "11호선",
+        "Route 11",
+        "Tram Route 11",
+        "11",
+        "Karlsruhe S11"
+      ],
+      "order": 10,
+      "icon": "europe/germany/karlsruhe/KarlsruheS11.svg"
+    },
+    {
+      "id": "KarlsruheS12",
+      "name": "S12",
+      "keywords": [
+        "S12",
+        "Line 12",
+        "12 Line",
+        "L12",
+        "12号线",
+        "地铁12号线",
+        "12号線",
+        "12호선",
+        "Route 12",
+        "Tram Route 12",
+        "12",
+        "Karlsruhe S12"
+      ],
+      "order": 11,
+      "icon": "europe/germany/karlsruhe/KarlsruheS12.svg"
+    },
+    {
+      "id": "KarlsruheS2",
+      "name": "S2",
+      "keywords": [
+        "S2",
+        "Line 2",
+        "2 Line",
+        "L2",
+        "2号线",
+        "地铁2号线",
+        "2号線",
+        "2호선",
+        "Route 2",
+        "Tram Route 2",
+        "Karlsruhe S2"
+      ],
+      "order": 12,
+      "icon": "europe/germany/karlsruhe/KarlsruheS2.svg"
+    },
+    {
+      "id": "KarlsruheS31",
+      "name": "S31",
+      "keywords": [
+        "S31",
+        "Line 31",
+        "31 Line",
+        "L31",
+        "31号线",
+        "地铁31号线",
+        "31号線",
+        "31호선",
+        "Route 31",
+        "Tram Route 31",
+        "31",
+        "Karlsruhe S31"
+      ],
+      "order": 13,
+      "icon": "europe/germany/karlsruhe/KarlsruheS31.svg"
+    },
+    {
+      "id": "KarlsruheS32",
+      "name": "S32",
+      "keywords": [
+        "S32",
+        "Line 32",
+        "32 Line",
+        "L32",
+        "32号线",
+        "地铁32号线",
+        "32号線",
+        "32호선",
+        "Route 32",
+        "Tram Route 32",
+        "32",
+        "Karlsruhe S32"
+      ],
+      "order": 14,
+      "icon": "europe/germany/karlsruhe/KarlsruheS32.svg"
+    },
+    {
+      "id": "KarlsruheS4",
+      "name": "S4",
+      "keywords": [
+        "S4",
+        "Line 4",
+        "4 Line",
+        "L4",
+        "4号线",
+        "地铁4号线",
+        "4号線",
+        "4호선",
+        "Route 4",
+        "Tram Route 4",
+        "Karlsruhe S4"
+      ],
+      "order": 15,
+      "icon": "europe/germany/karlsruhe/KarlsruheS4.svg"
+    },
+    {
+      "id": "KarlsruheS41",
+      "name": "S41",
+      "keywords": [
+        "S41",
+        "Line 41",
+        "41 Line",
+        "L41",
+        "41号线",
+        "地铁41号线",
+        "41号線",
+        "41호선",
+        "Route 41",
+        "Tram Route 41",
+        "41",
+        "Karlsruhe S41"
+      ],
+      "order": 16,
+      "icon": "europe/germany/karlsruhe/KarlsruheS41.svg"
+    },
+    {
+      "id": "KarlsruheS42",
+      "name": "S42",
+      "keywords": [
+        "S42",
+        "Line 42",
+        "42 Line",
+        "L42",
+        "42号线",
+        "地铁42号线",
+        "42号線",
+        "42호선",
+        "Route 42",
+        "Tram Route 42",
+        "42",
+        "Karlsruhe S42"
+      ],
+      "order": 17,
+      "icon": "europe/germany/karlsruhe/KarlsruheS42.svg"
+    },
+    {
+      "id": "KarlsruheS5",
+      "name": "S5",
+      "keywords": [
+        "S5",
+        "Line 5",
+        "5 Line",
+        "L5",
+        "5号线",
+        "地铁5号线",
+        "5号線",
+        "5호선",
+        "Route 5",
+        "Tram Route 5",
+        "Karlsruhe S5"
+      ],
+      "order": 18,
+      "icon": "europe/germany/karlsruhe/KarlsruheS5.svg"
+    },
+    {
+      "id": "KarlsruheS51",
+      "name": "S51",
+      "keywords": [
+        "S51",
+        "Line 51",
+        "51 Line",
+        "L51",
+        "51号线",
+        "地铁51号线",
+        "51号線",
+        "51호선",
+        "Route 51",
+        "Tram Route 51",
+        "51",
+        "Karlsruhe S51"
+      ],
+      "order": 19,
+      "icon": "europe/germany/karlsruhe/KarlsruheS51.svg"
+    },
+    {
+      "id": "KarlsruheS52",
+      "name": "S52",
+      "keywords": [
+        "S52",
+        "Line 52",
+        "52 Line",
+        "L52",
+        "52号线",
+        "地铁52号线",
+        "52号線",
+        "52호선",
+        "Route 52",
+        "Tram Route 52",
+        "52",
+        "Karlsruhe S52"
+      ],
+      "order": 20,
+      "icon": "europe/germany/karlsruhe/KarlsruheS52.svg"
+    },
+    {
+      "id": "KarlsruheS6",
+      "name": "S6",
+      "keywords": [
+        "S6",
+        "Line 6",
+        "6 Line",
+        "L6",
+        "6号线",
+        "地铁6号线",
+        "6号線",
+        "6호선",
+        "Route 6",
+        "Tram Route 6",
+        "Karlsruhe S6"
+      ],
+      "order": 21,
+      "icon": "europe/germany/karlsruhe/KarlsruheS6.svg"
+    },
+    {
+      "id": "KarlsruheS7",
+      "name": "S7",
+      "keywords": [
+        "S7",
+        "Line 7",
+        "7 Line",
+        "L7",
+        "7号线",
+        "地铁7号线",
+        "7号線",
+        "7호선",
+        "Route 7",
+        "Tram Route 7",
+        "Karlsruhe S7"
+      ],
+      "order": 22,
+      "icon": "europe/germany/karlsruhe/KarlsruheS7.svg"
+    },
+    {
+      "id": "KarlsruheS71",
+      "name": "S71",
+      "keywords": [
+        "S71",
+        "Line 71",
+        "71 Line",
+        "L71",
+        "71号线",
+        "地铁71号线",
+        "71号線",
+        "71호선",
+        "Route 71",
+        "Tram Route 71",
+        "71",
+        "Karlsruhe S71"
+      ],
+      "order": 23,
+      "icon": "europe/germany/karlsruhe/KarlsruheS71.svg"
+    },
+    {
+      "id": "KarlsruheS8",
+      "name": "S8",
+      "keywords": [
+        "S8",
+        "Line 8",
+        "8 Line",
+        "L8",
+        "8号线",
+        "地铁8号线",
+        "8号線",
+        "8호선",
+        "Route 8",
+        "Tram Route 8",
+        "Karlsruhe S8"
+      ],
+      "order": 24,
+      "icon": "europe/germany/karlsruhe/KarlsruheS8.svg"
+    },
+    {
+      "id": "KarlsruheS81",
+      "name": "S81",
+      "keywords": [
+        "S81",
+        "Line 81",
+        "81 Line",
+        "L81",
+        "81号线",
+        "地铁81号线",
+        "81号線",
+        "81호선",
+        "Route 81",
+        "Tram Route 81",
+        "81",
+        "Karlsruhe S81"
+      ],
+      "order": 25,
+      "icon": "europe/germany/karlsruhe/KarlsruheS81.svg"
+    }
+  ],
+  "stationAliases": {},
+  "stationLocalNames": {},
+  "manualCoords": {}
+}

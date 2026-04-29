@@ -1,0 +1,200 @@
+{
+  "wenhu": {
+    "name": "Wenhu",
+    "color": "#C58D2D",
+    "backgroundColor": "#C58D2D",
+    "textColor": "#FFFFFF",
+    "progressOutlineColor": "#C58D2D",
+    "order": 0,
+    "icon": "asia/taiwan/taipei/wenhu.png",
+    "badgeShape": "square",
+    "badgeFit": "contain"
+  },
+  "tamsuixinyi": {
+    "name": "Tamsui-Xinyi",
+    "color": "#E40028",
+    "backgroundColor": "#E40028",
+    "textColor": "#FFFFFF",
+    "progressOutlineColor": "#E40028",
+    "order": 1,
+    "icon": "asia/taiwan/taipei/tamsui.png",
+    "badgeShape": "square",
+    "badgeFit": "contain"
+  },
+  "xinbeitou": {
+    "name": "Xinbeitou Branch",
+    "color": "#FD93A4",
+    "backgroundColor": "#FD93A4",
+    "textColor": "#1F1F1F",
+    "progressOutlineColor": "#FD93A4",
+    "order": 2,
+    "icon": "asia/taiwan/taipei/xinbeitou.png",
+    "badgeShape": "square",
+    "badgeFit": "contain"
+  },
+  "songshanxindian": {
+    "name": "Songshan-Xindian",
+    "color": "#008759",
+    "backgroundColor": "#008759",
+    "textColor": "#FFFFFF",
+    "progressOutlineColor": "#008759",
+    "order": 3,
+    "icon": "asia/taiwan/taipei/songshan.png",
+    "badgeShape": "square",
+    "badgeFit": "contain"
+  },
+  "xiaobitan": {
+    "name": "Xiaobitan Branch",
+    "color": "#D0DC00",
+    "backgroundColor": "#D0DC00",
+    "textColor": "#1F1F1F",
+    "progressOutlineColor": "#D0DC00",
+    "order": 4,
+    "icon": "asia/taiwan/taipei/xiaobitan.png",
+    "badgeShape": "square",
+    "badgeFit": "contain"
+  },
+  "zhonghexinlu": {
+    "name": "Zhonghe-Xinlu",
+    "color": "#F8B715",
+    "backgroundColor": "#F8B715",
+    "textColor": "#1F1F1F",
+    "progressOutlineColor": "#F8B715",
+    "order": 5,
+    "icon": "asia/taiwan/taipei/zhonghe.png",
+    "badgeShape": "square",
+    "badgeFit": "contain"
+  },
+  "bannan": {
+    "name": "Bannan",
+    "color": "#0071BE",
+    "backgroundColor": "#0071BE",
+    "textColor": "#FFFFFF",
+    "progressOutlineColor": "#0071BE",
+    "order": 6,
+    "icon": "asia/taiwan/taipei/bannan.png",
+    "badgeShape": "square",
+    "badgeFit": "contain"
+  },
+  "circular": {
+    "name": "Circular",
+    "color": "#FFDC00",
+    "backgroundColor": "#FFDC00",
+    "textColor": "#1F1F1F",
+    "progressOutlineColor": "#FFDC00",
+    "order": 7,
+    "icon": "asia/taiwan/taipei/circular.png",
+    "badgeShape": "square",
+    "badgeFit": "contain"
+  },
+  "danhai": {
+    "name": "Danhai LRT",
+    "color": "#E6544E",
+    "backgroundColor": "#E6544E",
+    "textColor": "#FFFFFF",
+    "progressOutlineColor": "#E6544E",
+    "order": 8,
+    "icon": "asia/taiwan/taipei/danhai.png",
+    "badgeShape": "square",
+    "badgeFit": "contain"
+  },
+  "ankeng": {
+    "name": "Ankeng LRT",
+    "color": "#C4B292",
+    "backgroundColor": "#C4B292",
+    "textColor": "#1F1F1F",
+    "progressOutlineColor": "#C4B292",
+    "order": 9,
+    "icon": "asia/taiwan/taipei/ankeng.png",
+    "badgeShape": "square",
+    "badgeFit": "contain"
+  },
+  "taoyuanairport": {
+    "name": "Taoyuan Airport MRT",
+    "color": "#8344B2",
+    "backgroundColor": "#8344B2",
+    "textColor": "#FFFFFF",
+    "progressOutlineColor": "#8344B2",
+    "order": 10,
+    "icon": "asia/taiwan/taipei/taoyuanairport.png",
+    "badgeShape": "square",
+    "badgeFit": "contain"
+  },
+  "skytrain": {
+    "name": "Skytrain",
+    "color": "#1FA6D2",
+    "backgroundColor": "#1FA6D2",
+    "textColor": "#FFFFFF",
+    "progressOutlineColor": "#1FA6D2",
+    "order": 11,
+    "icon": "asia/taiwan/taipei/tiac.png",
+    "badgeShape": "square",
+    "badgeFit": "contain"
+  },
+  "maokong": {
+    "name": "Maokong Gondola",
+    "color": "#79B924",
+    "backgroundColor": "#79B924",
+    "textColor": "#FFFFFF",
+    "progressOutlineColor": "#79B924",
+    "order": 12,
+    "icon": "asia/taiwan/taipei/maokong.png",
+    "badgeShape": "square",
+    "badgeFit": "contain"
+  },
+  "wulai": {
+    "name": "Wulai Scenic Train",
+    "color": "#015F51",
+    "backgroundColor": "#015F51",
+    "textColor": "#FFFFFF",
+    "progressOutlineColor": "#015F51",
+    "order": 13,
+    "icon": "asia/taiwan/taipei/FANCA.png",
+    "badgeShape": "square",
+    "badgeFit": "contain"
+  },
+  "yunhsien": {
+    "name": "Yun Hsien Resort Cable Car",
+    "color": "#102790",
+    "backgroundColor": "#102790",
+    "textColor": "#FFFFFF",
+    "progressOutlineColor": "#102790",
+    "order": 14,
+    "icon": "asia/taiwan/taipei/yunhsien.png",
+    "badgeShape": "square",
+    "badgeFit": "contain"
+  },
+  "sanying": {
+    "name": "Sanying",
+    "color": "#649EC3",
+    "backgroundColor": "#649EC3",
+    "textColor": "#FFFFFF",
+    "progressOutlineColor": "#649EC3",
+    "order": 15,
+    "icon": "asia/taiwan/taipei/sanying.png",
+    "badgeShape": "square",
+    "badgeFit": "contain"
+  },
+  "aerotropolis": {
+    "name": "Aerotropolis",
+    "color": "#62A130",
+    "backgroundColor": "#62A130",
+    "textColor": "#FFFFFF",
+    "progressOutlineColor": "#62A130",
+    "order": 16,
+    "icon": "asia/taiwan/taipei/taoyuangreen.png",
+    "badgeShape": "square",
+    "badgeFit": "contain"
+  },
+  "wanda": {
+    "name": "Wanda-Zhonghe-Shulin",
+    "color": "#A2D985",
+    "backgroundColor": "#A2D985",
+    "textColor": "#1F1F1F",
+    "progressOutlineColor": "#A2D985",
+    "order": 17,
+    "icon": "asia/taiwan/taipei/wanda.png",
+    "badgeShape": "square",
+    "badgeFit": "contain"
+  }
+}

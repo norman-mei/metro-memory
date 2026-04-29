@@ -1,0 +1,95 @@
+{
+  "city": "xiamen",
+  "continent": "asia",
+  "bbox": [
+    24.4310459,
+    117.9313862,
+    24.6462879,
+    118.3592985
+  ],
+  "localLanguages": [
+    "zh"
+  ],
+  "modes": [
+    "subway",
+    "light_rail",
+    "tram",
+    "rail",
+    "funicular",
+    "monorail",
+    "cable_car",
+    "gondola",
+    "chair_lift"
+  ],
+  "lines": [
+    {
+      "id": "xiamen1",
+      "name": "Line 1",
+      "keywords": [
+        "厦门地铁一号线",
+        "Xiamen Metro Line 1",
+        "Xiamen 1",
+        "Line 1",
+        "1 Line",
+        "L1",
+        "1号线",
+        "地铁1号线",
+        "1号線",
+        "1호선",
+        "Route 1",
+        "Tram Route 1",
+        "Xiamen Xiamen Metro Line1",
+        "Xiamen Xiamen Line1",
+        "xiamen1"
+      ],
+      "order": 1
+    },
+    {
+      "id": "xiamen2",
+      "name": "Line 2",
+      "keywords": [
+        "厦门地铁2号线",
+        "Line 2",
+        "2 Line",
+        "L2",
+        "2号线",
+        "地铁2号线",
+        "2号線",
+        "2호선",
+        "Route 2",
+        "Tram Route 2",
+        "Xiamen Metro Line 2",
+        "Xiamen 2",
+        "Xiamen Xiamen Metro Line2",
+        "Xiamen Xiamen Line2",
+        "xiamen2"
+      ],
+      "order": 2
+    },
+    {
+      "id": "xiamen3",
+      "name": "Line 3",
+      "keywords": [
+        "厦门地铁3号线",
+        "Line 3",
+        "3 Line",
+        "L3",
+        "3号线",
+        "地铁3号线",
+        "3号線",
+        "3호선",
+        "Route 3",
+        "Tram Route 3",
+        "Xiamen Metro Line 3",
+        "Xiamen 3",
+        "Xiamen Xiamen Metro Line3",
+        "Xiamen Xiamen Line3",
+        "xiamen3"
+      ],
+      "order": 3
+    }
+  ],
+  "stationAliases": {},
+  "stationLocalNames": {},
+  "manualCoords": {}
+}

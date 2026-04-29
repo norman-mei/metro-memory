@@ -1,0 +1,359 @@
+{
+  "city": "seoul",
+  "continent": "asia",
+  "bbox": [
+    36.769628,
+    126.441442,
+    37.948611,
+    127.723849
+  ],
+  "localLanguages": [
+    "ko"
+  ],
+  "modes": [
+    "subway",
+    "light_rail",
+    "tram",
+    "rail",
+    "funicular",
+    "monorail",
+    "cable_car",
+    "gondola",
+    "chair_lift"
+  ],
+  "lines": [
+    {
+      "id": "SeoulSubway1Hoseon",
+      "name": "1호선",
+      "keywords": [
+        "1호선",
+        "Line 1",
+        "1 Line",
+        "L1",
+        "1号线",
+        "地铁1号线",
+        "1号線",
+        "Route 1",
+        "Tram Route 1",
+        "Seoul Subway1 Hoseon"
+      ],
+      "order": 0,
+      "icon": "asia/south-korea/seoul/SeoulSubway1Hoseon.svg"
+    },
+    {
+      "id": "SeoulSubway2Hoseon",
+      "name": "2호선",
+      "keywords": [
+        "2호선",
+        "Line 2",
+        "2 Line",
+        "L2",
+        "2号线",
+        "地铁2号线",
+        "2号線",
+        "Route 2",
+        "Tram Route 2",
+        "Seoul Subway2 Hoseon"
+      ],
+      "order": 1,
+      "icon": "asia/south-korea/seoul/SeoulSubway2Hoseon.svg"
+    },
+    {
+      "id": "SeoulSubway3Hoseon",
+      "name": "3호선",
+      "keywords": [
+        "3호선",
+        "Line 3",
+        "3 Line",
+        "L3",
+        "3号线",
+        "地铁3号线",
+        "3号線",
+        "Route 3",
+        "Tram Route 3",
+        "Seoul Subway3 Hoseon"
+      ],
+      "order": 2,
+      "icon": "asia/south-korea/seoul/SeoulSubway3Hoseon.svg"
+    },
+    {
+      "id": "SeoulSubway4Hoseon",
+      "name": "4호선",
+      "keywords": [
+        "4호선",
+        "Line 4",
+        "4 Line",
+        "L4",
+        "4号线",
+        "地铁4号线",
+        "4号線",
+        "Route 4",
+        "Tram Route 4",
+        "Seoul Subway4 Hoseon"
+      ],
+      "order": 3,
+      "icon": "asia/south-korea/seoul/SeoulSubway4Hoseon.svg"
+    },
+    {
+      "id": "SeoulSubway5Hoseon",
+      "name": "5호선",
+      "keywords": [
+        "5호선",
+        "Line 5",
+        "5 Line",
+        "L5",
+        "5号线",
+        "地铁5号线",
+        "5号線",
+        "Route 5",
+        "Tram Route 5",
+        "Seoul Subway5 Hoseon"
+      ],
+      "order": 4,
+      "icon": "asia/south-korea/seoul/SeoulSubway5Hoseon.svg"
+    },
+    {
+      "id": "SeoulSubway6Hoseon",
+      "name": "6호선",
+      "keywords": [
+        "6호선",
+        "Line 6",
+        "6 Line",
+        "L6",
+        "6号线",
+        "地铁6号线",
+        "6号線",
+        "Route 6",
+        "Tram Route 6",
+        "Seoul Subway6 Hoseon"
+      ],
+      "order": 5,
+      "icon": "asia/south-korea/seoul/SeoulSubway6Hoseon.svg"
+    },
+    {
+      "id": "SeoulSubway7Hoseon",
+      "name": "7호선",
+      "keywords": [
+        "7호선",
+        "Line 7",
+        "7 Line",
+        "L7",
+        "7号线",
+        "地铁7号线",
+        "7号線",
+        "Route 7",
+        "Tram Route 7",
+        "Seoul Subway7 Hoseon"
+      ],
+      "order": 6,
+      "icon": "asia/south-korea/seoul/SeoulSubway7Hoseon.svg"
+    },
+    {
+      "id": "SeoulSubway8Hoseon",
+      "name": "8호선",
+      "keywords": [
+        "8호선",
+        "Line 8",
+        "8 Line",
+        "L8",
+        "8号线",
+        "地铁8号线",
+        "8号線",
+        "Route 8",
+        "Tram Route 8",
+        "Seoul Subway8 Hoseon"
+      ],
+      "order": 7,
+      "icon": "asia/south-korea/seoul/SeoulSubway8Hoseon.svg"
+    },
+    {
+      "id": "SeoulSubway9Hoseon",
+      "name": "9호선",
+      "keywords": [
+        "9호선",
+        "Line 9",
+        "9 Line",
+        "L9",
+        "9号线",
+        "地铁9号线",
+        "9号線",
+        "Route 9",
+        "Tram Route 9",
+        "Seoul Subway9 Hoseon"
+      ],
+      "order": 8,
+      "icon": "asia/south-korea/seoul/SeoulSubway9Hoseon.svg"
+    },
+    {
+      "id": "SeoulMTRGyeonggangseon",
+      "name": "경강선",
+      "keywords": [
+        "경강선",
+        "Seoul MTR Gyeonggangseon"
+      ],
+      "order": 9,
+      "icon": "asia/south-korea/seoul/SeoulMTRGyeonggangseon.svg"
+    },
+    {
+      "id": "SeoulMTRGyeongyijungangseon",
+      "name": "경의중앙선",
+      "keywords": [
+        "경의중앙선",
+        "Seoul MTR Gyeongyijungangseon"
+      ],
+      "order": 10,
+      "icon": "asia/south-korea/seoul/SeoulMTRGyeongyijungangseon.svg"
+    },
+    {
+      "id": "SeoulMTRGyeongcunseon",
+      "name": "경춘선",
+      "keywords": [
+        "경춘선",
+        "Seoul MTR Gyeongcunseon"
+      ],
+      "order": 11,
+      "icon": "asia/south-korea/seoul/SeoulMTRGyeongcunseon.svg"
+    },
+    {
+      "id": "SeoulAirportRailroadGonghangceoldo",
+      "name": "공항철도",
+      "keywords": [
+        "공항철도",
+        "Seoul Airport Railroad Gonghangceoldo"
+      ],
+      "order": 12,
+      "icon": "asia/south-korea/seoul/SeoulAirportRailroadGonghangceoldo.svg"
+    },
+    {
+      "id": "SeoulMTRSuinbundangseon",
+      "name": "수인분당선",
+      "keywords": [
+        "수인분당선",
+        "Seoul MTR Suinbundangseon"
+      ],
+      "order": 13,
+      "icon": "asia/south-korea/seoul/SeoulMTRSuinbundangseon.svg"
+    },
+    {
+      "id": "SeoulMTRSinbundangseon",
+      "name": "신분당선",
+      "keywords": [
+        "신분당선",
+        "Seoul MTR Sinbundangseon"
+      ],
+      "order": 14,
+      "icon": "asia/south-korea/seoul/SeoulMTRSinbundangseon.svg"
+    },
+    {
+      "id": "SeoulIncheonMetroInceon1Hoseon",
+      "name": "인천1호선",
+      "keywords": [
+        "인천1호선",
+        "Line 1",
+        "1 Line",
+        "L1",
+        "1号线",
+        "地铁1号线",
+        "1号線",
+        "1호선",
+        "Route 1",
+        "Tram Route 1",
+        "Seoul Incheon Metro Inceon1 Hoseon",
+        "Seoul Incheon Inceon1 Hoseon"
+      ],
+      "order": 15,
+      "icon": "asia/south-korea/seoul/SeoulIncheonMetroInceon1Hoseon.svg"
+    },
+    {
+      "id": "CM_SeoulIncheonMetro2_inceon2hoseon",
+      "name": "인천2호선",
+      "keywords": [
+        "인천2호선",
+        "Line 2",
+        "2 Line",
+        "L2",
+        "2号线",
+        "地铁2号线",
+        "2号線",
+        "2호선",
+        "Route 2",
+        "Tram Route 2",
+        "CM Seoul Incheon Metro2 inceon2hoseon"
+      ],
+      "order": 16,
+      "icon": "asia/south-korea/seoul/CM_SeoulIncheonMetro2_inceon2hoseon.svg"
+    },
+    {
+      "id": "CM_SeoulLightRailTransit_gimpogoldeurain",
+      "name": "김포골드라인",
+      "keywords": [
+        "김포골드라인",
+        "CM Seoul Light Rail Transit gimpogoldeurain"
+      ],
+      "order": 17,
+      "icon": "asia/south-korea/seoul/CM_SeoulLightRailTransit_gimpogoldeurain.svg"
+    },
+    {
+      "id": "SeoulLightRailTransitSeohaeseon",
+      "name": "서해선",
+      "keywords": [
+        "서해선",
+        "Seoul Light Rail Transit Seohaeseon"
+      ],
+      "order": 18,
+      "icon": "asia/south-korea/seoul/SeoulLightRailTransitSeohaeseon.svg"
+    },
+    {
+      "id": "SeoulLightRailTransitSinrimseon",
+      "name": "신림선",
+      "keywords": [
+        "신림선",
+        "Seoul Light Rail Transit Sinrimseon"
+      ],
+      "order": 19,
+      "icon": "asia/south-korea/seoul/SeoulLightRailTransitSinrimseon.svg"
+    },
+    {
+      "id": "SeoulLightRailTransitEverline",
+      "name": "에버라인",
+      "keywords": [
+        "에버라인",
+        "Seoul Light Rail Transit Everline"
+      ],
+      "order": 20,
+      "icon": "asia/south-korea/seoul/SeoulLightRailTransitEverline.svg"
+    },
+    {
+      "id": "SeoulLightRailTransitUisinseolgyeongjeonceol",
+      "name": "우이신설경전철",
+      "keywords": [
+        "우이신설경전철",
+        "Seoul Light Rail Transit Uisinseolgyeongjeonceol"
+      ],
+      "order": 21,
+      "icon": "asia/south-korea/seoul/SeoulLightRailTransitUisinseolgyeongjeonceol.svg"
+    },
+    {
+      "id": "SeoulLightRailTransitUijeongbu",
+      "name": "의정부경전철",
+      "keywords": [
+        "의정부경전철",
+        "Seoul Light Rail Transit Uijeongbu"
+      ],
+      "order": 22,
+      "icon": "asia/south-korea/seoul/SeoulLightRailTransitUijeongbu.svg"
+    }
+  ],
+  "sources": {
+    "officialPages": [
+      "https://english.seoul.go.kr/seoul-policy-archive/seoul-subway/",
+      "https://english.seoul.go.kr/policy/transportation/modes-of-transport/subway-map-img/"
+    ],
+    "pressPages": [
+      "https://english.seoul.go.kr/category/policy-information/transportation/"
+    ]
+  },
+  "stationAliases": {},
+  "stationLocalNames": {},
+  "manualCoords": {}
+}

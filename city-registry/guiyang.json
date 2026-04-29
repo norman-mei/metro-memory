@@ -1,0 +1,114 @@
+{
+  "city": "guiyang",
+  "continent": "asia",
+  "bbox": [
+    26.3789921,
+    106.4555437,
+    26.7352796,
+    106.8265213
+  ],
+  "localLanguages": [
+    "zh"
+  ],
+  "modes": [
+    "subway",
+    "light_rail",
+    "tram",
+    "rail",
+    "funicular",
+    "monorail",
+    "cable_car",
+    "gondola",
+    "chair_lift"
+  ],
+  "lines": [
+    {
+      "id": "guiyang1",
+      "name": "Line 1",
+      "keywords": [
+        "Line 1",
+        "1 Line",
+        "L1",
+        "1号线",
+        "地铁1号线",
+        "1号線",
+        "1호선",
+        "Route 1",
+        "Tram Route 1",
+        "guiyang1"
+      ],
+      "order": 0,
+      "icon": "asia/china/guiyang/guiyang1.png"
+    },
+    {
+      "id": "guiyang2",
+      "name": "Line 2",
+      "keywords": [
+        "Line 2",
+        "2 Line",
+        "L2",
+        "2号线",
+        "地铁2号线",
+        "2号線",
+        "2호선",
+        "Route 2",
+        "Tram Route 2",
+        "guiyang2"
+      ],
+      "order": 1,
+      "icon": "asia/china/guiyang/guiyang2.png"
+    },
+    {
+      "id": "guiyang3",
+      "name": "Line 3",
+      "keywords": [
+        "Line 3",
+        "3 Line",
+        "L3",
+        "3号线",
+        "地铁3号线",
+        "3号線",
+        "3호선",
+        "Route 3",
+        "Tram Route 3",
+        "guiyang3"
+      ],
+      "order": 2,
+      "icon": "asia/china/guiyang/guiyang3.png"
+    },
+    {
+      "id": "guiyangs1",
+      "name": "Line S1",
+      "keywords": [
+        "Line S1",
+        "S1",
+        "Line 1",
+        "1 Line",
+        "L1",
+        "1号线",
+        "地铁1号线",
+        "1号線",
+        "1호선",
+        "Route 1",
+        "Tram Route 1",
+        "guiyangs1"
+      ],
+      "order": 3,
+      "icon": "asia/china/guiyang/guiyangs1.png"
+    },
+    {
+      "id": "guiyangt2",
+      "name": "Line T2",
+      "keywords": [
+        "Line T2",
+        "T2",
+        "guiyangt2"
+      ],
+      "order": 4,
+      "icon": "asia/china/guiyang/guiyangt2.png"
+    }
+  ],
+  "stationAliases": {},
+  "stationLocalNames": {},
+  "manualCoords": {}
+}

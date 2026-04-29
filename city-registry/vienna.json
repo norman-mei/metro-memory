@@ -1,0 +1,185 @@
+{
+  "city": "vienna",
+  "continent": "europe",
+  "bbox": [
+    48.130135,
+    16.260781,
+    48.277228,
+    16.510755
+  ],
+  "localLanguages": [
+    "de"
+  ],
+  "modes": [
+    "subway",
+    "light_rail",
+    "tram",
+    "rail",
+    "funicular",
+    "monorail",
+    "cable_car",
+    "gondola",
+    "chair_lift"
+  ],
+  "lines": [
+    {
+      "id": "ViennaStrassenbahn38",
+      "name": "38",
+      "keywords": [
+        "38",
+        "Line 38",
+        "38 Line",
+        "L38",
+        "38号线",
+        "地铁38号线",
+        "38号線",
+        "38호선",
+        "Route 38",
+        "Tram Route 38",
+        "Vienna Strassenbahn38"
+      ],
+      "order": 1000
+    },
+    {
+      "id": "ViennaStrassenbahn44",
+      "name": "44",
+      "keywords": [
+        "44",
+        "Line 44",
+        "44 Line",
+        "L44",
+        "44号线",
+        "地铁44号线",
+        "44号線",
+        "44호선",
+        "Route 44",
+        "Tram Route 44",
+        "Vienna Strassenbahn44"
+      ],
+      "order": 1000
+    },
+    {
+      "id": "ViennaUBahnU1",
+      "name": "U1",
+      "keywords": [
+        "U1",
+        "Line 1",
+        "1 Line",
+        "L1",
+        "1号线",
+        "地铁1号线",
+        "1号線",
+        "1호선",
+        "Route 1",
+        "Tram Route 1",
+        "Vienna U Bahn U1",
+        "Line U",
+        "U Line",
+        "Route U",
+        "Line U Line",
+        "Route U Line"
+      ],
+      "order": 1000,
+      "icon": "europe/austria/vienna/ViennaUBahnU1.svg"
+    },
+    {
+      "id": "ViennaUBahnU2",
+      "name": "U2",
+      "keywords": [
+        "U2",
+        "Line 2",
+        "2 Line",
+        "L2",
+        "2号线",
+        "地铁2号线",
+        "2号線",
+        "2호선",
+        "Route 2",
+        "Tram Route 2",
+        "Vienna U Bahn U2",
+        "Line U",
+        "U Line",
+        "Route U",
+        "Line U Line",
+        "Route U Line"
+      ],
+      "order": 1000,
+      "icon": "europe/austria/vienna/ViennaUBahnU2.svg"
+    },
+    {
+      "id": "ViennaUBahnU3",
+      "name": "U3",
+      "keywords": [
+        "U3",
+        "Line 3",
+        "3 Line",
+        "L3",
+        "3号线",
+        "地铁3号线",
+        "3号線",
+        "3호선",
+        "Route 3",
+        "Tram Route 3",
+        "Vienna U Bahn U3",
+        "Line U",
+        "U Line",
+        "Route U",
+        "Line U Line",
+        "Route U Line"
+      ],
+      "order": 1000,
+      "icon": "europe/austria/vienna/ViennaUBahnU3.svg"
+    },
+    {
+      "id": "ViennaUBahnU4",
+      "name": "U4",
+      "keywords": [
+        "U4",
+        "Line 4",
+        "4 Line",
+        "L4",
+        "4号线",
+        "地铁4号线",
+        "4号線",
+        "4호선",
+        "Route 4",
+        "Tram Route 4",
+        "Vienna U Bahn U4",
+        "Line U",
+        "U Line",
+        "Route U",
+        "Line U Line",
+        "Route U Line"
+      ],
+      "order": 1000,
+      "icon": "europe/austria/vienna/ViennaUBahnU4.svg"
+    },
+    {
+      "id": "ViennaUBahnU6",
+      "name": "U6",
+      "keywords": [
+        "U6",
+        "Line 6",
+        "6 Line",
+        "L6",
+        "6号线",
+        "地铁6号线",
+        "6号線",
+        "6호선",
+        "Route 6",
+        "Tram Route 6",
+        "Vienna U Bahn U6",
+        "Line U",
+        "U Line",
+        "Route U",
+        "Line U Line",
+        "Route U Line"
+      ],
+      "order": 1000,
+      "icon": "europe/austria/vienna/ViennaUBahnU6.svg"
+    }
+  ],
+  "stationAliases": {},
+  "stationLocalNames": {},
+  "manualCoords": {}
+}

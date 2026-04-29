@@ -1,0 +1,65 @@
+{
+  "city": "nantong",
+  "continent": "asia",
+  "bbox": [
+    31.9090789,
+    120.7516839,
+    32.1088115,
+    120.9735397
+  ],
+  "localLanguages": [
+    "zh"
+  ],
+  "modes": [
+    "subway",
+    "light_rail",
+    "tram",
+    "rail",
+    "funicular",
+    "monorail",
+    "cable_car",
+    "gondola",
+    "chair_lift"
+  ],
+  "lines": [
+    {
+      "id": "nantong1",
+      "name": "Line 1",
+      "keywords": [
+        "Line 1",
+        "1 Line",
+        "L1",
+        "1号线",
+        "地铁1号线",
+        "1号線",
+        "1호선",
+        "Route 1",
+        "Tram Route 1",
+        "nantong1"
+      ],
+      "order": 1,
+      "icon": "asia/china/nantong/nantong1.png"
+    },
+    {
+      "id": "nantong2",
+      "name": "Line 2",
+      "keywords": [
+        "Line 2",
+        "2 Line",
+        "L2",
+        "2号线",
+        "地铁2号线",
+        "2号線",
+        "2호선",
+        "Route 2",
+        "Tram Route 2",
+        "nantong2"
+      ],
+      "order": 2,
+      "icon": "asia/china/nantong/nantong2.png"
+    }
+  ],
+  "stationAliases": {},
+  "stationLocalNames": {},
+  "manualCoords": {}
+}

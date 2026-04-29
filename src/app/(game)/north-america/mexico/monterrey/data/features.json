@@ -1,0 +1,758 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.3683411,
+          25.7592609
+        ]
+      },
+      "properties": {
+        "id": 0,
+        "name": "Talleres",
+        "line": "mty1",
+        "order": 0,
+        "alternate_names": []
+      },
+      "id": 0
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.361638,
+          25.748389
+        ]
+      },
+      "properties": {
+        "id": 1,
+        "name": "San Bernabé",
+        "line": "mty1",
+        "order": 1,
+        "alternate_names": []
+      },
+      "id": 1
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.354908,
+          25.7418717
+        ]
+      },
+      "properties": {
+        "id": 2,
+        "name": "Unidad Modelo",
+        "line": "mty1",
+        "order": 2,
+        "alternate_names": []
+      },
+      "id": 2
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.34726,
+          25.7321485
+        ]
+      },
+      "properties": {
+        "id": 3,
+        "name": "Aztlán",
+        "line": "mty1",
+        "order": 3,
+        "alternate_names": []
+      },
+      "id": 3
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.342545,
+          25.7233152
+        ]
+      },
+      "properties": {
+        "id": 4,
+        "name": "Penitenciaría",
+        "line": "mty1",
+        "order": 4,
+        "alternate_names": []
+      },
+      "id": 4
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.34249,
+          25.7157426
+        ]
+      },
+      "properties": {
+        "id": 5,
+        "name": "Alfonso Reyes",
+        "line": "mty1",
+        "order": 5,
+        "alternate_names": []
+      },
+      "id": 5
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.3424003,
+          25.7059242
+        ]
+      },
+      "properties": {
+        "id": 6,
+        "name": "Mitras",
+        "line": "mty1",
+        "order": 6,
+        "alternate_names": []
+      },
+      "id": 6
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.343188,
+          25.6987474
+        ]
+      },
+      "properties": {
+        "id": 7,
+        "name": "Simón Bolívar",
+        "line": "mty1",
+        "order": 7,
+        "alternate_names": []
+      },
+      "id": 7
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.344109,
+          25.6918495
+        ]
+      },
+      "properties": {
+        "id": 8,
+        "name": "Hospital",
+        "line": "mty1",
+        "order": 8,
+        "alternate_names": []
+      },
+      "id": 8
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.333498,
+          25.6869227
+        ]
+      },
+      "properties": {
+        "id": 9,
+        "name": "Edison",
+        "line": "mty1",
+        "order": 9,
+        "alternate_names": []
+      },
+      "id": 9
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.324302,
+          25.6869957
+        ]
+      },
+      "properties": {
+        "id": 10,
+        "name": "Central",
+        "line": "mty1",
+        "order": 10,
+        "alternate_names": []
+      },
+      "id": 10
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.3169234,
+          25.6860969
+        ]
+      },
+      "properties": {
+        "id": 11,
+        "name": "Cuauhtémoc",
+        "line": "mty1",
+        "order": 11,
+        "alternate_names": []
+      },
+      "id": 11
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.306626,
+          25.6850668
+        ]
+      },
+      "properties": {
+        "id": 12,
+        "name": "Del Golfo",
+        "line": "mty1",
+        "order": 12,
+        "alternate_names": []
+      },
+      "id": 12
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.296992,
+          25.6839868
+        ]
+      },
+      "properties": {
+        "id": 13,
+        "name": "Félix U. Gomez",
+        "line": "mty1",
+        "order": 13,
+        "alternate_names": []
+      },
+      "id": 13
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.28817,
+          25.6837143
+        ]
+      },
+      "properties": {
+        "id": 14,
+        "name": "Parque Fundidora",
+        "line": "mty1",
+        "order": 14,
+        "alternate_names": []
+      },
+      "id": 14
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.279446,
+          25.6832309
+        ]
+      },
+      "properties": {
+        "id": 15,
+        "name": "Y Griega",
+        "line": "mty1",
+        "order": 15,
+        "alternate_names": []
+      },
+      "id": 15
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.264254,
+          25.6800672
+        ]
+      },
+      "properties": {
+        "id": 16,
+        "name": "Eloy Cavazos",
+        "line": "mty1",
+        "order": 16,
+        "alternate_names": []
+      },
+      "id": 16
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.252249,
+          25.6798006
+        ]
+      },
+      "properties": {
+        "id": 17,
+        "name": "Lerdo de Tejada",
+        "line": "mty1",
+        "order": 17,
+        "alternate_names": []
+      },
+      "id": 17
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.245492,
+          25.6795043
+        ]
+      },
+      "properties": {
+        "id": 18,
+        "name": "Exposición",
+        "line": "mty1",
+        "order": 18,
+        "alternate_names": []
+      },
+      "id": 18
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.2928846,
+          25.7687766
+        ]
+      },
+      "properties": {
+        "id": 19,
+        "name": "Sendero",
+        "line": "mty2",
+        "order": 0,
+        "alternate_names": []
+      },
+      "id": 19
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.295637,
+          25.7593099
+        ]
+      },
+      "properties": {
+        "id": 20,
+        "name": "Tapia",
+        "line": "mty2",
+        "order": 1,
+        "alternate_names": [
+          "Santiago Tapia"
+        ]
+      },
+      "id": 20
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.297955,
+          25.7529179
+        ]
+      },
+      "properties": {
+        "id": 21,
+        "name": "San Nicolás",
+        "line": "mty2",
+        "order": 2,
+        "alternate_names": []
+      },
+      "id": 21
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.302611,
+          25.739937
+        ]
+      },
+      "properties": {
+        "id": 22,
+        "name": "Anáhuac",
+        "line": "mty2",
+        "order": 3,
+        "alternate_names": []
+      },
+      "id": 22
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.3082191,
+          25.7243927
+        ]
+      },
+      "properties": {
+        "id": 23,
+        "name": "Universidad",
+        "line": "mty2",
+        "order": 4,
+        "alternate_names": []
+      },
+      "id": 23
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.310859,
+          25.717016
+        ]
+      },
+      "properties": {
+        "id": 24,
+        "name": "Niños Heroes",
+        "line": "mty2",
+        "order": 5,
+        "alternate_names": []
+      },
+      "id": 24
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.313997,
+          25.7081567
+        ]
+      },
+      "properties": {
+        "id": 25,
+        "name": "Regina",
+        "line": "mty2",
+        "order": 6,
+        "alternate_names": []
+      },
+      "id": 25
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.316846,
+          25.6966744
+        ]
+      },
+      "properties": {
+        "id": 26,
+        "name": "General Anaya",
+        "line": "mty2",
+        "order": 7,
+        "alternate_names": []
+      },
+      "id": 26
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.3169234,
+          25.6860969
+        ]
+      },
+      "properties": {
+        "id": 27,
+        "name": "Cuauhtémoc",
+        "line": "mty2",
+        "order": 8,
+        "alternate_names": []
+      },
+      "id": 27
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.318135,
+          25.6770232
+        ]
+      },
+      "properties": {
+        "id": 28,
+        "name": "Alameda",
+        "line": "mty2",
+        "order": 9,
+        "alternate_names": []
+      },
+      "id": 28
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.318765,
+          25.6722242
+        ]
+      },
+      "properties": {
+        "id": 29,
+        "name": "Fundadores",
+        "line": "mty2",
+        "order": 10,
+        "alternate_names": []
+      },
+      "id": 29
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.3155883,
+          25.66863
+        ]
+      },
+      "properties": {
+        "id": 30,
+        "name": "Padre Mier",
+        "line": "mty2",
+        "order": 11,
+        "alternate_names": []
+      },
+      "id": 30
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.310202,
+          25.6677517
+        ]
+      },
+      "properties": {
+        "id": 31,
+        "name": "General I. Zaragoza",
+        "line": "mty2",
+        "order": 12,
+        "alternate_names": [
+          "General I.",
+          "Zaragoza"
+        ]
+      },
+      "id": 31
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.273595,
+          25.7137634
+        ]
+      },
+      "properties": {
+        "id": 32,
+        "name": "Hospital Metropolitano",
+        "line": "mty3",
+        "order": 0,
+        "alternate_names": []
+      },
+      "id": 32
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.281714,
+          25.7081248
+        ]
+      },
+      "properties": {
+        "id": 33,
+        "name": "Los Ángeles",
+        "line": "mty3",
+        "order": 1,
+        "alternate_names": []
+      },
+      "id": 33
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.2887021,
+          25.7032038
+        ]
+      },
+      "properties": {
+        "id": 34,
+        "name": "Ruiz Cortines",
+        "line": "mty3",
+        "order": 2,
+        "alternate_names": [
+          "Ruiz Cortinez"
+        ]
+      },
+      "id": 34
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.292594,
+          25.700462
+        ]
+      },
+      "properties": {
+        "id": 35,
+        "name": "Colonia Moderna",
+        "line": "mty3",
+        "order": 3,
+        "alternate_names": [
+          "Moderna"
+        ]
+      },
+      "id": 35
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.295814,
+          25.6910212
+        ]
+      },
+      "properties": {
+        "id": 36,
+        "name": "Metalúrgicos",
+        "line": "mty3",
+        "order": 4,
+        "alternate_names": []
+      },
+      "id": 36
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.296836,
+          25.6839217
+        ]
+      },
+      "properties": {
+        "id": 37,
+        "name": "Félix U. Gomez",
+        "line": "mty3",
+        "order": 5,
+        "alternate_names": [
+          "Félix U. Gómez",
+          "Felix U. Gomez"
+        ]
+      },
+      "id": 37
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.297658,
+          25.6778869
+        ]
+      },
+      "properties": {
+        "id": 38,
+        "name": "Colonia Obrera",
+        "line": "mty3",
+        "order": 6,
+        "alternate_names": []
+      },
+      "id": 38
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.298547,
+          25.6713947
+        ]
+      },
+      "properties": {
+        "id": 39,
+        "name": "Santa Lucía",
+        "line": "mty3",
+        "order": 7,
+        "alternate_names": []
+      },
+      "id": 39
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.310202,
+          25.6677517
+        ]
+      },
+      "properties": {
+        "id": 40,
+        "name": "General I. Zaragoza",
+        "line": "mty3",
+        "order": 8,
+        "alternate_names": [
+          "General I.",
+          "Zaragoza"
+        ]
+      },
+      "id": 40
+    }
+  ]
+}

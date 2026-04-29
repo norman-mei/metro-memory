@@ -1,0 +1,197 @@
+{
+  "city": "dalian",
+  "continent": "asia",
+  "bbox": [
+    38.7982587,
+    121.1390615,
+    39.4468746,
+    122.0018169
+  ],
+  "localLanguages": [
+    "zh"
+  ],
+  "modes": [
+    "subway",
+    "light_rail",
+    "tram",
+    "rail",
+    "funicular",
+    "monorail",
+    "cable_car",
+    "gondola",
+    "chair_lift"
+  ],
+  "lines": [
+    {
+      "id": "Line1",
+      "name": "Line 1",
+      "keywords": [
+        "Line 1",
+        "1 Line",
+        "L1",
+        "1号线",
+        "地铁1号线",
+        "1号線",
+        "1호선",
+        "Route 1",
+        "Tram Route 1"
+      ],
+      "order": 1,
+      "icon": "asia/china/dalian/dalian1.png"
+    },
+    {
+      "id": "Line2",
+      "name": "Line 2",
+      "keywords": [
+        "Line 2",
+        "2 Line",
+        "L2",
+        "2号线",
+        "地铁2号线",
+        "2号線",
+        "2호선",
+        "Route 2",
+        "Tram Route 2"
+      ],
+      "order": 2,
+      "icon": "asia/china/dalian/dalian2.png"
+    },
+    {
+      "id": "Line3",
+      "name": "Line 3",
+      "keywords": [
+        "Line 3",
+        "3 Line",
+        "L3",
+        "3号线",
+        "地铁3号线",
+        "3号線",
+        "3호선",
+        "Route 3",
+        "Tram Route 3"
+      ],
+      "order": 3,
+      "icon": "asia/china/dalian/dalian3.png"
+    },
+    {
+      "id": "Line4",
+      "name": "Line 4",
+      "keywords": [
+        "Line 4",
+        "4 Line",
+        "L4",
+        "4号线",
+        "地铁4号线",
+        "4号線",
+        "4호선",
+        "Route 4",
+        "Tram Route 4"
+      ],
+      "order": 4,
+      "icon": "asia/china/dalian/dalian4.png"
+    },
+    {
+      "id": "Line5",
+      "name": "Line 5",
+      "keywords": [
+        "Line 5",
+        "5 Line",
+        "L5",
+        "5号线",
+        "地铁5号线",
+        "5号線",
+        "5호선",
+        "Route 5",
+        "Tram Route 5"
+      ],
+      "order": 5,
+      "icon": "asia/china/dalian/dalian5.png"
+    },
+    {
+      "id": "Line12",
+      "name": "Line 12",
+      "keywords": [
+        "Line 12",
+        "12",
+        "12 Line",
+        "L12",
+        "12号线",
+        "地铁12号线",
+        "12号線",
+        "12호선",
+        "Route 12",
+        "Tram Route 12"
+      ],
+      "order": 12,
+      "icon": "asia/china/dalian/dalian12.png"
+    },
+    {
+      "id": "Line13",
+      "name": "Line 13",
+      "keywords": [
+        "Line 13",
+        "13",
+        "13 Line",
+        "L13",
+        "13号线",
+        "地铁13号线",
+        "13号線",
+        "13호선",
+        "Route 13",
+        "Tram Route 13"
+      ],
+      "order": 13,
+      "icon": "asia/china/dalian/dalian13.png"
+    },
+    {
+      "id": "Tram201",
+      "name": "Tram Route 201",
+      "keywords": [
+        "Tram Route 201",
+        "201",
+        "Line 201",
+        "201 Line",
+        "L201",
+        "201号线",
+        "地铁201号线",
+        "201号線",
+        "201호선",
+        "Route 201",
+        "Tram201"
+      ],
+      "order": 201,
+      "icon": "asia/china/dalian/dalian201.png"
+    },
+    {
+      "id": "Tram202",
+      "name": "Tram Route 202",
+      "keywords": [
+        "Tram Route 202",
+        "202",
+        "Line 202",
+        "202 Line",
+        "L202",
+        "202号线",
+        "地铁202号线",
+        "202号線",
+        "202호선",
+        "Route 202",
+        "Tram202"
+      ],
+      "order": 202,
+      "icon": "asia/china/dalian/dalian202.png"
+    },
+    {
+      "id": "HaidaCableway",
+      "name": "Haida Cableway",
+      "keywords": [
+        "Haida Cableway"
+      ],
+      "order": 301,
+      "icon": "asia/china/dalian/haidacableway.png"
+    }
+  ],
+  "stationAliases": {},
+  "stationLocalNames": {},
+  "manualCoords": {}
+}

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+  width="200"
+  height="200"
+  viewBox="0 0 52.916665 52.916668"
+  version="1.1"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <g>
+    <circle
+      cx="26.458334"
+      cy="26.458334"
+      r="26.458334"
+      style="fill:#DC1A21;stroke:#ffffff;stroke-width:3;stroke-linecap:round;stroke-linejoin:round"
+    />
+    <text
+      x="26.458334"
+      y="33"
+      style="font-family:'Roboto Condensed';font-weight:700;font-size:18px;fill:#DAD3B6;line-height:1;text-anchor:middle"
+    >MCL</text>
+  </g>
+</svg>

@@ -1,0 +1,1264 @@
+{
+  "adelaide": {
+    "icon": true,
+    "iconVersion": "aae04f991a8b"
+  },
+  "albuquerque": {
+    "icon": true,
+    "iconVersion": "86db0aa2b7e6",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "08830da4529e"
+  },
+  "algiers": {
+    "icon": true,
+    "iconVersion": "cc9cec62f419",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "d978ac4689bf"
+  },
+  "amtrak": {
+    "icon": true,
+    "iconVersion": "ec359bf1ddfa",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "047726f51fc8"
+  },
+  "atlanta": {
+    "icon": true,
+    "iconVersion": "ece131778376",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "8b3f2f0d1d81"
+  },
+  "auckland": {
+    "icon": true,
+    "iconVersion": "878c9369d00b",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "4d48b0f22dbd"
+  },
+  "austin": {
+    "icon": true,
+    "iconVersion": "e356b32f84f6",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "52f15c0a600a"
+  },
+  "bangkok": {
+    "icon": true,
+    "iconVersion": "f9b66881e6d4",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "685b5161a91f"
+  },
+  "barcelona": {
+    "icon": true,
+    "iconVersion": "440470f7a0a8",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "ad8c58d6d3a9"
+  },
+  "beijing": {
+    "icon": true,
+    "iconVersion": "8fbf165d491f",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "daf64433bf55"
+  },
+  "bengbu": {
+    "icon": true,
+    "iconVersion": "74e60912174e",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "632d6e6ee347"
+  },
+  "berlin": {
+    "icon": true,
+    "iconVersion": "7ccec7c85ae3",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "98874195a447"
+  },
+  "blackpool": {
+    "icon": true,
+    "iconVersion": "74d90e7f84e6",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "1224411becb4"
+  },
+  "boston": {
+    "icon": true,
+    "iconVersion": "84c50127cf5f",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "1d69419e1745"
+  },
+  "boston-commuter-rail": {
+    "icon": true,
+    "iconVersion": "84c50127cf5f",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "2a85c92065de"
+  },
+  "boston-subway-light-rail": {
+    "icon": true,
+    "iconVersion": "84c50127cf5f",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "9295d3cf15f5"
+  },
+  "budapest": {
+    "icon": true,
+    "iconVersion": "01813fb2723b",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "540d4fd059ff"
+  },
+  "buffalo": {
+    "icon": true,
+    "iconVersion": "6e1bed8b5eeb",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "8c83a55f3ddb"
+  },
+  "busan": {
+    "icon": true,
+    "iconVersion": "471cac59ad0b",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "97214acc404c"
+  },
+  "calgary": {
+    "icon": true,
+    "iconVersion": "970a7f69adf0",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "a42e1b85bae0"
+  },
+  "california-state": {
+    "icon": true,
+    "iconVersion": "4b66a5b44d3f",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "e9d21b4cc4c2"
+  },
+  "california-state-bart": {
+    "icon": true,
+    "iconVersion": "4b66a5b44d3f",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "7e8775c8f145"
+  },
+  "california-state-bay-area": {
+    "icon": true,
+    "iconVersion": "4b66a5b44d3f",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "da9c7b9ad74c"
+  },
+  "california-state-caltrain": {
+    "icon": true,
+    "iconVersion": "7e3d8d1cc9cf",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "f07d6f727a76"
+  },
+  "california-state-la-metro": {
+    "icon": true,
+    "iconVersion": "85c219c61838",
+    "openGraphExtension": "png",
+    "openGraphVersion": "e27b12d5a713"
+  },
+  "california-state-los-angeles": {
+    "icon": true,
+    "iconVersion": "85c219c61838",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "1f6678bf6ab4"
+  },
+  "california-state-metrolink": {
+    "icon": true,
+    "iconVersion": "6f6889ddfd77",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "d879e26fa8fd"
+  },
+  "california-state-muni": {
+    "icon": true,
+    "iconVersion": "bb8b25a8d8ba",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "87bacc9340c9"
+  },
+  "california-state-sacramento": {
+    "icon": true,
+    "iconVersion": "df1a011abd63",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "dfe722e48ae6"
+  },
+  "california-state-san-diego": {
+    "icon": true,
+    "iconVersion": "d69aee7fcbf9",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "8a083922d40a"
+  },
+  "california-state-vta": {
+    "icon": true,
+    "iconVersion": "78c1a44a4c1b",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "2a54cb46b5a9"
+  },
+  "canberra": {
+    "icon": true,
+    "iconVersion": "13cbcd229f3d",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "deea1906c5c0"
+  },
+  "changchun": {
+    "icon": true,
+    "iconVersion": "802b82d39726",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "74d9c98c3866"
+  },
+  "changsha": {
+    "icon": true,
+    "iconVersion": "ba0bd637e9c5",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "ba6d248aff6e"
+  },
+  "changzhou": {
+    "icon": true,
+    "iconVersion": "a9cdaa788977",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "aa16f4f40de7"
+  },
+  "charlotte": {
+    "icon": true,
+    "iconVersion": "bc60b2f87173",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "86a654cf570d"
+  },
+  "chengdu": {
+    "icon": true,
+    "iconVersion": "03c92bd80b51",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "526979103230"
+  },
+  "chicago": {
+    "icon": true,
+    "iconVersion": "e0a213d35e1d",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "d9f448f61443"
+  },
+  "chicago-cta": {
+    "icon": true,
+    "iconVersion": "e0a213d35e1d",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "0693a25f7a71"
+  },
+  "chicago-metra": {
+    "icon": true,
+    "iconVersion": "39eb0bf7b8ee",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "fa78fe120f58"
+  },
+  "chongqing": {
+    "icon": true,
+    "iconVersion": "8086c60bc6ec",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "105d1bedd6b0"
+  },
+  "cincinnati": {
+    "icon": true,
+    "iconVersion": "ab044c147001",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "f807e5705482"
+  },
+  "cleveland": {
+    "icon": true,
+    "iconVersion": "ff95d370fbd4",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "26d8093e4a5e"
+  },
+  "daegu": {
+    "icon": true,
+    "iconVersion": "4b0eb5db10ea",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "8be9d591c14f"
+  },
+  "daejeon": {
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "ca8830a1baf5"
+  },
+  "dalian": {
+    "icon": true,
+    "iconVersion": "7d8f302f2c39",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "65ff693eb972"
+  },
+  "dallas": {
+    "icon": true,
+    "iconVersion": "031623992829",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "ca1f2cbf6e7c"
+  },
+  "dc": {
+    "icon": true,
+    "iconVersion": "519de88ac814",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "2b2f04689d22"
+  },
+  "dc-baltimore": {
+    "icon": true,
+    "iconVersion": "85f37e32bb2c",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "5f4b500cb856"
+  },
+  "dc-washington-dc": {
+    "icon": true,
+    "iconVersion": "519de88ac814",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "c8f9d0b4fef0"
+  },
+  "delingha": {
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "551a1f9cb106"
+  },
+  "denver": {
+    "icon": true,
+    "iconVersion": "c897e6b8c885",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "a9fddaec89ce"
+  },
+  "detroit": {
+    "icon": true,
+    "iconVersion": "905b8a5922a1",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "76afa6993786"
+  },
+  "dresden": {
+    "icon": true,
+    "iconVersion": "f6e031882831",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "563fd3c27414"
+  },
+  "dujiangyan": {
+    "icon": true,
+    "iconVersion": "ea345d8ad6b5",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "9145e4c34341"
+  },
+  "edinburgh": {
+    "icon": true,
+    "iconVersion": "331a3204e165",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "c7e3e6245dd4"
+  },
+  "edmonton": {
+    "icon": true,
+    "iconVersion": "5aead994fe64",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "14f6a6e95688"
+  },
+  "elpaso": {
+    "icon": true,
+    "iconVersion": "e130b1f22c64",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "8bb3216bf0db"
+  },
+  "fenghuang": {
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "b40cc76c6ec8"
+  },
+  "florida-state": {
+    "icon": true,
+    "iconVersion": "76665a18bafe",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "4c71f7f02a4f"
+  },
+  "florida-state-jacksonville": {
+    "icon": true,
+    "iconVersion": "3e9c430f6cd5",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "3c0b7edbd8aa"
+  },
+  "florida-state-miami": {
+    "icon": true,
+    "iconVersion": "76665a18bafe",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "3a984887ee07"
+  },
+  "florida-state-orlando": {
+    "icon": true,
+    "iconVersion": "15d798b5ed9d",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "73e18c0c8b98"
+  },
+  "florida-state-tampa": {
+    "icon": true,
+    "iconVersion": "2c05766df3b4",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "00d29ecc3292"
+  },
+  "fukuoka": {
+    "icon": true,
+    "iconVersion": "208ea1f81183",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "fe9b58b0e893"
+  },
+  "fuzhou": {
+    "icon": true,
+    "iconVersion": "d7624b92d99a",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "ac6f70ce12ae"
+  },
+  "galveston": {
+    "icon": true,
+    "iconVersion": "5b527b22a133",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "ac84ea53f5e2"
+  },
+  "gba": {
+    "icon": true,
+    "iconVersion": "90431178f29f",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "ab660a3493fb"
+  },
+  "gba-dongguan": {
+    "icon": true,
+    "iconVersion": "fda2196bfa5e",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "80297e52f0c9"
+  },
+  "gba-foshan": {
+    "icon": true,
+    "iconVersion": "59e5ceee0721",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "d871a0e9eb97"
+  },
+  "gba-guangzhou": {
+    "icon": true,
+    "iconVersion": "32082b5054d2",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "ccf1ec2ed306"
+  },
+  "gba-hong-kong": {
+    "icon": true,
+    "iconVersion": "90431178f29f",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "2b83bab2b36a"
+  },
+  "gba-macau": {
+    "icon": true,
+    "iconVersion": "c0ece9ce76ea",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "78987fa6625d"
+  },
+  "gba-mtr-only": {
+    "icon": true,
+    "iconVersion": "90431178f29f",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "6ace86cf54b7"
+  },
+  "gba-shenzhen": {
+    "icon": true,
+    "iconVersion": "df64afc33f08",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "80f290bc9d8b"
+  },
+  "glasgow": {
+    "icon": true,
+    "iconVersion": "9a2561e56ae0",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "9daaedb9138e"
+  },
+  "goldcoast": {
+    "icon": true,
+    "iconVersion": "2134b49005f9",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "664686c3bb73"
+  },
+  "guadalajara": {
+    "icon": true,
+    "iconVersion": "744bb32e34c5",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "ca39aed142f6"
+  },
+  "guangan": {
+    "icon": true,
+    "iconVersion": "71bb981bb79e",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "dd14b24271ee"
+  },
+  "guilin": {
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "befd2be6d328"
+  },
+  "guiyang": {
+    "icon": true,
+    "iconVersion": "812c6f1fd573",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "4af03ae34393"
+  },
+  "gwangju": {
+    "icon": true,
+    "iconVersion": "1e2e3b1478b1",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "84709a1529b6"
+  },
+  "hamburg": {
+    "icon": true,
+    "iconVersion": "468d30112ae2",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "a11c3a8117b5"
+  },
+  "hangzhou": {
+    "icon": true,
+    "iconVersion": "cae86e5a4712",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "ae52320e17d3"
+  },
+  "hanoi": {
+    "icon": true,
+    "iconVersion": "4019e0c093e3",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "235668813737"
+  },
+  "harbin": {
+    "icon": true,
+    "iconVersion": "bbfca2ccad28",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "141f9832c7d5"
+  },
+  "hefei": {
+    "icon": true,
+    "iconVersion": "f9af7d7ce2ec",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "734465655a28"
+  },
+  "hiroshima": {
+    "icon": true,
+    "iconVersion": "c2ff9d879ace",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "4fa50c89ede8"
+  },
+  "hochiminhcity": {
+    "icon": true,
+    "iconVersion": "8e56cb40c823",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "d4a929f6d126"
+  },
+  "hohhot": {
+    "icon": true,
+    "iconVersion": "0a823ccf13b8",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "986c84d812e0"
+  },
+  "honolulu": {
+    "icon": true,
+    "iconVersion": "4fab14133d94",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "21b1b7c3b791"
+  },
+  "houston": {
+    "icon": true,
+    "iconVersion": "6c40434a2da6",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "fceda0a4d6ab"
+  },
+  "huaian": {
+    "icon": true,
+    "iconVersion": "8d9b91acb866",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "c6113558a300"
+  },
+  "huangshi": {
+    "icon": true,
+    "iconVersion": "06b2ace71998",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "6424ba268cde"
+  },
+  "istanbul": {
+    "icon": true,
+    "iconVersion": "017575a85dee",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "2ed2d3028ce9"
+  },
+  "jakarta": {
+    "icon": true,
+    "iconVersion": "883315b5df25",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "15e1b3bae305"
+  },
+  "jiaxing": {
+    "icon": true,
+    "iconVersion": "2d08267a0d1d",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "02b99667fab8"
+  },
+  "jinan": {
+    "icon": true,
+    "iconVersion": "b5698b263b7d",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "79110b36b111"
+  },
+  "jinhua": {
+    "icon": true,
+    "iconVersion": "c347c4c5d4d8",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "00d26ec87b05"
+  },
+  "jining": {
+    "icon": true,
+    "iconVersion": "4f436b080d5e",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "49a18f8c3d0c"
+  },
+  "kaohsiung": {
+    "icon": true,
+    "iconVersion": "97baa176ec28",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "2a9b7615f878"
+  },
+  "karlsruhe": {
+    "icon": true,
+    "iconVersion": "71a0653bd081",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "e7499272fe3e"
+  },
+  "kc": {
+    "icon": true,
+    "iconVersion": "0e264ad4a2c4",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "213e0de9664f"
+  },
+  "kuala-lumpur": {
+    "icon": true,
+    "iconVersion": "cb9f8ec1bff3",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "1870900f6b61"
+  },
+  "kunming": {
+    "icon": true,
+    "iconVersion": "f6e088b45c3e",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "ed873541035a"
+  },
+  "kyoto": {
+    "icon": true,
+    "iconVersion": "81ee777b7483",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "7d64ae22d38c"
+  },
+  "lanzhou": {
+    "icon": true,
+    "iconVersion": "50866a04dc0a",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "8052ffd246f1"
+  },
+  "lijiang": {
+    "icon": true,
+    "iconVersion": "9269f60202d5",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "f810caab15a4"
+  },
+  "liupanshui": {
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "daab59a6374d"
+  },
+  "london": {
+    "icon": true,
+    "iconVersion": "a08b0a531484",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "bede0bbc41e5"
+  },
+  "lr": {
+    "icon": true,
+    "iconVersion": "a8764a873ac9",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "b995b3f8d196"
+  },
+  "luoyang": {
+    "icon": true,
+    "iconVersion": "e9a2cef71797",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "6732d1fac0c4"
+  },
+  "lv": {
+    "icon": true,
+    "iconVersion": "634091fee0ca",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "4dd2fd934dec"
+  },
+  "madrid": {
+    "icon": true,
+    "iconVersion": "dc0065844efd",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "ce0f88e1413e"
+  },
+  "manchester": {
+    "icon": true,
+    "iconVersion": "0aaf2cc10dae",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "99c2fff5e45c"
+  },
+  "manila": {
+    "icon": true,
+    "iconVersion": "e91483751e11",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "9e9177c46d20"
+  },
+  "maracaibo": {
+    "icon": true,
+    "iconVersion": "8eb93449de7e",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "b197228050f1"
+  },
+  "melbourne": {
+    "icon": true,
+    "iconVersion": "48c8b3c3913f",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "3768f98cd954"
+  },
+  "memphis": {
+    "icon": true,
+    "iconVersion": "086c0d2c8b16",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "aab462c4c7f5"
+  },
+  "mengzhi": {
+    "icon": true,
+    "iconVersion": "afd5dcf2cba8",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "e076c4fb9a81"
+  },
+  "mexico-city": {
+    "icon": true,
+    "iconVersion": "8e435ff66694",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "b0c56cd2f7bc"
+  },
+  "milwaukee": {
+    "icon": true,
+    "iconVersion": "53b3b25c46eb",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "b031adbea387"
+  },
+  "monterrey": {
+    "icon": true,
+    "iconVersion": "ab73b5903a24",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "8eba4e227780"
+  },
+  "montreal": {
+    "icon": true,
+    "iconVersion": "47a895b01aa7",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "4b05e2c4bff8"
+  },
+  "morgantown": {
+    "icon": true,
+    "iconVersion": "10a9337eaa14",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "54eeb2a61561"
+  },
+  "munich": {
+    "icon": true,
+    "iconVersion": "e6bfea6876aa",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "0653ffb8146f"
+  },
+  "nagoya": {
+    "icon": true,
+    "iconVersion": "47f81b615d8d",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "b0c8d2c783b7"
+  },
+  "nanchang": {
+    "icon": true,
+    "iconVersion": "fef4ded7eb7a",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "26dd3a63c9af"
+  },
+  "nanjing": {
+    "icon": true,
+    "iconVersion": "b38b05e34b92",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "55c59c356991"
+  },
+  "nanning": {
+    "icon": true,
+    "iconVersion": "bd4cba875780",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "51f2694bd0d4"
+  },
+  "nanping": {
+    "icon": true,
+    "iconVersion": "fea640876c4c",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "6eba5d7b721f"
+  },
+  "nantong": {
+    "icon": true,
+    "iconVersion": "8eadc6bb4854",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "b670a03c58ed"
+  },
+  "nashville": {
+    "icon": true,
+    "iconVersion": "d3239fef9880",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "3889b1d8472c"
+  },
+  "newcastle": {
+    "icon": true,
+    "iconVersion": "c843172a1641",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "c4e509a2366e"
+  },
+  "neworleans": {
+    "icon": true,
+    "iconVersion": "bfa976717821",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "309c40250e76"
+  },
+  "ningbo": {
+    "icon": true,
+    "iconVersion": "a0a7938436fa",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "f632df0a3673"
+  },
+  "norfolk": {
+    "icon": true,
+    "iconVersion": "395990082d30",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "03f3f0ce5b3e"
+  },
+  "nottingham": {
+    "icon": true,
+    "iconVersion": "aa047f587484",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "c676798b9156"
+  },
+  "nyc": {
+    "icon": true,
+    "iconVersion": "a52d4f443a7a",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "068c8cf30463"
+  },
+  "nyc-lirr": {
+    "icon": true,
+    "iconVersion": "a52d4f443a7a",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "f70006eb4e96"
+  },
+  "nyc-mnr": {
+    "icon": true,
+    "iconVersion": "a52d4f443a7a",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "900f2fce423d"
+  },
+  "nyc-mta": {
+    "icon": true,
+    "iconVersion": "a52d4f443a7a",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "93b91f6bd505"
+  },
+  "nyc-njt": {
+    "icon": true,
+    "iconVersion": "a52d4f443a7a",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "8048b1c7580a"
+  },
+  "nyc-panynj": {
+    "icon": true,
+    "iconVersion": "1a2d3e03ea07",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "dfd7f80d0574"
+  },
+  "nyc-subway": {
+    "icon": true,
+    "iconVersion": "a52d4f443a7a",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "11c6734d4b92"
+  },
+  "okayama": {
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "2089d900d644"
+  },
+  "okc": {
+    "icon": true,
+    "iconVersion": "0ec7f34d352a",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "edc94bd1d315"
+  },
+  "osaka-kobe": {
+    "icon": true,
+    "iconVersion": "d2fe2c5849f9",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "0f4764c39df6"
+  },
+  "ottawa": {
+    "icon": true,
+    "iconVersion": "803375ed6e99",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "a1fe9fde0f5d"
+  },
+  "palembang": {
+    "icon": true,
+    "iconVersion": "25236f7148d2",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "85125e1d12f5"
+  },
+  "paris": {
+    "icon": true,
+    "iconVersion": "9373dbf11a00",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "84d4e0b8764a"
+  },
+  "perth": {
+    "icon": true,
+    "iconVersion": "08f51f1e54c5",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "205684444f10"
+  },
+  "philly": {
+    "icon": true,
+    "iconVersion": "9aa89c72fee3",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "9ab2fe44a320"
+  },
+  "philly-metro-patco": {
+    "icon": true,
+    "iconVersion": "9aa89c72fee3",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "77f1a7b5d54b"
+  },
+  "philly-regional-rail": {
+    "icon": true,
+    "iconVersion": "005a9e6c54f6",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "fd1a693fa1b4"
+  },
+  "phoenix": {
+    "icon": true,
+    "iconVersion": "b6801a5de94f",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "68400f7a03f6"
+  },
+  "pittsburgh": {
+    "icon": true,
+    "iconVersion": "b648342ab01a",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "329bce08201e"
+  },
+  "portland": {
+    "icon": true,
+    "iconVersion": "dd52b48bda2d",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "1ce28a7d115b"
+  },
+  "potsdam": {
+    "icon": true,
+    "iconVersion": "e16b752db210",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "bf547d2c1947"
+  },
+  "pyongyang": {
+    "icon": true,
+    "iconVersion": "e233bf6430fa",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "52dfd11e848b"
+  },
+  "qingdao": {
+    "icon": true,
+    "iconVersion": "f9f4e7d0fe10",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "991e88f5b321"
+  },
+  "qiubei": {
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "255f9138cf5d"
+  },
+  "san-juan": {
+    "icon": true,
+    "iconVersion": "873d44d32c91",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "d260ae508bc2"
+  },
+  "sanya": {
+    "icon": true,
+    "iconVersion": "c224c9f3bbcd",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "b80ceeb10250"
+  },
+  "sapporo": {
+    "icon": true,
+    "iconVersion": "522c0aed1218",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "8348b483a1cd"
+  },
+  "seattle": {
+    "icon": true,
+    "iconVersion": "9a0ae0427de1",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "a620fc367082"
+  },
+  "sendai": {
+    "icon": true,
+    "iconVersion": "a9fb6bdd873d",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "a4811f1d20ec"
+  },
+  "seoul": {
+    "icon": true,
+    "iconVersion": "9574165f445a",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "366d93c2e017"
+  },
+  "sheffield": {
+    "icon": true,
+    "iconVersion": "3e2c41c12024",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "5b130c5649de"
+  },
+  "shenyang": {
+    "icon": true,
+    "iconVersion": "0626385c15cb",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "52470cba603a"
+  },
+  "shijiazhuang": {
+    "icon": true,
+    "iconVersion": "399e7b07bd8c",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "b09d7e29aafa"
+  },
+  "slc": {
+    "icon": true,
+    "iconVersion": "b242f7cbf2d3",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "9267e8731afa"
+  },
+  "stl": {
+    "icon": true,
+    "iconVersion": "86599c88031d",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "3ee707035aa5"
+  },
+  "stockholm": {
+    "icon": true,
+    "iconVersion": "e69cdee868cf",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "59d17554e87d"
+  },
+  "suzhou": {
+    "icon": true,
+    "iconVersion": "8b1e3865f558",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "abf4e58c61dc"
+  },
+  "sydney": {
+    "icon": true,
+    "iconVersion": "6566708d9dcd",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "5e48f56d020b"
+  },
+  "taichung": {
+    "icon": true,
+    "iconVersion": "d89d263b88f0",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "13ad4b3e94bf"
+  },
+  "taipei": {
+    "icon": true,
+    "iconVersion": "2a1fde5cc5cc",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "f3c866c11c8d"
+  },
+  "taiyuan": {
+    "icon": true,
+    "iconVersion": "512eb0068601",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "1a14f9f62d83"
+  },
+  "taizhou": {
+    "icon": true,
+    "iconVersion": "a56db0ebbfe4",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "ea445cfdcd32"
+  },
+  "taw": {
+    "icon": true,
+    "iconVersion": "95d53f76bede",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "8735f9d84c23"
+  },
+  "thsr": {
+    "icon": true,
+    "iconVersion": "3f9048ad33cc",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "7e440fe8bc06"
+  },
+  "tianjin": {
+    "icon": true,
+    "iconVersion": "f225d1fe2859",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "c7e3f1f4f6ec"
+  },
+  "tianshui": {
+    "icon": true,
+    "iconVersion": "d194c83e9a5f",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "63d69912b1f4"
+  },
+  "tokyo": {
+    "icon": true,
+    "iconVersion": "5c4c6b9dcf28",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "f024ccce115e"
+  },
+  "toronto": {
+    "icon": true,
+    "iconVersion": "0114f343b3a5",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "cc234223c2b5"
+  },
+  "toronto-waterloo": {
+    "icon": true,
+    "iconVersion": "0114f343b3a5",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "87d760b40f87"
+  },
+  "toronto-waterloo-go-up": {
+    "icon": true,
+    "iconVersion": "c8ce1b9a83f4",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "02e203c3c104"
+  },
+  "toronto-waterloo-metrolinx": {
+    "icon": true,
+    "iconVersion": "d6b3a83765b5",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "12670a98013b"
+  },
+  "toronto-waterloo-ttc": {
+    "icon": true,
+    "iconVersion": "0114f343b3a5",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "71ba22b9285c"
+  },
+  "toronto-waterloo-ttc-streetcars": {
+    "icon": true,
+    "iconVersion": "0114f343b3a5",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "e3ff75c1032a"
+  },
+  "toronto-waterloo-ttc-subway": {
+    "icon": true,
+    "iconVersion": "0114f343b3a5",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "4be8dff006fd"
+  },
+  "tucson": {
+    "icon": true,
+    "iconVersion": "fdf2bba3b168",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "d3ad96d53a6c"
+  },
+  "twincities": {
+    "icon": true,
+    "iconVersion": "da977e4d25ab",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "83e21d866be0"
+  },
+  "urumqi": {
+    "icon": true,
+    "iconVersion": "f56d613cfd46",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "f16c2e15d323"
+  },
+  "vancouver": {
+    "icon": true,
+    "iconVersion": "d782bbbd7d8a",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "04268a820b62"
+  },
+  "viarail": {
+    "icon": true,
+    "iconVersion": "9c280165a28b",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "8eafb17dcad7"
+  },
+  "vienna": {
+    "icon": true,
+    "iconVersion": "66a5ab20a2b8",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "038cc42fefaa"
+  },
+  "wellington": {
+    "icon": true,
+    "iconVersion": "97120e62b720",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "29c65db46bee"
+  },
+  "wenzhou": {
+    "icon": true,
+    "iconVersion": "21ac5f489900",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "8fbae59e2711"
+  },
+  "wm": {
+    "icon": true,
+    "iconVersion": "72c5cc252d7c",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "236fdc1c28c9"
+  },
+  "wuhan": {
+    "icon": true,
+    "iconVersion": "052a53df1f91",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "ae96d3b96870"
+  },
+  "wuhu": {
+    "icon": true,
+    "iconVersion": "6a4f4895d2c5",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "fbea9e32bfea"
+  },
+  "wuxi": {
+    "icon": true,
+    "iconVersion": "e0d90a71c4dd",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "50892e5a27a1"
+  },
+  "xiamen": {
+    "icon": true,
+    "iconVersion": "6d84839d481e",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "8282b50db661"
+  },
+  "xian": {
+    "icon": true,
+    "iconVersion": "8fd143000c55",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "3ce2ea246689"
+  },
+  "xishui": {
+    "icon": true,
+    "iconVersion": "a56db0ebbfe4",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "ea445cfdcd32"
+  },
+  "xuzhou": {
+    "icon": true,
+    "iconVersion": "01035dfa87c2",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "fe6d0e8ff350"
+  },
+  "yarra": {
+    "icon": true,
+    "iconVersion": "d40f12298c05",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "c951011315d9"
+  },
+  "yinchuan": {
+    "icon": true,
+    "iconVersion": "a56db0ebbfe4",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "ea445cfdcd32"
+  },
+  "zhangjiakou": {
+    "icon": true,
+    "iconVersion": "a56db0ebbfe4",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "ea445cfdcd32"
+  },
+  "zhangye": {
+    "icon": true,
+    "iconVersion": "a56db0ebbfe4",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "ea445cfdcd32"
+  },
+  "zhengzhou": {
+    "icon": true,
+    "iconVersion": "ce4c516cb741",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "e3dbb9810466"
+  }
+}

@@ -1,0 +1,220 @@
+{
+  "city": "london",
+  "continent": "europe",
+  "bbox": [
+    51.379089,
+    -0.972181,
+    51.70501,
+    0.330148
+  ],
+  "localLanguages": [
+    "en"
+  ],
+  "modes": [
+    "subway",
+    "light_rail",
+    "tram",
+    "rail",
+    "funicular",
+    "monorail",
+    "cable_car",
+    "gondola",
+    "chair_lift"
+  ],
+  "lines": [
+    {
+      "id": "Bakerloo",
+      "name": "Bakerloo",
+      "keywords": [
+        "Bakerloo line: Queen's Park → Harrow & Wealdstone",
+        "Bakerloo : Queen's Park → Harrow & Wealdstone",
+        "Line S",
+        "S Line",
+        "Route S",
+        "Bakerloo",
+        "Bakerloo Line",
+        "London Underground",
+        "Transport for London",
+        "London Bakerloo Line Queen S Park Harrow Wealdstone",
+        "London Bakerloo Queen S Park Harrow Wealdstone"
+      ],
+      "order": 0
+    },
+    {
+      "id": "Central",
+      "name": "Central",
+      "keywords": [
+        "Central line: Leyton → Epping",
+        "Central : Leyton → Epping",
+        "Central",
+        "Central Line",
+        "London Underground",
+        "Transport for London",
+        "London Central Line Leyton Epping",
+        "London Central Leyton Epping"
+      ],
+      "order": 1
+    },
+    {
+      "id": "Circle",
+      "name": "Circle",
+      "keywords": [
+        "Circle line: Hammersmith → Edgware Road",
+        "Circle : Hammersmith → Edgware Road",
+        "Circle",
+        "Circle Line",
+        "London Underground",
+        "Transport for London",
+        "London Circle Line Hammersmith Edgware Road",
+        "London Circle Hammersmith Edgware Road"
+      ],
+      "order": 2
+    },
+    {
+      "id": "District",
+      "name": "District",
+      "keywords": [
+        "District line: Wimbledon → Barking",
+        "District : Wimbledon → Barking",
+        "District",
+        "District Line",
+        "London Underground",
+        "Transport for London",
+        "London District Line Wimbledon Barking",
+        "London District Wimbledon Barking"
+      ],
+      "order": 4
+    },
+    {
+      "id": "DLR",
+      "name": "DLR",
+      "keywords": [
+        "DLR",
+        "DLR Line",
+        "Keolis Amey Docklands",
+        "London DLR"
+      ],
+      "order": 14
+    },
+    {
+      "id": "HammersmithAndCity",
+      "name": "Hammersmith & City",
+      "keywords": [
+        "Hammersmith & City line: Hammersmith → Barking",
+        "Hammersmith & City : Hammersmith → Barking",
+        "Hammersmith & City",
+        "London Underground",
+        "Transport for London",
+        "London Hammersmith City Line Hammersmith Barking",
+        "London Hammersmith City Hammersmith Barking",
+        "HammersmithAndCity"
+      ],
+      "order": 6
+    },
+    {
+      "id": "Jubilee",
+      "name": "Jubilee",
+      "keywords": [
+        "Jubilee line: Stratford → Stanmore",
+        "Jubilee : Stratford → Stanmore",
+        "Jubilee",
+        "Jubilee Line",
+        "London Underground",
+        "Transport for London",
+        "London Jubilee Line Stratford Stanmore",
+        "London Jubilee Stratford Stanmore"
+      ],
+      "order": 7
+    },
+    {
+      "id": "Metropolitan",
+      "name": "Metropolitan",
+      "keywords": [
+        "Metropolitan line: Chesham → Aldgate",
+        "Metropolitan : Chesham → Aldgate",
+        "Metropolitan",
+        "Metropolitan Line",
+        "London Underground",
+        "Transport for London",
+        "London Metropolitan Line Chesham Aldgate",
+        "London Metropolitan Chesham Aldgate"
+      ],
+      "order": 8
+    },
+    {
+      "id": "Northern",
+      "name": "Northern",
+      "keywords": [
+        "Northern line: Edgware → Colindale",
+        "Northern : Edgware → Colindale",
+        "Northern",
+        "Northern Line",
+        "London Underground",
+        "Transport for London",
+        "London Northern Line Edgware Colindale",
+        "London Northern Edgware Colindale"
+      ],
+      "order": 9
+    },
+    {
+      "id": "Piccadilly",
+      "name": "Piccadilly",
+      "keywords": [
+        "Piccadilly line: Oakwood → Cockfosters",
+        "Piccadilly : Oakwood → Cockfosters",
+        "Piccadilly",
+        "Piccadilly Line",
+        "London Underground",
+        "Transport for London",
+        "London Piccadilly Line Oakwood Cockfosters",
+        "London Piccadilly Oakwood Cockfosters"
+      ],
+      "order": 11
+    },
+    {
+      "id": "Victoria",
+      "name": "Victoria",
+      "keywords": [
+        "Victoria line: Seven Sisters → Brixton",
+        "Victoria : Seven Sisters → Brixton",
+        "Victoria",
+        "Victoria Line",
+        "London Underground",
+        "Transport for London",
+        "London Victoria Line Seven Sisters Brixton",
+        "London Victoria Seven Sisters Brixton"
+      ],
+      "order": 12
+    },
+    {
+      "id": "WaterlooAndCity",
+      "name": "Waterloo & City",
+      "keywords": [
+        "Waterloo & City line: Waterloo → Bank",
+        "Waterloo & City : Waterloo → Bank",
+        "Waterloo & City",
+        "London Underground",
+        "Transport for London",
+        "London Waterloo City Line Waterloo Bank",
+        "London Waterloo City Waterloo Bank",
+        "WaterlooAndCity"
+      ],
+      "order": 13
+    }
+  ],
+  "sources": {
+    "officialPages": [
+      "https://tfl.gov.uk/modes/tube/",
+      "https://tfl.gov.uk/travel-information/improvements-and-projects/london-underground"
+    ],
+    "pressPages": [
+      "https://tfl.gov.uk/info-for/media/press-releases"
+    ],
+    "mapPdfs": [
+      "https://tfl.gov.uk/assets/downloads/standard-tube-map.pdf"
+    ]
+  },
+  "stationAliases": {},
+  "stationLocalNames": {},
+  "manualCoords": {}
+}

@@ -1,0 +1,257 @@
+{
+  "city": "dresden",
+  "continent": "europe",
+  "bbox": [
+    50.9990168,
+    13.564975545454546,
+    51.16006244545454,
+    13.855074227272727
+  ],
+  "localLanguages": [
+    "de"
+  ],
+  "modes": [
+    "subway",
+    "light_rail",
+    "tram",
+    "rail",
+    "funicular",
+    "monorail",
+    "cable_car",
+    "gondola",
+    "chair_lift"
+  ],
+  "lines": [
+    {
+      "id": "DresdenTram1",
+      "name": "1",
+      "keywords": [
+        "1",
+        "Line 1",
+        "1 Line",
+        "L1",
+        "1号线",
+        "地铁1号线",
+        "1号線",
+        "1호선",
+        "Route 1",
+        "Tram Route 1",
+        "Dresden Tram1"
+      ],
+      "order": 1,
+      "icon": "europe/germany/dresden/DresdenTram1.svg"
+    },
+    {
+      "id": "DresdenTram2",
+      "name": "2",
+      "keywords": [
+        "2",
+        "Line 2",
+        "2 Line",
+        "L2",
+        "2号线",
+        "地铁2号线",
+        "2号線",
+        "2호선",
+        "Route 2",
+        "Tram Route 2",
+        "Dresden Tram2"
+      ],
+      "order": 2,
+      "icon": "europe/germany/dresden/DresdenTram2.svg"
+    },
+    {
+      "id": "DresdenTram3",
+      "name": "3",
+      "keywords": [
+        "3",
+        "Line 3",
+        "3 Line",
+        "L3",
+        "3号线",
+        "地铁3号线",
+        "3号線",
+        "3호선",
+        "Route 3",
+        "Tram Route 3",
+        "Dresden Tram3"
+      ],
+      "order": 3,
+      "icon": "europe/germany/dresden/DresdenTram3.svg"
+    },
+    {
+      "id": "DresdenTram4",
+      "name": "4",
+      "keywords": [
+        "4",
+        "Line 4",
+        "4 Line",
+        "L4",
+        "4号线",
+        "地铁4号线",
+        "4号線",
+        "4호선",
+        "Route 4",
+        "Tram Route 4",
+        "Dresden Tram4"
+      ],
+      "order": 4,
+      "icon": "europe/germany/dresden/DresdenTram4.svg"
+    },
+    {
+      "id": "DresdenTram6",
+      "name": "6",
+      "keywords": [
+        "6",
+        "Line 6",
+        "6 Line",
+        "L6",
+        "6号线",
+        "地铁6号线",
+        "6号線",
+        "6호선",
+        "Route 6",
+        "Tram Route 6",
+        "Dresden Tram6"
+      ],
+      "order": 5,
+      "icon": "europe/germany/dresden/DresdenTram6.svg"
+    },
+    {
+      "id": "DresdenTram7",
+      "name": "7",
+      "keywords": [
+        "7",
+        "Line 7",
+        "7 Line",
+        "L7",
+        "7号线",
+        "地铁7号线",
+        "7号線",
+        "7호선",
+        "Route 7",
+        "Tram Route 7",
+        "Dresden Tram7"
+      ],
+      "order": 6,
+      "icon": "europe/germany/dresden/DresdenTram7.svg"
+    },
+    {
+      "id": "DresdenTram8",
+      "name": "8",
+      "keywords": [
+        "8",
+        "Line 8",
+        "8 Line",
+        "L8",
+        "8号线",
+        "地铁8号线",
+        "8号線",
+        "8호선",
+        "Route 8",
+        "Tram Route 8",
+        "Dresden Tram8"
+      ],
+      "order": 7,
+      "icon": "europe/germany/dresden/DresdenTram8.svg"
+    },
+    {
+      "id": "DresdenTram9",
+      "name": "9",
+      "keywords": [
+        "9",
+        "Line 9",
+        "9 Line",
+        "L9",
+        "9号线",
+        "地铁9号线",
+        "9号線",
+        "9호선",
+        "Route 9",
+        "Tram Route 9",
+        "Dresden Tram9"
+      ],
+      "order": 8,
+      "icon": "europe/germany/dresden/DresdenTram9.svg"
+    },
+    {
+      "id": "DresdenTram10",
+      "name": "10",
+      "keywords": [
+        "10",
+        "Line 10",
+        "10 Line",
+        "L10",
+        "10号线",
+        "地铁10号线",
+        "10号線",
+        "10호선",
+        "Route 10",
+        "Tram Route 10",
+        "Dresden Tram10"
+      ],
+      "order": 9,
+      "icon": "europe/germany/dresden/DresdenTram10.svg"
+    },
+    {
+      "id": "DresdenTram11",
+      "name": "11",
+      "keywords": [
+        "11",
+        "Line 11",
+        "11 Line",
+        "L11",
+        "11号线",
+        "地铁11号线",
+        "11号線",
+        "11호선",
+        "Route 11",
+        "Tram Route 11",
+        "Dresden Tram11"
+      ],
+      "order": 10,
+      "icon": "europe/germany/dresden/DresdenTram11.svg"
+    },
+    {
+      "id": "DresdenTram12",
+      "name": "12",
+      "keywords": [
+        "12",
+        "Line 12",
+        "12 Line",
+        "L12",
+        "12号线",
+        "地铁12号线",
+        "12号線",
+        "12호선",
+        "Route 12",
+        "Tram Route 12",
+        "Dresden Tram12"
+      ],
+      "order": 11,
+      "icon": "europe/germany/dresden/DresdenTram12.svg"
+    },
+    {
+      "id": "DresdenTram13",
+      "name": "13",
+      "keywords": [
+        "13",
+        "Line 13",
+        "13 Line",
+        "L13",
+        "13号线",
+        "地铁13号线",
+        "13号線",
+        "13호선",
+        "Route 13",
+        "Tram Route 13",
+        "Dresden Tram13"
+      ],
+      "order": 12,
+      "icon": "europe/germany/dresden/DresdenTram13.svg"
+    }
+  ],
+  "stationAliases": {},
+  "stationLocalNames": {},
+  "manualCoords": {}
+}

@@ -1,0 +1,69 @@
+{
+  "city": "wenzhou",
+  "continent": "asia",
+  "bbox": [
+    27.7534307,
+    120.5646229,
+    28.1372781,
+    121.005496
+  ],
+  "localLanguages": [
+    "zh"
+  ],
+  "modes": [
+    "subway",
+    "light_rail",
+    "tram",
+    "rail",
+    "funicular",
+    "monorail",
+    "cable_car",
+    "gondola",
+    "chair_lift"
+  ],
+  "lines": [
+    {
+      "id": "wenzhous1",
+      "name": "S1",
+      "keywords": [
+        "温州市域铁路S1线",
+        "Line 1",
+        "1 Line",
+        "L1",
+        "1号线",
+        "地铁1号线",
+        "1号線",
+        "1호선",
+        "Route 1",
+        "Tram Route 1",
+        "Wenzhou S12",
+        "S1",
+        "wenzhous1"
+      ],
+      "order": 1
+    },
+    {
+      "id": "wenzhous2",
+      "name": "S2",
+      "keywords": [
+        "温州市域铁路S2线",
+        "Line 2",
+        "2 Line",
+        "L2",
+        "2号线",
+        "地铁2号线",
+        "2号線",
+        "2호선",
+        "Route 2",
+        "Tram Route 2",
+        "S2",
+        "Wenzhou S2",
+        "wenzhous2"
+      ],
+      "order": 2
+    }
+  ],
+  "stationAliases": {},
+  "stationLocalNames": {},
+  "manualCoords": {}
+}

@@ -1,0 +1,101 @@
+{
+  "city": "hanoi",
+  "continent": "asia",
+  "bbox": [
+    20.95,
+    105.73,
+    21.08,
+    105.91
+  ],
+  "localLanguages": [
+    "vi"
+  ],
+  "modes": [
+    "subway",
+    "light_rail",
+    "tram",
+    "rail",
+    "funicular",
+    "monorail",
+    "cable_car",
+    "gondola",
+    "chair_lift"
+  ],
+  "lines": [
+    {
+      "id": "Hanoi2A",
+      "name": "Line 2A",
+      "keywords": [
+        "Hanoi Metro Line 2A (Cat Linh - Ha Dong Section)",
+        "Line 2 A",
+        "2 A",
+        "Line 2",
+        "2 Line",
+        "L2",
+        "2号线",
+        "地铁2号线",
+        "2号線",
+        "2호선",
+        "Route 2",
+        "Tram Route 2",
+        "Line A",
+        "A Line",
+        "Route A",
+        "Line A Line",
+        "Route A Line",
+        "Hanoi2 A"
+      ],
+      "order": 0,
+      "icon": "asia/vietnam/hanoi/Hanoi2A.png"
+    },
+    {
+      "id": "Hanoi3",
+      "name": "Line 3",
+      "keywords": [
+        "Hanoi Metro Line 3 (Nhon - Hanoi Station Section)",
+        "塘鐵都市3河內",
+        "Line 3",
+        "3 Line",
+        "L3",
+        "3号线",
+        "地铁3号线",
+        "3号線",
+        "3호선",
+        "Route 3",
+        "Tram Route 3",
+        "Hanoi3"
+      ],
+      "order": 1,
+      "icon": "asia/vietnam/hanoi/Hanoi3.png"
+    }
+  ],
+  "stationAliases": {},
+  "stationLocalNames": {
+    "Kim Ma": [
+      "Kim Mã"
+    ],
+    "Van Mieu": [
+      "Văn Miếu"
+    ]
+  },
+  "manualCoords": {
+    "Hanoi3|Kim Ma": [
+      [
+        105.8141,
+        21.0305
+      ]
+    ],
+    "Hanoi3|Cat Linh": [
+      [
+        105.8293,
+        21.0292
+      ]
+    ],
+    "Hanoi3|Van Mieu": [
+      [
+        105.8367,
+        21.0267
+      ]
+    ]
+  }
+}

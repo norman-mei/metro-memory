@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="200"
+   height="200"
+   viewBox="0 0 52.916665 52.916668"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   sodipodi:docname="Metra ME.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="1"
+     inkscape:cx="68.5"
+     inkscape:cy="89.5"
+     inkscape:window-width="1366"
+     inkscape:window-height="697"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     inkscape:object-paths="true"
+     inkscape:snap-intersection-paths="true"
+     inkscape:snap-smooth-nodes="true"
+     inkscape:snap-midpoints="true"
+     units="px" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <circle
+       style="fill:#fe5000;fill-opacity:1;stroke:none;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:4.53543;paint-order:stroke fill markers;stop-color:#000000"
+       id="path1129"
+       cx="26.458334"
+       cy="26.458334"
+       r="26.458334" />
+    <g
+       aria-label="ME"
+       id="text2210"
+       style="font-weight:bold;font-size:21.1667px;line-height:0.9;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed,  Bold';letter-spacing:-0.529167px;stroke-width:0.264583">
+      <path
+         d="m 15.457438,18.934232 h 2.656173 l 3.069585,10.293962 3.059249,-10.293962 h 2.346114 l -4.278815,15.048201 h -2.263432 z m -1.074872,0 h 2.53215 l 0.392741,9.921891 v 5.12631 h -2.924891 z m 11.048439,0 h 2.542485 v 15.048201 h -2.914556 v -5.12631 z"
+         style="text-align:center;text-anchor:middle;fill:#ffffff"
+         id="path1682" />
+      <path
+         d="m 38.534103,31.48129 v 2.501143 H 31.991856 V 31.48129 Z M 32.932369,18.934232 V 33.982433 H 29.904125 V 18.934232 Z m 4.723233,6.097829 v 2.428796 h -5.663746 v -2.428796 z m 0.85783,-6.097829 v 2.511479 h -6.521576 v -2.511479 z"
+         style="text-align:center;text-anchor:middle;fill:#ffffff"
+         id="path1684" />
+    </g>
+  </g>
+</svg>

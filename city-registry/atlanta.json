@@ -1,0 +1,108 @@
+{
+  "city": "atlanta",
+  "continent": "north america",
+  "bbox": [
+    33.63740439491028,
+    -84.47595456611197,
+    33.9494535883298,
+    -84.2264366018968
+  ],
+  "localLanguages": [
+    "en"
+  ],
+  "modes": [
+    "subway",
+    "light_rail",
+    "tram",
+    "rail",
+    "funicular",
+    "monorail",
+    "cable_car",
+    "gondola",
+    "chair_lift"
+  ],
+  "lines": [
+    {
+      "id": "MARTARD",
+      "name": "Red",
+      "keywords": [
+        "Red",
+        "Red Line",
+        "MARTARD",
+        "MARTARD Line"
+      ],
+      "order": 0,
+      "icon": "north-america/usa/atlanta/MARTARD.png"
+    },
+    {
+      "id": "MARTAGD",
+      "name": "Gold",
+      "keywords": [
+        "Gold",
+        "Gold Line",
+        "MARTAGD",
+        "MARTAGD Line"
+      ],
+      "order": 1,
+      "icon": "north-america/usa/atlanta/MARTAGD.png"
+    },
+    {
+      "id": "MARTABL",
+      "name": "Blue",
+      "keywords": [
+        "Blue",
+        "Blue Line",
+        "MARTABL",
+        "MARTABL Line"
+      ],
+      "order": 2,
+      "icon": "north-america/usa/atlanta/MARTABL.png"
+    },
+    {
+      "id": "MARTAGR",
+      "name": "Green",
+      "keywords": [
+        "Green",
+        "Green Line",
+        "MARTAGR",
+        "MARTAGR Line"
+      ],
+      "order": 3,
+      "icon": "north-america/usa/atlanta/MARTAGR.png"
+    },
+    {
+      "id": "MARTASC",
+      "name": "Atlanta Streetcar",
+      "keywords": [
+        "Atlanta Streetcar",
+        "MARTASC",
+        "MARTASC Line"
+      ],
+      "order": 4,
+      "icon": "north-america/usa/atlanta/MARTASC.png"
+    },
+    {
+      "id": "atlantaTPT",
+      "name": "The Plane Train",
+      "keywords": [
+        "The Plane Train",
+        "atlanta TPT"
+      ],
+      "order": 5,
+      "icon": "north-america/usa/atlanta/atlantaTPT.png"
+    },
+    {
+      "id": "atlantaSKY",
+      "name": "ATL SkyTrain",
+      "keywords": [
+        "ATL Sky Train",
+        "atlanta SKY"
+      ],
+      "order": 6,
+      "icon": "north-america/usa/atlanta/atlantaSKY.png"
+    }
+  ],
+  "stationAliases": {},
+  "stationLocalNames": {},
+  "manualCoords": {}
+}

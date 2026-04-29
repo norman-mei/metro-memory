@@ -1,0 +1,1054 @@
+{
+  "EAL": {
+    "name": "East Rail",
+    "color": "#53B7E8",
+    "progressOutlineColor": "#53B7E8",
+    "backgroundColor": "#2D647F",
+    "textColor": "#FFFFFF",
+    "order": 0,
+    "icon": "asia/china/gba/HKEAL.png",
+    "badgeShape": "capsule",
+    "badgeFit": "contain"
+  },
+  "TCL": {
+    "name": "Tung Chung",
+    "color": "#F6933D",
+    "progressOutlineColor": "#F6933D",
+    "backgroundColor": "#875122",
+    "textColor": "#FFFFFF",
+    "order": 1,
+    "icon": "asia/china/gba/HKTCL.png",
+    "badgeShape": "capsule",
+    "badgeFit": "contain"
+  },
+  "TML": {
+    "name": "Tuen Ma",
+    "color": "#923011",
+    "progressOutlineColor": "#923011",
+    "backgroundColor": "#501A09",
+    "textColor": "#FFFFFF",
+    "order": 2,
+    "icon": "asia/china/gba/HKTML.png",
+    "badgeShape": "capsule",
+    "badgeFit": "contain"
+  },
+  "NOL": {
+    "name": "Northern Link",
+    "color": "#E0027A",
+    "progressOutlineColor": "#E0027A",
+    "backgroundColor": "#7A013E",
+    "textColor": "#FFFFFF",
+    "order": 3,
+    "icon": "asia/china/gba/NOL.png"
+  },
+  "KTL": {
+    "name": "Kwun Tong",
+    "color": "#00AB4E",
+    "progressOutlineColor": "#00AB4E",
+    "backgroundColor": "#005E2A",
+    "textColor": "#FFFFFF",
+    "order": 4,
+    "icon": "asia/china/gba/HKKTL.png",
+    "badgeShape": "capsule",
+    "badgeFit": "contain"
+  },
+  "TWL": {
+    "name": "Tsuen Wan",
+    "color": "#ED1D24",
+    "progressOutlineColor": "#ED1D24",
+    "backgroundColor": "#820F13",
+    "textColor": "#FFFFFF",
+    "order": 5,
+    "icon": "asia/china/gba/HKTWL.png",
+    "badgeShape": "capsule",
+    "badgeFit": "contain"
+  },
+  "ISL": {
+    "name": "Island",
+    "color": "#007DC5",
+    "progressOutlineColor": "#007DC5",
+    "backgroundColor": "#00446C",
+    "textColor": "#FFFFFF",
+    "order": 6,
+    "icon": "asia/china/gba/HKISL.png",
+    "badgeShape": "capsule",
+    "badgeFit": "contain"
+  },
+  "TKL": {
+    "name": "Tseung Kwan O",
+    "color": "#7D499D",
+    "progressOutlineColor": "#7D499D",
+    "backgroundColor": "#442856",
+    "textColor": "#FFFFFF",
+    "order": 7,
+    "icon": "asia/china/gba/HKTKL.png",
+    "badgeShape": "capsule",
+    "badgeFit": "contain"
+  },
+  "SIL": {
+    "name": "South Island",
+    "color": "#BAC429",
+    "progressOutlineColor": "#BAC429",
+    "backgroundColor": "#666B16",
+    "textColor": "#000000",
+    "order": 8,
+    "icon": "asia/china/gba/HKSIL.png",
+    "badgeShape": "capsule",
+    "badgeFit": "contain"
+  },
+  "AEL": {
+    "name": "Airport Express",
+    "color": "#007F81",
+    "progressOutlineColor": "#007F81",
+    "backgroundColor": "#004A4B",
+    "textColor": "#FFFFFF",
+    "order": 9,
+    "icon": "asia/china/gba/HKAEL.png",
+    "badgeShape": "square",
+    "badgeFit": "contain"
+  },
+  "DRL": {
+    "name": "Disneyland Resort",
+    "color": "#F173AC",
+    "progressOutlineColor": "#F173AC",
+    "backgroundColor": "#843F5E",
+    "textColor": "#FFFFFF",
+    "order": 10,
+    "icon": "asia/china/gba/HKDRL.png",
+    "badgeShape": "capsule",
+    "badgeFit": "contain"
+  },
+  "XRL": {
+    "name": "Express Rail Link",
+    "color": "#CDC5BB",
+    "progressOutlineColor": "#CDC5BB",
+    "backgroundColor": "#666059",
+    "textColor": "#FFFFFF",
+    "order": 11,
+    "icon": "asia/china/gba/HKXRL.png",
+    "badgeShape": "square",
+    "badgeFit": "contain"
+  },
+  "HKNP360": {
+    "name": "Ngong Ping 360",
+    "color": "#F4DB7C",
+    "progressOutlineColor": "#F4DB7C",
+    "backgroundColor": "#7C6F3F",
+    "textColor": "#1D1D1B",
+    "order": 12,
+    "icon": "asia/china/gba/NgongPing360.png",
+    "badgeShape": "square",
+    "badgeFit": "contain"
+  },
+  "HKAPMT1": {
+    "name": "T1 Line",
+    "color": "#03CFD0",
+    "progressOutlineColor": "#03CFD0",
+    "backgroundColor": "#026F70",
+    "textColor": "#FFFFFF",
+    "order": 13,
+    "icon": "asia/china/gba/HKAPMT1.png"
+  },
+  "HKAPMT2": {
+    "name": "T2 Line",
+    "color": "#5DD95F",
+    "progressOutlineColor": "#5DD95F",
+    "backgroundColor": "#2F7331",
+    "textColor": "#0F2611",
+    "order": 14,
+    "icon": "asia/china/gba/HKAPMT2.png"
+  },
+  "HKAPMSKY": {
+    "name": "SkyPier Line",
+    "color": "#D04A7D",
+    "progressOutlineColor": "#D04A7D",
+    "backgroundColor": "#752640",
+    "textColor": "#FFFFFF",
+    "order": 15,
+    "icon": "asia/china/gba/HKAPMSKY.png"
+  },
+  "MTR505": {
+    "name": "Sam Shing — Siu Hong",
+    "color": "#EE1C05",
+    "progressOutlineColor": "#EE1C05",
+    "backgroundColor": "#7A0D02",
+    "textColor": "#FFFFFF",
+    "order": 16,
+    "icon": "asia/china/gba/MTR505.png"
+  },
+  "MTR507": {
+    "name": "Tuen Mun Ferry Pier — Tin King",
+    "color": "#00A844",
+    "progressOutlineColor": "#00A844",
+    "backgroundColor": "#005726",
+    "textColor": "#FFFFFF",
+    "order": 17,
+    "icon": "asia/china/gba/MTR507.png"
+  },
+  "MTR610": {
+    "name": "Tuen Mun Ferry Pier — Yuen Long",
+    "color": "#B14242",
+    "progressOutlineColor": "#B14242",
+    "backgroundColor": "#5A2020",
+    "textColor": "#FFFFFF",
+    "order": 18,
+    "icon": "asia/china/gba/MTR610.png"
+  },
+  "MTR614": {
+    "name": "Tuen Mun Ferry Pier — Yuen Long",
+    "color": "#34D0FA",
+    "progressOutlineColor": "#34D0FA",
+    "backgroundColor": "#1B6A80",
+    "textColor": "#FFFFFF",
+    "order": 19,
+    "icon": "asia/china/gba/MTR614.png"
+  },
+  "MTR614P": {
+    "name": "Tuen Mun Ferry Pier — Siu Hong",
+    "color": "#FF8CA1",
+    "progressOutlineColor": "#FF8CA1",
+    "backgroundColor": "#9B4254",
+    "textColor": "#FFFFFF",
+    "order": 20,
+    "icon": "asia/china/gba/MTR614P.png"
+  },
+  "MTR615": {
+    "name": "Tuen Mun Ferry Pier — Yuen Long",
+    "color": "#FFF35C",
+    "progressOutlineColor": "#FFF35C",
+    "backgroundColor": "#7B702C",
+    "textColor": "#1D1D1B",
+    "order": 21,
+    "icon": "asia/china/gba/MTR615.png"
+  },
+  "MTR615P": {
+    "name": "Tuen Mun Ferry Pier — Siu Hong",
+    "color": "#00577C",
+    "progressOutlineColor": "#00577C",
+    "backgroundColor": "#002C40",
+    "textColor": "#FFFFFF",
+    "order": 22,
+    "icon": "asia/china/gba/MTR615P.png"
+  },
+  "MTR705": {
+    "name": "Tin Shui Wai — Counterclockwise",
+    "color": "#6FC44A",
+    "progressOutlineColor": "#6FC44A",
+    "backgroundColor": "#355E23",
+    "textColor": "#FFFFFF",
+    "order": 23,
+    "icon": "asia/china/gba/MTR705.png"
+  },
+  "MTR706": {
+    "name": "Tin Shui Wai — Clockwise",
+    "color": "#AA72B6",
+    "progressOutlineColor": "#AA72B6",
+    "backgroundColor": "#55375B",
+    "textColor": "#FFFFFF",
+    "order": 24,
+    "icon": "asia/china/gba/MTR706.png"
+  },
+  "MTR751": {
+    "name": "Yau Oi — Tin Yat",
+    "color": "#FF9951",
+    "progressOutlineColor": "#FF9951",
+    "backgroundColor": "#A24D21",
+    "textColor": "#1D1D1B",
+    "order": 25,
+    "icon": "asia/china/gba/MTR751.png"
+  },
+  "MTR751P": {
+    "name": "Tin Shui Wai — Tin Yat",
+    "color": "#C89F0F",
+    "progressOutlineColor": "#C89F0F",
+    "backgroundColor": "#7A3618",
+    "textColor": "#FFFFFF",
+    "order": 26,
+    "icon": "asia/china/gba/MTR751P.png"
+  },
+  "MTR761P": {
+    "name": "Yuen Long — Tin Yat",
+    "color": "#4C138F",
+    "progressOutlineColor": "#4C138F",
+    "backgroundColor": "#250748",
+    "textColor": "#FFFFFF",
+    "order": 27,
+    "icon": "asia/china/gba/MTR761P.png"
+  },
+  "HKTPT": {
+    "name": "Peak Tram",
+    "color": "#014147",
+    "progressOutlineColor": "#014147",
+    "backgroundColor": "#001E21",
+    "textColor": "#FFFFFF",
+    "order": 28,
+    "icon": "asia/china/gba/HKTPT.png"
+  },
+  "HKOEX": {
+    "name": "Ocean Express",
+    "color": "#0087D6",
+    "progressOutlineColor": "#0087D6",
+    "backgroundColor": "#004163",
+    "textColor": "#FFFFFF",
+    "order": 29,
+    "icon": "asia/china/gba/HKOEX.png"
+  },
+  "HKOCC": {
+    "name": "Ocean Park Gondola",
+    "color": "#D60317",
+    "progressOutlineColor": "#D60317",
+    "backgroundColor": "#6B000B",
+    "textColor": "#FFFFFF",
+    "order": 30,
+    "icon": "asia/china/gba/HKOCC.png"
+  },
+  "HKT": {
+    "name": "Hong Kong Tramways",
+    "color": "#007549",
+    "progressOutlineColor": "#007549",
+    "backgroundColor": "#00301A",
+    "textColor": "#FFFFFF",
+    "order": 31,
+    "icon": "asia/china/gba/HKT.png"
+  },
+  "TPA": {
+    "name": "Taipa",
+    "color": "#96C93C",
+    "progressOutlineColor": "#96C93C",
+    "backgroundColor": "#96C93C",
+    "textColor": "#000000",
+    "order": 0,
+    "icon": "asia/china/gba/TPA.png"
+  },
+  "HNQ": {
+    "name": "Hengqin",
+    "color": "#B82A3C",
+    "progressOutlineColor": "#B82A3C",
+    "backgroundColor": "#B82A3C",
+    "textColor": "#FFFFFF",
+    "order": 1,
+    "icon": "asia/china/gba/HNQ.png"
+  },
+  "SPV": {
+    "name": "Seac Pai Van",
+    "color": "#8966C3",
+    "progressOutlineColor": "#8966C3",
+    "backgroundColor": "#8966C3",
+    "textColor": "#000000",
+    "order": 2,
+    "icon": "asia/china/gba/SPV.png"
+  },
+  "dongguanline2": {
+    "name": "Line 2",
+    "color": "#ED1C24",
+    "backgroundColor": "#7B0A0E",
+    "progressOutlineColor": "#ED1C24",
+    "textColor": "#FFFFFF",
+    "order": 1,
+    "icon": "asia/china/gba/dongguanline2.png"
+  },
+  "dongguanline1": {
+    "name": "Line 1",
+    "color": "#034EA2",
+    "backgroundColor": "#022751",
+    "progressOutlineColor": "#034EA2",
+    "textColor": "#FFFFFF",
+    "order": 0,
+    "icon": "asia/china/gba/dongguanline1.png"
+  },
+  "gzline1": {
+    "name": "Line 1",
+    "color": "#F3D03E",
+    "progressOutlineColor": "#F3D03E",
+    "backgroundColor": "#F3D03E",
+    "textColor": "#000000",
+    "order": 32,
+    "icon": "asia/china/gba/GZLine1.png",
+    "badgeShape": "capsule",
+    "badgeFit": "contain"
+  },
+  "gzline2": {
+    "name": "Line 2",
+    "color": "#00629B",
+    "progressOutlineColor": "#00629B",
+    "backgroundColor": "#00629B",
+    "textColor": "#FFFFFF",
+    "order": 33,
+    "icon": "asia/china/gba/GZLine2.png",
+    "badgeShape": "capsule",
+    "badgeFit": "contain"
+  },
+  "gzline3": {
+    "name": "Line 3",
+    "color": "#ECA154",
+    "progressOutlineColor": "#ECA154",
+    "backgroundColor": "#ECA154",
+    "textColor": "#000000",
+    "order": 34,
+    "icon": "asia/china/gba/GZLine3.png",
+    "badgeShape": "capsule",
+    "badgeFit": "contain"
+  },
+  "gzline4": {
+    "name": "Line 4",
+    "color": "#00843D",
+    "progressOutlineColor": "#00843D",
+    "backgroundColor": "#00843D",
+    "textColor": "#FFFFFF",
+    "order": 35,
+    "icon": "asia/china/gba/GZLine4.png",
+    "badgeShape": "capsule",
+    "badgeFit": "contain"
+  },
+  "gzline5": {
+    "name": "Line 5",
+    "color": "#C5003E",
+    "progressOutlineColor": "#C5003E",
+    "backgroundColor": "#C5003E",
+    "textColor": "#FFFFFF",
+    "order": 36,
+    "icon": "asia/china/gba/GZLine5.png",
+    "badgeShape": "capsule",
+    "badgeFit": "contain"
+  },
+  "gzline6": {
+    "name": "Line 6",
+    "color": "#80225F",
+    "progressOutlineColor": "#80225F",
+    "backgroundColor": "#80225F",
+    "textColor": "#FFFFFF",
+    "order": 37,
+    "icon": "asia/china/gba/GZLine6.png",
+    "badgeShape": "capsule",
+    "badgeFit": "contain"
+  },
+  "gzline7": {
+    "name": "Line 7",
+    "color": "#97D700",
+    "progressOutlineColor": "#97D700",
+    "backgroundColor": "#97D700",
+    "textColor": "#000000",
+    "order": 38,
+    "icon": "asia/china/gba/GZLine7.png",
+    "badgeShape": "capsule",
+    "badgeFit": "contain"
+  },
+  "gzline8": {
+    "name": "Line 8",
+    "color": "#008C95",
+    "progressOutlineColor": "#008C95",
+    "backgroundColor": "#008C95",
+    "textColor": "#FFFFFF",
+    "order": 39,
+    "icon": "asia/china/gba/GZLine8.png",
+    "badgeShape": "capsule",
+    "badgeFit": "contain"
+  },
+  "gzline9": {
+    "name": "Line 9",
+    "color": "#71CC98",
+    "progressOutlineColor": "#71CC98",
+    "backgroundColor": "#71CC98",
+    "textColor": "#000000",
+    "order": 40,
+    "icon": "asia/china/gba/GZLine9.png",
+    "badgeShape": "capsule",
+    "badgeFit": "contain"
+  },
+  "gzline10": {
+    "name": "Line 10",
+    "color": "#7389B2",
+    "progressOutlineColor": "#7389B2",
+    "backgroundColor": "#7389B2",
+    "textColor": "#FFFFFF",
+    "order": 41,
+    "icon": "asia/china/gba/GZLine10.png",
+    "badgeShape": "capsule",
+    "badgeFit": "contain"
+  },
+  "gzline11": {
+    "name": "Line 11",
+    "color": "#FFB40C",
+    "progressOutlineColor": "#FFB40C",
+    "backgroundColor": "#FFB40C",
+    "textColor": "#000000",
+    "order": 42,
+    "icon": "asia/china/gba/GZLine11.png",
+    "badgeShape": "capsule",
+    "badgeFit": "contain"
+  },
+  "gzline12": {
+    "name": "Line 12",
+    "color": "#505D12",
+    "progressOutlineColor": "#505D12",
+    "backgroundColor": "#505D12",
+    "textColor": "#FFFFFF",
+    "order": 43,
+    "icon": "asia/china/gba/GZLine12.png",
+    "badgeShape": "capsule",
+    "badgeFit": "contain"
+  },
+  "gzline13": {
+    "name": "Line 13",
+    "color": "#8E8C13",
+    "progressOutlineColor": "#8E8C13",
+    "backgroundColor": "#8E8C13",
+    "textColor": "#FFFFFF",
+    "order": 44,
+    "icon": "asia/china/gba/GZLine13.png",
+    "badgeShape": "capsule",
+    "badgeFit": "contain"
+  },
+  "gzline14": {
+    "name": "Line 14",
+    "color": "#81312F",
+    "progressOutlineColor": "#81312F",
+    "backgroundColor": "#81312F",
+    "textColor": "#FFFFFF",
+    "order": 45,
+    "icon": "asia/china/gba/GZLine14.png",
+    "badgeShape": "capsule",
+    "badgeFit": "contain"
+  },
+  "gzline18": {
+    "name": "Line 18",
+    "color": "#0047BA",
+    "progressOutlineColor": "#0047BA",
+    "backgroundColor": "#0047BA",
+    "textColor": "#ffffff",
+    "order": 46,
+    "icon": "asia/china/gba/GZLine18.png",
+    "badgeShape": "capsule",
+    "badgeFit": "contain"
+  },
+  "gzline21": {
+    "name": "Line 21",
+    "color": "#201747",
+    "progressOutlineColor": "#201747",
+    "backgroundColor": "#201747",
+    "textColor": "#ffffff",
+    "order": 47,
+    "icon": "asia/china/gba/GZLine21.png",
+    "badgeShape": "capsule",
+    "badgeFit": "contain"
+  },
+  "gzline22": {
+    "name": "Line 22",
+    "color": "#CD5228",
+    "progressOutlineColor": "#CD5228",
+    "backgroundColor": "#CD5228",
+    "textColor": "#ffffff",
+    "order": 48,
+    "icon": "asia/china/gba/GZLine22.png",
+    "badgeShape": "capsule",
+    "badgeFit": "contain"
+  },
+  "gzapm": {
+    "name": "Zhujiang New Town Automated People Mover System",
+    "color": "#00B5E2",
+    "progressOutlineColor": "#00B5E2",
+    "backgroundColor": "#00B5E2",
+    "textColor": "#FFFFFF",
+    "order": 49,
+    "icon": "asia/china/gba/GZAPM.png",
+    "badgeShape": "capsule",
+    "badgeFit": "contain"
+  },
+  "gzt_thp1": {
+    "name": "Huangpu Tram Line 1",
+    "color": "#BD0000",
+    "progressOutlineColor": "#BD0000",
+    "backgroundColor": "#BD0000",
+    "textColor": "#FFFFFF",
+    "order": 50,
+    "icon": "asia/china/gba/gzt_thp1.png"
+  },
+  "gzt_thp2": {
+    "name": "Huangpu Tram Line 2",
+    "color": "#E4007F",
+    "progressOutlineColor": "#E4007F",
+    "backgroundColor": "#E4007F",
+    "textColor": "#FFFFFF",
+    "order": 51,
+    "icon": "asia/china/gba/gzt_thp2.png"
+  },
+  "gzt_thz1": {
+    "name": "Haizhu Tram Line 1",
+    "color": "#43B02A",
+    "progressOutlineColor": "#43B02A",
+    "backgroundColor": "#43B02A",
+    "textColor": "#FFFFFF",
+    "order": 52,
+    "icon": "asia/china/gba/gzt_thz1.png"
+  },
+  "fs_guangfo": {
+    "name": "Guangfo",
+    "color": "#C4D600",
+    "progressOutlineColor": "#C4D600",
+    "backgroundColor": "#C4D600",
+    "textColor": "#000000",
+    "order": 53,
+    "icon": "asia/china/gba/Guangfo.png",
+    "badgeShape": "capsule",
+    "badgeFit": "contain"
+  },
+  "fs_line2": {
+    "name": "Line 2",
+    "color": "#F5333F",
+    "progressOutlineColor": "#F5333F",
+    "backgroundColor": "#F5333F",
+    "textColor": "#FFFFFF",
+    "order": 54,
+    "icon": "asia/china/gba/fs_line2.png"
+  },
+  "fs_line3": {
+    "name": "Line 3",
+    "color": "#002F87",
+    "progressOutlineColor": "#002F87",
+    "backgroundColor": "#002F87",
+    "textColor": "#FFFFFF",
+    "order": 55,
+    "icon": "asia/china/gba/fs_line3.png"
+  },
+  "fs_tnh1": {
+    "name": "Nanhai Tram Line 1",
+    "color": "#78C7EB",
+    "progressOutlineColor": "#78C7EB",
+    "backgroundColor": "#78C7EB",
+    "textColor": "#000000",
+    "order": 56,
+    "icon": "asia/china/gba/fs_tnh1.png"
+  },
+  "gzline24": {
+    "name": "Line 24",
+    "color": "#20ACAC",
+    "progressOutlineColor": "#20ACAC",
+    "backgroundColor": "#20ACAC",
+    "textColor": "#ffffff",
+    "order": 63,
+    "icon": "asia/china/gba/gzline24.png"
+  },
+  "szline1": {
+    "name": "Line 1",
+    "color": "#00AB39",
+    "progressOutlineColor": "#00AB39",
+    "backgroundColor": "#00AB39",
+    "textColor": "#FFFFFF",
+    "order": 100,
+    "icon": "asia/china/gba/SZLine1.png",
+    "badgeShape": "capsule",
+    "badgeFit": "contain"
+  },
+  "szline2": {
+    "name": "Line 2",
+    "color": "#DB6D1C",
+    "progressOutlineColor": "#DB6D1C",
+    "backgroundColor": "#DB6D1C",
+    "textColor": "#FFFFFF",
+    "order": 101,
+    "icon": "asia/china/gba/SZLine2.png",
+    "badgeShape": "capsule",
+    "badgeFit": "contain"
+  },
+  "szline3": {
+    "name": "Line 3",
+    "color": "#00A2E1",
+    "progressOutlineColor": "#00A2E1",
+    "backgroundColor": "#00A2E1",
+    "textColor": "#FFFFFF",
+    "order": 102,
+    "icon": "asia/china/gba/SZLine3.png",
+    "badgeShape": "capsule",
+    "badgeFit": "contain"
+  },
+  "szline4": {
+    "name": "Line 4",
+    "color": "#DC241F",
+    "progressOutlineColor": "#DC241F",
+    "backgroundColor": "#DC241F",
+    "textColor": "#FFFFFF",
+    "order": 103,
+    "icon": "asia/china/gba/SZLine4.png",
+    "badgeShape": "capsule",
+    "badgeFit": "contain"
+  },
+  "szline5": {
+    "name": "Line 5",
+    "color": "#9950B2",
+    "progressOutlineColor": "#9950B2",
+    "backgroundColor": "#9950B2",
+    "textColor": "#FFFFFF",
+    "order": 104,
+    "icon": "asia/china/gba/SZLine5.png",
+    "badgeShape": "capsule",
+    "badgeFit": "contain"
+  },
+  "szline6": {
+    "name": "Line 6",
+    "color": "#3ABCA8",
+    "progressOutlineColor": "#3ABCA8",
+    "backgroundColor": "#3ABCA8",
+    "textColor": "#FFFFFF",
+    "order": 105,
+    "icon": "asia/china/gba/SZLine6.png",
+    "badgeShape": "capsule",
+    "badgeFit": "contain"
+  },
+  "szline6b": {
+    "name": "Line 6B",
+    "color": "#037776",
+    "progressOutlineColor": "#037776",
+    "backgroundColor": "#037776",
+    "textColor": "#FFFFFF",
+    "order": 106,
+    "icon": "asia/china/gba/szline6b.png"
+  },
+  "szline7": {
+    "name": "Line 7",
+    "color": "#0035AD",
+    "progressOutlineColor": "#0035AD",
+    "backgroundColor": "#0035AD",
+    "textColor": "#FFFFFF",
+    "order": 107,
+    "icon": "asia/china/gba/SZLine7.png",
+    "badgeShape": "capsule",
+    "badgeFit": "contain"
+  },
+  "szline8": {
+    "name": "Line 8",
+    "color": "#DB6D1C",
+    "progressOutlineColor": "#DB6D1C",
+    "backgroundColor": "#DB6D1C",
+    "textColor": "#FFFFFF",
+    "order": 108,
+    "icon": "asia/china/gba/SZLine8.png",
+    "badgeShape": "capsule",
+    "badgeFit": "contain"
+  },
+  "szline9": {
+    "name": "Line 9",
+    "color": "#846E74",
+    "progressOutlineColor": "#846E74",
+    "backgroundColor": "#846E74",
+    "textColor": "#FFFFFF",
+    "order": 109,
+    "icon": "asia/china/gba/SZLine9.png",
+    "badgeShape": "capsule",
+    "badgeFit": "contain"
+  },
+  "szline10": {
+    "name": "Line 10",
+    "color": "#F8779E",
+    "progressOutlineColor": "#F8779E",
+    "backgroundColor": "#F8779E",
+    "textColor": "#FFFFFF",
+    "order": 110,
+    "icon": "asia/china/gba/SZLine10.png",
+    "badgeShape": "capsule",
+    "badgeFit": "contain"
+  },
+  "szline11": {
+    "name": "Line 11",
+    "color": "#6A1D44",
+    "progressOutlineColor": "#6A1D44",
+    "backgroundColor": "#6A1D44",
+    "textColor": "#FFFFFF",
+    "order": 111,
+    "icon": "asia/china/gba/SZLine11.png",
+    "badgeShape": "capsule",
+    "badgeFit": "contain"
+  },
+  "szline12": {
+    "name": "Line 12",
+    "color": "#A192B2",
+    "progressOutlineColor": "#A192B2",
+    "backgroundColor": "#A192B2",
+    "textColor": "#FFFFFF",
+    "order": 112,
+    "icon": "asia/china/gba/SZLine12.png",
+    "badgeShape": "capsule",
+    "badgeFit": "contain"
+  },
+  "szline13": {
+    "name": "Line 13",
+    "color": "#DE7C00",
+    "progressOutlineColor": "#DE7C00",
+    "backgroundColor": "#DE7C00",
+    "textColor": "#FFFFFF",
+    "order": 113,
+    "icon": "asia/china/gba/SZLine13.png",
+    "badgeShape": "capsule",
+    "badgeFit": "contain"
+  },
+  "szline14": {
+    "name": "Line 14",
+    "color": "#F2C75C",
+    "progressOutlineColor": "#F2C75C",
+    "backgroundColor": "#F2C75C",
+    "textColor": "#FFFFFF",
+    "order": 114,
+    "icon": "asia/china/gba/SZLine14.png",
+    "badgeShape": "capsule",
+    "badgeFit": "contain"
+  },
+  "szline15": {
+    "name": "Line 15",
+    "color": "#77BA00",
+    "progressOutlineColor": "#77BA00",
+    "backgroundColor": "#77BA00",
+    "textColor": "#FFFFFF",
+    "order": 115,
+    "icon": "asia/china/gba/SZLine15.png",
+    "badgeShape": "capsule",
+    "badgeFit": "contain"
+  },
+  "szline16": {
+    "name": "Line 16",
+    "color": "#1E22AA",
+    "progressOutlineColor": "#1E22AA",
+    "backgroundColor": "#1E22AA",
+    "textColor": "#FFFFFF",
+    "order": 116,
+    "icon": "asia/china/gba/SZLine16.png",
+    "badgeShape": "capsule",
+    "badgeFit": "contain"
+  },
+  "szline17": {
+    "name": "Line 17",
+    "color": "#D3C0CD",
+    "progressOutlineColor": "#D3C0CD",
+    "backgroundColor": "#D3C0CD",
+    "textColor": "#FFFFFF",
+    "order": 117,
+    "icon": "asia/china/gba/szline17.png"
+  },
+  "szline20": {
+    "name": "Line 20",
+    "color": "#88DBDF",
+    "progressOutlineColor": "#88DBDF",
+    "backgroundColor": "#88DBDF",
+    "textColor": "#FFFFFF",
+    "order": 118,
+    "icon": "asia/china/gba/SZLine20.png",
+    "badgeShape": "capsule",
+    "badgeFit": "contain"
+  },
+  "szline25": {
+    "name": "Line 25",
+    "color": "#FEAD77",
+    "progressOutlineColor": "#FEAD77",
+    "backgroundColor": "#FEAD77",
+    "textColor": "#FFFFFF",
+    "order": 119,
+    "icon": "asia/china/gba/szline25.png"
+  },
+  "szline27": {
+    "name": "Line 27",
+    "color": "#3C8065",
+    "progressOutlineColor": "#3C8065",
+    "backgroundColor": "#3C8065",
+    "textColor": "#FFFFFF",
+    "order": 120,
+    "icon": "asia/china/gba/szline27.png"
+  },
+  "szline29": {
+    "name": "Line 29",
+    "color": "#9F2F47",
+    "progressOutlineColor": "#9F2F47",
+    "backgroundColor": "#9F2F47",
+    "textColor": "#FFFFFF",
+    "order": 121,
+    "icon": "asia/china/gba/szline29.png"
+  },
+  "szline32": {
+    "name": "Line 32",
+    "color": "#BA5801",
+    "progressOutlineColor": "#BA5801",
+    "backgroundColor": "#BA5801",
+    "textColor": "#FFFFFF",
+    "order": 122,
+    "icon": "asia/china/gba/szline32.png"
+  },
+  "sztram1": {
+    "name": "Line 1",
+    "color": "#95C943",
+    "progressOutlineColor": "#95C943",
+    "backgroundColor": "#95C943",
+    "textColor": "#FFFFFF",
+    "order": 123,
+    "icon": "asia/china/gba/sztram1.png"
+  },
+  "sztram2": {
+    "name": "Line 2",
+    "color": "#02481E",
+    "progressOutlineColor": "#02481E",
+    "backgroundColor": "#02481E",
+    "textColor": "#FFFFFF",
+    "order": 124,
+    "icon": "asia/china/gba/sztram2.png"
+  },
+  "szbyd1": {
+    "name": "Pingshan SkyShuttle Line 1",
+    "color": "#2374C7",
+    "progressOutlineColor": "#2374C7",
+    "backgroundColor": "#2374C7",
+    "textColor": "#FFFFFF",
+    "order": 125,
+    "icon": "asia/china/gba/szbyd1.png"
+  },
+  "szline22": {
+    "name": "Line 22",
+    "color": "#FBE122",
+    "progressOutlineColor": "#FBE122",
+    "backgroundColor": "#FBE122",
+    "textColor": "#FFFFFF",
+    "order": 126,
+    "icon": "asia/china/gba/szline22.png"
+  },
+  "prdir_guangzhu": {
+    "name": "Guangzhu",
+    "color": "#113858",
+    "progressOutlineColor": "#113858",
+    "backgroundColor": "#113858",
+    "textColor": "#FFFFFF",
+    "order": 128,
+    "icon": "asia/china/gba/prdir_guangzhu.png"
+  },
+  "prdir_suishen": {
+    "name": "Suishen",
+    "color": "#113858",
+    "progressOutlineColor": "#113858",
+    "backgroundColor": "#113858",
+    "textColor": "#FFFFFF",
+    "order": 129,
+    "icon": "asia/china/gba/prdir_suishen.png"
+  },
+  "prdir_zhuji": {
+    "name": "Zhuji",
+    "color": "#089444",
+    "progressOutlineColor": "#089444",
+    "backgroundColor": "#089444",
+    "textColor": "#FFFFFF",
+    "order": 130,
+    "icon": "asia/china/gba/prdir_zhuji.png"
+  },
+  "prdir_guanghui": {
+    "name": "Guanghui",
+    "color": "#2A59A7",
+    "progressOutlineColor": "#2A59A7",
+    "backgroundColor": "#2A59A7",
+    "textColor": "#FFFFFF",
+    "order": 131,
+    "icon": "asia/china/gba/prdir_guanghui.png"
+  },
+  "prdir_guangzhao": {
+    "name": "Guangzhao",
+    "color": "#2A59A7",
+    "progressOutlineColor": "#2A59A7",
+    "backgroundColor": "#2A59A7",
+    "textColor": "#FFFFFF",
+    "order": 132,
+    "icon": "asia/china/gba/prdir_guangzhao.png"
+  },
+  "prdir_guangqing": {
+    "name": "Guangqing",
+    "color": "#2A59A7",
+    "progressOutlineColor": "#2A59A7",
+    "backgroundColor": "#2A59A7",
+    "textColor": "#FFFFFF",
+    "order": 133,
+    "icon": "asia/china/gba/prdir_guangqing.png"
+  },
+  "prdir_guangforing": {
+    "name": "Guangfo Ring",
+    "color": "#2A59A7",
+    "progressOutlineColor": "#2A59A7",
+    "backgroundColor": "#2A59A7",
+    "textColor": "#FFFFFF",
+    "order": 134,
+    "icon": "asia/china/gba/prdir_guangforing.png"
+  },
+  "prdir_guangshen": {
+    "name": "Guangshen",
+    "color": "#0000FF",
+    "progressOutlineColor": "#0000FF",
+    "backgroundColor": "#0000FF",
+    "textColor": "#FFFFFF",
+    "order": 137,
+    "icon": "asia/china/gba/prdir_guangshen.svg"
+  },
+  "moeast": {
+    "name": "East",
+    "color": "#FFC933",
+    "progressOutlineColor": "#FFC933",
+    "backgroundColor": "#B38600",
+    "textColor": "#000000",
+    "order": 127,
+    "icon": "asia/china/gba/moeast.png"
+  },
+  "qymaglev": {
+    "name": "Qingyuan Maglev Tourist Line",
+    "color": "#F2A700",
+    "progressOutlineColor": "#F2A700",
+    "backgroundColor": "#F2A700",
+    "textColor": "#000000",
+    "order": 134,
+    "icon": "asia/china/gba/qymaglev.png"
+  },
+  "gzsp_cable": {
+    "name": "Safari Park Cable Car",
+    "color": "#cf34eb",
+    "progressOutlineColor": "#cf34eb",
+    "backgroundColor": "#cf34eb",
+    "textColor": "#000000",
+    "order": 135,
+    "icon": "asia/china/gba/GZSP.png"
+  },
+  "gzcw_cable": {
+    "name": "Baiyun Mountain Cableway",
+    "color": "#3489eb",
+    "progressOutlineColor": "#3489eb",
+    "backgroundColor": "#3489eb",
+    "textColor": "#FFFFFF",
+    "order": 136,
+    "icon": "asia/china/gba/GZCW.png"
+  },
+  "szairportapm": {
+    "name": "Shenzhen Airport APM",
+    "color": "#A41850",
+    "progressOutlineColor": "#A41850",
+    "backgroundColor": "#A41850",
+    "textColor": "#FFFFFF",
+    "order": 138,
+    "icon": "asia/china/gba/ShenzhenAirport.png"
+  },
+  "wynnskycab": {
+    "name": "Wynn Palace Skycab",
+    "color": "#C5B358",
+    "progressOutlineColor": "#C5B358",
+    "backgroundColor": "#D9DEE4",
+    "textColor": "#000000",
+    "badgeShape": "square",
+    "badgeFit": "contain",
+    "order": 139,
+    "icon": "asia/china/gba/Wynn.png"
+  },
+  "mab_guia": {
+    "name": "Guia Hill Cable Car",
+    "color": "#FF0000",
+    "progressOutlineColor": "#FF0000",
+    "backgroundColor": "#FF0000",
+    "textColor": "#FFFFFF",
+    "order": 140,
+    "icon": "asia/china/gba/guiahill.png"
+  },
+  "mab_taipa": {
+    "name": "Taipa Grande Hill Inclined Lift",
+    "color": "#0000FF",
+    "progressOutlineColor": "#0000FF",
+    "backgroundColor": "#0000FF",
+    "textColor": "#FFFFFF",
+    "order": 141,
+    "icon": "asia/china/gba/taipagrande.png"
+  }
+}

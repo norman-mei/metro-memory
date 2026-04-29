@@ -1,0 +1,22 @@
+{
+  "CalgaryBlue": {
+    "name": "Blue Line",
+    "color": "#008BB2",
+    "backgroundColor": "#00506A",
+    "textColor": "#ffffff",
+    "progressOutlineColor": "#008BB2",
+    "statsColor": "#008BB2",
+    "order": 0,
+    "icon": "north-america/canada/calgary/CalgaryBlue.svg"
+  },
+  "CalgaryRed": {
+    "name": "Red Line",
+    "color": "#D7142E",
+    "backgroundColor": "#870C1D",
+    "textColor": "#ffffff",
+    "progressOutlineColor": "#D7142E",
+    "statsColor": "#D7142E",
+    "order": 1,
+    "icon": "north-america/canada/calgary/CalgaryRed.svg"
+  }
+}

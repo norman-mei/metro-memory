@@ -1,0 +1,1984 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [17.888666, 59.396756]
+      },
+      "properties": {
+        "id": 1,
+        "name": "Hjulsta",
+        "line": "Tunnelbana10",
+        "order": 0
+      },
+      "id": 1
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [17.917428, 59.413848]
+      },
+      "properties": {
+        "id": 18,
+        "name": "Akalla",
+        "line": "Tunnelbana11",
+        "order": 0
+      },
+      "id": 18
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [17.815034, 59.243806]
+      },
+      "properties": {
+        "id": 36,
+        "name": "Norsborg",
+        "line": "Tunnelbana13",
+        "order": 0
+      },
+      "id": 36
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [17.96474, 59.286724]
+      },
+      "properties": {
+        "id": 86,
+        "name": "Fruängen",
+        "line": "Tunnelbana14",
+        "order": 0
+      },
+      "id": 86
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [17.923432, 59.34214]
+      },
+      "properties": {
+        "id": 124,
+        "name": "Åkeshov",
+        "line": "Tunnelbana17",
+        "order": 0
+      },
+      "id": 124
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.080988, 59.299155]
+      },
+      "properties": {
+        "id": 172,
+        "name": "Gullmarsplan",
+        "line": "Tunnelbana18",
+        "order": 0
+      },
+      "id": 172
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.013163, 59.262164]
+      },
+      "properties": {
+        "id": 192,
+        "name": "Hagsätra",
+        "line": "Tunnelbana19",
+        "order": 0
+      },
+      "id": 192
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [17.832466, 59.361742]
+      },
+      "properties": {
+        "id": 226,
+        "name": "Hässelby strand",
+        "line": "Tunnelbana19",
+        "order": 383
+      },
+      "id": 226
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [17.844397, 59.367067]
+      },
+      "properties": {
+        "id": 225,
+        "name": "Hässelby gård",
+        "line": "Tunnelbana19",
+        "order": 367
+      },
+      "id": 225
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [17.858149, 59.367914]
+      },
+      "properties": {
+        "id": 224,
+        "name": "Johannelund",
+        "line": "Tunnelbana19",
+        "order": 361
+      },
+      "id": 224
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.102365, 59.357403]
+      },
+      "properties": {
+        "id": 60,
+        "name": "Ropsten",
+        "line": "Tunnelbana13",
+        "order": 360
+      },
+      "id": 60
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [17.872073, 59.363245]
+      },
+      "properties": {
+        "id": 223,
+        "name": "Vällingby",
+        "line": "Tunnelbana19",
+        "order": 348
+      },
+      "id": 223
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.098968, 59.345161]
+      },
+      "properties": {
+        "id": 59,
+        "name": "Gärdet",
+        "line": "Tunnelbana13",
+        "order": 339
+      },
+      "id": 59
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [17.881628, 59.354495]
+      },
+      "properties": {
+        "id": 222,
+        "name": "Råcksta",
+        "line": "Tunnelbana19",
+        "order": 336
+      },
+      "id": 222
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.092, 59.338987]
+      },
+      "properties": {
+        "id": 58,
+        "name": "Karlaplan",
+        "line": "Tunnelbana13",
+        "order": 332
+      },
+      "id": 58
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [17.88285, 59.34837]
+      },
+      "properties": {
+        "id": 221,
+        "name": "Blackeberg",
+        "line": "Tunnelbana19",
+        "order": 325
+      },
+      "id": 221
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.073877, 59.334536]
+      },
+      "properties": {
+        "id": 57,
+        "name": "Östermalmstorg",
+        "line": "Tunnelbana13",
+        "order": 318
+      },
+      "id": 57
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [17.893272, 59.345994]
+      },
+      "properties": {
+        "id": 220,
+        "name": "Islandstorget",
+        "line": "Tunnelbana19",
+        "order": 316
+      },
+      "id": 220
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [17.907172, 59.341943]
+      },
+      "properties": {
+        "id": 219,
+        "name": "Ängbyplan",
+        "line": "Tunnelbana19",
+        "order": 306
+      },
+      "id": 219
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.061464, 59.331799]
+      },
+      "properties": {
+        "id": 56,
+        "name": "T - Centralen / Centralstation",
+        "alternate_names": ["T - Centralen", "Centralstation"],
+        "line": "Tunnelbana13",
+        "order": 295
+      },
+      "id": 56
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [17.923468, 59.342138]
+      },
+      "properties": {
+        "id": 218,
+        "name": "Åkeshov",
+        "line": "Tunnelbana19",
+        "order": 293
+      },
+      "id": 218
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.134101, 59.267376]
+      },
+      "properties": {
+        "id": 147,
+        "name": "Skarpnäck",
+        "line": "Tunnelbana17",
+        "order": 279
+      },
+      "id": 147
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [17.939691, 59.33827]
+      },
+      "properties": {
+        "id": 217,
+        "name": "Brommaplan",
+        "line": "Tunnelbana19",
+        "order": 276
+      },
+      "id": 217
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.036753, 59.398144]
+      },
+      "properties": {
+        "id": 104,
+        "name": "Mörby centrum",
+        "line": "Tunnelbana14",
+        "order": 269
+      },
+      "id": 104
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.131192, 59.276279]
+      },
+      "properties": {
+        "id": 146,
+        "name": "Bagarmossen",
+        "line": "Tunnelbana17",
+        "order": 266
+      },
+      "id": 146
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.066987, 59.323159]
+      },
+      "properties": {
+        "id": 55,
+        "name": "Gamla stan",
+        "line": "Tunnelbana13",
+        "order": 264
+      },
+      "id": 55
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [17.953169, 59.336558]
+      },
+      "properties": {
+        "id": 216,
+        "name": "Abrahamsberg",
+        "line": "Tunnelbana19",
+        "order": 263
+      },
+      "id": 216
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [17.965354, 59.334663]
+      },
+      "properties": {
+        "id": 215,
+        "name": "Stora mossen",
+        "line": "Tunnelbana19",
+        "order": 261
+      },
+      "id": 215
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.072104, 59.319601]
+      },
+      "properties": {
+        "id": 54,
+        "name": "Slussen",
+        "line": "Tunnelbana13",
+        "order": 258
+      },
+      "id": 54
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.041776, 59.390616]
+      },
+      "properties": {
+        "id": 103,
+        "name": "Danderyds sjukhus",
+        "line": "Tunnelbana14",
+        "order": 258
+      },
+      "id": 103
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.114433, 59.284537]
+      },
+      "properties": {
+        "id": 145,
+        "name": "Kärrtorp",
+        "line": "Tunnelbana17",
+        "order": 244
+      },
+      "id": 145
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [17.981328, 59.333526]
+      },
+      "properties": {
+        "id": 214,
+        "name": "Alvik",
+        "line": "Tunnelbana19",
+        "order": 239
+      },
+      "id": 214
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.063258, 59.31655]
+      },
+      "properties": {
+        "id": 53,
+        "name": "Mariatorget",
+        "line": "Tunnelbana13",
+        "order": 236
+      },
+      "id": 53
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.037357, 59.380691]
+      },
+      "properties": {
+        "id": 102,
+        "name": "Bergshamra",
+        "line": "Tunnelbana14",
+        "order": 235
+      },
+      "id": 102
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.115324, 59.291665]
+      },
+      "properties": {
+        "id": 144,
+        "name": "Björkhagen",
+        "line": "Tunnelbana17",
+        "order": 233
+      },
+      "id": 144
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.049607, 59.317903]
+      },
+      "properties": {
+        "id": 52,
+        "name": "Zinkensdamm",
+        "line": "Tunnelbana13",
+        "order": 226
+      },
+      "id": 52
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.003122, 59.33272]
+      },
+      "properties": {
+        "id": 213,
+        "name": "Kristineberg",
+        "line": "Tunnelbana19",
+        "order": 225
+      },
+      "id": 213
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.035345, 59.316]
+      },
+      "properties": {
+        "id": 51,
+        "name": "Hornstull",
+        "line": "Tunnelbana13",
+        "order": 220
+      },
+      "id": 51
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.015874, 59.331493]
+      },
+      "properties": {
+        "id": 212,
+        "name": "Thorildsplan",
+        "line": "Tunnelbana19",
+        "order": 218
+      },
+      "id": 212
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.104532, 59.294817]
+      },
+      "properties": {
+        "id": 143,
+        "name": "Hammarbyhöjden",
+        "line": "Tunnelbana17",
+        "order": 216
+      },
+      "id": 143
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.054124, 59.365257]
+      },
+      "properties": {
+        "id": 101,
+        "name": "Universitetet",
+        "line": "Tunnelbana14",
+        "order": 212
+      },
+      "id": 101
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.022891, 59.310674]
+      },
+      "properties": {
+        "id": 50,
+        "name": "Liljeholmen",
+        "line": "Tunnelbana13",
+        "order": 210
+      },
+      "id": 50
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.031396, 59.33293]
+      },
+      "properties": {
+        "id": 211,
+        "name": "Fridhemsplan",
+        "line": "Tunnelbana19",
+        "order": 209
+      },
+      "id": 211
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.072651, 59.330516]
+      },
+      "properties": {
+        "id": 30,
+        "name": "Kungsträdgården",
+        "line": "Tunnelbana11",
+        "order": 203
+      },
+      "id": 30
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.03742, 59.340292]
+      },
+      "properties": {
+        "id": 210,
+        "name": "S:t Eriksplan",
+        "line": "Tunnelbana19",
+        "order": 203
+      },
+      "id": 210
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.090367, 59.295268]
+      },
+      "properties": {
+        "id": 142,
+        "name": "Skärmarbrink",
+        "line": "Tunnelbana17",
+        "order": 201
+      },
+      "id": 142
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.001773, 59.306535]
+      },
+      "properties": {
+        "id": 49,
+        "name": "Aspudden",
+        "line": "Tunnelbana13",
+        "order": 198
+      },
+      "id": 49
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.072651, 59.330516]
+      },
+      "properties": {
+        "id": 14,
+        "name": "Kungsträdgården",
+        "line": "Tunnelbana10",
+        "order": 194
+      },
+      "id": 14
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.068997, 59.34625]
+      },
+      "properties": {
+        "id": 100,
+        "name": "Tekniska högskolan",
+        "line": "Tunnelbana14",
+        "order": 194
+      },
+      "id": 100
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.048707, 59.342757]
+      },
+      "properties": {
+        "id": 209,
+        "name": "Odenplan",
+        "line": "Tunnelbana19",
+        "order": 193
+      },
+      "id": 209
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [17.989023, 59.30557]
+      },
+      "properties": {
+        "id": 48,
+        "name": "Örnsberg",
+        "line": "Tunnelbana13",
+        "order": 192
+      },
+      "id": 48
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.061371, 59.33246]
+      },
+      "properties": {
+        "id": 29,
+        "name": "T - Centralen / Centralstation",
+        "alternate_names": ["T - Centralen", "Centralstation"],
+        "line": "Tunnelbana11",
+        "order": 189
+      },
+      "id": 29
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [17.975464, 59.30438]
+      },
+      "properties": {
+        "id": 47,
+        "name": "Axelsberg",
+        "line": "Tunnelbana13",
+        "order": 187
+      },
+      "id": 47
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.080964, 59.299183]
+      },
+      "properties": {
+        "id": 141,
+        "name": "Gullmarsplan",
+        "line": "Tunnelbana17",
+        "order": 184
+      },
+      "id": 141
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.058563, 59.340185]
+      },
+      "properties": {
+        "id": 208,
+        "name": "Rådmansgatan",
+        "line": "Tunnelbana19",
+        "order": 183
+      },
+      "id": 208
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.061491, 59.332461]
+      },
+      "properties": {
+        "id": 13,
+        "name": "T - Centralen / Centralstation",
+        "alternate_names": ["T - Centralen", "Centralstation"],
+        "line": "Tunnelbana10",
+        "order": 180
+      },
+      "id": 13
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.08173, 59.340763]
+      },
+      "properties": {
+        "id": 99,
+        "name": "Stadion",
+        "line": "Tunnelbana14",
+        "order": 180
+      },
+      "id": 99
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.062977, 59.33561]
+      },
+      "properties": {
+        "id": 207,
+        "name": "Hötorget",
+        "line": "Tunnelbana19",
+        "order": 180
+      },
+      "id": 207
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [17.957647, 59.301232]
+      },
+      "properties": {
+        "id": 46,
+        "name": "Mälarhöjden",
+        "line": "Tunnelbana13",
+        "order": 177
+      },
+      "id": 46
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.076063, 59.308495]
+      },
+      "properties": {
+        "id": 140,
+        "name": "Skanstull",
+        "line": "Tunnelbana17",
+        "order": 177
+      },
+      "id": 140
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.044878, 59.330135]
+      },
+      "properties": {
+        "id": 28,
+        "name": "Rådhuset",
+        "line": "Tunnelbana11",
+        "order": 173
+      },
+      "id": 28
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.062018, 59.331519]
+      },
+      "properties": {
+        "id": 206,
+        "name": "T - Centralen / Centralstation",
+        "alternate_names": ["T - Centralen", "Centralstation"],
+        "line": "Tunnelbana19",
+        "order": 173
+      },
+      "id": 206
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.073417, 59.314889]
+      },
+      "properties": {
+        "id": 139,
+        "name": "Medborgarplatsen",
+        "line": "Tunnelbana17",
+        "order": 172
+      },
+      "id": 139
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [17.936, 59.294842]
+      },
+      "properties": {
+        "id": 45,
+        "name": "Bredäng",
+        "line": "Tunnelbana13",
+        "order": 165
+      },
+      "id": 45
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.031117, 59.332957]
+      },
+      "properties": {
+        "id": 27,
+        "name": "Fridhemsplan",
+        "line": "Tunnelbana11",
+        "order": 164
+      },
+      "id": 27
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.044878, 59.330135]
+      },
+      "properties": {
+        "id": 12,
+        "name": "Rådhuset",
+        "line": "Tunnelbana10",
+        "order": 163
+      },
+      "id": 12
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.073877, 59.334536]
+      },
+      "properties": {
+        "id": 98,
+        "name": "Östermalmstorg",
+        "line": "Tunnelbana14",
+        "order": 162
+      },
+      "id": 98
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.072169, 59.319694]
+      },
+      "properties": {
+        "id": 138,
+        "name": "Slussen",
+        "line": "Tunnelbana17",
+        "order": 161
+      },
+      "id": 138
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.067142, 59.323278]
+      },
+      "properties": {
+        "id": 137,
+        "name": "Gamla stan",
+        "line": "Tunnelbana17",
+        "order": 154
+      },
+      "id": 137
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.031118, 59.332957]
+      },
+      "properties": {
+        "id": 11,
+        "name": "Fridhemsplan",
+        "line": "Tunnelbana10",
+        "order": 152
+      },
+      "id": 11
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.067144, 59.323278]
+      },
+      "properties": {
+        "id": 205,
+        "name": "Gamla stan",
+        "line": "Tunnelbana19",
+        "order": 152
+      },
+      "id": 205
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.015893, 59.337564]
+      },
+      "properties": {
+        "id": 26,
+        "name": "Stadshagen",
+        "line": "Tunnelbana11",
+        "order": 144
+      },
+      "id": 26
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.072224, 59.319624]
+      },
+      "properties": {
+        "id": 204,
+        "name": "Slussen",
+        "line": "Tunnelbana19",
+        "order": 144
+      },
+      "id": 204
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [17.921135, 59.285008]
+      },
+      "properties": {
+        "id": 44,
+        "name": "Sätra",
+        "line": "Tunnelbana13",
+        "order": 142
+      },
+      "id": 44
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.061464, 59.331799]
+      },
+      "properties": {
+        "id": 97,
+        "name": "T - Centralen / Centralstation",
+        "alternate_names": ["T - Centralen", "Centralstation"],
+        "line": "Tunnelbana14",
+        "order": 141
+      },
+      "id": 97
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.073413, 59.314879]
+      },
+      "properties": {
+        "id": 203,
+        "name": "Medborgarplatsen",
+        "line": "Tunnelbana19",
+        "order": 134
+      },
+      "id": 203
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.015893, 59.337564]
+      },
+      "properties": {
+        "id": 10,
+        "name": "Stadshagen",
+        "line": "Tunnelbana10",
+        "order": 132
+      },
+      "id": 10
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.061638, 59.331696]
+      },
+      "properties": {
+        "id": 136,
+        "name": "T - Centralen / Centralstation",
+        "alternate_names": ["T - Centralen", "Centralstation"],
+        "line": "Tunnelbana17",
+        "order": 131
+      },
+      "id": 136
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [17.907013, 59.277043]
+      },
+      "properties": {
+        "id": 43,
+        "name": "Skärholmen",
+        "line": "Tunnelbana13",
+        "order": 130
+      },
+      "id": 43
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.076094, 59.308499]
+      },
+      "properties": {
+        "id": 202,
+        "name": "Skanstull",
+        "line": "Tunnelbana19",
+        "order": 127
+      },
+      "id": 202
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.003079, 59.347927]
+      },
+      "properties": {
+        "id": 25,
+        "name": "Västra skogen",
+        "line": "Tunnelbana11",
+        "order": 125
+      },
+      "id": 25
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [17.890124, 59.275906]
+      },
+      "properties": {
+        "id": 42,
+        "name": "Vårberg",
+        "line": "Tunnelbana13",
+        "order": 124
+      },
+      "id": 42
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.080984, 59.299139]
+      },
+      "properties": {
+        "id": 201,
+        "name": "Gullmarsplan",
+        "line": "Tunnelbana19",
+        "order": 120
+      },
+      "id": 201
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.06338, 59.33571]
+      },
+      "properties": {
+        "id": 135,
+        "name": "Hötorget",
+        "line": "Tunnelbana17",
+        "order": 119
+      },
+      "id": 135
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.059041, 59.340303]
+      },
+      "properties": {
+        "id": 134,
+        "name": "Rådmansgatan",
+        "line": "Tunnelbana17",
+        "order": 117
+      },
+      "id": 134
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.066987, 59.323159]
+      },
+      "properties": {
+        "id": 96,
+        "name": "Gamla stan",
+        "line": "Tunnelbana14",
+        "order": 111
+      },
+      "id": 96
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.078006, 59.294243]
+      },
+      "properties": {
+        "id": 200,
+        "name": "Globen",
+        "line": "Tunnelbana19",
+        "order": 111
+      },
+      "id": 200
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.003475, 59.347972]
+      },
+      "properties": {
+        "id": 9,
+        "name": "Västra skogen",
+        "line": "Tunnelbana10",
+        "order": 110
+      },
+      "id": 9
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.072104, 59.319601]
+      },
+      "properties": {
+        "id": 95,
+        "name": "Slussen",
+        "line": "Tunnelbana14",
+        "order": 105
+      },
+      "id": 95
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.048565, 59.342999]
+      },
+      "properties": {
+        "id": 133,
+        "name": "Odenplan",
+        "line": "Tunnelbana17",
+        "order": 105
+      },
+      "id": 133
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [17.997768, 59.359537]
+      },
+      "properties": {
+        "id": 24,
+        "name": "Solna centrum",
+        "line": "Tunnelbana11",
+        "order": 101
+      },
+      "id": 24
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [17.884764, 59.264358]
+      },
+      "properties": {
+        "id": 41,
+        "name": "Vårby gård",
+        "line": "Tunnelbana13",
+        "order": 99
+      },
+      "id": 41
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.101199, 59.235453]
+      },
+      "properties": {
+        "id": 181,
+        "name": "Farsta strand",
+        "line": "Tunnelbana18",
+        "order": 99
+      },
+      "id": 181
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [17.986921, 59.349552]
+      },
+      "properties": {
+        "id": 8,
+        "name": "Huvudsta",
+        "line": "Tunnelbana10",
+        "order": 97
+      },
+      "id": 8
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.07043, 59.288997]
+      },
+      "properties": {
+        "id": 199,
+        "name": "Enskede gård",
+        "line": "Tunnelbana19",
+        "order": 95
+      },
+      "id": 199
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.03706, 59.340335]
+      },
+      "properties": {
+        "id": 132,
+        "name": "S:t Eriksplan",
+        "line": "Tunnelbana17",
+        "order": 94
+      },
+      "id": 132
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [17.981979, 59.367444]
+      },
+      "properties": {
+        "id": 23,
+        "name": "Näckrosen",
+        "line": "Tunnelbana11",
+        "order": 88
+      },
+      "id": 23
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.063259, 59.316554]
+      },
+      "properties": {
+        "id": 94,
+        "name": "Mariatorget",
+        "line": "Tunnelbana14",
+        "order": 86
+      },
+      "id": 94
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.093742, 59.243536]
+      },
+      "properties": {
+        "id": 180,
+        "name": "Farsta",
+        "line": "Tunnelbana18",
+        "order": 86
+      },
+      "id": 180
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.031176, 59.333031]
+      },
+      "properties": {
+        "id": 131,
+        "name": "Fridhemsplan",
+        "line": "Tunnelbana17",
+        "order": 84
+      },
+      "id": 131
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [17.969178, 59.374358]
+      },
+      "properties": {
+        "id": 22,
+        "name": "Hallonbergen",
+        "line": "Tunnelbana11",
+        "order": 82
+      },
+      "id": 22
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.070886, 59.283606]
+      },
+      "properties": {
+        "id": 198,
+        "name": "Sockenplan",
+        "line": "Tunnelbana19",
+        "order": 82
+      },
+      "id": 198
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [17.973189, 59.354672]
+      },
+      "properties": {
+        "id": 7,
+        "name": "Solna strand",
+        "line": "Tunnelbana10",
+        "order": 77
+      },
+      "id": 7
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.049605, 59.317908]
+      },
+      "properties": {
+        "id": 93,
+        "name": "Zinkensdamm",
+        "line": "Tunnelbana14",
+        "order": 76
+      },
+      "id": 93
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [17.881183, 59.249956]
+      },
+      "properties": {
+        "id": 40,
+        "name": "Masmo",
+        "line": "Tunnelbana13",
+        "order": 75
+      },
+      "id": 40
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.015833, 59.331514]
+      },
+      "properties": {
+        "id": 130,
+        "name": "Thorildsplan",
+        "line": "Tunnelbana17",
+        "order": 73
+      },
+      "id": 130
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.035345, 59.316]
+      },
+      "properties": {
+        "id": 92,
+        "name": "Hornstull",
+        "line": "Tunnelbana14",
+        "order": 70
+      },
+      "id": 92
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [17.972689, 59.3605]
+      },
+      "properties": {
+        "id": 6,
+        "name": "Sundbybergs centrum",
+        "line": "Tunnelbana10",
+        "order": 68
+      },
+      "id": 6
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.067941, 59.278003]
+      },
+      "properties": {
+        "id": 197,
+        "name": "Svedmyra",
+        "line": "Tunnelbana19",
+        "order": 68
+      },
+      "id": 197
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.00307, 59.332723]
+      },
+      "properties": {
+        "id": 129,
+        "name": "Kristineberg",
+        "line": "Tunnelbana17",
+        "order": 67
+      },
+      "id": 129
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.082494, 59.25793]
+      },
+      "properties": {
+        "id": 179,
+        "name": "Hökarängen",
+        "line": "Tunnelbana18",
+        "order": 62
+      },
+      "id": 179
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.022999, 59.310719]
+      },
+      "properties": {
+        "id": 91,
+        "name": "Liljeholmen",
+        "line": "Tunnelbana14",
+        "order": 58
+      },
+      "id": 91
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.082136, 59.263324]
+      },
+      "properties": {
+        "id": 178,
+        "name": "Gubbängen",
+        "line": "Tunnelbana18",
+        "order": 57
+      },
+      "id": 178
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.055593, 59.274622]
+      },
+      "properties": {
+        "id": 196,
+        "name": "Stureby",
+        "line": "Tunnelbana19",
+        "order": 57
+      },
+      "id": 196
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [17.962941, 59.368125]
+      },
+      "properties": {
+        "id": 5,
+        "name": "Duvbo",
+        "line": "Tunnelbana10",
+        "order": 56
+      },
+      "id": 5
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [17.860868, 59.247481]
+      },
+      "properties": {
+        "id": 39,
+        "name": "Fittja",
+        "line": "Tunnelbana13",
+        "order": 51
+      },
+      "id": 39
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [17.967056, 59.393502]
+      },
+      "properties": {
+        "id": 21,
+        "name": "Kymlinge norrut",
+        "alternate_names": ["Kymlinge"],
+        "line": "Tunnelbana11",
+        "order": 49
+      },
+      "id": 21
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [17.981293, 59.333505]
+      },
+      "properties": {
+        "id": 128,
+        "name": "Alvik",
+        "line": "Tunnelbana17",
+        "order": 49
+      },
+      "id": 128
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.049639, 59.270391]
+      },
+      "properties": {
+        "id": 195,
+        "name": "Bandhagen",
+        "line": "Tunnelbana19",
+        "order": 48
+      },
+      "id": 195
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.011689, 59.301992]
+      },
+      "properties": {
+        "id": 90,
+        "name": "Midsommarkransen",
+        "line": "Tunnelbana14",
+        "order": 46
+      },
+      "id": 90
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [17.939659, 59.3759]
+      },
+      "properties": {
+        "id": 4,
+        "name": "Rissne",
+        "line": "Tunnelbana10",
+        "order": 44
+      },
+      "id": 4
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.085563, 59.271266]
+      },
+      "properties": {
+        "id": 177,
+        "name": "Tallkrogen",
+        "line": "Tunnelbana18",
+        "order": 44
+      },
+      "id": 177
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.04301, 59.263782]
+      },
+      "properties": {
+        "id": 194,
+        "name": "Högdalen",
+        "line": "Tunnelbana19",
+        "order": 40
+      },
+      "id": 194
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [17.997319, 59.298245]
+      },
+      "properties": {
+        "id": 89,
+        "name": "Telefonplan",
+        "line": "Tunnelbana14",
+        "order": 36
+      },
+      "id": 89
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.095528, 59.278967]
+      },
+      "properties": {
+        "id": 176,
+        "name": "Skogskyrkogården",
+        "line": "Tunnelbana18",
+        "order": 32
+      },
+      "id": 176
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [17.92835, 59.388418]
+      },
+      "properties": {
+        "id": 3,
+        "name": "Rinkeby",
+        "line": "Tunnelbana10",
+        "order": 29
+      },
+      "id": 3
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [17.942661, 59.402957]
+      },
+      "properties": {
+        "id": 20,
+        "name": "Kista",
+        "line": "Tunnelbana11",
+        "order": 29
+      },
+      "id": 20
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [17.965348, 59.33469]
+      },
+      "properties": {
+        "id": 127,
+        "name": "Stora mossen",
+        "line": "Tunnelbana17",
+        "order": 29
+      },
+      "id": 127
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [17.953172, 59.336564]
+      },
+      "properties": {
+        "id": 126,
+        "name": "Abrahamsberg",
+        "line": "Tunnelbana17",
+        "order": 26
+      },
+      "id": 126
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.028297, 59.256655]
+      },
+      "properties": {
+        "id": 193,
+        "name": "Rågsved",
+        "line": "Tunnelbana19",
+        "order": 26
+      },
+      "id": 193
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.091926, 59.285674]
+      },
+      "properties": {
+        "id": 175,
+        "name": "Sandsborg",
+        "line": "Tunnelbana18",
+        "order": 25
+      },
+      "id": 175
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [17.845373, 59.239546]
+      },
+      "properties": {
+        "id": 38,
+        "name": "Alby",
+        "line": "Tunnelbana13",
+        "order": 24
+      },
+      "id": 38
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [17.97835, 59.29517]
+      },
+      "properties": {
+        "id": 88,
+        "name": "Hägerstensåsen",
+        "line": "Tunnelbana14",
+        "order": 23
+      },
+      "id": 88
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.091152, 59.291185]
+      },
+      "properties": {
+        "id": 174,
+        "name": "Blåsut",
+        "line": "Tunnelbana18",
+        "order": 21
+      },
+      "id": 174
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [17.939653, 59.338304]
+      },
+      "properties": {
+        "id": 125,
+        "name": "Brommaplan",
+        "line": "Tunnelbana17",
+        "order": 14
+      },
+      "id": 125
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.090327, 59.295283]
+      },
+      "properties": {
+        "id": 173,
+        "name": "Skärmarbrink",
+        "line": "Tunnelbana18",
+        "order": 12
+      },
+      "id": 173
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [17.902425, 59.394145]
+      },
+      "properties": {
+        "id": 2,
+        "name": "Tensta",
+        "line": "Tunnelbana10",
+        "order": 11
+      },
+      "id": 2
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [17.926743, 59.409599]
+      },
+      "properties": {
+        "id": 19,
+        "name": "Husby",
+        "line": "Tunnelbana11",
+        "order": 11
+      },
+      "id": 19
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [17.966751, 59.291324]
+      },
+      "properties": {
+        "id": 87,
+        "name": "Västertorp",
+        "line": "Tunnelbana14",
+        "order": 11
+      },
+      "id": 87
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [17.825219, 59.243272]
+      },
+      "properties": {
+        "id": 37,
+        "name": "Hallunda",
+        "line": "Tunnelbana13",
+        "order": 5
+      },
+      "id": 37
+    }
+  ],
+  "properties": {
+    "totalStations": 140,
+    "stationsPerLine": {
+      "Tunnelbana10": 14,
+      "Tunnelbana11": 13,
+      "Tunnelbana13": 25,
+      "Tunnelbana14": 19,
+      "Tunnelbana17": 24,
+      "Tunnelbana18": 10,
+      "Tunnelbana19": 35
+    }
+  }
+}

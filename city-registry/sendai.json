@@ -1,0 +1,58 @@
+{
+  "city": "sendai",
+  "continent": "asia",
+  "bbox": [
+    38.2085488,
+    140.834721,
+    38.3238718,
+    140.9489993
+  ],
+  "localLanguages": [
+    "ja"
+  ],
+  "modes": [
+    "subway",
+    "light_rail",
+    "tram",
+    "rail",
+    "funicular",
+    "monorail",
+    "cable_car",
+    "gondola",
+    "chair_lift"
+  ],
+  "lines": [
+    {
+      "id": "Namboku",
+      "name": "南北線 Namboku Line",
+      "keywords": [
+        "南北線 Namboku Line",
+        "南北線 Namboku",
+        "Namboku",
+        "Namboku Line"
+      ],
+      "order": 0,
+      "icon": "asia/japan/sendai/namboku.png"
+    },
+    {
+      "id": "Tozai",
+      "name": "東西線 Tōzai Line",
+      "keywords": [
+        "東西線 Tōzai Line",
+        "東西線 Tōzai",
+        "Line T",
+        "T Line",
+        "Route T",
+        "Line T Line",
+        "Route T Line",
+        "Tozai",
+        "Tozai Line"
+      ],
+      "order": 1,
+      "icon": "asia/japan/sendai/tozai.png"
+    }
+  ],
+  "stationAliases": {},
+  "stationLocalNames": {},
+  "manualCoords": {}
+}

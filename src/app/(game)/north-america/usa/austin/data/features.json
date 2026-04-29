@@ -1,0 +1,190 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.855734,
+          30.5864
+        ]
+      },
+      "properties": {
+        "name": "Leander",
+        "line": "RD",
+        "id": 0
+      },
+      "id": 0
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.786543,
+          30.48103
+        ]
+      },
+      "properties": {
+        "name": "Lakeline",
+        "line": "RD",
+        "id": 1
+      },
+      "id": 1
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.701734,
+          30.43999
+        ]
+      },
+      "properties": {
+        "name": "Howard",
+        "line": "RD",
+        "id": 2
+      },
+      "id": 2
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.713677,
+          30.399963
+        ]
+      },
+      "properties": {
+        "name": "North Burnet/Uptown",
+        "line": "RD",
+        "id": 3,
+        "alternate_names": [
+          "North Burnet",
+          "Uptown"
+        ]
+      },
+      "id": 3
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.716353,
+          30.392777
+        ]
+      },
+      "properties": {
+        "name": "Kramer",
+        "line": "RD",
+        "id": 4
+      },
+      "id": 4
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.717878,
+          30.386898
+        ]
+      },
+      "properties": {
+        "name": "McKalla",
+        "line": "RD",
+        "id": 5
+      },
+      "id": 5
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.719656,
+          30.338448
+        ]
+      },
+      "properties": {
+        "name": "Crestview",
+        "line": "RD",
+        "id": 6
+      },
+      "id": 6
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.716203,
+          30.3286
+        ]
+      },
+      "properties": {
+        "name": "Highland",
+        "line": "RD",
+        "id": 7
+      },
+      "id": 7
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.70903,
+          30.279817
+        ]
+      },
+      "properties": {
+        "name": "MLK Jr.",
+        "line": "RD",
+        "id": 8,
+        "alternate_names": [
+          "MLK",
+          "Martin Luther King Jr",
+          "MLK Jr"
+        ]
+      },
+      "id": 8
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.727577,
+          30.262241
+        ]
+      },
+      "properties": {
+        "name": "Plaza Saltillo",
+        "line": "RD",
+        "id": 9
+      },
+      "id": 9
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.727946,
+          30.262368
+        ]
+      },
+      "properties": {
+        "name": "Downtown",
+        "line": "RD",
+        "id": 10
+      },
+      "id": 10
+    }
+  ]
+}

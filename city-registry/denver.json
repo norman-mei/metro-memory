@@ -1,0 +1,179 @@
+{
+  "city": "denver",
+  "continent": "north america",
+  "bbox": [
+    39.5199749,
+    -105.201809,
+    39.9233402,
+    -104.67369296359355
+  ],
+  "localLanguages": [
+    "en"
+  ],
+  "modes": [
+    "subway",
+    "light_rail",
+    "tram",
+    "rail",
+    "funicular",
+    "monorail",
+    "cable_car",
+    "gondola",
+    "chair_lift"
+  ],
+  "lines": [
+    {
+      "id": "Denver_RTD_A",
+      "name": "A Line",
+      "keywords": [
+        "A Line",
+        "Line A",
+        "Route A",
+        "Line A Line",
+        "Route A Line",
+        "Denver RTD A"
+      ],
+      "order": 0,
+      "icon": "north-america/usa/denver/Denver_RTD_A.svg"
+    },
+    {
+      "id": "Denver_RTD_B",
+      "name": "B Line",
+      "keywords": [
+        "B Line",
+        "Line B",
+        "Route B",
+        "Line B Line",
+        "Route B Line",
+        "Denver RTD B"
+      ],
+      "order": 1,
+      "icon": "north-america/usa/denver/Denver_RTD_B.svg"
+    },
+    {
+      "id": "Denver_RTD_G",
+      "name": "G Line",
+      "keywords": [
+        "G Line",
+        "Line G",
+        "Route G",
+        "Line G Line",
+        "Route G Line",
+        "Denver RTD G"
+      ],
+      "order": 2,
+      "icon": "north-america/usa/denver/Denver_RTD_G.svg"
+    },
+    {
+      "id": "Denver_RTD_N",
+      "name": "N Line",
+      "keywords": [
+        "N Line",
+        "Line N",
+        "Route N",
+        "Line N Line",
+        "Route N Line",
+        "Denver RTD N"
+      ],
+      "order": 3,
+      "icon": "north-america/usa/denver/Denver_RTD_N.svg"
+    },
+    {
+      "id": "Denver_RTD_D",
+      "name": "D Line",
+      "keywords": [
+        "D Line",
+        "Line D",
+        "Route D",
+        "Line D Line",
+        "Route D Line",
+        "Denver RTD D"
+      ],
+      "order": 4,
+      "icon": "north-america/usa/denver/Denver_RTD_D.svg"
+    },
+    {
+      "id": "Denver_RTD_E",
+      "name": "E Line",
+      "keywords": [
+        "E Line",
+        "Line E",
+        "Route E",
+        "Line E Line",
+        "Route E Line",
+        "Denver RTD E"
+      ],
+      "order": 5,
+      "icon": "north-america/usa/denver/Denver_RTD_E.svg"
+    },
+    {
+      "id": "Denver_RTD_H",
+      "name": "H Line",
+      "keywords": [
+        "H Line",
+        "Line H",
+        "Route H",
+        "Line H Line",
+        "Route H Line",
+        "Denver RTD H"
+      ],
+      "order": 6,
+      "icon": "north-america/usa/denver/Denver_RTD_H.svg"
+    },
+    {
+      "id": "Denver_RTD_L",
+      "name": "L Line",
+      "keywords": [
+        "L Line",
+        "Line L",
+        "Route L",
+        "Line L Line",
+        "Route L Line",
+        "Denver RTD L"
+      ],
+      "order": 7,
+      "icon": "north-america/usa/denver/Denver_RTD_L.svg"
+    },
+    {
+      "id": "Denver_RTD_R",
+      "name": "R Line",
+      "keywords": [
+        "R Line",
+        "Line R",
+        "Route R",
+        "Line R Line",
+        "Route R Line",
+        "Denver RTD R"
+      ],
+      "order": 8,
+      "icon": "north-america/usa/denver/Denver_RTD_R.svg"
+    },
+    {
+      "id": "Denver_RTD_W",
+      "name": "W Line",
+      "keywords": [
+        "W Line",
+        "Line W",
+        "Route W",
+        "Line W Line",
+        "Route W Line",
+        "Denver RTD W"
+      ],
+      "order": 9,
+      "icon": "north-america/usa/denver/Denver_RTD_W.svg"
+    },
+    {
+      "id": "DenverAGTS",
+      "name": "Denver International Airport AGTS",
+      "keywords": [
+        "Denver International Airport AGTS",
+        "Denver AGTS"
+      ],
+      "order": 10,
+      "icon": "north-america/usa/denver/DenverAGTS.png"
+    }
+  ],
+  "stationAliases": {},
+  "stationLocalNames": {},
+  "manualCoords": {}
+}

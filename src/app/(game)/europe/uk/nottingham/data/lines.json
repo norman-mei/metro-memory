@@ -1,0 +1,18 @@
+{
+  "Line1": {
+    "name": "Line 1",
+    "color": "#33AA4C",
+    "backgroundColor": "#33AA4C",
+    "textColor": "#FFFFFF",
+    "icon": "europe/uk/nottingham/nottinghamline1.png",
+    "order": 0
+  },
+  "Line2": {
+    "name": "Line 2",
+    "color": "#512986",
+    "backgroundColor": "#512986",
+    "textColor": "#FFFFFF",
+    "icon": "europe/uk/nottingham/nottinghamline2.png",
+    "order": 1
+  }
+}

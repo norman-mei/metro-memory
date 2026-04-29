@@ -1,0 +1,121 @@
+{
+  "city": "wuxi",
+  "continent": "asia",
+  "bbox": [
+    31.4386805,
+    120.2086446,
+    31.9276194,
+    120.4640454
+  ],
+  "localLanguages": [
+    "zh"
+  ],
+  "modes": [
+    "subway",
+    "light_rail",
+    "tram",
+    "rail",
+    "funicular",
+    "monorail",
+    "cable_car",
+    "gondola",
+    "chair_lift"
+  ],
+  "lines": [
+    {
+      "id": "wuxi1",
+      "name": "Line 1",
+      "keywords": [
+        "Line 1",
+        "1 Line",
+        "L1",
+        "1号线",
+        "地铁1号线",
+        "1号線",
+        "1호선",
+        "Route 1",
+        "Tram Route 1",
+        "wuxi1"
+      ],
+      "order": 1,
+      "icon": "asia/china/wuxi/wuxi1.png"
+    },
+    {
+      "id": "wuxi2",
+      "name": "Line 2",
+      "keywords": [
+        "Line 2",
+        "2 Line",
+        "L2",
+        "2号线",
+        "地铁2号线",
+        "2号線",
+        "2호선",
+        "Route 2",
+        "Tram Route 2",
+        "wuxi2"
+      ],
+      "order": 2,
+      "icon": "asia/china/wuxi/wuxi2.png"
+    },
+    {
+      "id": "wuxi3",
+      "name": "Line 3",
+      "keywords": [
+        "Line 3",
+        "3 Line",
+        "L3",
+        "3号线",
+        "地铁3号线",
+        "3号線",
+        "3호선",
+        "Route 3",
+        "Tram Route 3",
+        "wuxi3"
+      ],
+      "order": 3,
+      "icon": "asia/china/wuxi/wuxi3.png"
+    },
+    {
+      "id": "wuxi4",
+      "name": "Line 4",
+      "keywords": [
+        "Line 4",
+        "4 Line",
+        "L4",
+        "4号线",
+        "地铁4号线",
+        "4号線",
+        "4호선",
+        "Route 4",
+        "Tram Route 4",
+        "wuxi4"
+      ],
+      "order": 4,
+      "icon": "asia/china/wuxi/wuxi4.png"
+    },
+    {
+      "id": "wuxis1",
+      "name": "Line S1",
+      "keywords": [
+        "Line S1",
+        "S1",
+        "Line 1",
+        "1 Line",
+        "L1",
+        "1号线",
+        "地铁1号线",
+        "1号線",
+        "1호선",
+        "Route 1",
+        "Tram Route 1",
+        "wuxis1"
+      ],
+      "order": 5,
+      "icon": "asia/china/wuxi/wuxis1.png"
+    }
+  ],
+  "stationAliases": {},
+  "stationLocalNames": {},
+  "manualCoords": {}
+}

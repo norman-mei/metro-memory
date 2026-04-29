@@ -1,0 +1,70 @@
+{
+  "city": "fukuoka",
+  "continent": "asia",
+  "bbox": [
+    33.5451199,
+    130.3205201,
+    33.6327319,
+    130.4485621
+  ],
+  "localLanguages": [
+    "ja"
+  ],
+  "modes": [
+    "subway",
+    "light_rail",
+    "tram",
+    "rail",
+    "funicular",
+    "monorail",
+    "cable_car",
+    "gondola",
+    "chair_lift"
+  ],
+  "lines": [
+    {
+      "id": "Kuko",
+      "name": "空港線 Kūkō Line",
+      "keywords": [
+        "空港線 Kūkō Line",
+        "空港線 Kūkō",
+        "Line K",
+        "K Line",
+        "Route K",
+        "Line K Line",
+        "Route K Line",
+        "Kuko",
+        "Kuko Line"
+      ],
+      "order": 0,
+      "icon": "asia/japan/fukuoka/kuko.png"
+    },
+    {
+      "id": "Hakozaki",
+      "name": "箱崎線 Hakozaki Line",
+      "keywords": [
+        "箱崎線 Hakozaki Line",
+        "箱崎線 Hakozaki",
+        "Hakozaki",
+        "Hakozaki Line"
+      ],
+      "order": 1,
+      "icon": "asia/japan/fukuoka/hakozaki.png"
+    },
+    {
+      "id": "Nanakuma",
+      "name": "七隈線 Nanakuma Line",
+      "keywords": [
+        "七隈線 Nanakuma Line",
+        "七隈線 Nanakuma",
+        "Nanakuma",
+        "Nanakuma Line"
+      ],
+      "order": 2,
+      "icon": "asia/japan/fukuoka/nanakuma.png"
+    }
+  ],
+  "stationAliases": {},
+  "stationLocalNames": {},
+  "manualCoords": {}
+}

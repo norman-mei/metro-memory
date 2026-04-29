@@ -1,0 +1,67 @@
+{
+  "city": "gwangju",
+  "continent": "asia",
+  "bbox": [
+    34.6595,
+    126.3526,
+    35.6595,
+    127.3526
+  ],
+  "localLanguages": [
+    "ko"
+  ],
+  "modes": [
+    "subway",
+    "light_rail",
+    "tram",
+    "rail",
+    "funicular",
+    "monorail",
+    "cable_car",
+    "gondola",
+    "chair_lift"
+  ],
+  "lines": [
+    {
+      "id": "Gwangju1",
+      "name": "Line 1",
+      "keywords": [
+        "광주 도시철도 1호선",
+        "Line 1",
+        "1 Line",
+        "L1",
+        "1号线",
+        "地铁1号线",
+        "1号線",
+        "1호선",
+        "Route 1",
+        "Tram Route 1",
+        "Gwangju1"
+      ],
+      "order": 0,
+      "icon": "asia/south-korea/gwangju/gwangju1.png"
+    },
+    {
+      "id": "Gwangju2",
+      "name": "Line 2",
+      "keywords": [
+        "광주 도시철도 2호선",
+        "Line 2",
+        "2 Line",
+        "L2",
+        "2号线",
+        "地铁2号线",
+        "2号線",
+        "2호선",
+        "Route 2",
+        "Tram Route 2",
+        "Gwangju2"
+      ],
+      "order": 1,
+      "icon": "asia/south-korea/gwangju/gwangju2.png"
+    }
+  ],
+  "stationAliases": {},
+  "stationLocalNames": {},
+  "manualCoords": {}
+}
