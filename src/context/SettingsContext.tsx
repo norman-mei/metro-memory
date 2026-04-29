@@ -320,7 +320,7 @@ const DEFAULT_SETTINGS: Settings = {
   achievementToastsEnabled: true,
   achievementToastDurationSec: 15,
   stopConfettiAfterCompletion: false,
-  autoSubmitOnMatch: false,
+  autoSubmitOnMatch: true,
   stationMatchingMode: 'normal',
   accentColor: DEFAULT_ACCENT_COLOR_ID,
   fontSize: 'md',

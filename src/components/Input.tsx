@@ -42,7 +42,7 @@ const Input = ({
   disabled = false,
   onGuessResult,
   onInputEdit,
-  autoSubmitOnMatch = false,
+  autoSubmitOnMatch = true,
   strictMatching = false,
   forgivingMatching = false,
 }: {
