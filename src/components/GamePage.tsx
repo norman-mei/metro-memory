@@ -1619,6 +1619,7 @@ function GamePageContent({
   const miniCityLinks = useMemo(() => getMiniCityLinksForSlug(CITY_NAME), [CITY_NAME])
   const isMiniCity = useMemo(() => isMiniCitySlug(CITY_NAME), [CITY_NAME])
   const customParentSlug = searchParams.get('parent')?.trim() || null
+  const debugMapProviderEnabled = searchParams.get('debugMapProvider') === '1'
   const progressScopeSlug = useMemo(() => {
     if (pathname === '/custom' && customParentSlug) {
       return customParentSlug
@@ -4901,7 +4902,11 @@ function GamePageContent({
     }
 
     const requestAmapRetry = (message?: string) => {
-      if (usingAmapMapStyle || chinaSafeRetryRequested) {
+      if (
+        usingAmapMapStyle ||
+        chinaSafeRetryRequested ||
+        !requestInMainlandChina
+      ) {
         return false
       }
 
@@ -4985,7 +4990,7 @@ function GamePageContent({
         )
       }, 4000)
 
-      if (!usingAmapMapStyle) {
+      if (!usingAmapMapStyle && requestInMainlandChina) {
         chinaSafeRetryTimeout = window.setTimeout(() => {
           if (mapReady || mapFailed) {
             return
@@ -5923,7 +5928,8 @@ function GamePageContent({
     mistakes > 0 &&
     foundProportion < RANKED_COMPLETION_TARGET
 
-  const showChinaMapStyleTestButton = solutionsUnlocked
+  const showChinaMapStyleTestButton =
+    isChinaCity && (requestInMainlandChina || debugMapProviderEnabled)
   const chinaMapStyleTestButtonLabel = usingAmapMapStyle
     ? prefersChineseCopy
       ? '\u5207\u56de Mapbox \u5730\u56fe'
@@ -6195,11 +6201,7 @@ function GamePageContent({
                       : 'group inline-flex h-12 min-w-[3rem] items-center justify-center overflow-hidden rounded-full bg-white px-3 text-zinc-700 shadow-lg transition hover:bg-zinc-100 focus:outline-none focus:ring-2 focus:ring-[var(--accent-ring)] dark:bg-zinc-800 dark:text-zinc-100 dark:hover:bg-zinc-700'
                   }
                   aria-label={chinaMapStyleTestButtonLabel}
-                  title={
-                    prefersChineseCopy
-                      ? '\u4ec5\u9650\u5df2\u89e3\u9501\u7684\u6d4b\u8bd5\u6309\u94ae'
-                      : 'Cheat-unlocked test button'
-                  }
+                  title={chinaMapStyleTestButtonLabel}
                 >
                   {usingAmapMapStyle ? (
                     <MdMap className="h-5 w-5 shrink-0" aria-hidden="true" />
