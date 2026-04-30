@@ -15,6 +15,6 @@ export const metadata: Metadata = withCityAssetMetadata('okayama', {
       'How many Okayama Electric Tramway Co., Ltd. stations can you name from memory?',
     type: 'website',
     locale: 'ja_JP',
-    url: 'https://metro-memory.com/asia/japan/okayama',
+    url: 'https://metro-memory.xyz/asia/japan/okayama',
   },
 })

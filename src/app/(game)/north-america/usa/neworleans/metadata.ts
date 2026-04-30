@@ -15,6 +15,6 @@ export const metadata: Metadata = withCityAssetMetadata('neworleans', {
       'How many of the New Orleans streetcar stops can you name from memory?',
     type: 'website',
     locale: 'en_US',
-    url: 'https://metro-memory.com/north-america/usa/neworleans',
+    url: 'https://metro-memory.xyz/north-america/usa/neworleans',
   },
 })

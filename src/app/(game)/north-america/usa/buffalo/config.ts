@@ -33,7 +33,7 @@ export const METADATA: Metadata = {
       'How many of the Buffalo Metro Rail stations can you name from memory?',
     type: 'website',
     locale: 'en_US',
-    url: 'https://metro-memory.com/north-america/usa/buffalo',
+    url: 'https://metro-memory.xyz/north-america/usa/buffalo',
   },
 }
 

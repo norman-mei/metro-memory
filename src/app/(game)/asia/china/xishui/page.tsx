@@ -4,7 +4,7 @@ import { buildPlaceholderConfig } from '@/app/(game)/_placeholder/config'
 const config = buildPlaceholderConfig({
   citySlug: 'xishui',
   cityPath: 'asia/china/xishui',
-  cityTitle: 'Xishui (æµ æ°´)',
+  cityTitle: 'Xishui (浠水)',
 })
 
 

@@ -4,6 +4,7 @@ import { useSettings } from '@/context/SettingsContext'
 import useTranslation from '@/hooks/useTranslation'
 import { resolveAccentColorOption } from '@/lib/accentColors'
 import { getCityIconPath } from '@/lib/cityAssets'
+import { formatLocalizedChinaUiTitle } from '@/lib/chinaUiText'
 import { formatLocalizedCityName } from '@/lib/cityNameDisplay'
 import { resolveI18nLocaleCode } from '@/lib/i18n'
 import { formatLocalizedLineName } from '@/lib/lineNameDisplay'
@@ -11,6 +12,7 @@ import { getMiniCityBySlug, isMiniCitySlug } from '@/lib/miniCities'
 import { loadMiniCityParentConfig } from '@/lib/miniCityConfigRuntime'
 import { isColorLight } from '@/lib/colorUtils'
 import { getCompletionColor } from '@/lib/progressColors'
+import { formatLocalizedStationDisplayName } from '@/lib/stationNameDisplay'
 import { STATION_TOTALS } from '@/lib/stationTotals'
 import { getStationKey } from '@/lib/stationUtils'
 import { buildSubsetConfig } from '@/lib/subsetCity'
@@ -19,7 +21,6 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useEffect, useState, type MouseEvent as ReactMouseEvent } from 'react'
 import {
-  MdClose,
   MdEmojiEvents,
   MdHistory,
   MdHome,
@@ -30,6 +31,7 @@ import {
   MdSettings,
 } from 'react-icons/md'
 import { createPortal } from 'react-dom'
+import CloseButton from './CloseButton'
 import LineBadge from './LineBadge'
 
 type CityStatsPanelProps = {
@@ -226,6 +228,7 @@ const resolveLineGroupStats = (
   totals: Map<string, number>,
   foundPerLine: Map<string, number>,
   linesMetadata: Config['LINES'],
+  slug?: string | null,
   language?: string,
 ): GroupStat[] => {
   if (!lineGroups || lineGroups.length === 0) {
@@ -233,7 +236,7 @@ const resolveLineGroupStats = (
   }
 
   return lineGroups.map((group, groupIndex) => ({
-    title: group.title,
+    title: formatLocalizedChinaUiTitle(group.title, slug, language),
     items: group.items.map((item, itemIndex) => {
       if (item.type === 'separator') {
         return { type: 'separator' as const }
@@ -256,15 +259,19 @@ const resolveLineGroupStats = (
       )
 
       const derivedTitle =
-        formatLocalizedLineName(
-          item.title ??
-        (visibleLines.length === 1
-          ? linesMetadata[visibleLines[0]]?.name ?? visibleLines[0]
-          : visibleLines.length > 0
-            ? visibleLines
-                .map((lineId) => linesMetadata[lineId]?.name ?? lineId)
-                .join(', ')
-            : 'Misc services'),
+        formatLocalizedChinaUiTitle(
+          formatLocalizedLineName(
+            item.title ??
+              (visibleLines.length === 1
+                ? linesMetadata[visibleLines[0]]?.name ?? visibleLines[0]
+                : visibleLines.length > 0
+                  ? visibleLines
+                      .map((lineId) => linesMetadata[lineId]?.name ?? lineId)
+                      .join(', ')
+                  : 'Misc services'),
+            language,
+          ),
+          slug,
           language,
         )
       const lineNames = visibleLines.map(
@@ -289,28 +296,30 @@ const resolveLineGroupStats = (
   }))
 }
 
-const resolveStationName = (feature?: DataFeature) => {
+const resolveStationName = (feature?: DataFeature, language?: string) => {
   if (!feature) {
     return 'Unknown station'
   }
-  return (
+  const value =
     feature.properties?.display_name ??
     feature.properties?.long_name ??
     feature.properties?.short_name ??
     feature.properties?.name ??
     `Station ${feature.id ?? ''}`
-  )
+  return formatLocalizedStationDisplayName(String(value), language)
 }
 
 const computeStats = ({
   config,
   featureCollection,
   progress,
+  slug,
   language,
 }: {
   config: Config
   featureCollection: DataFeatureCollection
   progress: LocalProgress
+  slug?: string | null
   language?: string
 }): CityStatsSnapshot => {
   const idToFeature = new Map<number, DataFeature>()
@@ -372,7 +381,7 @@ const computeStats = ({
     const timestamp = normalizedProgress.timestamps[String(id)]
     const entry: StationTimelineEntry = {
       id,
-      name: resolveStationName(feature),
+      name: resolveStationName(feature, language),
       lineId: line ?? undefined,
       lineName: line
         ? formatLocalizedLineName(config.LINES[line]?.name ?? line, language)
@@ -465,6 +474,7 @@ const computeStats = ({
       ]),
     ),
     config.LINES,
+    slug,
     language,
   )
 
@@ -631,6 +641,7 @@ const CityStatsPanel = ({
           config,
           featureCollection,
           progress,
+          slug,
           language: settings.language,
         })
         setStats(snapshot)
@@ -663,14 +674,14 @@ const CityStatsPanel = ({
 
   const cityIconSrc = getCityIconPath(slug)
   const quickNavLinks = [
-    { label: t('tabAccount'), href: '/metro-memory?tab=account', icon: MdPerson },
-    { label: t('tabPrivacy'), href: '/metro-memory?tab=privacy', icon: MdLock },
-    { label: t('tabCities'), href: '/metro-memory?tab=cities', icon: MdLocationCity },
-    { label: t('tabAchievements'), href: '/metro-memory?tab=achievements', icon: MdEmojiEvents },
-    { label: t('tabUpdateLog'), href: '/metro-memory?tab=updateLog', icon: MdHistory },
-    { label: t('tabGlobalStats'), href: '/metro-memory?tab=globalStats', icon: MdPublic },
-    { label: t('tabSettings'), href: '/metro-memory?tab=settings', icon: MdSettings },
-    { label: t('tabHome'), href: '/metro-memory', icon: MdHome },
+    { label: t('tabHome'), href: '/', icon: MdHome },
+    { label: t('tabCities'), href: '/?tab=cities', icon: MdLocationCity },
+    { label: t('tabAchievements'), href: '/?tab=achievements', icon: MdEmojiEvents },
+    { label: t('tabUpdateLog'), href: '/?tab=updateLog', icon: MdHistory },
+    { label: t('tabAccount'), href: '/?tab=account', icon: MdPerson },
+    { label: t('tabGlobalStats'), href: '/?tab=globalStats', icon: MdPublic },
+    { label: t('tabSettings'), href: '/?tab=settings', icon: MdSettings },
+    { label: t('tabPrivacy'), href: '/?tab=privacy', icon: MdLock },
   ]
 
   const handleInnerClick = (event: ReactMouseEvent<HTMLDivElement>) => {
@@ -1097,18 +1108,11 @@ const CityStatsPanel = ({
               </Link>
             )
           })}
-          <button
-            type="button"
+          <CloseButton
+            ariaLabel={t('closeLabel')}
             onClick={onClose}
-            className="group inline-flex h-11 items-center rounded-full border border-zinc-300 bg-white px-3 text-sm font-semibold text-zinc-700 transition hover:bg-zinc-100 focus:outline-none focus:ring-2 focus:ring-[var(--accent-ring)] dark:border-[#18181b] dark:bg-zinc-900 dark:text-zinc-100 dark:hover:bg-zinc-800"
-            aria-label={t('closeLabel')}
-            title={t('closeLabel')}
-          >
-            <MdClose className="h-5 w-5 shrink-0" aria-hidden="true" />
-            <span className="max-w-0 overflow-hidden whitespace-nowrap pl-0 opacity-0 transition-all duration-200 group-hover:max-w-24 group-hover:pl-2 group-hover:opacity-100 group-focus-visible:max-w-24 group-focus-visible:pl-2 group-focus-visible:opacity-100">
-              {t('closeLabel')}
-            </span>
-          </button>
+            className="h-11 w-11 border border-zinc-300 bg-white text-zinc-700 hover:bg-zinc-100 focus:ring-[var(--accent-ring)] dark:border-[#18181b] dark:bg-zinc-900 dark:text-zinc-100 dark:hover:bg-zinc-800"
+          />
         </div>
         <div className="mt-4 space-y-6">
           {loading && (

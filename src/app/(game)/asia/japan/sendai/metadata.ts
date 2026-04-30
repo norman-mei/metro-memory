@@ -13,6 +13,6 @@ export const metadata: Metadata = withCityAssetMetadata('sendai', {
     description: 'How many Sendai City Transportation Bureau stations can you name from memory?',
     type: 'website',
     locale: 'ja_JP',
-    url: 'https://metro-memory.com/asia/japan/sendai',
+    url: 'https://metro-memory.xyz/asia/japan/sendai',
   },
 })

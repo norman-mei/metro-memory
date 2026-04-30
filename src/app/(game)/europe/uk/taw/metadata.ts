@@ -13,6 +13,6 @@ export const metadata: Metadata = withCityAssetMetadata('taw', {
     description: 'How many Tyne and Wear Metro stops can you name from memory?',
     type: 'website',
     locale: 'en_GB',
-    url: 'https://metro-memory.com/europe/uk/taw',
+    url: 'https://metro-memory.xyz/europe/uk/taw',
   },
 })

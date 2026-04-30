@@ -15,6 +15,6 @@ export const metadata: Metadata = withCityAssetMetadata('detroit', {
       'How many of the Detroit QLine, People Mover, and ExpressTram stations can you name from memory?',
     type: 'website',
     locale: 'en_US',
-    url: 'https://metro-memory.com/north-america/usa/detroit',
+    url: 'https://metro-memory.xyz/north-america/usa/detroit',
   },
 })

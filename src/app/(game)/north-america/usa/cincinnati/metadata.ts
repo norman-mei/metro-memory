@@ -15,6 +15,6 @@ export const metadata: Metadata = withCityAssetMetadata('cincinnati', {
       'How many of the Cincinnati Connector streetcar and airport people mover stops can you name from memory?',
     type: 'website',
     locale: 'en_US',
-    url: 'https://metro-memory.com/north-america/usa/cincinnati',
+    url: 'https://metro-memory.xyz/north-america/usa/cincinnati',
   },
 })

@@ -4,7 +4,7 @@ import { buildPlaceholderConfig } from '@/app/(game)/_placeholder/config'
 const config = buildPlaceholderConfig({
   citySlug: 'bengbu',
   cityPath: 'asia/china/bengbu',
-  cityTitle: 'Bengbu (èšŒåŸ )',
+  cityTitle: 'Bengbu (蚌埠)',
 })
 
 

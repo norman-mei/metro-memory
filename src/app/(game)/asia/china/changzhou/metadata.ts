@@ -13,6 +13,6 @@ export const metadata: Metadata = withCityAssetMetadata('changzhou', {
     description: 'How many of the Changzhou Metro stations can you name from memory?',
     type: 'website',
     locale: 'en_US',
-    url: 'https://metro-memory.com/asia/china/changzhou',
+    url: 'https://metro-memory.xyz/asia/china/changzhou',
   },
 })

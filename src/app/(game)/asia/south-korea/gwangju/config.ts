@@ -30,7 +30,7 @@ export const METADATA: Metadata = {
     description: 'How many Gwangju Metro stops can you name from memory?',
     type: 'website',
     locale: 'en_US',
-    url: 'https://metro-memory.com/asia/south-korea/gwangju',
+    url: 'https://metro-memory.xyz/asia/south-korea/gwangju',
   },
 }
 

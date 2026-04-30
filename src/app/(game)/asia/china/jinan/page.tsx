@@ -4,7 +4,7 @@ import { buildPlaceholderConfig } from '@/app/(game)/_placeholder/config'
 const config = buildPlaceholderConfig({
   citySlug: 'jinan',
   cityPath: 'asia/china/jinan',
-  cityTitle: 'Jinan (æµŽå—)',
+  cityTitle: 'Jinan (济南)',
 })
 
 

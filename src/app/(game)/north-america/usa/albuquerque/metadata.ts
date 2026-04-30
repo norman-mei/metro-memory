@@ -15,6 +15,6 @@ export const metadata: Metadata = withCityAssetMetadata('albuquerque', {
       'How many of the New Mexico Rail Runner Express stations can you name from memory?',
     type: 'website',
     locale: 'en_US',
-    url: 'https://metro-memory.com/north-america/usa/albuquerque',
+    url: 'https://metro-memory.xyz/north-america/usa/albuquerque',
   },
 })

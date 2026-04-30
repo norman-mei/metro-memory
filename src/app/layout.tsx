@@ -78,7 +78,7 @@ const FUNDING_CHOICES_PRESENT_SIGNAL_SCRIPT = `
 `
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://metro-memory.com'),
+  metadataBase: new URL('https://metro-memory.xyz'),
   icons: {
     icon: '/icon.ico',
     shortcut: '/icon.ico',
@@ -100,7 +100,10 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-  const requestLocaleDefaults = getRequestLocaleDefaults(await headers())
+  const headersList = await headers()
+  const requestLocaleDefaults = getRequestLocaleDefaults(headersList)
+  const country = headersList.get('x-vercel-ip-country') || ''
+  const isChina = country === 'CN'
 
   return (
     <html lang={requestLocaleDefaults.defaultLanguage} suppressHydrationWarning>
@@ -108,23 +111,26 @@ export default async function RootLayout({
         suppressHydrationWarning
         className="bg-zinc-50 text-zinc-900 antialiased overflow-y-auto dark:bg-black dark:text-zinc-100"
       >
-        <Script
-          id="funding-choices-controlled-messaging"
-          strategy="beforeInteractive"
-          dangerouslySetInnerHTML={{ __html: FUNDING_CHOICES_CONTROL_SCRIPT }}
-        />
-        <FundingChoicesRecoveryScript src={FUNDING_CHOICES_RECOVERY_SCRIPT_SRC} />
-        <Script
-          id="funding-choices-present-signal"
-          strategy="beforeInteractive"
-          dangerouslySetInnerHTML={{ __html: FUNDING_CHOICES_PRESENT_SIGNAL_SCRIPT }}
-        />
-        <Script
-          id="funding-choices-error-protection"
-          strategy="afterInteractive"
-          src="/funding-choices-error-protection.js"
-        />
-        <AdSenseScript src={ADSENSE_SCRIPT_SRC} />
+        {!isChina && (<>
+            <Script
+              id="funding-choices-controlled-messaging"
+              strategy="beforeInteractive"
+              dangerouslySetInnerHTML={{ __html: FUNDING_CHOICES_CONTROL_SCRIPT }}
+            />
+            <FundingChoicesRecoveryScript src={FUNDING_CHOICES_RECOVERY_SCRIPT_SRC} />
+            <Script
+              id="funding-choices-present-signal"
+              strategy="beforeInteractive"
+              dangerouslySetInnerHTML={{ __html: FUNDING_CHOICES_PRESENT_SIGNAL_SCRIPT }}
+            />
+            <Script
+              id="funding-choices-error-protection"
+              strategy="afterInteractive"
+              src="/funding-choices-error-protection.js"
+            />
+            <AdSenseScript src={ADSENSE_SCRIPT_SRC} />
+          </>
+        )}
         <div className="fixed top-0 left-0 right-0 z-50 h-[env(safe-area-inset-top)] bg-black" />
         <ThemeProviderClient>
           <SettingsProvider requestLocaleDefaults={requestLocaleDefaults}>
@@ -137,9 +143,10 @@ export default async function RootLayout({
             <SettingsSaveToast />
           </SettingsProvider>
         </ThemeProviderClient>
-        <Analytics />
-        <SpeedInsights />
+        {!isChina && <Analytics />}
+        {!isChina && <SpeedInsights />}
       </body>
     </html>
   )
 }
+

@@ -4,7 +4,7 @@ import { buildPlaceholderConfig } from '@/app/(game)/_placeholder/config'
 const config = buildPlaceholderConfig({
   citySlug: 'qiubei',
   cityPath: 'asia/china/qiubei',
-  cityTitle: 'Qiubei (ä¸˜åŒ—)',
+  cityTitle: 'Qiubei (丘北)',
 })
 
 

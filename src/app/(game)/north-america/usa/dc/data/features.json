@@ -1981,6 +1981,10 @@
                          "properties":  {
                                             "id":  122,
                                             "name":  "BWI Airport",
+                                            "alternate_names":  [
+                                                                    "BWI",
+                                                                    "Baltimore-Washington International Airport"
+                                                                ],
                                             "line":  "MarylandLightRailLightRaillink"
                                         },
                          "id":  122
@@ -3736,6 +3740,10 @@
                          "properties":  {
                                             "id":  231,
                                             "name":  "BWI Airport",
+                                            "alternate_names":  [
+                                                                    "BWI",
+                                                                    "Baltimore-Washington International Airport"
+                                                                ],
                                             "line":  "MARCPennLine"
                                         },
                          "id":  231

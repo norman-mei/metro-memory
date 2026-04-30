@@ -13,6 +13,6 @@ export const metadata: Metadata = withCityAssetMetadata('philly', {
     description: 'How many of the Philadelphia transit stations can you name from memory?',
     type: 'website',
     locale: 'en_US',
-    url: 'https://metro-memory.com/north-america/usa/philly',
+    url: 'https://metro-memory.xyz/north-america/usa/philly',
   },
 })

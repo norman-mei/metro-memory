@@ -14,6 +14,6 @@ export const metadata: Metadata = withCityAssetMetadata('london', {
       'How many of the London Tube stations can you name from memory?',
     type: 'website',
     locale: 'en_GB',
-    url: 'https://metro-memory.com/europe/uk/london',
+    url: 'https://metro-memory.xyz/europe/uk/london',
   },
 })

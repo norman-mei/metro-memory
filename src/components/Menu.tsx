@@ -52,6 +52,7 @@ export default function MenuComponent({
     const value = t(key)
     return typeof value === 'string' && value !== key ? value : fallback
   }
+  const menuButtonLabel = getLabel('menuButtonLabel', 'Menu')
   const showSolutionsDisabled = foundProportion >= 1
   useEffect(() => {
     setMounted(true)
@@ -66,12 +67,17 @@ export default function MenuComponent({
     <Menu as="div" className="relative inline-block text-left">
       <div>
         <Menu.Button
-          className="inline-flex h-12 w-12 items-center justify-center gap-x-1.5 rounded-full bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-lg outline-none ring-zinc-800 transition hover:bg-gray-50 focus:ring-2 dark:bg-zinc-800 dark:text-zinc-100 dark:hover:bg-zinc-700"
+          className="group inline-flex h-12 min-w-[3rem] items-center justify-center overflow-hidden rounded-full bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-lg outline-none ring-zinc-800 transition hover:bg-gray-50 focus:ring-2 dark:bg-zinc-800 dark:text-zinc-100 dark:hover:bg-zinc-700"
+          aria-label={menuButtonLabel}
+          title={menuButtonLabel}
           onClick={() => {
             window.dispatchEvent(new Event(MENU_TOGGLE_EVENT))
           }}
         >
-          <MenuIcon className="h-5 w-5 text-gray-400" aria-hidden="true" />
+          <MenuIcon className="h-5 w-5 shrink-0 text-gray-400" aria-hidden="true" />
+          <span className="pointer-events-none hidden max-w-0 shrink-0 overflow-hidden whitespace-nowrap text-sm font-medium opacity-0 transition-all duration-200 group-hover:ml-2 group-hover:max-w-[220px] group-hover:opacity-100 group-focus-visible:ml-2 group-focus-visible:max-w-[220px] group-focus-visible:opacity-100 lg:inline-block">
+            {menuButtonLabel}
+          </span>
         </Menu.Button>
       </div>
 
@@ -86,6 +92,36 @@ export default function MenuComponent({
       >
         <Menu.Items className="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none dark:bg-zinc-800 dark:ring-white/10">
           <div className="py-1">
+            <Menu.Item>
+              {({ active }) =>
+                onOpenSettings ? (
+                  <button
+                    type="button"
+                    className={classNames(
+                      active
+                        ? 'bg-gray-100 text-gray-900 dark:bg-zinc-700 dark:text-zinc-100'
+                        : 'text-gray-700 dark:text-zinc-100',
+                      'block w-full px-4 py-2 text-left text-sm transition',
+                    )}
+                    onClick={onOpenSettings}
+                  >
+                    {t('settings')}
+                  </button>
+                ) : (
+                  <Link
+                    className={classNames(
+                      active
+                        ? 'bg-gray-100 text-gray-900 dark:bg-zinc-700 dark:text-zinc-100'
+                        : 'text-gray-700 dark:text-zinc-100',
+                      'block w-full px-4 py-2 text-left text-sm transition',
+                    )}
+                    href="/?tab=settings"
+                  >
+                    {t('settings')}
+                  </Link>
+                )
+              }
+            </Menu.Item>
             <Menu.Item disabled={showSolutionsDisabled}>
               {({ active, disabled }) => (
                 <button
@@ -212,36 +248,6 @@ export default function MenuComponent({
                 </button>
               )}
             </Menu.Item>
-            <Menu.Item>
-              {({ active }) =>
-                onOpenSettings ? (
-                  <button
-                    type="button"
-                    className={classNames(
-                      active
-                        ? 'bg-gray-100 text-gray-900 dark:bg-zinc-700 dark:text-zinc-100'
-                        : 'text-gray-700 dark:text-zinc-100',
-                      'block w-full px-4 py-2 text-left text-sm transition',
-                    )}
-                    onClick={onOpenSettings}
-                  >
-                    {t('settings')}
-                  </button>
-                ) : (
-                  <Link
-                    className={classNames(
-                      active
-                        ? 'bg-gray-100 text-gray-900 dark:bg-zinc-700 dark:text-zinc-100'
-                        : 'text-gray-700 dark:text-zinc-100',
-                      'block w-full px-4 py-2 text-left text-sm transition',
-                    )}
-                    href="/metro-memory?tab=settings"
-                  >
-                    {t('settings')}
-                  </Link>
-                )
-              }
-            </Menu.Item>
             {onToggleZen && (
               <Menu.Item>
                 {({ active }) => (
@@ -285,7 +291,7 @@ export default function MenuComponent({
                         : 'text-gray-700 dark:text-zinc-100',
                       'block w-full px-4 py-2 text-left text-sm transition',
                     )}
-                    href="/metro-memory?tab=account"
+                    href="/?tab=account"
                   >
                     {t('account')}
                   </Link>
@@ -315,7 +321,7 @@ export default function MenuComponent({
                         : 'text-gray-700 dark:text-zinc-100',
                       'block w-full px-4 py-2 text-left text-sm transition',
                     )}
-                    href="/metro-memory?tab=privacy"
+                    href="/?tab=privacy"
                   >
                     {t('privacy')}
                   </Link>
@@ -331,7 +337,7 @@ export default function MenuComponent({
                       : 'text-gray-700 dark:text-zinc-100',
                     'block w-full px-4 py-2 text-left text-sm transition',
                   )}
-                  href="/metro-memory"
+                  href="/"
                 >
                   {t('goToMain')}
                 </Link>

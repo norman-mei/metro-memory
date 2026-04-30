@@ -440,6 +440,17 @@ const NON_LATIN_ALLOWED_CITIES = new Set([
   'xiamen',
 ])
 
+const isNonLatinAllowedCity = (city: string): boolean => {
+  if (NON_LATIN_ALLOWED_CITIES.has(city)) return true
+  // Mini-city slugs like "gba-hong-kong" inherit from parent "gba"
+  const dashIndex = city.indexOf('-')
+  if (dashIndex > 0) {
+    const parentSlug = city.slice(0, dashIndex)
+    if (NON_LATIN_ALLOWED_CITIES.has(parentSlug)) return true
+  }
+  return false
+}
+
 const getCustomReplacer = (cityName: string) => {
   return replacers[cityName] || replacers['default']
 }
@@ -471,7 +482,7 @@ export const normalizeString = (city: string) => {
     (str || '')
       .normalize('NFD')
       .replace(
-        NON_LATIN_ALLOWED_CITIES.has(city)
+        isNonLatinAllowedCity(city)
           ? /[^a-z0-9\u3100-\u312f\u31a0-\u31bf\u3400-\u4dbf\u4e00-\u9fff]/g
           : /[^a-z0-9]/g,
         '',

@@ -13,6 +13,6 @@ export const metadata: Metadata = withCityAssetMetadata('daejeon', {
     description: 'How many Daejeon Metro stations can you name from memory?',
     type: 'website',
     locale: 'ko_KR',
-    url: 'https://metro-memory.com/asia/south-korea/daejeon',
+    url: 'https://metro-memory.xyz/asia/south-korea/daejeon',
   },
 })

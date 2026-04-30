@@ -66,7 +66,7 @@
           "slug": "gba-mtr-light-rail",
           "name": "Mass Transit Railway (Light Rail)",
           "link": "/asia/china/gba-mtr-light-rail",
-          "assetSourceSlug": "gba-mtr-heavy-rail",
+          "assetSourceSlug": "gba-mtr-light-rail",
           "keywords": ["MTR Light Rail", "MTR", "Hong Kong Light Rail", "Light Rail"],
           "countingMode": "mini",
           "includeLines": ["MTR505", "MTR507", "MTR610", "MTR614", "MTR614P", "MTR615", "MTR615P", "MTR705", "MTR706", "MTR751", "MTR751P", "MTR761P"]

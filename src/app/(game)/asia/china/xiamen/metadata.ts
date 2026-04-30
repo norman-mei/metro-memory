@@ -13,6 +13,6 @@ export const metadata: Metadata = withCityAssetMetadata('xiamen', {
     description: 'How many Xiamen Metro stations can you name from memory?',
     type: 'website',
     locale: 'en_US',
-    url: 'https://metro-memory.com/asia/china/xiamen',
+    url: 'https://metro-memory.xyz/asia/china/xiamen',
   },
 })

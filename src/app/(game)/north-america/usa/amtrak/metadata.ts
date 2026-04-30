@@ -13,6 +13,6 @@ export const metadata: Metadata = withCityAssetMetadata('amtrak', {
     description: 'How many Amtrak train stations in the United States can you name from memory?',
     type: 'website',
     locale: 'en_US',
-    url: 'https://metro-memory.com/north-america/usa/amtrak',
+    url: 'https://metro-memory.xyz/north-america/usa/amtrak',
   },
 })

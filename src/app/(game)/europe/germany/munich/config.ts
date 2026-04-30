@@ -145,7 +145,7 @@ export const METADATA: Metadata = {
       'Wie viele S- und U-Bahn-Stationen können Sie auswendig nennen? Spielen Sie das München Bahn Memory und finden Sie es heraus!',
     type: 'website',
     locale: 'de_DE',
-    url: 'https://metro-memory.com/europe/germany/munich',
+    url: 'https://metro-memory.xyz/europe/germany/munich',
   },
 }
 

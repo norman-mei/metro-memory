@@ -45,7 +45,7 @@ export const METADATA: Metadata = {
       'How many of the Las Vegas Monorail stations can you name from memory?',
     type: 'website',
     locale: 'en_US',
-    url: 'https://metro-memory.com/north-america/usa/lv',
+    url: 'https://metro-memory.xyz/north-america/usa/lv',
   },
 }
 

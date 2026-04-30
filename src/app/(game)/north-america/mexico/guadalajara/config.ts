@@ -30,7 +30,7 @@ export const METADATA: Metadata = {
     description: 'How many Guadalajara Metro stations can you name from memory?',
     type: 'website',
     locale: 'es_MX',
-    url: 'https://metro-memory.com/north-america/mexico/guadalajara',
+    url: 'https://metro-memory.xyz/north-america/mexico/guadalajara',
   },
 }
 

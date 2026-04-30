@@ -12,6 +12,11 @@
       },
       "properties": {
         "name": "Lambert Airport Terminal 1",
+        "alternate_names": [
+          "lambert",
+          "stl",
+          "terminal 1"
+        ],
         "line": "Red_Line_(BART)",
         "id": 0
       },
@@ -28,6 +33,11 @@
       },
       "properties": {
         "name": "Lambert Airport Terminal 2",
+        "alternate_names": [
+          "lambert",
+          "stl",
+          "termianl 2"
+        ],
         "line": "Red_Line_(BART)",
         "id": 1
       },
@@ -447,6 +457,9 @@
       },
       "properties": {
         "name": "College",
+        "alternate_names": [
+          "southwestern illnois college"
+        ],
         "line": "Red_Line_(BART)",
         "id": 27
       },
@@ -463,6 +476,10 @@
       },
       "properties": {
         "name": "Shiloh-Scott",
+        "alternate_names": [
+          "kblv",
+          "scott air force base"
+        ],
         "line": "Red_Line_(BART)",
         "id": 28
       },
@@ -479,6 +496,9 @@
       },
       "properties": {
         "name": "MidAmerica St. Louis Airport",
+        "alternate_names": [
+          "Mid America Airport"
+        ],
         "line": "Red_Line_(BART)",
         "id": 29
       },
@@ -495,6 +515,9 @@
       },
       "properties": {
         "name": "Shrewsbury-Lansdowne I-44",
+        "alternate_names": [
+          "Shrewsbury"
+        ],
         "line": "Blue_Line_(BART)",
         "id": 30
       },

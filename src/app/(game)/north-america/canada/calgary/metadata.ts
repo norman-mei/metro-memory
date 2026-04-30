@@ -13,6 +13,6 @@ export const metadata: Metadata = withCityAssetMetadata('calgary', {
     description: 'How many Calgary CTrain stations can you remember?',
     type: 'website',
     locale: 'en_CA',
-    url: 'https://metro-memory.com/north-america/canada/calgary',
+    url: 'https://metro-memory.xyz/north-america/canada/calgary',
   },
 })

@@ -13,6 +13,6 @@ export const metadata: Metadata = withCityAssetMetadata('stl', {
     description: 'How many of the St. Louis MetroLink stations can you name from memory?',
     type: 'website',
     locale: 'en_US',
-    url: 'https://metro-memory.com/north-america/usa/stl',
+    url: 'https://metro-memory.xyz/north-america/usa/stl',
   },
 })

@@ -210,7 +210,7 @@ export const METADATA: Metadata = {
       'How many of the Karlsruhe tram(-train) stations can you name from memory?',
     type: 'website',
     locale: 'de_DE',
-    url: 'https://metro-memory.com/europe/germany/karlsruhe',
+    url: 'https://metro-memory.xyz/europe/germany/karlsruhe',
   },
 }
 

@@ -4,7 +4,7 @@ import { buildPlaceholderConfig } from '@/app/(game)/_placeholder/config'
 const config = buildPlaceholderConfig({
   citySlug: 'zhangye',
   cityPath: 'asia/china/zhangye',
-  cityTitle: 'Zhangye (å¼ æŽ–)',
+  cityTitle: 'Zhangye (张掖)',
 })
 
 

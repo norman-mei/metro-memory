@@ -13,6 +13,6 @@ export const metadata: Metadata = withCityAssetMetadata('shenyang', {
     description: 'How many of the Shenyang Metro and Tram stations can you name from memory?',
     type: 'website',
     locale: 'en_US',
-    url: 'https://metro-memory.com/asia/china/shenyang',
+    url: 'https://metro-memory.xyz/asia/china/shenyang',
   },
 })

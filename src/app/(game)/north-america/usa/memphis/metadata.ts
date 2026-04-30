@@ -15,6 +15,6 @@ export const metadata: Metadata = withCityAssetMetadata('memphis', {
       'How many of the Memphis MATA Trolley stops can you name from memory?',
     type: 'website',
     locale: 'en_US',
-    url: 'https://metro-memory.com/north-america/usa/memphis',
+    url: 'https://metro-memory.xyz/north-america/usa/memphis',
   },
 })

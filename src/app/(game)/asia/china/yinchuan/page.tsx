@@ -4,7 +4,7 @@ import { buildPlaceholderConfig } from '@/app/(game)/_placeholder/config'
 const config = buildPlaceholderConfig({
   citySlug: 'yinchuan',
   cityPath: 'asia/china/yinchuan',
-  cityTitle: 'Yinchuan (é“¶å·)',
+  cityTitle: 'Yinchuan (银川)',
 })
 
 

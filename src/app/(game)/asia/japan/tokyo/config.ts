@@ -151,7 +151,7 @@ export const METADATA: Metadata = {
     description: '東京メトロの駅名を覚えられますか？',
     type: 'website',
     locale: 'ja_JP',
-    url: 'https://metro-memory.com/asia/japan/tokyo',
+    url: 'https://metro-memory.xyz/asia/japan/tokyo',
   },
 }
 

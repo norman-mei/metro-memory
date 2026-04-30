@@ -13,6 +13,6 @@ export const metadata: Metadata = withCityAssetMetadata('taizhou', {
     description: 'How many of the Taizhou Rail Transit stations can you name from memory?',
     type: 'website',
     locale: 'en_US',
-    url: 'https://metro-memory.com/asia/china/taizhou',
+    url: 'https://metro-memory.xyz/asia/china/taizhou',
   },
 })

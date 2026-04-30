@@ -14,6 +14,6 @@ export const metadata: Metadata = withCityAssetMetadata('paris', {
       'How many of the Paris Métro stations can you name from memory?',
     type: 'website',
     locale: 'fr_FR',
-    url: 'https://metro-memory.com/europe/france/paris',
+    url: 'https://metro-memory.xyz/europe/france/paris',
   },
 })

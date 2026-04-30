@@ -9,6 +9,7 @@ import {
 } from '@/lib/missedGuesses'
 import { Dialog, Transition } from '@headlessui/react'
 import { Fragment, useEffect, useState } from 'react'
+import CloseButton from './CloseButton'
 
 type MissedGuessInputsModalProps = {
   city: string
@@ -40,7 +41,9 @@ export default function MissedGuessInputsModal({
 
   useEffect(() => {
     if (!open) return
-    setEntries(readMissedGuesses(scopedCity))
+    const localEntries = readMissedGuesses(scopedCity)
+    setEntries(localEntries)
+    setTopInputs([])
     setSourceLabel('Local')
 
     let cancelled = false
@@ -59,8 +62,15 @@ export default function MissedGuessInputsModal({
       .then((json) => {
         if (cancelled || !json) return
         if (Array.isArray(json.recent)) {
-          setEntries(json.recent)
-          setSourceLabel('Live site')
+          if (json.recent.length > 0 && localEntries.length === 0) {
+            setEntries(json.recent)
+            setSourceLabel('Live site')
+          } else if (json.recent.length > 0) {
+            setSourceLabel('Local + Live site')
+          } else if (localEntries.length === 0) {
+            setEntries([])
+            setSourceLabel('Live site')
+          }
         }
         if (Array.isArray(json.top)) {
           setTopInputs(json.top)
@@ -107,16 +117,23 @@ export default function MissedGuessInputsModal({
               leaveTo="translate-y-2 opacity-0 scale-95"
             >
               <Dialog.Panel className="w-full max-w-2xl overflow-hidden rounded-3xl bg-white shadow-2xl ring-1 ring-black/10 dark:bg-zinc-950 dark:ring-white/10">
-                <div className="border-b border-zinc-200 px-6 py-5 dark:border-zinc-800">
-                  <Dialog.Title className="text-xl font-black text-zinc-950 dark:text-zinc-50">
-                    Missed guess inputs
-                  </Dialog.Title>
-                  <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">
-                    {sourceLabel}{' '}
-                    {scope === 'city'
-                      ? 'wrong guesses for this city.'
-                      : 'wrong guesses across all cities.'}
-                  </p>
+                <div className="flex items-start justify-between gap-4 border-b border-zinc-200 px-6 py-5 dark:border-zinc-800">
+                  <div className="min-w-0">
+                    <Dialog.Title className="text-xl font-black text-zinc-950 dark:text-zinc-50">
+                      Missed guess inputs
+                    </Dialog.Title>
+                    <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">
+                      {sourceLabel}{' '}
+                      {scope === 'city'
+                        ? 'wrong guesses for this city.'
+                        : 'wrong guesses across all cities.'}
+                    </p>
+                  </div>
+                  <CloseButton
+                    ariaLabel="Close missed guess inputs"
+                    onClick={onClose}
+                    className="h-10 w-10 bg-zinc-100 text-zinc-600 hover:bg-zinc-200 focus:ring-zinc-300 dark:bg-zinc-900 dark:text-zinc-300 dark:hover:bg-zinc-800 dark:focus:ring-zinc-700"
+                  />
                 </div>
 
                 <div className="max-h-[65vh] overflow-y-auto px-6 py-4">
@@ -200,13 +217,6 @@ export default function MissedGuessInputsModal({
                     className="rounded-full px-4 py-2 text-sm font-bold text-red-600 transition hover:bg-red-50 dark:text-red-300 dark:hover:bg-red-500/10"
                   >
                     {scope === 'city' ? 'Clear city log' : 'Clear local log'}
-                  </button>
-                  <button
-                    type="button"
-                    onClick={onClose}
-                    className="rounded-full bg-zinc-950 px-5 py-2 text-sm font-bold text-white transition hover:bg-zinc-800 dark:bg-zinc-100 dark:text-zinc-950 dark:hover:bg-white"
-                  >
-                    Close
                   </button>
                 </div>
               </Dialog.Panel>

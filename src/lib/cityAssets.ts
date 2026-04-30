@@ -23,6 +23,8 @@ const CITY_ASSET_MANIFEST = cityAssetManifest as Record<
 const normalizeSlug = (slug: string | null | undefined) =>
   slug?.trim().toLowerCase() || null
 
+const isProduction = process.env.NODE_ENV === 'production'
+
 const normalizePathFromLink = (link: string | null | undefined) => {
   if (!link || !link.startsWith('/')) {
     return null
@@ -34,25 +36,58 @@ const normalizePathFromLink = (link: string | null | undefined) => {
 const appendVersionQuery = (
   assetPath: string,
   version: string | null | undefined,
-) => (version ? `${assetPath}?v=${version}` : assetPath)
+) => {
+  if (!isProduction) {
+    return assetPath
+  }
+  return version ? `${assetPath}?v=${version}` : assetPath
+}
+
+type AssetKind = 'icon' | 'openGraph'
+
+const manifestHasAsset = (
+  slug: string | null | undefined,
+  kind: AssetKind,
+) => {
+  const normalizedSlug = normalizeSlug(slug)
+  if (!normalizedSlug) {
+    return false
+  }
+
+  const entry = CITY_ASSET_MANIFEST[normalizedSlug]
+  if (!entry) {
+    return false
+  }
+
+  return kind === 'icon' ? Boolean(entry.icon) : Boolean(entry.openGraphExtension)
+}
 
 const resolveCityAssetSlug = (
   slug: string | null | undefined,
+  kind: AssetKind,
 ): string | null => {
   const normalizedSlug = normalizeSlug(slug)
   if (!normalizedSlug) {
     return null
   }
 
+  if (manifestHasAsset(normalizedSlug, kind)) {
+    return normalizedSlug
+  }
+
   const assetSourceSlug =
     normalizeSlug(getMiniCityBySlug(normalizedSlug)?.assetSourceSlug) ??
     normalizedSlug
 
-  if (assetSourceSlug && resolveCityAssetRoutePath(assetSourceSlug)) {
+  if (manifestHasAsset(assetSourceSlug, kind)) {
     return assetSourceSlug
   }
 
-  return resolveCityAssetRoutePath(normalizedSlug) ? normalizedSlug : null
+  if (resolveCityAssetRoutePath(normalizedSlug)) {
+    return normalizedSlug
+  }
+
+  return resolveCityAssetRoutePath(assetSourceSlug) ? assetSourceSlug : null
 }
 
 export const resolveCityAssetRoutePath = (
@@ -73,7 +108,7 @@ export const resolveCityAssetRoutePath = (
 }
 
 export const getCityAssetDirectory = (slug: string | null | undefined) => {
-  const routePath = resolveCityAssetRoutePath(resolveCityAssetSlug(slug))
+  const routePath = resolveCityAssetRoutePath(resolveCityAssetSlug(slug, 'openGraph'))
   return routePath ? `${CITY_ASSETS_BASE_PATH}/${routePath}` : null
 }
 
@@ -83,7 +118,7 @@ export const resolveCityIconAssetSlug = (slug: string | null | undefined) => {
     return null
   }
 
-  return resolveCityAssetSlug(normalizedSlug)
+  return resolveCityAssetSlug(normalizedSlug, 'icon')
 }
 
 export const resolveCityOpenGraphAssetSlug = (
@@ -94,14 +129,14 @@ export const resolveCityOpenGraphAssetSlug = (
     return null
   }
 
-  return resolveCityAssetSlug(normalizedSlug)
+  return resolveCityAssetSlug(normalizedSlug, 'openGraph')
 }
 
 export const getCityIconPath = (
   slug: string | null | undefined,
   fallbackPath = DEFAULT_CITY_ICON_PATH,
 ) => {
-  const assetSlug = resolveCityAssetSlug(slug)
+  const assetSlug = resolveCityAssetSlug(slug, 'icon')
   const assetRoutePath = resolveCityAssetRoutePath(assetSlug)
   if (!assetRoutePath) {
     return fallbackPath

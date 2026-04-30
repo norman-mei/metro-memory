@@ -15,6 +15,6 @@ export const metadata: Metadata = withCityAssetMetadata('singapore', {
       'How many of the Singapore MRT/LRT stations can you name from memory?',
     type: 'website',
     locale: 'en_GB',
-    url: 'https://metro-memory.com/asia/singapore',
+    url: 'https://metro-memory.xyz/asia/singapore',
   },
 })

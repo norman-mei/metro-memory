@@ -13,6 +13,6 @@ export const metadata: Metadata = withCityAssetMetadata('monterrey', {
     description: 'How many Monterrey Metro stations can you name from memory?',
     type: 'website',
     locale: 'es_MX',
-    url: 'https://metro-memory.com/north-america/mexico/monterrey',
+    url: 'https://metro-memory.xyz/north-america/mexico/monterrey',
   },
 })

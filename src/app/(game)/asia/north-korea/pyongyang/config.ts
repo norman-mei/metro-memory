@@ -30,7 +30,7 @@ export const METADATA: Metadata = {
     description: 'How many of the Pyongyang Metro stations can you name from memory?',
     type: 'website',
     locale: 'en_US',
-    url: 'https://metro-memory.com/asia/north-korea/pyongyang',
+    url: 'https://metro-memory.xyz/asia/north-korea/pyongyang',
   },
 }
 

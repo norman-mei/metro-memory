@@ -4,7 +4,7 @@ import { buildPlaceholderConfig } from '@/app/(game)/_placeholder/config'
 const config = buildPlaceholderConfig({
   citySlug: 'nagoya',
   cityPath: 'asia/japan/nagoya',
-  cityTitle: 'Nagoya (åå¤å±‹)',
+  cityTitle: 'Nagoya (名古屋)',
 })
 
 

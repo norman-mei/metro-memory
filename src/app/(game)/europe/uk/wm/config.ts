@@ -39,7 +39,7 @@ export const METADATA: Metadata = {
     description: 'How many West Midlands Metro and Air-Rail Link stations can you name?',
     type: 'website',
     locale: 'en_GB',
-    url: 'https://metro-memory.com/europe/uk/wm',
+    url: 'https://metro-memory.xyz/europe/uk/wm',
   },
 }
 

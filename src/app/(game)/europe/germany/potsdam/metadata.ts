@@ -14,6 +14,6 @@ export const metadata: Metadata = withCityAssetMetadata('potsdam', {
       'Wie viele Tram-Stationen können Sie auswendig nennen? Spielen Sie das Potsdam Tram Memory und finden Sie es heraus!',
     type: 'website',
     locale: 'de_DE',
-    url: 'https://metro-memory.com/europe/germany/potsdam',
+    url: 'https://metro-memory.xyz/europe/germany/potsdam',
   },
 })

@@ -13,6 +13,6 @@ export const metadata: Metadata = withCityAssetMetadata('maracaibo', {
     description: 'How many of the Maracaibo Line 1 stations can you name from memory?',
     type: 'website',
     locale: 'en_US',
-    url: 'https://metro-memory.com/south-america/venezuela/maracaibo',
+    url: 'https://metro-memory.xyz/south-america/venezuela/maracaibo',
   },
 })

@@ -13,6 +13,6 @@ export const metadata: Metadata = withCityAssetMetadata('lanzhou', {
     description: 'How many of the Lanzhou Metro stations can you name from memory?',
     type: 'website',
     locale: 'en_US',
-    url: 'https://metro-memory.com/asia/china/lanzhou',
+    url: 'https://metro-memory.xyz/asia/china/lanzhou',
   },
 })

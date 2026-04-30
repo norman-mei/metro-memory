@@ -9,7 +9,7 @@ const PrivacyPolicy: React.FC = () => {
         <div className="prose relative mx-auto py-3 dark:prose-invert sm:max-w-2xl">
           <h1>Privacy Policy</h1>
           <p>
-            Our website, metro-memory.com (&quot;we&quot;, &quot;us&quot;,
+            Our website, metro-memory.xyz (&quot;we&quot;, &quot;us&quot;,
             &quot;our&quot;), respects your privacy and is committed to
             protecting it in accordance with this Privacy Policy.
           </p>

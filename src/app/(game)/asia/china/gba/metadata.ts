@@ -13,6 +13,6 @@ export const metadata: Metadata = withCityAssetMetadata('gba', {
     description: 'How many stations in the Greater Bay Area can you name?',
     type: 'website',
     locale: 'en_US',
-    url: 'https://metro-memory.com/asia/china/gba',
+    url: 'https://metro-memory.xyz/asia/china/gba',
   },
 })

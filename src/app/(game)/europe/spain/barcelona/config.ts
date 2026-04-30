@@ -176,7 +176,7 @@ export const METADATA: Metadata = {
       'Quantes estacions del metro de Barcelona pots nomenar de memòria? Prova aquest joc per descobrir-ho.',
     type: 'website',
     locale: 'es_ES',
-    url: 'https://metro-memory.com/europe/spain/barcelona',
+    url: 'https://metro-memory.xyz/europe/spain/barcelona',
   },
 }
 

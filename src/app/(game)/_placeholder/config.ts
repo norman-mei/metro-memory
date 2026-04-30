@@ -61,7 +61,7 @@ const buildMetadata = ({
       description,
       type: 'website',
       locale: 'en_US',
-      url: `https://metro-memory.com/${cityPath ?? citySlug}`,
+      url: `https://metro-memory.xyz/${cityPath ?? citySlug}`,
     },
   })
 }

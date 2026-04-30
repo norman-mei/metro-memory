@@ -14,6 +14,6 @@ export const metadata: Metadata = withCityAssetMetadata('budapest', {
       'Hány metróállomást tudsz emlékezetből megnevezni? Játszd a Budapest Metro Memory-t és tudd meg!',
     type: 'website',
     locale: 'hu_HU',
-    url: 'https://metro-memory.com/europe/hungary/budapest',
+    url: 'https://metro-memory.xyz/europe/hungary/budapest',
   },
 })

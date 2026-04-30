@@ -81,7 +81,7 @@ export const METADATA: Metadata = {
     description: 'Hur bra kan du namnen på Stockholms tunnelbanestationer?',
     type: 'website',
     locale: 'sv_SE',
-    url: 'https://metro-memory.com/europe/sweden/stockholm',
+    url: 'https://metro-memory.xyz/europe/sweden/stockholm',
   },
 }
 

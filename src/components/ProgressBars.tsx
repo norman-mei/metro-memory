@@ -2,6 +2,7 @@
 
 import OverflowMarquee from '@/components/OverflowMarquee'
 import { useSettings } from '@/context/SettingsContext'
+import { formatLocalizedChinaUiTitle } from '@/lib/chinaUiText'
 import { isColorLight } from '@/lib/colorUtils'
 import { useConfig } from '@/lib/configContext'
 import { formatLocalizedLineName } from '@/lib/lineNameDisplay'
@@ -178,7 +179,7 @@ const ProgressBars = ({
   iconBasePath?: string | null
   minimizedMaxHeight?: number
 }) => {
-  const { LINES, GAUGE_COLORS, LINE_GROUPS } = useConfig()
+  const { LINES, GAUGE_COLORS, LINE_GROUPS, CITY_NAME } = useConfig()
   const { settings } = useSettings()
   const gaugeMode = GAUGE_COLORS ?? 'inverted'
   const { resolvedTheme } = useTheme()
@@ -415,7 +416,7 @@ const ProgressBars = ({
         return (
           <div key={`${group.title ?? 'group'}-${groupIndex}`} className="space-y-3">
             <GroupHeading
-              title={group.title}
+              title={formatLocalizedChinaUiTitle(group.title, CITY_NAME, settings.language)}
               image={group.titleImage}
               iconBasePath={iconBasePath}
             />
@@ -434,7 +435,7 @@ const ProgressBars = ({
                 return (
                   <GroupHeading
                     key={`${item.title ?? 'heading'}-${groupIndex}-${itemIndex}`}
-                    title={item.title}
+                    title={formatLocalizedChinaUiTitle(item.title, CITY_NAME, settings.language)}
                     image={item.titleImage}
                     iconBasePath={iconBasePath}
                     compact
@@ -451,7 +452,7 @@ const ProgressBars = ({
                   className="space-y-2"
                 >
                   <GroupHeading
-                    title={item.title}
+                    title={formatLocalizedChinaUiTitle(item.title, CITY_NAME, settings.language)}
                     image={item.titleImage}
                     iconBasePath={iconBasePath}
                     compact

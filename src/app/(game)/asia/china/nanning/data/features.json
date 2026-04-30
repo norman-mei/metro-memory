@@ -61,11 +61,12 @@
       },
       "properties": {
         "id": 3,
-        "name": "Nanning Railway Station (火车站)",
+        "name": "Nanning Railway Station (南宁火车站)",
         "alternate_names": [
           "火车站",
           "Nanning Railway Station",
           "Nanning Railway Station (火车站)",
+          "Nanning Railway Station (南宁火车站)",
           "Hojcehcan",
           "火車站",
           "huo che zhan"
@@ -86,11 +87,12 @@
       },
       "properties": {
         "id": 4,
-        "name": "Nanning East Railway Station (火车东站)",
+        "name": "Nanning East Railway Station (南宁东站)",
         "alternate_names": [
           "火车东站",
           "Nanning East Railway Station",
           "Nanning East Railway Station (火车东站)",
+          "Nanning East Railway Station (南宁东站)",
           "Hojceh Dunghcan",
           "火車東站",
           "huo che dong zhan"
@@ -746,11 +748,12 @@
       },
       "properties": {
         "id": 30,
-        "name": "Nanning Railway Station (火车站)",
+        "name": "Nanning Railway Station (南宁火车站)",
         "alternate_names": [
           "火车站",
           "Nanning Railway Station",
           "Nanning Railway Station (火车站)",
+          "Nanning Railway Station (南宁火车站)",
           "Hojcehcan",
           "火車站",
           "huo che zhan"

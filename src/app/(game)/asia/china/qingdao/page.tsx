@@ -4,7 +4,7 @@ import { buildPlaceholderConfig } from '@/app/(game)/_placeholder/config'
 const config = buildPlaceholderConfig({
   citySlug: 'qingdao',
   cityPath: 'asia/china/qingdao',
-  cityTitle: 'Qingdao (é’å²›)',
+  cityTitle: 'Qingdao (青岛)',
 })
 
 

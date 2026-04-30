@@ -46,7 +46,7 @@ export const METADATA: Metadata = {
     description: 'How many of the Changchun Rail Transit stations can you name from memory?',
     type: 'website',
     locale: 'en_US',
-    url: 'https://metro-memory.com/asia/china/changchun',
+    url: 'https://metro-memory.xyz/asia/china/changchun',
   },
 }
 

@@ -139,7 +139,7 @@ export const METADATA: Metadata = {
       '¿Cuántas estaciones del metro de Madrid puedes nombrar de memoria? Prueba este juego para averiguarlo.',
     type: 'website',
     locale: 'es_ES',
-    url: 'https://metro-memory.com/europe/spain/madrid',
+    url: 'https://metro-memory.xyz/europe/spain/madrid',
   },
 }
 

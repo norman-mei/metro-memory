@@ -4,7 +4,7 @@ import { buildPlaceholderConfig } from '@/app/(game)/_placeholder/config'
 const config = buildPlaceholderConfig({
   citySlug: 'kunming',
   cityPath: 'asia/china/kunming',
-  cityTitle: 'Kunming (æ˜†æ˜Ž)',
+  cityTitle: 'Kunming (昆明)',
 })
 
 

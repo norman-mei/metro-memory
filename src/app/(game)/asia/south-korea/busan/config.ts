@@ -57,7 +57,7 @@ export const METADATA: Metadata = {
     description: 'How many Busan rail, sky capsule, and cable car stations can you name from memory?',
     type: 'website',
     locale: 'ko_KR',
-    url: 'https://metro-memory.com/asia/south-korea/busan',
+    url: 'https://metro-memory.xyz/asia/south-korea/busan',
   },
 }
 

@@ -4,7 +4,7 @@ import { buildPlaceholderConfig } from '@/app/(game)/_placeholder/config'
 const config = buildPlaceholderConfig({
   citySlug: 'mengzhi',
   cityPath: 'asia/china/mengzhi',
-  cityTitle: 'Mengzhi (è’™è‡ª)',
+  cityTitle: 'Mengzhi (蒙自)',
 })
 
 

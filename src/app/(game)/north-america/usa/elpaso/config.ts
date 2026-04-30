@@ -30,7 +30,7 @@ export const METADATA: Metadata = {
     description: 'How many of the El Paso Streetcar stops can you name from memory?',
     type: 'website',
     locale: 'en_US',
-    url: 'https://metro-memory.com/north-america/usa/elpaso',
+    url: 'https://metro-memory.xyz/north-america/usa/elpaso',
   },
 }
 

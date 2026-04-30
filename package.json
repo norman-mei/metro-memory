@@ -51,6 +51,7 @@
   },
   "browserslist": "defaults, not ie <= 11",
   "dependencies": {
+    "@amap/amap-jsapi-loader": "^1.0.1",
     "@capacitor/android": "^8.0.2",
     "@capacitor/cli": "^8.1.0",
     "@capacitor/core": "^8.0.2",

@@ -15,6 +15,6 @@ export const metadata: Metadata = withCityAssetMetadata('kc', {
       'How many of the Kansas City Streetcar stations can you name from memory?',
     type: 'website',
     locale: 'en_US',
-    url: 'https://metro-memory.com/north-america/usa/kc',
+    url: 'https://metro-memory.xyz/north-america/usa/kc',
   },
 })

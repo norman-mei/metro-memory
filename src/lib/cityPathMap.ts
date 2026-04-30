@@ -170,6 +170,7 @@ export const CITY_PATH_MAP: Record<string, string> = {
   'sendai': 'asia/japan/sendai',
   'seoul': 'asia/south-korea/seoul',
   'sheffield': 'europe/uk/sheffield',
+  'shanghai': 'asia/china/shanghai',
   'shenyang': 'asia/china/shenyang',
   'shijiazhuang': 'asia/china/shijiazhuang',
   'singapore': 'asia/singapore',

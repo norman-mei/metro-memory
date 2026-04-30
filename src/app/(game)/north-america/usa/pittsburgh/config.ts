@@ -51,7 +51,7 @@ export const METADATA: Metadata = {
       'How many of the Pittsburgh “T” light-rail stations can you name from memory?',
     type: 'website',
     locale: 'en_US',
-    url: 'https://metro-memory.com/north-america/usa/pittsburgh',
+    url: 'https://metro-memory.xyz/north-america/usa/pittsburgh',
   },
 }
 

@@ -184,7 +184,7 @@ const buildSubsetMetadata = (
         : {}),
       title,
       description,
-      url: `https://metro-memory.com${definition.link}`,
+      url: `https://metro-memory.xyz${definition.link}`,
       images: [openGraphImage],
     },
     twitter: {

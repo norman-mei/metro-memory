@@ -48,6 +48,11 @@ const MiniCityLinksPanel = ({
   const router = useRouter()
   const { t } = useTranslation()
   const [expanded, setExpanded] = useState(defaultExpanded)
+  const normalizeOptionLabel = (value: string) =>
+    value
+      .replace(/\uFF09[\s\u00A0\u2000-\u200B\u202F\u205F\u3000]+\)/g, '\uFF09)')
+      .replace(/[\s\u00A0\u2000-\u200B\u202F\u205F\u3000]+(?=\))/g, '')
+
   const getLabel = (key: string, fallback: string) => {
     const value = t(key)
     return typeof value === 'string' && value !== key ? value : fallback
@@ -114,9 +119,11 @@ const MiniCityLinksPanel = ({
               </option>
               {items.map((item) => (
                 <option key={item.slug} value={item.slug}>
-                  {item.slug === currentSlug
-                    ? `${item.name} (${getLabel('currentTag', 'Current')})`
-                    : item.name}
+                  {normalizeOptionLabel(
+                    item.slug === currentSlug
+                      ? `${item.name} (${getLabel('currentTag', 'Current')})`
+                      : item.name,
+                  )}
                 </option>
               ))}
             </select>

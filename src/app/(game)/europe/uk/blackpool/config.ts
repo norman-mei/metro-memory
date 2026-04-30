@@ -31,7 +31,7 @@ export const METADATA: Metadata = {
     description: 'How many Blackpool tram stops can you remember?',
     type: 'website',
     locale: 'en_GB',
-    url: 'https://metro-memory.com/europe/uk/blackpool',
+    url: 'https://metro-memory.xyz/europe/uk/blackpool',
   },
 }
 

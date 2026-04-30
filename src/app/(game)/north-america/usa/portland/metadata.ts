@@ -13,6 +13,6 @@ export const metadata: Metadata = withCityAssetMetadata('portland', {
     description: 'How many TriMet stations in the Portland region can you name from memory?',
     type: 'website',
     locale: 'en_US',
-    url: 'https://metro-memory.com/north-america/usa/portland',
+    url: 'https://metro-memory.xyz/north-america/usa/portland',
   },
 })

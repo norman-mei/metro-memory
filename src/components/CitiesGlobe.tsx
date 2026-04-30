@@ -10,6 +10,7 @@ import 'mapbox-gl/dist/mapbox-gl.css'
 import { useTheme } from 'next-themes'
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
+import CloseButton from './CloseButton'
 import CityCard from './CityCard'
 
 const CONTINENT_BOUNDS: Record<string, mapboxgl.LngLatBoundsLike> = {
@@ -945,18 +946,14 @@ export default function CitiesGlobe({
             }
           `}</style>
           <div className="relative w-64 p-1">
-            <button
+            <CloseButton
+              ariaLabel="Close popup"
               onClick={(e) => {
                 e.stopPropagation()
                 handleClosePopup()
               }}
-              className="absolute -right-1 -top-1 z-10 flex h-8 w-8 items-center justify-center rounded-full shadow-lg bg-white text-zinc-800 hover:bg-zinc-100 dark:bg-zinc-800 dark:text-zinc-100 dark:hover:bg-zinc-700"
-              aria-label="Close popup"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="h-5 w-5">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
+              className="absolute -right-1 -top-1 z-10 h-8 w-8 bg-white text-zinc-800 shadow-lg hover:bg-zinc-100 focus:ring-zinc-300 dark:bg-zinc-800 dark:text-zinc-100 dark:hover:bg-zinc-700 dark:focus:ring-zinc-700"
+            />
             <CityCard
               city={activePopup.city}
               variant="globe"

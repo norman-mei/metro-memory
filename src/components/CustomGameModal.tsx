@@ -1,8 +1,12 @@
 'use client'
 
+import { useSettings } from '@/context/SettingsContext'
+import { formatLocalizedChinaUiTitle } from '@/lib/chinaUiText'
 import { useConfig } from '@/lib/configContext'
+import { formatLocalizedLineName } from '@/lib/lineNameDisplay'
 import type { Line, LineGroup, LineGroupItem } from '@/lib/types'
 import { useEffect, useMemo, useState } from 'react'
+import CloseButton from './CloseButton'
 
 type VisibleLinesItem = {
   type: 'lines'
@@ -56,8 +60,15 @@ const buildVisibleGroups = (
   lines: Record<string, Line>,
   lineGroups: LineGroup[] | undefined,
   searchQuery: string,
+  slug: string,
+  language?: string,
 ) => {
   const normalizedQuery = searchQuery.trim().toLowerCase()
+  const localizeHeaderText = (value?: string) =>
+    formatLocalizedChinaUiTitle(value, slug, language)
+  const localizeLineText = (value?: string) =>
+    formatLocalizedLineName(value, language)
+
   const matchesLine = (lineId: string) => {
     if (!normalizedQuery) {
       return true
@@ -70,7 +81,8 @@ const buildVisibleGroups = (
 
     return (
       lineId.toLowerCase().includes(normalizedQuery) ||
-      line.name.toLowerCase().includes(normalizedQuery)
+      line.name.toLowerCase().includes(normalizedQuery) ||
+      localizeLineText(line.name).toLowerCase().includes(normalizedQuery)
     )
   }
 
@@ -101,7 +113,12 @@ const buildVisibleGroups = (
         if (matchesLine(lineId)) {
           return true
         }
-        return matchesText(item.title) || matchesText(group.title)
+        return (
+          matchesText(item.title) ||
+          matchesText(group.title) ||
+          matchesText(localizeHeaderText(item.title)) ||
+          matchesText(localizeHeaderText(group.title))
+        )
       })
 
       if (matchedLines.length === 0) {
@@ -111,7 +128,7 @@ const buildVisibleGroups = (
       matchedLines.forEach((lineId) => groupedLineIds.add(lineId))
       visibleItems.push({
         type: 'lines',
-        title: item.title,
+        title: localizeHeaderText(item.title),
         lineIds: matchedLines,
       })
     })
@@ -122,7 +139,7 @@ const buildVisibleGroups = (
 
     if (visibleItems.length > 0) {
       visibleGroups.push({
-        title: group.title,
+        title: localizeHeaderText(group.title),
         items: visibleItems,
       })
     }
@@ -143,7 +160,7 @@ const buildVisibleGroups = (
 
   if (ungroupedLineIds.length > 0) {
     visibleGroups.push({
-      title: 'Additional Lines',
+      title: localizeHeaderText('Additional Lines'),
       items: [
         {
           type: 'lines',
@@ -178,17 +195,21 @@ export default function CustomGameModal({
   parentSlug: string
   iconBasePath?: string | null
 }) {
+  const { settings } = useSettings()
   const { LINES, LINE_GROUPS, METADATA, CITY_NAME } = useConfig()
   const allLineIds = useMemo(
     () => buildOrderedLineIds(LINES || {}, LINE_GROUPS),
     [LINES, LINE_GROUPS],
   )
+  const rawMetadataTitle = String(METADATA?.title ?? 'Map')
+  const localizedBaseTitle = useMemo(
+    () => formatLocalizedChinaUiTitle(rawMetadataTitle, parentSlug, settings.language),
+    [parentSlug, rawMetadataTitle, settings.language],
+  )
   const [selectedLines, setSelectedLines] = useState<Set<string>>(
     () => new Set(allLineIds),
   )
-  const [title, setTitle] = useState(
-    `${METADATA?.title ?? 'Map'} - Custom Layout`,
-  )
+  const [title, setTitle] = useState(`${localizedBaseTitle} - Custom Layout`)
   const [searchQuery, setSearchQuery] = useState('')
 
   useEffect(() => {
@@ -197,13 +218,26 @@ export default function CustomGameModal({
     }
 
     setSelectedLines(new Set(allLineIds))
-    setTitle(`${METADATA?.title ?? 'Map'} - Custom Layout`)
+    setTitle(
+      `${localizedBaseTitle} - ${formatLocalizedChinaUiTitle(
+        'Custom Layout',
+        parentSlug,
+        settings.language,
+      )}`,
+    )
     setSearchQuery('')
-  }, [CITY_NAME, METADATA?.title, allLineIds, isOpen])
+  }, [CITY_NAME, localizedBaseTitle, allLineIds, isOpen, parentSlug, settings.language])
 
   const visibleGroups = useMemo(
-    () => buildVisibleGroups(LINES || {}, LINE_GROUPS, searchQuery),
-    [LINES, LINE_GROUPS, searchQuery],
+    () =>
+      buildVisibleGroups(
+        LINES || {},
+        LINE_GROUPS,
+        searchQuery,
+        parentSlug,
+        settings.language,
+      ),
+    [LINES, LINE_GROUPS, parentSlug, searchQuery, settings.language],
   )
   const visibleLineIds = useMemo(
     () =>
@@ -247,7 +281,13 @@ export default function CustomGameModal({
     }
 
     const orderedSelection = allLineIds.filter((lineId) => selectedLines.has(lineId))
-    const customTitle = title.trim() || `${METADATA?.title ?? 'Map'} - Custom Layout`
+    const customTitle =
+      title.trim() ||
+      `${localizedBaseTitle} - ${formatLocalizedChinaUiTitle(
+        'Custom Layout',
+        parentSlug,
+        settings.language,
+      )}`
     const url = new URL(window.location.origin + '/custom')
     url.searchParams.set('parent', parentSlug)
     url.searchParams.set('lines', orderedSelection.join(','))
@@ -277,38 +317,37 @@ export default function CustomGameModal({
         className="relative flex max-h-[90vh] w-full max-w-4xl flex-col rounded-2xl bg-white p-6 shadow-xl dark:bg-zinc-900"
         onClick={(e) => e.stopPropagation()}
       >
-        <button
+        <CloseButton
+          ariaLabel="Close"
           onClick={onCloseAction}
-          className="absolute right-4 top-4 flex h-8 w-8 items-center justify-center rounded-full bg-zinc-100 text-zinc-600 transition hover:bg-zinc-200 dark:bg-zinc-800 dark:text-zinc-300 dark:hover:bg-zinc-700"
-          aria-label="Close"
-        >
-          <svg
-            viewBox="0 0 24 24"
-            className="h-5 w-5"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <path d="M18 6L6 18M6 6l12 12"></path>
-          </svg>
-        </button>
+          className="absolute right-4 top-4 h-8 w-8 bg-zinc-100 text-zinc-600 hover:bg-zinc-200 focus:ring-zinc-300 dark:bg-zinc-800 dark:text-zinc-300 dark:hover:bg-zinc-700 dark:focus:ring-zinc-700"
+        />
 
         <div className="mb-5 shrink-0 pr-10">
           <h2 className="text-xl font-bold text-zinc-900 dark:text-zinc-100">
-            Create Custom Layout
+            {formatLocalizedChinaUiTitle(
+              'Create Custom Layout',
+              parentSlug,
+              settings.language,
+            )}
           </h2>
           <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">
-            Build a subset from the current city or mini city while keeping the
-            original headers, subheaders, and progress scope.
+            {formatLocalizedChinaUiTitle(
+              'Build a subset from the current city or mini city while keeping the original headers, subheaders, and progress scope.',
+              parentSlug,
+              settings.language,
+            )}
           </p>
         </div>
 
         <div className="mb-5 grid gap-4 md:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)]">
           <div>
             <label className="mb-2 block text-xs font-semibold uppercase tracking-wide text-zinc-600 dark:text-zinc-400">
-              Custom Title
+              {formatLocalizedChinaUiTitle(
+                'Custom Title',
+                parentSlug,
+                settings.language,
+              )}
             </label>
             <input
               type="text"
@@ -320,7 +359,11 @@ export default function CustomGameModal({
           </div>
           <div>
             <label className="mb-2 block text-xs font-semibold uppercase tracking-wide text-zinc-600 dark:text-zinc-400">
-              Search Lines
+              {formatLocalizedChinaUiTitle(
+                'Search Lines',
+                parentSlug,
+                settings.language,
+              )}
             </label>
             <input
               type="text"
@@ -371,7 +414,11 @@ export default function CustomGameModal({
 
         <div className="mb-6 flex min-h-0 flex-1 flex-col overflow-hidden">
           <label className="mb-3 block shrink-0 text-xs font-semibold uppercase tracking-wide text-zinc-600 dark:text-zinc-400">
-            Select Lines to Include
+            {formatLocalizedChinaUiTitle(
+              'Select Lines to Include',
+              parentSlug,
+              settings.language,
+            )}
           </label>
           <div className="flex-1 overflow-y-auto pr-2">
             {visibleGroups.length === 0 ? (
@@ -396,7 +443,12 @@ export default function CustomGameModal({
                       <div className="mb-3 flex flex-wrap items-center gap-2">
                         <div className="min-w-0 flex-1">
                           <p className="text-sm font-bold text-zinc-900 dark:text-zinc-100">
-                            {group.title ?? 'Line Group'}
+                            {group.title ??
+                              formatLocalizedChinaUiTitle(
+                                'Line Group',
+                                parentSlug,
+                                settings.language,
+                              )}
                           </p>
                           <p className="text-xs text-zinc-500 dark:text-zinc-400">
                             {selectedInGroup}/{groupLineIds.length} selected
@@ -442,7 +494,12 @@ export default function CustomGameModal({
                                 <div className="flex flex-wrap items-center gap-2">
                                   <div className="min-w-0 flex-1">
                                     <p className="text-xs font-semibold uppercase tracking-wide text-zinc-600 dark:text-zinc-300">
-                                      {item.title ?? 'Lines'}
+                                      {item.title ??
+                                        formatLocalizedChinaUiTitle(
+                                          'Lines',
+                                          parentSlug,
+                                          settings.language,
+                                        )}
                                     </p>
                                     <p className="text-[11px] text-zinc-500 dark:text-zinc-400">
                                       {selectedInItem}/{item.lineIds.length} selected
@@ -496,10 +553,10 @@ export default function CustomGameModal({
                                             alt=""
                                           />
                                         )}
-                                        <div className="min-w-0">
-                                          <span className="block truncate font-semibold text-zinc-900 dark:text-zinc-100">
-                                            {line.name}
-                                          </span>
+                                    <div className="min-w-0">
+                                      <span className="block truncate font-semibold text-zinc-900 dark:text-zinc-100">
+                                            {formatLocalizedLineName(line.name, settings.language)}
+                                      </span>
                                           <span className="block text-xs text-zinc-500 dark:text-zinc-400">
                                             {lineId}
                                           </span>

@@ -180,7 +180,7 @@ export const METADATA: Metadata = {
     description: 'How many stations across Florida can you name from memory?',
     type: 'website',
     locale: 'en_US',
-    url: 'https://metro-memory.com/north-america/usa/florida-state',
+    url: 'https://metro-memory.xyz/north-america/usa/florida-state',
   },
 }
 

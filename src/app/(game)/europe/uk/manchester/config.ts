@@ -30,7 +30,7 @@ export const METADATA: Metadata = {
     description: 'How many Manchester Metrolink stops can you name from memory?',
     type: 'website',
     locale: 'en_GB',
-    url: 'https://metro-memory.com/europe/uk/manchester',
+    url: 'https://metro-memory.xyz/europe/uk/manchester',
   },
 }
 

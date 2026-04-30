@@ -13,6 +13,6 @@ export const metadata: Metadata = withCityAssetMetadata('hochiminhcity', {
     description: 'How many Ho Chi Minh City Metro stops can you name from memory?',
     type: 'website',
     locale: 'en_US',
-    url: 'https://metro-memory.com/asia/vietnam/hochiminhcity',
+    url: 'https://metro-memory.xyz/asia/vietnam/hochiminhcity',
   },
 })

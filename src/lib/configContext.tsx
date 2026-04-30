@@ -29,7 +29,7 @@ export const ConfigContext = createContext<Config>({
         'How many of the metro stations can you name from memory? Try this game to find out.',
       type: 'website',
       locale: 'en',
-      url: 'https://metro-memory.com/',
+      url: 'https://metro-memory.xyz/',
     },
   },
   LINES: {},

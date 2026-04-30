@@ -15,6 +15,6 @@ export const metadata: Metadata = withCityAssetMetadata('mexico-city', {
       '¿Cuántas estaciones del metro de Mexico City puedes nombrar de memoria? Prueba este juego para averiguarlo.',
     type: 'website',
     locale: 'es_ES',
-    url: 'https://metro-memory.com/north-america/mexico/mexico-city',
+    url: 'https://metro-memory.xyz/north-america/mexico/mexico-city',
   },
 })

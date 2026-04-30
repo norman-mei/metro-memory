@@ -15,6 +15,6 @@ export const metadata: Metadata = withCityAssetMetadata('morgantown', {
       'How many of the Morgantown Personal Rapid Transit stations can you name from memory?',
     type: 'website',
     locale: 'en_US',
-    url: 'https://metro-memory.com/north-america/usa/morgantown',
+    url: 'https://metro-memory.xyz/north-america/usa/morgantown',
   },
 })

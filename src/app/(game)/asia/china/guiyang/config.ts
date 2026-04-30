@@ -30,7 +30,7 @@ export const METADATA: Metadata = {
     description: "How many of Guiyang's metro and tram stations can you name from memory?",
     type: 'website',
     locale: 'en_US',
-    url: 'https://metro-memory.com/asia/china/guiyang',
+    url: 'https://metro-memory.xyz/asia/china/guiyang',
   },
 }
 

@@ -5450,13 +5450,13 @@
       },
       "properties": {
         "id": 228,
-        "name": "DurhamÃ¢â‚¬â€œUNH, NH",
+        "name": "Durham–UNH, NH",
         "line": "DWE",
         "order": 8,
         "alternate_names": [
           "DHM",
           "Durham",
-          "DurhamÃ¢â‚¬â€œUniversity of New Hampshire"
+          "Durham–University of New Hampshire"
         ],
         "short_name": "DHM",
         "cluster_key": "amtrak-DHM"
@@ -6539,12 +6539,12 @@
       },
       "properties": {
         "id": 274,
-        "name": "Stockton Ã¢â‚¬â€œ San Joaquin Street, CA",
+        "name": "Stockton – San Joaquin Street, CA",
         "line": "GDR",
         "order": 10,
         "alternate_names": [
           "SKN",
-          "Stockton Ã¢â‚¬â€œ San Joaquin Street"
+          "Stockton – San Joaquin Street"
         ],
         "short_name": "SKN",
         "cluster_key": "amtrak-SKN"

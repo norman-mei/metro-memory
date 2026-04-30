@@ -3,6 +3,7 @@
 import { Fragment, useEffect, useState } from 'react'
 import { Transition } from '@headlessui/react'
 import { useSettings } from '@/context/SettingsContext'
+import CloseButton from './CloseButton'
 
 const AUTO_DISMISS_MS = 5_000
 
@@ -45,14 +46,12 @@ const SettingsSaveToast = () => {
               Settings saved
             </p>
           </div>
-          <button
-            type="button"
-            aria-label="Dismiss settings saved notification"
+          <CloseButton
+            ariaLabel="Dismiss settings saved notification"
             onClick={() => setOpen(false)}
-            className="ml-2 inline-flex items-center justify-center rounded-full border border-transparent p-1 text-sm font-semibold text-zinc-500 transition hover:text-zinc-800 focus:outline-none focus:ring-2 focus:ring-emerald-400 dark:text-zinc-300 dark:hover:text-white"
-          >
-            <span aria-hidden="true">&times;</span>
-          </button>
+            className="ml-2 h-7 w-7 text-zinc-500 hover:text-zinc-800 focus:ring-emerald-400 dark:text-zinc-300 dark:hover:text-white"
+            iconClassName="h-4 w-4"
+          />
         </div>
       </div>
     </Transition>

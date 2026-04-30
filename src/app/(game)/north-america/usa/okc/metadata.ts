@@ -13,6 +13,6 @@ export const metadata: Metadata = withCityAssetMetadata('okc', {
     description: 'How many of the OKC streetcar stops can you remember?',
     type: 'website',
     locale: 'en_US',
-    url: 'https://metro-memory.com/north-america/usa/okc',
+    url: 'https://metro-memory.xyz/north-america/usa/okc',
   },
 })

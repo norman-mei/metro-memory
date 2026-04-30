@@ -30,7 +30,7 @@ export const METADATA: Metadata = {
     description: 'How many of the Harbin Metro stations can you name from memory?',
     type: 'website',
     locale: 'en_US',
-    url: 'https://metro-memory.com/asia/china/harbin',
+    url: 'https://metro-memory.xyz/asia/china/harbin',
   },
 }
 

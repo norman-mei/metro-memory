@@ -129,7 +129,7 @@ export const METADATA: Metadata = {
       'How many of the Montreal metro stations can you name from memory?',
     type: 'website',
     locale: 'en_CA',
-    url: 'https://metro-memory.com/north-america/canada/montreal',
+    url: 'https://metro-memory.xyz/north-america/canada/montreal',
   },
 }
 

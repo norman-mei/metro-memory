@@ -4,7 +4,7 @@ import { buildPlaceholderConfig } from '@/app/(game)/_placeholder/config'
 const config = buildPlaceholderConfig({
   citySlug: 'huangshi',
   cityPath: 'asia/china/huangshi',
-  cityTitle: 'Huangshi (é»„çŸ³)',
+  cityTitle: 'Huangshi (黄石)',
 })
 
 

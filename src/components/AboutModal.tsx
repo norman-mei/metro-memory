@@ -1,9 +1,11 @@
 'use client'
 
+import { useSettings } from '@/context/SettingsContext'
 import { Fragment, SVGProps } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import { useConfig } from '@/lib/configContext'
 import useTranslation from '@/hooks/useTranslation'
+import { formatLocalizedCityName } from '@/lib/cityNameDisplay'
 
 const GitHubLogo = (props: SVGProps<SVGSVGElement>) => (
   <svg
@@ -32,8 +34,35 @@ export default function AboutModal({
   open: boolean
   setOpen: (open: boolean) => void
 }) {
-  const { METADATA } = useConfig()
+  const { METADATA, CITY_NAME } = useConfig()
+  const { settings } = useSettings()
   const { t } = useTranslation()
+  const metadataTitle =
+    typeof METADATA.title === 'string'
+      ? METADATA.title
+      : typeof METADATA.title === 'object' &&
+          METADATA.title &&
+          'absolute' in METADATA.title &&
+          typeof METADATA.title.absolute === 'string'
+        ? METADATA.title.absolute
+        : typeof METADATA.title === 'object' &&
+            METADATA.title &&
+            'default' in METADATA.title &&
+            typeof METADATA.title.default === 'string'
+          ? METADATA.title.default
+          : CITY_NAME
+  const derivedTitle = metadataTitle
+    .replace(/\s*\|\s*.*$/, '')
+    .replace(/Metro Memory Game/gi, '')
+    .replace(/Metro Memory/gi, '')
+    .replace(/\bGame\b/gi, '')
+    .trim()
+  const localizedTitle = formatLocalizedCityName(
+    derivedTitle || CITY_NAME,
+    CITY_NAME,
+    settings.language,
+  )
+
   return (
     <Transition.Root show={open} as={Fragment}>
       <Dialog as="div" className="relative z-50" onClose={setOpen}>
@@ -67,23 +96,23 @@ export default function AboutModal({
                       as="h3"
                       className="text-lg font-bold leading-6 text-gray-900 dark:text-zinc-100"
                     >
-                      {METADATA.title as string}
+                      {localizedTitle}
                     </Dialog.Title>
                   </div>
                   <div className="mt-4 space-y-4 text-left">
                     <p className="text-sm text-gray-600 dark:text-zinc-300">
-                      This fork is currently maintained by{' '}
+                      {t('aboutMaintainedBy')}{' '}
                       <span className="font-semibold text-gray-900 dark:text-zinc-100">
                         kirklandwaterbot
                       </span>
-                      . Reach out or follow along on GitHub.
+                      . {t('aboutFollowOnGithub')}
                     </p>
                     <div className="rounded-xl bg-gray-50 p-4 dark:bg-zinc-800/80">
                       <h4 className="text-sm font-semibold text-gray-900 dark:text-zinc-100">
-                        Connect with kirklandwaterbot
+                        {t('aboutConnectWithMaintainer')}
                       </h4>
                       <p className="mt-1 text-sm text-gray-600 dark:text-zinc-300">
-                        Say hi, share feedback, or see what&apos;s next.
+                        {t('aboutConnectWithMaintainerDesc')}
                       </p>
                       <div className="mt-4 flex justify-center gap-4">
                         {SOCIAL_LINKS.map(({ href, label, Icon }) => (
@@ -103,19 +132,19 @@ export default function AboutModal({
                     </div>
                     <div className="rounded-xl border border-gray-200 p-4 dark:border-[#18181b] dark:bg-zinc-800/80">
                       <h4 className="text-sm font-semibold text-gray-900 dark:text-zinc-100">
-                        Original Project
+                        {t('creditsOriginalProject')}
                       </h4>
                       <p className="mt-1 text-sm text-gray-600 dark:text-zinc-300">
-                        This fork builds on the open source{' '}
+                        {t('aboutOriginalProjectPrefix')}{' '}
                         <a
                           href="https://github.com/benjamintd/metro-memory.com"
                           target="_blank"
                           rel="noreferrer"
                           className="font-medium text-gray-900 underline decoration-gray-300 underline-offset-4 hover:decoration-gray-500 dark:text-zinc-100 dark:decoration-zinc-600 dark:hover:decoration-zinc-400"
                         >
-                          metro-memory.com repository
+                          metro-memory.xyz repository
                         </a>{' '}
-                        created by{' '}
+                        {t('aboutOriginalProjectCreatedBy')}{' '}
                         <a
                           href="https://github.com/benjamintd"
                           target="_blank"

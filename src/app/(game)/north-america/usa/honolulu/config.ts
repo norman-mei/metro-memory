@@ -32,7 +32,7 @@ export const METADATA: Metadata = {
       'How many of the Honolulu Skyline stations can you name from memory?',
     type: 'website',
     locale: 'en_US',
-    url: 'https://metro-memory.com/north-america/usa/honolulu',
+    url: 'https://metro-memory.xyz/north-america/usa/honolulu',
   },
 }
 

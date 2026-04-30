@@ -26,7 +26,7 @@ export function Avatar({
 }) {
   return (
     <Link
-      href="/metro-memory"
+      href="/"
       aria-label="Home"
       className={clsx(className, 'pointer-events-auto')}
       {...props}

@@ -1,9 +1,7 @@
 import { type Metadata } from 'next'
-import { headers } from 'next/headers'
 
 import { Providers } from '@/app/(website)/providers'
 import { Layout } from '@/components/Layout'
-import { getRequestLocaleDefaults } from '@/lib/requestLocaleDefaults'
 
 export const metadata: Metadata = {
   title: {
@@ -18,10 +16,8 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-  const requestLocaleDefaults = getRequestLocaleDefaults(await headers())
-
   return (
-    <Providers requestLocaleDefaults={requestLocaleDefaults}>
+    <Providers>
       <div className="flex min-h-screen w-full antialiased">
         <Layout>{children}</Layout>
       </div>

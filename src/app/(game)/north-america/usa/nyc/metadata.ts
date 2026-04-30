@@ -15,6 +15,6 @@ export const metadata: Metadata = withCityAssetMetadata('nyc', {
       'How many New York metro rapid transit stations can you name from memory?',
     type: 'website',
     locale: 'en_US',
-    url: 'https://metro-memory.com/north-america/usa/nyc',
+    url: 'https://metro-memory.xyz/north-america/usa/nyc',
   },
 })

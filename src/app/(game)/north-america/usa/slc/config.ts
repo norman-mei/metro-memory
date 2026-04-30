@@ -41,7 +41,7 @@ export const METADATA: Metadata = {
     description: 'How many of Salt Lake City\'s rail stops can you name from memory?',
     type: 'website',
     locale: 'en_US',
-    url: 'https://metro-memory.com/north-america/usa/slc',
+    url: 'https://metro-memory.xyz/north-america/usa/slc',
   },
 }
 

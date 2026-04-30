@@ -146,7 +146,7 @@ export const METADATA: Metadata = {
       'İstanbul metrosu hakkında bilgi edinin ve hafızanızı test edin.',
     type: 'website',
     locale: 'tr_TR',
-    url: 'https://metro-memory.com/europe/turkey/istanbul',
+    url: 'https://metro-memory.xyz/europe/turkey/istanbul',
   },
 }
 

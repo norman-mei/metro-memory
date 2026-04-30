@@ -5,14 +5,19 @@ export const revalidate = 0
 
 export async function GET() {
   if (process.env.NODE_ENV !== 'development') {
-    return NextResponse.json({ version: 'production', enabled: false })
+    return NextResponse.json({
+      version: 'production',
+      sourceVersion: 'production',
+      assetVersion: 'production',
+      enabled: false,
+    })
   }
 
   const { getSiteVersion } = await import('./version-dev')
-  const version = await getSiteVersion()
+  const versionInfo = await getSiteVersion()
 
   return NextResponse.json(
-    { version, enabled: true },
+    { ...versionInfo, enabled: true },
     {
       headers: {
         'Cache-Control': 'no-store, no-cache, must-revalidate',

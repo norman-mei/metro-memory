@@ -31,7 +31,7 @@ export const METADATA: Metadata = {
     description: 'How many of The Hop streetcar stops can you name from memory?',
     type: 'website',
     locale: 'en_US',
-    url: 'https://metro-memory.com/north-america/usa/milwaukee',
+    url: 'https://metro-memory.xyz/north-america/usa/milwaukee',
   },
 }
 

@@ -14,6 +14,6 @@ export const metadata: Metadata = withCityAssetMetadata('vienna', {
       'Wie viele U-Bahn-Stationen können Sie auswendig nennen? Spielen Sie das Wien Bahn Memory und finden Sie es heraus!',
     type: 'website',
     locale: 'de_DE',
-    url: 'https://metro-memory.com/europe/austria/vienna',
+    url: 'https://metro-memory.xyz/europe/austria/vienna',
   },
 })

@@ -15,6 +15,6 @@ export const metadata: Metadata = withCityAssetMetadata('boston', {
       'How many of the Boston metro stations can you name from memory?',
     type: 'website',
     locale: 'en_US',
-    url: 'https://metro-memory.com/north-america/usa/boston',
+    url: 'https://metro-memory.xyz/north-america/usa/boston',
   },
 })

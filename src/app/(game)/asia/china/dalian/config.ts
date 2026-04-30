@@ -51,7 +51,7 @@ export const METADATA: Metadata = {
       'How many Dalian (大连) metro, tram, and Haida Cableway stops can you name from memory?',
     type: 'website',
     locale: 'en_US',
-    url: 'https://metro-memory.com/asia/china/dalian',
+    url: 'https://metro-memory.xyz/asia/china/dalian',
   },
 }
 

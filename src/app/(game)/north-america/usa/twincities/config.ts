@@ -46,7 +46,7 @@ export const METADATA: Metadata = {
       'How many of the Minneapolis-St. Paul METRO & airport tram stations can you name from memory?',
     type: 'website',
     locale: 'en_US',
-    url: 'https://metro-memory.com/north-america/usa/twincities',
+    url: 'https://metro-memory.xyz/north-america/usa/twincities',
   },
 }
 

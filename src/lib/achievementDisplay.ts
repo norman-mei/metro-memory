@@ -137,11 +137,6 @@ const SIMPLIFIED_GLOBAL_COPY: Record<string, AchievementCopy> = {
     description: '???',
     secretDescription: '打开 10 座不同城市的统计面板。',
   },
-  'the-cartographer': {
-    title: '制图师',
-    description: '???',
-    secretDescription: '切换地图名称 20 次。',
-  },
   'metro-memory-master': {
     title: '终极完成者',
     description: '解锁所有城市成就即可获得这枚最终徽章。',
@@ -263,11 +258,6 @@ const TRADITIONAL_GLOBAL_COPY: Record<string, AchievementCopy> = {
     title: '檔案管理員',
     description: '???',
     secretDescription: '開啟 10 座不同城市的統計面板。',
-  },
-  'the-cartographer': {
-    title: '製圖師',
-    description: '???',
-    secretDescription: '切換地圖名稱 20 次。',
   },
   'metro-memory-master': {
     title: '終極完成者',

@@ -31,7 +31,7 @@ export const METADATA: Metadata = {
     description: 'How many Tren Urbano stations in San Juan can you name from memory?',
     type: 'website',
     locale: 'en_US',
-    url: 'https://metro-memory.com/north-america/usa/san-juan',
+    url: 'https://metro-memory.xyz/north-america/usa/san-juan',
   },
 }
 

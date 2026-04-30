@@ -2,6 +2,7 @@
 
 import { Transition } from '@headlessui/react'
 import { Fragment, useEffect, useRef, useState } from 'react'
+import useTranslation from '@/hooks/useTranslation'
 
 type ZenModeToastProps = {
   zenMode: boolean
@@ -13,6 +14,7 @@ const DISMISS_MS = 2000
 export default function ZenModeToast({ zenMode, toggleKey }: ZenModeToastProps) {
   const [show, setShow] = useState(false)
   const previousZenMode = useRef(zenMode)
+  const { t } = useTranslation()
 
   useEffect(() => {
     if (previousZenMode.current === zenMode) {
@@ -39,8 +41,8 @@ export default function ZenModeToast({ zenMode, toggleKey }: ZenModeToastProps) 
       <div className="pointer-events-none fixed bottom-10 left-1/2 z-[100] -translate-x-1/2">
         <div className="rounded-full bg-zinc-900/90 px-6 py-2 text-sm font-semibold text-white shadow-xl backdrop-blur dark:bg-zinc-100/90 dark:text-zinc-900">
           {zenMode
-            ? `Zen Mode On${toggleKey ? ` — press ${toggleKey} to turn off` : ''}`
-            : `Zen Mode Off${toggleKey ? ` — press ${toggleKey} to turn on` : ''}`}
+            ? t('zenModeToastOn', { key: toggleKey ?? '' })
+            : t('zenModeToastOff', { key: toggleKey ?? '' })}
         </div>
       </div>
     </Transition>

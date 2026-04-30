@@ -81,7 +81,7 @@ export const METADATA: Metadata = {
       'How many of the Dallas–Fort Worth DART, Trinity Metro, DCTA and Skylink stops can you name from memory?',
     type: 'website',
     locale: 'en_US',
-    url: 'https://metro-memory.com/north-america/usa/dallas',
+    url: 'https://metro-memory.xyz/north-america/usa/dallas',
   },
 }
 

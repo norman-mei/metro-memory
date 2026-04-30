@@ -1,8 +1,10 @@
 import CityStatsPanel from '@/components/CityStatsPanel'
 import OverflowMarquee from '@/components/OverflowMarquee'
 import { useAuth } from '@/context/AuthContext'
+import { useSettings } from '@/context/SettingsContext'
 import useTranslation from '@/hooks/useTranslation'
 import { getCityOpenGraphImagePath } from '@/lib/cityAssets'
+import { formatLocalizedCityName } from '@/lib/cityNameDisplay'
 import { ICity, isCityDisabled as isCityDisabledFlag } from '@/lib/citiesConfig'
 import { isMiniCitySlug } from '@/lib/miniCities'
 import {
@@ -142,6 +144,7 @@ const CityCard = ({
   const slug = useMemo(() => getSlugFromLink(city.link), [city.link])
   const cityPath = useMemo(() => getPathFromLink(city.link), [city.link])
   const { progressSummaries } = useAuth()
+  const { settings } = useSettings()
   const { t } = useTranslation()
 
   useEffect(() => {
@@ -441,13 +444,14 @@ const CityCard = ({
     const headingStyle: CSSProperties | undefined = showComingSoon
       ? { color: variant === 'cover' ? '#d4d4d8' : '#a1a1aa' }
       : undefined
-    const headingContent = showComingSoon ? 'COMING SOON' : city.name
+    const headingContent = showComingSoon ? t('comingSoonLabel') : city.name
+    const comingSoonSuffix = cityDisabled && !showComingSoon ? ` ${t('comingSoonSuffix')}` : ''
 
     if (variant === 'cover') {
       return (
         <p className={headingClasses} style={headingStyle}>
           {headingContent}
-          {cityDisabled && !showComingSoon && ' (coming soon)'}
+          {comingSoonSuffix}
         </p>
       )
     }
@@ -456,7 +460,7 @@ const CityCard = ({
       return (
         <p className={headingClasses} style={headingStyle}>
           {headingContent}
-          {cityDisabled && !showComingSoon && ' (coming soon)'}
+          {comingSoonSuffix}
         </p>
       )
     }
@@ -469,7 +473,7 @@ const CityCard = ({
           title={headingContent}
         >
           {headingContent}
-          {cityDisabled && !showComingSoon && ' (coming soon)'}
+          {comingSoonSuffix}
         </p>
       )
     }
@@ -485,7 +489,7 @@ const CityCard = ({
       >
         <>
           {headingContent}
-          {cityDisabled && !showComingSoon && ' (coming soon)'}
+          {comingSoonSuffix}
         </>
       </OverflowMarquee>
     )
@@ -537,6 +541,11 @@ const CityCard = ({
           const percentLabel = `${(miniProgress * 100).toFixed(1)}%`
           const progressColor = `hsl(${miniProgress * 120}, 70%, 45%)`
           const countrySlug = getCountryFromLink(miniCity.link)
+          const localizedMiniCityName = formatLocalizedCityName(
+            miniCity.name,
+            miniCity.slug,
+            settings.language,
+          )
           return (
             <button
               key={miniCity.slug}
@@ -559,7 +568,7 @@ const CityCard = ({
                   <span className="tabular-nums">{getCountryAbbrev(countrySlug)}</span>
                 </div>
                 <div className="absolute right-2 top-2 z-10 inline-flex items-center rounded-full bg-white/88 px-2.5 py-1 text-[10px] font-black uppercase tracking-[0.16em] text-violet-700 shadow-md ring-1 ring-white/70 backdrop-blur dark:bg-black/70 dark:text-violet-200 dark:ring-black/60">
-                  Mini City
+                  {t('miniCityBadge')}
                 </div>
                 <Image
                   draggable={false}
@@ -573,14 +582,14 @@ const CityCard = ({
                   <div className="flex items-end justify-between gap-3">
                     <div className="min-w-0">
                       <div className="truncate text-base font-bold text-white drop-shadow">
-                        {miniCity.name}
+                        {localizedMiniCityName}
                       </div>
                       <div className="mt-1 text-xs font-medium text-white/85">
-                        {miniCity.found}/{miniCity.total} stations
+                        {miniCity.found}/{miniCity.total} {t('stationsFound')}
                       </div>
                     </div>
                     <div className="shrink-0 rounded-full border border-white/70 bg-white/90 px-2.5 py-1 text-[11px] font-semibold text-zinc-800 shadow-sm">
-                      Play
+                      {t('playLabel')}
                     </div>
                   </div>
                 </div>
@@ -588,13 +597,13 @@ const CityCard = ({
               <div className="flex items-center gap-3 px-3.5 py-3">
                 <div className="min-w-0 flex-1">
                   <div className="text-xs font-semibold uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400">
-                    Progress
+                    {t('progressLabel')}
                   </div>
                   <div
                     className="text-sm font-semibold"
                     style={{ color: progressColor }}
                   >
-                    {percentLabel} stations found
+                    {percentLabel} {t('stationsFound')}
                   </div>
                 </div>
                 <div className="h-5 w-5 shrink-0">
@@ -744,11 +753,11 @@ const CityCard = ({
           {renderHeadingSection()}
           {renderMeta()}
           {renderMiniCityCards()}
-          {variant === 'globe' && (
-            <div className="mt-3 flex w-full items-center justify-center rounded-md bg-zinc-600 px-3 py-2 text-sm font-semibold text-white shadow-sm group-hover:bg-zinc-500">
-              Play {city.name} Metro Memory
-            </div>
-          )}
+            {variant === 'globe' && (
+              <div className="mt-3 flex w-full items-center justify-center rounded-md bg-zinc-600 px-3 py-2 text-sm font-semibold text-white shadow-sm group-hover:bg-zinc-500">
+                {t('playMetroMemoryCta', { city: city.name })}
+              </div>
+            )}
         </div>
       </>
     )

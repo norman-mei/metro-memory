@@ -15,6 +15,6 @@ export const metadata: Metadata = withCityAssetMetadata('kyoto', {
       'How many Kyoto Municipal Transportation Bureau, Keifuku Electric Railroad Co., Ltd, and Hieizan Railway stations can you name from memory?',
     type: 'website',
     locale: 'ja_JP',
-    url: 'https://metro-memory.com/asia/japan/kyoto',
+    url: 'https://metro-memory.xyz/asia/japan/kyoto',
   },
 })

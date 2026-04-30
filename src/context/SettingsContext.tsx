@@ -7,6 +7,7 @@ import {
     type AccentColorValue,
     isPresetAccentColor,
 } from '@/lib/accentColors'
+import { DEFAULT_AUTO_SUBMIT_ON_MATCH } from '@/lib/guessInputDefaults'
 import { isSupportedLanguageCode, normalizeLanguageCode } from '@/lib/i18n'
 import {
     createContext,
@@ -314,12 +315,12 @@ export const DEFAULT_KEYBINDINGS: Record<KeybindingAction, string> = {
 
 type UpdateSettingsOptions = { silent?: boolean }
 
-const DEFAULT_SETTINGS: Settings = {
+export const DEFAULT_SETTINGS: Settings = {
   confettiEnabled: true,
   achievementToastsEnabled: true,
   achievementToastDurationSec: 15,
   stopConfettiAfterCompletion: false,
-  autoSubmitOnMatch: true,
+  autoSubmitOnMatch: DEFAULT_AUTO_SUBMIT_ON_MATCH,
   stationMatchingMode: 'normal',
   accentColor: DEFAULT_ACCENT_COLOR_ID,
   fontSize: 'md',

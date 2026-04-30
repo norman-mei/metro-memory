@@ -30,7 +30,7 @@ export const METADATA: Metadata = {
     description: 'How many Gold Coast G:link stops can you name from memory?',
     type: 'website',
     locale: 'en_AU',
-    url: 'https://metro-memory.com/oceania/australia/goldcoast',
+    url: 'https://metro-memory.xyz/oceania/australia/goldcoast',
   },
 }
 

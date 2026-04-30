@@ -31,7 +31,7 @@ export const METADATA: Metadata = {
     description: 'How many stops along the Edinburgh Tram can you remember?',
     type: 'website',
     locale: 'en_GB',
-    url: 'https://metro-memory.com/europe/uk/edinburgh',
+    url: 'https://metro-memory.xyz/europe/uk/edinburgh',
   },
 }
 

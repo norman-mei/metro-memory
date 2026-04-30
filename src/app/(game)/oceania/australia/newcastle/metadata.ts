@@ -13,6 +13,6 @@ export const metadata: Metadata = withCityAssetMetadata('newcastle', {
     description: 'How many of the Newcastle Light Rail stops can you name from memory?',
     type: 'website',
     locale: 'en_US',
-    url: 'https://metro-memory.com/oceania/australia/newcastle',
+    url: 'https://metro-memory.xyz/oceania/australia/newcastle',
   },
 })

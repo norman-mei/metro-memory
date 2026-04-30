@@ -36,7 +36,7 @@ export const METADATA: Metadata = {
     description: 'How many of the Kaohsiung MRT and LRT stations can you name from memory?',
     type: 'website',
     locale: 'en_US',
-    url: 'https://metro-memory.com/asia/taiwan/kaohsiung',
+    url: 'https://metro-memory.xyz/asia/taiwan/kaohsiung',
   },
 }
 

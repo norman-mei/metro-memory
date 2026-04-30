@@ -4,7 +4,7 @@ import { buildPlaceholderConfig } from '@/app/(game)/_placeholder/config'
 const config = buildPlaceholderConfig({
   citySlug: 'hiroshima',
   cityPath: 'asia/japan/hiroshima',
-  cityTitle: 'Hiroshima (åºƒå³¶)',
+  cityTitle: 'Hiroshima (広島)',
 })
 
 

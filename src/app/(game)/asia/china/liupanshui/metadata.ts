@@ -13,6 +13,6 @@ export const metadata: Metadata = withCityAssetMetadata('liupanshui', {
     description: 'How many Liupanshui Tourism Monorail stations can you name from memory?',
     type: 'website',
     locale: 'en_US',
-    url: 'https://metro-memory.com/asia/china/liupanshui',
+    url: 'https://metro-memory.xyz/asia/china/liupanshui',
   },
 })

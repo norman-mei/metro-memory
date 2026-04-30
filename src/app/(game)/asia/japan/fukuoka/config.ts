@@ -32,7 +32,7 @@ export const METADATA: Metadata = {
     description: 'How many Fukuoka City Transportation Bureau stations can you name from memory?',
     type: 'website',
     locale: 'ja_JP',
-    url: 'https://metro-memory.com/asia/japan/fukuoka',
+    url: 'https://metro-memory.xyz/asia/japan/fukuoka',
   },
 }
 

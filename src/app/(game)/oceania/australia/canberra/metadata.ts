@@ -13,6 +13,6 @@ export const metadata: Metadata = withCityAssetMetadata('canberra', {
     description: 'How many of the Canberra Metro stations can you name from memory?',
     type: 'website',
     locale: 'en_US',
-    url: 'https://metro-memory.com/oceania/australia/canberra',
+    url: 'https://metro-memory.xyz/oceania/australia/canberra',
   },
 })

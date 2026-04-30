@@ -4,12 +4,24 @@ import useNormalizeString from '@/hooks/useNormalizeString'
 import usePushEvent from '@/hooks/usePushEvent'
 import useTranslation from '@/hooks/useTranslation'
 import { useConfig } from '@/lib/configContext'
+import { DEFAULT_AUTO_SUBMIT_ON_MATCH } from '@/lib/guessInputDefaults'
 import { appendMissedGuess } from '@/lib/missedGuesses'
+import {
+  findExactStationMatches,
+  shouldAutoSubmitStationInput,
+} from '@/lib/stationMatching'
 import { DataFeature } from '@/lib/types'
 import { Transition } from '@headlessui/react'
 import classNames from 'classnames'
 import Fuse from 'fuse.js'
-import { KeyboardEventHandler, useCallback, useEffect, useRef, useState } from 'react'
+import {
+  CompositionEventHandler,
+  KeyboardEventHandler,
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+} from 'react'
 import { MdClose, MdHistory } from 'react-icons/md'
 
 const MENU_TOGGLE_EVENT = 'metro-memory:menu-toggle'
@@ -48,7 +60,7 @@ const Input = ({
   disabled = false,
   onGuessResult,
   onInputEdit,
-  autoSubmitOnMatch = true,
+  autoSubmitOnMatch = DEFAULT_AUTO_SUBMIT_ON_MATCH,
   strictMatching = false,
   forgivingMatching = false,
 }: {
@@ -93,6 +105,9 @@ const Input = ({
   const [alreadyFound, setAlreadyFound] = useState<boolean>(false)
   const pushEvent = usePushEvent()
   const lastSearchRef = useRef<string>('')
+  const isComposingRef = useRef(false)
+  const submitAfterCompositionRef = useRef(false)
+  const suppressEnterUntilRef = useRef(0)
   useEffect(() => {
     return () => {
       if (wrongTimeoutRef.current) {
@@ -224,8 +239,15 @@ const Input = ({
             ? sanitizedSearch.match(/\bterminal\s*([1-8])\b/i)?.[1]
             : undefined
         const foundSet = new Set(found || [])
-        const candidateSet = new Set<number>()
-        let hasCandidate = false
+        const candidateMatches: Array<{ id: number; exactStrength: number }> =
+          findExactStationMatches(
+            idMap.values(),
+            sanitizedSearch,
+            normalizeString,
+            stripOptionalPrefixes,
+          )
+        const candidateIdSet = new Set(candidateMatches.map((candidate) => candidate.id))
+        let hasCandidate = candidateMatches.length > 0
         const suggestionNames: string[] = []
         const suggestionNameSet = new Set<string>()
 
@@ -250,17 +272,33 @@ const Input = ({
           const propertiesWithAlternates = result.item.properties as typeof result.item.properties & {
             alternate_names?: string[]
           }
-          const candidateValues = [
+          const exactPrimaryCandidates = [
             result.item.properties?.name,
             result.item.properties?.long_name,
             result.item.properties?.short_name,
-            ...(Array.isArray(propertiesWithAlternates.alternate_names)
-              ? propertiesWithAlternates.alternate_names
-              : []),
           ]
             .filter((entry): entry is string => typeof entry === 'string' && entry.trim().length > 0)
             .map((entry) => stripOptionalPrefixes(normalizeString(entry)))
-          const hasExactCandidate = candidateValues.some((candidate) => candidate === sanitizedSearch)
+          const exactAlternateCandidates = Array.isArray(
+            propertiesWithAlternates.alternate_names,
+          )
+            ? propertiesWithAlternates.alternate_names
+                .filter(
+                  (entry): entry is string =>
+                    typeof entry === 'string' && entry.trim().length > 0,
+                )
+                .map((entry) => stripOptionalPrefixes(normalizeString(entry)))
+            : []
+          const candidateValues = [
+            ...exactPrimaryCandidates,
+            ...exactAlternateCandidates,
+          ]
+          const exactStrength = exactPrimaryCandidates.includes(sanitizedSearch)
+            ? 2
+            : exactAlternateCandidates.includes(sanitizedSearch)
+              ? 1
+              : 0
+          const hasExactCandidate = exactStrength > 0
           const hasNearCandidate =
             forgivingMatching &&
             sanitizedSearch.length >= 5 &&
@@ -272,23 +310,24 @@ const Input = ({
           if (
             (strictMatching && hasExactCandidate) ||
             (!strictMatching &&
-              result.matches &&
-              result.matches.length > 0 &&
-              (result.matches.some(
-                (match) => {
-                  const [firstStart] = match.indices[0]
-                  const lastIndex = match.indices[match.indices.length - 1][1]
-                  const isPrefixMatch = firstStart === 0
-                  const coversWholeValue =
-                    match.value!.length - lastIndex < 2 &&
-                    Math.abs(match.value!.length - sanitizedSearch.length) < 4
-                  const coversSearchLength =
-                    isNonLatinSearch && lastIndex - firstStart + 1 >= sanitizedSearch.length
+              (hasExactCandidate ||
+                (result.matches &&
+                  result.matches.length > 0 &&
+                  (result.matches.some(
+                    (match) => {
+                      const [firstStart] = match.indices[0]
+                      const lastIndex = match.indices[match.indices.length - 1][1]
+                      const isPrefixMatch = firstStart === 0
+                      const coversWholeValue =
+                        match.value!.length - lastIndex < 2 &&
+                        Math.abs(match.value!.length - sanitizedSearch.length) < 4
+                      const coversSearchLength =
+                        isNonLatinSearch && lastIndex - firstStart + 1 >= sanitizedSearch.length
 
-                  return isPrefixMatch && (coversWholeValue || coversSearchLength)
-                },
-              ) ||
-                hasNearCandidate))
+                      return isPrefixMatch && (coversWholeValue || coversSearchLength)
+                    },
+                  ) ||
+                    hasNearCandidate))))
           ) {
             const line = result.item.properties?.line
             const stationName =
@@ -314,12 +353,27 @@ const Input = ({
             }
 
             const id = Number(result.item.id)
-            if (Number.isFinite(id)) {
+            if (Number.isFinite(id) && !candidateIdSet.has(id)) {
               hasCandidate = true
-              candidateSet.add(id)
+              candidateMatches.push({ id, exactStrength })
+              candidateIdSet.add(id)
             }
           }
         }
+
+        const strongestExactStrength = candidateMatches.reduce(
+          (max, candidate) => Math.max(max, candidate.exactStrength),
+          0,
+        )
+        const candidateSet = new Set<number>(
+          candidateMatches
+            .filter((candidate) =>
+              strongestExactStrength > 0
+                ? candidate.exactStrength === strongestExactStrength
+                : true,
+            )
+            .map((candidate) => candidate.id),
+        )
 
         const expandedSet = new Set<number>()
         candidateSet.forEach((id) => {
@@ -500,9 +554,37 @@ const Input = ({
     ],
   )
 
+  const maybeAutoSubmit = useCallback(
+    (value: string, isComposing: boolean) => {
+      if (!autoSubmitOnMatch) {
+        return false
+      }
+
+      const shouldAutoSubmit = shouldAutoSubmitStationInput({
+        features: idMap.values(),
+        rawInput: value,
+        normalizeValue: normalizeString,
+        stripOptionalPrefixes,
+        isComposing,
+      })
+      if (!shouldAutoSubmit) {
+        return false
+      }
+
+      submitGuess(value, 'auto')
+      return true
+    },
+    [autoSubmitOnMatch, idMap, normalizeString, stripOptionalPrefixes, submitGuess],
+  )
+
   const onKeyDown: KeyboardEventHandler<HTMLInputElement> = useCallback(
     (e) => {
       if (disabled) {
+        return
+      }
+
+      if (e.key === 'Enter' && Date.now() < suppressEnterUntilRef.current) {
+        e.preventDefault()
         return
       }
 
@@ -554,12 +636,50 @@ const Input = ({
       }
 
       if (e.key !== 'Enter') return
+      if (
+        isComposingRef.current ||
+        e.nativeEvent.isComposing ||
+        (e.nativeEvent as KeyboardEvent & { keyCode?: number }).keyCode === 229
+      ) {
+        submitAfterCompositionRef.current = true
+        e.preventDefault()
+        return
+      }
       if (!search) return
 
       e.preventDefault()
       submitGuess(search, 'manual')
     },
     [disabled, history, onInputEdit, search, submitGuess],
+  )
+
+  const handleCompositionStart: CompositionEventHandler<HTMLInputElement> =
+    useCallback(() => {
+      isComposingRef.current = true
+    }, [])
+
+  const handleCompositionEnd: CompositionEventHandler<HTMLInputElement> = useCallback(
+    (event) => {
+      isComposingRef.current = false
+      const shouldSubmitAfterComposition = submitAfterCompositionRef.current
+      submitAfterCompositionRef.current = false
+
+      const value = event.currentTarget.value
+      if (!value.trim()) {
+        return
+      }
+
+      if (shouldSubmitAfterComposition) {
+        suppressEnterUntilRef.current = Date.now() + 100
+        window.setTimeout(() => {
+          submitGuess(value, 'manual')
+        }, 0)
+        return
+      }
+
+      maybeAutoSubmit(value, false)
+    },
+    [maybeAutoSubmit, submitGuess],
   )
 
   return (
@@ -594,13 +714,17 @@ const Input = ({
             setSuggestions([])
           }
           lastSearchRef.current = value
-          if (autoSubmitOnMatch && value.trim().length > 0) {
-            submitGuess(value, 'auto')
-          }
+          maybeAutoSubmit(
+            value,
+            Boolean((e.nativeEvent as Event & { isComposing?: boolean }).isComposing) ||
+              isComposingRef.current,
+          )
         }}
         id="input"
         type="text"
         autoFocus={autoFocus && !disabled}
+        onCompositionStart={handleCompositionStart}
+        onCompositionEnd={handleCompositionEnd}
         onKeyDown={onKeyDown}
         disabled={disabled}
       ></input>

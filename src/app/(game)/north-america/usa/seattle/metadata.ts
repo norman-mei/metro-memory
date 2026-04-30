@@ -13,6 +13,6 @@ export const metadata: Metadata = withCityAssetMetadata('seattle', {
     description: 'Test your knowledge of Puget Sound transit lines from Link to SEA Underground.',
     type: 'website',
     locale: 'en_US',
-    url: 'https://metro-memory.com/north-america/usa/seattle',
+    url: 'https://metro-memory.xyz/north-america/usa/seattle',
   },
 })

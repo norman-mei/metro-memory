@@ -15,6 +15,6 @@ export const metadata: Metadata = withCityAssetMetadata('cleveland', {
       'How many of the Cleveland RTA Rapid Transit stations can you name from memory?',
     type: 'website',
     locale: 'en_US',
-    url: 'https://metro-memory.com/north-america/usa/cleveland',
+    url: 'https://metro-memory.xyz/north-america/usa/cleveland',
   },
 })

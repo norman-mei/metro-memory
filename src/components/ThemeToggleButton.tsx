@@ -14,8 +14,10 @@ const THEME_ITEMS = [
 
 export default function ThemeToggleButton({
   className,
+  hoverLabel,
 }: {
   className?: string
+  hoverLabel?: string
 }) {
   const { theme, setTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
@@ -40,7 +42,7 @@ export default function ThemeToggleButton({
       type="button"
       aria-label={mounted ? `Switch to ${nextThemeItem.label.toLowerCase()}` : 'Cycle theme'}
       className={classNames(
-        'group inline-flex items-center justify-center rounded-full bg-white/90 px-3 py-2 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur transition dark:bg-zinc-800/90 dark:ring-white/10 dark:hover:ring-white/20',
+        'group inline-flex min-w-[3rem] items-center justify-center overflow-hidden rounded-full bg-white px-3 py-2 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur transition hover:bg-zinc-50 dark:bg-zinc-800 dark:hover:bg-zinc-700 dark:ring-white/10 dark:hover:ring-white/20',
         className,
       )}
       onClick={handleToggleTheme}
@@ -48,12 +50,17 @@ export default function ThemeToggleButton({
       <ActiveThemeIcon
         aria-hidden="true"
         className={classNames(
-          'h-8 w-8 transition md:h-6 md:w-6',
+          'h-6 w-6 shrink-0 transition',
           currentTheme === 'light' && 'text-amber-500 group-hover:text-amber-600',
           currentTheme === 'dark' && 'text-zinc-200 group-hover:text-white',
           currentTheme === 'system' && 'text-sky-600 group-hover:text-sky-700 dark:text-sky-300 dark:group-hover:text-sky-200',
         )}
       />
+      {hoverLabel ? (
+        <span className="pointer-events-none hidden max-w-0 shrink-0 overflow-hidden whitespace-nowrap text-sm font-medium opacity-0 transition-all duration-200 group-hover:ml-2 group-hover:max-w-[220px] group-hover:opacity-100 group-focus-visible:ml-2 group-focus-visible:max-w-[220px] group-focus-visible:opacity-100 lg:inline-block">
+          {hoverLabel}
+        </span>
+      ) : null}
     </button>
   )
 }

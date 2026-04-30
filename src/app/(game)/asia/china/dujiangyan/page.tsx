@@ -4,7 +4,7 @@ import { buildPlaceholderConfig } from '@/app/(game)/_placeholder/config'
 const config = buildPlaceholderConfig({
   citySlug: 'dujiangyan',
   cityPath: 'asia/china/dujiangyan',
-  cityTitle: 'Dujiangyan (éƒ½æ±Ÿå °)',
+  cityTitle: 'Dujiangyan (都江堰)',
 })
 
 

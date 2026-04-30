@@ -13,6 +13,6 @@ export const metadata: Metadata = withCityAssetMetadata('toronto-waterloo', {
     description: 'How many of the TTC, GO Transit, UP Express, and ION stops can you name from memory?',
     type: 'website',
     locale: 'en_US',
-    url: 'https://metro-memory.com/north-america/canada/toronto-waterloo',
+    url: 'https://metro-memory.xyz/north-america/canada/toronto-waterloo',
   },
 })

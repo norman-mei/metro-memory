@@ -51,7 +51,7 @@ export const METADATA: Metadata = {
       'How many of the Phoenix-Tempe Valley Metro and PHX SkyTrain stops can you name from memory?',
     type: 'website',
     locale: 'en_US',
-    url: 'https://metro-memory.com/north-america/usa/phoenix',
+    url: 'https://metro-memory.xyz/north-america/usa/phoenix',
   },
 }
 

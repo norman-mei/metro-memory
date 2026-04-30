@@ -4,7 +4,7 @@ import { buildPlaceholderConfig } from '@/app/(game)/_placeholder/config'
 const config = buildPlaceholderConfig({
   citySlug: 'chongqing',
   cityPath: 'asia/china/chongqing',
-  cityTitle: 'Chongqing (é‡åº†)',
+  cityTitle: 'Chongqing (重庆)',
 })
 
 

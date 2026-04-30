@@ -182,14 +182,6 @@ export const GLOBAL_ACHIEVEMENTS: GlobalAchievementDefinition[] = [
     order: 10_103,
     country: 'secret-fun',
   },
-  {
-    slug: 'the-cartographer',
-    title: 'The Cartographer',
-    description: '???',
-    secretDescription: 'Toggle map names 20 times.',
-    order: 10_104,
-    country: 'secret-fun',
-  },
 ]
 
 export const GLOBAL_ACHIEVEMENT_SLUGS = GLOBAL_ACHIEVEMENTS.map((entry) => entry.slug)

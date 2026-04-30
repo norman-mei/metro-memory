@@ -31,7 +31,7 @@ export const METADATA: Metadata = {
     description: 'How many of the OC Transpo O-Train stations can you remember?',
     type: 'website',
     locale: 'en_US',
-    url: 'https://metro-memory.com/north-america/canada/ottawa',
+    url: 'https://metro-memory.xyz/north-america/canada/ottawa',
   },
 }
 

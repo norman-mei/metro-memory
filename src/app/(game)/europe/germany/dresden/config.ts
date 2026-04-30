@@ -118,7 +118,7 @@ export const METADATA: Metadata = {
       'Wie viele Tram-Stationen können Sie auswendig nennen? Spielen Sie das Dresden Tram Memory und finden Sie es heraus!',
     type: 'website',
     locale: 'de_DE',
-    url: 'https://metro-memory.com/Dresden',
+    url: 'https://metro-memory.xyz/Dresden',
   },
 }
 

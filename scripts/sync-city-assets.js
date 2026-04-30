@@ -195,6 +195,63 @@ const buildManifest = async (routePaths) => {
   return Object.keys(sortedManifest).length
 }
 
+const syncMiniCityAssetSourceSlugs = async (routePaths) => {
+  const registry = await readJsonIfPresent(MINI_CITY_REGISTRY_PATH)
+  if (!registry || !Array.isArray(registry.parents)) {
+    return 0
+  }
+
+  let updatedChildren = 0
+
+  for (const parent of registry.parents) {
+    if (!Array.isArray(parent.children)) {
+      continue
+    }
+
+    for (const child of parent.children) {
+      if (!child || typeof child.slug !== 'string') {
+        continue
+      }
+
+      const routePath =
+        routePaths.get(child.slug) ??
+        normalizePathFromLink(typeof child.link === 'string' ? child.link : '')
+      if (!routePath) {
+        continue
+      }
+
+      const cityDir = path.join(DEST_ROOT, ...routePath.split('/'))
+      const hasOwnIcon = await fileExists(path.join(cityDir, 'icon.ico'))
+
+      let hasOwnOpenGraph = false
+      for (const extension of ['jpg', 'jpeg', 'png', 'webp']) {
+        if (await fileExists(path.join(cityDir, `opengraph-image.${extension}`))) {
+          hasOwnOpenGraph = true
+          break
+        }
+      }
+
+      if (!hasOwnIcon && !hasOwnOpenGraph) {
+        continue
+      }
+
+      if (child.assetSourceSlug !== child.slug) {
+        child.assetSourceSlug = child.slug
+        updatedChildren += 1
+      }
+    }
+  }
+
+  if (updatedChildren > 0 && !DRY_RUN) {
+    await fs.writeFile(
+      MINI_CITY_REGISTRY_PATH,
+      `${JSON.stringify(registry, null, 2)}\n`,
+    )
+  }
+
+  return updatedChildren
+}
+
 async function main() {
   await ensureDir(DEST_ROOT)
 
@@ -286,10 +343,14 @@ async function main() {
     }
   }
 
+  const updatedAssetSources = await syncMiniCityAssetSourceSlugs(routePaths)
   const manifestEntries = await buildManifest(routePaths)
   console.log(
     `City assets synced to public/images: ${copiedIcons} icons, ${copiedOpenGraph} OG images, manifest entries ${manifestEntries}`,
   )
+  if (updatedAssetSources > 0) {
+    console.log(`Updated mini-city assetSourceSlug entries: ${updatedAssetSources}`)
+  }
   if (CLEAN_ROUTE_ASSETS) {
     console.log(`Removed route-local assets: ${removedRouteAssets}`)
   }

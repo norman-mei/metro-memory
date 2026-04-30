@@ -13,6 +13,6 @@ export const metadata: Metadata = withCityAssetMetadata('daegu', {
     description: 'How many Daegu Metro stations can you name from memory?',
     type: 'website',
     locale: 'ko_KR',
-    url: 'https://metro-memory.com/asia/south-korea/daegu',
+    url: 'https://metro-memory.xyz/asia/south-korea/daegu',
   },
 })

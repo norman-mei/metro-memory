@@ -13,6 +13,16 @@ const watcher = spawn(process.execPath, [path.join(__dirname, 'watch-city-assets
   env: process.env,
 })
 
+const runtimeDataWatcher = spawn(
+  process.execPath,
+  [path.join(__dirname, 'watch-city-runtime-data.js')],
+  {
+    cwd: ROOT,
+    stdio: 'inherit',
+    env: process.env,
+  },
+)
+
 const next = spawn(process.execPath, [nextBin, 'dev', ...nextArgs], {
   cwd: ROOT,
   stdio: 'inherit',
@@ -30,6 +40,9 @@ function stopChildren(exitCode = 0) {
   if (!watcher.killed) {
     watcher.kill('SIGTERM')
   }
+  if (!runtimeDataWatcher.killed) {
+    runtimeDataWatcher.kill('SIGTERM')
+  }
   if (!next.killed) {
     next.kill('SIGTERM')
   }
@@ -45,6 +58,15 @@ watcher.on('exit', (code) => {
     return
   }
   console.warn(`[dev-with-asset-watch] asset watcher exited with code ${code ?? 0}`)
+})
+
+runtimeDataWatcher.on('exit', (code) => {
+  if (shuttingDown) {
+    return
+  }
+  console.warn(
+    `[dev-with-asset-watch] runtime-data watcher exited with code ${code ?? 0}`,
+  )
 })
 
 next.on('exit', (code) => {

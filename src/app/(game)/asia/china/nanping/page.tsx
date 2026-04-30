@@ -4,7 +4,7 @@ import { buildPlaceholderConfig } from '@/app/(game)/_placeholder/config'
 const config = buildPlaceholderConfig({
   citySlug: 'nanping',
   cityPath: 'asia/china/nanping',
-  cityTitle: 'Nanping (å—å¹³)',
+  cityTitle: 'Nanping (南平)',
 })
 
 

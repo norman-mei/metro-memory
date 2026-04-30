@@ -13,6 +13,6 @@ export const metadata: Metadata = withCityAssetMetadata('nottingham', {
     description: 'How many Nottingham Express Transit stops can you name?',
     type: 'website',
     locale: 'en_GB',
-    url: 'https://metro-memory.com/europe/uk/nottingham',
+    url: 'https://metro-memory.xyz/europe/uk/nottingham',
   },
 })

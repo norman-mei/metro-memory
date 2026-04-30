@@ -37,7 +37,7 @@ export const METADATA: Metadata = {
     description: 'How many Glasgow Subway stations can you name from memory?',
     type: 'website',
     locale: 'en_GB',
-    url: 'https://metro-memory.com/europe/uk/glasgow',
+    url: 'https://metro-memory.xyz/europe/uk/glasgow',
   },
 }
 

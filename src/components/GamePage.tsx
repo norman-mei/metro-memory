@@ -1,9 +1,11 @@
 'use client'
 
+import { MdClose } from 'react-icons/md'
 import AccountDashboard from '@/app/(website)/account/panel'
 import AchievementToast from '@/components/AchievementToast'
 import AdSlot from '@/components/ads/AdSlot'
 import CityStatsPanel from '@/components/CityStatsPanel'
+import CloseButton from '@/components/CloseButton'
 import FoundList from '@/components/FoundList'
 import FoundSummary from '@/components/FoundSummary'
 import Input from '@/components/Input'
@@ -25,9 +27,19 @@ import { useShouldShowAds } from '@/hooks/useShouldShowAds'
 import useTranslation from '@/hooks/useTranslation'
 import { getAchievementForCity } from '@/lib/achievements'
 import { useConfig } from '@/lib/configContext'
+import {
+    formatLocalizedChinaUiDescription,
+    formatLocalizedChinaUiTitle,
+} from '@/lib/chinaUiText'
+import { formatLocalizedCityName } from '@/lib/cityNameDisplay'
 import { getCityStationAliases } from '@/lib/cityStationAliases'
 import { getKeystrokeFromEvent } from '@/lib/keyboardUtils'
 import { rememberLastPlayedCity } from '@/lib/lastPlayedCities'
+import {
+    featureMatchesManualComplexSelector,
+    repairManualComplexGroups,
+    type ManualComplexSelector,
+} from '@/lib/manualComplexes'
 import { disableMapboxTelemetry } from '@/lib/mapboxTelemetry'
 import { loadMiniCityStationIdSet } from '@/lib/miniCityProgress'
 import { getMiniCityLinksForSlug, isMiniCitySlug } from '@/lib/miniCities'
@@ -52,6 +64,7 @@ import {
     autoClusterAliasSetsOverlap,
     buildAutoClusterAliases,
 } from '@/lib/stationComplexes'
+import { formatLocalizedStationDisplayName } from '@/lib/stationNameDisplay'
 import { getStationKey } from '@/lib/stationUtils'
 import {
     DataFeature,
@@ -67,6 +80,7 @@ import 'mapbox-gl/dist/mapbox-gl.css'
 import { useTheme } from 'next-themes'
 import Link from 'next/link'
 import { usePathname, useRouter, useSearchParams } from 'next/navigation'
+import { MdLayers, MdMap, MdRestartAlt } from 'react-icons/md'
 import {
     CSSProperties,
     ChangeEvent,
@@ -93,6 +107,18 @@ function SidebarArrowUpIcon(props: ComponentPropsWithoutRef<'svg'>) {
         strokeLinejoin="round"
       />
     </svg>
+  )
+}
+
+function ControlHoverLabel({
+  children,
+}: {
+  children: string
+}) {
+  return (
+    <span className="pointer-events-none hidden max-w-0 shrink-0 overflow-hidden whitespace-nowrap text-sm font-medium opacity-0 transition-all duration-200 group-hover:ml-2 group-hover:max-w-[220px] group-hover:opacity-100 group-focus-visible:ml-2 group-focus-visible:max-w-[220px] group-focus-visible:opacity-100 lg:inline-block">
+      {children}
+    </span>
   )
 }
 
@@ -207,7 +233,9 @@ const deriveCityDisplayName = (title?: string, fallback?: string) => {
   }
   const stripped = repairedTitle
     .replace(/\s*\|\s*.*$/, '')
+    .replace(/Metro Memory Game/gi, '')
     .replace(/Metro Memory/gi, '')
+    .replace(/\bGame\b/gi, '')
     .trim()
   if (stripped.length > 0) {
     return stripped
@@ -248,6 +276,9 @@ const formatMs = (ms: number | null | undefined) => {
 }
 const GLOBAL_SATELLITE_STORAGE_KEY = 'global-satellite-enabled'
 const GLOBAL_MAP_NAMES_STORAGE_KEY = 'global-map-names-enabled'
+const getMapStyleModeStorageKey = (cityName: string) => `map-style-mode-${cityName}`
+const getMapStylePreferenceStorageKey = (cityName: string) =>
+  `map-style-preference-${cityName}`
 const RANKED_COMPLETION_TARGET = 0.9999
 
 const toMutedLineColor = () => '#94a3b8'
@@ -518,20 +549,6 @@ const AMTRAK_BLOCKED_ALTERNATE_NAMES: Record<string, string[]> = {
   'Route 128, MA': ['Boston'],
 }
 
-type ManualComplexSelector = {
-  name: string
-  line?: string
-  linePrefix?: string
-}
-
-const repairManualComplexGroups = (groups: ManualComplexSelector[][]) =>
-  groups.map((group) =>
-    group.map((selector) => ({
-      ...selector,
-      name: repairMojibakeString(selector.name),
-    })),
-  )
-
 const MANUAL_COMPLEX_GROUPS: ManualComplexSelector[][] = repairManualComplexGroups([
     [
       { name: 'Westlake Hub', line: 'SeattleStreetcarSLU' },
@@ -550,6 +567,10 @@ const MANUAL_COMPLEX_GROUPS: ManualComplexSelector[][] = repairManualComplexGrou
       { name: 'Metropolitan Av', line: 'IBX' },
       { name: 'Middle Village - Metropolitan Av', line: 'NewYorkSubwayM' },
     ],
+  [
+    { name: 'Tai Koo', line: 'ISL' },
+    { name: 'Kornhill', line: 'HKT' },
+  ],
   [
     { name: 'Kew Gardens', linePrefix: 'LIRR' },
     { name: 'Kew Gardens - Union Tpke' },
@@ -1871,6 +1892,34 @@ function GamePageContent({
         alternate_names?: string[]
       } = {
         ...feature.properties,
+        name:
+          typeof feature.properties.name === 'string'
+            ? formatLocalizedStationDisplayName(
+                repairMojibakeString(feature.properties.name),
+                settings.language,
+              )
+            : feature.properties.name,
+        display_name:
+          typeof feature.properties.display_name === 'string'
+            ? formatLocalizedStationDisplayName(
+                repairMojibakeString(feature.properties.display_name),
+                settings.language,
+              )
+            : feature.properties.display_name,
+        long_name:
+          typeof feature.properties.long_name === 'string'
+            ? formatLocalizedStationDisplayName(
+                repairMojibakeString(feature.properties.long_name),
+                settings.language,
+              )
+            : feature.properties.long_name,
+        short_name:
+          typeof feature.properties.short_name === 'string'
+            ? formatLocalizedStationDisplayName(
+                repairMojibakeString(feature.properties.short_name),
+                settings.language,
+              )
+            : feature.properties.short_name,
       }
 
       if (filteredAlternates.length > 0) {
@@ -1952,22 +2001,7 @@ function GamePageContent({
     const matchesManualSelector = (
       entry: PointFeatureEntry,
       selector: ManualComplexSelector,
-    ) => {
-      const entryName = entry.name.trim().toLowerCase()
-      const selectorName = selector.name.trim().toLowerCase()
-      if (entryName !== selectorName) {
-        return false
-      }
-
-      const line = entry.feature.properties?.line
-      if (selector.line && line !== selector.line) {
-        return false
-      }
-      if (selector.linePrefix && !(line && line.startsWith(selector.linePrefix))) {
-        return false
-      }
-      return true
-    }
+    ) => featureMatchesManualComplexSelector(entry.feature, selector)
 
     const isAutoComplexExcluded = (
       current: PointFeatureEntry,
@@ -2186,7 +2220,7 @@ function GamePageContent({
       clusterGroups,
       clusterMembersById,
     }
-  }, [CITY_NAME, fc, normalizeString])
+  }, [CITY_NAME, fc, normalizeString, settings.language])
 
   const displayLines = useMemo(() => {
     if (rankedRuleset !== 'no-line-colors') {
@@ -2394,9 +2428,10 @@ function GamePageContent({
   const [resetConfirmOpen, setResetConfirmOpen] = useState(false)
   const [mapError, setMapError] = useState<string | null>(null)
   const [showMapFallbackPreview, setShowMapFallbackPreview] = useState(false)
-  const [fallbackImageHidden, setFallbackImageHidden] = useState(false)
   const [mapStyleMode, setMapStyleMode] = useState<'default' | 'china-safe'>('default')
+  const [mapStyleModeReady, setMapStyleModeReady] = useState(false)
   const [mapRetryNonce, setMapRetryNonce] = useState(0)
+  const mapStylePreferenceRef = useRef<'default' | 'china-safe' | null>(null)
   const [highlightedLineId, setHighlightedLineId] = useState<string | null>(null)
   const disableRouteLineHighlightInteraction =
     CITY_NAME === 'nyc' || CITY_NAME === 'amtrak'
@@ -2547,13 +2582,50 @@ function GamePageContent({
   }, [storedSidebarOpen])
 
   useEffect(() => {
-    setMapStyleMode('default')
-    setMapRetryNonce(0)
-    setMapError(null)
-    setShowMapFallbackPreview(false)
-    setFallbackImageHidden(false)
-    mapUnavailableRef.current = false
-  }, [CITY_NAME])
+    let cancelled = false
+
+    const applyResolvedMode = (nextMapStyleMode: 'default' | 'china-safe') => {
+      if (cancelled) {
+        return
+      }
+      setMapStyleMode(nextMapStyleMode)
+      setMapStyleModeReady(true)
+      setMapRetryNonce(0)
+      setMapError(null)
+      setShowMapFallbackPreview(false)
+      mapUnavailableRef.current = false
+    }
+
+    const resolveMapStyleMode = async () => {
+      if (!isChinaCity || typeof window === 'undefined') {
+        applyResolvedMode('default')
+        return
+      }
+
+      window.localStorage.removeItem(getMapStyleModeStorageKey(CITY_NAME))
+      const stored = window.localStorage.getItem(
+        getMapStylePreferenceStorageKey(CITY_NAME),
+      )
+      if (stored === 'china-safe' || stored === 'default') {
+        mapStylePreferenceRef.current = stored
+        applyResolvedMode(stored)
+        return
+      }
+
+      mapStylePreferenceRef.current = null
+
+      // Default to Mapbox tiles for Chinese cities.
+      // The existing error/retry logic will automatically fall back
+      // to china-safe mode if Mapbox tiles fail to load (e.g. from within China).
+      applyResolvedMode('default')
+    }
+
+    void resolveMapStyleMode()
+
+    return () => {
+      cancelled = true
+    }
+  }, [CITY_NAME, isChinaCity])
 
   const setSidebarOpen = useCallback(
     (next: boolean | ((prev: boolean) => boolean)) => {
@@ -2567,27 +2639,28 @@ function GamePageContent({
     [setStoredSidebarOpen],
   )
 
-  const handleContinueInListMode = useCallback(() => {
-    setSidebarOpen(true)
-    setShowMapFallbackPreview(false)
-    inputRef.current?.focus()
-  }, [setSidebarOpen])
-
   const handleRetryMap = useCallback(
-    (mode: 'current' | 'china-safe' = 'current') => {
+    (
+      mode: 'current' | 'china-safe' = 'current',
+      options?: { persistPreference?: boolean },
+    ) => {
+      const nextMode =
+        mode === 'china-safe' && isChinaCity ? 'china-safe' : 'default'
       mapUnavailableRef.current = false
       setMap(null)
       setMapError(null)
       setShowMapFallbackPreview(false)
-      setFallbackImageHidden(false)
-      if (mode === 'china-safe' && isChinaCity) {
-        setMapStyleMode('china-safe')
-      } else {
-        setMapStyleMode('default')
+      setMapStyleMode(nextMode)
+      if (options?.persistPreference && isChinaCity && typeof window !== 'undefined') {
+        mapStylePreferenceRef.current = nextMode
+        window.localStorage.setItem(
+          getMapStylePreferenceStorageKey(CITY_NAME),
+          nextMode,
+        )
       }
       setMapRetryNonce((prev) => prev + 1)
     },
-    [isChinaCity],
+    [CITY_NAME, isChinaCity],
   )
 
   const sidebarOpen = sidebarOpenState
@@ -3896,8 +3969,39 @@ function GamePageContent({
   )
 
   const cityDisplayName = useMemo(
-    () => deriveCityDisplayName(metadataTitle, CITY_NAME),
-    [metadataTitle, CITY_NAME],
+    () => {
+      const derived = deriveCityDisplayName(metadataTitle, CITY_NAME)
+      const localizedTitle = formatLocalizedChinaUiTitle(
+        derived,
+        CITY_NAME,
+        settings.language,
+      )
+      return formatLocalizedCityName(
+        localizedTitle || derived,
+        CITY_NAME,
+        settings.language,
+      )
+    },
+    [metadataTitle, CITY_NAME, settings.language],
+  )
+  const cityDescription = useMemo(() => {
+    const description =
+      typeof METADATA?.description === 'string' ? METADATA.description : ''
+    return formatLocalizedChinaUiDescription(
+      description,
+      CITY_NAME,
+      settings.language,
+    )
+  }, [CITY_NAME, METADATA?.description, settings.language])
+  const normalizeMiniCityLabel = useCallback(
+    (value: string) =>
+      value
+        .replace(
+          /\uFF08([^\uFF09]+)\uFF09[\s\u00A0\u2000-\u200B\u202F\u205F\u3000]+(?=\))/g,
+          '\uFF08$1\uFF09',
+        )
+        .replace(/[\s\u00A0\u2000-\u200B\u202F\u205F\u3000]+(?=\))/g, ''),
+    [],
   )
   const getTranslatedMiniCityLabel = useCallback(
     (slug: string, fallback: string) => {
@@ -3915,13 +4019,15 @@ function GamePageContent({
 
       const key = keyBySlug[slug]
       if (!key) {
-        return fallback
+        return normalizeMiniCityLabel(fallback)
       }
 
       const value = t(key)
-      return typeof value === 'string' && value !== key ? value : fallback
+      return normalizeMiniCityLabel(
+        typeof value === 'string' && value !== key ? value : fallback,
+      )
     },
-    [settings.language, t],
+    [normalizeMiniCityLabel, settings.language, t],
   )
   const relatedVersionsPanel = useMemo(() => {
     if (!miniCityLinks) {
@@ -4054,9 +4160,6 @@ function GamePageContent({
       const current = Number(raw)
       const next = Number.isFinite(current) ? current + 1 : 1
       window.localStorage.setItem('mm-map-names-toggles', String(next))
-      if (next >= 20) {
-        awardAchievement('the-cartographer', 'The Cartographer', 'Toggle map names 20 times.')
-      }
     } catch {
       // ignore
     }
@@ -4690,6 +4793,10 @@ function GamePageContent({
   }, [MAP_CONFIG, resolvedTheme, showSatellite, usingChinaSafeMapStyle])
 
   useEffect(() => {
+    if (!mapStyleModeReady) {
+      return
+    }
+
     disableMapboxTelemetry()
     mapboxgl.accessToken = process.env.NEXT_PUBLIC_MAPBOX_TOKEN!
 
@@ -4756,6 +4863,17 @@ function GamePageContent({
 
     const requestChinaSafeRetry = (message?: string) => {
       if (!isChinaCity || usingChinaSafeMapStyle || chinaSafeRetryRequested) {
+        return false
+      }
+
+      // Don't auto-switch to china-safe if the user's preference is already
+      // 'default' (Mapbox) or hasn't been set. This prevents dev hot-reloads
+      // and transient network errors from overriding the expected map style.
+      // The user can still manually switch via the map style toggle.
+      if (
+        mapStylePreferenceRef.current === 'default' ||
+        mapStylePreferenceRef.current === null
+      ) {
         return false
       }
 
@@ -5442,7 +5560,7 @@ function GamePageContent({
       mapboxMap.remove()
       setMap(null)
     }
-  }, [setMap, featureCollection, displayLines, mapOptions, MAP_FROM_DATA, displayRoutes, renderCullingEnabled, getRenderedCollections, refreshRenderedSources, resolvedTheme, CITY_NAME, updateUiPreferences, isChinaCity, usingChinaSafeMapStyle, prefersChineseCopy, mapRetryNonce])
+  }, [setMap, featureCollection, displayLines, mapOptions, MAP_FROM_DATA, displayRoutes, renderCullingEnabled, getRenderedCollections, refreshRenderedSources, resolvedTheme, CITY_NAME, updateUiPreferences, isChinaCity, usingChinaSafeMapStyle, prefersChineseCopy, mapRetryNonce, mapStyleModeReady])
 
   useEffect(() => {
     if (!map) {
@@ -5589,7 +5707,7 @@ function GamePageContent({
             setCityStatsOpen(true)
         } else if (action === 'OPEN_ACHIEVEMENTS') {
             event.preventDefault()
-            router.push('/metro-memory?tab=achievements')
+            router.push('/?tab=achievements')
         } else if (action === 'OPEN_ACCOUNT') {
             event.preventDefault()
             openAccountModal()
@@ -5779,30 +5897,6 @@ function GamePageContent({
     mistakes > 0 &&
     foundProportion < RANKED_COMPLETION_TARGET
 
-  const showMapFallbackOverlay = Boolean(mapError || showMapFallbackPreview)
-  const fallbackImageSrc = `/city-cards/${CITY_NAME}.jpg`
-  const mapFallbackTitle = prefersChineseCopy
-    ? '\u5730\u56fe\u6682\u65f6\u4e0d\u53ef\u7528\uff0c\u53ef\u7ee7\u7eed\u5217\u8868\u6a21\u5f0f'
-    : 'Map unavailable, continue in list mode'
-  const mapFallbackBody =
-    mapError ??
-    (prefersChineseCopy
-      ? '\u4f60\u4ecd\u7136\u53ef\u4ee5\u6839\u636e\u7ad9\u540d\u548c\u7ebf\u8def\u5217\u8868\u7ee7\u7eed\u6e38\u73a9\uff0c\u4e4b\u540e\u518d\u91cd\u8bd5\u5730\u56fe\u3002'
-      : 'You can still keep playing from station names and line lists, then retry the map later.')
-  const mapFallbackRetryLabel =
-    isChinaCity && !usingChinaSafeMapStyle
-      ? prefersChineseCopy
-        ? '\u5c1d\u8bd5\u8f7b\u91cf\u5730\u56fe'
-        : 'Try lighter map'
-      : prefersChineseCopy
-        ? '\u91cd\u8bd5\u5730\u56fe'
-        : 'Retry map'
-  const mapFallbackModeLabel =
-    usingChinaSafeMapStyle && isChinaCity
-      ? prefersChineseCopy
-        ? '\u5f53\u524d\u4f7f\u7528\u8f7b\u91cf\u5730\u56fe\u6a21\u5f0f'
-        : 'Lightweight map mode is active'
-      : null
   const showChinaMapStyleTestButton = isChinaCity && solutionsUnlocked
   const chinaMapStyleTestButtonLabel = usingChinaSafeMapStyle
     ? prefersChineseCopy
@@ -5858,66 +5952,6 @@ function GamePageContent({
       ) : null}
       <div className="relative flex-1 min-w-0 h-full">
         <div ref={mapContainerRef} className="absolute inset-0 h-full w-full" />
-        {showMapFallbackOverlay ? (
-          <div className="absolute inset-0 z-50 flex items-center justify-center bg-zinc-950/25 px-4 py-6 backdrop-blur-[2px]">
-            <div className="pointer-events-auto w-full max-w-2xl overflow-hidden rounded-[2rem] border border-white/70 bg-white/95 shadow-2xl dark:border-zinc-700 dark:bg-zinc-900/95">
-              {!fallbackImageHidden ? (
-                <img
-                  src={fallbackImageSrc}
-                  alt={
-                    prefersChineseCopy
-                      ? '\u7ebf\u8def\u9759\u6001\u9884\u89c8\u56fe'
-                      : 'Static network preview'
-                  }
-                  className="h-56 w-full object-cover"
-                  onError={() => setFallbackImageHidden(true)}
-                />
-              ) : null}
-              <div className="space-y-4 p-5 sm:p-6">
-                <div className="space-y-2">
-                  <p className="text-xs font-semibold uppercase tracking-[0.24em] text-zinc-500 dark:text-zinc-400">
-                    {prefersChineseCopy
-                      ? '\u5730\u56fe\u964d\u7ea7\u6a21\u5f0f'
-                      : 'Map fallback'}
-                  </p>
-                  <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50">
-                    {mapFallbackTitle}
-                  </h2>
-                  <p className="text-sm leading-6 text-zinc-700 dark:text-zinc-300">
-                    {mapFallbackBody}
-                  </p>
-                  {mapFallbackModeLabel ? (
-                    <p className="text-xs font-medium text-sky-700 dark:text-sky-300">
-                      {mapFallbackModeLabel}
-                    </p>
-                  ) : null}
-                </div>
-                <div className="flex flex-wrap gap-3">
-                  <button
-                    type="button"
-                    onClick={handleContinueInListMode}
-                    className="rounded-full bg-zinc-900 px-4 py-2 text-sm font-semibold text-white transition hover:bg-zinc-800 dark:bg-zinc-100 dark:text-zinc-950 dark:hover:bg-white"
-                  >
-                    {prefersChineseCopy
-                      ? '\u7ee7\u7eed\u5217\u8868\u6a21\u5f0f'
-                      : 'Continue in list mode'}
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() =>
-                      handleRetryMap(
-                        isChinaCity && !usingChinaSafeMapStyle ? 'china-safe' : 'current',
-                      )
-                    }
-                    className="rounded-full border border-zinc-300 px-4 py-2 text-sm font-semibold text-zinc-700 transition hover:border-zinc-400 hover:bg-zinc-100 dark:border-zinc-600 dark:text-zinc-200 dark:hover:bg-zinc-800"
-                  >
-                    {mapFallbackRetryLabel}
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        ) : null}
         {!zenMode && map ? (
           <div className="pointer-events-auto absolute bottom-10 left-3 z-30 flex flex-col overflow-hidden rounded-[1.5rem] bg-white/90 text-zinc-700 shadow-lg ring-1 ring-white/60 backdrop-blur dark:bg-zinc-900/80 dark:text-zinc-100 dark:ring-black/50">
             <button
@@ -6085,7 +6119,7 @@ function GamePageContent({
                 </span>
                 <span className="text-sm font-semibold">
                   {mobileSidebarOpen ? (
-                    'CLOSE'
+                    <MdClose className="h-6 w-6" />
                   ) : (
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="h-5 w-5" fill="currentColor">
                       <path d="M0 0h24v24H0V0z" fill="none"/>
@@ -6124,22 +6158,51 @@ function GamePageContent({
                 <button
                   type="button"
                   onClick={() =>
-                    handleRetryMap(usingChinaSafeMapStyle ? 'current' : 'china-safe')
+                    handleRetryMap(
+                      usingChinaSafeMapStyle ? 'current' : 'china-safe',
+                      { persistPreference: true },
+                    )
                   }
                   className={
                     usingChinaSafeMapStyle
-                      ? 'inline-flex h-10 items-center rounded-full bg-sky-600 px-4 text-sm font-semibold text-white shadow-lg transition hover:bg-sky-500 focus:outline-none focus:ring-2 focus:ring-sky-300 dark:bg-sky-500 dark:text-zinc-950 dark:hover:bg-sky-400'
-                      : 'inline-flex h-10 items-center rounded-full bg-white px-4 text-sm font-semibold text-zinc-700 shadow-lg transition hover:bg-zinc-100 focus:outline-none focus:ring-2 focus:ring-[var(--accent-ring)] dark:bg-zinc-800 dark:text-zinc-100 dark:hover:bg-zinc-700'
+                      ? 'group inline-flex h-12 min-w-[3rem] items-center justify-center overflow-hidden rounded-full bg-sky-600 px-3 text-white shadow-lg transition hover:bg-sky-500 focus:outline-none focus:ring-2 focus:ring-sky-300 dark:bg-sky-500 dark:text-zinc-950 dark:hover:bg-sky-400'
+                      : 'group inline-flex h-12 min-w-[3rem] items-center justify-center overflow-hidden rounded-full bg-white px-3 text-zinc-700 shadow-lg transition hover:bg-zinc-100 focus:outline-none focus:ring-2 focus:ring-[var(--accent-ring)] dark:bg-zinc-800 dark:text-zinc-100 dark:hover:bg-zinc-700'
                   }
+                  aria-label={chinaMapStyleTestButtonLabel}
                   title={
                     prefersChineseCopy
                       ? '\u4ec5\u9650\u5df2\u89e3\u9501\u7684\u6d4b\u8bd5\u6309\u94ae'
                       : 'Cheat-unlocked test button'
                   }
                 >
-                  {chinaMapStyleTestButtonLabel}
+                  {usingChinaSafeMapStyle ? (
+                    <MdMap className="h-5 w-5 shrink-0" aria-hidden="true" />
+                  ) : (
+                    <MdLayers className="h-5 w-5 shrink-0" aria-hidden="true" />
+                  )}
+                  <ControlHoverLabel>{chinaMapStyleTestButtonLabel}</ControlHoverLabel>
+                  <span className="sr-only">{chinaMapStyleTestButtonLabel}</span>
                 </button>
               )}
+              <div className="hidden items-center gap-2 lg:flex">
+                {found.length > 0 && (
+                  <button
+                    type="button"
+                    onClick={onReset}
+                    className="group inline-flex h-12 min-w-[3rem] items-center justify-center overflow-hidden rounded-full bg-red-50 px-3 text-red-600 shadow-lg ring-1 ring-red-200/80 transition hover:bg-red-100 focus:outline-none focus:ring-2 focus:ring-red-300 dark:bg-red-500/15 dark:text-red-300 dark:ring-red-500/30 dark:hover:bg-red-500/25"
+                    aria-label={t('resetAllProgressLabel')}
+                    title={t('resetAllProgressLabel')}
+                  >
+                    <MdRestartAlt className="h-5 w-5 shrink-0" aria-hidden="true" />
+                    <ControlHoverLabel>{t('resetAllProgressLabel')}</ControlHoverLabel>
+                    <span className="sr-only">{t('resetAllProgressLabel')}</span>
+                  </button>
+                )}
+                <ThemeToggleButton
+                  className="h-12 min-w-[3rem]"
+                  hoverLabel={t('changeThemeLabel')}
+                />
+              </div>
               <MenuComponent
                 hideLabels={hideLabels}
                 setHideLabels={setHideLabels}
@@ -6158,18 +6221,6 @@ function GamePageContent({
                 showMapNames={showMapNames}
                 onToggleMapNames={handleToggleMapNames}
               />
-              <div className="hidden items-center gap-2 lg:flex">
-                {found.length > 0 && (
-                  <button
-                    type="button"
-                    onClick={onReset}
-                    className="rounded-full border border-red-200 px-4 py-2 text-sm font-medium text-red-600 transition hover:bg-red-50 focus:outline-none focus:ring-2 focus:ring-red-300 dark:border-red-500/40 dark:text-red-300 dark:hover:bg-red-500/10"
-                  >
-                    {t('resetProgress')}
-                  </button>
-                )}
-                <ThemeToggleButton className="h-10 w-10 p-0" />
-              </div>
 
             </div>
             {showAds && INLINE_AD_SLOT ? (
@@ -6357,13 +6408,7 @@ function GamePageContent({
               <h2 className="text-2xl font-semibold text-zinc-900 dark:text-zinc-50">
                 {t('settings')}
               </h2>
-              <button
-                type="button"
-                onClick={closeSettingsModal}
-                className="rounded-full border border-zinc-300 px-3 py-1 text-sm font-semibold text-zinc-700 hover:bg-zinc-100 focus:outline-none focus:ring-2 focus:ring-[var(--accent-ring)] dark:border-[#18181b] dark:text-zinc-100 dark:hover:bg-zinc-800"
-              >
-                Close
-              </button>
+              <CloseButton onClick={closeSettingsModal} ariaLabel="Close settings" />
             </div>
             <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">
               Changes here are synced with the main site settings.
@@ -6371,7 +6416,7 @@ function GamePageContent({
             <SettingsPanel className="mt-4" showHeading={false} />
             <div className="mt-6 flex flex-wrap justify-end gap-3">
               <Link
-                href="/metro-memory?tab=settings"
+                href="/?tab=settings"
                 className="inline-flex items-center justify-center rounded-full border border-zinc-300 px-4 py-2 text-sm font-semibold text-zinc-700 transition hover:bg-zinc-100 focus:outline-none focus:ring-2 focus:ring-[var(--accent-ring)] dark:border-[#18181b] dark:text-zinc-100 dark:hover:bg-zinc-800"
               >
                 Open main page settings
@@ -6400,13 +6445,7 @@ function GamePageContent({
               <h2 className="text-2xl font-semibold text-zinc-900 dark:text-zinc-50">
                 {t('account')}
               </h2>
-              <button
-                type="button"
-                onClick={closeAccountModal}
-                className="rounded-full border border-zinc-300 px-3 py-1 text-sm font-semibold text-zinc-700 hover:bg-zinc-100 focus:outline-none focus:ring-2 focus:ring-[var(--accent-ring)] dark:border-[#18181b] dark:text-zinc-100 dark:hover:bg-zinc-800"
-              >
-                Close
-              </button>
+              <CloseButton onClick={closeAccountModal} ariaLabel="Close account" />
             </div>
             <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">
               Manage your Metro Memory account without leaving the map.
@@ -6430,16 +6469,10 @@ function GamePageContent({
               <h2 className="text-2xl font-semibold text-zinc-900 dark:text-zinc-50">
                 {t('privacy')}
               </h2>
-              <button
-                type="button"
-                onClick={closePrivacyModal}
-                className="rounded-full border border-zinc-300 px-3 py-1 text-sm font-semibold text-zinc-700 hover:bg-zinc-100 focus:outline-none focus:ring-2 focus:ring-[var(--accent-ring)] dark:border-[#18181b] dark:text-zinc-100 dark:hover:bg-zinc-800"
-              >
-                Close
-              </button>
+              <CloseButton onClick={closePrivacyModal} ariaLabel="Close privacy" />
             </div>
             <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">
-              Review privacy details right from the game.
+              {t('privacyModalSubtitle')}
             </p>
             <div className="mt-4 max-h-[70vh] overflow-y-auto">
               <PrivacyPanel />

@@ -124,7 +124,7 @@ export const METADATA: Metadata = {
       'How many Taipei Metro, New Taipei Metro, and Taoyuan Metro stations can you name from memory?',
     type: 'website',
     locale: 'en_US',
-    url: 'https://metro-memory.com/asia/taiwan/taipei',
+    url: 'https://metro-memory.xyz/asia/taiwan/taipei',
   },
 }
 

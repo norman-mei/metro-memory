@@ -136,7 +136,7 @@ export const METADATA: Metadata = {
     description: 'How many of the Washington and Baltimore transit stations can you name from memory?',
     type: 'website',
     locale: 'en_US',
-    url: 'https://metro-memory.com/north-america/usa/dc',
+    url: 'https://metro-memory.xyz/north-america/usa/dc',
   },
 }
 

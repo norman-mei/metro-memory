@@ -4,7 +4,7 @@ import { buildPlaceholderConfig } from '@/app/(game)/_placeholder/config'
 const config = buildPlaceholderConfig({
   citySlug: 'bangkok',
   cityPath: 'asia/thailand/bangkok',
-  cityTitle: 'Bangkok (à¸à¸£à¸¸à¸‡à¹€à¸—à¸žà¸¯)',
+  cityTitle: 'Bangkok (กรุงเทพฯ)',
 })
 
 

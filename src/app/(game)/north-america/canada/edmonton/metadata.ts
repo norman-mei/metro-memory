@@ -13,6 +13,6 @@ export const metadata: Metadata = withCityAssetMetadata('edmonton', {
     description: 'How many Edmonton LRT stations can you remember from memory?',
     type: 'website',
     locale: 'en_CA',
-    url: 'https://metro-memory.com/north-america/canada/edmonton',
+    url: 'https://metro-memory.xyz/north-america/canada/edmonton',
   },
 })

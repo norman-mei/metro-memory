@@ -44,6 +44,10 @@ export const i18n = rosetta({
     seeMissedGuessInputs: 'See missed guess inputs',
     enterZenMode: 'Enter Zen Mode',
     exitZenMode: 'Exit Zen Mode',
+    zenModeToastOn: ({ key }: { key: string }): string =>
+      key ? `Zen Mode On - press  to turn off` : 'Zen Mode On',
+    zenModeToastOff: ({ key }: { key: string }): string =>
+      key ? `Zen Mode Off - press  to turn on` : 'Zen Mode Off',
     about: 'Credits',
     cityStats: 'City Statistics',
     cityStatsStationsProgress: 'Stations progress',
@@ -70,15 +74,23 @@ export const i18n = rosetta({
     selectRelatedVersion: 'Select a related version',
     currentTag: 'Current',
     createCustomMiniCity: 'Create Custom',
-    miniCityParentGba: 'Greater Bay Area',
-    miniCityNameGbaGuangzhou: 'Guangzhou',
-    miniCityNameGbaFoshan: 'Foshan',
-    miniCityNameGbaDongguan: 'Dongguan',
-    miniCityNameGbaShenzhen: 'Shenzhen',
-    miniCityNameGbaHongKong: 'Hong Kong',
-    miniCityNameGbaMtrHeavyRail: 'Mass Transit Railway (Heavy Rail)',
-    miniCityNameGbaMtrLightRail: 'Mass Transit Railway (Light Rail)',
-    miniCityNameGbaMacau: 'Macau',
+    miniCityParentGba: 'Greater Bay Area (粤港澳大湾区)',
+    miniCityNameGbaGuangzhou: 'Guangzhou (广州)',
+    miniCityNameGbaFoshan: 'Foshan (佛山)',
+    miniCityNameGbaDongguan: 'Dongguan (东莞)',
+    miniCityNameGbaShenzhen: 'Shenzhen (深圳)',
+    miniCityNameGbaHongKong: 'Hong Kong (香港)',
+    miniCityNameGbaMtrHeavyRail: 'Mass Transit Railway (Heavy Rail) — 港鐵（重鐵）',
+    miniCityNameGbaMtrLightRail: 'Mass Transit Railway (Light Rail) — 港鐵（輕鐵）',
+    miniCityNameGbaMacau: 'Macau (澳門)',
+    miniCityBadge: 'Mini City',
+    miniCityCountLabel: ({ count }: { count: number }): string =>
+      `${count} Mini ${count === 1 ? 'City' : 'Cities'}`,
+    playLabel: 'Play',
+    progressLabel: 'Progress',
+    playMetroMemoryCta: ({ city }: { city: string }): string => `Play ${city} Metro Memory`,
+    comingSoonLabel: 'COMING SOON',
+    comingSoonSuffix: '(coming soon)',
     getLocation: 'Get location',
     locating: 'Locating...',
     playRandomCity: 'Play Random City',
@@ -125,6 +137,7 @@ opensANewTab:
     switchTo24Hour: 'Switch to 24-hour',
 
     theme: 'Theme',
+    changeThemeLabel: 'Change theme',
     systemDefault: 'System default',
     light: 'Light',
     dark: 'Dark',
@@ -155,6 +168,7 @@ opensANewTab:
     solutionsAutoMark: 'The next time you open a city selected above, all stations will be marked as found automatically.',
     dangerZone: 'Danger Zone',
     resetProgress: 'Reset progress',
+    resetAllProgressLabel: 'Reset ALL progress',
     signInToClear: 'Sign in again to clear synced progress.',
     celebrationConfetti: 'Celebration confetti',
     celebrationConfettiDesc: 'Show confetti when you reach milestones or hit the confetti button.',
@@ -346,6 +360,12 @@ opensANewTab:
     creditsMaintainerDesc:
       'kirklandwaterbot curates new features, fresh data, and community feedback for this fork. Feel free to reach out, file issues, or share ideas.',
     creditsOriginalProject: 'Original Project',
+    aboutMaintainedBy: 'This fork is currently maintained by',
+    aboutFollowOnGithub: 'Reach out or follow along on GitHub',
+    aboutConnectWithMaintainer: 'Connect with kirklandwaterbot',
+    aboutConnectWithMaintainerDesc: "Say hi, share feedback, or see what's next.",
+    aboutOriginalProjectPrefix: 'This fork builds on the open source',
+    aboutOriginalProjectCreatedBy: 'created by',
     creditsOriginalDesc:
       'The original Metro Memory experience—including many of the maps and gameplay mechanics—comes from the open source project by Benjamin TD. You can explore the source code, contribute improvements, or star the repository below.',
     creditsViewOriginal: 'View the original repository',
@@ -353,6 +373,7 @@ opensANewTab:
       'Want to see your city or rail network added? Open an issue on GitHub or send a pull request with data improvements.',
     // Privacy
     privacyTitle: 'Privacy & Security',
+    privacyModalSubtitle: 'Review privacy details right from the game.',
     privacyIntro:
       'Metro Memory supports accounts so you can sync progress and achievements across devices. Here\'s how your data is handled:',
     privacyPasswordsLabel: 'Passwords',
@@ -579,9 +600,9 @@ opensANewTab:
     resetSavedProgressTitle: 'Réinitialiser la progression sauvegardée',
     resetSavedProgressDesc:
       'Maintenez le bouton pendant 5 secondes pour effacer les villes sélectionnées. Seules les villes où vous avez du progrès apparaissent ci-dessous. Cette action est irréversible.',
-    resetNoProgress: "Vous n'avez encore aucun progrès enregistré.",
+    resetNoProgress: "Vous n'avez encore aucun progrÃƒÂ¨s enregistrÃƒÂ©.",
     resetChooseCities: 'Choisissez les villes à réinitialiser :',
-    resetFoundLabel: ({ count }: { count: number }): string => `${count} trouvée${count > 1 ? 's' : ''}`,
+    resetFoundLabel: ({ count }: { count: number }): string => `${count} trouvÃƒÂ©e${count > 1 ? 's' : ''}`,
     resetSelectPrompt:
       'Sélectionnez au moins une ville pour activer le bouton de réinitialisation.',
     resetButtonResetting: 'Réinitialisation…',
@@ -664,6 +685,12 @@ opensANewTab:
     creditsMaintainerDesc:
       'kirklandwaterbot sélectionne les nouvelles fonctionnalités, les données fraîches et les retours de la communauté pour ce fork. N’hésitez pas à le contacter, ouvrir des issues ou partager vos idées.',
     creditsOriginalProject: 'Projet original',
+    aboutMaintainedBy: '该分支目前由',
+    aboutFollowOnGithub: '欢迎联系或在 GitHub 上关注最新动态',
+    aboutConnectWithMaintainer: '联系 kirklandwaterbot',
+    aboutConnectWithMaintainerDesc: '打个招呼、分享反馈，或看看接下来有什么新内容。',
+    aboutOriginalProjectPrefix: '该分支基于开源的',
+    aboutOriginalProjectCreatedBy: '，创建者为',
     creditsOriginalDesc:
       'L’expérience Metro Memory originale — avec de nombreuses cartes et mécaniques de jeu — provient du projet open source de Benjamin TD. Vous pouvez explorer le code source, contribuer des améliorations ou ajouter une étoile au dépôt ci-dessous.',
     creditsViewOriginal: 'Voir le dépôt original',
@@ -682,9 +709,9 @@ opensANewTab:
     privacyProgressLabel: 'Données de progression',
     privacyProgressDesc:
       'ne sont enregistrées sur votre compte que si vous créez un compte. Les invités utilisent le stockage local du navigateur.',
-    privacyVerificationLabel: "Vérification d'email et réinitialisation de mot de passe",
+    privacyVerificationLabel: "VÃƒÂ©rification d'email et rÃƒÂ©initialisation de mot de passe",
     privacyVerificationDesc:
-      "sont requises à l'inscription pour éviter les abus et garder vos succès liés à votre boîte mail.",
+      "sont requises ÃƒÂ  l'inscription pour ÃƒÂ©viter les abus et garder vos succÃƒÂ¨s liÃƒÂ©s ÃƒÂ  votre boÃƒÂ®te mail.",
     // Account
     accountIntro:
       'Créez un compte pour synchroniser vos progrès et succès Metro Memory en toute sécurité entre vos appareils.',
@@ -696,7 +723,7 @@ opensANewTab:
     accountLogout: 'Se déconnecter',
     accountSyncedCities: 'Villes synchronisées',
     accountSyncedCitiesCount: ({ count }: { count: number }): string =>
-      `${count} ${count > 1 ? 'villes synchronisées' : 'ville synchronisée'}`,
+      `${count} ${count > 1 ? 'villes synchronisÃƒÂ©es' : 'ville synchronisÃƒÂ©e'}`,
     accountSearchSynced: 'Rechercher dans les villes synchronisées…',
     accountSortNameAsc: 'Nom (A-Z)',
     accountSortNameDesc: 'Nom (Z-A)',
@@ -746,7 +773,7 @@ opensANewTab:
     accountEmailMismatch: 'Les adresses email ne correspondent pas.',
     accountPasswordRequirementError: 'Le mot de passe doit répondre à toutes les exigences.',
     accountPasswordMismatch: 'Les mots de passe ne correspondent pas.',
-    accountEmailUpdateError: "Impossible de mettre à jour l'email.",
+    accountEmailUpdateError: "Impossible de mettre ÃƒÂ  jour l'email.",
     accountEmailUpdateSuccess:
       'Email mis à jour. Vérifiez votre boîte mail pour valider la nouvelle adresse.',
     accountPasswordUpdateError: 'Impossible de mettre à jour le mot de passe.',
@@ -765,7 +792,7 @@ opensANewTab:
     introInstruction: 'Escribe el nombre de una estación, y pulsa Enter',
     backToTheGame: 'Volver al juego',
     stations: ({ count }: { count: number }) =>
-      `${count} estación${count > 1 ? 'es' : ''}`,
+      `${count} estaciÃƒÂ³n${count > 1 ? 'es' : ''}`,
     stationsFound: 'estaciones encontradas',
     inputPlaceholder: 'Estación',
     alreadyFound: 'Ya encontrada',
@@ -779,7 +806,7 @@ opensANewTab:
     cityStatsStationsProgress: 'Progreso de estaciones',
     cityStatsTimeSpent: 'Tiempo invertido',
     cityStatsAvgPerStation: ({ duration }: { duration: string }): string => `Promedio ${duration} por estación`,
-    cityStatsPlayDays: ({ count }: { count: number }): string => `${count} día de juego${count === 1 ? "" : "s"}`,
+    cityStatsPlayDays: ({ count }: { count: number }): string => `${count} dÃƒÂ­a de juego${count === 1 ? "" : "s"}`,
     cityStatsFirstLatest: 'Primeros y últimos hallazgos',
     cityStatsFirst: ({ value }: { value: string }): string => `Primero: ${value}`,
     cityStatsLatest: ({ value }: { value: string }): string => `Último: ${value}`,
@@ -957,6 +984,12 @@ opensANewTab:
     creditsMaintainerDesc:
       'kirklandwaterbot selecciona nuevas funciones, datos frescos y feedback de la comunidad para este fork. No dudes en contactar, abrir issues o compartir ideas.',
     creditsOriginalProject: 'Proyecto original',
+    aboutMaintainedBy: '此分支目前由',
+    aboutFollowOnGithub: '歡迎聯絡或在 GitHub 上追蹤最新動態',
+    aboutConnectWithMaintainer: '聯絡 kirklandwaterbot',
+    aboutConnectWithMaintainerDesc: '打個招呼、分享回饋，或看看接下來有什麼新內容。',
+    aboutOriginalProjectPrefix: '此分支基於開源的',
+    aboutOriginalProjectCreatedBy: '，建立者為',
     creditsOriginalDesc:
       'La experiencia original de Metro Memory —incluyendo muchos mapas y mecánicas de juego— proviene del proyecto open source de Benjamin TD. Puedes explorar el código fuente, contribuir mejoras o dar estrella al repositorio.',
     creditsViewOriginal: 'Ver el repositorio original',
@@ -996,7 +1029,7 @@ opensANewTab:
     accountSortProgressDesc: 'Progreso (mayor a menor)',
     accountSortProgressAsc: 'Progreso (menor a mayor)',
     accountStationsFound: ({ count }: { count: number }) =>
-      `${count} estación${count === 1 ? '' : 'es'}`,
+      `${count} estaciÃƒÂ³n${count === 1 ? '' : 'es'}`,
     accountNoSyncedCities:
       'Aún no hay ciudades sincronizadas. Juega una ciudad para empezar a guardar tu progreso.',
     accountChangeEmail: 'Cambiar email',
@@ -1055,10 +1088,10 @@ opensANewTab:
   ca: {
     restartWarning:
       'Perdràs tot el teu progrés. Estàs segur que vols començar de nou?',
-    introInstruction: "Escriu el nom d'una estació, i prem Enter",
+    introInstruction: "Escriu el nom d'una estaciÃƒÂ³, i prem Enter",
     backToTheGame: 'Torna al joc',
     stations: ({ count }: { count: number }) =>
-      `${count} estació${count > 1 ? 's' : ''}`,
+      `${count} estaciÃƒÂ³${count > 1 ? 's' : ''}`,
     stationsFound: 'estacions trobades',
     inputPlaceholder: 'Estació',
     alreadyFound: 'Ja trobada',
@@ -1286,7 +1319,7 @@ opensANewTab:
     accountSortProgressDesc: 'Progrés (alt a baix)',
     accountSortProgressAsc: 'Progrés (baix a alt)',
     accountStationsFound: ({ count }: { count: number }) =>
-      `${count} estació${count === 1 ? '' : 's'}`,
+      `${count} estaciÃƒÂ³${count === 1 ? '' : 's'}`,
     accountNoSyncedCities:
       'Encara no hi ha ciutats sincronitzades. Juga una ciutat per començar a desar el progrés.',
     accountChangeEmail: 'Canvia el correu',
@@ -1361,7 +1394,7 @@ opensANewTab:
     cityStats: 'Stadtstatistiken',
     cityStatsStationsProgress: 'Stationsfortschritt',
     cityStatsTimeSpent: 'Aufgewendete Zeit',
-    cityStatsAvgPerStation: ({ duration }: { duration: string }): string => `Ã˜ ${duration} pro Station`,
+    cityStatsAvgPerStation: ({ duration }: { duration: string }): string => `Ø ${duration} pro Station`,
     cityStatsPlayDays: ({ count }: { count: number }): string => `${count} Spieltag${count === 1 ? "" : "e"}`,
     cityStatsFirstLatest: 'Erste und letzte Funde',
     cityStatsFirst: ({ value }: { value: string }): string => `Erster Fund: ${value}`,
@@ -1396,7 +1429,7 @@ opensANewTab:
     searchFoundStations: 'Stationen durchsuchen…',
     noStationsFound: ({ query }: { query?: string }): string =>
       query && query.length > 0
-        ? `Keine Stationen für "${query}" gefunden`
+        ? `Keine Stationen fÃƒÂ¼r "${query}" gefunden`
         : 'Keine Stationen gefunden',
     // New UI Keys
     language: 'Sprache',
@@ -1415,7 +1448,7 @@ opensANewTab:
     light: 'Hell',
     dark: 'Dunkel',
     accentColor: 'Akzentfarbe',
-    cityCount: ({ count }: { count: number }): string => `${count} ${count === 1 ? 'Stadt' : 'Städte'}`,
+    cityCount: ({ count }: { count: number }): string => `${count} ${count === 1 ? 'Stadt' : 'StÃƒÂ¤dte'}`,
     accentAmber: 'Bernstein',
     accentBubbleGum: 'Kaugummi',
     accentCoffee: 'Kaffee',
@@ -1569,7 +1602,7 @@ opensANewTab:
     accountLogout: 'Abmelden',
     accountSyncedCities: 'Synchronisierte Städte',
     accountSyncedCitiesCount: ({ count }: { count: number }): string =>
-      `${count} ${count === 1 ? 'Stadt synchronisiert' : 'Städte synchronisiert'}`,
+      `${count} ${count === 1 ? 'Stadt synchronisiert' : 'StÃƒÂ¤dte synchronisiert'}`,
     accountSearchSynced: 'Synchronisierte Städte durchsuchen…',
     accountSortNameAsc: 'Name (A-Z)',
     accountSortNameDesc: 'Name (Z-A)',
@@ -1907,7 +1940,7 @@ opensANewTab:
     stations: ({ count }: { count: number }) =>
       `${count} istasyon${count > 1 ? '' : ''}`,
     stationsFound: 'istasyon bulundu',
-    inputPlaceholder: 'Ä°stasyon',
+    inputPlaceholder: 'İstasyon',
     alreadyFound: 'Zaten bulundu',
     startOver: 'Yeniden başla',
     showSolutions: 'Çözümleri göster',
@@ -1916,16 +1949,16 @@ opensANewTab:
     hideLabels: 'Etiketleri gizle',
     about: 'Krediler',
     cityStats: 'Şehir istatistikleri',
-    cityStatsStationsProgress: 'Ä°stasyon ilerlemesi',
+    cityStatsStationsProgress: 'İstasyon ilerlemesi',
     cityStatsTimeSpent: 'Harcanan süre',
     cityStatsAvgPerStation: ({ duration }: { duration: string }): string => `İstasyon başına ortalama ${duration}`,
     cityStatsPlayDays: ({ count }: { count: number }): string => `${count} oyun günü`,
-    cityStatsFirstLatest: 'Ä°lk ve son bulgular',
-    cityStatsFirst: ({ value }: { value: string }): string => `Ä°lk: ${value}`,
+    cityStatsFirstLatest: 'İlk ve son bulgular',
+    cityStatsFirst: ({ value }: { value: string }): string => `İlk: ${value}`,
     cityStatsLatest: ({ value }: { value: string }): string => `Son: ${value}`,
     cityStatsPercentFound: ({ percent }: { percent: string }): string => `${percent} bulundu`,
     cityStatsCompletedLines: 'Tamamlanan hatlar',
-    cityStatsFastestLine: ({ line, duration }: { line: string; duration?: string }): string => `En hÄ±zlÄ±: ${line}${duration ? ` (${duration})` : ""}`,
+    cityStatsFastestLine: ({ line, duration }: { line: string; duration?: string }): string => `En hızlı: ${line}${duration ? ` (${duration})` : ""}`,
     cityStatsLineBreakdown: 'Hat dökümü',
     cityStatsNoTimeData: 'Henüz zaman verisi yok',
     cityStatsTimelineTitle: 'İstasyon zaman çizelgesi',
@@ -1939,15 +1972,15 @@ opensANewTab:
     openCityStats: 'Şehir istatistiklerini aç',
     goToMain: 'Ana sayfaya dön',
     congrats: ({ foundProportion }: { foundProportion: number }) =>
-      `Tebrikler, ${Math.floor(foundProportion * 100)}%'ye ulaştınız!`,
+      `Tebrikler, ${Math.floor(foundProportion * 100)}%'ye ulaÅŸtÄ±nÄ±z!`,
     freeGame: 'Bu oyun ücretsizdir.',
 opensANewTab:
       'Bu bağlantı yeni bir sekmede açılır ve ilerlemeniz tarayıcınızda kaydedilir.',
     keepGoingForFree: 'Ücretsiz devam et',
     sort: {
       dateAdded: 'Eklenme tarihi',
-      nameAsc: 'Ä°sim (A-Z)',
-      nameDesc: 'Ä°sim (Z-A)',
+      nameAsc: 'İsim (A-Z)',
+      nameDesc: 'İsim (Z-A)',
       line: 'Hat',
     },
     searchFoundStations: 'İstasyon ara…',
@@ -1962,22 +1995,22 @@ opensANewTab:
     getTimezone: 'Saat dilimi al',
     gettingTimezone: 'Saat dilimi alınıyor…',
     getTimezoneRequest: 'Saat diliminizi algılamak için konum erişimi isteniyor…',
-    getTimezoneSuccess: ({ timezone }: { timezone: string }): string => `Saat dilimi ${timezone} olarak ayarlandÄ±.`,
+    getTimezoneSuccess: ({ timezone }: { timezone: string }): string => `Saat dilimi ${timezone} olarak ayarlandı.`,
     getTimezoneError: 'Saat dilimi algılanamadı. Lütfen birini seçin.',
     switchTo12Hour: '12 saat formatına geç',
     switchTo24Hour: '24 saat formatına geç',
 
     theme: 'Tema',
-    systemDefault: 'Sistem varsayÄ±lanÄ±',
+    systemDefault: 'Sistem varsayılanı',
     light: 'Açık',
     dark: 'Koyu',
     accentColor: 'Vurgu rengi',
-    cityCount: ({ count }: { count: number }): string => `${count} ${count === 1 ? 'şehir' : 'şehir'}`,
+    cityCount: ({ count }: { count: number }): string => `${count} ${count === 1 ? 'ÅŸehir' : 'ÅŸehir'}`,
     accentAmber: 'Kehribar',
-    accentBubbleGum: 'SakÄ±z',
+    accentBubbleGum: 'Sakız',
     accentCoffee: 'Kahve',
     accentEmerald: 'Zümrüt',
-    accentGold: 'AltÄ±n',
+    accentGold: 'Altın',
     accentIndigo: 'Çivit mavisi',
     accentLime: 'Misket limonu',
     accentRose: 'Gül',
@@ -1985,7 +2018,7 @@ opensANewTab:
     solutions: 'Çözümler',
     solutionsDesc:
       'Parolayı girdikten sonra seçtiğiniz şehirlerdeki tüm istasyonları otomatik olarak gösterir.',
-    enterPassword: 'ParolayÄ± girin',
+    enterPassword: 'Parolayı girin',
     password: 'Parola',
     unlock: 'Kilidi aç',
     incorrectPassword: 'Parola yanlış. Tekrar deneyin.',
@@ -2000,7 +2033,7 @@ opensANewTab:
     solutionsAutoMark:
       'Yukarıda seçtiğiniz bir şehri açtığınızda tüm istasyonlar otomatik olarak bulunmuş olarak işaretlenecek.',
     dangerZone: 'Tehlikeli bölge',
-    resetProgress: 'Ä°lerlemeyi sÄ±fÄ±rla',
+    resetProgress: 'İlerlemeyi sıfırla',
     signInToClear: 'Senkronize ilerlemeyi temizlemek için yeniden oturum açın.',
     celebrationConfetti: 'Kutlama konfetisi',
     celebrationConfettiDesc:
@@ -2009,7 +2042,7 @@ opensANewTab:
     hideConfettiDesc: 'Zaten %100 tamamladığınız şehirlerde gelecekteki konfetileri atla.',
     achievementToasts: 'Başarı bildirimleri',
     achievementToastsDesc: 'Bir şehri tamamladığınızda bildirim göster.',
-    resetSavedProgressTitle: 'Kaydedilen ilerlemeyi sÄ±fÄ±rla',
+    resetSavedProgressTitle: 'Kaydedilen ilerlemeyi sıfırla',
     resetSavedProgressDesc:
       'Seçilen şehirleri silmek için düğmeyi 5 saniye basılı tutun. Yalnızca ilerleme bulunan şehirler görünür. Bu işlem geri alınamaz.',
     resetNoProgress: 'Henüz kayıtlı ilerlemeniz yok.',
@@ -2018,7 +2051,7 @@ opensANewTab:
     resetSelectPrompt: 'Sıfırlama düğmesini etkinleştirmek için en az bir şehir seçin.',
     resetButtonResetting: 'Sıfırlanıyor…',
     resetButtonHold: 'Seçili şehirleri sıfırlamak için basılı tutun',
-    resetStatusSuccess: 'Ä°lerleme sÄ±fÄ±rlandÄ±.',
+    resetStatusSuccess: 'İlerleme sıfırlandı.',
     resetStatusLocalSuccess: 'Yerel ilerleme temizlendi.',
     resetStatusError: 'İlerleme sıfırlanamadı. Lütfen tekrar deneyin.',
 
@@ -2031,8 +2064,8 @@ opensANewTab:
     tabSettings: 'Ayarlar',
     tabCredits: 'Krediler',
     tabPrivacy: 'Gizlilik',
-    tabTestimonials: 'Ä°nsanlar ne diyor',
-    tabPress: 'Bizi yazdÄ±lar',
+    tabTestimonials: 'İnsanlar ne diyor',
+    tabPress: 'Bizi yazdılar',
     globalOverallCompletion: 'Genel tamamlanma',
     globalOverallDetail: ({ found, total }: { found: string; total: string }): string => `${found} / ${total} istasyon bulundu`,
     globalCompletedCities: 'Tamamlanan şehirler',
@@ -2044,17 +2077,17 @@ opensANewTab:
     globalSortCities: 'Şehirleri sırala',
 
     // Sort
-    sortDefault: 'VarsayÄ±lan sÄ±ralama',
-    sortNameAsc: 'Ä°sim (A-Z)',
+    sortDefault: 'Varsayılan sıralama',
+    sortNameAsc: 'İsim (A-Z)',
     cityViewComfortable: 'Rahat',
     cityViewCompact: 'Kompakt',
     cityViewCover: 'Kapak',
     cityViewList: 'Liste',
-    sortNameDesc: 'Ä°sim (Z-A)',
-    sortContinentAsc: 'KÄ±ta (A-Z)',
-    sortContinentDesc: 'KÄ±ta (Z-A)',
+    sortNameDesc: 'İsim (Z-A)',
+    sortContinentAsc: 'Kıta (A-Z)',
+    sortContinentDesc: 'Kıta (Z-A)',
     sortNotPlayed: 'Henüz oynanmadı',
-    sortPlayed: 'Zaten oynandÄ±',
+    sortPlayed: 'Zaten oynandı',
     sortNotAchieved: 'Başarılmadı',
     sortAchieved: 'Başarıldı',
     searchAchievements: 'Başarı ara…',
@@ -2093,10 +2126,10 @@ opensANewTab:
     privacySessionsLabel: 'Oturumlar',
     privacySessionsDesc:
       'kısa ömürlü, sunucu tarafı belirteçlerle sürdürülür. Oturumu kapatmak veya parolanızı sıfırlamak, oturumları anında geçersiz kılar.',
-    privacyProgressLabel: 'Ä°lerleme verisi',
+    privacyProgressLabel: 'İlerleme verisi',
     privacyProgressDesc:
       'yalnızca bir hesap oluşturarak katılmayı seçtiğinizde hesabınıza kaydedilir. Misafirler tarayıcıdaki yerel depolamayı kullanmaya devam eder.',
-    privacyVerificationLabel: 'E-posta doÄŸrulama ve parola sÄ±fÄ±rlama',
+    privacyVerificationLabel: 'E-posta doğrulama ve parola sıfırlama',
     privacyVerificationDesc:
       'kayıt sırasında kötüye kullanımı önlemek ve başarımlarınızı gelen kutunuza bağlı tutmak için gereklidir.',
     // Account
@@ -2110,10 +2143,10 @@ opensANewTab:
     accountLogout: 'Çıkış yap',
     accountSyncedCities: 'Senkronlanan şehirler',
     accountSyncedCitiesCount: ({ count }: { count: number }): string =>
-      `${count} ${count === 1 ? 'şehir senkronlandı' : 'şehir senkronlandı'}`,
+      `${count} ${count === 1 ? 'ÅŸehir senkronlandÄ±' : 'ÅŸehir senkronlandÄ±'}`,
     accountSearchSynced: 'Senkronlanan şehirlerde ara…',
-    accountSortNameAsc: 'Ä°sim (A-Z)',
-    accountSortNameDesc: 'Ä°sim (Z-A)',
+    accountSortNameAsc: 'İsim (A-Z)',
+    accountSortNameDesc: 'İsim (Z-A)',
     accountSortProgressDesc: 'İlerleme (yüksekten düşüğe)',
     accountSortProgressAsc: 'İlerleme (düşükten yükseğe)',
     accountStationsFound: ({ count }: { count: number }): string => `${count} istasyon`,
@@ -2129,13 +2162,13 @@ opensANewTab:
     accountChangePassword: 'Parola değiştir',
     accountChangePasswordDesc: 'Hesabınız için yeni bir parola seçin.',
     accountNewPassword: 'Yeni parola',
-    accountConfirmPassword: 'ParolayÄ± doÄŸrulayÄ±n',
+    accountConfirmPassword: 'Parolayı doğrulayın',
     accountUpdatePassword: 'Parolayı güncelle',
     accountCreateTitle: 'Hesap oluştur',
     accountCreateDesc:
       'Parolalar sunucu tarafında karma haline getirilir. Ayarları tamamlamak için doğrulama e-postası göndeririz.',
     accountEmail: 'E-posta adresi',
-    accountConfirmEmail: 'E-posta adresini doÄŸrula',
+    accountConfirmEmail: 'E-posta adresini doğrula',
     accountPassword: 'Parola',
     accountPasswordRequirements: 'Parola gereksinimleri',
     accountPasswordRuleLength: 'En az 8 karakter',
@@ -2150,7 +2183,7 @@ opensANewTab:
     accountResendButton: 'Doğrulama e-postasını yeniden gönder',
     accountResendNeedEmail: 'Bağlantıyı göndermek için yukarıya e-postanızı yazın.',
     accountResendError: 'E-posta şu anda gönderilemiyor. Lütfen tekrar deneyin.',
-    accountResendSuccess: 'Hesap varsa yeni bir doÄŸrulama e-postasÄ± yolda.',
+    accountResendSuccess: 'Hesap varsa yeni bir doğrulama e-postası yolda.',
     accountNetworkError: 'Ağ hatası. Lütfen tekrar deneyin.',
     accountSignupError: 'Hesap oluşturulamadı. Lütfen tekrar deneyin.',
     accountEmailRequired: 'E-posta gereklidir.',
@@ -2166,7 +2199,7 @@ opensANewTab:
     accountLoginSuccess: 'Tekrar hoş geldiniz! Verileriniz yükleniyor…',
     accountSigningIn: 'Giriş yapılıyor…',
     accountLoginButton: 'Giriş yap',
-    accountRememberMe: 'Bu cihazda beni hatÄ±rla',
+    accountRememberMe: 'Bu cihazda beni hatırla',
     accountSignInTitle: 'Giriş yap',
     accountCheckingStatus: 'Hesap durumunuz kontrol ediliyor…',
   },
@@ -2174,7 +2207,7 @@ opensANewTab:
     restartWarning: '進捗が失われます。本当にやり直しますか？',
     introInstruction: '駅名を入力してEnterキーを押してください',
     backToTheGame: 'ゲームに戻る',
-    stations: ({ count }: { count: number }): string => `${count}é§…`,
+    stations: ({ count }: { count: number }): string => `${count}駅`,
     stationsFound: '駅が見つかりました',
     inputPlaceholder: '駅名',
     alreadyFound: 'すでに見つかりました',
@@ -2386,7 +2419,7 @@ opensANewTab:
     accountSortNameDesc: '名前 (Z-A)',
     accountSortProgressDesc: '進行度（高い順）',
     accountSortProgressAsc: '進行度（低い順）',
-    accountStationsFound: ({ count }: { count: number }): string => `${count} é§…`,
+    accountStationsFound: ({ count }: { count: number }): string => `${count} 駅`,
     accountNoSyncedCities:
       'まだ同期された都市はありません。都市をプレイして進行状況を保存しましょう。',
     accountChangeEmail: 'メールアドレスを変更',
@@ -2443,7 +2476,7 @@ opensANewTab:
   sv: {
     restartWarning:
       'Du kommer att förlora all din progress. Är du säker på att du vill börja om?',
-    introInstruction: 'Skriv in en station och tryck pÃ¥ Enter',
+    introInstruction: 'Skriv in en station och tryck på Enter',
     backToTheGame: 'Tillbaka till spelet',
     stations: ({ count }: { count: number }) =>
       `${count} station${count > 1 ? 'er' : ''}`,
@@ -2466,7 +2499,7 @@ opensANewTab:
     cityStatsLatest: ({ value }: { value: string }): string => `Senaste: ${value}`,
     cityStatsPercentFound: ({ percent }: { percent: string }): string => `${percent} hittade`,
     cityStatsCompletedLines: 'Färdiga linjer',
-    cityStatsFastestLine: ({ line, duration }: { line: string; duration?: string }): string => `Snabbast: ${line}${duration ? ` pÃ¥ ${duration}` : ""}`,
+    cityStatsFastestLine: ({ line, duration }: { line: string; duration?: string }): string => `Snabbast: ${line}${duration ? ` pÃƒÆ’Ã‚Â¥ ${duration}` : ""}`,
     cityStatsLineBreakdown: 'Linjesammanställning',
     cityStatsNoTimeData: 'Inga tidsdata ännu',
     cityStatsTimelineTitle: 'Stationstidslinje',
@@ -2480,7 +2513,7 @@ opensANewTab:
     openCityStats: 'Öppna stadsstatistik',
     goToMain: 'Tillbaka till huvudsidan',
     congrats: ({ foundProportion }: { foundProportion: number }) =>
-      `Bra jobbat, du nÃ¥dde ${Math.floor(foundProportion * 100)}%!`,
+      `Bra jobbat, du nådde ${Math.floor(foundProportion * 100)}%!`,
     freeGame: 'Detta spel är gratis.',
 opensANewTab:
       'Denna länk öppnar en ny flik och din progress sparas i din webbläsare.',
@@ -2494,10 +2527,10 @@ opensANewTab:
     searchFoundStations: 'Sök stationer…',
     noStationsFound: ({ query }: { query?: string }): string =>
       query && query.length > 0
-        ? `Inga stationer hittades för "${query}"`
+        ? `Inga stationer hittades fÃƒÂ¶r "${query}"`
         : 'Inga stationer hittades',
     // New UI Keys
-    language: 'SprÃ¥k',
+    language: 'Språk',
     timezone: 'Tidszon',
     timezoneDesc: 'Standard är UTC. Välj en tidszon eller upptäck den automatiskt.',
     getTimezone: 'Hämta tidszon',
@@ -2513,7 +2546,7 @@ opensANewTab:
     light: 'Ljust',
     dark: 'Mörkt',
     accentColor: 'Accentfärg',
-    cityCount: ({ count }: { count: number }): string => `${count} ${count === 1 ? 'stad' : 'städer'}`,
+    cityCount: ({ count }: { count: number }): string => `${count} ${count === 1 ? 'stad' : 'stÃƒÂ¤der'}`,
     accentAmber: 'Bärnsten',
     accentBubbleGum: 'Tuggummi',
     accentCoffee: 'Kaffe',
@@ -2528,7 +2561,7 @@ opensANewTab:
       'Visar automatiskt alla stationer i valda städer efter att du har skrivit in lösenordet.',
     enterPassword: 'Ange lösenord',
     password: 'Lösenord',
-    unlock: 'LÃ¥s upp',
+    unlock: 'Lås upp',
     incorrectPassword: 'Fel lösenord. Försök igen.',
     revealEveryCity: 'Visa alla städer',
     selectSpecificCities: 'Välj specifika städer',
@@ -2577,7 +2610,7 @@ opensANewTab:
     globalOverallCompletion: 'Övergripande färdigställande',
     globalOverallDetail: ({ found, total }: { found: string; total: string }): string => `${found} / ${total} stationer hittade`,
     globalCompletedCities: 'Färdiga städer',
-    globalInProgress: 'PÃ¥gÃ¥r',
+    globalInProgress: 'Pågår',
     globalNotStarted: 'Inte påbörjat',
     globalTotalCities: 'Antal städer',
     globalByCityHint: 'Använd …-knappen för att hoppa till en stads detaljerade statistik.',
@@ -2596,16 +2629,16 @@ opensANewTab:
     sortContinentDesc: 'Kontinent (Z-A)',
     sortNotPlayed: 'Inte spelat än',
     sortPlayed: 'Redan spelat',
-    sortNotAchieved: 'Ej uppnÃ¥tt',
-    sortAchieved: 'UppnÃ¥tt',
+    sortNotAchieved: 'Ej uppnått',
+    sortAchieved: 'Uppnått',
     searchAchievements: 'Sök prestationer…',
     noAchievementsFound: 'Inga prestationer hittades.',
     sortAchievements: 'Sortera prestationer',
     unlockedAchievements: ({ unlocked, total }: { unlocked: number; total: number }): string =>
-      `UpplÃ¥sta prestationer: ${unlocked} / ${total}`,
-    lockedAchievements: ({ locked }: { locked: number }): string => `LÃ¥sta prestationer: ${locked}`,
-    achievementUnlocked: 'UpplÃ¥st',
-    achievementLocked: 'LÃ¥st',
+      `Upplåsta prestationer: ${unlocked} / ${total}`,
+    lockedAchievements: ({ locked }: { locked: number }): string => `Låsta prestationer: ${locked}`,
+    achievementUnlocked: 'Upplåst',
+    achievementLocked: 'Låst',
     // Continents
     northAmerica: 'Nordamerika',
     southAmerica: 'Sydamerika',
@@ -2651,7 +2684,7 @@ opensANewTab:
     accountLogout: 'Logga ut',
     accountSyncedCities: 'Synkade städer',
     accountSyncedCitiesCount: ({ count }: { count: number }): string =>
-      `${count} ${count === 1 ? 'stad synkad' : 'städer synkade'}`,
+      `${count} ${count === 1 ? 'stad synkad' : 'stÃƒÂ¤der synkade'}`,
     accountSearchSynced: 'Sök bland synkade städer…',
     accountSortNameAsc: 'Namn (A-Z)',
     accountSortNameDesc: 'Namn (Z-A)',
@@ -2717,7 +2750,7 @@ opensANewTab:
     introInstruction: 'Írd be egy állomás nevét, majd nyomj Entert',
     backToTheGame: 'Vissza a játékhoz',
     stations: ({ count }: { count: number }) =>
-      `${count} állomás${count > 1 ? '' : ''}`,
+      `${count} ÃƒÂ¡llomÃƒÂ¡s${count > 1 ? '' : ''}`,
     stationsFound: 'állomás megtalálva',
     inputPlaceholder: 'Állomás',
     alreadyFound: 'Már megtalálva',
@@ -2733,7 +2766,7 @@ opensANewTab:
     cityStatsAvgPerStation: ({ duration }: { duration: string }): string => `Átlag ${duration} állomásonként`,
     cityStatsPlayDays: ({ count }: { count: number }): string => `${count} játéknap`,
     cityStatsFirstLatest: 'Első és legutóbbi találatok',
-    cityStatsFirst: ({ value }: { value: string }): string => `ElsÅ‘: ${value}`,
+    cityStatsFirst: ({ value }: { value: string }): string => `Első: ${value}`,
     cityStatsLatest: ({ value }: { value: string }): string => `Legutóbbi: ${value}`,
     cityStatsPercentFound: ({ percent }: { percent: string }): string => `${percent} megtalálva`,
     cityStatsCompletedLines: 'Befejezett vonalak',
@@ -2749,11 +2782,11 @@ opensANewTab:
     account: 'Fiók',
     privacy: 'Adatvédelem',
     openCityStats: 'Városstatisztika megnyitása',
-    goToMain: 'Vissza a fÅ‘oldalra',
+    goToMain: 'Vissza a főoldalra',
     congrats: ({ foundProportion }: { foundProportion: number }) =>
-      `Ügyes vagy! Az állomások ${
+      `ÃƒÅ“gyes vagy! Az ÃƒÂ¡llomÃƒÂ¡sok ${
         10 * Math.floor((foundProportion * 100) / 10)
-      } százalékát nevezted meg!`,
+      } szÃƒÂ¡zalÃƒÂ©kÃƒÂ¡t nevezted meg!`,
     freeGame: 'Ez a játék ingyenes.',
 opensANewTab:
       'Ez a link új lapot nyit meg, és a haladásod a böngésződben mentésre kerül.',
@@ -2767,7 +2800,7 @@ opensANewTab:
     searchFoundStations: 'Állomások keresése…',
     noStationsFound: ({ query }: { query?: string }): string =>
       query && query.length > 0
-        ? `Nem található állomás erre: "${query}"`
+        ? `Nem talÃƒÂ¡lhatÃƒÂ³ ÃƒÂ¡llomÃƒÂ¡s erre: "${query}"`
         : 'Nem található állomás',
     // New UI Keys
     language: 'Nyelv',
@@ -2786,7 +2819,7 @@ opensANewTab:
     light: 'Világos',
     dark: 'Sötét',
     accentColor: 'Kiemelő szín',
-    cityCount: ({ count }: { count: number }): string => `${count} ${count === 1 ? 'város' : 'város'}`,
+    cityCount: ({ count }: { count: number }): string => `${count} ${count === 1 ? 'vÃƒÂ¡ros' : 'vÃƒÂ¡ros'}`,
     accentAmber: 'Borostyán',
     accentBubbleGum: 'Rágógumi',
     accentCoffee: 'Kávé',
@@ -2924,7 +2957,7 @@ opensANewTab:
     accountLogout: 'Kijelentkezés',
     accountSyncedCities: 'Szinkronizált városok',
     accountSyncedCitiesCount: ({ count }: { count: number }): string =>
-      `${count} ${count === 1 ? 'város szinkronizálva' : 'város szinkronizálva'}`,
+      `${count} ${count === 1 ? 'vÃƒÂ¡ros szinkronizÃƒÂ¡lva' : 'vÃƒÂ¡ros szinkronizÃƒÂ¡lva'}`,
     accountSearchSynced: 'Szinkronizált városok keresése…',
     accountSortNameAsc: 'Név (A-Z)',
     accountSortNameDesc: 'Név (Z-A)',
@@ -2956,7 +2989,7 @@ opensANewTab:
     accountPasswordRuleUpper: 'Legalább egy nagybetű',
     accountPasswordRuleLower: 'Legalább egy kisbetű',
     accountPasswordRuleSpecial: 'Legalább egy speciális karakter',
-    accountVerificationSent: 'EllenÅ‘rzÅ‘ email elkÃ¼ldve',
+    accountVerificationSent: 'Ellenőrző email elküldve',
     accountCreateButton: 'Fiók létrehozása',
     accountVerificationInstructions:
       'Ellenőrizd a bejövő leveleidet, és kattints a linkre a Metro Memory fiók aktiválásához.',
@@ -3038,6 +3071,13 @@ opensANewTab:
     miniCityNameGbaMtrHeavyRail: '港铁（重铁）',
     miniCityNameGbaMtrLightRail: '港铁（轻铁）',
     miniCityNameGbaMacau: '澳门',
+    miniCityBadge: '迷你城市',
+    miniCityCountLabel: ({ count }: { count: number }): string => `${count} 个迷你城市`,
+    playLabel: '游玩',
+    progressLabel: '进度',
+    playMetroMemoryCta: ({ city }: { city: string }): string => `游玩 ${city} Metro Memory`,
+    comingSoonLabel: '即将推出',
+    comingSoonSuffix: '（即将推出）',
     getLocation: '获取位置',
     locating: '正在定位…',
     playRandomCity: '随机游玩城市',
@@ -3082,6 +3122,7 @@ opensANewTab:
     switchTo24Hour: '切换到24小时制',
 
     theme: '主题',
+    changeThemeLabel: '切换主题',
     systemDefault: '系统默认',
     light: '浅色',
     dark: '深色',
@@ -3114,6 +3155,7 @@ opensANewTab:
       '下次打开上述选定的城市时，所有车站都会自动标记为已找到。',
     dangerZone: '危险区域',
     resetProgress: '重置进度',
+    resetAllProgressLabel: '重置所有进度',
     signInToClear: '重新登录以清除已同步的进度。',
     celebrationConfetti: '庆祝彩纸',
     celebrationConfettiDesc: '达到里程碑或点击彩纸按钮时显示彩纸。',
@@ -3249,6 +3291,7 @@ opensANewTab:
       '想添加你的城市或铁路网络？请在 GitHub 上提 issue，或提交包含数据改进的 pull request。',
     // Privacy
     privacyTitle: '隐私与安全',
+    privacyModalSubtitle: '直接在游戏中查看隐私详情。',
     privacyIntro:
       'Metro Memory 支持账号，以便在设备间同步进度和成就。数据处理方式如下：',
     privacyPasswordsLabel: '密码',
@@ -3410,6 +3453,13 @@ opensANewTab:
     miniCityNameGbaMtrHeavyRail: '港鐵（重鐵）',
     miniCityNameGbaMtrLightRail: '港鐵（輕鐵）',
     miniCityNameGbaMacau: '澳門',
+    miniCityBadge: '迷你城市',
+    miniCityCountLabel: ({ count }: { count: number }): string => `${count} 個迷你城市`,
+    playLabel: '遊玩',
+    progressLabel: '進度',
+    playMetroMemoryCta: ({ city }: { city: string }): string => `遊玩 ${city} Metro Memory`,
+    comingSoonLabel: '即將推出',
+    comingSoonSuffix: '（即將推出）',
     getLocation: '取得位置',
     locating: '正在定位…',
     playRandomCity: '隨機遊玩城市',
@@ -3454,6 +3504,7 @@ opensANewTab:
     switchTo24Hour: '切換為24小時制',
 
     theme: '主題',
+    changeThemeLabel: '切換主題',
     systemDefault: '系統預設',
     light: '淺色',
     dark: '深色',
@@ -3486,6 +3537,7 @@ opensANewTab:
       '下次開啟以上選取的城市時，所有車站都會自動標記為已找到。',
     dangerZone: '危險區域',
     resetProgress: '重設進度',
+    resetAllProgressLabel: '重設所有進度',
     signInToClear: '重新登入以清除已同步的進度。',
     celebrationConfetti: '慶祝彩帶',
     celebrationConfettiDesc: '達到里程碑或按下彩帶按鈕時顯示彩帶。',
@@ -3621,6 +3673,7 @@ opensANewTab:
       '想加入你的城市或鐵路網嗎？在 GitHub 提 issue 或送出包含資料改進的 pull request。',
     // Privacy
     privacyTitle: '隱私與安全',
+    privacyModalSubtitle: '直接在遊戲中查看隱私詳情。',
     privacyIntro:
       'Metro Memory 支援帳戶，讓你在裝置間同步進度與成就。數據處理方式如下：',
     privacyPasswordsLabel: '密碼',
@@ -3747,7 +3800,7 @@ opensANewTab:
     cityStats: 'Thống kê thành phố',
     cityStatsStationsProgress: 'Tiến độ nhà ga',
     cityStatsTimeSpent: 'Thời gian chơi',
-    cityStatsAvgPerStation: ({ duration }: { duration: string }): string => `Trung bÃ¬nh ${duration} má»—i ga`,
+    cityStatsAvgPerStation: ({ duration }: { duration: string }): string => `Trung bình ${duration} mỗi ga`,
     cityStatsPlayDays: ({ count }: { count: number }): string => `${count} ngày chơi`,
     cityStatsFirstLatest: 'Lần đầu và lần mới nhất',
     cityStatsFirst: ({ value }: { value: string }): string => `Đầu tiên: ${value}`,
@@ -3799,7 +3852,7 @@ opensANewTab:
     theme: 'Giao diện',
     systemDefault: 'Theo hệ thống',
     light: 'Sáng',
-    dark: 'Tá»‘i',
+    dark: 'Tối',
     accentColor: 'Màu nhấn',
     cityCount: ({ count }: { count: number }): string => `${count} ${count === 1 ? 'thành phố' : 'thành phố'}`,
     accentAmber: 'Hổ phách',
@@ -3809,7 +3862,7 @@ opensANewTab:
     accentGold: 'Vàng',
     accentIndigo: 'Chàm',
     accentLime: 'Chanh xanh',
-    accentRose: 'Há»“ng',
+    accentRose: 'Hồng',
     accentSky: 'Bầu trời',
     solutions: 'Đáp án',
     solutionsDesc:
@@ -3828,7 +3881,7 @@ opensANewTab:
     noCitiesMatch: 'Không có thành phố nào khớp tìm kiếm.',
     solutionsAutoMark:
       'Lần tới khi mở thành phố đã chọn ở trên, tất cả ga sẽ tự động được đánh dấu đã tìm thấy.',
-    dangerZone: 'Khu nguy hiá»ƒm',
+    dangerZone: 'Khu nguy hiểm',
     resetProgress: 'Đặt lại tiến trình',
     signInToClear: 'Đăng nhập lại để xóa tiến trình đã đồng bộ.',
     celebrationConfetti: 'Pháo giấy ăn mừng',
@@ -3884,7 +3937,7 @@ opensANewTab:
     sortContinentDesc: 'Châu lục (Z-A)',
     sortNotPlayed: 'Chưa chơi',
     sortPlayed: 'Đã chơi',
-    sortNotAchieved: 'ChÆ°a Ä‘áº¡t',
+    sortNotAchieved: 'Chưa đạt',
     sortAchieved: 'Đã đạt',
     searchAchievements: 'Tìm kiếm thành tích…',
     noAchievementsFound: 'Không tìm thấy thành tích nào.',
@@ -3897,9 +3950,9 @@ opensANewTab:
     // Continents
     northAmerica: 'Bắc Mỹ',
     southAmerica: 'Nam Mỹ',
-    europe: 'ChÃ¢u Ã‚u',
+    europe: 'Châu Âu',
     asia: 'Châu Á',
-    africa: 'ChÃ¢u Phi',
+    africa: 'Châu Phi',
     oceania: 'Châu Đại Dương',
     antarctica: 'Châu Nam Cực',
     australia: 'Châu Úc',
@@ -4005,7 +4058,7 @@ opensANewTab:
     introInstruction: 'Digite o nome de uma estação e pressione Enter',
     backToTheGame: 'Voltar ao jogo',
     stations: ({ count }: { count: number }) =>
-      `${count} estação${count > 1 ? 'ões' : ''}`,
+      `${count} estaÃƒÂ§ÃƒÂ£o${count > 1 ? 'ÃƒÂµes' : ''}`,
     stationsFound: 'estações encontradas',
     inputPlaceholder: 'Estação',
     alreadyFound: 'Já encontrada',
@@ -4053,7 +4106,7 @@ opensANewTab:
     searchFoundStations: 'Pesquisar estações encontradas…',
     noStationsFound: ({ query }: { query?: string }): string =>
       query && query.length > 0
-        ? `Nenhuma estação encontrada para "${query}"`
+        ? `Nenhuma estaÃƒÂ§ÃƒÂ£o encontrada para "${query}"`
         : 'Nenhuma estação encontrada',
     // New UI Keys
     language: 'Idioma',
@@ -4073,7 +4126,7 @@ opensANewTab:
     dark: 'Escuro',
     accentColor: 'Cor de destaque',
     cityCount: ({ count }: { count: number }): string => `${count} ${count === 1 ? 'cidade' : 'cidades'}`,
-    accentAmber: 'Ã‚mbar',
+    accentAmber: 'Âmbar',
     accentBubbleGum: 'Chiclete',
     accentCoffee: 'Café',
     accentEmerald: 'Esmeralda',
@@ -4216,7 +4269,7 @@ opensANewTab:
     accountSortNameDesc: 'Nome (Z-A)',
     accountSortProgressDesc: 'Progresso (maior para menor)',
     accountSortProgressAsc: 'Progresso (menor para maior)',
-    accountStationsFound: ({ count }: { count: number }): string => `${count} estação${count === 1 ? '' : 's'}`,
+    accountStationsFound: ({ count }: { count: number }): string => `${count} estaÃƒÂ§ÃƒÂ£o${count === 1 ? '' : 's'}`,
     accountNoSyncedCities:
       'Ainda não há cidades sincronizadas. Jogue uma cidade para começar a salvar seu progresso.',
     accountChangeEmail: 'Alterar email',
@@ -4344,7 +4397,7 @@ opensANewTab:
     light: 'Chiaro',
     dark: 'Scuro',
     accentColor: 'Colore di accento',
-    cityCount: ({ count }: { count: number }): string => `${count} ${count === 1 ? 'città' : 'città'}`,
+    cityCount: ({ count }: { count: number }): string => `${count} ${count === 1 ? 'cittÃƒÂ ' : 'cittÃƒÂ '}`,
     accentAmber: 'Ambra',
     accentBubbleGum: 'Bubble Gum',
     accentCoffee: 'Caffè',
@@ -4482,12 +4535,12 @@ opensANewTab:
     accountLogout: 'Esci',
     accountSyncedCities: 'Città sincronizzate',
     accountSyncedCitiesCount: ({ count }: { count: number }): string =>
-      `${count} ${count === 1 ? 'città sincronizzata' : 'città sincronizzate'}`,
+      `${count} ${count === 1 ? 'cittÃƒÂ  sincronizzata' : 'cittÃƒÂ  sincronizzate'}`,
     accountSearchSynced: 'Cerca città sincronizzate…',
     accountSortNameAsc: 'Nome (A-Z)',
     accountSortNameDesc: 'Nome (Z-A)',
-    accountSortProgressDesc: 'Avanzamento (alto â†’ basso)',
-    accountSortProgressAsc: 'Avanzamento (basso â†’ alto)',
+    accountSortProgressDesc: 'Avanzamento (alto → basso)',
+    accountSortProgressAsc: 'Avanzamento (basso → alto)',
     accountStationsFound: ({ count }: { count: number }): string => `${count} stazione${count === 1 ? '' : 'i'}`,
     accountNoSyncedCities:
       'Ancora nessuna città sincronizzata. Gioca una città per iniziare a salvare i progressi.',
@@ -4526,7 +4579,7 @@ opensANewTab:
       'Se l’account esiste, una nuova email di verifica è in arrivo.',
     accountNetworkError: 'Errore di rete. Riprova.',
     accountSignupError: 'Impossibile creare l’account. Riprova.',
-    accountEmailRequired: "L'email è obbligatoria.",
+    accountEmailRequired: "L'email ÃƒÂ¨ obbligatoria.",
     accountEmailInvalid: 'Inserisci un indirizzo email valido.',
     accountEmailMismatch: 'Gli indirizzi email non corrispondono.',
     accountPasswordRequirementError: 'La password deve soddisfare tutti i requisiti.',

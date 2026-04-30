@@ -22,6 +22,7 @@ import AchievementIcon from '@/components/AchievementIcon'
 import { BackToTopButton } from '@/components/BackToTopButton'
 import CitiesGlobe from '@/components/CitiesGlobe'
 import CityCard, { CityCardVariant } from '@/components/CityCard'
+import CloseButton from '@/components/CloseButton'
 import CityStatsPanel from '@/components/CityStatsPanel'
 import CollapsibleSection from '@/components/CollapsibleSection'
 import CreditsContent from '@/components/CreditsContent'
@@ -37,6 +38,7 @@ import { getCityOpenGraphImagePath } from '@/lib/cityAssets'
 import { formatLocalizedCityName } from '@/lib/cityNameDisplay'
 import { ICity, cities, isCityDisabled as isCityDisabledFlag } from '@/lib/citiesConfig'
 import { CITY_COORDINATES } from '@/lib/cityCoordinates'
+import { formatDisplayCountryLabel } from '@/lib/countryNameDisplay'
 import { GLOBAL_ACHIEVEMENTS } from '@/lib/globalAchievements'
 import { resolveI18nLocaleCode } from '@/lib/i18n'
 import {
@@ -477,7 +479,11 @@ const COUNTRY_FLAG_EMOJIS: Record<string, string> = {
   algeria: '🇩🇿',
 }
 
-const formatCountryLabel = (slug: string | null) => {
+const formatCountryLabel = (slug: string | null, language?: string) => {
+  const localized = formatDisplayCountryLabel(slug, language)
+  if (localized) {
+    return localized
+  }
   if (!slug) {
     return 'Unknown'
   }
@@ -492,18 +498,9 @@ const formatCountryLabel = (slug: string | null) => {
 
 const formatAchievementCountryLabel = (
   slug: string | null,
-  t: (key: string, params?: Record<string, unknown>) => string,
+  language?: string,
 ) => {
-  if (!slug) {
-    return t('unknownLabel')
-  }
-  if (slug === 'global') {
-    return t('achievementCategoryMain')
-  }
-  if (slug === 'secret-fun') {
-    return t('achievementCategorySecretFun')
-  }
-  return formatCountryLabel(slug)
+  return formatCountryLabel(slug, language)
 }
 
 const formatAchievementContinentLabel = (
@@ -1940,7 +1937,7 @@ const SearcheableCitiesList = ({
           const percent = stats.total > 0 ? stats.found / stats.total : 0
           return {
             country,
-            label: formatCountryLabel(country),
+            label: formatCountryLabel(country, settings.language),
             cityCount: stats.cityCount,
             miniCityCount: stats.miniCityCount,
             percent,
@@ -2026,7 +2023,11 @@ const SearcheableCitiesList = ({
           country,
           entries,
         }))
-        .sort((a, b) => formatCountryLabel(a.country).localeCompare(formatCountryLabel(b.country)))
+        .sort((a, b) =>
+          formatCountryLabel(a.country, settings.language).localeCompare(
+            formatCountryLabel(b.country, settings.language),
+          ),
+        )
       return {
         continent,
         countries,
@@ -2075,7 +2076,11 @@ const SearcheableCitiesList = ({
           country,
           entries,
         }))
-        .sort((a, b) => formatCountryLabel(a.country).localeCompare(formatCountryLabel(b.country)))
+        .sort((a, b) =>
+          formatCountryLabel(a.country, settings.language).localeCompare(
+            formatCountryLabel(b.country, settings.language),
+          ),
+        )
       return {
         continent,
         countries,
@@ -2101,7 +2106,7 @@ const SearcheableCitiesList = ({
         const percent = countryTotal > 0 ? countryUnlocked / countryTotal : 0
         return {
           country: country.country,
-          label: formatCountryLabel(country.country),
+          label: formatCountryLabel(country.country, settings.language),
           cityCount: countryTotal,
           miniCityCount: 0,
           percent,
@@ -2465,7 +2470,6 @@ const SearcheableCitiesList = ({
     addThreshold('all-rounder', achievementMetrics.uniqueContinents, 3)
     addThreshold('globe-trotter', achievementMetrics.uniqueContinents, 6)
     addThreshold('favorites-first', achievementMetrics.favoritesCompleted, 5)
-    addThreshold('the-cartographer', achievementMetrics.mapNamesToggles, 20)
 
     return progressMap
   }, [
@@ -2861,7 +2865,9 @@ const SearcheableCitiesList = ({
     })
 
     const sortedEntries = Array.from(countryMap.entries()).sort(([a], [b]) =>
-      formatCountryLabel(a).localeCompare(formatCountryLabel(b)),
+      formatCountryLabel(a, settings.language).localeCompare(
+        formatCountryLabel(b, settings.language),
+      ),
     )
 
     return (
@@ -2884,7 +2890,7 @@ const SearcheableCitiesList = ({
           const cityCountLabel = t('cityCount', { count: cityCount })
           const miniCityCountLabel =
             miniCityCount > 0
-              ? `, ${miniCityCount} ${miniCityCount === 1 ? 'Mini City' : 'Mini Cities'}`
+              ? `, ${t('miniCityCountLabel', { count: miniCityCount })}`
               : ''
           const countrySectionId = getCountrySectionId(continent, country)
 
@@ -2898,7 +2904,7 @@ const SearcheableCitiesList = ({
                     {getCountryFlagEmoji(country)}
                   </span>
                   <span>
-                    {formatCountryLabel(country)} · {cityCountLabel}
+                    {formatCountryLabel(country, settings.language)} · {cityCountLabel}
                     {miniCityCountLabel}{' '}
                   <span className="text-sm font-semibold" style={{ color: headerColor }}>
                     ({progressLabel})
@@ -3002,7 +3008,7 @@ const SearcheableCitiesList = ({
                       : t('cityCount', { count: cityCount })
                   const miniCountLabel =
                     activeTab === 'cities' && miniCityCount > 0
-                      ? `, ${miniCityCount} ${miniCityCount === 1 ? 'Mini City' : 'Mini Cities'}`
+                      ? `, ${t('miniCityCountLabel', { count: miniCityCount })}`
                       : ''
                   const percentLabel = `${(averagePercent * 100).toFixed(0)}%`
                   const percentColor = getGradientColor(averagePercent)
@@ -3105,7 +3111,10 @@ const SearcheableCitiesList = ({
                               </span>
                               <span className="truncate">
                                 {activeTab === 'achievements'
-                                  ? formatAchievementCountryLabel(country.country, t)
+                                  ? formatAchievementCountryLabel(
+                                      country.country,
+                                      settings.language,
+                                    )
                                   : country.label}
                               </span>
                             </span>
@@ -3582,7 +3591,7 @@ const SearcheableCitiesList = ({
                 const cityCountLabel = t('cityCount', { count: cityCount })
                 const miniCityCountLabel =
                   miniCityCount > 0
-                    ? `, ${miniCityCount} ${miniCityCount === 1 ? 'Mini City' : 'Mini Cities'}`
+                    ? `, ${t('miniCityCountLabel', { count: miniCityCount })}`
                     : ''
 
                 const isCollapsible = COLLAPSIBLE_CONTINENTS.has(continent)
@@ -4145,14 +4154,12 @@ const SearcheableCitiesList = ({
               {favoriteToast?.message}
             </p>
           </div>
-          <button
-            type="button"
-            aria-label="Dismiss favorites notification"
+          <CloseButton
+            ariaLabel="Dismiss favorites notification"
             onClick={() => setFavoriteToast(null)}
-            className="ml-2 inline-flex items-center justify-center rounded-full border border-transparent p-1 text-sm font-semibold text-zinc-500 transition hover:text-zinc-800 focus:outline-none focus:ring-2 focus:ring-amber-400 dark:text-zinc-300 dark:hover:text-white"
-          >
-            <span aria-hidden="true">&times;</span>
-          </button>
+            className="ml-2 h-7 w-7 text-zinc-500 hover:text-zinc-800 focus:ring-amber-400 dark:text-zinc-300 dark:hover:text-white"
+            iconClassName="h-4 w-4"
+          />
         </div>
       </div>
     </Transition>
@@ -4398,7 +4405,10 @@ const Achievements = ({
                         const countryProgress = countryTotal > 0 ? countryUnlocked / countryTotal : 0
                         const countryHeaderColor = getGradientColor(countryProgress)
                         const countryProgressLabel = `${(countryProgress * 100).toFixed(2)}%`
-                        const countryLabel = formatAchievementCountryLabel(country.country, t)
+                        const countryLabel = formatAchievementCountryLabel(
+                          country.country,
+                          language,
+                        )
                         const countryCountLabel = formatAchievementCount(countryTotal)
                         const countrySectionId = getCountrySectionId(group.continent, country.country)
 

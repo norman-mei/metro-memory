@@ -172,7 +172,7 @@ const TRADITIONAL_CHINESE_REPLACEMENTS: Array<[string, string]> = [
 ]
 
 const SIMPLIFIED_CITY_NAME_OVERRIDES: Record<string, string> = {
-  albuquerque: '阿尔伯克基, NM',
+  albuquerque: '阿尔伯克基, N\u200BM',
   amtrak: '美铁, 美国',
   atlanta: '亚特兰大, GA',
   austin: '奥斯汀, TX',
@@ -193,9 +193,9 @@ const SIMPLIFIED_CITY_NAME_OVERRIDES: Record<string, string> = {
   galveston: '加尔维斯顿, TX',
   algiers: '阿尔及尔, DZ',
   maracaibo: '马拉开波, VE',
-  honolulu: '火奴鲁鲁, HI',
+  honolulu: '火奴鲁鲁, H\u200BI',
   houston: '休斯敦, TX',
-  kc: '堪萨斯城, MO',
+  kc: '堪萨斯城, M\u200BO',
   lv: '拉斯维加斯, NV',
   lr: '小石城, AR',
   memphis: '孟菲斯, TN',
@@ -220,7 +220,7 @@ const SIMPLIFIED_CITY_NAME_OVERRIDES: Record<string, string> = {
   portland: '波特兰, OR',
   slc: '盐湖城, UT',
   seattle: '西雅图—塔科马, WA',
-  stl: '圣路易斯, MO',
+  stl: '圣路易斯, M\u200BO',
   'toronto-waterloo': '多伦多—滑铁卢, ON',
   tucson: '图森, AZ',
   vancouver: '温哥华, BC',
@@ -258,6 +258,31 @@ const SIMPLIFIED_CITY_NAME_OVERRIDES: Record<string, string> = {
   gwangju: '光州, GJ',
   singapore: '新加坡, SG',
   kaohsiung: '高雄, KHH',
+  nanning: '南宁, GX',
+  changchun: '\u957f\u6625, JL',
+  changzhou: '\u5e38\u5dde, JS',
+  dalian: '\u5927\u8fde, LN',
+  fuzhou: '\u798f\u5dde, FJ',
+  guiyang: '\u8d35\u9633, \u8d35\u5dde',
+  harbin: '\u54c8\u5c14\u6ee8, HL',
+  hohhot: '\u547c\u548c\u6d69\u7279, NM',
+  jinhua: '\u91d1\u534e, ZJ',
+  lanzhou: '\u5170\u5dde, GS',
+  lijiang: '\u4e3d\u6c5f, YN',
+  liupanshui: '\u516d\u76d8\u6c34, \u8d35\u5dde',
+  luoyang: '\u6d1b\u9633, HA',
+  nanchang: '\u5357\u660c, JX',
+  nantong: '\u5357\u901a, JS',
+  shenyang: '\u6c88\u9633, LN',
+  shijiazhuang: '\u77f3\u5bb6\u5e84, HE',
+  taiyuan: '\u592a\u539f, SX',
+  taizhou: '\u53f0\u5dde, ZJ',
+  urumqi: '\u4e4c\u9c81\u6728\u9f50, XJ',
+  wenzhou: '\u6e29\u5dde, ZJ',
+  wuhu: '\u829c\u6e56, AH',
+  wuxi: '\u65e0\u9521, JS',
+  xiamen: '\u53a6\u95e8, FJ',
+  xuzhou: '\u5f90\u5dde, JS',
   taipei: '台北—新北—桃园, TPE/NWT/TAO',
   taichung: '台中, TXG',
   hochiminhcity: '胡志明市, HCM',
@@ -324,8 +349,115 @@ const SIMPLIFIED_CITY_NAME_OVERRIDES: Record<string, string> = {
   'toronto-waterloo-metrolinx': 'Metrolinx',
 }
 
+const ENGLISH_CITY_NAME_OVERRIDES: Record<string, string> = {
+  gba: 'Greater Bay Area (粤港澳大湾区)',
+  'gba-guangzhou': 'Guangzhou (广州)',
+  'gba-foshan': 'Foshan (佛山)',
+  'gba-dongguan': 'Dongguan (东莞)',
+  'gba-shenzhen': 'Shenzhen (深圳)',
+  'gba-hong-kong': 'Hong Kong (香港)',
+  'gba-mtr-heavy-rail': 'Mass Transit Railway (Heavy Rail) — 港鐵（重鐵）',
+  'gba-mtr-light-rail': 'Mass Transit Railway (Light Rail) — 港鐵（輕鐵）',
+  'gba-macau': 'Macau (澳門)',
+}
+
 const normalizeSlug = (slugOrLink: string) =>
   slugOrLink.replace(/^\//, '').split(/[?#]/)[0]
+
+const SIMPLIFIED_REGION_ABBREVIATIONS: Record<string, string> = {
+  AH: '安徽',
+  BJ: '北京',
+  CQ: '重庆',
+  FJ: '福建',
+  GD: '广东',
+  GS: '甘肃',
+  GX: '广西',
+  HA: '河南',
+  HB: '湖北',
+  HE: '河北',
+  HI: '海南',
+  HK: '香港',
+  HL: '黑龙江',
+  HN: '湖南',
+  JL: '吉林',
+  JS: '江苏',
+  JX: '江西',
+  LN: '辽宁',
+  MO: '澳门',
+  NM: '内蒙古',
+  NX: '宁夏',
+  SC: '四川',
+  SD: '山东',
+  SH: '上海',
+  SX: '山西',
+  TJ: '天津',
+  XJ: '新疆',
+  YN: '云南',
+  ZJ: '浙江',
+}
+
+const TRADITIONAL_REGION_ABBREVIATIONS: Record<string, string> = {
+  AH: '安徽',
+  BJ: '北京',
+  CQ: '重慶',
+  FJ: '福建',
+  GD: '廣東',
+  GS: '甘肅',
+  GX: '廣西',
+  HA: '河南',
+  HB: '湖北',
+  HE: '河北',
+  HI: '海南',
+  HK: '香港',
+  HL: '黑龍江',
+  HN: '湖南',
+  JL: '吉林',
+  JS: '江蘇',
+  JX: '江西',
+  LN: '遼寧',
+  MO: '澳門',
+  NM: '內蒙古',
+  NX: '寧夏',
+  SC: '四川',
+  SD: '山東',
+  SH: '上海',
+  SX: '山西',
+  TJ: '天津',
+  XJ: '新疆',
+  YN: '雲南',
+  ZJ: '浙江',
+}
+
+const localizeRegionAbbreviationChunk = (value: string, language: string) => {
+  const map =
+    language === 'zh-TW'
+      ? TRADITIONAL_REGION_ABBREVIATIONS
+      : SIMPLIFIED_REGION_ABBREVIATIONS
+
+  return value.replace(/\b([A-Z]{2,3}(?:\/[A-Z]{2,3})+|[A-Z]{2,3})\b/g, (match) => {
+    const parts = match.split('/')
+    const localizedParts = parts.map((part) => map[part] ?? null)
+    if (localizedParts.some((part) => part === null)) {
+      return match
+    }
+    return localizedParts.join('/')
+  })
+}
+
+const normalizeChineseMunicipalityName = (value: string, language: string) => {
+  const municipalities =
+    language === 'zh-TW'
+      ? ['北京', '天津', '上海', '重慶']
+      : ['北京', '天津', '上海', '重庆']
+
+  for (const municipality of municipalities) {
+    if (value === `${municipality}, ${municipality}`) {
+      return `${municipality}市`
+    }
+  }
+
+  return value
+}
 
 const extractEmbeddedCjkName = (
   name: string,
@@ -338,11 +470,11 @@ const extractEmbeddedCjkName = (
   }
   const suffix = normalized.slice(match.index + match[0].length)
   const embedded = match[1].trim()
-  const combined = `${embedded}${suffix}`.trim()
+  const combined = localizeRegionAbbreviationChunk(`${embedded}${suffix}`.trim(), language)
   if (language === 'zh-TW') {
-    return toTraditionalChinese(combined)
+    return normalizeChineseMunicipalityName(toTraditionalChinese(combined), language)
   }
-  return combined
+  return normalizeChineseMunicipalityName(combined, language)
 }
 
 const toTraditionalChinese = (value: string) =>
@@ -356,18 +488,30 @@ export const formatLocalizedCityName = (
   slugOrLink: string,
   language?: string | null,
 ) => {
+  const normalized = normalizeSlug(slugOrLink)
+  const lastSegment = normalized.split('/').filter(Boolean).pop() ?? normalized
+
+  if (language === 'en') {
+    return (
+      ENGLISH_CITY_NAME_OVERRIDES[normalized] ??
+      ENGLISH_CITY_NAME_OVERRIDES[lastSegment] ??
+      name
+    )
+  }
+
   if (language !== 'zh-CN' && language !== 'zh-TW') {
     return name
   }
-
-  const normalized = normalizeSlug(slugOrLink)
-  const lastSegment = normalized.split('/').filter(Boolean).pop() ?? normalized
   const explicit =
     SIMPLIFIED_CITY_NAME_OVERRIDES[normalized] ??
     SIMPLIFIED_CITY_NAME_OVERRIDES[lastSegment]
 
   if (explicit) {
-    return language === 'zh-TW' ? toTraditionalChinese(explicit) : explicit
+    const localized = localizeRegionAbbreviationChunk(explicit, language)
+    if (language === 'zh-TW') {
+      return normalizeChineseMunicipalityName(toTraditionalChinese(localized), language)
+    }
+    return normalizeChineseMunicipalityName(localized, language)
   }
 
   const embedded = extractEmbeddedCjkName(name, language)

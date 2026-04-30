@@ -13,6 +13,6 @@ export const metadata: Metadata = withCityAssetMetadata('fuzhou', {
     description: 'How many Fuzhou Metro stations can you name from memory?',
     type: 'website',
     locale: 'en_US',
-    url: 'https://metro-memory.com/asia/china/fuzhou',
+    url: 'https://metro-memory.xyz/asia/china/fuzhou',
   },
 })

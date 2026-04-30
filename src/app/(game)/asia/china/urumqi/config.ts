@@ -30,7 +30,7 @@ export const METADATA: Metadata = {
     description: 'How many of the Ürümqi Metro stations can you name from memory?',
     type: 'website',
     locale: 'en_US',
-    url: 'https://metro-memory.com/asia/china/urumqi',
+    url: 'https://metro-memory.xyz/asia/china/urumqi',
   },
 }
 

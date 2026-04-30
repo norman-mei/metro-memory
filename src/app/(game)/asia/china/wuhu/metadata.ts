@@ -13,6 +13,6 @@ export const metadata: Metadata = withCityAssetMetadata('wuhu', {
     description: 'How many of the Wuhu Rail Transit stations can you name from memory?',
     type: 'website',
     locale: 'en_US',
-    url: 'https://metro-memory.com/asia/china/wuhu',
+    url: 'https://metro-memory.xyz/asia/china/wuhu',
   },
 })

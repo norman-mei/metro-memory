@@ -23,6 +23,7 @@ const bootstrap = () => {
     () => {
       // start watcher for images + registries
       run('node', ['scripts/auto-sync-city-image-folders.js'], 'auto-sync-image-folders')
+      run('node', ['scripts/watch-city-runtime-data.js'], 'watch-city-runtime-data')
       // start next dev (turbo by default)
       run('next', ['dev', '--turbo'], 'next-dev')
     },

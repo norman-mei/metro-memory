@@ -46,7 +46,7 @@ export const METADATA: Metadata = {
       'How many of the Wenzhou Rail Transit stations can you name from memory?',
     type: 'website',
     locale: 'en_US',
-    url: 'https://metro-memory.com/asia/china/wenzhou',
+    url: 'https://metro-memory.xyz/asia/china/wenzhou',
   },
 }
 

@@ -2,10 +2,13 @@
 
 import { Fragment, useEffect, useState } from 'react'
 import { Transition } from '@headlessui/react'
+import CloseButton from './CloseButton'
 
 const POLL_INTERVAL_MS = 3000
 const TOAST_DURATION_MS = 15000
 const VERSION_STORAGE_KEY = 'metro-memory:dev-site-version'
+const SOURCE_VERSION_STORAGE_KEY = 'metro-memory:dev-site-source-version'
+const ASSET_VERSION_STORAGE_KEY = 'metro-memory:dev-site-asset-version'
 const TOAST_STORAGE_KEY = 'metro-memory:dev-site-refresh-toast'
 
 function readToastPayload(): { shownAt: number } | null {
@@ -111,20 +114,67 @@ export default function DevSiteRefreshWatcher() {
           return
         }
 
-        const payload = (await response.json()) as { version?: string }
+        const payload = (await response.json()) as {
+          version?: string
+          sourceVersion?: string
+          assetVersion?: string
+        }
         const nextVersion = String(payload.version ?? '')
+        const nextSourceVersion = String(payload.sourceVersion ?? '')
+        const nextAssetVersion = String(payload.assetVersion ?? '')
         if (!nextVersion) {
           return
         }
 
         const previousVersion = window.sessionStorage.getItem(VERSION_STORAGE_KEY)
+        const previousSourceVersion = window.sessionStorage.getItem(SOURCE_VERSION_STORAGE_KEY)
+        const previousAssetVersion = window.sessionStorage.getItem(ASSET_VERSION_STORAGE_KEY)
         if (!previousVersion) {
           window.sessionStorage.setItem(VERSION_STORAGE_KEY, nextVersion)
+          if (nextSourceVersion) {
+            window.sessionStorage.setItem(SOURCE_VERSION_STORAGE_KEY, nextSourceVersion)
+          }
+          if (nextAssetVersion) {
+            window.sessionStorage.setItem(ASSET_VERSION_STORAGE_KEY, nextAssetVersion)
+          }
           return
         }
 
         if (previousVersion !== nextVersion) {
           window.sessionStorage.setItem(VERSION_STORAGE_KEY, nextVersion)
+          if (nextSourceVersion) {
+            window.sessionStorage.setItem(SOURCE_VERSION_STORAGE_KEY, nextSourceVersion)
+          }
+          if (nextAssetVersion) {
+            window.sessionStorage.setItem(ASSET_VERSION_STORAGE_KEY, nextAssetVersion)
+          }
+
+          const sourceChanged =
+            !!nextSourceVersion &&
+            !!previousSourceVersion &&
+            previousSourceVersion !== nextSourceVersion
+          const assetOnlyChanged =
+            !sourceChanged &&
+            !!nextAssetVersion &&
+            !!previousAssetVersion &&
+            previousAssetVersion !== nextAssetVersion
+
+          if (sourceChanged) {
+            writeToastPayload()
+            setVisibleUntil(Date.now() + TOAST_DURATION_MS)
+            setOpen(true)
+            setPendingRefresh(true)
+            return
+          }
+
+          if (!assetOnlyChanged) {
+            writeToastPayload()
+            setVisibleUntil(Date.now() + TOAST_DURATION_MS)
+            setOpen(true)
+            setPendingRefresh(true)
+            return
+          }
+
           writeToastPayload()
           setVisibleUntil(Date.now() + TOAST_DURATION_MS)
           setOpen(true)
@@ -186,18 +236,16 @@ export default function DevSiteRefreshWatcher() {
               </button>
             )}
           </div>
-          <button
-            type="button"
-            aria-label="Dismiss data changed notification"
+          <CloseButton
+            ariaLabel="Dismiss data changed notification"
             onClick={() => {
               setOpen(false)
               setPendingRefresh(false)
               window.sessionStorage.removeItem(TOAST_STORAGE_KEY)
             }}
-            className="ml-2 inline-flex items-center justify-center rounded-full border border-transparent p-1 text-sm font-semibold text-zinc-500 transition hover:text-zinc-800 focus:outline-none focus:ring-2 focus:ring-sky-400 dark:text-zinc-300 dark:hover:text-white"
-          >
-            <span aria-hidden="true">&times;</span>
-          </button>
+            className="ml-2 h-7 w-7 text-zinc-500 hover:text-zinc-800 focus:ring-sky-400 dark:text-zinc-300 dark:hover:text-white"
+            iconClassName="h-4 w-4"
+          />
         </div>
       </div>
     </Transition>

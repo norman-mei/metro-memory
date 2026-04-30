@@ -194,7 +194,7 @@ export const METADATA: Metadata = {
     description: '서울 지하철 역 이름을 외울 수 있을까요?',
     type: 'website',
     locale: 'ko_KR',
-    url: 'https://metro-memory.com/asia/south-korea/seoul',
+    url: 'https://metro-memory.xyz/asia/south-korea/seoul',
   },
 }
 

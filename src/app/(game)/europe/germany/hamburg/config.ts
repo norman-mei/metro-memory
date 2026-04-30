@@ -89,7 +89,7 @@ export const METADATA: Metadata = {
       'Wie viele S- und U-Bahn-Stationen können Sie auswendig nennen? Spielen Sie das Hamburg Bahn Memory und finden Sie es heraus!',
     type: 'website',
     locale: 'de_DE',
-    url: 'https://metro-memory.com/europe/germany/hamburg',
+    url: 'https://metro-memory.xyz/europe/germany/hamburg',
   },
 }
 

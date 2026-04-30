@@ -4,7 +4,7 @@ import { buildPlaceholderConfig } from '@/app/(game)/_placeholder/config'
 const config = buildPlaceholderConfig({
   citySlug: 'sanya',
   cityPath: 'asia/china/sanya',
-  cityTitle: 'Sanya (ä¸‰äºš)',
+  cityTitle: 'Sanya (三亚)',
 })
 
 

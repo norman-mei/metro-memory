@@ -15,6 +15,6 @@ export const metadata: Metadata = withCityAssetMetadata('houston', {
       'How many of the Houston METRORail and HAS airport train stations can you name from memory?',
     type: 'website',
     locale: 'en_US',
-    url: 'https://metro-memory.com/north-america/usa/houston',
+    url: 'https://metro-memory.xyz/north-america/usa/houston',
   },
 })
