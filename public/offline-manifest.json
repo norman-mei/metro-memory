@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-29T14:17:34.435Z",
+  "generatedAt": "2026-04-30T15:33:18.285Z",
   "assets": [
     "/",
     "/city-data/\\albuquerque.json",
@@ -669,6 +669,8 @@
     "/images/\\asia\\china\\qiubei\\opengraph-image.jpg",
     "/images/\\asia\\china\\sanya\\icon.ico",
     "/images/\\asia\\china\\sanya\\opengraph-image.jpg",
+    "/images/\\asia\\china\\shanghai\\icon.ico",
+    "/images/\\asia\\china\\shanghai\\opengraph-image.jpg",
     "/images/\\asia\\china\\shenyang\\icon.ico",
     "/images/\\asia\\china\\shenyang\\opengraph-image.jpg",
     "/images/\\asia\\china\\shenyang\\shenyang1.png",
@@ -808,6 +810,7 @@
     "/images/\\asia\\north-korea\\pyongyang\\opengraph-image.jpg",
     "/images/\\asia\\philippines\\manila\\icon.ico",
     "/images/\\asia\\philippines\\manila\\opengraph-image.jpg",
+    "/images/\\asia\\singapore\\opengraph-image.jpg",
     "/images/\\asia\\singapore\\SingaporeLRTBukitPanjangLine.svg",
     "/images/\\asia\\singapore\\SingaporeLRTPunggolLineEastLoop.svg",
     "/images/\\asia\\singapore\\SingaporeLRTPunggolLineWestLoop.svg",
@@ -1967,7 +1970,6 @@
     "/images/\\south-america\\venezuela\\maracaibo\\icon.ico",
     "/images/\\south-america\\venezuela\\maracaibo\\maracaiboline1.png",
     "/images/\\south-america\\venezuela\\maracaibo\\opengraph-image.jpg",
-    "/images/\\TM.png",
     "/images/\\_default\\icon.ico"
   ]
 }

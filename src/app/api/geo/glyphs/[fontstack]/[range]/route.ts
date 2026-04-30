@@ -31,9 +31,9 @@ export async function GET(
     }
 
     const buffer = await response.arrayBuffer()
-    const headers = new Headers(response.headers)
     
-    // Set permissive CORS and cache control
+    const headers = new Headers()
+    headers.set('Content-Type', response.headers.get('Content-Type') || 'application/x-protobuf')
     headers.set('Access-Control-Allow-Origin', '*')
     headers.set('Cache-Control', 'public, max-age=31536000, immutable')
 
