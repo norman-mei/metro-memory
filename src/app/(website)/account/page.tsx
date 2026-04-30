@@ -1,6 +1,4 @@
-import AccountXpOverview from '@/app/(website)/account/AccountXpOverview'
 import AccountDashboard from '@/app/(website)/account/panel'
-import CompetitiveOverview from '@/app/(website)/account/CompetitiveOverview'
 import { Button } from '@/components/Button'
 import StandaloneSidebarNav from '@/components/StandaloneSidebarNav'
 import { Suspense } from 'react'
@@ -22,15 +20,9 @@ export default function AccountPage() {
           Back to home
         </Button>
       </div>
-      <div className="mx-auto w-full max-w-5xl space-y-8">
-        <Suspense fallback={null}>
-          <AccountXpOverview />
-        </Suspense>
+      <div className="mx-auto w-full max-w-5xl">
         <Suspense fallback={<div>Loading...</div>}>
           <AccountDashboard />
-        </Suspense>
-        <Suspense fallback={null}>
-          <CompetitiveOverview />
         </Suspense>
       </div>
     </div>

@@ -8,15 +8,11 @@ import { useTheme } from 'next-themes'
 import {
   MdAutorenew,
   MdDarkMode,
-  MdEmojiEvents,
   MdHome,
   MdLaptopMac,
   MdLightMode,
-  MdMap,
   MdPerson,
-  MdPlaylistPlay,
   MdSettings,
-  MdSportsKabaddi,
 } from 'react-icons/md'
 
 const NAV_ITEMS = [
@@ -31,30 +27,6 @@ const NAV_ITEMS = [
     label: 'Account',
     icon: MdPerson,
     match: (pathname: string) => pathname === '/account',
-  },
-  {
-    href: '/campaigns',
-    label: 'Campaigns',
-    icon: MdMap,
-    match: (pathname: string) => pathname.startsWith('/campaign'),
-  },
-  {
-    href: '/seasons',
-    label: 'Seasons',
-    icon: MdEmojiEvents,
-    match: (pathname: string) => pathname.startsWith('/season'),
-  },
-  {
-    href: '/playlists',
-    label: 'Playlists',
-    icon: MdPlaylistPlay,
-    match: (pathname: string) => pathname.startsWith('/playlist'),
-  },
-  {
-    href: '/battles/new',
-    label: 'Battles',
-    icon: MdSportsKabaddi,
-    match: (pathname: string) => pathname.startsWith('/battle') || pathname.startsWith('/battles'),
   },
   {
     href: '/?tab=settings',

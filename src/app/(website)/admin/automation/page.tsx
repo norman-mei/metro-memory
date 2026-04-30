@@ -944,16 +944,18 @@ export default async function AutomationAdminPage({
         </section>
 
         <section className={`${shellPanelClass} mb-8 p-5 lg:p-6`}>
-          <div className="mb-5 flex flex-wrap items-start justify-between gap-4">
+          <details className="group" open={activeFilterCount > 0 ? true : undefined}>
+          <summary className="flex cursor-pointer flex-wrap items-start justify-between gap-4 [&::-webkit-details-marker]:hidden">
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.24em] text-zinc-500 dark:text-zinc-400">
                 Queue controls
               </p>
               <h2 className="mt-2 text-xl font-semibold text-zinc-950 dark:text-zinc-50">
                 Filter the review surface
+                <svg className="ml-2 inline-block h-5 w-5 text-zinc-400 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" /></svg>
               </h2>
               <p className="mt-2 max-w-3xl text-sm leading-6 text-zinc-600 dark:text-zinc-300">
-                Narrow by lane, trust, research state, or stop reason so the queue stays operational instead of becoming a dump of raw candidates.
+                Narrow by lane, trust, research state, or stop reason so the queue stays operational.
               </p>
             </div>
             <div className="flex flex-wrap gap-2">
@@ -967,7 +969,8 @@ export default async function AutomationAdminPage({
                 </span>
               )}
             </div>
-          </div>
+          </summary>
+          <div className="mt-5">
 
           <form className="grid gap-4">
             <div className="grid gap-4 xl:grid-cols-[minmax(0,2fr)_minmax(0,1fr)_minmax(0,1fr)_minmax(0,1fr)]">
@@ -1155,6 +1158,8 @@ export default async function AutomationAdminPage({
               </div>
             </div>
           </form>
+          </div>
+          </details>
         </section>
 
       <section className={`${shellPanelClass} mb-8 p-6`}>
@@ -1625,9 +1630,16 @@ export default async function AutomationAdminPage({
       </section>
 
       {!runs.length ? (
-        <div className={`${shellPanelClass} p-8 text-sm text-zinc-600 dark:text-zinc-300`}>
-          No automation runs have been persisted yet. Once the monthly sync writes
-          review candidates into the database, they will show up here.
+        <div className={`${shellPanelClass} p-10 text-center`}>
+          <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-zinc-100 dark:bg-zinc-800">
+            <svg className="h-8 w-8 text-zinc-400 dark:text-zinc-500" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622a2.25 2.25 0 01-2.247-2.118L3.75 7.5m6 4.125l2.25 2.25m0 0l2.25-2.25M12 13.875V7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <h3 className="mt-4 text-lg font-semibold text-zinc-900 dark:text-zinc-100">No automation runs yet</h3>
+          <p className="mx-auto mt-2 max-w-md text-sm leading-6 text-zinc-500 dark:text-zinc-400">
+            Once the monthly sync writes review candidates into the database, they will appear here. You can also trigger a manual run from the research console above.
+          </p>
         </div>
       ) : (
         <div className="space-y-8">

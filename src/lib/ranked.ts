@@ -9,7 +9,6 @@ export type RankedRulesetId = (typeof RANKED_RULESETS)[number]
 
 export const RANKED_SOURCES = [
   'free-play',
-  'battle',
 ] as const
 
 export type RankedRunSourceId = (typeof RANKED_SOURCES)[number]
@@ -29,7 +28,6 @@ const RULESET_LABELS: Record<RankedRulesetId, string> = {
 
 const SOURCE_LABELS: Record<RankedRunSourceId, string> = {
   'free-play': 'Free Play',
-  battle: 'Battle',
 }
 
 const RULESET_TO_PRISMA: Record<RankedRulesetId, 'CLASSIC' | 'NO_LINE_COLORS' | 'STRICT_SPELLING' | 'ONE_LIFE'> = {
@@ -43,9 +41,8 @@ const RULESET_FROM_PRISMA = Object.fromEntries(
   Object.entries(RULESET_TO_PRISMA).map(([key, value]) => [value, key]),
 ) as Record<(typeof RULESET_TO_PRISMA)[RankedRulesetId], RankedRulesetId>
 
-const SOURCE_TO_PRISMA: Record<RankedRunSourceId, 'FREE_PLAY' | 'BATTLE'> = {
+const SOURCE_TO_PRISMA: Record<RankedRunSourceId, 'FREE_PLAY'> = {
   'free-play': 'FREE_PLAY',
-  battle: 'BATTLE',
 }
 
 const SOURCE_FROM_PRISMA = Object.fromEntries(
@@ -95,7 +92,7 @@ export function fromPrismaRankedRunSource(
   if (!value) {
     return DEFAULT_RANKED_SOURCE
   }
-  if (value === 'FREE_PLAY' || value === 'BATTLE') {
+  if (value === 'FREE_PLAY') {
     return SOURCE_FROM_PRISMA[value]
   }
   return DEFAULT_RANKED_SOURCE
@@ -108,8 +105,6 @@ export function buildRankedHref(
     ruleset?: RankedRulesetId
     source?: RankedRunSourceId
     seed?: string
-    battleId?: string | null
-    playlistRunId?: string | null
   } = {},
 ) {
   const params = new URLSearchParams()
@@ -118,12 +113,6 @@ export function buildRankedHref(
   params.set('source', options.source ?? DEFAULT_RANKED_SOURCE)
   if (options.seed) {
     params.set('seed', options.seed)
-  }
-  if (options.battleId) {
-    params.set('battleId', options.battleId)
-  }
-  if (options.playlistRunId) {
-    params.set('playlistRunId', options.playlistRunId)
   }
   return `${cityPath}?${params.toString()}`
 }

@@ -3,7 +3,6 @@ import { z } from 'zod'
 
 import { getCurrentUser } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
-import { processCompletedRun } from '@/lib/progression'
 import { DAILY_RETRY_REASON } from '@/lib/ranked'
 
 const finishSchema = z.object({
@@ -70,9 +69,7 @@ export async function POST(request: NextRequest) {
 
   const endedAt = new Date()
   const startedAt = session.startedAt.getTime()
-  const completionMs =
-    parsed.data.completionMs ??
-    Math.max(1, endedAt.getTime() - startedAt)
+  const completionMs = parsed.data.completionMs ?? Math.max(1, endedAt.getTime() - startedAt)
 
   const updated = await prisma.runSession.update({
     where: { id: session.id },
@@ -95,16 +92,8 @@ export async function POST(request: NextRequest) {
       rankedEligible: true,
       disqualificationReason: true,
       completionMs: true,
-      sourceType: true,
-      battleId: true,
-      playlistRunId: true,
-      seasonId: true,
-      xpAwarded: true,
-      countedForStreak: true,
     },
   })
-
-  const progression = await processCompletedRun(updated.id)
 
   return NextResponse.json({
     result: {
@@ -112,12 +101,12 @@ export async function POST(request: NextRequest) {
       rankedEligible: updated.rankedEligible,
       disqualificationReason: updated.disqualificationReason,
       completionMs: updated.completionMs,
-      xpAwarded: progression?.xpAwarded ?? updated.xpAwarded,
-      countedForStreak: progression?.countedForStreak ?? updated.countedForStreak,
-      level: progression?.level ?? null,
-      lifetimeXp: progression?.lifetimeXp ?? null,
-      currentStreak: progression?.currentStreak ?? null,
-      bestStreak: progression?.bestStreak ?? null,
+      xpAwarded: null,
+      countedForStreak: null,
+      level: null,
+      lifetimeXp: null,
+      currentStreak: null,
+      bestStreak: null,
     },
   })
 }

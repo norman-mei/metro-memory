@@ -1645,8 +1645,6 @@ function GamePageContent({
     [rankedMode, searchParams],
   )
   const rankedSeed = searchParams.get('seed')?.trim() || `${CITY_NAME}-${rankedRuleset}`
-  const rankedBattleId = searchParams.get('battleId')?.trim() || null
-  const playlistRunId = searchParams.get('playlistRunId')?.trim() || null
   const { t } = useTranslation()
   const { resolvedTheme } = useTheme()
   const { settings, requestInMainlandChina } = useSettings()
@@ -2416,7 +2414,6 @@ function GamePageContent({
   const rankedFirstCorrectAtRef = useRef<number | null>(null)
   const rankedFirst50MsRef = useRef<number | null>(null)
   const rankedRunFinishedRef = useRef(false)
-  const casualPlaylistAdvanceRef = useRef(false)
   const [solutionsPromptOpen, setSolutionsPromptOpen] = useState(false)
   const [solutionsPassword, setSolutionsPassword] = useState('')
   const [solutionsAccessPassword, setSolutionsAccessPassword] = useState('')
@@ -3164,15 +3161,12 @@ function GamePageContent({
     rankedFirstCorrectAtRef.current = null
     rankedFirst50MsRef.current = null
     rankedRunFinishedRef.current = false
-    casualPlaylistAdvanceRef.current = false
   }, [
     CITY_NAME,
-    rankedBattleId,
     rankedMode,
     rankedRuleset,
     rankedSeed,
     rankedSource,
-    playlistRunId,
   ])
 
   useEffect(() => {
@@ -3192,8 +3186,6 @@ function GamePageContent({
             ruleset: rankedRuleset,
             source: rankedSource,
             seed: rankedSeed,
-            battleId: rankedBattleId,
-            playlistRunId,
           }),
         })
         if (!response.ok) {
@@ -3216,13 +3208,11 @@ function GamePageContent({
   }, [
     CITY_NAME,
     cityPath,
-    rankedBattleId,
     rankedMode,
     rankedRuleset,
     rankedSeed,
     rankedSessionId,
     rankedSource,
-    playlistRunId,
     user,
   ])
 
@@ -4668,57 +4658,6 @@ function GamePageContent({
     rankedMode,
     rankedSessionId,
     user,
-  ])
-
-  useEffect(() => {
-    if (rankedMode || !playlistRunId) {
-      return
-    }
-    if (foundProportion < RANKED_COMPLETION_TARGET || casualPlaylistAdvanceRef.current) {
-      return
-    }
-
-    casualPlaylistAdvanceRef.current = true
-
-    ;(async () => {
-      try {
-        const response = await fetch('/api/playlists/runs/advance', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            playlistRunId,
-            citySlug: CITY_NAME,
-            completionMs: null,
-            accuracy:
-              rankedCorrectGuessCountRef.current + rankedWrongGuessCountRef.current + rankedRepeatedGuessCountRef.current > 0
-                ? rankedCorrectGuessCountRef.current /
-                  (rankedCorrectGuessCountRef.current +
-                    rankedWrongGuessCountRef.current +
-                    rankedRepeatedGuessCountRef.current)
-                : 0,
-          }),
-        })
-        const payload = await response.json().catch(() => ({}))
-        if (!response.ok) {
-          casualPlaylistAdvanceRef.current = false
-          return
-        }
-        if (payload?.nextHref) {
-          router.push(payload.nextHref)
-        }
-      } catch (error) {
-        casualPlaylistAdvanceRef.current = false
-        if (process.env.NODE_ENV !== 'production') {
-          console.warn('Unable to advance casual playlist run', error)
-        }
-      }
-    })()
-  }, [
-    CITY_NAME,
-    foundProportion,
-    playlistRunId,
-    rankedMode,
-    router,
   ])
 
   useEffect(() => {

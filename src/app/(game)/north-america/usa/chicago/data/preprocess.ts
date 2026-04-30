@@ -418,6 +418,12 @@ const CTA_MANUAL_STATIONS: Array<{
     coordinates: [-87.658683, 41.977833],
     order: 38,
   },
+  {
+    name: 'Racine',
+    line: 'CTAMetroGreenLine',
+    coordinates: [-87.6544799, 41.7791084],
+    order: 127,
+  },
 ]
 
 const NICTD_LINE_SEQUENCES: Record<string, string[]> = {
@@ -551,6 +557,7 @@ const main = async () => {
 
   const legacyRouteFeatures = (existingRoutes.features || []).filter((feature: any) => {
     const line = feature?.properties?.line
+    if (feature?.properties?.supplemental) return true
     return typeof line === 'string' && !availableLines.has(line)
   })
 

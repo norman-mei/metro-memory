@@ -8242,14 +8242,31 @@
         "order": 1
       },
       "id": 534
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6544799,
+          41.7791084
+        ]
+      },
+      "properties": {
+        "id": 556,
+        "name": "Racine",
+        "line": "CTAMetroGreenLine",
+        "order": 127
+      },
+      "id": 556
     }
   ],
   "properties": {
-    "totalStations": 499,
+    "totalStations": 500,
     "stationsPerLine": {
       "CTAMetroBlueLine": 34,
       "CTAMetroBrownLine": 27,
-      "CTAMetroGreenLine": 31,
+      "CTAMetroGreenLine": 32,
       "CTAMetroOrangeLine": 16,
       "CTAMetroPinkLine": 22,
       "CTAMetroPurpleLine": 27,
