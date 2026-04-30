@@ -1,9 +1,16 @@
 import type mapboxgl from 'mapbox-gl'
 
-export const buildChinaSafeMapStyle = (darkMode: boolean): mapboxgl.Style => {
+export const buildChinaSafeMapStyle = (
+  darkMode: boolean,
+  options?: { showLabels?: boolean },
+): mapboxgl.Style => {
   // AMap raster tiles: style=7 for light road map, style=8 for dark mode
+  // Inference from public tile endpoint behavior:
+  // `scl=1` returns labeled tiles and `scl=2` returns the base map without labels.
+  const showLabels = options?.showLabels ?? true
   const amapStyleId = darkMode ? '8' : '7'
-  const tileUrl = `https://wprd01.is.autonavi.com/appmaptile?lang=zh_cn&size=1&style=${amapStyleId}&x={x}&y={y}&z={z}`
+  const scaleMode = showLabels ? '1' : '2'
+  const tileUrl = `https://wprd01.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scl=${scaleMode}&style=${amapStyleId}&x={x}&y={y}&z={z}`
 
   return {
     version: 8,

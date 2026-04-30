@@ -12,6 +12,8 @@ import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 import { useSettings } from '@/context/SettingsContext'
 import { buildChinaSafeMapStyle } from '@/lib/chinaSafeMapStyle'
+import { convertLngLatTupleForAmap } from '@/lib/amapCoordinateTransform'
+import { appConfig } from '@/lib/appConfig'
 import CloseButton from './CloseButton'
 import CityCard from './CityCard'
 
@@ -59,6 +61,10 @@ const DEFAULT_HOME_VIEW: Record<'globe' | 'mercator', { center: [number, number]
     center: [-20, 18],
     zoom: 1.2,
   },
+}
+const DEFAULT_AMAP_HOME_VIEW = {
+  center: [104.114129, 35.550339] as [number, number],
+  zoom: 3.4,
 }
 const MINI_CITY_LAYER_MIN_ZOOM: Record<'globe' | 'mercator', number> = {
   globe: 4.25,
@@ -139,6 +145,7 @@ export default function CitiesGlobe({
   cityProgress = {},
   projection = 'globe',
   satellite = false,
+  mapProvider,
   recommendedSlugs = [],
   favoriteSlugs = new Set<string>(),
   onToggleFavorite,
@@ -152,6 +159,7 @@ export default function CitiesGlobe({
   cityProgress?: Record<string, number>
   projection?: 'globe' | 'mercator'
   satellite?: boolean
+  mapProvider?: 'mapbox' | 'amap'
   recommendedSlugs?: string[]
   favoriteSlugs?: Set<string>
   onToggleFavorite?: (slug: string, next: boolean) => void
@@ -165,6 +173,18 @@ export default function CitiesGlobe({
   const mapRef = useRef<mapboxgl.Map | null>(null)
   const { resolvedTheme } = useTheme()
   const { requestInMainlandChina } = useSettings()
+  const effectiveMapProvider =
+    mapProvider ?? (requestInMainlandChina ? 'amap' : 'mapbox')
+  const usingAmapMapStyle = effectiveMapProvider === 'amap'
+  const effectiveProjection: 'globe' | 'mercator' = usingAmapMapStyle ? 'mercator' : projection
+  const defaultHomeView = usingAmapMapStyle
+    ? DEFAULT_AMAP_HOME_VIEW
+    : DEFAULT_HOME_VIEW[effectiveProjection]
+  const mapCoordinate = useCallback(
+    (coordinate: [number, number]): [number, number] =>
+      usingAmapMapStyle ? convertLngLatTupleForAmap(coordinate) : coordinate,
+    [usingAmapMapStyle],
+  )
   const recommendedSet = useMemo(() => new Set(recommendedSlugs), [recommendedSlugs])
   const cityBySlug = useMemo(
     () =>
@@ -193,6 +213,7 @@ export default function CitiesGlobe({
       if (!slug) return
       const coords = CITY_COORDINATES[slug]
       if (!coords) return
+      const mapCoords = mapCoordinate(coords)
       const progress = cityProgress[slug] || 0
       const isDisabled = isCityDisabledFlag(city)
       const isRecommended = recommendedSet.has(slug) && !isDisabled
@@ -202,7 +223,7 @@ export default function CitiesGlobe({
         type: 'Feature',
         geometry: {
           type: 'Point',
-          coordinates: coords,
+          coordinates: mapCoords,
         },
         properties: {
           name: city.name,
@@ -240,9 +261,10 @@ export default function CitiesGlobe({
         const isDisabled = isCityDisabledFlag(parentCity)
         const isFavorite = favoriteSlugs.has(miniCity.slug)
         const isRecommended = recommendedSet.has(miniCity.slug) && !isDisabled
-        const coordinates =
+        const coordinates = mapCoordinate(
           MINI_CITY_MARKER_COORDINATES[miniCity.slug] ??
           getMiniCityOffsetCoordinates(parentCoords, index, siblings.length)
+        )
 
         features.push({
           type: 'Feature',
@@ -269,10 +291,15 @@ export default function CitiesGlobe({
       type: 'FeatureCollection',
       features,
     }
-  }, [cities, cityBySlug, cityProgress, favoriteSlugs, recommendedSet])
+  }, [cities, cityBySlug, cityProgress, favoriteSlugs, mapCoordinate, recommendedSet])
+  const mapUserLocation = useMemo(
+    () => (userLocation ? mapCoordinate(userLocation) : null),
+    [mapCoordinate, userLocation],
+  )
   const lastUserLocationRef = useRef<string | null>(null)
   const userMarkerRef = useRef<mapboxgl.Marker | null>(null)
-  const homeViewRef = useRef(DEFAULT_HOME_VIEW[projection])
+  const homeViewRef = useRef(defaultHomeView)
+  const lastMapProviderRef = useRef<'mapbox' | 'amap'>(effectiveMapProvider)
   const [activePopup, setActivePopup] = useState<{
     lngLat: [number, number]
     city: ICity
@@ -297,13 +324,15 @@ export default function CitiesGlobe({
 
   useEffect(() => {
     if (!mapContainerRef.current) return
-    const token = process.env.NEXT_PUBLIC_MAPBOX_TOKEN
-    if (!token) {
+    const token = appConfig.mapbox.token
+    if (!token && !usingAmapMapStyle) {
       setMapError('Map cannot load because NEXT_PUBLIC_MAPBOX_TOKEN is missing.')
       return
     }
-    disableMapboxTelemetry()
-    mapboxgl.accessToken = token
+    if (token) {
+      disableMapboxTelemetry()
+      mapboxgl.accessToken = token
+    }
 
     if (!mapboxgl.supported()) {
       setMapError('3D globe is unavailable because WebGL is not supported on this device or browser.')
@@ -313,8 +342,8 @@ export default function CitiesGlobe({
     setMapError(null)
 
     const isDark = resolvedTheme === 'dark'
-    const style = requestInMainlandChina
-      ? buildChinaSafeMapStyle(isDark)
+    const style = usingAmapMapStyle
+      ? buildChinaSafeMapStyle(isDark, { showLabels: true })
       : satellite
       ? 'mapbox://styles/mapbox/satellite-streets-v12'
       : isDark
@@ -327,9 +356,9 @@ export default function CitiesGlobe({
       map = new mapboxgl.Map({
         container: mapContainerRef.current,
         style,
-        center: DEFAULT_HOME_VIEW[projection].center,
-        zoom: DEFAULT_HOME_VIEW[projection].zoom,
-        projection: projection as any,
+        center: defaultHomeView.center,
+        zoom: defaultHomeView.zoom,
+        projection: effectiveProjection as any,
       })
     } catch (error) {
       console.error('Failed to initialize CitiesGlobe map', error)
@@ -413,8 +442,8 @@ export default function CitiesGlobe({
   }, [])
 
   useEffect(() => {
-    homeViewRef.current = DEFAULT_HOME_VIEW[projection]
-  }, [projection])
+    homeViewRef.current = defaultHomeView
+  }, [defaultHomeView])
 
   // Update map source when cities change or style reloads
   useEffect(() => {
@@ -425,7 +454,7 @@ export default function CitiesGlobe({
       // Apply Fog (needs to be re-applied on style load)
       const isDark = resolvedTheme === 'dark'
       // Only apply fog for globe view (optional but safer)
-      if (projection === 'globe') {
+      if (effectiveProjection === 'globe') {
         try {
           map.setFog({
             color: isDark ? 'rgb(186, 210, 235)' : 'rgb(255, 255, 255)',
@@ -494,7 +523,7 @@ export default function CitiesGlobe({
               ['==', ['get', 'markerType'], 'mini'],
               ['!=', ['get', 'favorite'], true],
             ],
-            minzoom: MINI_CITY_LAYER_MIN_ZOOM[projection],
+            minzoom: MINI_CITY_LAYER_MIN_ZOOM[effectiveProjection],
             layout: {
               'text-field': '◆',
               'text-font': ['Open Sans Bold', 'Arial Unicode MS Bold'],
@@ -567,7 +596,7 @@ export default function CitiesGlobe({
         // @ts-ignore
         map.getSource(CITY_SOURCE_ID).setData(mapFeatures as any)
         if (map.getLayer(CITY_MINI_LAYER_ID)) {
-          map.setLayerZoomRange(CITY_MINI_LAYER_ID, MINI_CITY_LAYER_MIN_ZOOM[projection], 24)
+          map.setLayerZoomRange(CITY_MINI_LAYER_ID, MINI_CITY_LAYER_MIN_ZOOM[effectiveProjection], 24)
         }
       }
     }
@@ -588,25 +617,25 @@ export default function CitiesGlobe({
     return () => {
       map.off('style.load', safeUpdate)
     }
-  }, [mapReady, mapFeatures, projection, resolvedTheme])
+  }, [effectiveProjection, mapFeatures, mapReady, resolvedTheme])
 
   // Handle projection changes dynamically if map instance exists
   useEffect(() => {
     if (mapRef.current) {
-      mapRef.current.setProjection(projection as any)
+      mapRef.current.setProjection(effectiveProjection as any)
       // Reset fog or style if needed?
       // Globe usually has fog, mercator usually doesn't, but let's keep it simple.
       // Mapbox handles projection switch gracefully.
     }
-  }, [projection])
+  }, [effectiveProjection])
 
   // Handle style changes (Theme or Satellite toggle)
   useEffect(() => {
     if (!mapRef.current) return
 
     const isDark = resolvedTheme === 'dark'
-    const style = requestInMainlandChina
-      ? buildChinaSafeMapStyle(isDark)
+    const style = usingAmapMapStyle
+      ? buildChinaSafeMapStyle(isDark, { showLabels: true })
       : satellite
       ? 'mapbox://styles/mapbox/satellite-streets-v12'
       : isDark
@@ -620,19 +649,43 @@ export default function CitiesGlobe({
     mapRef.current.setStyle(style)
     // The 'style.load' event handler in the other useEffect will trigger updateSource
     // to re-add our layers.
-  }, [resolvedTheme, satellite, requestInMainlandChina])
+  }, [resolvedTheme, satellite, usingAmapMapStyle])
 
   useEffect(() => {
     const map = mapRef.current
     if (!map || !mapReady) return
 
-    if (!userLocation) {
+    const previousProvider = lastMapProviderRef.current
+    lastMapProviderRef.current = effectiveMapProvider
+
+    if (previousProvider === effectiveMapProvider) {
+      return
+    }
+
+    if (effectiveMapProvider === 'amap') {
+      map.easeTo({
+        center: DEFAULT_AMAP_HOME_VIEW.center,
+        zoom: Math.max(map.getZoom(), DEFAULT_AMAP_HOME_VIEW.zoom),
+        bearing: 0,
+        pitch: 0,
+        duration: 900,
+        essential: true,
+      })
+    }
+  }, [effectiveMapProvider, mapReady])
+
+  useEffect(() => {
+    const map = mapRef.current
+    if (!map || !mapReady) return
+
+    if (!mapUserLocation) {
       if (userMarkerRef.current) {
         userMarkerRef.current.remove()
         userMarkerRef.current = null
       }
       return
     }
+    const resolvedUserLocation = mapUserLocation
 
     const createMarkerElement = () => {
       const el = document.createElement('div')
@@ -651,26 +704,26 @@ export default function CitiesGlobe({
         element: createMarkerElement(),
         anchor: 'center',
       })
-        .setLngLat(userLocation)
+        .setLngLat(resolvedUserLocation)
         .addTo(map)
     } else {
-      userMarkerRef.current.setLngLat(userLocation)
+      userMarkerRef.current.setLngLat(resolvedUserLocation)
     }
-  }, [mapReady, userLocation])
+  }, [mapReady, mapUserLocation])
 
   useEffect(() => {
     const map = mapRef.current
-    if (!map || !mapReady || !userLocation) return
-    const key = userLocation.join(',')
+    if (!map || !mapReady || !mapUserLocation) return
+    const key = mapUserLocation.join(',')
     if (lastUserLocationRef.current === key) return
     lastUserLocationRef.current = key
     map.flyTo({
-      center: userLocation,
-      zoom: projection === 'globe' ? 3.5 : 5.5,
+      center: mapUserLocation,
+      zoom: effectiveProjection === 'globe' ? 3.5 : 5.5,
       speed: 1.2,
       essential: true,
     })
-  }, [mapReady, projection, userLocation])
+  }, [effectiveProjection, mapReady, mapUserLocation])
 
   useEffect(() => {
     const map = mapRef.current
@@ -742,10 +795,10 @@ export default function CitiesGlobe({
         padding: 80,
         duration: 1200,
         essential: true,
-        maxZoom: projection === 'globe' ? 3.5 : 4.5,
+        maxZoom: effectiveProjection === 'globe' ? 3.5 : 4.5,
       })
     }
-  }, [selectedContinent, continentFocusVersion, mapReady, projection, resolvedTheme, satellite])
+  }, [continentFocusVersion, effectiveProjection, mapReady, resolvedTheme, satellite, selectedContinent])
 
   // Focus on a specific country (based on city coordinates) when requested
   useEffect(() => {
@@ -759,7 +812,7 @@ export default function CitiesGlobe({
         const country = getCountryFromLink(city.link)?.toLowerCase()
         if (!slug || !country || country !== countrySlug) return null
         const coords = CITY_COORDINATES[slug]
-        return coords ? coords : null
+        return coords ? mapCoordinate(coords) : null
       })
       .filter((coords): coords is [number, number] => Array.isArray(coords))
 
@@ -769,12 +822,12 @@ export default function CitiesGlobe({
     points.forEach((coord) => bounds.extend(coord as [number, number]))
 
     map.fitBounds(bounds, {
-      padding: projection === 'globe' ? 140 : 120,
+      padding: effectiveProjection === 'globe' ? 140 : 120,
       duration: 1200,
       essential: true,
-      maxZoom: projection === 'globe' ? 5 : 6.5,
+      maxZoom: effectiveProjection === 'globe' ? 5 : 6.5,
     })
-  }, [selectedCountry, countryFocusVersion, mapReady, projection, cities, getCountryFromLink])
+  }, [selectedCountry, countryFocusVersion, mapReady, effectiveProjection, cities, getCountryFromLink, mapCoordinate])
 
   // Auto-fly if only one city is visible (search result)
   useEffect(() => {
@@ -785,7 +838,7 @@ export default function CitiesGlobe({
         const coords = CITY_COORDINATES[slug]
         if (coords) {
           mapRef.current.flyTo({
-            center: coords,
+            center: mapCoordinate(coords),
             zoom: 4, // Closer zoom for single result
             speed: 1.5,
           })
@@ -794,7 +847,7 @@ export default function CitiesGlobe({
         }
       }
     }
-  }, [cities])
+  }, [cities, mapCoordinate])
 
   const handleResetView = useCallback(() => {
     const map = mapRef.current

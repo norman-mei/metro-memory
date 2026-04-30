@@ -1,4 +1,4 @@
-﻿'use client'
+'use client'
 
 import { Transition } from '@headlessui/react'
 import classNames from 'classnames'
@@ -89,6 +89,7 @@ type AchievementSortOption =
   | 'continent-desc'
   | 'not-achieved-asc'
   | 'achieved-asc'
+type HomeMapProvider = 'mapbox' | 'amap'
 
 const CITY_SORT_OPTIONS: Array<{ value: CitySortOption; label: string }> = [
   { value: 'default', label: 'sortDefault' },
@@ -121,10 +122,14 @@ const CITY_VIEW_OPTIONS: Array<{ value: CityCardVariant; label: string }> = [
 
 const CITY_VIEW_MODE_STORAGE_KEY = 'city-view-mode'
 const CITY_VIEW_SATELLITE_STORAGE_KEY = 'city-view-satellite'
+const HOME_MAP_PROVIDER_STORAGE_KEY = 'home-map-provider'
 const CONTINENT_NAV_OPEN_STORAGE_KEY = 'continent-nav-open'
 const HOME_ACTIVE_TAB_STORAGE_KEY = 'home-active-tab'
 const HOME_SCROLL_STORAGE_PREFIX = 'home-scroll-'
 const TAB_DEBUG_STORAGE_KEY = 'metro-memory-debug-tabs'
+const isValidHomeMapProvider = (
+  value: string | null | undefined,
+): value is HomeMapProvider => value === 'mapbox' || value === 'amap'
 
 const TAB_OPTIONS: Array<{ id: TabOption; label: string }> = [
   { id: 'cities', label: 'tabCities' },
@@ -676,6 +681,7 @@ const SearcheableCitiesList = ({
   const [globalStatsSort, setGlobalStatsSort] = useState<CitySortOption>('default')
   const [cityViewMode, setCityViewMode] = useState<CityCardVariant>('map')
   const [isSatellite, setIsSatellite] = useState(false)
+  const [mapProvider, setMapProvider] = useState<HomeMapProvider>('mapbox')
   const [achievementSearch, setAchievementSearch] = useState('')
   const [achievementSort, setAchievementSort] = useState<AchievementSortOption>('name-asc')
   const [unlockedData, setUnlockedData] = useState<Map<string, number>>(new Map())
@@ -685,7 +691,9 @@ const SearcheableCitiesList = ({
   const [recommendedSlugs, setRecommendedSlugs] = useState<string[]>([])
   const [isLocating, setIsLocating] = useState(false)
   const [userLocation, setUserLocation] = useState<[number, number] | null>(null)
-  const { settings } = useSettings()
+  const { settings, requestInMainlandChina } = useSettings()
+  const debugMapProviderEnabled = searchParams?.get('debugMapProvider') === '1'
+  const canToggleHomeMapProvider = requestInMainlandChina || debugMapProviderEnabled
   const { t } = useTranslation()
   const getLabel = (key: string, fallback: string) => {
     const value = t(key)
@@ -743,6 +751,7 @@ const SearcheableCitiesList = ({
   const [favoriteSlugs, setFavoriteSlugs] = useState<Set<string>>(new Set())
   const [favoriteToast, setFavoriteToast] = useState<{ message: string; ts: number } | null>(null)
   const viewPrefsHydratedRef = useRef(false)
+  const mapProviderHydratedRef = useRef(false)
   const navPrefsHydratedRef = useRef(false)
   const tabPrefsHydratedRef = useRef(false)
   const suppressActiveUntilRef = useRef<number>(0)
@@ -1437,6 +1446,28 @@ const SearcheableCitiesList = ({
 
     tabPrefsHydratedRef.current = true
   }, [activeTab, isValidTab, logTabDebug, uiPreferences.homeActiveTab])
+
+  useEffect(() => {
+    let nextProvider: HomeMapProvider = requestInMainlandChina ? 'amap' : 'mapbox'
+
+    if (canToggleHomeMapProvider && typeof window !== 'undefined') {
+      const storedProvider = window.localStorage.getItem(HOME_MAP_PROVIDER_STORAGE_KEY)
+      if (isValidHomeMapProvider(storedProvider)) {
+        nextProvider = storedProvider
+      }
+    }
+
+    setMapProvider((prev) => (prev === nextProvider ? prev : nextProvider))
+
+    if (!mapProviderHydratedRef.current) {
+      mapProviderHydratedRef.current = true
+    }
+  }, [canToggleHomeMapProvider, requestInMainlandChina])
+
+  useEffect(() => {
+    if (!mapProviderHydratedRef.current || typeof window === 'undefined') return
+    window.localStorage.setItem(HOME_MAP_PROVIDER_STORAGE_KEY, mapProvider)
+  }, [mapProvider])
 
   useEffect(() => {
     let nextMode: CityCardVariant | null = null
@@ -3509,6 +3540,42 @@ const SearcheableCitiesList = ({
                   {getLabel('playRandomCity', 'Play Random City')}
                 </span>
               </button>
+              {canToggleHomeMapProvider &&
+                (cityViewMode === 'globe' || cityViewMode === 'map') && (
+                  <button
+                    type="button"
+                    onClick={() =>
+                      setMapProvider((prev) => (prev === 'amap' ? 'mapbox' : 'amap'))
+                    }
+                    title={
+                      mapProvider === 'amap'
+                        ? getLabel('useMapboxMap', 'Use Mapbox')
+                        : getLabel('useAmapMap', 'Use AMap')
+                    }
+                    className={clsx(
+                      "group flex items-center justify-center rounded-full border px-4 py-2.5 text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-[var(--accent-600)] dark:focus:ring-[var(--accent-400)]",
+                      mapProvider === 'amap'
+                        ? "border-[var(--accent-600)] bg-[var(--accent-600)] text-white hover:bg-[var(--accent-700)] dark:border-[var(--accent-500)] dark:bg-[var(--accent-500)] dark:text-zinc-900 dark:hover:bg-[var(--accent-400)]"
+                        : "border-gray-300 bg-white text-gray-700 hover:bg-gray-50 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100 dark:hover:bg-zinc-800"
+                    )}
+                  >
+                    <MdPublic className="h-5 w-5" />
+                    <span className="sr-only">
+                      {mapProvider === 'amap'
+                        ? getLabel('useMapboxMap', 'Use Mapbox')
+                        : getLabel('useAmapMap', 'Use AMap')}
+                    </span>
+                    <span
+                      className={classNames(
+                        'max-w-0 overflow-hidden whitespace-nowrap pl-0 text-sm opacity-0 transition-all duration-200',
+                        'group-hover:max-w-xs group-hover:pl-2 group-hover:opacity-100 group-hover:translate-x-0',
+                        'group-focus-visible:max-w-xs group-focus-visible:pl-2 group-focus-visible:opacity-100 group-focus-visible:translate-x-0',
+                      )}
+                    >
+                      {mapProvider === 'amap' ? 'AMap' : 'Mapbox'}
+                    </span>
+                  </button>
+                )}
             </div>
             </div>
            </>
@@ -3567,6 +3634,7 @@ const SearcheableCitiesList = ({
                   cityProgress={cityProgress}
                   projection={cityViewMode === 'map' ? 'mercator' : 'globe'} 
                   satellite={isSatellite}
+                  mapProvider={mapProvider}
                   recommendedSlugs={recommendedSlugs}
                   favoriteSlugs={favoriteSlugs}
                   onToggleFavorite={toggleFavorite}

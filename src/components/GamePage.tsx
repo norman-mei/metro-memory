@@ -26,6 +26,8 @@ import useNormalizeString from '@/hooks/useNormalizeString'
 import { useShouldShowAds } from '@/hooks/useShouldShowAds'
 import useTranslation from '@/hooks/useTranslation'
 import { getAchievementForCity } from '@/lib/achievements'
+import { transformFeatureCollectionForAmapCached } from '@/lib/amapCoordinateTransform'
+import { appConfig } from '@/lib/appConfig'
 import { useConfig } from '@/lib/configContext'
 import {
     formatLocalizedChinaUiDescription,
@@ -267,6 +269,9 @@ const GLOBAL_MAP_NAMES_STORAGE_KEY = 'global-map-names-enabled'
 const getMapStyleModeStorageKey = (cityName: string) => `map-style-mode-${cityName}`
 const getMapStylePreferenceStorageKey = (cityName: string) =>
   `map-style-preference-${cityName}`
+type MapStyleMode = 'default' | 'amap'
+const getMapViewStorageKey = (cityName: string, mapStyleMode: MapStyleMode) =>
+  mapStyleMode === 'amap' ? `map-view-${cityName}-amap` : `map-view-${cityName}`
 const RANKED_COMPLETION_TARGET = 0.9999
 
 const toMutedLineColor = () => '#94a3b8'
@@ -1643,7 +1648,7 @@ function GamePageContent({
   const playlistRunId = searchParams.get('playlistRunId')?.trim() || null
   const { t } = useTranslation()
   const { resolvedTheme } = useTheme()
-  const { settings } = useSettings()
+  const { settings, requestInMainlandChina } = useSettings()
   const prefersChineseCopy = settings.language.startsWith('zh')
   const { showAds } = useShouldShowAds()
   const mapContainerRef = useRef<HTMLDivElement | null>(null)
@@ -2243,14 +2248,43 @@ function GamePageContent({
     }
   }, [routes, CITY_NAME, rankedRuleset])
 
+  const [mapStyleMode, setMapStyleMode] = useState<MapStyleMode>('default')
+  const usingAmapMapStyle = mapStyleMode === 'amap'
+  const amapFeatureCacheKey = useMemo(
+    () => `features:${cityPath ?? CITY_NAME}:${settings.language}`,
+    [CITY_NAME, cityPath, settings.language],
+  )
+  const amapRouteCacheKey = useMemo(
+    () => `routes:${cityPath ?? CITY_NAME}:${rankedRuleset}`,
+    [CITY_NAME, cityPath, rankedRuleset],
+  )
+
+  const renderFeatureCollection = useMemo(
+    () =>
+      usingAmapMapStyle
+        ? transformFeatureCollectionForAmapCached(amapFeatureCacheKey, featureCollection)
+        : featureCollection,
+    [amapFeatureCacheKey, featureCollection, usingAmapMapStyle],
+  )
+
+  const renderDisplayRoutes = useMemo(
+    () =>
+      displayRoutes
+        ? usingAmapMapStyle
+          ? transformFeatureCollectionForAmapCached(amapRouteCacheKey, displayRoutes)
+          : displayRoutes
+        : displayRoutes,
+    [amapRouteCacheKey, displayRoutes, usingAmapMapStyle],
+  )
+
   const renderCullingEnabled = Boolean(
-    MAP_FROM_DATA && MAP_RENDER_CULLING?.enabled && displayRoutes,
+    MAP_FROM_DATA && MAP_RENDER_CULLING?.enabled && renderDisplayRoutes,
   )
   const renderCullingPaddingFactor = MAP_RENDER_CULLING?.paddingFactor ?? 0.5
 
   const stationRenderEntries = useMemo(
     () =>
-      featureCollection.features
+      renderFeatureCollection.features
         .map((feature) => ({
           feature,
           bounds: getFeatureBounds(feature),
@@ -2263,12 +2297,12 @@ function GamePageContent({
             bounds: RenderBounds
           } => entry.bounds !== null,
         ),
-    [featureCollection.features],
+    [renderFeatureCollection.features],
   )
 
   const routeRenderEntries = useMemo(
     () =>
-      (displayRoutes?.features ?? [])
+      (renderDisplayRoutes?.features ?? [])
         .map((feature) => ({
           feature,
           bounds: getFeatureBounds(feature),
@@ -2281,15 +2315,15 @@ function GamePageContent({
             bounds: RenderBounds
           } => entry.bounds !== null,
         ),
-    [displayRoutes],
+    [renderDisplayRoutes],
   )
 
   const getRenderedCollections = useCallback(
     (mapBounds: RenderBounds) => {
       if (!renderCullingEnabled) {
         return {
-          features: featureCollection,
-          routes: displayRoutes ?? EMPTY_ROUTES_FEATURE_COLLECTION,
+          features: renderFeatureCollection,
+          routes: renderDisplayRoutes ?? EMPTY_ROUTES_FEATURE_COLLECTION,
         }
       }
 
@@ -2300,14 +2334,14 @@ function GamePageContent({
 
       return {
         features: {
-          ...featureCollection,
+          ...renderFeatureCollection,
           features: stationRenderEntries
             .filter((entry) => intersectsRenderBounds(entry.bounds, expandedBounds))
             .map((entry) => entry.feature),
         } as DataFeatureCollection,
-        routes: displayRoutes
+        routes: renderDisplayRoutes
           ? ({
-              ...displayRoutes,
+              ...renderDisplayRoutes,
               features: routeRenderEntries
                 .filter((entry) => intersectsRenderBounds(entry.bounds, expandedBounds))
                 .map((entry) => entry.feature),
@@ -2316,8 +2350,8 @@ function GamePageContent({
       }
     },
     [
-      displayRoutes,
-      featureCollection,
+      renderDisplayRoutes,
+      renderFeatureCollection,
       renderCullingEnabled,
       renderCullingPaddingFactor,
       routeRenderEntries,
@@ -2416,34 +2450,37 @@ function GamePageContent({
   const [resetConfirmOpen, setResetConfirmOpen] = useState(false)
   const [mapError, setMapError] = useState<string | null>(null)
   const [showMapFallbackPreview, setShowMapFallbackPreview] = useState(false)
-  const [mapStyleMode, setMapStyleMode] = useState<'default' | 'china-safe'>('default')
   const [mapStyleModeReady, setMapStyleModeReady] = useState(false)
   const [mapRetryNonce, setMapRetryNonce] = useState(0)
-  const mapStylePreferenceRef = useRef<'default' | 'china-safe' | null>(null)
+  const mapStylePreferenceRef = useRef<MapStyleMode | null>(null)
   const [highlightedLineId, setHighlightedLineId] = useState<string | null>(null)
   const disableRouteLineHighlightInteraction =
     CITY_NAME === 'nyc' || CITY_NAME === 'amtrak'
   const foundRef = useRef<number[]>([])
-  const usingChinaSafeMapStyle =
-    isChinaCity && mapStyleMode === 'china-safe'
+
+  const mapViewStorageKey = useMemo(
+    () => getMapViewStorageKey(CITY_NAME, mapStyleMode),
+    [CITY_NAME, mapStyleMode],
+  )
 
   // Hydrate saved map view (local only)
   useEffect(() => {
-    if (typeof window === 'undefined') return
+    if (!mapStyleModeReady || typeof window === 'undefined') return
+    savedMapViewRef.current = null
     try {
-      const raw = window.localStorage.getItem(`map-view-${CITY_NAME}`)
+      const raw = window.localStorage.getItem(mapViewStorageKey)
       if (raw) {
         const parsed = JSON.parse(raw)
         if (isStoredMapView(parsed)) {
           savedMapViewRef.current = parsed
         } else {
-          window.localStorage.removeItem(`map-view-${CITY_NAME}`)
+          window.localStorage.removeItem(mapViewStorageKey)
         }
       }
     } catch {
       // ignore
     }
-  }, [CITY_NAME])
+  }, [mapStyleModeReady, mapViewStorageKey])
 
   useEffect(() => {
     if (highlightedLineId) {
@@ -2572,7 +2609,7 @@ function GamePageContent({
   useEffect(() => {
     let cancelled = false
 
-    const applyResolvedMode = (nextMapStyleMode: 'default' | 'china-safe') => {
+    const applyResolvedMode = (nextMapStyleMode: MapStyleMode) => {
       if (cancelled) {
         return
       }
@@ -2585,8 +2622,8 @@ function GamePageContent({
     }
 
     const resolveMapStyleMode = async () => {
-      if (!isChinaCity || typeof window === 'undefined') {
-        applyResolvedMode('default')
+      if (typeof window === 'undefined') {
+        applyResolvedMode(requestInMainlandChina ? 'amap' : 'default')
         return
       }
 
@@ -2594,7 +2631,7 @@ function GamePageContent({
       const stored = window.localStorage.getItem(
         getMapStylePreferenceStorageKey(CITY_NAME),
       )
-      if (stored === 'china-safe' || stored === 'default') {
+      if (stored === 'amap' || stored === 'default') {
         mapStylePreferenceRef.current = stored
         applyResolvedMode(stored)
         return
@@ -2602,10 +2639,7 @@ function GamePageContent({
 
       mapStylePreferenceRef.current = null
 
-      // Default to Mapbox tiles for Chinese cities.
-      // The existing error/retry logic will automatically fall back
-      // to china-safe mode if Mapbox tiles fail to load (e.g. from within China).
-      applyResolvedMode('default')
+      applyResolvedMode(requestInMainlandChina ? 'amap' : 'default')
     }
 
     void resolveMapStyleMode()
@@ -2613,7 +2647,7 @@ function GamePageContent({
     return () => {
       cancelled = true
     }
-  }, [CITY_NAME, isChinaCity])
+  }, [CITY_NAME, requestInMainlandChina])
 
   const setSidebarOpen = useCallback(
     (next: boolean | ((prev: boolean) => boolean)) => {
@@ -2629,17 +2663,16 @@ function GamePageContent({
 
   const handleRetryMap = useCallback(
     (
-      mode: 'current' | 'china-safe' = 'current',
+      mode: 'current' | 'amap' = 'current',
       options?: { persistPreference?: boolean },
     ) => {
-      const nextMode =
-        mode === 'china-safe' && isChinaCity ? 'china-safe' : 'default'
+      const nextMode = mode === 'amap' ? 'amap' : 'default'
       mapUnavailableRef.current = false
       setMap(null)
       setMapError(null)
       setShowMapFallbackPreview(false)
       setMapStyleMode(nextMode)
-      if (options?.persistPreference && isChinaCity && typeof window !== 'undefined') {
+      if (options?.persistPreference && typeof window !== 'undefined') {
         mapStylePreferenceRef.current = nextMode
         window.localStorage.setItem(
           getMapStylePreferenceStorageKey(CITY_NAME),
@@ -2648,7 +2681,7 @@ function GamePageContent({
       }
       setMapRetryNonce((prev) => prev + 1)
     },
-    [CITY_NAME, isChinaCity],
+    [CITY_NAME],
   )
 
   const sidebarOpen = sidebarOpenState
@@ -2782,6 +2815,14 @@ function GamePageContent({
     })
     return map
   }, [featureCollection.features])
+
+  const renderIdMap = useMemo(() => {
+    const map = new Map<number, DataFeature>()
+    renderFeatureCollection.features.forEach((feature) => {
+      map.set(feature.id! as number, feature)
+    })
+    return map
+  }, [renderFeatureCollection.features])
 
   const stationsPerLine = useMemo(() => {
     const lineMap = new Map<string, Set<string>>()
@@ -3018,7 +3059,7 @@ function GamePageContent({
       const validIds: number[] = []
 
       ids.forEach((id) => {
-        const feature = idMap.get(id)
+        const feature = renderIdMap.get(id)
         if (!feature) {
           return
         }
@@ -3032,11 +3073,11 @@ function GamePageContent({
 
       if (uniqueStationKeys.size === 1) {
         const primaryId = validIds.find((id) => {
-          const feature = idMap.get(id)
+          const feature = renderIdMap.get(id)
           return feature?.geometry?.type === 'Point'
         }) ?? validIds[0]
 
-        const primaryFeature = idMap.get(primaryId)
+        const primaryFeature = renderIdMap.get(primaryId)
         if (!primaryFeature) {
           return
         }
@@ -3055,7 +3096,7 @@ function GamePageContent({
       const coords: [number, number][] = []
 
       validIds.forEach((id) => {
-        const feature = idMap.get(id)
+        const feature = renderIdMap.get(id)
         if (!feature) {
           return
         }
@@ -3093,7 +3134,7 @@ function GamePageContent({
         essential: true,
       })
     },
-    [idMap, map],
+    [map, renderIdMap],
   )
 
   const localFoundRef = useRef<number[] | null>(null)
@@ -4744,15 +4785,17 @@ function GamePageContent({
       container?: unknown
     }
 
-    if (usingChinaSafeMapStyle) {
+    if (usingAmapMapStyle) {
       return {
         ...rest,
-        style: buildChinaSafeMapStyle(resolvedTheme === 'dark'),
+        style: buildChinaSafeMapStyle(resolvedTheme === 'dark', {
+          showLabels: showMapNames,
+        }),
       }
     }
 
     const fallbackLightStyle =
-      normalizeMapStyleOverride(process.env.NEXT_PUBLIC_MAPBOX_STYLE) ??
+      normalizeMapStyleOverride(appConfig.mapbox.styleLight || undefined) ??
       'mapbox://styles/mapbox/light-v11'
 
     let baseStyle: string | undefined
@@ -4763,7 +4806,7 @@ function GamePageContent({
     }
 
     const darkStyle =
-      normalizeMapStyleOverride(process.env.NEXT_PUBLIC_MAPBOX_STYLE_DARK) ??
+      normalizeMapStyleOverride(appConfig.mapbox.styleDark || undefined) ??
       'mapbox://styles/mapbox/dark-v11'
 
     const satelliteStyle = 'mapbox://styles/mapbox/satellite-streets-v12'
@@ -4778,7 +4821,7 @@ function GamePageContent({
       ...rest,
       style: resolvedStyle,
     }
-  }, [MAP_CONFIG, resolvedTheme, showSatellite, usingChinaSafeMapStyle])
+  }, [MAP_CONFIG, resolvedTheme, showSatellite, usingAmapMapStyle, showMapNames])
 
   useEffect(() => {
     if (!mapStyleModeReady) {
@@ -4786,7 +4829,15 @@ function GamePageContent({
     }
 
     disableMapboxTelemetry()
-    mapboxgl.accessToken = process.env.NEXT_PUBLIC_MAPBOX_TOKEN!
+    if (appConfig.mapbox.token) {
+      mapboxgl.accessToken = appConfig.mapbox.token
+    }
+
+    if (!usingAmapMapStyle && !appConfig.mapbox.token) {
+      setMapError('Map cannot load because NEXT_PUBLIC_MAPBOX_TOKEN is missing.')
+      setShowMapFallbackPreview(true)
+      return
+    }
 
     if (!mapContainerRef.current) {
       return
@@ -4837,8 +4888,8 @@ function GamePageContent({
     let initialBounds: [number, number, number, number] | undefined
     const restoredMapView = savedMapViewRef.current
 
-    if (MAP_FROM_DATA && displayRoutes) {
-      const box = bbox(displayRoutes)
+    if (MAP_FROM_DATA && renderDisplayRoutes) {
+      const box = bbox(renderDisplayRoutes)
       if (
         box.length === 4 &&
         box.every((n) => Number.isFinite(n)) &&
@@ -4849,19 +4900,8 @@ function GamePageContent({
       }
     }
 
-    const requestChinaSafeRetry = (message?: string) => {
-      if (!isChinaCity || usingChinaSafeMapStyle || chinaSafeRetryRequested) {
-        return false
-      }
-
-      // Don't auto-switch to china-safe if the user's preference is already
-      // 'default' (Mapbox) or hasn't been set. This prevents dev hot-reloads
-      // and transient network errors from overriding the expected map style.
-      // The user can still manually switch via the map style toggle.
-      if (
-        mapStylePreferenceRef.current === 'default' ||
-        mapStylePreferenceRef.current === null
-      ) {
+    const requestAmapRetry = (message?: string) => {
+      if (usingAmapMapStyle || chinaSafeRetryRequested) {
         return false
       }
 
@@ -4873,8 +4913,8 @@ function GamePageContent({
       setMapError(
         message ??
           (prefersChineseCopy
-            ? '\u5e95\u56fe\u52a0\u8f7d\u4e0d\u7a33\u5b9a\uff0c\u6b63\u5728\u5207\u6362\u5230\u8f7b\u91cf\u5730\u56fe\u6a21\u5f0f\u3002'
-            : 'The base map is unavailable, switching to a lighter map mode.'),
+            ? '\u5e95\u56fe\u52a0\u8f7d\u4e0d\u7a33\u5b9a\uff0c\u6b63\u5728\u5207\u6362\u5230 AMap \u6a21\u5f0f\u3002'
+            : 'The base map is unavailable, switching to AMap mode.'),
       )
 
       try {
@@ -4885,7 +4925,7 @@ function GamePageContent({
         mapboxMap = null
       }
 
-      setMapStyleMode('china-safe')
+      setMapStyleMode('amap')
       setMapRetryNonce((prev) => prev + 1)
       return true
     }
@@ -4912,10 +4952,10 @@ function GamePageContent({
     } catch (error) {
       console.error('Failed to initialize map', error)
       if (
-        requestChinaSafeRetry(
+        requestAmapRetry(
           prefersChineseCopy
-            ? '\u5730\u56fe\u521d\u59cb\u5316\u5931\u8d25\uff0c\u6b63\u5728\u5207\u6362\u5230\u8f7b\u91cf\u5730\u56fe\u6a21\u5f0f\u3002'
-            : 'Map initialization failed, switching to a lighter map mode.',
+            ? '\u5730\u56fe\u521d\u59cb\u5316\u5931\u8d25\uff0c\u6b63\u5728\u5207\u6362\u5230 AMap \u6a21\u5f0f\u3002'
+            : 'Map initialization failed, switching to AMap mode.',
         )
       ) {
         return
@@ -4945,15 +4985,15 @@ function GamePageContent({
         )
       }, 4000)
 
-      if (isChinaCity && !usingChinaSafeMapStyle) {
+      if (!usingAmapMapStyle) {
         chinaSafeRetryTimeout = window.setTimeout(() => {
           if (mapReady || mapFailed) {
             return
           }
-          requestChinaSafeRetry(
+          requestAmapRetry(
             prefersChineseCopy
-              ? '\u5730\u56fe\u670d\u52a1\u52a0\u8f7d\u5931\u8d25\uff0c\u6b63\u5728\u5207\u6362\u5230\u8f7b\u91cf\u5730\u56fe\u6a21\u5f0f\u3002'
-              : 'The map service is unavailable, switching to a lighter map mode.',
+              ? '\u5730\u56fe\u670d\u52a1\u52a0\u8f7d\u5931\u8d25\uff0c\u6b63\u5728\u5207\u6362\u5230 AMap \u6a21\u5f0f\u3002'
+              : 'The map service is unavailable, switching to AMap mode.',
           )
         }, 7000)
       }
@@ -4999,10 +5039,10 @@ function GamePageContent({
           normalizedMessage.includes('tile') ||
           normalizedMessage.includes('network') ||
           normalizedMessage.includes('load')) &&
-        requestChinaSafeRetry(
+        requestAmapRetry(
           prefersChineseCopy
-            ? '\u5730\u56fe\u8d44\u6e90\u52a0\u8f7d\u5931\u8d25\uff0c\u6b63\u5728\u5207\u6362\u5230\u8f7b\u91cf\u5730\u56fe\u6a21\u5f0f\u3002'
-            : 'The map resources failed to load, switching to a lighter map mode.',
+            ? '\u5730\u56fe\u8d44\u6e90\u52a0\u8f7d\u5931\u8d25\uff0c\u6b63\u5728\u5207\u6362\u5230 AMap \u6a21\u5f0f\u3002'
+            : 'The map resources failed to load, switching to AMap mode.',
         )
       ) {
         return
@@ -5043,8 +5083,8 @@ function GamePageContent({
       const initialRenderedCollections = renderCullingEnabled
         ? getRenderedCollections(getMapBoundsTuple(mapboxMap.getBounds()))
         : {
-            features: featureCollection,
-            routes: displayRoutes ?? EMPTY_ROUTES_FEATURE_COLLECTION,
+            features: renderFeatureCollection,
+            routes: renderDisplayRoutes ?? EMPTY_ROUTES_FEATURE_COLLECTION,
           }
 
       mapboxMap.addSource('features', {
@@ -5082,7 +5122,7 @@ function GamePageContent({
         const mbMap = mapboxMap
         if (!mbMap) return
 
-        if (!MAP_FROM_DATA || !displayRoutes) {
+        if (!MAP_FROM_DATA || !renderDisplayRoutes) {
           return
         }
 
@@ -5282,8 +5322,8 @@ function GamePageContent({
           },
         })
 
-        if (displayRoutes) {
-          const box = bbox(displayRoutes)
+        if (renderDisplayRoutes) {
+          const box = bbox(renderDisplayRoutes)
           const [minLng, minLat, maxLng, maxLat] = box
           const hasValidBox =
             Number.isFinite(minLng) &&
@@ -5389,64 +5429,62 @@ function GamePageContent({
         },
       })
 
-      if (!usingChinaSafeMapStyle) {
-        mapboxMap.addLayer({
-          minzoom: 11,
-          layout: {
-            'text-field': [
-              'to-string',
-              ['coalesce', ['get', 'display_name'], ['get', 'name']],
-            ],
-            'text-font': ['Cabin Regular', 'Arial Unicode MS Regular'],
-            'text-anchor': 'bottom',
-            'text-offset': [0, -0.5],
-            'text-size': ['interpolate', ['linear'], ['zoom'], 11, 12, 22, 14],
-          },
-          type: 'symbol',
-          source: 'features',
-          id: 'stations-labels',
-          paint: {
-            'text-color': [
-              'case',
-              ['to-boolean', ['feature-state', 'found']],
-              foundTextColor,
-              'rgba(0, 0, 0, 0)',
-            ],
-            'text-halo-color': [
-              'case',
-              ['to-boolean', ['feature-state', 'found']],
-              foundHaloColor,
-              'rgba(0, 0, 0, 0)',
-            ],
-            'text-halo-blur': 1,
-            'text-halo-width': 1,
-          },
-        })
+      mapboxMap.addLayer({
+        minzoom: 11,
+        layout: {
+          'text-field': [
+            'to-string',
+            ['coalesce', ['get', 'display_name'], ['get', 'name']],
+          ],
+          'text-font': ['Cabin Regular', 'Arial Unicode MS Regular'],
+          'text-anchor': 'bottom',
+          'text-offset': [0, -0.5],
+          'text-size': ['interpolate', ['linear'], ['zoom'], 11, 12, 22, 14],
+        },
+        type: 'symbol',
+        source: 'features',
+        id: 'stations-labels',
+        paint: {
+          'text-color': [
+            'case',
+            ['to-boolean', ['feature-state', 'found']],
+            foundTextColor,
+            'rgba(0, 0, 0, 0)',
+          ],
+          'text-halo-color': [
+            'case',
+            ['to-boolean', ['feature-state', 'found']],
+            foundHaloColor,
+            'rgba(0, 0, 0, 0)',
+          ],
+          'text-halo-blur': 1,
+          'text-halo-width': 1,
+        },
+      })
 
-        mapboxMap.addLayer({
-          id: 'hover-label-point',
-          type: 'symbol',
-          paint: {
-            'text-halo-color': hoverHaloColor,
-            'text-halo-width': 2,
-            'text-halo-blur': 1,
-            'text-color': hoverTextColor,
-          },
-          layout: {
-            'text-field': [
-              'to-string',
-              ['coalesce', ['get', 'display_name'], ['get', 'name']],
-            ],
-            'text-font': ['Cabin Bold', 'Arial Unicode MS Regular'],
-            'text-anchor': 'bottom',
-            'text-offset': [0, -0.6],
-            'text-size': ['interpolate', ['linear'], ['zoom'], 11, 14, 22, 16],
-            'symbol-placement': 'point',
-          },
-          source: 'hovered',
-          filter: ['==', '$type', 'Point'],
-        })
-      }
+      mapboxMap.addLayer({
+        id: 'hover-label-point',
+        type: 'symbol',
+        paint: {
+          'text-halo-color': hoverHaloColor,
+          'text-halo-width': 2,
+          'text-halo-blur': 1,
+          'text-color': hoverTextColor,
+        },
+        layout: {
+          'text-field': [
+            'to-string',
+            ['coalesce', ['get', 'display_name'], ['get', 'name']],
+          ],
+          'text-font': ['Cabin Bold', 'Arial Unicode MS Regular'],
+          'text-anchor': 'bottom',
+          'text-offset': [0, -0.6],
+          'text-size': ['interpolate', ['linear'], ['zoom'], 11, 14, 22, 16],
+          'symbol-placement': 'point',
+        },
+        source: 'hovered',
+        filter: ['==', '$type', 'Point'],
+      })
 
       mapboxMap.once('data', () => {
         setMap((map) => (map === null ? mapboxMap : map))
@@ -5490,7 +5528,7 @@ function GamePageContent({
         if (!isStoredMapView(view)) return
         savedMapViewRef.current = view
         if (typeof window !== 'undefined') {
-          window.localStorage.setItem(`map-view-${CITY_NAME}`, JSON.stringify(view))
+          window.localStorage.setItem(mapViewStorageKey, JSON.stringify(view))
         }
         const now = Date.now()
         if (now - lastPersistTsRef.current > 1000) {
@@ -5522,7 +5560,7 @@ function GamePageContent({
         savedMapViewRef.current = currentMapView
         if (typeof window !== 'undefined') {
           window.localStorage.setItem(
-            `map-view-${CITY_NAME}`,
+            mapViewStorageKey,
             JSON.stringify(currentMapView),
           )
         }
@@ -5548,7 +5586,7 @@ function GamePageContent({
       mapboxMap.remove()
       setMap(null)
     }
-  }, [setMap, featureCollection, displayLines, mapOptions, MAP_FROM_DATA, displayRoutes, renderCullingEnabled, getRenderedCollections, refreshRenderedSources, resolvedTheme, CITY_NAME, updateUiPreferences, isChinaCity, usingChinaSafeMapStyle, prefersChineseCopy, mapRetryNonce, mapStyleModeReady])
+  }, [setMap, displayLines, mapOptions, MAP_FROM_DATA, renderDisplayRoutes, renderFeatureCollection, renderCullingEnabled, getRenderedCollections, refreshRenderedSources, resolvedTheme, CITY_NAME, updateUiPreferences, usingAmapMapStyle, prefersChineseCopy, mapRetryNonce, mapStyleModeReady, mapViewStorageKey])
 
   useEffect(() => {
     if (!map) {
@@ -5829,7 +5867,7 @@ function GamePageContent({
     (id: number) => {
       if (!map) return
 
-      const feature = idMap.get(id)
+      const feature = renderIdMap.get(id)
       if (!feature) return
 
       if (feature.geometry.type === 'Point') {
@@ -5845,7 +5883,7 @@ function GamePageContent({
         map.fitBounds(bounds, { padding: 100 })
       }
     },
-    [map, idMap],
+    [map, renderIdMap],
   )
 
   useEffect(() => {
@@ -5885,14 +5923,14 @@ function GamePageContent({
     mistakes > 0 &&
     foundProportion < RANKED_COMPLETION_TARGET
 
-  const showChinaMapStyleTestButton = isChinaCity && solutionsUnlocked
-  const chinaMapStyleTestButtonLabel = usingChinaSafeMapStyle
+  const showChinaMapStyleTestButton = solutionsUnlocked
+  const chinaMapStyleTestButtonLabel = usingAmapMapStyle
     ? prefersChineseCopy
       ? '\u5207\u56de Mapbox \u5730\u56fe'
       : 'Use Mapbox map'
     : prefersChineseCopy
-      ? '\u4f7f\u7528\u8f7b\u91cf\u5730\u56fe'
-      : 'Use lightweight map'
+      ? '\u4f7f\u7528 AMap \u5730\u56fe'
+      : 'Use AMap map'
 
   return (
     <div className="relative flex h-screen flex-row items-start justify-start bg-zinc-50 text-zinc-900 dark:bg-zinc-950 dark:text-zinc-100">
@@ -6147,12 +6185,12 @@ function GamePageContent({
                   type="button"
                   onClick={() =>
                     handleRetryMap(
-                      usingChinaSafeMapStyle ? 'current' : 'china-safe',
+                      usingAmapMapStyle ? 'current' : 'amap',
                       { persistPreference: true },
                     )
                   }
                   className={
-                    usingChinaSafeMapStyle
+                    usingAmapMapStyle
                       ? 'group inline-flex h-12 min-w-[3rem] items-center justify-center overflow-hidden rounded-full bg-sky-600 px-3 text-white shadow-lg transition hover:bg-sky-500 focus:outline-none focus:ring-2 focus:ring-sky-300 dark:bg-sky-500 dark:text-zinc-950 dark:hover:bg-sky-400'
                       : 'group inline-flex h-12 min-w-[3rem] items-center justify-center overflow-hidden rounded-full bg-white px-3 text-zinc-700 shadow-lg transition hover:bg-zinc-100 focus:outline-none focus:ring-2 focus:ring-[var(--accent-ring)] dark:bg-zinc-800 dark:text-zinc-100 dark:hover:bg-zinc-700'
                   }
@@ -6163,7 +6201,7 @@ function GamePageContent({
                       : 'Cheat-unlocked test button'
                   }
                 >
-                  {usingChinaSafeMapStyle ? (
+                  {usingAmapMapStyle ? (
                     <MdMap className="h-5 w-5 shrink-0" aria-hidden="true" />
                   ) : (
                     <MdLayers className="h-5 w-5 shrink-0" aria-hidden="true" />

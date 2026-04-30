@@ -94,6 +94,8 @@ export const i18n = rosetta({
     getLocation: 'Get location',
     locating: 'Locating...',
     playRandomCity: 'Play Random City',
+    useAmapMap: 'Use AMap',
+    useMapboxMap: 'Use Mapbox',
 
 
     settings: 'Settings',
@@ -3081,6 +3083,8 @@ opensANewTab:
     getLocation: '获取位置',
     locating: '正在定位…',
     playRandomCity: '随机游玩城市',
+    useAmapMap: '使用 AMap',
+    useMapboxMap: '使用 Mapbox',
 
 
     settings: '设置',
@@ -3463,6 +3467,8 @@ opensANewTab:
     getLocation: '取得位置',
     locating: '正在定位…',
     playRandomCity: '隨機遊玩城市',
+    useAmapMap: '使用 AMap',
+    useMapboxMap: '使用 Mapbox',
 
 
     settings: '設定',
