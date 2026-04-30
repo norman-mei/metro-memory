@@ -19,6 +19,13 @@ const CITY_STATION_ALIASES: Record<string, CityStationAliasMap> = {
   'california-state-los-angeles': californiaStateLosAngelesAliases,
   'california-state-metrolink': californiaStateLosAngelesAliases,
   'california-state-san-diego': californiaStateSanDiegoAliases,
+  chicago: {
+    'Jefferson Park Transit Center': [
+      'Jefferson Park',
+      'Jefferson Pk',
+      'Jefferson Pk.',
+    ],
+  },
   'gba-hong-kong': {
     'Terminal 1 West Hall (一號客運大樓西大堂站)': [
       'T1',

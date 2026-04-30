@@ -369,7 +369,7 @@ const Input = ({
           candidateMatches
             .filter((candidate) =>
               strongestExactStrength > 0
-                ? candidate.exactStrength === strongestExactStrength
+                ? candidate.exactStrength > 0
                 : true,
             )
             .map((candidate) => candidate.id),

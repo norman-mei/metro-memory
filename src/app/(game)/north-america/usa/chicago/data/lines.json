@@ -1,237 +1,189 @@
 {
-    "CTAMetroBlueLine":  {
-                             "name":  "Blue Line",
-                             "color":  "#009EDE",
-                             "backgroundColor":  "#004F6F",
-                             "progressOutlineColor":  "#38C6FF",
-                             "textColor":  "#FFFFFF",
-                             "order":  0,
-                             "icon":  "north-america/usa/chicago/CTAMetroBlueLine.svg"
-                         },
-    "CTAMetroBrownLine":  {
-                              "name":  "Brown Line",
-                              "color":  "#633619",
-                              "backgroundColor":  "#311B0D",
-                              "progressOutlineColor":  "#8B4C23",
-                              "textColor":  "#FFFFFF",
-                              "order":  1,
-                              "icon":  "north-america/usa/chicago/CTAMetroBrownLine.svg"
-                          },
-    "CTAMetroGreenLine":  {
-                              "name":  "Green Line",
-                              "color":  "#00A747",
-                              "backgroundColor":  "#005324",
-                              "progressOutlineColor":  "#00EA63",
-                              "textColor":  "#FFFFFF",
-                              "order":  2,
-                              "icon":  "north-america/usa/chicago/CTAMetroGreenLine.svg"
-                          },
-    "CTAMetroOrangeLine":  {
-                               "name":  "Orange Line",
-                               "color":  "#F57832",
-                               "backgroundColor":  "#8D3707",
-                               "progressOutlineColor":  "#FAC2A3",
-                               "textColor":  "#FFFFFF",
-                               "order":  3,
-                               "icon":  "north-america/usa/chicago/CTAMetroOrangeLine.svg"
-                           },
-    "CTAMetroPinkLine":  {
-                             "name":  "Pink Line",
-                             "color":  "#E480A7",
-                             "backgroundColor":  "#931F4C",
-                             "progressOutlineColor":  "#D84F8A",
-                             "textColor":  "#FFFFFF",
-                             "order":  4,
-                             "icon":  "north-america/usa/chicago/CTAMetroPinkLine.svg"
-                         },
-    "CTAMetroPurpleLine":  {
-                               "name":  "Purple Line",
-                               "color":  "#522398",
-                               "backgroundColor":  "#29124C",
-                               "progressOutlineColor":  "#7435D1",
-                               "textColor":  "#FFFFFF",
-                               "order":  5,
-                               "icon":  "north-america/usa/chicago/CTAMetroPurpleLine.svg"
-                           },
-    "CTAMetroRedLine":  {
-                            "name":  "Red Line",
-                            "color":  "#E72137",
-                            "backgroundColor":  "#770D19",
-                            "progressOutlineColor":  "#F1808D",
-                            "textColor":  "#FFFFFF",
-                            "order":  6,
-                            "icon":  "north-america/usa/chicago/CTAMetroRedLine.svg"
-                        },
-    "CTAMetroYellowLine":  {
-                               "name":  "Yellow Line",
-                               "color":  "#EABE01",
-                               "backgroundColor":  "#755F00",
-                               "progressOutlineColor":  "#FEDC4B",
-                               "textColor":  "#FFFFFF",
-                               "order":  7,
-                               "icon":  "north-america/usa/chicago/CTAMetroYellowLine.svg"
-                           },
-    "Metra_BNSF":  {
-                       "name":  "BNSF",
-                       "color":  "#43B02A",
-                       "backgroundColor":  "#FFFFFF",
-                       "progressOutlineColor":  "#71D85A",
-                       "textColor":  "#111827",
-                       "order":  8,
-                       "icon":  "north-america/usa/chicago/Metra_BNSF.svg"
-                   },
-    "Metra_HC":  {
-                     "name":  "Heritage Corridor",
-                     "color":  "#862041",
-                     "backgroundColor":  "#431021",
-                     "progressOutlineColor":  "#BC2D5B",
-                     "textColor":  "#FFFFFF",
-                     "order":  9,
-                     "icon":  "north-america/usa/chicago/Metra_HC.svg"
-                 },
-    "Metra_ME":  {
-                     "name":  "Metra Electric (University Park)",
-                     "color":  "#FE5000",
-                     "backgroundColor":  "#7F2800",
-                     "progressOutlineColor":  "#FF9565",
-                     "textColor":  "#FFFFFF",
-                     "order":  10,
-                     "icon":  "north-america/usa/chicago/Metra_ME.svg"
-                 },
-    "Metra_ME_BI":  {
-                        "name":  "Metra Electric (Blue Island Branch)",
-                        "color":  "#C5E9EA",
-                        "backgroundColor":  "#399B9E",
-                        "progressOutlineColor":  "#00AFCF",
-                        "textColor":  "#111827",
-                        "order":  11,
-                        "icon":  "north-america/usa/chicago/Metra_ME_BI.svg"
-                    },
-    "Metra_ME_SC":  {
-                        "name":  "Metra Electric (South Chicago Branch)",
-                        "color":  "#DFDCD4",
-                        "backgroundColor":  "#7D745D",
-                        "progressOutlineColor":  "#00A7C8",
-                        "textColor":  "#111827",
-                        "order":  12,
-                        "icon":  "north-america/usa/chicago/Metra_ME_SC.svg"
-                    },
-    "Metra_MDW":  {
-                      "name":  "Milwaukee District West",
-                      "color":  "#F1BE48",
-                      "backgroundColor":  "#91690B",
-                      "progressOutlineColor":  "#C58600",
-                      "textColor":  "#111827",
-                      "order":  13,
-                      "icon":  "north-america/usa/chicago/Metra_MDW.svg"
-                  },
-    "Metra_MDN":  {
-                      "name":  "Milwaukee District North",
-                      "color":  "#E57200",
-                      "backgroundColor":  "#FFFFFF",
-                      "progressOutlineColor":  "#FFA042",
-                      "textColor":  "#111827",
-                      "order":  14,
-                      "icon":  "north-america/usa/chicago/Metra_MDN.svg"
-                  },
-    "Metra_NCS":  {
-                      "name":  "North Central Service",
-                      "color":  "#9063CD",
-                      "backgroundColor":  "#462573",
-                      "progressOutlineColor":  "#D2BFEB",
-                      "textColor":  "#FFFFFF",
-                      "order":  15,
-                      "icon":  "north-america/usa/chicago/Metra_NCS.svg"
-                  },
-    "Metra_RI":  {
-                     "name":  "Rock Island District",
-                     "color":  "#DA291C",
-                     "backgroundColor":  "#6D140E",
-                     "progressOutlineColor":  "#EC756C",
-                     "textColor":  "#FFFFFF",
-                     "order":  16,
-                     "icon":  "north-america/usa/chicago/Metra_RI.svg"
-                 },
-    "Metra_RI_Bev":  {
-                         "name":  "Rock Island (Beverly Branch)",
-                         "color":  "#717C7D",
-                         "backgroundColor":  "#383E3F",
-                         "progressOutlineColor":  "#A2AAAB",
-                         "textColor":  "#FFFFFF",
-                         "order":  17,
-                         "icon":  "north-america/usa/chicago/Metra_RI_Bev.svg"
-                     },
-    "Metra_SWS":  {
-                      "name":  "SouthWest Service",
-                      "color":  "#005EB8",
-                      "backgroundColor":  "#002F5C",
-                      "progressOutlineColor":  "#0384FF",
-                      "textColor":  "#FFFFFF",
-                      "order":  18,
-                      "icon":  "north-america/usa/chicago/Metra_SWS.svg"
-                  },
-    "Metra_UPN":  {
-                      "name":  "Union Pacific North",
-                      "color":  "#00843D",
-                      "backgroundColor":  "#00421F",
-                      "progressOutlineColor":  "#00B955",
-                      "textColor":  "#FFFFFF",
-                      "order":  19,
-                      "icon":  "north-america/usa/chicago/Metra_UPN.svg"
-                  },
-    "Metra_UPNW":  {
-                       "name":  "Union Pacific Northwest",
-                       "color":  "#FEDD00",
-                       "backgroundColor":  "#7F6F00",
-                       "progressOutlineColor":  "#C9A800",
-                       "textColor":  "#111827",
-                       "order":  20,
-                       "icon":  "north-america/usa/chicago/Metra_UPNW.svg"
-                   },
-    "Metra_UPW":  {
-                      "name":  "Union Pacific West",
-                      "color":  "#FFB1BB",
-                      "backgroundColor":  "#D8001C",
-                      "progressOutlineColor":  "#D46A93",
-                      "textColor":  "#111827",
-                      "order":  21,
-                      "icon":  "north-america/usa/chicago/Metra_UPW.svg"
-                  },
-    "NICTD_SSL":  {
-                      "name":  "Lakeshore Corridor",
-                      "color":  "#F68F2E",
-                      "backgroundColor":  "#350908",
-                      "progressOutlineColor":  "#F68F2E",
-                      "textColor":  "#FFFFFF",
-                      "order":  22,
-                      "icon":  "north-america/usa/chicago/LakeshoreCorridor.png"
-                  },
-    "NICTD_MCL":  {
-                      "name":  "Monon Corridor",
-                      "color":  "#DC1A21",
-                      "backgroundColor":  "#6E0D11",
-                      "progressOutlineColor":  "#ED6B70",
-                      "textColor":  "#FFFFFF",
-                      "order":  23,
-                      "icon":  "north-america/usa/chicago/MononCorridor.png"
-                  },
-    "ChicagoATS":  {
-                       "name":  "Airport Transit System (ATS)",
-                       "color":  "#EB0C14",
-                       "backgroundColor":  "#88070C",
-                       "progressOutlineColor":  "#FF6A6F",
-                       "textColor":  "#FFFFFF",
-                       "order":  24,
-                       "icon":  "north-america/usa/chicago/ChicagoATS.png"
-                   },
-    "kenoshaStreetcar":  {
-                             "name":  "Kenosha Streetcar",
-                             "color":  "#00349E",
-                             "backgroundColor":  "#001F62",
-                             "progressOutlineColor":  "#5584FF",
-                             "textColor":  "#FFFFFF",
-                             "order":  25,
-                             "image":  "kenoshaSC",
-                             "icon":  "north-america/usa/chicago/kenoshaStreetcar.png"
-                         }
+  "CTAMetroBlueLine": {
+    "name": "Blue Line",
+    "color": "#009EDE",
+    "backgroundColor": "#004F6F",
+    "textColor": "#FFFFFF",
+    "order": 0
+  },
+  "CTAMetroBrownLine": {
+    "name": "Brown Line",
+    "color": "#633619",
+    "backgroundColor": "#311B0D",
+    "textColor": "#FFFFFF",
+    "order": 1
+  },
+  "CTAMetroGreenLine": {
+    "name": "Green Line",
+    "color": "#00A747",
+    "backgroundColor": "#005324",
+    "textColor": "#FFFFFF",
+    "order": 2
+  },
+  "CTAMetroOrangeLine": {
+    "name": "Orange Line",
+    "color": "#F57832",
+    "backgroundColor": "#8D3707",
+    "textColor": "#FFFFFF",
+    "order": 3
+  },
+  "CTAMetroPinkLine": {
+    "name": "Pink Line",
+    "color": "#E480A7",
+    "backgroundColor": "#931F4C",
+    "textColor": "#FFFFFF",
+    "order": 4
+  },
+  "CTAMetroPurpleLine": {
+    "name": "Purple Line",
+    "color": "#522398",
+    "backgroundColor": "#29124C",
+    "textColor": "#FFFFFF",
+    "order": 5
+  },
+  "CTAMetroRedLine": {
+    "name": "Red Line",
+    "color": "#E72137",
+    "backgroundColor": "#770D19",
+    "textColor": "#FFFFFF",
+    "order": 6
+  },
+  "CTAMetroYellowLine": {
+    "name": "Yellow Line",
+    "color": "#EABE01",
+    "backgroundColor": "#755F00",
+    "textColor": "#FFFFFF",
+    "order": 7
+  },
+  "Metra_BNSF": {
+    "name": "BNSF",
+    "color": "#43b02a",
+    "backgroundColor": "#FFFFFF",
+    "textColor": "#111827",
+    "order": 8
+  },
+  "Metra_HC": {
+    "name": "Heritage Corridor",
+    "color": "#862041",
+    "backgroundColor": "#431021",
+    "textColor": "#FFFFFF",
+    "order": 9
+  },
+  "Metra_ME": {
+    "name": "Metra Electric (University Park)",
+    "color": "#fe5000",
+    "backgroundColor": "#7F2800",
+    "textColor": "#FFFFFF",
+    "order": 10
+  },
+  "Metra_ME_BI": {
+    "name": "Metra Electric (Blue Island Branch)",
+    "color": "#c5e9ea",
+    "backgroundColor": "#399B9E",
+    "textColor": "#111827",
+    "order": 11
+  },
+  "Metra_ME_SC": {
+    "name": "Metra Electric (South Chicago Branch)",
+    "color": "#dfdcd4",
+    "backgroundColor": "#7D745D",
+    "textColor": "#111827",
+    "order": 12
+  },
+  "Metra_MDW": {
+    "name": "Milwaukee District West",
+    "color": "#f1be48",
+    "backgroundColor": "#91690B",
+    "textColor": "#111827",
+    "order": 13
+  },
+  "Metra_MDN": {
+    "name": "Milwaukee District North",
+    "color": "#e57200",
+    "backgroundColor": "#FFFFFF",
+    "textColor": "#111827",
+    "order": 14
+  },
+  "Metra_NCS": {
+    "name": "North Central Service",
+    "color": "#9063cd",
+    "backgroundColor": "#462573",
+    "textColor": "#FFFFFF",
+    "order": 15
+  },
+  "Metra_RI": {
+    "name": "Rock Island District",
+    "color": "#da291c",
+    "backgroundColor": "#6D140E",
+    "textColor": "#FFFFFF",
+    "order": 16
+  },
+  "Metra_RI_Bev": {
+    "name": "Rock Island (Beverly Branch)",
+    "color": "#717c7d",
+    "backgroundColor": "#383E3F",
+    "textColor": "#FFFFFF",
+    "order": 17
+  },
+  "Metra_SWS": {
+    "name": "SouthWest Service",
+    "color": "#005eb8",
+    "backgroundColor": "#002F5C",
+    "textColor": "#FFFFFF",
+    "order": 18
+  },
+  "Metra_UPN": {
+    "name": "Union Pacific North",
+    "color": "#00843d",
+    "backgroundColor": "#00421F",
+    "textColor": "#FFFFFF",
+    "order": 19
+  },
+  "Metra_UPNW": {
+    "name": "Union Pacific Northwest",
+    "color": "#fedd00",
+    "backgroundColor": "#7F6F00",
+    "textColor": "#111827",
+    "order": 20
+  },
+  "Metra_UPW": {
+    "name": "Union Pacific West",
+    "color": "#ffb1bb",
+    "backgroundColor": "#D8001C",
+    "textColor": "#111827",
+    "order": 21
+  },
+  "NICTD_SSL": {
+    "name": "South Shore Line (SSL)",
+    "color": "#6A1311",
+    "backgroundColor": "#350908",
+    "textColor": "#FFFFFF",
+    "order": 22
+  },
+  "NICTD_MCL": {
+    "name": "Monon Corridor Line (MCL)",
+    "color": "#DC1A21",
+    "backgroundColor": "#6E0D11",
+    "textColor": "#FFFFFF",
+    "order": 23
+  },
+  "ChicagoATS": {
+    "name": "Airport Transit System (ATS)",
+    "color": "#EB0C14",
+    "backgroundColor": "#88070C",
+    "progressOutlineColor": "#FF6A6F",
+    "textColor": "#FFFFFF",
+    "order": 24,
+    "icon": "north-america/usa/chicago/ChicagoATS.png"
+  },
+  "kenoshaStreetcar": {
+    "name": "Kenosha Streetcar",
+    "color": "#00349E",
+    "backgroundColor": "#001F62",
+    "progressOutlineColor": "#5584FF",
+    "textColor": "#FFFFFF",
+    "order": 25,
+    "image": "kenoshaSC",
+    "icon": "north-america/usa/chicago/kenoshaStreetcar.png"
+  }
 }

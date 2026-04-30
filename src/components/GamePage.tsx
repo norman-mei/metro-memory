@@ -4197,11 +4197,15 @@ function GamePageContent({
 
   const handleToggleMapNames = useCallback(() => {
     handleProtectedAction(() => {
+      const currentMapView = map ? getStoredMapViewFromMap(map) : null
+      if (currentMapView) {
+        savedMapViewRef.current = currentMapView
+      }
       void markRankedRunDisqualified('MAP_NAMES_USED')
       setShowMapNames((prev) => !prev)
       registerMapNamesToggle()
     }, 'mapNames')
-  }, [handleProtectedAction, markRankedRunDisqualified, registerMapNamesToggle])
+  }, [handleProtectedAction, map, markRankedRunDisqualified, registerMapNamesToggle])
 
   useEffect(() => {
     if (!achievementsHydratedRef.current || lineMasterSyncRef.current) return
@@ -4781,18 +4785,11 @@ function GamePageContent({
     }
   }, [settings.achievementToastsEnabled])
 
-  const mapOptions = useMemo(() => {
-    const { container: _ignored, ...rest } = MAP_CONFIG as typeof MAP_CONFIG & {
-      container?: unknown
-    }
-
+  const mapStyle = useMemo(() => {
     if (usingAmapMapStyle) {
-      return {
-        ...rest,
-        style: buildChinaSafeMapStyle(resolvedTheme === 'dark', {
-          showLabels: showMapNames,
-        }),
-      }
+      return buildChinaSafeMapStyle(resolvedTheme === 'dark', {
+        showLabels: showMapNames,
+      })
     }
 
     const fallbackLightStyle =
@@ -4811,18 +4808,23 @@ function GamePageContent({
       'mapbox://styles/mapbox/dark-v11'
 
     const satelliteStyle = 'mapbox://styles/mapbox/satellite-streets-v12'
-    const resolvedStyle =
-      showSatellite
-        ? satelliteStyle
-        : resolvedTheme === 'dark'
-          ? darkStyle
-          : baseStyle ?? fallbackLightStyle
+    return showSatellite
+      ? satelliteStyle
+      : resolvedTheme === 'dark'
+        ? darkStyle
+        : baseStyle ?? fallbackLightStyle
+  }, [MAP_CONFIG.style, resolvedTheme, showMapNames, showSatellite, usingAmapMapStyle])
+
+  const mapOptions = useMemo(() => {
+    const { container: _ignored, ...rest } = MAP_CONFIG as typeof MAP_CONFIG & {
+      container?: unknown
+    }
 
     return {
       ...rest,
-      style: resolvedStyle,
+      style: mapStyle,
     }
-  }, [MAP_CONFIG, resolvedTheme, showSatellite, usingAmapMapStyle, showMapNames])
+  }, [MAP_CONFIG, mapStyle])
 
   useEffect(() => {
     if (!mapStyleModeReady) {

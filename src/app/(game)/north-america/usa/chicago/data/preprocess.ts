@@ -25,6 +25,8 @@ const sanitize = (name: string) => {
 const stripMetraName = (name: string) =>
   name.replace('METRA Rail: ', '').trim()
 
+const roundCoordinateKey = (value: number) => value.toFixed(6)
+
 type Coordinate = [number, number]
 
 const pointToSegmentDistance = (
@@ -386,6 +388,36 @@ const CTA_MANUAL_STATIONS: Array<{
     line: 'CTAMetroRedLine',
     coordinates: [-87.59424997715394, 41.66000990188678],
   },
+  {
+    name: 'Harlem',
+    line: 'CTAMetroBlueLine',
+    coordinates: [-87.806961, 41.87349],
+    order: 220,
+  },
+  {
+    name: 'Central',
+    line: 'CTAMetroBlueLine',
+    coordinates: [-87.7648, 41.8701],
+    order: 223,
+  },
+  {
+    name: 'Western',
+    line: 'CTAMetroBlueLine',
+    coordinates: [-87.688436, 41.875478],
+    order: 226,
+  },
+  {
+    name: 'Lawrence',
+    line: 'CTAMetroRedLine',
+    coordinates: [-87.658493, 41.969139],
+    order: 42,
+  },
+  {
+    name: 'Berwyn',
+    line: 'CTAMetroRedLine',
+    coordinates: [-87.658683, 41.977833],
+    order: 38,
+  },
 ]
 
 const NICTD_LINE_SEQUENCES: Record<string, string[]> = {
@@ -478,8 +510,14 @@ const METRA_LINE_COLORS: Record<string, string> = {
 const main = async () => {
   // --- STATIONS ---
   const data = Bun.file(path.join(__dirname, './source.json'))
+  const existingFeaturesData = Bun.file(path.join(__dirname, './features.json'))
+  const existingRoutesData = Bun.file(path.join(__dirname, './routes.json'))
+  const existingLinesData = Bun.file(path.join(__dirname, './lines.json'))
 
   const { routes, stops } = (await data.json()) as any
+  const existingFeatures = (await existingFeaturesData.json()) as any
+  const existingRoutes = (await existingRoutesData.json()) as any
+  const existingLines = (await existingLinesData.json()) as Record<string, any>
 
   const additionalLineKeys = [
     ...Object.keys(METRA_LINE_CONTROL_POINTS),
@@ -510,6 +548,11 @@ const main = async () => {
       })
     })
     .filter((feature: any) => availableLines.has(feature.properties.line))
+
+  const legacyRouteFeatures = (existingRoutes.features || []).filter((feature: any) => {
+    const line = feature?.properties?.line
+    return typeof line === 'string' && !availableLines.has(line)
+  })
 
   let index = 0
 
@@ -542,8 +585,24 @@ const main = async () => {
         })
         .filter((feature: any) => availableLines.has(feature.properties.line))
     }),
-    (f: any) => f.properties.line + f.properties.name,
+    (feature: any) => {
+      const [lng, lat] = feature.geometry.coordinates as Coordinate
+      return [
+        feature.properties.line,
+        feature.properties.name,
+        roundCoordinateKey(lng),
+        roundCoordinateKey(lat),
+      ].join('::')
+    },
   )
+
+  const legacyStationFeatures = (existingFeatures.features || []).filter((feature: any) => {
+    const line = feature?.properties?.line
+    return typeof line === 'string' && !availableLines.has(line)
+  })
+  if (legacyStationFeatures.length > 0) {
+    featuresStations = [...featuresStations, ...legacyStationFeatures]
+  }
 
   const featureKey = (line: string, name: string) => `${line}::${name}`
 
@@ -782,7 +841,10 @@ const main = async () => {
     JSON.stringify(
       {
         type: 'FeatureCollection',
-        features: sortBy(featuresRoutes, (f) => -f.properties.order),
+        features: sortBy(
+          [...featuresRoutes, ...legacyRouteFeatures],
+          (f) => -f.properties.order,
+        ),
       },
       null,
       2,
@@ -818,6 +880,12 @@ const main = async () => {
       backgroundColor,
       textColor,
       order: orderOffset + idx,
+    }
+  })
+
+  Object.entries(existingLines).forEach(([line, metadata]) => {
+    if (!lineMetadata[line]) {
+      lineMetadata[line] = metadata
     }
   })
 
