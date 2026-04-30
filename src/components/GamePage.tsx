@@ -31,6 +31,7 @@ import {
     formatLocalizedChinaUiDescription,
     formatLocalizedChinaUiTitle,
 } from '@/lib/chinaUiText'
+import { buildChinaSafeMapStyle } from '@/lib/chinaSafeMapStyle'
 import { formatLocalizedCityName } from '@/lib/cityNameDisplay'
 import { getCityStationAliases } from '@/lib/cityStationAliases'
 import { getKeystrokeFromEvent } from '@/lib/keyboardUtils'
@@ -192,20 +193,7 @@ const safeSetMapLayoutProperty = (
 const mapUnavailableMessage =
   'This browser lost the WebGL map context, so the map cannot be displayed right now. Please reload the page, enable hardware acceleration, or try a different browser.'
 
-const buildChinaSafeMapStyle = (darkMode: boolean): mapboxgl.Style => ({
-  version: 8,
-  name: darkMode ? 'Metro Memory China Safe Dark' : 'Metro Memory China Safe Light',
-  sources: {},
-  layers: [
-    {
-      id: 'background',
-      type: 'background',
-      paint: {
-        'background-color': darkMode ? '#09090b' : '#f5f5f4',
-      },
-    },
-  ],
-})
+
 
 type AchievementToastState = {
   slug: string

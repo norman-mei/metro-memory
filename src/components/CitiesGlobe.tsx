@@ -10,6 +10,8 @@ import 'mapbox-gl/dist/mapbox-gl.css'
 import { useTheme } from 'next-themes'
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
+import { useSettings } from '@/context/SettingsContext'
+import { buildChinaSafeMapStyle } from '@/lib/chinaSafeMapStyle'
 import CloseButton from './CloseButton'
 import CityCard from './CityCard'
 
@@ -162,6 +164,7 @@ export default function CitiesGlobe({
   const mapContainerRef = useRef<HTMLDivElement>(null)
   const mapRef = useRef<mapboxgl.Map | null>(null)
   const { resolvedTheme } = useTheme()
+  const { requestInMainlandChina } = useSettings()
   const recommendedSet = useMemo(() => new Set(recommendedSlugs), [recommendedSlugs])
   const cityBySlug = useMemo(
     () =>
@@ -310,7 +313,9 @@ export default function CitiesGlobe({
     setMapError(null)
 
     const isDark = resolvedTheme === 'dark'
-    const style = satellite
+    const style = requestInMainlandChina
+      ? buildChinaSafeMapStyle(isDark)
+      : satellite
       ? 'mapbox://styles/mapbox/satellite-streets-v12'
       : isDark
         ? 'mapbox://styles/mapbox/dark-v11'
@@ -600,7 +605,9 @@ export default function CitiesGlobe({
     if (!mapRef.current) return
 
     const isDark = resolvedTheme === 'dark'
-    const style = satellite
+    const style = requestInMainlandChina
+      ? buildChinaSafeMapStyle(isDark)
+      : satellite
       ? 'mapbox://styles/mapbox/satellite-streets-v12'
       : isDark
         ? 'mapbox://styles/mapbox/dark-v11'
@@ -613,7 +620,7 @@ export default function CitiesGlobe({
     mapRef.current.setStyle(style)
     // The 'style.load' event handler in the other useEffect will trigger updateSource
     // to re-add our layers.
-  }, [resolvedTheme, satellite])
+  }, [resolvedTheme, satellite, requestInMainlandChina])
 
   useEffect(() => {
     const map = mapRef.current

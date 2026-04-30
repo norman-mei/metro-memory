@@ -1,0 +1,46 @@
+import type mapboxgl from 'mapbox-gl'
+
+export const buildChinaSafeMapStyle = (darkMode: boolean): mapboxgl.Style => {
+  // AMap raster tiles: style=7 for light road map, style=8 for dark mode
+  const amapStyleId = darkMode ? '8' : '7'
+  const tileUrl = `https://wprd01.is.autonavi.com/appmaptile?lang=zh_cn&size=1&style=${amapStyleId}&x={x}&y={y}&z={z}`
+
+  return {
+    version: 8,
+    name: darkMode ? 'Metro Memory China Safe Dark' : 'Metro Memory China Safe Light',
+    // Proxy the glyphs to avoid Great Firewall blocking api.mapbox.com
+    // {fontstack} and {range} are supplied by mapbox-gl at runtime
+    glyphs: '/api/geo/glyphs/{fontstack}/{range}.pbf',
+    sources: {
+      'amap-raster': {
+        type: 'raster',
+        tiles: [
+          tileUrl,
+          tileUrl.replace('wprd01', 'wprd02'),
+          tileUrl.replace('wprd01', 'wprd03'),
+          tileUrl.replace('wprd01', 'wprd04'),
+        ],
+        tileSize: 256,
+      },
+    },
+    layers: [
+      {
+        id: 'background',
+        type: 'background',
+        paint: {
+          'background-color': darkMode ? '#09090b' : '#f5f5f4',
+        },
+      },
+      {
+        id: 'amap-layer',
+        type: 'raster',
+        source: 'amap-raster',
+        minzoom: 0,
+        maxzoom: 18,
+        paint: {
+          'raster-opacity': 1,
+        },
+      },
+    ],
+  }
+}
