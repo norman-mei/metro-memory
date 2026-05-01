@@ -19,6 +19,12 @@ const CITY_STATION_ALIASES: Record<string, CityStationAliasMap> = {
   'california-state-los-angeles': californiaStateLosAngelesAliases,
   'california-state-metrolink': californiaStateLosAngelesAliases,
   'california-state-san-diego': californiaStateSanDiegoAliases,
+  buffalo: {
+    Seneca: [
+      'Merchants Insurance',
+      'Merchants Insurance @ Seneca',
+    ],
+  },
   chicago: {
     'Jefferson Park Transit Center': [
       'Jefferson Park',
