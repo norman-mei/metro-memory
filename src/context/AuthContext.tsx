@@ -20,7 +20,6 @@ import {
 type AuthUser = {
   id: string
   email: string
-  displayName?: string | null
   adFree?: boolean
 }
 

@@ -1680,7 +1680,6 @@ function GamePageContent({
   const perfectStartInitializedRef = useRef(false)
   const neverRepeatRef = useRef(true)
   const typoFreeRef = useRef(true)
-  const recentCorrectTimesRef = useRef<number[]>([])
   const lineMasterSyncRef = useRef(false)
 
   // Hydrate globally earned achievements so one-offs (e.g., comeback-kid) never re-award across cities
@@ -3632,7 +3631,6 @@ function GamePageContent({
     perfectStartCountRef.current = 0
     neverRepeatRef.current = true
     typoFreeRef.current = true
-    recentCorrectTimesRef.current = []
     comebackArmedRef.current = false
     comebackTriggeredRef.current = false
     if (!rankedMode) {
@@ -4373,24 +4371,6 @@ function GamePageContent({
               'Make 25 correct guesses in a row to start a city.',
             )
             perfectStartEligibleRef.current = false
-          }
-        }
-        if (result.addedIds && result.addedIds.length > 0) {
-          const now = Date.now()
-          const uniqueKeys = new Set<string>()
-          result.addedIds.forEach((id) => {
-            const feature = idMap.get(id)
-            if (feature) {
-              uniqueKeys.add(getStationKey(feature))
-            }
-          })
-          if (uniqueKeys.size > 0) {
-            const updated = recentCorrectTimesRef.current.filter((ts) => now - ts <= 7 * 60 * 1000)
-            uniqueKeys.forEach(() => updated.push(now))
-            recentCorrectTimesRef.current = updated
-            if (recentCorrectTimesRef.current.length >= 7) {
-              awardAchievement('the-commuter', 'The Commuter', 'Make 7 correct guesses within 7 minutes.')
-            }
           }
         }
       }

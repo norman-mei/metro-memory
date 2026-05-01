@@ -14,7 +14,6 @@ const PASSWORD_RESET_TOKEN_TTL_MS = 1000 * 60 * 60 // 1 hour
 const currentUserSelect = {
   id: true,
   email: true,
-  displayName: true,
   pendingEmail: true,
   passwordHash: true,
   emailVerifiedAt: true,
@@ -26,9 +25,7 @@ const currentUserSelect = {
 
 type CurrentUserRecord = Prisma.UserGetPayload<{
   select: typeof currentUserSelect
-}> & {
-  displayName: string | null
-}
+}>
 
 export function normalizeEmail(email: string) {
   return email.trim().toLowerCase()

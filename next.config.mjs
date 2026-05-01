@@ -55,6 +55,9 @@ const nextConfig = {
       {
         pathname: '/city-cards/**',
       },
+      {
+        pathname: '/api/city-icon/**',
+      },
     ],
   },
   experimental: {

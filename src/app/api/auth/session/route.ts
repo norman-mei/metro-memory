@@ -29,7 +29,6 @@ export async function GET() {
       user: {
         id: user.id,
         email: user.email,
-        displayName: user.displayName ?? null,
         adFree: user.adFree ?? false,
       },
       progressSummaries: summaries,

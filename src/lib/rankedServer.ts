@@ -18,7 +18,6 @@ type RankedCity = {
 }
 
 type PublicUser = {
-  displayName?: string | null
   email?: string | null
 }
 
@@ -84,10 +83,6 @@ export async function ensureDailyChallenge(dateKey = getTodayDateKey()) {
 }
 
 export function buildPublicDisplayName(user: PublicUser) {
-  const explicit = user.displayName?.trim()
-  if (explicit) {
-    return explicit
-  }
   const email = user.email?.trim().toLowerCase()
   if (!email) {
     return 'Metro Player'
@@ -179,7 +174,6 @@ export async function getChallengeLeaderboardRows(params: {
     include: {
       user: {
         select: {
-          displayName: true,
           email: true,
         },
       },

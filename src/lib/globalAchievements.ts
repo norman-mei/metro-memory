@@ -167,14 +167,6 @@ export const GLOBAL_ACHIEVEMENTS: GlobalAchievementDefinition[] = [
     country: 'secret-fun',
   },
   {
-    slug: 'the-commuter',
-    title: 'The Commuter',
-    description: '???',
-    secretDescription: 'Make 7 correct guesses within 7 minutes.',
-    order: 10_102,
-    country: 'secret-fun',
-  },
-  {
     slug: 'the-archivist',
     title: 'The Archivist',
     description: '???',

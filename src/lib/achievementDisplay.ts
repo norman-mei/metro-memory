@@ -127,11 +127,6 @@ const SIMPLIFIED_GLOBAL_COPY: Record<string, AchievementCopy> = {
     description: '???',
     secretDescription: '在任意城市达到 61.8% 完成度。',
   },
-  'the-commuter': {
-    title: '通勤者',
-    description: '???',
-    secretDescription: '在 7 分钟内猜对 7 站。',
-  },
   'the-archivist': {
     title: '档案管理员',
     description: '???',
@@ -248,11 +243,6 @@ const TRADITIONAL_GLOBAL_COPY: Record<string, AchievementCopy> = {
     title: '黃金分割',
     description: '???',
     secretDescription: '在任意城市達到 61.8% 完成度。',
-  },
-  'the-commuter': {
-    title: '通勤者',
-    description: '???',
-    secretDescription: '在 7 分鐘內猜對 7 站。',
   },
   'the-archivist': {
     title: '檔案管理員',

@@ -103,16 +103,21 @@ export default function AccountDashboard({ showHeading = true }: { showHeading?:
   const tr = useCallback(
     (key: string, fallback: string) => {
       const value = t(key)
-      return typeof value === 'string' && value !== key ? value : fallback
+      return typeof value === 'string' && value.trim().length > 0 && value !== key
+        ? value
+        : fallback
     },
     [t],
   )
   const searchParams = useSearchParams()
   const verifiedState = searchParams.get('verified')
+  const resetTokenFromSearch = searchParams.get('resetToken')?.trim() ?? ''
   const authDebugEnabled = shouldDebugAuth(searchParams)
+  const [dismissResetToken, setDismissResetToken] = useState(false)
+  const resetToken = dismissResetToken ? '' : resetTokenFromSearch
 
   const { user, loading, refresh, progressSummaries, logoutLocally } = useAuth()
-  const [isCreatingAccount, setIsCreatingAccount] = useState(false)
+  const [authMode, setAuthMode] = useState<'login' | 'signup' | 'forgot-password'>('login')
   const [signupForm, setSignupForm] = useState<SignupFormState>(initialSignup)
   const [signupErrors, setSignupErrors] = useState<SignupFormErrors>({})
   const [signupStatus, setSignupStatus] = useState<'idle' | 'submitting' | 'success'>('idle')
@@ -125,6 +130,24 @@ export default function AccountDashboard({ showHeading = true }: { showHeading?:
   const [loginStatus, setLoginStatus] = useState<'idle' | 'submitting' | 'success'>('idle')
   const [loginError, setLoginError] = useState<string | null>(null)
   const [showLoginPassword, setShowLoginPassword] = useState(false)
+  const [loginResendStatus, setLoginResendStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle')
+  const [loginResendMessage, setLoginResendMessage] = useState<string | null>(null)
+  const [forgotPasswordEmail, setForgotPasswordEmail] = useState('')
+  const [forgotPasswordStatus, setForgotPasswordStatus] = useState<
+    'idle' | 'sending' | 'sent' | 'error'
+  >('idle')
+  const [forgotPasswordMessage, setForgotPasswordMessage] = useState<string | null>(null)
+  const [resetPasswordForm, setResetPasswordForm] = useState({
+    password: '',
+    confirmPassword: '',
+  })
+  const [resetPasswordStatus, setResetPasswordStatus] = useState<
+    'idle' | 'submitting' | 'success'
+  >('idle')
+  const [resetPasswordMessage, setResetPasswordMessage] = useState<string | null>(null)
+  const [resetPasswordError, setResetPasswordError] = useState<string | null>(null)
+  const [showResetPassword, setShowResetPassword] = useState(false)
+  const [showResetConfirmPassword, setShowResetConfirmPassword] = useState(false)
   const [emailForm, setEmailForm] = useState<{ newEmail: string; currentPassword: string }>({
     newEmail: '',
     currentPassword: '',
@@ -132,10 +155,6 @@ export default function AccountDashboard({ showHeading = true }: { showHeading?:
   const [emailStatus, setEmailStatus] = useState<'idle' | 'submitting' | 'success'>('idle')
   const [emailMessage, setEmailMessage] = useState<string | null>(null)
   const [emailError, setEmailError] = useState<string | null>(null)
-  const [displayNameForm, setDisplayNameForm] = useState('')
-  const [displayNameStatus, setDisplayNameStatus] = useState<'idle' | 'submitting' | 'success'>('idle')
-  const [displayNameMessage, setDisplayNameMessage] = useState<string | null>(null)
-  const [displayNameError, setDisplayNameError] = useState<string | null>(null)
   const [passwordForm, setPasswordForm] = useState<{
     currentPassword: string
     newPassword: string
@@ -172,8 +191,10 @@ export default function AccountDashboard({ showHeading = true }: { showHeading?:
   }, [syncedOpenStored])
 
   useEffect(() => {
-    setDisplayNameForm(user?.displayName ?? '')
-  }, [user?.displayName])
+    if (resetTokenFromSearch) {
+      setDismissResetToken(false)
+    }
+  }, [resetTokenFromSearch])
 
   useEffect(() => {
     if (verifiedState === 'success') {
@@ -196,6 +217,22 @@ export default function AccountDashboard({ showHeading = true }: { showHeading?:
     [signupForm.password, t],
   )
 
+  const resetPasswordChecklist = useMemo(
+    () => [
+      { label: t('accountPasswordRuleLength'), met: resetPasswordForm.password.length >= 8 },
+      { label: t('accountPasswordRuleUpper'), met: /[A-Z]/.test(resetPasswordForm.password) },
+      { label: t('accountPasswordRuleLower'), met: /[a-z]/.test(resetPasswordForm.password) },
+      {
+        label: t('accountPasswordRuleSpecial'),
+        met: /[^A-Za-z0-9]/.test(resetPasswordForm.password),
+      },
+    ],
+    [resetPasswordForm.password, t],
+  )
+
+  const loginNeedsVerification =
+    typeof loginError === 'string' && loginError.toLowerCase().includes('verify your email')
+
   const handleSignupChange =
     (field: keyof SignupFormState) => (event: ChangeEvent<HTMLInputElement>) => {
       setSignupForm((prev) => ({ ...prev, [field]: event.target.value }))
@@ -205,11 +242,28 @@ export default function AccountDashboard({ showHeading = true }: { showHeading?:
 
   const handleLoginChange =
     (field: keyof LoginFormState) => (event: ChangeEvent<HTMLInputElement>) => {
+      const nextValue =
+        field === 'rememberMe' ? event.target.checked : event.target.value
       setLoginForm((prev) => ({
         ...prev,
-        [field]: field === 'rememberMe' ? event.target.checked : event.target.value,
+        [field]: nextValue,
       }))
+      if (field === 'email') {
+        setForgotPasswordEmail(String(nextValue))
+      }
       setLoginError(null)
+      setLoginResendStatus('idle')
+      setLoginResendMessage(null)
+      setForgotPasswordStatus('idle')
+      setForgotPasswordMessage(null)
+    }
+
+  const handleResetPasswordFieldChange =
+    (field: keyof typeof resetPasswordForm) =>
+    (event: ChangeEvent<HTMLInputElement>) => {
+      setResetPasswordForm((prev) => ({ ...prev, [field]: event.target.value }))
+      setResetPasswordError(null)
+      setResetPasswordMessage(null)
     }
 
   const validateSignup = (): SignupFormErrors => {
@@ -324,44 +378,68 @@ export default function AccountDashboard({ showHeading = true }: { showHeading?:
     }
   }
 
-  const handleResendVerification = async () => {
-    if (!signupForm.email.trim()) {
-      setResendStatus('error')
-      setResendMessage(t('accountResendNeedEmail'))
+  const resendVerificationEmail = async (
+    targetEmail: string,
+    options?: {
+      setStatus: (status: 'idle' | 'sending' | 'sent' | 'error') => void
+      setMessage: (message: string | null) => void
+    },
+  ) => {
+    const setStatus = options?.setStatus ?? setResendStatus
+    const setMessage = options?.setMessage ?? setResendMessage
+
+    if (!targetEmail.trim()) {
+      setStatus('error')
+      setMessage(t('accountResendNeedEmail'))
       return
     }
 
-    setResendStatus('sending')
-    setResendMessage(null)
+    setStatus('sending')
+    setMessage(null)
 
     try {
       const response = await fetch('/api/auth/resend-verification', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email: signupForm.email }),
+        body: JSON.stringify({ email: targetEmail }),
       })
 
       const payload = await response.json().catch(() => ({}))
 
       if (!response.ok) {
-        setResendStatus('error')
-        setResendMessage(payload?.error ?? t('accountResendError'))
+        setStatus('error')
+        setMessage(payload?.error ?? t('accountResendError'))
         return
       }
 
-      setResendStatus('sent')
-      setResendMessage(payload?.message ?? t('accountResendSuccess'))
+      setStatus('sent')
+      setMessage(payload?.message ?? t('accountResendSuccess'))
     } catch (error) {
       console.error(error)
-      setResendStatus('error')
-      setResendMessage(t('accountNetworkError'))
+      setStatus('error')
+      setMessage(t('accountNetworkError'))
     }
+  }
+
+  const handleResendVerification = async () => {
+    await resendVerificationEmail(signupForm.email)
+  }
+
+  const handleLoginResendVerification = async () => {
+    await resendVerificationEmail(loginForm.email, {
+      setStatus: setLoginResendStatus,
+      setMessage: setLoginResendMessage,
+    })
   }
 
   const handleLogin = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault()
     setLoginStatus('submitting')
     setLoginError(null)
+    setLoginResendStatus('idle')
+    setLoginResendMessage(null)
+    setForgotPasswordStatus('idle')
+    setForgotPasswordMessage(null)
 
     try {
       const response = await fetch('/api/auth/login', {
@@ -385,6 +463,137 @@ export default function AccountDashboard({ showHeading = true }: { showHeading?:
       console.error(error)
       setLoginError(t('accountNetworkError'))
       setLoginStatus('idle')
+    }
+  }
+
+  const handleResetPassword = async (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault()
+    if (!resetToken) {
+      setResetPasswordError(
+        tr(
+          'accountResetPasswordMissingToken',
+          'This reset link is missing or invalid. Request a new password reset email.',
+        ),
+      )
+      return
+    }
+
+    setResetPasswordStatus('submitting')
+    setResetPasswordError(null)
+    setResetPasswordMessage(null)
+
+    if (resetPasswordForm.password !== resetPasswordForm.confirmPassword) {
+      setResetPasswordStatus('idle')
+      setResetPasswordError(t('accountPasswordMismatch'))
+      return
+    }
+
+    if (
+      resetPasswordForm.password.length < 8 ||
+      !/[A-Z]/.test(resetPasswordForm.password) ||
+      !/[a-z]/.test(resetPasswordForm.password) ||
+      !/[^A-Za-z0-9]/.test(resetPasswordForm.password)
+    ) {
+      setResetPasswordStatus('idle')
+      setResetPasswordError(t('accountPasswordRequirementError'))
+      return
+    }
+
+    try {
+      const response = await fetch(
+        `/api/auth/reset-password?token=${encodeURIComponent(resetToken)}`,
+        {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(resetPasswordForm),
+        },
+      )
+
+      const payload = await response.json().catch(() => ({}))
+      if (!response.ok) {
+        setResetPasswordStatus('idle')
+        setResetPasswordError(
+          payload?.error ??
+            tr('accountResetPasswordError', 'Unable to reset your password. Please try again.'),
+        )
+        return
+      }
+
+      setResetPasswordStatus('success')
+      setResetPasswordMessage(
+        payload?.message ??
+          tr(
+            'accountResetPasswordSuccess',
+            'Password reset successfully. You can now sign in with your new password.',
+          ),
+      )
+      setResetPasswordForm({ password: '', confirmPassword: '' })
+    } catch (error) {
+      console.error(error)
+      setResetPasswordStatus('idle')
+      setResetPasswordError(t('accountNetworkError'))
+    }
+  }
+
+  const handleForgotPasswordEmailChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setForgotPasswordEmail(event.target.value)
+    setForgotPasswordStatus('idle')
+    setForgotPasswordMessage(null)
+  }
+
+  const handleForgotPasswordOpen = () => {
+    setAuthMode('forgot-password')
+    setForgotPasswordStatus('idle')
+    setForgotPasswordMessage(null)
+    setForgotPasswordEmail((prev) => prev || loginForm.email)
+  }
+
+  const handleForgotPassword = async (event?: FormEvent<HTMLFormElement>) => {
+    event?.preventDefault()
+
+    if (!forgotPasswordEmail.trim()) {
+      setForgotPasswordStatus('error')
+      setForgotPasswordMessage(
+        tr('accountForgotPasswordNeedEmail', 'Enter your email above to receive a reset link.'),
+      )
+      return
+    }
+
+    setForgotPasswordStatus('sending')
+    setForgotPasswordMessage(null)
+
+    try {
+      const response = await fetch('/api/auth/forgot-password', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: forgotPasswordEmail }),
+      })
+
+      const payload = await response.json().catch(() => ({}))
+      if (!response.ok) {
+        setForgotPasswordStatus('error')
+        setForgotPasswordMessage(
+          payload?.error ??
+            tr(
+              'accountForgotPasswordError',
+              'Unable to send the password reset email right now. Please try again.',
+            ),
+        )
+        return
+      }
+
+      setForgotPasswordStatus('sent')
+      setForgotPasswordMessage(
+        payload?.message ??
+          tr(
+            'accountForgotPasswordSent',
+            'If that account exists, a password reset link has been sent to your email.',
+          ),
+      )
+    } catch (error) {
+      console.error(error)
+      setForgotPasswordStatus('error')
+      setForgotPasswordMessage(t('accountNetworkError'))
     }
   }
 
@@ -544,38 +753,6 @@ export default function AccountDashboard({ showHeading = true }: { showHeading?:
     }
   }
 
-  const handleUpdateDisplayName = async (event: FormEvent<HTMLFormElement>) => {
-    event.preventDefault()
-    setDisplayNameStatus('submitting')
-    setDisplayNameMessage(null)
-    setDisplayNameError(null)
-
-    try {
-      const response = await fetch('/api/user/profile', {
-        method: 'PATCH',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ displayName: displayNameForm }),
-      })
-      const payload = await response.json().catch(() => ({}))
-      if (!response.ok) {
-        setDisplayNameStatus('idle')
-        setDisplayNameError(
-          payload?.error ?? tr('accountProfileNameUpdateError', 'Unable to update profile name.'),
-        )
-        return
-      }
-      setDisplayNameStatus('success')
-      setDisplayNameMessage(tr('accountProfileNameUpdated', 'Profile name updated.'))
-      await refresh()
-    } catch (error) {
-      if (process.env.NODE_ENV !== 'production') {
-        console.error(error)
-      }
-      setDisplayNameStatus('idle')
-      setDisplayNameError(tr('accountProfileNameUpdateError', 'Unable to update profile name.'))
-    }
-  }
-
   const handleChangePassword = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault()
     setPasswordStatus('submitting')
@@ -703,13 +880,6 @@ export default function AccountDashboard({ showHeading = true }: { showHeading?:
               <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50">
                 {t('accountLoggedInAs', { email: user.email })}
               </h2>
-              <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">
-                {tr('accountPublicProfileName', 'Public profile name:')}{' '}
-                <span className="font-semibold text-zinc-900 dark:text-zinc-100">
-                  {user.displayName?.trim() ||
-                    tr('accountAutoGeneratedName', 'Auto-generated from your email')}
-                </span>
-              </p>
             </div>
             <button
               onClick={handleLogout}
@@ -719,55 +889,6 @@ export default function AccountDashboard({ showHeading = true }: { showHeading?:
               {t('accountLogout')}
             </button>
           </div>
-          <form
-            className="rounded-2xl border border-zinc-200 bg-zinc-50 p-4 dark:border-zinc-800 dark:bg-zinc-900/40"
-            onSubmit={handleUpdateDisplayName}
-          >
-            <div className="space-y-1">
-              <h3 className="text-sm font-semibold uppercase tracking-wide text-zinc-600 dark:text-zinc-400">
-                {tr('accountProfileSection', 'Profile')}
-              </h3>
-              <p className="text-sm text-zinc-500 dark:text-zinc-400">
-                {tr(
-                  'accountProfileSectionDesc',
-                  'This name appears anywhere your profile is shown in the app.',
-                )}
-              </p>
-            </div>
-            <div className="mt-3 flex flex-col gap-3 md:flex-row md:items-end">
-              <FormField
-                id="display-name"
-                label={tr('accountProfileNameLabel', 'Profile name')}
-                type="text"
-                value={displayNameForm}
-                onChange={(event) => {
-                  setDisplayNameForm(event.target.value)
-                  setDisplayNameError(null)
-                  setDisplayNameMessage(null)
-                }}
-                inputClassName="h-12"
-              />
-              <button
-                type="submit"
-                disabled={displayNameStatus === 'submitting'}
-                className="inline-flex h-12 items-center justify-center rounded-full bg-zinc-900 px-4 py-2 text-sm font-semibold text-white transition hover:bg-zinc-800 focus:outline-none focus:ring-2 focus:ring-[var(--accent-ring)] disabled:cursor-not-allowed disabled:opacity-60 dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-zinc-200"
-              >
-                {displayNameStatus === 'submitting'
-                  ? tr('accountProfileNameSaving', 'Saving...')
-                  : tr('accountProfileNameSave', 'Save profile name')}
-              </button>
-            </div>
-            {displayNameMessage && (
-              <p className="mt-3 text-sm font-semibold text-emerald-600 dark:text-emerald-400">
-                {displayNameMessage}
-              </p>
-            )}
-            {displayNameError && (
-              <p className="mt-3 text-sm font-semibold text-rose-600 dark:text-rose-400">
-                {displayNameError}
-              </p>
-            )}
-          </form>
           <div className="rounded-2xl border border-zinc-200 bg-zinc-50 p-4 dark:border-zinc-800 dark:bg-zinc-900/40">
             <button
               type="button"
@@ -999,7 +1120,104 @@ export default function AccountDashboard({ showHeading = true }: { showHeading?:
         </section>
       ) : (
         <div className="grid gap-8 lg:grid-cols-[1fr] max-w-lg mx-auto">
-          {isCreatingAccount ? (
+          {resetToken ? (
+            <section
+              className="rounded-2xl border border-zinc-200 bg-transparent p-6 shadow-none dark:border-zinc-800 dark:bg-transparent"
+              data-testid="account-reset-password-panel"
+            >
+              <div className="space-y-2">
+                <h2 className="text-lg font-semibold text-zinc-900 dark:text-zinc-50">
+                  {tr('accountResetPasswordTitle', 'Reset your password')}
+                </h2>
+                <p className="text-sm text-zinc-600 dark:text-zinc-400">
+                  {tr(
+                    'accountResetPasswordDesc',
+                    'Enter a new password for your account. This link came from the email we sent you.',
+                  )}
+                </p>
+              </div>
+              <form
+                className="mt-4 space-y-4"
+                onSubmit={handleResetPassword}
+                data-testid="account-reset-password-form"
+              >
+                <div className="grid gap-4 md:grid-cols-2">
+                  <PasswordField
+                    id="reset-password"
+                    label={t('accountPassword')}
+                    value={resetPasswordForm.password}
+                    onChange={handleResetPasswordFieldChange('password')}
+                    error={resetPasswordError ?? undefined}
+                    show={showResetPassword}
+                    onToggle={() => setShowResetPassword((prev) => !prev)}
+                    autoComplete="new-password"
+                  />
+                  <PasswordField
+                    id="reset-confirm-password"
+                    label={t('accountConfirmPassword')}
+                    value={resetPasswordForm.confirmPassword}
+                    onChange={handleResetPasswordFieldChange('confirmPassword')}
+                    error={resetPasswordError ?? undefined}
+                    show={showResetConfirmPassword}
+                    onToggle={() => setShowResetConfirmPassword((prev) => !prev)}
+                    autoComplete="new-password"
+                  />
+                </div>
+
+                <div className="rounded-2xl border border-zinc-200 p-4 text-sm text-zinc-600 dark:border-zinc-800 dark:text-zinc-300">
+                  <p className="font-semibold text-zinc-900 dark:text-white">
+                    {t('accountPasswordRequirements')}
+                  </p>
+                  <ul className="mt-3 space-y-2">
+                    {resetPasswordChecklist.map((rule) => (
+                      <li key={rule.label} className="flex items-center gap-2">
+                        <span
+                          className={`inline-flex h-2.5 w-2.5 rounded-full ${
+                            rule.met ? 'bg-[var(--accent-500)]' : 'bg-zinc-300 dark:bg-zinc-600'
+                          }`}
+                        />
+                        {rule.label}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {resetPasswordMessage && (
+                  <div className="rounded-2xl border border-emerald-200 bg-emerald-50 p-3 text-sm text-emerald-800 dark:border-emerald-500 dark:bg-emerald-500/10 dark:text-emerald-100">
+                    {resetPasswordMessage}
+                  </div>
+                )}
+                {resetPasswordError && (
+                  <div className="rounded-2xl border border-rose-200 bg-rose-50 p-3 text-sm text-rose-800 dark:border-rose-500 dark:bg-rose-500/10 dark:text-rose-200">
+                    {resetPasswordError}
+                  </div>
+                )}
+
+                <button
+                  type="submit"
+                  disabled={resetPasswordStatus === 'submitting' || resetPasswordStatus === 'success'}
+                  data-testid="account-reset-password-submit"
+                  className="inline-flex w-full items-center justify-center rounded-full bg-[var(--accent-600)] px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-[var(--accent-600)]/30 transition hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-60 dark:bg-[var(--accent-500)] dark:shadow-[var(--accent-500)]/30"
+                >
+                  {resetPasswordStatus === 'submitting'
+                    ? tr('accountResetPasswordSubmitting', 'Resetting password...')
+                    : resetPasswordStatus === 'success'
+                      ? tr('accountResetPasswordDone', 'Password reset')
+                      : tr('accountResetPasswordButton', 'Reset password')}
+                </button>
+              </form>
+              <div className="mt-6 text-center">
+                <button
+                  type="button"
+                  onClick={() => setDismissResetToken(true)}
+                  data-testid="account-reset-password-back"
+                  className="text-sm font-medium text-[var(--accent-600)] hover:underline dark:text-[var(--accent-400)]"
+                >
+                  {tr('accountResetPasswordBackToLogin', 'Back to sign in')}
+                </button>
+              </div>
+            </section>
+          ) : authMode === 'signup' ? (
             <section
               className="rounded-2xl border border-zinc-200 bg-transparent p-6 shadow-none dark:border-zinc-800 dark:bg-transparent"
               data-testid="account-create-panel"
@@ -1126,11 +1344,73 @@ export default function AccountDashboard({ showHeading = true }: { showHeading?:
                <div className="mt-6 text-center">
                 <button
                   type="button"
-                  onClick={() => setIsCreatingAccount(false)}
+                  onClick={() => setAuthMode('login')}
                   data-testid="account-switch-login"
                   className="text-sm font-medium text-[var(--accent-600)] hover:underline dark:text-[var(--accent-400)]"
                 >
                   {tr('accountSwitchToLogin', 'Already have an account? Sign in')}
+                </button>
+              </div>
+            </section>
+          ) : authMode === 'forgot-password' ? (
+            <section
+              className="rounded-2xl border border-zinc-200 bg-transparent p-6 shadow-none dark:border-zinc-800 dark:bg-transparent"
+              data-testid="account-forgot-password-panel"
+            >
+              <div className="space-y-2">
+                <h2 className="text-lg font-semibold text-zinc-900 dark:text-zinc-50">
+                  {tr('accountForgotPasswordTitle', 'Forgot your password?')}
+                </h2>
+                <p className="text-sm text-zinc-600 dark:text-zinc-400">
+                  {tr(
+                    'accountForgotPasswordPrompt',
+                    'Enter your email and we will send you a password reset link.',
+                  )}
+                </p>
+              </div>
+              <form
+                className="mt-4 space-y-4"
+                onSubmit={handleForgotPassword}
+                data-testid="account-forgot-password-form"
+              >
+                <FormField
+                  id="forgot-password-email"
+                  label={t('accountEmail')}
+                  type="email"
+                  value={forgotPasswordEmail}
+                  onChange={handleForgotPasswordEmailChange}
+                  autoComplete="email"
+                  required
+                />
+                <button
+                  type="submit"
+                  disabled={forgotPasswordStatus === 'sending'}
+                  className="inline-flex w-full items-center justify-center rounded-full bg-[var(--accent-600)] px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-[var(--accent-600)]/30 transition hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-60 dark:bg-[var(--accent-500)] dark:shadow-[var(--accent-500)]/30"
+                >
+                  {forgotPasswordStatus === 'sending'
+                    ? tr('accountForgotPasswordSending', 'Sending reset link...')
+                    : tr('accountForgotPasswordSendButton', 'Send reset link')}
+                </button>
+              </form>
+              {forgotPasswordMessage && (
+                <div
+                  className={`mt-4 rounded-2xl border p-4 text-sm ${
+                    forgotPasswordStatus === 'error'
+                      ? 'border-rose-200 bg-rose-50 text-rose-800 dark:border-rose-500 dark:bg-rose-500/10 dark:text-rose-200'
+                      : 'border-emerald-200 bg-emerald-50 text-emerald-800 dark:border-emerald-500 dark:bg-emerald-500/10 dark:text-emerald-100'
+                  }`}
+                >
+                  {forgotPasswordMessage}
+                </div>
+              )}
+              <div className="mt-6 text-center">
+                <button
+                  type="button"
+                  onClick={() => setAuthMode('login')}
+                  data-testid="account-forgot-password-back"
+                  className="text-sm font-medium text-[var(--accent-600)] hover:underline dark:text-[var(--accent-400)]"
+                >
+                  {tr('accountResetPasswordBackToLogin', 'Back to sign in')}
                 </button>
               </div>
             </section>
@@ -1178,6 +1458,43 @@ export default function AccountDashboard({ showHeading = true }: { showHeading?:
                 {loginError && (
                   <p className="text-sm text-rose-600 dark:text-rose-300">{loginError}</p>
                 )}
+                {loginNeedsVerification && (
+                  <div className="rounded-2xl border border-amber-200 bg-amber-50 p-4 text-sm text-amber-900 dark:border-amber-500/40 dark:bg-amber-500/10 dark:text-amber-100">
+                    <p className="font-semibold">
+                      {tr('accountLoginVerifyTitle', 'Need to confirm your email?')}
+                    </p>
+                    <p className="mt-1 text-amber-800 dark:text-amber-200">
+                      {tr(
+                        'accountLoginVerifyDesc',
+                        'Use the button below and we will send another verification link to your email.',
+                      )}
+                    </p>
+                    <div className="mt-3 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+                      <button
+                        type="button"
+                        onClick={handleLoginResendVerification}
+                        disabled={loginResendStatus === 'sending'}
+                        data-testid="account-login-resend-verification"
+                        className="inline-flex w-full items-center justify-center rounded-full border border-amber-600 px-4 py-2 text-sm font-semibold text-amber-800 transition hover:-translate-y-0.5 hover:border-amber-500 hover:text-amber-700 dark:text-amber-100 sm:w-auto"
+                      >
+                        {loginResendStatus === 'sending'
+                          ? t('accountResendSending')
+                          : t('accountResendButton')}
+                      </button>
+                      {loginResendMessage && (
+                        <p
+                          className={`text-sm ${
+                            loginResendStatus === 'error'
+                              ? 'text-rose-600 dark:text-rose-300'
+                              : 'text-amber-800 dark:text-amber-100'
+                          }`}
+                        >
+                          {loginResendMessage}
+                        </p>
+                      )}
+                    </div>
+                  </div>
+                )}
                 {loginStatus === 'success' && (
                   <p className="text-sm text-emerald-600 dark:text-emerald-300">
                     {t('accountLoginSuccess')}
@@ -1193,14 +1510,22 @@ export default function AccountDashboard({ showHeading = true }: { showHeading?:
                   {loginStatus === 'submitting' ? t('accountSigningIn') : t('accountLoginButton')}
                 </button>
               </form>
-              <div className="mt-6 text-center">
+              <div className="mt-6 flex flex-col items-center gap-2 text-center">
                 <button
                   type="button"
-                  onClick={() => setIsCreatingAccount(true)}
+                  onClick={() => setAuthMode('signup')}
                   data-testid="account-switch-create"
                   className="text-sm font-medium text-[var(--accent-600)] hover:underline dark:text-[var(--accent-400)]"
                 >
                   {tr('accountSwitchToSignup', "Don't have an account? Create one")}
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setAuthMode('forgot-password')}
+                  data-testid="account-forgot-password"
+                  className="block text-sm font-medium text-[var(--accent-600)] hover:underline disabled:cursor-not-allowed disabled:opacity-60 dark:text-[var(--accent-400)]"
+                >
+                  Forgot your password?
                 </button>
               </div>
             </section>
