@@ -286,14 +286,16 @@
         ]
       },
       "properties": {
-        "name": "Metro Station",
+        "name": "54th St",
         "line": "kenoshaStreetcar",
         "id": 546,
         "alternate_names": [
+          "Metro Station",
           "Kenosha Metra Station",
           "Kenosha Station",
-          "Kenosha"
-        ]
+          "Metra Station"
+        ],
+        "cluster_key": "kenosha-metra-54th-st-complex"
       },
       "id": 546
     },
@@ -452,6 +454,30 @@
         ]
       },
       "id": 555
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.8260462135351,
+          42.58596574466975
+        ]
+      },
+      "properties": {
+        "name": "Kenosha, WI",
+        "line": "Metra_UPN",
+        "id": 557,
+        "alternate_names": [
+          "Kenosha",
+          "Kenosha Metra Station",
+          "Metro Station",
+          "Metra Station",
+          "Kenosha Station"
+        ],
+        "cluster_key": "kenosha-metra-54th-st-complex"
+      },
+      "id": 557
     },
     {
       "type": "Feature",
@@ -4491,8 +4517,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -87.51655196823756,
-          41.63106074045832
+          -87.5215593,
+          41.6313162
         ]
       },
       "properties": {
@@ -7772,8 +7798,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -87.51655196823756,
-          41.63106074045832
+          -87.5214414,
+          41.6314986
         ]
       },
       "properties": {
@@ -8262,7 +8288,7 @@
     }
   ],
   "properties": {
-    "totalStations": 500,
+    "totalStations": 501,
     "stationsPerLine": {
       "CTAMetroBlueLine": 34,
       "CTAMetroBrownLine": 27,
@@ -8274,7 +8300,7 @@
       "CTAMetroYellowLine": 3,
       "ChicagoATS": 5,
       "kenoshaStreetcar": 17,
-      "Metra_UPN": 27,
+      "Metra_UPN": 28,
       "Metra_BNSF": 26,
       "Metra_ME": 32,
       "Metra_ME_SC": 9,

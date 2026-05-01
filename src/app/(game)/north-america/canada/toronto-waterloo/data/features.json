@@ -7786,6 +7786,10 @@
       "properties": {
         "id": 553,
         "name": "Mt. Stephen St",
+        "alternate_names": [
+          "Mountstephen",
+          "Broadview"
+        ],
         "line": "TTC504",
         "order": 42
       }
@@ -7802,10 +7806,13 @@
       },
       "properties": {
         "id": 554,
-        "name": "Gerrad St",
+        "name": "Gerrard St",
         "line": "TTC504",
         "order": 43,
-        "cluster_key": "gerrard-504-506-complex"
+        "cluster_key": "gerrard-504-506-complex",
+        "alternate_names": [
+          "Gerrad St"
+        ]
       }
     },
     {
@@ -8585,6 +8592,10 @@
       "properties": {
         "id": 599,
         "name": "Mt. Stephen St",
+        "alternate_names": [
+          "Mountstephen",
+          "Broadview"
+        ],
         "line": "TTC505",
         "order": 37
       }
@@ -8601,9 +8612,12 @@
       },
       "properties": {
         "id": 600,
-        "name": "Gerrad St",
+        "name": "Gerrard St",
         "line": "TTC505",
-        "order": 38
+        "order": 38,
+        "alternate_names": [
+          "Gerrad St"
+        ]
       }
     },
     {
@@ -12207,9 +12221,12 @@
       "id": 804,
       "properties": {
         "id": 804,
-        "name": "Gerrad St East",
+        "name": "Gerrard St East",
         "line": "TTC506",
-        "order": 32
+        "order": 32,
+        "alternate_names": [
+          "Gerrad St East"
+        ]
       },
       "geometry": {
         "type": "Point",
@@ -12509,10 +12526,11 @@
       "id": 821,
       "properties": {
         "id": 821,
-        "name": "Lower Gerrad St/Coxwell Av",
+        "name": "Lower Gerrard St/Coxwell Av",
         "line": "TTC506",
         "order": 49,
         "alternate_names": [
+          "Lower Gerrard St",
           "Lower Gerrad St",
           "Coxwell Av"
         ]

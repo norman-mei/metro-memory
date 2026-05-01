@@ -38,6 +38,7 @@ import { formatLocalizedCityName } from '@/lib/cityNameDisplay'
 import { getCityStationAliases } from '@/lib/cityStationAliases'
 import { getKeystrokeFromEvent } from '@/lib/keyboardUtils'
 import { rememberLastPlayedCity } from '@/lib/lastPlayedCities'
+import { generateOrdinalNumberAlternates } from '@/lib/normalizeStationString'
 import {
     featureMatchesManualComplexSelector,
     repairManualComplexGroups,
@@ -1781,6 +1782,12 @@ function GamePageContent({
       const generatedAlternates = generateAlternateNames(originalName)
       const cityConfiguredAlternates = cityStationAliases[originalName] ?? []
       const streetSuffixAlternates = generateStreetSuffixAlternates(originalName)
+      const ordinalAlternates = [
+        originalName,
+        ...existingAlternates,
+        ...cityConfiguredAlternates,
+        ...generatedAlternates,
+      ].flatMap((value) => generateOrdinalNumberAlternates(value))
       const cityConfiguredAlternateKeys = new Set(
         cityConfiguredAlternates.map((alternate) => normalizeString(alternate)),
       )
@@ -1806,13 +1813,14 @@ function GamePageContent({
 
       const mergedAlternates = Array.from(
         new Set([
-          ...existingAlternates,
-          ...cityConfiguredAlternates,
-          ...hyphenSegmentAlternates,
-          ...streetSuffixAlternates,
-          ...generatedAlternates.filter(
-            (alt) => typeof alt === 'string' && alt.trim().length > 0,
-          ),
+            ...existingAlternates,
+            ...cityConfiguredAlternates,
+            ...hyphenSegmentAlternates,
+            ...streetSuffixAlternates,
+            ...ordinalAlternates,
+            ...generatedAlternates.filter(
+              (alt) => typeof alt === 'string' && alt.trim().length > 0,
+            ),
           ...stationlessAliasSource.flatMap((value) =>
             generateStationlessAlternates(value),
           ),

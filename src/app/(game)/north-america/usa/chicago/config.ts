@@ -153,6 +153,9 @@ export const LINES_WITH_OVERRIDES: { [name: string]: Line } = {
     ...LINES.NICTD_SSL,
     name: 'Lakeshore Corridor',
     icon: 'north-america/usa/chicago/LakeshoreCorridor.png',
+    color: '#F5881C',
+    backgroundColor: '#F5881C',
+    progressOutlineColor: '#F5881C',
     badgeFit: 'contain',
   },
   NICTD_MCL: {

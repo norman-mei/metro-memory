@@ -444,6 +444,39 @@
     "order": 18,
     "icon": "north-america/usa/california-state/LAXAPM.png"
   },
+  "DisneylandMonorail": {
+    "name": "Disneyland Monorail",
+    "color": "#33C5E8",
+    "backgroundColor": "#0E7C95",
+    "textColor": "#1F1F1F",
+    "progressOutlineColor": "#33C5E8",
+    "order": 19,
+    "icon": "north-america/usa/california-state/monorail.png",
+    "badgeShape": "circle",
+    "badgeFit": "contain"
+  },
+  "DisneylandRailroad": {
+    "name": "Disneyland Railroad",
+    "color": "#7C2532",
+    "backgroundColor": "#4C1620",
+    "textColor": "#FFFFFF",
+    "progressOutlineColor": "#7C2532",
+    "order": 20,
+    "icon": "north-america/usa/california-state/DisneylandRailroad.png",
+    "badgeShape": "square",
+    "badgeFit": "contain"
+  },
+  "HorseDrawnStreetcar": {
+    "name": "Horse Drawn Streetcar",
+    "color": "#33E84B",
+    "backgroundColor": "#148425",
+    "textColor": "#1F1F1F",
+    "progressOutlineColor": "#33E84B",
+    "order": 21,
+    "icon": "north-america/usa/california-state/MainStreet.png",
+    "badgeShape": "circle",
+    "badgeFit": "contain"
+  },
   "MTSBlue": {
     "name": "Blue",
     "color": "#005CB9",

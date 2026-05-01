@@ -3,7 +3,11 @@ import type { MapboxOptions } from 'mapbox-gl'
 import { Config, Line, LineGroup } from '@/lib/types'
 import linesData from './data/lines.json'
 
-export const LINES = linesData as { [name: string]: Line }
+const ALL_LINES = linesData as { [name: string]: Line }
+const { CAHSR, ...VISIBLE_LINES } = ALL_LINES
+void CAHSR
+
+export const LINES = VISIBLE_LINES
 
 export const LINE_GROUPS: LineGroup[] = [
   {
@@ -118,18 +122,6 @@ export const LINE_GROUPS: LineGroup[] = [
     items: [{ type: 'separator' }],
   },
   {
-    title: 'California High-Speed Rail Authority',
-    items: [
-      {
-        type: 'lines',
-        lines: ['CAHSR'],
-      },
-    ],
-  },
-  {
-    items: [{ type: 'separator' }],
-  },
-  {
     title: 'Los Angeles County Metropolitan Transportation Authority (LA Metro)',
     titleImage: 'LAMetro.png',
     items: [
@@ -183,6 +175,23 @@ export const LINE_GROUPS: LineGroup[] = [
           'Metrolink91PV',
           'MetrolinkIEOC',
           'Arrow',
+        ],
+      },
+    ],
+  },
+  {
+    items: [{ type: 'separator' }],
+  },
+  {
+    title: 'Disneyland',
+    titleImage: 'Disneyland.png',
+    items: [
+      {
+        type: 'lines',
+        lines: [
+          'DisneylandMonorail',
+          'DisneylandRailroad',
+          'HorseDrawnStreetcar',
         ],
       },
     ],

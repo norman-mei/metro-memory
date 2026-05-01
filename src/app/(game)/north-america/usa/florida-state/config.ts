@@ -9,10 +9,12 @@ export const LINES = linesData as { [name: string]: Line }
 export const LINE_GROUPS: LineGroup[] = [
   {
     title: 'Miami-Dade Transit (MDT)',
+    titleImage: 'MDT.png',
     items: [
       {
         type: 'lines',
         title: 'Metrorail',
+        titleImage: 'Metrorail.png',
         lines: ['floridaGR', 'floridaOR'],
       },
       {
@@ -27,20 +29,18 @@ export const LINE_GROUPS: LineGroup[] = [
   },
   {
     title: 'Miami-Dade Aviation Department (MDAD)',
+    titleImage: 'MIA.png',
     items: [
       {
         type: 'lines',
-        title: 'Skytrain',
         lines: ['floridaSKYTRAIN'],
       },
       {
         type: 'lines',
-        title: 'MIA e Train',
         lines: ['floridaMET'],
       },
       {
         type: 'lines',
-        title: 'MIA Mover',
         lines: ['floridaMIA'],
       },
     ],
@@ -50,6 +50,7 @@ export const LINE_GROUPS: LineGroup[] = [
   },
   {
     title: 'South Florida Regional Transportation Authority (SFRTA)',
+    titleImage: 'SFRTA.png',
     items: [
       {
         type: 'lines',
@@ -62,6 +63,7 @@ export const LINE_GROUPS: LineGroup[] = [
   },
   {
     title: 'Brightline',
+    titleImage: 'BrightLine.png',
     items: [
       {
         type: 'lines',
@@ -86,10 +88,11 @@ export const LINE_GROUPS: LineGroup[] = [
   },
   {
     title: 'Disney Transport',
+    titleImage: 'DisneyTransport.png',
     items: [
       {
         type: 'lines',
-        title: 'Disneyland Railroad',
+        title: 'Walt Disney World Railroad',
         lines: ['DisneyDRR'],
       },
       {
@@ -100,6 +103,7 @@ export const LINE_GROUPS: LineGroup[] = [
       {
         type: 'lines',
         title: 'Disney Skyliner',
+        titleImage: 'DisneySkyliner.png',
         lines: ['DisneySKYEPC', 'DisneySKYHS', 'DisneySKYPOP'],
       },
     ],
@@ -109,6 +113,7 @@ export const LINE_GROUPS: LineGroup[] = [
   },
   {
     title: 'Greater Orlando Aviation Authority (GOAA)',
+    titleImage: 'GOAA.png',
     items: [
       {
         type: 'lines',
@@ -127,6 +132,7 @@ export const LINE_GROUPS: LineGroup[] = [
   },
   {
     title: 'Hillsborough County Aviation Authority (HCAA)',
+    titleImage: 'HCAA.png',
     items: [
       {
         type: 'lines',
@@ -145,10 +151,10 @@ export const LINE_GROUPS: LineGroup[] = [
   },
   {
     title: 'Hillsborough Area Regional Transit (HART)',
+    titleImage: 'HART.png',
     items: [
       {
         type: 'lines',
-        title: 'TECO Line Streetcar',
         lines: ['floridaTECO'],
       },
     ],
@@ -158,6 +164,7 @@ export const LINE_GROUPS: LineGroup[] = [
   },
   {
     title: 'Jacksonville Transportation Authority (JTA)',
+    titleImage: 'JTA.png',
     items: [
       {
         type: 'lines',

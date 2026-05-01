@@ -286,6 +286,7 @@ const METRA_LINE_CONTROL_POINTS: Record<string, string[]> = {
     'North Chicago',
     'Waukegan',
     'Winthrop Harbor',
+    'Kenosha, WI',
   ],
   Metra_UPNW: [
     'Ogilvie Transportation Center',
@@ -347,6 +348,7 @@ const METRA_STATION_OVERRIDES: Record<string, string[]> = {
     'Metra_UPNW',
     'Metra_UPW',
   ],
+  'Kenosha, WI': ['Metra_UPN'],
   'LaSalle Street': ['Metra_RI', 'Metra_RI_Bev'],
   'Kensington (115th Street)': ['Metra_ME', 'Metra_ME_BI'],
   Hegewisch: ['Metra_ME_SC'],
@@ -355,6 +357,20 @@ const METRA_STATION_OVERRIDES: Record<string, string[]> = {
 const MANUAL_METRA_STATIONS: Record<string, Coordinate> = {
   'Peterson/Ridge': [-87.6750137146173, 41.99111045534389],
   'Auburn Park': [-87.63963126229456, 41.7500388247871],
+  'Kenosha, WI': [-87.8260462135351, 42.58596574466975],
+}
+
+const STATION_PROPERTY_OVERRIDES: Record<string, Record<string, unknown>> = {
+  'Metra_UPN::Kenosha, WI': {
+    alternate_names: [
+      'Kenosha',
+      'Kenosha Metra Station',
+      'Metro Station',
+      'Metra Station',
+      'Kenosha Station',
+    ],
+    cluster_key: 'kenosha-metra-54th-st-complex',
+  },
 }
 
 const CTA_MANUAL_STATIONS: Array<{
@@ -475,6 +491,11 @@ const NICTD_STATION_COORDINATES: Record<string, Coordinate> = {
   'Munster/Dyer Main Street': [-87.51805783712922, 41.52405243314766],
 }
 
+const LINE_SPECIFIC_STATION_COORDINATES: Record<string, Coordinate> = {
+  'NICTD_MCL::Hammond Gateway': [-87.5215593, 41.6313162],
+  'NICTD_SSL::Hammond Gateway': [-87.5214414, 41.6314986],
+}
+
 const METRA_LINE_NAMES: Record<string, string> = {
   Metra_BNSF: 'BNSF',
   Metra_HC: 'Heritage Corridor',
@@ -555,10 +576,16 @@ const main = async () => {
     })
     .filter((feature: any) => availableLines.has(feature.properties.line))
 
+  const generatedRouteLines = new Set(
+    featuresRoutes
+      .map((feature: any) => feature?.properties?.line)
+      .filter((line: unknown): line is string => typeof line === 'string'),
+  )
+
   const legacyRouteFeatures = (existingRoutes.features || []).filter((feature: any) => {
     const line = feature?.properties?.line
     if (feature?.properties?.supplemental) return true
-    return typeof line === 'string' && !availableLines.has(line)
+    return typeof line === 'string' && !generatedRouteLines.has(line)
   })
 
   let index = 0
@@ -655,6 +682,8 @@ const main = async () => {
     if (typeof order === 'number') {
       properties.order = order
     }
+
+    Object.assign(properties, STATION_PROPERTY_OVERRIDES[key] ?? {})
 
     featuresStations.push({
       type: 'Feature',
@@ -789,7 +818,12 @@ const main = async () => {
     pushFeature(station.line, station.name, station.coordinates, order)
   })
 
-  const getStationCoordinates = (name: string): Coordinate => {
+  const getStationCoordinates = (line: string, name: string): Coordinate => {
+    const lineSpecific = LINE_SPECIFIC_STATION_COORDINATES[`${line}::${name}`]
+    if (lineSpecific) {
+      return lineSpecific
+    }
+
     if (NICTD_STATION_COORDINATES[name]) {
       return NICTD_STATION_COORDINATES[name]
     }
@@ -816,7 +850,7 @@ const main = async () => {
       currentOrder += 1
       lineMaxOrder.set(line, currentOrder)
 
-      const coords = getStationCoordinates(stationName)
+      const coords = getStationCoordinates(line, stationName)
       pushFeature(line, stationName, coords, currentOrder)
     })
   })

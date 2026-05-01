@@ -155,8 +155,8 @@
   },
   "NICTD_SSL": {
     "name": "South Shore Line (SSL)",
-    "color": "#6A1311",
-    "backgroundColor": "#350908",
+    "color": "#F5881C",
+    "backgroundColor": "#F5881C",
     "textColor": "#FFFFFF",
     "order": 22
   },

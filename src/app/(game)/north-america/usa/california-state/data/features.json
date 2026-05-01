@@ -11366,54 +11366,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -119.98644,
-          36.93647
-        ]
-      },
-      "properties": {
-        "line": "CAHSR",
-        "name": "Madera",
-        "id": 706
-      },
-      "id": 706
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -119.793732,
-          36.733074
-        ]
-      },
-      "properties": {
-        "line": "CAHSR",
-        "name": "Fresno",
-        "id": 707
-      },
-      "id": 707
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -119.592321,
-          36.335141
-        ]
-      },
-      "properties": {
-        "line": "CAHSR",
-        "name": "Kings-Tulare Regional",
-        "id": 708
-      },
-      "id": 708
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -118.2559563,
           34.0270236
         ]
@@ -17461,6 +17413,144 @@
         "id": 1075
       },
       "id": 1075
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -117.924528,
+          33.8094021
+        ]
+      },
+      "properties": {
+        "name": "Downtown Disney",
+        "line": "DisneylandMonorail",
+        "order": 0,
+        "id": 1076
+      },
+      "id": 1076
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -117.916671,
+          33.812807
+        ]
+      },
+      "properties": {
+        "name": "Tomorrowland",
+        "line": "DisneylandMonorail",
+        "order": 1,
+        "id": 1077
+      },
+      "id": 1077
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -117.918956,
+          33.8099111
+        ]
+      },
+      "properties": {
+        "name": "Main Street",
+        "line": "DisneylandRailroad",
+        "order": 0,
+        "cluster_key": "disneyland-main-street-town-square-complex",
+        "id": 1078
+      },
+      "id": 1078
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -117.918536,
+          33.8148454
+        ]
+      },
+      "properties": {
+        "name": "Mickey's Toontown Depot",
+        "line": "DisneylandRailroad",
+        "order": 1,
+        "id": 1079
+      },
+      "id": 1079
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -117.915798,
+          33.8124524
+        ]
+      },
+      "properties": {
+        "name": "Tomorrowland",
+        "line": "DisneylandRailroad",
+        "order": 2,
+        "id": 1080
+      },
+      "id": 1080
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -117.921932,
+          33.8112026
+        ]
+      },
+      "properties": {
+        "name": "New Orleans Square",
+        "line": "DisneylandRailroad",
+        "order": 3,
+        "id": 1081
+      },
+      "id": 1081
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -117.918957,
+          33.8102024
+        ]
+      },
+      "properties": {
+        "name": "Town Square",
+        "line": "HorseDrawnStreetcar",
+        "order": 0,
+        "cluster_key": "disneyland-main-street-town-square-complex",
+        "id": 1082
+      },
+      "id": 1082
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -117.9189588,
+          33.8122937
+        ]
+      },
+      "properties": {
+        "name": "The Hub",
+        "line": "HorseDrawnStreetcar",
+        "order": 1,
+        "id": 1083
+      },
+      "id": 1083
     }
   ]
 }

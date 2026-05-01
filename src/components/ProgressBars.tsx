@@ -104,23 +104,25 @@ const GroupHeading = ({
     return null
   }
 
-  const imageBoxClass = compact ? 'h-8 w-8 rounded-lg' : 'h-10 w-10 rounded-xl'
-  const imageMaxClass = compact ? 'max-h-6 max-w-6' : 'max-h-8 max-w-8'
+  const imageBoxClass = compact
+    ? 'h-8 min-w-8 max-w-[7.5rem] rounded-lg px-2'
+    : 'h-10 min-w-10 max-w-[9rem] rounded-xl px-2.5'
+  const imageMaxClass = compact ? 'max-h-6 max-w-[5.5rem]' : 'max-h-8 max-w-[7rem]'
 
   if (image) {
     return (
       <div className={clsx('flex items-center gap-3', compact ? 'pt-1' : '')}>
         <div
           className={clsx(
-            'flex shrink-0 items-center justify-center border border-zinc-200 bg-white p-1 dark:border-[#18181b] dark:bg-zinc-900/70',
+            'flex shrink-0 items-center justify-center border border-zinc-200 bg-white dark:border-[#18181b] dark:bg-zinc-900/70',
             imageBoxClass,
           )}
         >
           <Image
             src={resolveGroupImageSrc(image, iconBasePath)}
             alt={title ?? ''}
-            width={48}
-            height={48}
+            width={160}
+            height={64}
             className={clsx('h-auto w-auto object-contain', imageMaxClass)}
           />
         </div>
