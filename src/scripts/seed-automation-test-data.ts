@@ -14,10 +14,16 @@ import { resolve } from 'node:path'
 // Load environment variables from .env.local (Next.js doesn't load them for standalone scripts)
 config({ path: resolve(process.cwd(), '.env.local') })
 
-import { PrismaClient } from '@prisma/client'
+import { Prisma, PrismaClient } from '@prisma/client'
 import { createHash } from 'node:crypto'
 
 const prisma = new PrismaClient()
+
+function toNullableJson(
+  value: Prisma.InputJsonValue | Record<string, unknown> | null | undefined,
+): Prisma.InputJsonValue | Prisma.NullableJsonNullValueInput {
+  return (value as Prisma.InputJsonValue | null | undefined) ?? Prisma.DbNull
+}
 
 function hashExcerpt(text: string) {
   return createHash('sha256').update(text).digest('hex')
@@ -90,9 +96,9 @@ async function main() {
     officialEvidenceCount: number
     gtfsEvidenceCount: number
     policyReason: string
-    diff?: Record<string, unknown>
-    beforeValue?: Record<string, unknown>
-    afterValue?: Record<string, unknown>
+    diff?: Record<string, unknown> | null
+    beforeValue?: Record<string, unknown> | null
+    afterValue?: Record<string, unknown> | null
     sources?: Array<{ sourceType: string; label: string; url: string; snippet?: string }>
     missingEvidence?: string[]
     nextBestAction?: string
@@ -119,9 +125,9 @@ async function main() {
         title: opts.title,
         summary: opts.summary,
         confidence: opts.confidence,
-        diff: opts.diff || null,
-        beforeValue: opts.beforeValue || null,
-        afterValue: opts.afterValue || null,
+        diff: toNullableJson(opts.diff),
+        beforeValue: toNullableJson(opts.beforeValue),
+        afterValue: toNullableJson(opts.afterValue),
         metadata: {
           ...(opts.bootstrapKind ? { bootstrapKind: opts.bootstrapKind } : {}),
           ...(opts.stationUpdateSetKey ? { stationUpdateSetKey: opts.stationUpdateSetKey } : {}),
@@ -145,10 +151,10 @@ async function main() {
         autoApplyEligible: opts.autoApplyEligible,
         reason: opts.policyReason,
         verificationNotes: opts.claimResearchState
-          ? { claimResearchState: opts.claimResearchState }
-          : null,
-        beforeValueJson: opts.beforeValue || null,
-        afterValueJson: opts.afterValue || null,
+          ? toNullableJson({ claimResearchState: opts.claimResearchState })
+          : Prisma.DbNull,
+        beforeValueJson: toNullableJson(opts.beforeValue),
+        afterValueJson: toNullableJson(opts.afterValue),
       },
     })
 
