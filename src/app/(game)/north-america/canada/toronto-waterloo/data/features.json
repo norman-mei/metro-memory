@@ -512,8 +512,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -79.2320997,
-          43.7394646
+          -79.3985717,
+          43.7067597
         ]
       },
       "properties": {
@@ -606,6 +606,92 @@
         "name": "Finch",
         "line": "TTC1",
         "order": 37
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 402,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.4200446,
+          43.7980411
+        ]
+      },
+      "properties": {
+        "id": 402,
+        "name": "Steeles",
+        "line": "TTC1",
+        "order": 38
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 403,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.4223764,
+          43.8071174
+        ]
+      },
+      "properties": {
+        "id": 403,
+        "name": "Clark",
+        "line": "TTC1",
+        "order": 39
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 404,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.425982,
+          43.8228102
+        ]
+      },
+      "properties": {
+        "id": 404,
+        "name": "Royal Orchard",
+        "line": "TTC1",
+        "order": 40
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 405,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.4220087,
+          43.8365689
+        ]
+      },
+      "properties": {
+        "id": 405,
+        "name": "Bridge",
+        "line": "TTC1",
+        "order": 41,
+        "cluster_key": "bridge-langstaff-complex"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 406,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.4262017,
+          43.8414285
+        ]
+      },
+      "properties": {
+        "id": 406,
+        "name": "High Tech",
+        "line": "TTC1",
+        "order": 42
       }
     },
     {
@@ -891,6 +977,125 @@
     },
     {
       "type": "Feature",
+      "id": 395,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.4988792,
+          43.6844832
+        ]
+      },
+      "properties": {
+        "id": 395,
+        "name": "Jane",
+        "line": "TTC5",
+        "order": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 396,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.5114238,
+          43.6839554
+        ]
+      },
+      "properties": {
+        "id": 396,
+        "name": "Scarlett",
+        "line": "TTC5",
+        "order": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 397,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.5265804,
+          43.6822998
+        ]
+      },
+      "properties": {
+        "id": 397,
+        "name": "Royal York",
+        "line": "TTC5",
+        "order": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 398,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.5389845,
+          43.6798414
+        ]
+      },
+      "properties": {
+        "id": 398,
+        "name": "Islington",
+        "line": "TTC5",
+        "order": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 399,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.550904,
+          43.6772086
+        ]
+      },
+      "properties": {
+        "id": 399,
+        "name": "Kipling",
+        "line": "TTC5",
+        "order": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 400,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.5632044,
+          43.6745141
+        ]
+      },
+      "properties": {
+        "id": 400,
+        "name": "Martin Grove",
+        "line": "TTC5",
+        "order": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 401,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.5877198,
+          43.6660794
+        ]
+      },
+      "properties": {
+        "id": 401,
+        "name": "Renforth",
+        "line": "TTC5",
+        "order": 6
+      }
+    },
+    {
+      "type": "Feature",
       "id": 95,
       "geometry": {
         "type": "Point",
@@ -903,7 +1108,7 @@
         "id": 95,
         "name": "Mount Dennis",
         "line": "TTC5",
-        "order": 0
+        "order": 7
       }
     },
     {
@@ -920,7 +1125,7 @@
         "id": 96,
         "name": "Keelesdale",
         "line": "TTC5",
-        "order": 1
+        "order": 8
       }
     },
     {
@@ -937,7 +1142,7 @@
         "id": 97,
         "name": "Caledonia",
         "line": "TTC5",
-        "order": 2
+        "order": 9
       }
     },
     {
@@ -954,7 +1159,7 @@
         "id": 98,
         "name": "Fairbank",
         "line": "TTC5",
-        "order": 3
+        "order": 10
       }
     },
     {
@@ -971,7 +1176,7 @@
         "id": 99,
         "name": "Oakwood",
         "line": "TTC5",
-        "order": 4
+        "order": 11
       }
     },
     {
@@ -988,7 +1193,7 @@
         "id": 100,
         "name": "Cedarvale",
         "line": "TTC5",
-        "order": 5
+        "order": 12
       }
     },
     {
@@ -1005,7 +1210,7 @@
         "id": 101,
         "name": "Forest Hill",
         "line": "TTC5",
-        "order": 6
+        "order": 13
       }
     },
     {
@@ -1022,7 +1227,7 @@
         "id": 102,
         "name": "Chaplin",
         "line": "TTC5",
-        "order": 7
+        "order": 14
       }
     },
     {
@@ -1039,7 +1244,7 @@
         "id": 103,
         "name": "Avenue",
         "line": "TTC5",
-        "order": 8
+        "order": 15
       }
     },
     {
@@ -1056,7 +1261,7 @@
         "id": 104,
         "name": "Eglinton",
         "line": "TTC5",
-        "order": 9
+        "order": 16
       }
     },
     {
@@ -1073,7 +1278,7 @@
         "id": 105,
         "name": "Mount Pleasant",
         "line": "TTC5",
-        "order": 10
+        "order": 17
       }
     },
     {
@@ -1090,7 +1295,7 @@
         "id": 106,
         "name": "Leaside",
         "line": "TTC5",
-        "order": 11
+        "order": 18
       }
     },
     {
@@ -1107,7 +1312,7 @@
         "id": 107,
         "name": "Laird",
         "line": "TTC5",
-        "order": 12
+        "order": 19
       }
     },
     {
@@ -1124,7 +1329,7 @@
         "id": 108,
         "name": "Sunnybrook Park",
         "line": "TTC5",
-        "order": 13
+        "order": 20
       }
     },
     {
@@ -1141,7 +1346,7 @@
         "id": 109,
         "name": "Don Valley",
         "line": "TTC5",
-        "order": 14
+        "order": 21
       }
     },
     {
@@ -1158,7 +1363,7 @@
         "id": 110,
         "name": "Aga Khan Park & Museum",
         "line": "TTC5",
-        "order": 15
+        "order": 22
       }
     },
     {
@@ -1175,7 +1380,7 @@
         "id": 111,
         "name": "Wynford",
         "line": "TTC5",
-        "order": 16
+        "order": 23
       }
     },
     {
@@ -1192,7 +1397,7 @@
         "id": 112,
         "name": "Sloane",
         "line": "TTC5",
-        "order": 17
+        "order": 24
       }
     },
     {
@@ -1209,7 +1414,7 @@
         "id": 113,
         "name": "O'Connor",
         "line": "TTC5",
-        "order": 18
+        "order": 25
       }
     },
     {
@@ -1226,7 +1431,7 @@
         "id": 114,
         "name": "Pharmacy",
         "line": "TTC5",
-        "order": 19
+        "order": 26
       }
     },
     {
@@ -1243,7 +1448,7 @@
         "id": 115,
         "name": "Hakimi Lebovic",
         "line": "TTC5",
-        "order": 20
+        "order": 27
       }
     },
     {
@@ -1260,7 +1465,7 @@
         "id": 116,
         "name": "Golden Mile",
         "line": "TTC5",
-        "order": 21
+        "order": 28
       }
     },
     {
@@ -1277,7 +1482,7 @@
         "id": 117,
         "name": "Birchmount",
         "line": "TTC5",
-        "order": 22
+        "order": 29
       }
     },
     {
@@ -1294,7 +1499,7 @@
         "id": 118,
         "name": "Ionview",
         "line": "TTC5",
-        "order": 23
+        "order": 30
       }
     },
     {
@@ -1311,7 +1516,7 @@
         "id": 119,
         "name": "Kennedy",
         "line": "TTC5",
-        "order": 24
+        "order": 31
       }
     },
     {
@@ -1919,6 +2124,23 @@
     },
     {
       "type": "Feature",
+      "id": 157,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.5968279329102,
+          43.20386200156705
+        ]
+      },
+      "properties": {
+        "id": 157,
+        "name": "Grimsby",
+        "line": "GOLW",
+        "order": 14
+      }
+    },
+    {
+      "type": "Feature",
       "id": 158,
       "geometry": {
         "type": "Point",
@@ -1931,7 +2153,7 @@
         "id": 158,
         "name": "St. Catharines",
         "line": "GOLW",
-        "order": 14
+        "order": 15
       }
     },
     {
@@ -1948,7 +2170,7 @@
         "id": 159,
         "name": "Niagara Falls, Ontario",
         "line": "GOLW",
-        "order": 15
+        "order": 16
       }
     },
     {
@@ -2121,6 +2343,74 @@
         "name": "Oshawa",
         "line": "GOLE",
         "order": 10
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 391,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.883921,
+          43.8797479
+        ]
+      },
+      "properties": {
+        "id": 391,
+        "name": "Thornton's Corners East",
+        "line": "GOLE",
+        "order": 11
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 392,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.8534689,
+          43.8880927
+        ]
+      },
+      "properties": {
+        "id": 392,
+        "name": "Ritson Road",
+        "line": "GOLE",
+        "order": 12
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 393,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.768472,
+          43.8834251
+        ]
+      },
+      "properties": {
+        "id": 393,
+        "name": "Courtice",
+        "line": "GOLE",
+        "order": 13
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 394,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.703611,
+          43.9075
+        ]
+      },
+      "properties": {
+        "id": 394,
+        "name": "Bowmanville",
+        "line": "GOLE",
+        "order": 14
       }
     },
     {
@@ -2531,7 +2821,8 @@
         "id": 206,
         "name": "Langstaff",
         "line": "GORH",
-        "order": 3
+        "order": 3,
+        "cluster_key": "bridge-langstaff-complex"
       }
     },
     {

@@ -12169,8 +12169,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -118.2906103,
-          34.0626617
+          -118.2904975,
+          34.0627383
         ]
       },
       "properties": {
@@ -12586,8 +12586,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -118.2906103,
-          34.0626617
+          -118.2904975,
+          34.0627383
         ]
       },
       "properties": {
@@ -12634,8 +12634,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -118.3009228,
-          34.0614318
+          -118.3009893,
+          34.0617493
         ]
       },
       "properties": {
@@ -12666,8 +12666,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -118.3088618,
-          34.0621149
+          -118.3083162,
+          34.0617237
         ]
       },
       "properties": {
@@ -17551,6 +17551,158 @@
         "id": 1083
       },
       "id": 1083
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.3440058,
+          34.0622196
+        ]
+      },
+      "properties": {
+        "id": 1084,
+        "name": "Wilshire/La Brea",
+        "line": "LACMTA_D"
+      },
+      "id": 1084
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.3614393,
+          34.0629811
+        ]
+      },
+      "properties": {
+        "id": 1085,
+        "name": "Wilshire/Fairfax",
+        "line": "LACMTA_D"
+      },
+      "id": 1085
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.3762687,
+          34.0652032
+        ]
+      },
+      "properties": {
+        "id": 1086,
+        "name": "Wilshire/La Cienega",
+        "line": "LACMTA_D"
+      },
+      "id": 1086
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.3991249,
+          34.067075
+        ]
+      },
+      "properties": {
+        "id": 1087,
+        "name": "Beverly Drive",
+        "line": "LACMTA_D"
+      },
+      "id": 1087
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.415,
+          34.059722
+        ]
+      },
+      "properties": {
+        "id": 1088,
+        "name": "Century City",
+        "line": "LACMTA_D"
+      },
+      "id": 1088
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.444444,
+          34.058611
+        ]
+      },
+      "properties": {
+        "id": 1089,
+        "name": "Westwood/UCLA",
+        "line": "LACMTA_D"
+      },
+      "id": 1089
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.453611,
+          34.054444
+        ]
+      },
+      "properties": {
+        "id": 1090,
+        "name": "Westwood/VA Hospital",
+        "line": "LACMTA_D"
+      },
+      "id": 1090
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.47498,
+          34.0783519
+        ]
+      },
+      "properties": {
+        "name": "Getty Center",
+        "alternate_names": [
+          "Upper Tram Station"
+        ],
+        "line": "GettyCenterTram",
+        "order": 0,
+        "id": 1091
+      },
+      "id": 1091
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.475692,
+          34.0875206
+        ]
+      },
+      "properties": {
+        "name": "Sepulveda Blvd",
+        "alternate_names": [
+          "Lower Tram Station"
+        ],
+        "line": "GettyCenterTram",
+        "order": 1,
+        "id": 1092
+      },
+      "id": 1092
     }
   ]
 }

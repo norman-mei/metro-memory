@@ -132,6 +132,7 @@ const SettingsPanel = ({ className, showHeading = true, disableScroll = false }:
     setAchievementToastDurationSec,
     setStopConfettiAfterCompletion,
     setAutoSubmitOnMatch,
+    setZoomToNewStations,
     setStationMatchingMode,
     setAccentColor,
     setFontSize,
@@ -353,6 +354,12 @@ const SettingsPanel = ({ className, showHeading = true, disableScroll = false }:
           description={t('autoSubmitOnMatchDesc')}
           checked={settings.autoSubmitOnMatch}
           onChange={setAutoSubmitOnMatch}
+        />
+        <SettingToggle
+          label="Zoom to newly found stations"
+          description="Move the map to each new station you enter correctly."
+          checked={settings.zoomToNewStations}
+          onChange={setZoomToNewStations}
         />
         <div className="flex flex-col gap-3 rounded-2xl border border-zinc-200 bg-zinc-50 p-4 dark:border-[#18181b] dark:bg-zinc-900/40 sm:flex-row sm:items-center sm:justify-between">
           <div>

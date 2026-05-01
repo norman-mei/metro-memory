@@ -175,7 +175,7 @@ export async function sendPasswordResetEmail(to: string, token: string) {
   const html = `
     <div style="font-family: Arial, sans-serif; line-height: 1.5; color: #0f172a;">
       <h2 style="color: #0ea5e9; margin-bottom: 16px;">Password reset requested</h2>
-      <p>Use this reset token in Metro Memory or Rail Map Toolkit:</p>
+      <p>Use this reset token in Metro Memory:</p>
       <p style="font-size: 18px; font-weight: 700; letter-spacing: 0.04em;">
         ${token}
       </p>

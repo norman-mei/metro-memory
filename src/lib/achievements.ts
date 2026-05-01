@@ -728,6 +728,174 @@ export const ACHIEVEMENTS: Record<string, AchievementDefinition> = {
     title: "Zhangye Silkline",
     description: "You've mapped Zhangye's routes with Hexi Corridor poise.",
   },
+  "boston-commuter-rail": {
+    title: "Purple Line Pathfinder",
+    description: "You've mastered every MBTA commuter branch like a true Boston rail regular.",
+  },
+  "boston-subway-light-rail": {
+    title: "T Network Titan",
+    description: "You've conquered Boston's rapid transit and Green Line tangle with wicked precision.",
+  },
+  "california-state-bart": {
+    title: "Transbay Tracker",
+    description: "You've ridden BART's web across the Bay like a true regional lifer.",
+  },
+  "california-state-bay-area": {
+    title: "Bay Crossing Brain",
+    description: "You've stitched together the Bay Area's transit patchwork from peninsula to East Bay.",
+  },
+  "california-state-caltrain": {
+    title: "Peninsula Pacekeeper",
+    description: "You've timed every Caltrain stop from San Francisco to San Jose like clockwork.",
+  },
+  "california-state-la-metro": {
+    title: "LA Line Weaver",
+    description: "You've pieced together Los Angeles Metro like a true Southland strategist.",
+  },
+  "california-state-los-angeles": {
+    title: "Southland Signalmaster",
+    description: "You've ruled Los Angeles transit from subway to streetcar to hillside people mover.",
+  },
+  "california-state-metrolink": {
+    title: "Regional Rail Renegade",
+    description: "You've mapped Metrolink's far-reaching branches like a SoCal timetable expert.",
+  },
+  "california-state-muni": {
+    title: "Seven-by-Seven Signal",
+    description: "You've mastered Muni's tunnels, streetcars, and waterfront curves like a San Franciscan pro.",
+  },
+  "california-state-sacramento": {
+    title: "Capitol Corridor Cruiser",
+    description: "You've navigated Sacramento transit with river-city confidence and state-capital calm.",
+  },
+  "california-state-san-diego": {
+    title: "Trolley Tactician",
+    description: "You've surfed San Diego's rails and loops like a true borderland commuter.",
+  },
+  "california-state-vta": {
+    title: "Silicon Switchmaster",
+    description: "You've debugged Santa Clara Valley transit better than a Valley engineer.",
+  },
+  "chicago-cta": {
+    title: "L Legend",
+    description: "You've mastered the CTA's loops, branches, and color maze like a true Chicagoan.",
+  },
+  "chicago-metra": {
+    title: "Terminal Timetable Titan",
+    description: "You've conquered Metra's far-flung lines like a Union Station veteran.",
+  },
+  "dc-baltimore": {
+    title: "Charm City Connector",
+    description: "You've tracked Baltimore transit with the grit and precision of a hometown regular.",
+  },
+  "dc-washington-dc": {
+    title: "Monumental Mapper",
+    description: "You've mastered Washington transit with the confidence of a seasoned Beltway commuter.",
+  },
+  "florida-state-jacksonville": {
+    title: "First Coast Flyer",
+    description: "You've looped through Jacksonville transit with sunny precision and river-city poise.",
+  },
+  "florida-state-miami": {
+    title: "Magic City Mover",
+    description: "You've mastered Miami's mix of metro, people movers, and beach-bound lines in style.",
+  },
+  "florida-state-orlando": {
+    title: "Central Florida Connector",
+    description: "You've linked Orlando's trains, airport people movers, and Disney systems like a park-hopper pro.",
+  },
+  "florida-state-tampa": {
+    title: "Gulf Coast Guide",
+    description: "You've charted Tampa transit with streetcar savvy and bayfront confidence.",
+  },
+  "gba-dongguan": {
+    title: "Dongguan Linkkeeper",
+    description: "You've mapped Dongguan's network with Pearl River Delta precision.",
+  },
+  "gba-foshan": {
+    title: "Foshan Line Forger",
+    description: "You've mastered Foshan's routes with Lingnan flair and interchange discipline.",
+  },
+  "gba-guangzhou": {
+    title: "Canton Connection Crown",
+    description: "You've conquered Guangzhou's vast system like a true Pearl River veteran.",
+  },
+  "gba-hong-kong": {
+    title: "Harbour Crossing Ace",
+    description: "You've mastered Hong Kong's rail web from island tunnels to New Territories branches.",
+  },
+  "gba-macau": {
+    title: "Cotai Corridor Captain",
+    description: "You've tracked Macau's guideways with casino-floor confidence and delta polish.",
+  },
+  "gba-mtr-heavy-rail": {
+    title: "Heavy Rail Heir",
+    description: "You've ruled Hong Kong's MTR heavy rail network like a platform veteran.",
+  },
+  "gba-mtr-light-rail": {
+    title: "Light Rail Lantern",
+    description: "You've mastered the MTR light rail maze with New Territories finesse.",
+  },
+  "gba-shenzhen": {
+    title: "Shenzhen Speedrunner",
+    description: "You've blitzed Shenzhen's fast-growing network like a tech-capital local.",
+  },
+  nyc: {
+    title: "Tri-State Track Titan",
+    description: "You've mastered the rails, subways, and terminals of the New York region like a true tri-state regular.",
+  },
+  "nyc-lirr": {
+    title: "Island Platform Pro",
+    description: "You've mapped the LIRR's branches with the discipline of a Long Island veteran.",
+  },
+  "nyc-mnr": {
+    title: "Hudson-Harlem-Haven Hero",
+    description: "You've conquered Metro-North from Grand Central to the outer terminals with commuter-class precision.",
+  },
+  "nyc-mta": {
+    title: "Empire State of Transit",
+    description: "You've mastered the MTA's sprawling empire like a true New York lifer.",
+  },
+  "nyc-njt": {
+    title: "Jersey Junction Genius",
+    description: "You've stitched together NJ Transit like a Secaucus-bound regular in the rush hour crush.",
+  },
+  "nyc-panynj": {
+    title: "Hudson Gateway Guardian",
+    description: "You've mastered the Port Authority's cross-river connectors and airport links like a regional power broker.",
+  },
+  "nyc-subway": {
+    title: "City That Never Stops",
+    description: "You've conquered the New York City Subway one express, local, and shuttle at a time.",
+  },
+  "philly-metro-patco": {
+    title: "Broad Street Boss",
+    description: "You've ruled Philly's rapid transit and PATCO links with true Delaware Valley swagger.",
+  },
+  "philly-regional-rail": {
+    title: "Regional Rail Ringleader",
+    description: "You've mastered SEPTA Regional Rail like a timetable wizard at Suburban Station.",
+  },
+  "toronto-waterloo-go-up": {
+    title: "Union Station Dispatcher",
+    description: "You've linked GO and UP like a golden-hour regular through the Greater Toronto rush.",
+  },
+  "toronto-waterloo-metrolinx": {
+    title: "Golden Horseshoe Governor",
+    description: "You've mastered Metrolinx's regional web with commuter-polished confidence.",
+  },
+  "toronto-waterloo-ttc": {
+    title: "Red Rocket Royalty",
+    description: "You've conquered the TTC from subway tunnel to street-running switch.",
+  },
+  "toronto-waterloo-ttc-streetcars": {
+    title: "Streetcar Savant",
+    description: "You've glided through Toronto's streetcar grid like a true downtown veteran.",
+  },
+  "toronto-waterloo-ttc-subway": {
+    title: "Tunnel Visionary",
+    description: "You've mastered the TTC subway with pure Toronto focus and platform discipline.",
+  },
 }
 
 export const getAchievementForCity = (

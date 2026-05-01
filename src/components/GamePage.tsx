@@ -4345,7 +4345,7 @@ function GamePageContent({
       if (result.type === 'correct') {
         rankedCorrectGuessCountRef.current += 1
         rankedCorrectStationCountRef.current += result.addedIds?.length ?? 0
-        if (result.addedIds && result.addedIds.length > 0) {
+        if (settings.zoomToNewStations && result.addedIds && result.addedIds.length > 0) {
           zoomToFeatures(result.addedIds)
         }
         if (rankedFirstCorrectAtRef.current === null) {
@@ -4383,7 +4383,16 @@ function GamePageContent({
         registerPlayDay()
       }
     },
-    [CITY_NAME, awardAchievement, idMap, rankedMode, rankedRuleset, registerPlayDay, zoomToFeatures],
+    [
+      CITY_NAME,
+      awardAchievement,
+      idMap,
+      rankedMode,
+      rankedRuleset,
+      registerPlayDay,
+      settings.zoomToNewStations,
+      zoomToFeatures,
+    ],
   )
 
   const handleInputEdit = useCallback(() => {

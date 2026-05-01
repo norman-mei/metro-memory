@@ -274,6 +274,7 @@ type Settings = {
   achievementToastDurationSec: number
   stopConfettiAfterCompletion: boolean
   autoSubmitOnMatch: boolean
+  zoomToNewStations: boolean
   stationMatchingMode: StationMatchingMode
   accentColor: AccentColorValue
   fontSize: FontSizeValue
@@ -321,6 +322,7 @@ export const DEFAULT_SETTINGS: Settings = {
   achievementToastDurationSec: 15,
   stopConfettiAfterCompletion: false,
   autoSubmitOnMatch: DEFAULT_AUTO_SUBMIT_ON_MATCH,
+  zoomToNewStations: false,
   stationMatchingMode: 'normal',
   accentColor: DEFAULT_ACCENT_COLOR_ID,
   fontSize: 'md',
@@ -343,6 +345,7 @@ type SettingsContextValue = {
   setAchievementToastDurationSec: (seconds: number) => void
   setStopConfettiAfterCompletion: (enabled: boolean) => void
   setAutoSubmitOnMatch: (enabled: boolean) => void
+  setZoomToNewStations: (enabled: boolean) => void
   setStationMatchingMode: (mode: StationMatchingMode) => void
   setAccentColor: (accent: AccentColorValue) => void
   setFontSize: (size: FontSizeValue) => void
@@ -401,6 +404,10 @@ export const SettingsProvider = ({
               typeof parsed.autoSubmitOnMatch === 'boolean'
                 ? parsed.autoSubmitOnMatch
                 : DEFAULT_SETTINGS.autoSubmitOnMatch,
+            zoomToNewStations:
+              typeof parsed.zoomToNewStations === 'boolean'
+                ? parsed.zoomToNewStations
+                : DEFAULT_SETTINGS.zoomToNewStations,
             stationMatchingMode:
               typeof parsed.stationMatchingMode === 'string' &&
               isValidStationMatchingMode(parsed.stationMatchingMode)
@@ -589,6 +596,8 @@ export const SettingsProvider = ({
         updateSettings({ stopConfettiAfterCompletion: enabled }),
       setAutoSubmitOnMatch: (enabled: boolean) =>
         updateSettings({ autoSubmitOnMatch: enabled }),
+      setZoomToNewStations: (enabled: boolean) =>
+        updateSettings({ zoomToNewStations: enabled }),
       setStationMatchingMode: (mode: StationMatchingMode) => {
         if (isValidStationMatchingMode(mode)) {
           updateSettings({ stationMatchingMode: mode })

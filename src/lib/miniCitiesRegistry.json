@@ -123,9 +123,9 @@
           "name": "Los Angeles",
           "link": "/north-america/usa/california-state-los-angeles",
           "assetSourceSlug": "california-state-los-angeles",
-          "keywords": ["LA Metro", "Los Angeles", "OCTA", "LAX", "Metrolink", "Disneyland", "Disneyland Monorail", "Disneyland Railroad", "Horse Drawn Streetcar"],
+          "keywords": ["LA Metro", "Los Angeles", "OCTA", "LAX", "Metrolink", "Disneyland", "Disneyland Monorail", "Disneyland Railroad", "Horse Drawn Streetcar", "Getty Center", "Getty Foundation", "Getty Center Tram"],
           "countingMode": "mini",
-          "includeLines": ["LACMTA_A", "LACMTA_B", "LACMTA_C", "LACMTA_D", "LACMTA_E", "LACMTA_K", "OCStreetcar", "LAXAPM", "MetrolinkAV", "MetrolinkVC", "MetrolinkSB", "MetrolinkRIV", "MetrolinkOC", "Metrolink91PV", "MetrolinkIEOC", "Arrow", "DisneylandMonorail", "DisneylandRailroad", "HorseDrawnStreetcar"]
+          "includeLines": ["LACMTA_A", "LACMTA_B", "LACMTA_C", "LACMTA_D", "LACMTA_E", "LACMTA_K", "OCStreetcar", "LAXAPM", "MetrolinkAV", "MetrolinkVC", "MetrolinkSB", "MetrolinkRIV", "MetrolinkOC", "Metrolink91PV", "MetrolinkIEOC", "Arrow", "DisneylandMonorail", "DisneylandRailroad", "HorseDrawnStreetcar", "GettyCenterTram"]
         },
         {
           "slug": "california-state-bay-area",

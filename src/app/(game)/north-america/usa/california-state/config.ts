@@ -200,6 +200,19 @@ export const LINE_GROUPS: LineGroup[] = [
     items: [{ type: 'separator' }],
   },
   {
+    title: 'The Getty Foundation',
+    titleImage: 'getty.png',
+    items: [
+      {
+        type: 'lines',
+        lines: ['GettyCenterTram'],
+      },
+    ],
+  },
+  {
+    items: [{ type: 'separator' }],
+  },
+  {
     title: 'San Diego Metropolitan Transit System (MTS)',
     titleImage: 'MTS.png',
     items: [

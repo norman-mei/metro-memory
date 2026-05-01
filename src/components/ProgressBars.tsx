@@ -417,6 +417,9 @@ const ProgressBars = ({
       {LINE_GROUPS.map((group, groupIndex) => {
         return (
           <div key={`${group.title ?? 'group'}-${groupIndex}`} className="space-y-3">
+            {groupIndex > 0 ? (
+              <hr className="border-zinc-200 dark:border-[#18181b]" />
+            ) : null}
             <GroupHeading
               title={formatLocalizedChinaUiTitle(group.title, CITY_NAME, settings.language)}
               image={group.titleImage}

@@ -477,6 +477,17 @@
     "badgeShape": "circle",
     "badgeFit": "contain"
   },
+  "GettyCenterTram": {
+    "name": "Getty Center Tram",
+    "color": "#03fc73",
+    "backgroundColor": "#02843D",
+    "textColor": "#1F1F1F",
+    "progressOutlineColor": "#03fc73",
+    "order": 22,
+    "icon": "north-america/usa/california-state/getty.png",
+    "badgeShape": "square",
+    "badgeFit": "contain"
+  },
   "MTSBlue": {
     "name": "Blue",
     "color": "#005CB9",
