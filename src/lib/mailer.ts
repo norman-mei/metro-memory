@@ -30,7 +30,7 @@ function buildFromAddress() {
   if (MAIL_FROM_EMAIL) {
     return MAIL_FROM_EMAIL
   }
-  return 'Metro Memory <no-reply@metromemory.com>'
+  return 'Metro Memory <no-reply@metro-memory.xyz>'
 }
 
 async function captureAuthEmail(message: {
