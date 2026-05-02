@@ -1,0 +1,123 @@
+{
+  "BangkokMRTBlue": {
+    "name": "Blue",
+    "color": "#184E70",
+    "backgroundColor": "#0E2E43",
+    "textColor": "#FFFFFF",
+    "progressOutlineColor": "#184E70",
+    "order": 0,
+    "icon": "asia/thailand/bangkok/MRT.png",
+    "badgeShape": "circle",
+    "badgeFit": "contain"
+  },
+  "BangkokMRTPurple": {
+    "name": "Purple",
+    "color": "#650165",
+    "backgroundColor": "#360036",
+    "textColor": "#FFFFFF",
+    "progressOutlineColor": "#650165",
+    "order": 1,
+    "icon": "asia/thailand/bangkok/Purple.png",
+    "badgeShape": "circle",
+    "badgeFit": "contain"
+  },
+  "BangkokMRTYellow": {
+    "name": "Yellow",
+    "color": "#FFD500",
+    "backgroundColor": "#8A7300",
+    "textColor": "#1F1F1F",
+    "progressOutlineColor": "#FFD500",
+    "order": 2,
+    "icon": "asia/thailand/bangkok/Yellow.png",
+    "badgeShape": "circle",
+    "badgeFit": "contain"
+  },
+  "BangkokMRTPink": {
+    "name": "Pink",
+    "color": "#CF5982",
+    "backgroundColor": "#6B2A43",
+    "textColor": "#FFFFFF",
+    "progressOutlineColor": "#CF5982",
+    "order": 3,
+    "icon": "asia/thailand/bangkok/Pink.png",
+    "badgeShape": "circle",
+    "badgeFit": "contain"
+  },
+  "BangkokBTSSukhumvit": {
+    "name": "Sukhumvit",
+    "color": "#77B824",
+    "backgroundColor": "#406213",
+    "textColor": "#FFFFFF",
+    "progressOutlineColor": "#77B824",
+    "order": 4,
+    "icon": "asia/thailand/bangkok/Sukhumvit.png",
+    "badgeShape": "circle",
+    "badgeFit": "contain"
+  },
+  "BangkokBTSSilom": {
+    "name": "Silom",
+    "color": "#00827E",
+    "backgroundColor": "#004847",
+    "textColor": "#FFFFFF",
+    "progressOutlineColor": "#00827E",
+    "order": 5,
+    "icon": "asia/thailand/bangkok/Silom.png",
+    "badgeShape": "circle",
+    "badgeFit": "contain"
+  },
+  "BangkokBTSGold": {
+    "name": "Gold",
+    "color": "#D4AF37",
+    "backgroundColor": "#7A6420",
+    "textColor": "#1F1F1F",
+    "progressOutlineColor": "#D4AF37",
+    "order": 6,
+    "icon": "asia/thailand/bangkok/Gold.png",
+    "badgeShape": "circle",
+    "badgeFit": "contain"
+  },
+  "BangkokARL": {
+    "name": "Airport Rail Link",
+    "color": "#761F21",
+    "backgroundColor": "#431114",
+    "textColor": "#FFFFFF",
+    "progressOutlineColor": "#761F21",
+    "order": 7,
+    "icon": "asia/thailand/bangkok/AirportRailLink.png",
+    "badgeShape": "square",
+    "badgeFit": "contain"
+  },
+  "BangkokSRTDarkRed": {
+    "name": "Dark Red",
+    "color": "#E20001",
+    "backgroundColor": "#7A0001",
+    "textColor": "#FFFFFF",
+    "progressOutlineColor": "#E20001",
+    "order": 8,
+    "icon": "asia/thailand/bangkok/DarkRed.png",
+    "badgeShape": "square",
+    "badgeFit": "contain"
+  },
+  "BangkokSRTLightRed": {
+    "name": "Light Red",
+    "color": "#FD5252",
+    "backgroundColor": "#9E3232",
+    "textColor": "#FFFFFF",
+    "progressOutlineColor": "#FD5252",
+    "order": 9,
+    "icon": "asia/thailand/bangkok/LightRed.png",
+    "badgeShape": "square",
+    "badgeFit": "contain"
+  },
+  "BangkokAirportAPM": {
+    "name": "Suvarnabhumi Airport Automated People Mover",
+    "color": "#025937",
+    "backgroundColor": "#01301D",
+    "textColor": "#FFFFFF",
+    "progressOutlineColor": "#025937",
+    "order": 10,
+    "icon": "asia/thailand/bangkok/AirportAPM.png",
+    "badgeShape": "square",
+    "badgeFit": "contain"
+  }
+}

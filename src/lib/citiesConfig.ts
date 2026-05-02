@@ -34,7 +34,8 @@ const rawCities: CityBase[] = [
     name: 'Amtrak, USA',
     link: '/north-america/usa/amtrak',
     continent: 'North America',
-    hideInStats: true,
+    disabled: false,
+    hideInStats: false,
   },
   {
     name: 'Atlanta, GA',
@@ -760,7 +761,8 @@ const rawCities: CityBase[] = [
     name: 'Bangkok (กรุงเทพฯ), TH',
     link: '/asia/thailand/bangkok',
     continent: 'Asia',
-    hideInStats: true,
+    disabled: false,
+    hideInStats: false,
   },
   {
     name: 'Jakarta, JK',
@@ -1067,7 +1069,6 @@ const PLACEHOLDER_CITY_PATHS = new Set([
   'asia/japan/osaka-kobe',
   'asia/malaysia/kuala-lumpur',
   'asia/philippines/manila',
-  'asia/thailand/bangkok',
   'north-america/canada/toronto',
   'north-america/canada/viarail',
   'oceania/australia/adelaide',

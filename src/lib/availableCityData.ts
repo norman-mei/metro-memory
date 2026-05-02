@@ -6,6 +6,7 @@ export const AVAILABLE_CITY_SLUGS = new Set([
   'amtrak',
   'atlanta',
   'austin',
+  'bangkok',
   'barcelona',
   'berlin',
   'blackpool',

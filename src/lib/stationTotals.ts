@@ -7,6 +7,7 @@ export const STATION_TOTALS: Record<string, number> = {
   "amtrak": 902,
   "atlanta": 83,
   "austin": 11,
+  "bangkok": 208,
   "barcelona": 311,
   "berlin": 627,
   "blackpool": 88,
