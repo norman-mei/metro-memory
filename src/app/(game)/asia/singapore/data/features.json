@@ -5,13 +5,22 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [103.844989, 1.298669]
+        "coordinates": [
+          103.7422939,
+          1.333108
+        ]
       },
       "properties": {
         "id": 1,
-        "name": "Dhoby Ghaut",
-        "line": "SingaporeMRTCircleLine",
-        "order": 0
+        "name": "Jurong East",
+        "line": "SingaporeNSL",
+        "order": 0,
+        "alternate_names": [
+          "ஜூரோங் கிழக்கு",
+          "裕廊东",
+          "yu lang dong",
+          "裕廊東"
+        ]
       },
       "id": 1
     },
@@ -19,2116 +28,21 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [103.854751, 1.275171]
-      },
-      "properties": {
-        "id": 29,
-        "name": "Marina Bay",
-        "line": "SingaporeMRTCircleLine",
-        "order": 0
-      },
-      "id": 29
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.861082, 1.292781]
-      },
-      "properties": {
-        "id": 177,
-        "name": "Promenade",
-        "line": "SingaporeMRTDowntownLine",
-        "order": 0
-      },
-      "id": 177
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.852679, 1.293143]
-      },
-      "properties": {
-        "id": 248,
-        "name": "City Hall",
-        "line": "SingaporeMRTEastwestLine",
-        "order": 0
-      },
-      "id": 248
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.988565, 1.357338]
-      },
-      "properties": {
-        "id": 302,
-        "name": "Changi Airport",
-        "line": "SingaporeMRTEastwestLine",
-        "order": 0
-      },
-      "id": 302
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.902362, 1.405251]
-      },
-      "properties": {
-        "id": 408,
-        "name": "Punggol",
-        "line": "SingaporeMRTNortheastLine",
-        "order": 0
-      },
-      "id": 408
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.854751, 1.275171]
-      },
-      "properties": {
-        "id": 424,
-        "name": "Marina Bay",
-        "line": "SingaporeMRTNorthsouthLine",
-        "order": 0
-      },
-      "id": 424
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.862723, 1.27175]
-      },
-      "properties": {
-        "id": 450,
-        "name": "Marina South Pier",
-        "line": "SingaporeMRTNorthsouthLine",
-        "order": 0
-      },
-      "id": 450
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.839769, 1.337591]
-      },
-      "properties": {
-        "id": 607,
-        "name": "Caldecott",
-        "line": "CM_SingaporeMRT_tel",
-        "order": 0
-      },
-      "id": 607
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.74223, 1.333078]
-      },
-      "properties": {
-        "id": 449,
-        "name": "Jurong East",
-        "line": "SingaporeMRTNorthsouthLine",
-        "order": 529
-      },
-      "id": 449
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.94933, 1.373012]
-      },
-      "properties": {
-        "id": 301,
-        "name": "Pasir Ris",
-        "line": "SingaporeMRTEastwestLine",
-        "order": 519
-      },
-      "id": 301
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.749535, 1.349098]
-      },
-      "properties": {
-        "id": 448,
-        "name": "Bukit Batok",
-        "line": "SingaporeMRTNorthsouthLine",
-        "order": 494
-      },
-      "id": 448
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.945154, 1.35343]
-      },
-      "properties": {
-        "id": 300,
-        "name": "Tampines",
-        "line": "SingaporeMRTEastwestLine",
-        "order": 487
-      },
-      "id": 300
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.953445, 1.343237]
-      },
-      "properties": {
-        "id": 299,
-        "name": "Simei",
-        "line": "SingaporeMRTEastwestLine",
-        "order": 478
-      },
-      "id": 299
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.751742, 1.35889]
-      },
-      "properties": {
-        "id": 447,
-        "name": "Bukit Gombak",
-        "line": "SingaporeMRTNorthsouthLine",
-        "order": 472
-      },
-      "id": 447
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.946558, 1.327139]
-      },
-      "properties": {
-        "id": 298,
-        "name": "Tanah Merah",
-        "line": "SingaporeMRTEastwestLine",
-        "order": 440
-      },
-      "id": 298
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.744239, 1.385312]
-      },
-      "properties": {
-        "id": 446,
-        "name": "Choa Chu Kang",
-        "line": "SingaporeMRTNorthsouthLine",
-        "order": 429
-      },
-      "id": 446
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.929994, 1.32394]
-      },
-      "properties": {
-        "id": 297,
-        "name": "Bedok",
-        "line": "SingaporeMRTEastwestLine",
-        "order": 425
-      },
-      "id": 297
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.747336, 1.397478]
-      },
-      "properties": {
-        "id": 445,
-        "name": "Yew Tee",
-        "line": "SingaporeMRTNorthsouthLine",
-        "order": 409
-      },
-      "id": 445
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.912792, 1.320918]
-      },
-      "properties": {
-        "id": 296,
-        "name": "Kembangan",
-        "line": "SingaporeMRTEastwestLine",
-        "order": 403
-      },
-      "id": 296
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.903067, 1.31975]
-      },
-      "properties": {
-        "id": 295,
-        "name": "Eunos",
-        "line": "SingaporeMRTEastwestLine",
-        "order": 389
-      },
-      "id": 295
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.892328, 1.317966]
-      },
-      "properties": {
-        "id": 294,
-        "name": "Paya Lebar",
-        "line": "SingaporeMRTEastwestLine",
-        "order": 376
-      },
-      "id": 294
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.882903, 1.316363]
-      },
-      "properties": {
-        "id": 293,
-        "name": "Aljunied",
-        "line": "SingaporeMRTEastwestLine",
-        "order": 368
-      },
-      "id": 293
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.761959, 1.425261]
-      },
-      "properties": {
-        "id": 444,
-        "name": "Kranji",
-        "line": "SingaporeMRTNorthsouthLine",
-        "order": 359
-      },
-      "id": 444
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.871368, 1.311403]
-      },
-      "properties": {
-        "id": 292,
-        "name": "Kallang",
-        "line": "SingaporeMRTEastwestLine",
-        "order": 355
-      },
-      "id": 292
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.86314, 1.307324]
-      },
-      "properties": {
-        "id": 291,
-        "name": "Lavender",
-        "line": "SingaporeMRTEastwestLine",
-        "order": 340
-      },
-      "id": 291
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.856205, 1.300421]
-      },
-      "properties": {
-        "id": 290,
-        "name": "Bugis",
-        "line": "SingaporeMRTEastwestLine",
-        "order": 338
-      },
-      "id": 290
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.774216, 1.432631]
-      },
-      "properties": {
-        "id": 443,
-        "name": "Marsiling",
-        "line": "SingaporeMRTNorthsouthLine",
-        "order": 335
-      },
-      "id": 443
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.636631, 1.340115]
-      },
-      "properties": {
-        "id": 268,
-        "name": "Tuas Link",
-        "line": "SingaporeMRTEastwestLine",
-        "order": 328
-      },
-      "id": 268
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.64009, 1.329433]
-      },
-      "properties": {
-        "id": 267,
-        "name": "Tuas West Road",
-        "line": "SingaporeMRTEastwestLine",
-        "order": 315
-      },
-      "id": 267
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.649269, 1.320774]
-      },
-      "properties": {
-        "id": 266,
-        "name": "Tuas Crescent",
-        "line": "SingaporeMRTEastwestLine",
-        "order": 309
-      },
-      "id": 266
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.787714, 1.437531]
-      },
-      "properties": {
-        "id": 442,
-        "name": "Woodlands",
-        "line": "SingaporeMRTNorthsouthLine",
-        "order": 306
-      },
-      "id": 442
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.660496, 1.319347]
-      },
-      "properties": {
-        "id": 265,
-        "name": "Gul Circle",
-        "line": "SingaporeMRTEastwestLine",
-        "order": 295
-      },
-      "id": 265
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.800933, 1.440694]
-      },
-      "properties": {
-        "id": 441,
-        "name": "Admiralty",
-        "line": "SingaporeMRTNorthsouthLine",
-        "order": 289
-      },
-      "id": 441
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.678284, 1.327661]
-      },
-      "properties": {
-        "id": 264,
-        "name": "Joo Koon",
-        "line": "SingaporeMRTEastwestLine",
-        "order": 279
-      },
-      "id": 264
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.962172, 1.33556]
-      },
-      "properties": {
-        "id": 247,
-        "name": "Expo",
-        "line": "SingaporeMRTDowntownLine",
-        "order": 277
-      },
-      "id": 247
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.961346, 1.341665]
-      },
-      "properties": {
-        "id": 246,
-        "name": "Upper Changi",
-        "line": "SingaporeMRTDowntownLine",
-        "order": 268
-      },
-      "id": 246
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.820042, 1.449149]
-      },
-      "properties": {
-        "id": 440,
-        "name": "Sembawang",
-        "line": "SingaporeMRTNorthsouthLine",
-        "order": 263
-      },
-      "id": 440
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.954978, 1.35615]
-      },
-      "properties": {
-        "id": 245,
-        "name": "Tampines East",
-        "line": "SingaporeMRTDowntownLine",
-        "order": 251
-      },
-      "id": 245
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.697354, 1.337516]
-      },
-      "properties": {
-        "id": 263,
-        "name": "Pioneer",
-        "line": "SingaporeMRTEastwestLine",
-        "order": 247
-      },
-      "id": 263
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.822481, 1.265319]
-      },
-      "properties": {
-        "id": 28,
-        "name": "HarbourFront",
-        "line": "SingaporeMRTCircleLine",
-        "order": 242
-      },
-      "id": 28
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.943045, 1.355224]
-      },
-      "properties": {
-        "id": 244,
-        "name": "Tampines",
-        "line": "SingaporeMRTDowntownLine",
-        "order": 240
-      },
-      "id": 244
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.705783, 1.338456]
-      },
-      "properties": {
-        "id": 262,
-        "name": "Boon Lay",
-        "line": "SingaporeMRTEastwestLine",
-        "order": 239
-      },
-      "id": 262
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.82953, 1.443386]
-      },
-      "properties": {
-        "id": 439,
-        "name": "Canberra",
-        "line": "SingaporeMRTNorthsouthLine",
-        "order": 238
-      },
-      "id": 439
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.809864, 1.270628]
-      },
-      "properties": {
-        "id": 27,
-        "name": "Telok Blangah",
-        "line": "SingaporeMRTCircleLine",
-        "order": 234
-      },
-      "id": 27
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.938507, 1.345518]
-      },
-      "properties": {
-        "id": 243,
-        "name": "Tampines West",
-        "line": "SingaporeMRTDowntownLine",
-        "order": 234
-      },
-      "id": 243
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.802781, 1.272318]
-      },
-      "properties": {
-        "id": 26,
-        "name": "Labrador Park",
-        "line": "SingaporeMRTCircleLine",
-        "order": 229
-      },
-      "id": 26
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.720827, 1.344193]
-      },
-      "properties": {
-        "id": 261,
-        "name": "Lakeside",
-        "line": "SingaporeMRTEastwestLine",
-        "order": 229
-      },
-      "id": 261
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.791612, 1.27617]
-      },
-      "properties": {
-        "id": 25,
-        "name": "Pasir Panjang",
-        "line": "SingaporeMRTCircleLine",
-        "order": 225
-      },
-      "id": 25
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.931889, 1.336483]
-      },
-      "properties": {
-        "id": 242,
-        "name": "Bedok Reservoir",
-        "line": "SingaporeMRTDowntownLine",
-        "order": 222
-      },
-      "id": 242
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.835106, 1.42938]
-      },
-      "properties": {
-        "id": 438,
-        "name": "Yishun",
-        "line": "SingaporeMRTNorthsouthLine",
-        "order": 218
-      },
-      "id": 438
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.78177, 1.282653]
-      },
-      "properties": {
-        "id": 24,
-        "name": "Haw Par Villa",
-        "line": "SingaporeMRTCircleLine",
-        "order": 217
-      },
-      "id": 24
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.917991, 1.334691]
-      },
-      "properties": {
-        "id": 241,
-        "name": "Bedok North",
-        "line": "SingaporeMRTDowntownLine",
-        "order": 212
-      },
-      "id": 241
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.732591, 1.342296]
-      },
-      "properties": {
-        "id": 260,
-        "name": "Chinese Garden",
-        "line": "SingaporeMRTEastwestLine",
-        "order": 207
-      },
-      "id": 260
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.784415, 1.293302]
-      },
-      "properties": {
-        "id": 23,
-        "name": "Kent Ridge",
-        "line": "SingaporeMRTCircleLine",
-        "order": 205
-      },
-      "id": 23
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.908619, 1.334986]
-      },
-      "properties": {
-        "id": 240,
-        "name": "Kaki Bukit ",
-        "line": "SingaporeMRTDowntownLine",
-        "order": 205
-      },
-      "id": 240
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.833067, 1.417281]
-      },
-      "properties": {
-        "id": 437,
-        "name": "Khatib",
-        "line": "SingaporeMRTNorthsouthLine",
-        "order": 202
-      },
-      "id": 437
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.787238, 1.299609]
-      },
-      "properties": {
-        "id": 22,
-        "name": "one-north",
-        "line": "SingaporeMRTCircleLine",
-        "order": 201
-      },
-      "id": 22
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.899291, 1.329983]
-      },
-      "properties": {
-        "id": 239,
-        "name": "Ubi",
-        "line": "SingaporeMRTDowntownLine",
-        "order": 196
-      },
-      "id": 239
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.790867, 1.307174]
-      },
-      "properties": {
-        "id": 21,
-        "name": "Buona Vista",
-        "line": "SingaporeMRTCircleLine",
-        "order": 193
-      },
-      "id": 21
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.890309, 1.326558]
-      },
-      "properties": {
-        "id": 238,
-        "name": "MacPherson",
-        "line": "SingaporeMRTDowntownLine",
-        "order": 192
-      },
-      "id": 238
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.742113, 1.333011]
-      },
-      "properties": {
-        "id": 259,
-        "name": "Jurong East",
-        "line": "SingaporeMRTEastwestLine",
-        "order": 192
-      },
-      "id": 259
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.795754, 1.312102]
-      },
-      "properties": {
-        "id": 20,
-        "name": "Holland Village",
-        "line": "SingaporeMRTCircleLine",
-        "order": 189
-      },
-      "id": 20
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.882947, 1.326946]
-      },
-      "properties": {
-        "id": 237,
-        "name": "Mattar",
-        "line": "SingaporeMRTDowntownLine",
-        "order": 182
-      },
-      "id": 237
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.807789, 1.317623]
-      },
-      "properties": {
-        "id": 19,
-        "name": "Farrer Road",
-        "line": "SingaporeMRTCircleLine",
-        "order": 179
-      },
-      "id": 19
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.871999, 1.321584]
-      },
-      "properties": {
-        "id": 236,
-        "name": "Geylang Bahru",
-        "line": "SingaporeMRTDowntownLine",
-        "order": 170
-      },
-      "id": 236
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.815725, 1.322585]
-      },
-      "properties": {
-        "id": 18,
-        "name": "Botanic Gardens",
-        "alternate_names": ["Kebun Bunga"],
-        "line": "SingaporeMRTCircleLine",
-        "order": 168
-      },
-      "id": 18
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.863011, 1.313723]
-      },
-      "properties": {
-        "id": 235,
-        "name": "Bendemeer",
-        "line": "SingaporeMRTDowntownLine",
-        "order": 161
-      },
-      "id": 235
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.855226, 1.305128]
-      },
-      "properties": {
-        "id": 234,
-        "name": "Jalan Besar",
-        "line": "SingaporeMRTDowntownLine",
-        "order": 148
-      },
-      "id": 234
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.839699, 1.337652]
-      },
-      "properties": {
-        "id": 17,
-        "name": "Caldecott",
-        "line": "SingaporeMRTCircleLine",
-        "order": 146
-      },
-      "id": 17
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.765156, 1.315067]
-      },
-      "properties": {
-        "id": 258,
-        "name": "Clementi",
-        "line": "SingaporeMRTEastwestLine",
-        "order": 145
-      },
-      "id": 258
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.850333, 1.298893]
-      },
-      "properties": {
-        "id": 233,
-        "name": "Bencoolen",
-        "line": "SingaporeMRTDowntownLine",
-        "order": 141
-      },
-      "id": 233
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.839286, 1.348604]
-      },
-      "properties": {
-        "id": 16,
-        "name": "Marymount",
-        "line": "SingaporeMRTCircleLine",
-        "order": 139
-      },
-      "id": 16
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.844232, 1.292343]
-      },
-      "properties": {
-        "id": 232,
-        "name": "Fort Canning",
-        "line": "SingaporeMRTDowntownLine",
-        "order": 134
-      },
-      "id": 232
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.845008, 1.381821]
-      },
-      "properties": {
-        "id": 436,
-        "name": "Yio Chu Kang",
-        "line": "SingaporeMRTNorthsouthLine",
-        "order": 132
-      },
-      "id": 436
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.848265, 1.351468]
-      },
-      "properties": {
-        "id": 15,
-        "name": "Bishan",
-        "line": "SingaporeMRTCircleLine",
-        "order": 127
-      },
-      "id": 15
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.778598, 1.31137]
-      },
-      "properties": {
-        "id": 257,
-        "name": "Dover",
-        "line": "SingaporeMRTEastwestLine",
-        "order": 125
-      },
-      "id": 257
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.844004, 1.285021]
-      },
-      "properties": {
-        "id": 231,
-        "name": "Chinatown",
-        "line": "SingaporeMRTDowntownLine",
-        "order": 122
-      },
-      "id": 231
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.848749, 1.282131]
-      },
-      "properties": {
-        "id": 230,
-        "name": "Telok Ayer",
-        "line": "SingaporeMRTDowntownLine",
-        "order": 118
-      },
-      "id": 230
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.849646, 1.370113]
-      },
-      "properties": {
-        "id": 435,
-        "name": "Ang Mo Kio",
-        "line": "SingaporeMRTNorthsouthLine",
-        "order": 116
-      },
-      "id": 435
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.863397, 1.351485]
-      },
-      "properties": {
-        "id": 14,
-        "name": "Lorong Chuan",
-        "line": "SingaporeMRTCircleLine",
-        "order": 115
-      },
-      "id": 14
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.853306, 1.279128]
-      },
-      "properties": {
-        "id": 229,
-        "name": "Downtown",
-        "line": "SingaporeMRTDowntownLine",
-        "order": 112
-      },
-      "id": 229
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.790831, 1.307108]
-      },
-      "properties": {
-        "id": 256,
-        "name": "Buona Vista",
-        "line": "SingaporeMRTEastwestLine",
-        "order": 108
-      },
-      "id": 256
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.873756, 1.349788]
-      },
-      "properties": {
-        "id": 13,
-        "name": "Serangoon",
-        "line": "SingaporeMRTCircleLine",
-        "order": 105
-      },
-      "id": 13
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.859639, 1.282592]
-      },
-      "properties": {
-        "id": 228,
-        "name": "Bayfront",
-        "line": "SingaporeMRTDowntownLine",
-        "order": 99
-      },
-      "id": 228
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.880476, 1.342493]
-      },
-      "properties": {
-        "id": 12,
-        "name": "Bartley",
-        "line": "SingaporeMRTCircleLine",
-        "order": 93
-      },
-      "id": 12
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.798261, 1.30239]
-      },
-      "properties": {
-        "id": 255,
-        "name": "Commonwealth",
-        "line": "SingaporeMRTEastwestLine",
-        "order": 92
-      },
-      "id": 255
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.762153, 1.378302]
-      },
-      "properties": {
-        "id": 190,
-        "name": "Bukit Panjang",
-        "line": "SingaporeMRTDowntownLine",
-        "order": 91
-      },
-      "id": 190
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.888187, 1.3357]
-      },
-      "properties": {
-        "id": 11,
-        "name": "Tai Seng",
-        "line": "SingaporeMRTCircleLine",
-        "order": 85
-      },
-      "id": 11
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.764935, 1.369062]
-      },
-      "properties": {
-        "id": 189,
-        "name": "Cashew",
-        "line": "SingaporeMRTDowntownLine",
-        "order": 85
-      },
-      "id": 189
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.848316, 1.351444]
-      },
-      "properties": {
-        "id": 434,
-        "name": "Bishan",
-        "line": "SingaporeMRTNorthsouthLine",
-        "order": 79
-      },
-      "id": 434
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.890197, 1.32654]
-      },
-      "properties": {
-        "id": 10,
-        "name": "MacPherson",
-        "line": "SingaporeMRTCircleLine",
-        "order": 78
-      },
-      "id": 10
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.806005, 1.294522]
-      },
-      "properties": {
-        "id": 254,
-        "name": "Queenstown",
-        "line": "SingaporeMRTEastwestLine",
-        "order": 77
-      },
-      "id": 254
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.767099, 1.362466]
-      },
-      "properties": {
-        "id": 188,
-        "name": "Hillview",
-        "line": "SingaporeMRTDowntownLine",
-        "order": 75
-      },
-      "id": 188
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.892256, 1.31804]
-      },
-      "properties": {
-        "id": 9,
-        "name": "Paya Lebar",
-        "line": "SingaporeMRTCircleLine",
-        "order": 70
-      },
-      "id": 9
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.846825, 1.340599]
-      },
-      "properties": {
-        "id": 433,
-        "name": "Braddell",
-        "line": "SingaporeMRTNorthsouthLine",
-        "order": 69
-      },
-      "id": 433
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.847646, 1.332373]
-      },
-      "properties": {
-        "id": 432,
-        "name": "Toa Payoh",
-        "line": "SingaporeMRTNorthsouthLine",
-        "order": 63
-      },
-      "id": 432
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.822469, 1.265482]
-      },
-      "properties": {
-        "id": 423,
-        "name": "HarbourFront",
-        "line": "SingaporeMRTNortheastLine",
-        "order": 61
-      },
-      "id": 423
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.816725, 1.289589]
-      },
-      "properties": {
-        "id": 253,
-        "name": "Redhill",
-        "line": "SingaporeMRTEastwestLine",
-        "order": 57
-      },
-      "id": 253
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.84355, 1.320033]
-      },
-      "properties": {
-        "id": 431,
-        "name": "Novena",
-        "line": "SingaporeMRTNorthsouthLine",
-        "order": 56
-      },
-      "id": 431
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.776025, 1.34118]
-      },
-      "properties": {
-        "id": 187,
-        "name": "Beauty World",
-        "line": "SingaporeMRTDowntownLine",
-        "order": 54
-      },
-      "id": 187
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.838834, 1.312999]
-      },
-      "properties": {
-        "id": 430,
-        "name": "Newton",
-        "line": "SingaporeMRTNorthsouthLine",
-        "order": 52
-      },
-      "id": 430
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.888336, 1.308318]
-      },
-      "properties": {
-        "id": 8,
-        "name": "Dakota",
-        "line": "SingaporeMRTCircleLine",
-        "order": 51
-      },
-      "id": 8
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.840239, 1.280687]
-      },
-      "properties": {
-        "id": 422,
-        "name": "Outram Park",
-        "line": "SingaporeMRTNortheastLine",
-        "order": 51
-      },
-      "id": 422
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.784119, 1.335796]
-      },
-      "properties": {
-        "id": 186,
-        "name": "King Albert Park",
-        "line": "SingaporeMRTDowntownLine",
-        "order": 50
-      },
-      "id": 186
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.843997, 1.285025]
-      },
-      "properties": {
-        "id": 421,
-        "name": "Chinatown",
-        "line": "SingaporeMRTNortheastLine",
-        "order": 49
-      },
-      "id": 421
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.84687, 1.288981]
-      },
-      "properties": {
-        "id": 420,
-        "name": "Clarke Quay",
-        "line": "SingaporeMRTNortheastLine",
-        "order": 48
-      },
-      "id": 420
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.797587, 1.330572]
-      },
-      "properties": {
-        "id": 185,
-        "name": "Sixth Avenue",
-        "line": "SingaporeMRTDowntownLine",
-        "order": 47
-      },
-      "id": 185
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.844994, 1.298799]
-      },
-      "properties": {
-        "id": 419,
-        "name": "Dhoby Ghaut",
-        "line": "SingaporeMRTNortheastLine",
-        "order": 44
-      },
-      "id": 419
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.832225, 1.303273]
-      },
-      "properties": {
-        "id": 429,
-        "name": "Orchard",
-        "line": "SingaporeMRTNorthsouthLine",
-        "order": 44
-      },
-      "id": 429
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.882507, 1.306226]
-      },
-      "properties": {
-        "id": 7,
-        "name": "Mountbatten",
-        "line": "SingaporeMRTCircleLine",
-        "order": 43
-      },
-      "id": 7
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.807116, 1.325958]
-      },
-      "properties": {
-        "id": 184,
-        "name": "Tan Kah Kee",
-        "line": "SingaporeMRTDowntownLine",
-        "order": 43
-      },
-      "id": 184
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.849298, 1.306572]
-      },
-      "properties": {
-        "id": 418,
-        "name": "Little India",
-        "line": "SingaporeMRTNortheastLine",
-        "order": 42
-      },
-      "id": 418
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.815749, 1.322583]
-      },
-      "properties": {
-        "id": 183,
-        "name": "Botanic Gardens",
-        "alternate_names": ["Kebun Bunga"],
-        "line": "SingaporeMRTDowntownLine",
-        "order": 39
-      },
-      "id": 183
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.854374, 1.312755]
-      },
-      "properties": {
-        "id": 417,
-        "name": "Farrer Park",
-        "line": "SingaporeMRTNortheastLine",
-        "order": 39
-      },
-      "id": 417
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.875369, 1.302851]
-      },
-      "properties": {
-        "id": 6,
-        "name": "Stadium",
-        "line": "SingaporeMRTCircleLine",
-        "order": 38
-      },
-      "id": 6
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.827643, 1.286053]
-      },
-      "properties": {
-        "id": 252,
-        "name": "Tiong Bahru",
-        "line": "SingaporeMRTEastwestLine",
-        "order": 38
-      },
-      "id": 252
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.861609, 1.319748]
-      },
-      "properties": {
-        "id": 416,
-        "name": "Boon Keng",
-        "line": "SingaporeMRTNortheastLine",
-        "order": 36
-      },
-      "id": 416
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.825985, 1.320031]
-      },
-      "properties": {
-        "id": 182,
-        "name": "Stevens",
-        "line": "SingaporeMRTDowntownLine",
-        "order": 35
-      },
-      "id": 182
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.83851, 1.300336]
-      },
-      "properties": {
-        "id": 428,
-        "name": "Somerset",
-        "line": "SingaporeMRTNorthsouthLine",
-        "order": 32
-      },
-      "id": 428
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.838861, 1.312954]
-      },
-      "properties": {
-        "id": 181,
-        "name": "Newton",
-        "line": "SingaporeMRTDowntownLine",
-        "order": 30
-      },
-      "id": 181
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.869099, 1.331252]
-      },
-      "properties": {
-        "id": 415,
-        "name": "Potong Pasir",
-        "line": "SingaporeMRTNortheastLine",
-        "order": 30
-      },
-      "id": 415
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.840183, 1.28063]
-      },
-      "properties": {
-        "id": 251,
-        "name": "Outram Park",
-        "line": "SingaporeMRTEastwestLine",
-        "order": 29
-      },
-      "id": 251
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.845017, 1.298775]
-      },
-      "properties": {
-        "id": 427,
-        "name": "Dhoby Ghaut",
-        "line": "SingaporeMRTNorthsouthLine",
-        "order": 29
-      },
-      "id": 427
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.863508, 1.299653]
-      },
-      "properties": {
-        "id": 5,
-        "name": "Nicoll Highway",
-        "line": "SingaporeMRTCircleLine",
-        "order": 28
-      },
-      "id": 5
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.849299, 1.306571]
-      },
-      "properties": {
-        "id": 180,
-        "name": "Little India",
-        "line": "SingaporeMRTDowntownLine",
-        "order": 27
-      },
-      "id": 180
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.870743, 1.339198]
-      },
-      "properties": {
-        "id": 414,
-        "name": "Woodleigh",
-        "line": "SingaporeMRTNortheastLine",
-        "order": 26
-      },
-      "id": 414
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.852697, 1.30392]
-      },
-      "properties": {
-        "id": 179,
-        "name": "Rochor",
-        "line": "SingaporeMRTDowntownLine",
-        "order": 23
-      },
-      "id": 179
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.96227, 1.33562]
-      },
-      "properties": {
-        "id": 303,
-        "name": "Expo",
-        "line": "SingaporeMRTEastwestLine",
-        "order": 22
-      },
-      "id": 303
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.852615, 1.293086]
-      },
-      "properties": {
-        "id": 426,
-        "name": "City Hall",
-        "line": "SingaporeMRTNorthsouthLine",
-        "order": 22
-      },
-      "id": 426
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.861087, 1.29278]
-      },
-      "properties": {
-        "id": 4,
-        "name": "Promenade",
-        "line": "SingaporeMRTCircleLine",
-        "order": 21
-      },
-      "id": 4
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.845886, 1.276557]
-      },
-      "properties": {
-        "id": 250,
-        "name": "Tanjong Pagar",
-        "line": "SingaporeMRTEastwestLine",
-        "order": 20
-      },
-      "id": 250
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.873763, 1.349814]
-      },
-      "properties": {
-        "id": 413,
-        "name": "Serangoon",
-        "line": "SingaporeMRTNortheastLine",
-        "order": 19
-      },
-      "id": 413
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.868178, 1.279285]
-      },
-      "properties": {
-        "id": 627,
-        "name": "Gardens by the Bay",
-        "alternate_names": ["Taman di Pesisiran"],
-        "line": "CM_SingaporeMRT_tel",
-        "order": 18
-      },
-      "id": 627
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.884862, 1.359989]
-      },
-      "properties": {
-        "id": 412,
-        "name": "Kovan",
-        "line": "SingaporeMRTNortheastLine",
-        "order": 16
-      },
-      "id": 412
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.854734, 1.275144]
-      },
-      "properties": {
-        "id": 626,
-        "name": "Marina Bay",
-        "line": "CM_SingaporeMRT_tel",
-        "order": 16
-      },
-      "id": 626
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.850649, 1.277815]
-      },
-      "properties": {
-        "id": 625,
-        "name": "Shenton Way",
-        "line": "CM_SingaporeMRT_tel",
-        "order": 15
-      },
-      "id": 625
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.856093, 1.300528]
-      },
-      "properties": {
-        "id": 178,
-        "name": "Bugis",
-        "line": "SingaporeMRTDowntownLine",
-        "order": 14
-      },
-      "id": 178
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.785611, 1.448665]
-      },
-      "properties": {
-        "id": 615,
-        "name": "Woodlands North",
-        "line": "CM_SingaporeMRT_tel",
-        "order": 14
-      },
-      "id": 615
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.787956, 1.437447]
-      },
-      "properties": {
-        "id": 614,
-        "name": "Woodlands",
-        "line": "CM_SingaporeMRT_tel",
-        "order": 13
-      },
-      "id": 614
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.843975, 1.280659]
-      },
-      "properties": {
-        "id": 624,
-        "name": "Maxwell",
-        "line": "CM_SingaporeMRT_tel",
-        "order": 13
-      },
-      "id": 624
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.851536, 1.284405]
-      },
-      "properties": {
-        "id": 425,
-        "name": "Raffles Place",
-        "line": "SingaporeMRTNorthsouthLine",
-        "order": 12
-      },
-      "id": 425
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.840249, 1.280497]
-      },
-      "properties": {
-        "id": 623,
-        "name": "Outram Park",
-        "line": "CM_SingaporeMRT_tel",
-        "order": 12
-      },
-      "id": 623
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.855971, 1.293253]
-      },
-      "properties": {
-        "id": 3,
-        "name": "Esplanade",
-        "line": "SingaporeMRTCircleLine",
-        "order": 11
-      },
-      "id": 3
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.892725, 1.371904]
-      },
-      "properties": {
-        "id": 411,
-        "name": "Hougang",
-        "line": "SingaporeMRTNortheastLine",
-        "order": 11
-      },
-      "id": 411
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.79442, 1.427226]
-      },
-      "properties": {
-        "id": 613,
-        "name": "Woodlands South",
-        "line": "CM_SingaporeMRT_tel",
-        "order": 11
-      },
-      "id": 613
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.851445, 1.28441]
-      },
-      "properties": {
-        "id": 249,
-        "name": "Raffles Place",
-        "line": "SingaporeMRTEastwestLine",
-        "order": 10
-      },
-      "id": 249
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.859745, 1.282527]
-      },
-      "properties": {
-        "id": 30,
-        "name": "Bayfront",
-        "line": "SingaporeMRTCircleLine",
-        "order": 9
-      },
-      "id": 30
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.89305, 1.383057]
-      },
-      "properties": {
-        "id": 410,
-        "name": "Buangkok",
-        "line": "SingaporeMRTNortheastLine",
-        "order": 9
-      },
-      "id": 410
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.817783, 1.397654]
-      },
-      "properties": {
-        "id": 612,
-        "name": "Springleaf",
-        "line": "CM_SingaporeMRT_tel",
-        "order": 9
-      },
-      "id": 612
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.83384, 1.287493]
-      },
-      "properties": {
-        "id": 622,
-        "name": "Havelock",
-        "line": "CM_SingaporeMRT_tel",
-        "order": 9
-      },
-      "id": 622
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [103.850518, 1.296852]
+        "coordinates": [
+          103.7495906,
+          1.3490572
+        ]
       },
       "properties": {
         "id": 2,
-        "name": "Bras Basah",
-        "line": "SingaporeMRTCircleLine",
-        "order": 8
+        "name": "Bukit Batok",
+        "line": "SingaporeNSL",
+        "order": 1,
+        "alternate_names": [
+          "புக்கிட் பாத்தோக்",
+          "武吉巴督",
+          "wu ji ba du"
+        ]
       },
       "id": 2
     },
@@ -2136,152 +50,5382 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [103.833675, 1.294732]
+        "coordinates": [
+          103.7518249,
+          1.3588929
+        ]
       },
       "properties": {
-        "id": 621,
-        "name": "Great World",
-        "line": "CM_SingaporeMRT_tel",
-        "order": 8
+        "id": 3,
+        "name": "Bukit Gombak",
+        "line": "SingaporeNSL",
+        "order": 2,
+        "alternate_names": [
+          "புக்கிட் கோம்பாக்",
+          "武吉甘柏",
+          "wu ji gan bai"
+        ]
       },
-      "id": 621
+      "id": 3
     },
     {
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [103.836473, 1.384519]
+        "coordinates": [
+          103.7491253,
+          1.3687837
+        ]
       },
       "properties": {
-        "id": 611,
-        "name": "Lentor",
-        "line": "CM_SingaporeMRT_tel",
-        "order": 7
+        "id": 4,
+        "name": "Brickland",
+        "line": "SingaporeNSL",
+        "order": 3,
+        "alternate_names": [
+          "பிரிக்லேன்ட்",
+          "红砖",
+          "hong zhuan",
+          "紅磚"
+        ]
       },
-      "id": 611
+      "id": 4
     },
     {
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [103.831959, 1.303141]
+        "coordinates": [
+          103.744325,
+          1.3853167
+        ]
       },
       "properties": {
-        "id": 620,
+        "id": 5,
+        "name": "Choa Chu Kang",
+        "line": "SingaporeNSL",
+        "order": 4,
+        "alternate_names": [
+          "சுவா சூ காங்",
+          "蔡厝港",
+          "cai cuo gang"
+        ]
+      },
+      "id": 5
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.7474009,
+          1.3974608
+        ]
+      },
+      "properties": {
+        "id": 6,
+        "name": "Yew Tee",
+        "line": "SingaporeNSL",
+        "order": 5,
+        "alternate_names": [
+          "இயூ டீ",
+          "油池",
+          "you chi"
+        ]
+      },
+      "id": 6
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.7488684,
+          1.4135235
+        ]
+      },
+      "properties": {
+        "id": 7,
+        "name": "Sungei Kadut",
+        "line": "SingaporeNSL",
+        "order": 6,
+        "alternate_names": [
+          "சுங்கை கியாடுத்",
+          "双溪加株",
+          "shuang xi jia zhu",
+          "雙溪加株"
+        ]
+      },
+      "id": 7
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.7619891,
+          1.4252189
+        ]
+      },
+      "properties": {
+        "id": 8,
+        "name": "Kranji",
+        "line": "SingaporeNSL",
+        "order": 7,
+        "alternate_names": [
+          "கிராஞ்சி",
+          "克兰芝",
+          "ke lan zhi",
+          "克蘭芝"
+        ]
+      },
+      "id": 8
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.7741243,
+          1.4325704
+        ]
+      },
+      "properties": {
+        "id": 9,
+        "name": "Marsiling",
+        "line": "SingaporeNSL",
+        "order": 8,
+        "alternate_names": [
+          "மார்சிலிங்",
+          "马西岭",
+          "ma xi ling",
+          "馬西嶺"
+        ]
+      },
+      "id": 9
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.7878508,
+          1.4375072
+        ]
+      },
+      "properties": {
+        "id": 10,
+        "name": "Woodlands",
+        "line": "SingaporeNSL",
+        "order": 9,
+        "alternate_names": [
+          "ஊட்லண்ட்ஸ்",
+          "兀兰",
+          "wu lan",
+          "兀蘭"
+        ]
+      },
+      "id": 10
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8009592,
+          1.4406369
+        ]
+      },
+      "properties": {
+        "id": 11,
+        "name": "Admiralty",
+        "line": "SingaporeNSL",
+        "order": 10,
+        "alternate_names": [
+          "அட்மிரல்ட்டி",
+          "海军部",
+          "hai jun bu",
+          "海軍部"
+        ]
+      },
+      "id": 11
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8200555,
+          1.4490928
+        ]
+      },
+      "properties": {
+        "id": 12,
+        "name": "Sembawang",
+        "line": "SingaporeNSL",
+        "order": 11,
+        "alternate_names": [
+          "செம்பாவாங்",
+          "三巴旺",
+          "san ba wang"
+        ]
+      },
+      "id": 12
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.82963015,
+          1.44321315
+        ]
+      },
+      "properties": {
+        "id": 13,
+        "name": "Canberra",
+        "line": "SingaporeNSL",
+        "order": 12,
+        "alternate_names": [
+          "கென்பரா",
+          "坎贝拉",
+          "kan bei la",
+          "坎貝拉"
+        ]
+      },
+      "id": 13
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8350282,
+          1.4293839
+        ]
+      },
+      "properties": {
+        "id": 14,
+        "name": "Yishun",
+        "line": "SingaporeNSL",
+        "order": 13,
+        "alternate_names": [
+          "யீஷூன்",
+          "义顺",
+          "義順",
+          "yi shun"
+        ]
+      },
+      "id": 14
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8330179,
+          1.4173597
+        ]
+      },
+      "properties": {
+        "id": 15,
+        "name": "Khatib",
+        "line": "SingaporeNSL",
+        "order": 14,
+        "alternate_names": [
+          "காதிப்",
+          "卡迪",
+          "ka di"
+        ]
+      },
+      "id": 15
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8449359,
+          1.3817905
+        ]
+      },
+      "properties": {
+        "id": 16,
+        "name": "Yio Chu Kang",
+        "line": "SingaporeNSL",
+        "order": 15,
+        "alternate_names": [
+          "இயோ சூ காங்",
+          "杨厝港",
+          "yang cuo gang",
+          "楊厝港"
+        ]
+      },
+      "id": 16
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8495397,
+          1.3700121
+        ]
+      },
+      "properties": {
+        "id": 17,
+        "name": "Ang Mo Kio",
+        "line": "SingaporeNSL",
+        "order": 16,
+        "alternate_names": [
+          "அங் மோ கியோ",
+          "宏茂桥",
+          "hong mao qiao",
+          "宏茂橋"
+        ]
+      },
+      "id": 17
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8482722,
+          1.3515715
+        ]
+      },
+      "properties": {
+        "id": 18,
+        "name": "Bishan",
+        "line": "SingaporeNSL",
+        "order": 17,
+        "alternate_names": [
+          "பீஷான்",
+          "碧山",
+          "bi shan"
+        ]
+      },
+      "id": 18
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8467577,
+          1.340303
+        ]
+      },
+      "properties": {
+        "id": 19,
+        "name": "Braddell",
+        "line": "SingaporeNSL",
+        "order": 18,
+        "alternate_names": [
+          "பிரேடல்",
+          "布莱德",
+          "bu lai de",
+          "布萊德"
+        ]
+      },
+      "id": 19
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8475571,
+          1.3327004
+        ]
+      },
+      "properties": {
+        "id": 20,
+        "name": "Toa Payoh",
+        "line": "SingaporeNSL",
+        "order": 19,
+        "alternate_names": [
+          "தோ பாயோ",
+          "大巴窑",
+          "da ba yao",
+          "大巴窯"
+        ]
+      },
+      "id": 20
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8438709,
+          1.32051565
+        ]
+      },
+      "properties": {
+        "id": 21,
+        "name": "Novena",
+        "line": "SingaporeNSL",
+        "order": 20,
+        "alternate_names": [
+          "நொவீனா",
+          "诺维娜",
+          "nuo wei na",
+          "諾維娜"
+        ]
+      },
+      "id": 21
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8387216,
+          1.3129721
+        ]
+      },
+      "properties": {
+        "id": 22,
+        "name": "Newton",
+        "line": "SingaporeNSL",
+        "order": 21,
+        "alternate_names": [
+          "நியூட்டன்",
+          "纽顿",
+          "niu dun",
+          "紐頓"
+        ]
+      },
+      "id": 22
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8328836,
+          1.3015241
+        ]
+      },
+      "properties": {
+        "id": 23,
         "name": "Orchard",
-        "line": "CM_SingaporeMRT_tel",
-        "order": 7
+        "line": "SingaporeNSL",
+        "order": 22,
+        "alternate_names": [
+          "ஆர்ச்சர்ட்",
+          "乌节",
+          "wu jie",
+          "烏節"
+        ]
       },
-      "id": 620
+      "id": 23
     },
     {
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [103.836765, 1.372151]
+        "coordinates": [
+          103.8391243,
+          1.3002773
+        ]
       },
       "properties": {
-        "id": 610,
-        "name": "Mayflower",
-        "line": "CM_SingaporeMRT_tel",
-        "order": 5
+        "id": 24,
+        "name": "Somerset",
+        "line": "SingaporeNSL",
+        "order": 23,
+        "alternate_names": [
+          "சாமர்செட்",
+          "索美塞",
+          "suo mei sai"
+        ]
       },
-      "id": 610
+      "id": 24
     },
     {
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [103.823884, 1.302266]
+        "coordinates": [
+          103.8449373,
+          1.2990948
+        ]
       },
       "properties": {
-        "id": 619,
-        "name": "Orchard Boulevard",
-        "line": "CM_SingaporeMRT_tel",
-        "order": 5
+        "id": 25,
+        "name": "Dhoby Ghaut",
+        "line": "SingaporeNSL",
+        "order": 24,
+        "alternate_names": [
+          "டோபி காட்",
+          "多美歌",
+          "duo mei ge"
+        ]
       },
-      "id": 619
+      "id": 25
     },
     {
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [103.895269, 1.39134]
+        "coordinates": [
+          103.85261829999999,
+          1.2930474
+        ]
       },
       "properties": {
-        "id": 409,
+        "id": 26,
+        "name": "City Hall",
+        "line": "SingaporeNSL",
+        "order": 25,
+        "alternate_names": [
+          "நகர மண்டபம்",
+          "政府大廈",
+          "zheng fu da sha",
+          "政府大厦"
+        ]
+      },
+      "id": 26
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.85176050000001,
+          1.2834767500000002
+        ]
+      },
+      "properties": {
+        "id": 27,
+        "name": "Raffles Place",
+        "line": "SingaporeNSL",
+        "order": 26,
+        "alternate_names": [
+          "ராஃபிள்ஸ் பிளேஸ்",
+          "萊佛士坊",
+          "lai fo shi fang",
+          "莱佛士坊"
+        ]
+      },
+      "id": 27
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8547565,
+          1.2752249
+        ]
+      },
+      "properties": {
+        "id": 28,
+        "name": "Marina Bay",
+        "line": "SingaporeNSL",
+        "order": 27,
+        "alternate_names": [
+          "மரீனா பே",
+          "滨海湾",
+          "bin hai wan",
+          "濱海灣"
+        ]
+      },
+      "id": 28
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8628652,
+          1.2713905
+        ]
+      },
+      "properties": {
+        "id": 29,
+        "name": "Marina South Pier",
+        "line": "SingaporeNSL",
+        "order": 28,
+        "alternate_names": [
+          "மரினா சவுத் படகுத்துறை",
+          "滨海南码头",
+          "bin hai nan ma tou",
+          "濱海南碼頭"
+        ],
+        "cluster_key": "marina-south-pier-complex"
+      },
+      "id": 29
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9488376,
+          1.3714744
+        ]
+      },
+      "properties": {
+        "id": 30,
+        "name": "Pasir Ris",
+        "line": "SingaporeEWL",
+        "order": 0,
+        "alternate_names": [
+          "பாசிர் ரிஸ்",
+          "巴西立",
+          "ba xi li"
+        ]
+      },
+      "id": 30
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9435837,
+          1.355849
+        ]
+      },
+      "properties": {
+        "id": 31,
+        "name": "Tampines",
+        "line": "SingaporeEWL",
+        "order": 1,
+        "alternate_names": [
+          "தெம்பினிஸ்",
+          "淡滨尼",
+          "淡濱尼",
+          "dan bin ni"
+        ]
+      },
+      "id": 31
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.953371,
+          1.3431881
+        ]
+      },
+      "properties": {
+        "id": 32,
+        "name": "Simei",
+        "line": "SingaporeEWL",
+        "order": 2,
+        "alternate_names": [
+          "ஸீமெய்",
+          "四美",
+          "si mei"
+        ]
+      },
+      "id": 32
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.94648635,
+          1.3271777
+        ]
+      },
+      "properties": {
+        "id": 33,
+        "name": "Tanah Merah",
+        "line": "SingaporeEWL",
+        "order": 3,
+        "alternate_names": [
+          "தானா மேரா",
+          "丹那美拉",
+          "dan na mei la"
+        ]
+      },
+      "id": 33
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9302175,
+          1.3239666
+        ]
+      },
+      "properties": {
+        "id": 34,
+        "name": "Bedok",
+        "line": "SingaporeEWL",
+        "order": 4,
+        "alternate_names": [
+          "பிடோக்",
+          "勿洛",
+          "wu luo"
+        ]
+      },
+      "id": 34
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9129269,
+          1.3210321
+        ]
+      },
+      "properties": {
+        "id": 35,
+        "name": "Kembangan",
+        "line": "SingaporeEWL",
+        "order": 5,
+        "alternate_names": [
+          "கெம்பாங்கான்",
+          "景万岸",
+          "jing wan an",
+          "景萬岸"
+        ]
+      },
+      "id": 35
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9028891,
+          1.3198016
+        ]
+      },
+      "properties": {
+        "id": 36,
+        "name": "Eunos",
+        "line": "SingaporeEWL",
+        "order": 6,
+        "alternate_names": [
+          "யூனுஸ்",
+          "友诺士",
+          "you nuo shi",
+          "友諾士"
+        ]
+      },
+      "id": 36
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8920173,
+          1.3179924
+        ]
+      },
+      "properties": {
+        "id": 37,
+        "name": "Paya Lebar",
+        "line": "SingaporeEWL",
+        "order": 7,
+        "alternate_names": [
+          "பாய லேபார்",
+          "巴耶利峇",
+          "ba ye li ba"
+        ]
+      },
+      "id": 37
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8829087,
+          1.3164515
+        ]
+      },
+      "properties": {
+        "id": 38,
+        "name": "Aljunied",
+        "line": "SingaporeEWL",
+        "order": 8,
+        "alternate_names": [
+          "அல்ஜூனிட்",
+          "阿裕尼",
+          "a yu ni"
+        ]
+      },
+      "id": 38
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8713388,
+          1.3114669
+        ]
+      },
+      "properties": {
+        "id": 39,
+        "name": "Kallang",
+        "line": "SingaporeEWL",
+        "order": 9,
+        "alternate_names": [
+          "காலாங்",
+          "加冷",
+          "jia leng"
+        ]
+      },
+      "id": 39
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.86277435,
+          1.3073608
+        ]
+      },
+      "properties": {
+        "id": 40,
+        "name": "Lavender",
+        "line": "SingaporeEWL",
+        "order": 10,
+        "alternate_names": [
+          "லவண்டர்",
+          "劳明达",
+          "lao ming da",
+          "勞明達"
+        ]
+      },
+      "id": 40
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8558412,
+          1.3006294
+        ]
+      },
+      "properties": {
+        "id": 41,
+        "name": "Bugis",
+        "line": "SingaporeEWL",
+        "order": 11,
+        "alternate_names": [
+          "பூகிஸ்",
+          "武吉士",
+          "wu ji shi"
+        ]
+      },
+      "id": 41
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.85261829999999,
+          1.2930474
+        ]
+      },
+      "properties": {
+        "id": 42,
+        "name": "City Hall",
+        "line": "SingaporeEWL",
+        "order": 12,
+        "alternate_names": [
+          "நகர மண்டபம்",
+          "政府大廈",
+          "zheng fu da sha",
+          "政府大厦"
+        ]
+      },
+      "id": 42
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.85176050000001,
+          1.2834767500000002
+        ]
+      },
+      "properties": {
+        "id": 43,
+        "name": "Raffles Place",
+        "line": "SingaporeEWL",
+        "order": 13,
+        "alternate_names": [
+          "ராஃபிள்ஸ் பிளேஸ்",
+          "萊佛士坊",
+          "lai fo shi fang",
+          "莱佛士坊"
+        ]
+      },
+      "id": 43
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8457196,
+          1.2765174
+        ]
+      },
+      "properties": {
+        "id": 44,
+        "name": "Tanjong Pagar",
+        "line": "SingaporeEWL",
+        "order": 14,
+        "alternate_names": [
+          "தஞ்சோங் பகார்",
+          "丹戎巴葛",
+          "dan rong ba ge"
+        ]
+      },
+      "id": 44
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8403231,
+          1.2806234
+        ]
+      },
+      "properties": {
+        "id": 45,
+        "name": "Outram Park",
+        "line": "SingaporeEWL",
+        "order": 15,
+        "alternate_names": [
+          "ஊட்ரம் பார்க்",
+          "欧南园",
+          "ou nan yuan",
+          "歐南園"
+        ]
+      },
+      "id": 45
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8269792,
+          1.2861963
+        ]
+      },
+      "properties": {
+        "id": 46,
+        "name": "Tiong Bahru",
+        "line": "SingaporeEWL",
+        "order": 16,
+        "alternate_names": [
+          "தியோங் பாரு",
+          "中峇鲁",
+          "zhong ba lu",
+          "中峇魯"
+        ]
+      },
+      "id": 46
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8167677,
+          1.2896482
+        ]
+      },
+      "properties": {
+        "id": 47,
+        "name": "Redhill",
+        "line": "SingaporeEWL",
+        "order": 17,
+        "alternate_names": [
+          "ரெட்ஹில்",
+          "红山",
+          "hong shan",
+          "紅山"
+        ]
+      },
+      "id": 47
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8060366,
+          1.2946226
+        ]
+      },
+      "properties": {
+        "id": 48,
+        "name": "Queenstown",
+        "line": "SingaporeEWL",
+        "order": 18,
+        "alternate_names": [
+          "குவீன்ஸ்டவுன்",
+          "女皇镇",
+          "nü huang zhen",
+          "女皇鎮"
+        ]
+      },
+      "id": 48
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.7983085,
+          1.3024428
+        ]
+      },
+      "properties": {
+        "id": 49,
+        "name": "Commonwealth",
+        "line": "SingaporeEWL",
+        "order": 19,
+        "alternate_names": [
+          "காமன்வெல்த்",
+          "联邦",
+          "lian bang",
+          "聯邦"
+        ]
+      },
+      "id": 49
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.7909841,
+          1.3071702
+        ]
+      },
+      "properties": {
+        "id": 50,
+        "name": "Buona Vista",
+        "line": "SingaporeEWL",
+        "order": 20,
+        "alternate_names": [
+          "புவன விஸ்தா",
+          "波那维斯达",
+          "波那維斯達",
+          "bo na wei si da"
+        ]
+      },
+      "id": 50
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.7786108,
+          1.3114155
+        ]
+      },
+      "properties": {
+        "id": 51,
+        "name": "Dover",
+        "line": "SingaporeEWL",
+        "order": 21,
+        "alternate_names": [
+          "டோவெர்",
+          "杜弗",
+          "du fu"
+        ]
+      },
+      "id": 51
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.7651775,
+          1.3152551
+        ]
+      },
+      "properties": {
+        "id": 52,
+        "name": "Clementi",
+        "line": "SingaporeEWL",
+        "order": 22,
+        "alternate_names": [
+          "கிளிமெண்டி",
+          "金文泰",
+          "jin wen tai"
+        ]
+      },
+      "id": 52
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.7422939,
+          1.333108
+        ]
+      },
+      "properties": {
+        "id": 53,
+        "name": "Jurong East",
+        "line": "SingaporeEWL",
+        "order": 23,
+        "alternate_names": [
+          "ஜூரோங் கிழக்கு",
+          "裕廊东",
+          "yu lang dong",
+          "裕廊東"
+        ]
+      },
+      "id": 53
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.7325474,
+          1.3424141
+        ]
+      },
+      "properties": {
+        "id": 54,
+        "name": "Chinese Garden",
+        "line": "SingaporeEWL",
+        "order": 24,
+        "alternate_names": [
+          "சீனத் தோட்டம்",
+          "裕华园",
+          "yu hua yuan",
+          "裕華園"
+        ]
+      },
+      "id": 54
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.7206931,
+          1.34425
+        ]
+      },
+      "properties": {
+        "id": 55,
+        "name": "Lakeside",
+        "line": "SingaporeEWL",
+        "order": 25,
+        "alternate_names": [
+          "ஏரிக்கரை",
+          "湖畔",
+          "hu pan"
+        ]
+      },
+      "id": 55
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.7058124,
+          1.3385504
+        ]
+      },
+      "properties": {
+        "id": 56,
+        "name": "Boon Lay",
+        "line": "SingaporeEWL",
+        "order": 26,
+        "alternate_names": [
+          "பூன் லே",
+          "文礼",
+          "wen li",
+          "文禮"
+        ]
+      },
+      "id": 56
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.6974103,
+          1.3375884
+        ]
+      },
+      "properties": {
+        "id": 57,
+        "name": "Pioneer",
+        "line": "SingaporeEWL",
+        "order": 27,
+        "alternate_names": [
+          "பயனியர்",
+          "先驱",
+          "xian qu",
+          "先驅"
+        ]
+      },
+      "id": 57
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.6782221,
+          1.327735
+        ]
+      },
+      "properties": {
+        "id": 58,
+        "name": "Joo Koon",
+        "line": "SingaporeEWL",
+        "order": 28,
+        "alternate_names": [
+          "ஜூ கூன்",
+          "裕群",
+          "yu qun",
+          "裕羣"
+        ]
+      },
+      "id": 58
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.6605997,
+          1.3196905
+        ]
+      },
+      "properties": {
+        "id": 59,
+        "name": "Gul Circle",
+        "line": "SingaporeEWL",
+        "order": 29,
+        "alternate_names": [
+          "கல் சர்க்கல்",
+          "卡尔圈",
+          "ka er quan",
+          "卡爾圈"
+        ]
+      },
+      "id": 59
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.6489064,
+          1.3211582
+        ]
+      },
+      "properties": {
+        "id": 60,
+        "name": "Tuas Crescent",
+        "line": "SingaporeEWL",
+        "order": 30,
+        "alternate_names": [
+          "துவாஸ் கிரசண்ட்",
+          "大士弯",
+          "da shi wan",
+          "大士彎"
+        ]
+      },
+      "id": 60
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.6395694,
+          1.3300518
+        ]
+      },
+      "properties": {
+        "id": 61,
+        "name": "Tuas West Road",
+        "line": "SingaporeEWL",
+        "order": 31,
+        "alternate_names": [
+          "துவாஸ் வெஸ்ட் ரோடு",
+          "大士西路",
+          "da shi xi lu"
+        ]
+      },
+      "id": 61
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.6367718,
+          1.3402939
+        ]
+      },
+      "properties": {
+        "id": 62,
+        "name": "Tuas Link",
+        "line": "SingaporeEWL",
+        "order": 32,
+        "alternate_names": [
+          "துவாஸ் லிங்க்",
+          "大士连路",
+          "da shi lian lu",
+          "大士連路"
+        ]
+      },
+      "id": 62
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9621264,
+          1.3355183
+        ]
+      },
+      "properties": {
+        "id": 63,
+        "name": "Expo",
+        "line": "SingaporeEWL",
+        "order": 33,
+        "alternate_names": [
+          "எக்ஸ்போ",
+          "博览",
+          "博覽",
+          "bo lan"
+        ]
+      },
+      "id": 63
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9884201,
+          1.3573133
+        ]
+      },
+      "properties": {
+        "id": 64,
+        "name": "Changi Airport",
+        "line": "SingaporeEWL",
+        "order": 34,
+        "alternate_names": [
+          "சாங்கி விமானநிலையம்",
+          "樟宜机场",
+          "SIN",
+          "WSSS",
+          "Lapangan Terbang Changi",
+          "airport",
+          "zhang yi ji chang",
+          "樟宜機場",
+          "Terminal 2",
+          "Terminal 3",
+          "Terminal 2/3"
+        ],
+        "cluster_key": "changi-airport-pms-complex"
+      },
+      "id": 64
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8215518,
+          1.265362
+        ]
+      },
+      "properties": {
+        "id": 65,
+        "name": "HarbourFront",
+        "line": "SingaporeNEL",
+        "order": 0,
+        "alternate_names": [
+          "துறைமுகம்",
+          "港湾",
+          "gang wan",
+          "港灣"
+        ],
+        "cluster_key": "harbourfront-vivocity-complex"
+      },
+      "id": 65
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8403231,
+          1.2806234
+        ]
+      },
+      "properties": {
+        "id": 66,
+        "name": "Outram Park",
+        "line": "SingaporeNEL",
+        "order": 1,
+        "alternate_names": [
+          "ஊட்ரம் பார்க்",
+          "欧南园",
+          "ou nan yuan",
+          "歐南園"
+        ]
+      },
+      "id": 66
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8440868,
+          1.2848933
+        ]
+      },
+      "properties": {
+        "id": 67,
+        "name": "Chinatown",
+        "line": "SingaporeNEL",
+        "order": 2,
+        "alternate_names": [
+          "சைனாடவுன்",
+          "牛车水",
+          "niu che shui",
+          "牛車水",
+          "niu ju shui"
+        ]
+      },
+      "id": 67
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8465975,
+          1.2882601500000002
+        ]
+      },
+      "properties": {
+        "id": 68,
+        "name": "Clarke Quay",
+        "line": "SingaporeNEL",
+        "order": 3,
+        "alternate_names": [
+          "கிளார்க் கீ",
+          "克拉码头",
+          "克拉碼頭",
+          "ke la ma tou"
+        ]
+      },
+      "id": 68
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8450411,
+          1.2992885
+        ]
+      },
+      "properties": {
+        "id": 69,
+        "name": "Dhoby Ghaut",
+        "line": "SingaporeNEL",
+        "order": 4,
+        "alternate_names": [
+          "டோபி காட்",
+          "多美歌",
+          "duo mei ge"
+        ]
+      },
+      "id": 69
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8492668,
+          1.3064454
+        ]
+      },
+      "properties": {
+        "id": 70,
+        "name": "Little India",
+        "line": "SingaporeNEL",
+        "order": 5,
+        "alternate_names": [
+          "லிட்டில் இந்தியா",
+          "小印度",
+          "Kandang Kerbau",
+          "xiao yin du"
+        ]
+      },
+      "id": 70
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.85433745,
+          1.3124897500000001
+        ]
+      },
+      "properties": {
+        "id": 71,
+        "name": "Farrer Park",
+        "line": "SingaporeNEL",
+        "order": 6,
+        "alternate_names": [
+          "ஃபேரர் பார்க்",
+          "花拉公园",
+          "hua la gong yuan",
+          "花拉公園"
+        ]
+      },
+      "id": 71
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8615108,
+          1.319155
+        ]
+      },
+      "properties": {
+        "id": 72,
+        "name": "Boon Keng",
+        "line": "SingaporeNEL",
+        "order": 7,
+        "alternate_names": [
+          "பூன் கெங்",
+          "文庆",
+          "文慶",
+          "wen qing"
+        ]
+      },
+      "id": 72
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.869185,
+          1.3314124
+        ]
+      },
+      "properties": {
+        "id": 73,
+        "name": "Potong Pasir",
+        "line": "SingaporeNEL",
+        "order": 8,
+        "alternate_names": [
+          "போத்தோங் பாசிர்",
+          "波东巴西",
+          "bo dong ba xi",
+          "波東巴西"
+        ]
+      },
+      "id": 73
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8707706,
+          1.3392016999999998
+        ]
+      },
+      "properties": {
+        "id": 74,
+        "name": "Woodleigh",
+        "line": "SingaporeNEL",
+        "order": 9,
+        "alternate_names": [
+          "உட் லீ",
+          "兀里",
+          "wu li",
+          "兀裏"
+        ]
+      },
+      "id": 74
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8737551,
+          1.3497478
+        ]
+      },
+      "properties": {
+        "id": 75,
+        "name": "Serangoon",
+        "line": "SingaporeNEL",
+        "order": 10,
+        "alternate_names": [
+          "சிராங்கூன்",
+          "实龙岗",
+          "shi long gang",
+          "實龍崗"
+        ]
+      },
+      "id": 75
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8850624,
+          1.3601113
+        ]
+      },
+      "properties": {
+        "id": 76,
+        "name": "Kovan",
+        "line": "SingaporeNEL",
+        "order": 11,
+        "alternate_names": [
+          "கோவன்",
+          "高文",
+          "gao wen"
+        ]
+      },
+      "id": 76
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8923913,
+          1.3708188
+        ]
+      },
+      "properties": {
+        "id": 77,
+        "name": "Hougang",
+        "line": "SingaporeNEL",
+        "order": 12,
+        "alternate_names": [
+          "ஹவ்காங்",
+          "后港",
+          "hou gang",
+          "後港"
+        ]
+      },
+      "id": 77
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8931346,
+          1.38297435
+        ]
+      },
+      "properties": {
+        "id": 78,
+        "name": "Buangkok",
+        "line": "SingaporeNEL",
+        "order": 13,
+        "alternate_names": [
+          "புவாங்கோக்",
+          "万国",
+          "wan guo",
+          "萬國"
+        ]
+      },
+      "id": 78
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8954485,
+          1.3917102
+        ]
+      },
+      "properties": {
+        "id": 79,
         "name": "Sengkang",
-        "line": "SingaporeMRTNortheastLine",
-        "order": 4
+        "line": "SingaporeNEL",
+        "order": 14,
+        "alternate_names": [
+          "செங்காங்",
+          "盛港",
+          "sheng gang"
+        ]
       },
-      "id": 409
+      "id": 79
     },
     {
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [103.83271, 1.36351]
+        "coordinates": [
+          103.90264015,
+          1.4053833500000001
+        ]
       },
       "properties": {
-        "id": 609,
-        "name": "Bright Hill",
-        "line": "CM_SingaporeMRT_tel",
-        "order": 3
+        "id": 80,
+        "name": "Punggol",
+        "line": "SingaporeNEL",
+        "order": 15,
+        "alternate_names": [
+          "பொங்கோல்",
+          "榜鹅",
+          "榜鵝",
+          "bang e"
+        ]
       },
-      "id": 609
+      "id": 80
     },
     {
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [103.819202, 1.306994]
+        "coordinates": [
+          103.9101214,
+          1.4149314
+        ]
       },
       "properties": {
-        "id": 618,
-        "name": "Napier",
-        "line": "CM_SingaporeMRT_tel",
-        "order": 3
+        "id": 81,
+        "name": "Punggol Coast",
+        "line": "SingaporeNEL",
+        "order": 16,
+        "alternate_names": [
+          "பொங்கோல் கோஸ்ட்",
+          "榜鹅海岸",
+          "bang e hai an",
+          "榜鵝海岸"
+        ]
       },
-      "id": 618
+      "id": 81
     },
     {
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [103.832989, 1.354454]
+        "coordinates": [
+          103.8450411,
+          1.2992885
+        ]
       },
       "properties": {
-        "id": 608,
-        "name": "Upper Thomson",
-        "line": "CM_SingaporeMRT_tel",
-        "order": 1
+        "id": 82,
+        "name": "Dhoby Ghaut",
+        "line": "SingaporeCCL",
+        "order": 0,
+        "alternate_names": [
+          "டோபி காட்",
+          "多美歌",
+          "duo mei ge"
+        ]
       },
-      "id": 608
+      "id": 82
     },
     {
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [103.8257, 1.320315]
+        "coordinates": [
+          103.8507246,
+          1.2968343
+        ]
       },
       "properties": {
-        "id": 617,
+        "id": 83,
+        "name": "Bras Basah",
+        "line": "SingaporeCCL",
+        "order": 1,
+        "alternate_names": [
+          "பிராஸ் பாசா",
+          "百胜",
+          "bai sheng",
+          "百勝"
+        ],
+        "cluster_key": "bras-basah-bencoolen-complex"
+      },
+      "id": 83
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8554789,
+          1.2933632
+        ]
+      },
+      "properties": {
+        "id": 84,
+        "name": "Esplanade",
+        "line": "SingaporeCCL",
+        "order": 2,
+        "alternate_names": [
+          "எஸ்பிளனேட்",
+          "滨海中心",
+          "bin hai zhong xin",
+          "濱海中心"
+        ]
+      },
+      "id": 84
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8611646,
+          1.2931376
+        ]
+      },
+      "properties": {
+        "id": 85,
+        "name": "Promenade",
+        "line": "SingaporeCCL",
+        "order": 3,
+        "alternate_names": [
+          "புரொமனாட்",
+          "宝门廊",
+          "bao men lang",
+          "寶門廊"
+        ]
+      },
+      "id": 85
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8638662,
+          1.29983805
+        ]
+      },
+      "properties": {
+        "id": 86,
+        "name": "Nicoll Highway",
+        "line": "SingaporeCCL",
+        "order": 4,
+        "alternate_names": [
+          "நிக்கல் நெடுஞ்சாலை",
+          "尼诰大道",
+          "ni gao da dao",
+          "尼誥大道"
+        ]
+      },
+      "id": 86
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.87535125,
+          1.30287245
+        ]
+      },
+      "properties": {
+        "id": 87,
+        "name": "Stadium",
+        "line": "SingaporeCCL",
+        "order": 5,
+        "alternate_names": [
+          "ஸ்டேடியம்",
+          "体育场",
+          "The Kallang",
+          "Kallang",
+          "Singapore Sports Hub",
+          "Sports Hub",
+          "ti yu chang",
+          "體育場"
+        ]
+      },
+      "id": 87
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8821526,
+          1.306109
+        ]
+      },
+      "properties": {
+        "id": 88,
+        "name": "Mountbatten",
+        "line": "SingaporeCCL",
+        "order": 6,
+        "alternate_names": [
+          "மவுண்ட்பேட்டன்",
+          "蒙巴登",
+          "meng ba deng"
+        ]
+      },
+      "id": 88
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.88861545,
+          1.3084315
+        ]
+      },
+      "properties": {
+        "id": 89,
+        "name": "Dakota",
+        "line": "SingaporeCCL",
+        "order": 7,
+        "alternate_names": [
+          "டகோட்டா",
+          "达科达",
+          "達科達",
+          "da ke da"
+        ]
+      },
+      "id": 89
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8920173,
+          1.3179924
+        ]
+      },
+      "properties": {
+        "id": 90,
+        "name": "Paya Lebar",
+        "line": "SingaporeCCL",
+        "order": 8,
+        "alternate_names": [
+          "பாய லேபார்",
+          "巴耶利峇",
+          "ba ye li ba"
+        ]
+      },
+      "id": 90
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8902464,
+          1.326522
+        ]
+      },
+      "properties": {
+        "id": 91,
+        "name": "MacPherson",
+        "line": "SingaporeCCL",
+        "order": 9,
+        "alternate_names": [
+          "மெக்பர்சன்",
+          "麦波申",
+          "mai bo shen",
+          "麥波申"
+        ]
+      },
+      "id": 91
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8882896,
+          1.3354235
+        ]
+      },
+      "properties": {
+        "id": 92,
+        "name": "Tai Seng",
+        "line": "SingaporeCCL",
+        "order": 10,
+        "alternate_names": [
+          "தை செங்",
+          "大成",
+          "Tai Sengkang",
+          "da cheng"
+        ]
+      },
+      "id": 92
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8796864,
+          1.3428409
+        ]
+      },
+      "properties": {
+        "id": 93,
+        "name": "Bartley",
+        "line": "SingaporeCCL",
+        "order": 11,
+        "alternate_names": [
+          "பார்ட்லி",
+          "巴特礼",
+          "ba te li",
+          "巴特禮"
+        ]
+      },
+      "id": 93
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8737551,
+          1.3497478
+        ]
+      },
+      "properties": {
+        "id": 94,
+        "name": "Serangoon",
+        "line": "SingaporeCCL",
+        "order": 12,
+        "alternate_names": [
+          "சிராங்கூன்",
+          "实龙岗",
+          "shi long gang",
+          "實龍崗"
+        ]
+      },
+      "id": 94
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.863954,
+          1.3514918
+        ]
+      },
+      "properties": {
+        "id": 95,
+        "name": "Lorong Chuan",
+        "line": "SingaporeCCL",
+        "order": 13,
+        "alternate_names": [
+          "லோரோங் சுவான்",
+          "罗弄泉",
+          "luo nong quan",
+          "羅弄泉"
+        ]
+      },
+      "id": 95
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8482722,
+          1.3515715
+        ]
+      },
+      "properties": {
+        "id": 96,
+        "name": "Bishan",
+        "line": "SingaporeCCL",
+        "order": 14,
+        "alternate_names": [
+          "பீஷான்",
+          "碧山",
+          "bi shan"
+        ]
+      },
+      "id": 96
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8394422,
+          1.3486513
+        ]
+      },
+      "properties": {
+        "id": 97,
+        "name": "Marymount",
+        "line": "SingaporeCCL",
+        "order": 15,
+        "alternate_names": [
+          "மேரிமவுண்ட்",
+          "玛丽蒙",
+          "ma li meng",
+          "瑪麗蒙"
+        ]
+      },
+      "id": 97
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8396258,
+          1.3373654
+        ]
+      },
+      "properties": {
+        "id": 98,
+        "name": "Caldecott",
+        "line": "SingaporeCCL",
+        "order": 16,
+        "alternate_names": [
+          "கால்டிகாட்",
+          "加利谷",
+          "jia li gu"
+        ]
+      },
+      "id": 98
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.83067915000001,
+          1.33374755
+        ]
+      },
+      "properties": {
+        "id": 99,
+        "name": "Bukit Brown",
+        "line": "SingaporeCCL",
+        "order": 17,
+        "alternate_names": [
+          "புக்கிட் பிரவுன்",
+          "武吉布朗",
+          "wu ji bu lang"
+        ]
+      },
+      "id": 99
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8154992,
+          1.3225929
+        ]
+      },
+      "properties": {
+        "id": 100,
+        "name": "Botanic Gardens",
+        "line": "SingaporeCCL",
+        "order": 18,
+        "alternate_names": [
+          "Kebun Bunga",
+          "பூ மலை",
+          "植物园",
+          "zhi wu yuan",
+          "植物園"
+        ]
+      },
+      "id": 100
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8074893,
+          1.3174554
+        ]
+      },
+      "properties": {
+        "id": 101,
+        "name": "Farrer Road",
+        "line": "SingaporeCCL",
+        "order": 19,
+        "alternate_names": [
+          "ஃபேரர் சாலை",
+          "花拉路",
+          "hua la lu"
+        ]
+      },
+      "id": 101
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.7962807,
+          1.3121751
+        ]
+      },
+      "properties": {
+        "id": 102,
+        "name": "Holland Village",
+        "line": "SingaporeCCL",
+        "order": 20,
+        "alternate_names": [
+          "ஹாலந்து வில்லேஜ்",
+          "荷兰村",
+          "荷蘭村",
+          "he lan cun"
+        ]
+      },
+      "id": 102
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.7909841,
+          1.3071702
+        ]
+      },
+      "properties": {
+        "id": 103,
+        "name": "Buona Vista",
+        "line": "SingaporeCCL",
+        "order": 21,
+        "alternate_names": [
+          "புவன விஸ்தா",
+          "波那维斯达",
+          "波那維斯達",
+          "bo na wei si da"
+        ]
+      },
+      "id": 103
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.7873455,
+          1.2996553
+        ]
+      },
+      "properties": {
+        "id": 104,
+        "name": "one-north",
+        "line": "SingaporeCCL",
+        "order": 22,
+        "alternate_names": [
+          "ஒன்-நார்த்",
+          "纬壹",
+          "wei yi",
+          "緯壹"
+        ]
+      },
+      "id": 104
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.7843873,
+          1.2932844
+        ]
+      },
+      "properties": {
+        "id": 105,
+        "name": "Kent Ridge",
+        "line": "SingaporeCCL",
+        "order": 23,
+        "alternate_names": [
+          "கெண்ட் ரிஜ்",
+          "肯特岗",
+          "ken te gang",
+          "肯特崗"
+        ]
+      },
+      "id": 105
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.7817718,
+          1.2826302
+        ]
+      },
+      "properties": {
+        "id": 106,
+        "name": "Haw Par Villa",
+        "line": "SingaporeCCL",
+        "order": 24,
+        "alternate_names": [
+          "ஹா பர் வில்லா",
+          "虎豹别墅",
+          "hu bao bie shu",
+          "虎豹別墅"
+        ]
+      },
+      "id": 106
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.7913483,
+          1.2763232
+        ]
+      },
+      "properties": {
+        "id": 107,
+        "name": "Pasir Panjang",
+        "line": "SingaporeCCL",
+        "order": 25,
+        "alternate_names": [
+          "பாசிர் பாஞ்சாங்",
+          "巴西班让",
+          "ba xi ban rang",
+          "巴西班讓"
+        ]
+      },
+      "id": 107
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8030132,
+          1.2723851
+        ]
+      },
+      "properties": {
+        "id": 108,
+        "name": "Labrador Park",
+        "line": "SingaporeCCL",
+        "order": 26,
+        "alternate_names": [
+          "லாப்ரடார் பூங்கா",
+          "拉柏多公园",
+          "la bai duo gong yuan",
+          "拉柏多公園"
+        ]
+      },
+      "id": 108
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.809889,
+          1.2705443
+        ]
+      },
+      "properties": {
+        "id": 109,
+        "name": "Telok Blangah",
+        "line": "SingaporeCCL",
+        "order": 27,
+        "alternate_names": [
+          "தெலுக் பிளாங்கா",
+          "直落布兰雅",
+          "zhi luo bu lan ya",
+          "直落布蘭雅"
+        ]
+      },
+      "id": 109
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8215518,
+          1.265362
+        ]
+      },
+      "properties": {
+        "id": 110,
+        "name": "HarbourFront",
+        "line": "SingaporeCCL",
+        "order": 28,
+        "alternate_names": [
+          "துறைமுகம்",
+          "港湾",
+          "gang wan",
+          "港灣"
+        ],
+        "cluster_key": "harbourfront-vivocity-complex"
+      },
+      "id": 110
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8547565,
+          1.2752249
+        ]
+      },
+      "properties": {
+        "id": 114,
+        "name": "Marina Bay",
+        "line": "SingaporeCCL",
+        "order": 32,
+        "alternate_names": [
+          "மரீனா பே",
+          "滨海湾",
+          "bin hai wan",
+          "濱海灣"
+        ]
+      },
+      "id": 114
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.85968070000001,
+          1.2826023
+        ]
+      },
+      "properties": {
+        "id": 115,
+        "name": "Bayfront",
+        "line": "SingaporeCCL",
+        "order": 33,
+        "alternate_names": [
+          "பேஃபிரண்ட்",
+          "海湾舫",
+          "hai wan fang",
+          "海灣舫"
+        ]
+      },
+      "id": 115
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.7616866,
+          1.3791419
+        ]
+      },
+      "properties": {
+        "id": 117,
+        "name": "Bukit Panjang",
+        "line": "SingaporeDTL",
+        "order": 1,
+        "alternate_names": [
+          "புக்கிட் பாஞ்சாங்",
+          "武吉班让",
+          "wu ji ban rang",
+          "武吉班讓"
+        ]
+      },
+      "id": 117
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.7646762,
+          1.3693244
+        ]
+      },
+      "properties": {
+        "id": 118,
+        "name": "Cashew",
+        "line": "SingaporeDTL",
+        "order": 2,
+        "alternate_names": [
+          "முந்திரி",
+          "凯秀",
+          "kai xiu",
+          "凱秀"
+        ]
+      },
+      "id": 118
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.7673746,
+          1.3623703
+        ]
+      },
+      "properties": {
+        "id": 119,
+        "name": "Hillview",
+        "line": "SingaporeDTL",
+        "order": 3,
+        "alternate_names": [
+          "ஹில்வியூ",
+          "山景",
+          "shan jing"
+        ]
+      },
+      "id": 119
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.7692453,
+          1.3545451
+        ]
+      },
+      "properties": {
+        "id": 120,
+        "name": "Hume",
+        "line": "SingaporeDTL",
+        "order": 4,
+        "alternate_names": [
+          "ஹியூம்",
+          "谦道",
+          "qian dao",
+          "謙道"
+        ]
+      },
+      "id": 120
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.77587765,
+          1.3410913500000001
+        ]
+      },
+      "properties": {
+        "id": 121,
+        "name": "Beauty World",
+        "line": "SingaporeDTL",
+        "order": 5,
+        "alternate_names": [
+          "பியூட்டி வோர்ல்ட்",
+          "美世界",
+          "mei shi jie"
+        ]
+      },
+      "id": 121
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.7838261,
+          1.33566325
+        ]
+      },
+      "properties": {
+        "id": 122,
+        "name": "King Albert Park",
+        "line": "SingaporeDTL",
+        "order": 6,
+        "alternate_names": [
+          "கிங் ஆல்பர்ட் பார்க்",
+          "阿尔柏王园",
+          "a er bai wang yuan",
+          "阿爾柏王園"
+        ]
+      },
+      "id": 122
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.7971978,
+          1.3308729
+        ]
+      },
+      "properties": {
+        "id": 123,
+        "name": "Sixth Avenue",
+        "line": "SingaporeDTL",
+        "order": 7,
+        "alternate_names": [
+          "சிக்ஸ்த் அவென்யூ",
+          "第六道",
+          "di liu dao"
+        ]
+      },
+      "id": 123
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.80726014999999,
+          1.3259029
+        ]
+      },
+      "properties": {
+        "id": 124,
+        "name": "Tan Kah Kee",
+        "line": "SingaporeDTL",
+        "order": 8,
+        "alternate_names": [
+          "டான் கா கீ",
+          "陈嘉庚",
+          "chen jia geng",
+          "陳嘉庚"
+        ]
+      },
+      "id": 124
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8154992,
+          1.3225929
+        ]
+      },
+      "properties": {
+        "id": 125,
+        "name": "Botanic Gardens",
+        "line": "SingaporeDTL",
+        "order": 9,
+        "alternate_names": [
+          "Kebun Bunga",
+          "பூ மலை",
+          "植物园",
+          "zhi wu yuan",
+          "植物園"
+        ]
+      },
+      "id": 125
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8254544,
+          1.3202722
+        ]
+      },
+      "properties": {
+        "id": 126,
         "name": "Stevens",
-        "line": "CM_SingaporeMRT_tel",
-        "order": 1
+        "line": "SingaporeDTL",
+        "order": 10,
+        "alternate_names": [
+          "ஸ்டீவன்ஸ்",
+          "史蒂芬",
+          "shi di fen"
+        ]
       },
-      "id": 617
+      "id": 126
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8387216,
+          1.3129721
+        ]
+      },
+      "properties": {
+        "id": 127,
+        "name": "Newton",
+        "line": "SingaporeDTL",
+        "order": 11,
+        "alternate_names": [
+          "நியூட்டன்",
+          "纽顿",
+          "niu dun",
+          "紐頓"
+        ]
+      },
+      "id": 127
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8492668,
+          1.3064454
+        ]
+      },
+      "properties": {
+        "id": 128,
+        "name": "Little India",
+        "line": "SingaporeDTL",
+        "order": 12,
+        "alternate_names": [
+          "லிட்டில் இந்தியா",
+          "小印度",
+          "Kandang Kerbau",
+          "xiao yin du"
+        ]
+      },
+      "id": 128
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8524654,
+          1.3039433
+        ]
+      },
+      "properties": {
+        "id": 129,
+        "name": "Rochor",
+        "line": "SingaporeDTL",
+        "order": 13,
+        "alternate_names": [
+          "ரோச்சோர்",
+          "梧槽",
+          "wu cao"
+        ]
+      },
+      "id": 129
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8558412,
+          1.3006294
+        ]
+      },
+      "properties": {
+        "id": 130,
+        "name": "Bugis",
+        "line": "SingaporeDTL",
+        "order": 14,
+        "alternate_names": [
+          "பூகிஸ்",
+          "武吉士",
+          "wu ji shi"
+        ]
+      },
+      "id": 130
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8609188,
+          1.2931821
+        ]
+      },
+      "properties": {
+        "id": 131,
+        "name": "Promenade",
+        "line": "SingaporeDTL",
+        "order": 15,
+        "alternate_names": [
+          "புரொமனாட்",
+          "宝门廊",
+          "bao men lang",
+          "寶門廊"
+        ]
+      },
+      "id": 131
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.85968070000001,
+          1.2826023
+        ]
+      },
+      "properties": {
+        "id": 132,
+        "name": "Bayfront",
+        "line": "SingaporeDTL",
+        "order": 16,
+        "alternate_names": [
+          "பேஃபிரண்ட்",
+          "海湾舫",
+          "hai wan fang",
+          "海灣舫"
+        ]
+      },
+      "id": 132
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.85279075,
+          1.2795107
+        ]
+      },
+      "properties": {
+        "id": 133,
+        "name": "Downtown",
+        "line": "SingaporeDTL",
+        "order": 17,
+        "alternate_names": [
+          "டௌன்டவுன்",
+          "市中心",
+          "shi zhong xin"
+        ]
+      },
+      "id": 133
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8483172,
+          1.2824048
+        ]
+      },
+      "properties": {
+        "id": 134,
+        "name": "Telok Ayer",
+        "line": "SingaporeDTL",
+        "order": 18,
+        "alternate_names": [
+          "தெலுக் ஆயர்",
+          "直落亚逸",
+          "zhi luo ya yi",
+          "直落亞逸"
+        ]
+      },
+      "id": 134
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8440868,
+          1.2848933
+        ]
+      },
+      "properties": {
+        "id": 135,
+        "name": "Chinatown",
+        "line": "SingaporeDTL",
+        "order": 19,
+        "alternate_names": [
+          "சைனாடவுன்",
+          "牛车水",
+          "niu che shui",
+          "牛車水",
+          "niu ju shui"
+        ]
+      },
+      "id": 135
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8443455,
+          1.2924885499999998
+        ]
+      },
+      "properties": {
+        "id": 136,
+        "name": "Fort Canning",
+        "line": "SingaporeDTL",
+        "order": 20,
+        "alternate_names": [
+          "ஃபோர்ட் கெனிங்",
+          "福康宁",
+          "fu kang ning",
+          "福康寧"
+        ]
+      },
+      "id": 136
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8501293,
+          1.2986261
+        ]
+      },
+      "properties": {
+        "id": 137,
+        "name": "Bencoolen",
+        "line": "SingaporeDTL",
+        "order": 21,
+        "alternate_names": [
+          "பென்கூலன்",
+          "明古連",
+          "ming gu lian"
+        ],
+        "cluster_key": "bras-basah-bencoolen-complex"
+      },
+      "id": 137
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8554237,
+          1.3054271
+        ]
+      },
+      "properties": {
+        "id": 138,
+        "name": "Jalan Besar",
+        "line": "SingaporeDTL",
+        "order": 22,
+        "alternate_names": [
+          "ஜாலான் புசார்",
+          "惹兰勿刹",
+          "re lan wu cha",
+          "惹蘭勿剎"
+        ]
+      },
+      "id": 138
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.86272505,
+          1.31363605
+        ]
+      },
+      "properties": {
+        "id": 139,
+        "name": "Bendemeer",
+        "line": "SingaporeDTL",
+        "order": 23,
+        "alternate_names": [
+          "பெண்டிமியர்",
+          "明地迷亚",
+          "ming di mi ya",
+          "明地迷亞"
+        ]
+      },
+      "id": 139
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.87195865,
+          1.3215051500000001
+        ]
+      },
+      "properties": {
+        "id": 140,
+        "name": "Geylang Bahru",
+        "line": "SingaporeDTL",
+        "order": 24,
+        "alternate_names": [
+          "கேலாங் பாரு",
+          "芽笼峇鲁",
+          "ya long ba lu",
+          "芽籠峇魯"
+        ]
+      },
+      "id": 140
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.88333985,
+          1.326848
+        ]
+      },
+      "properties": {
+        "id": 141,
+        "name": "Mattar",
+        "line": "SingaporeDTL",
+        "order": 25,
+        "alternate_names": [
+          "மாத்தார்",
+          "玛达",
+          "ma da",
+          "瑪達"
+        ]
+      },
+      "id": 141
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8902464,
+          1.326522
+        ]
+      },
+      "properties": {
+        "id": 142,
+        "name": "MacPherson",
+        "line": "SingaporeDTL",
+        "order": 26,
+        "alternate_names": [
+          "மெக்பர்சன்",
+          "麦波申",
+          "mai bo shen",
+          "麥波申"
+        ]
+      },
+      "id": 142
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.89924865,
+          1.3299411
+        ]
+      },
+      "properties": {
+        "id": 143,
+        "name": "Ubi",
+        "line": "SingaporeDTL",
+        "order": 27,
+        "alternate_names": [
+          "உபி",
+          "乌美",
+          "wu mei",
+          "烏美"
+        ]
+      },
+      "id": 143
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9083722,
+          1.3350694
+        ]
+      },
+      "properties": {
+        "id": 144,
+        "name": "Kaki Bukit",
+        "line": "SingaporeDTL",
+        "order": 28,
+        "alternate_names": [
+          "காக்கி புக்கிட்",
+          "加基武吉",
+          "jia ji wu ji"
+        ]
+      },
+      "id": 144
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9183122,
+          1.3345988
+        ]
+      },
+      "properties": {
+        "id": 145,
+        "name": "Bedok North",
+        "line": "SingaporeDTL",
+        "order": 29,
+        "alternate_names": [
+          "பிடோக் நார்த்",
+          "勿洛北",
+          "wu luo bei"
+        ]
+      },
+      "id": 145
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.93246525,
+          1.33660425
+        ]
+      },
+      "properties": {
+        "id": 146,
+        "name": "Bedok Reservoir",
+        "line": "SingaporeDTL",
+        "order": 30,
+        "alternate_names": [
+          "பிடோக் ரெசவோர்",
+          "勿洛蓄水池",
+          "wu luo xu shui chi"
+        ]
+      },
+      "id": 146
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9383798,
+          1.3456981
+        ]
+      },
+      "properties": {
+        "id": 147,
+        "name": "Tampines West",
+        "line": "SingaporeDTL",
+        "order": 31,
+        "alternate_names": [
+          "தெம்பினிஸ் வெஸ்ட்",
+          "淡滨尼西",
+          "dan bin ni xi",
+          "淡濱尼西"
+        ]
+      },
+      "id": 147
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9435837,
+          1.355849
+        ]
+      },
+      "properties": {
+        "id": 148,
+        "name": "Tampines",
+        "line": "SingaporeDTL",
+        "order": 32,
+        "alternate_names": [
+          "தெம்பினிஸ்",
+          "淡滨尼",
+          "淡濱尼",
+          "dan bin ni"
+        ]
+      },
+      "id": 148
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9547228,
+          1.3562446
+        ]
+      },
+      "properties": {
+        "id": 149,
+        "name": "Tampines East",
+        "line": "SingaporeDTL",
+        "order": 33,
+        "alternate_names": [
+          "தெம்பினிஸ் ஈஸ்ட்",
+          "淡滨尼东",
+          "dan bin ni dong",
+          "淡濱尼東"
+        ]
+      },
+      "id": 149
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.96147045000001,
+          1.3419018999999999
+        ]
+      },
+      "properties": {
+        "id": 150,
+        "name": "Upper Changi",
+        "line": "SingaporeDTL",
+        "order": 34,
+        "alternate_names": [
+          "அப்பர் சாங்கி",
+          "樟宜上段",
+          "zhang yi shang duan"
+        ]
+      },
+      "id": 150
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9621264,
+          1.3355183
+        ]
+      },
+      "properties": {
+        "id": 151,
+        "name": "Expo",
+        "line": "SingaporeDTL",
+        "order": 35,
+        "alternate_names": [
+          "எக்ஸ்போ",
+          "博览",
+          "博覽",
+          "bo lan"
+        ]
+      },
+      "id": 151
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.7857682,
+          1.4483021
+        ]
+      },
+      "properties": {
+        "id": 154,
+        "name": "Woodlands North",
+        "line": "SingaporeTEL",
+        "order": 0,
+        "alternate_names": [
+          "உட்லண்ட்ஸ் நார்த்",
+          "兀兰北",
+          "兀蘭北",
+          "Woodlands North RTS",
+          "wu lan bei"
+        ]
+      },
+      "id": 154
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.7878508,
+          1.4375072
+        ]
+      },
+      "properties": {
+        "id": 155,
+        "name": "Woodlands",
+        "line": "SingaporeTEL",
+        "order": 1,
+        "alternate_names": [
+          "ஊட்லண்ட்ஸ்",
+          "兀兰",
+          "wu lan",
+          "兀蘭"
+        ]
+      },
+      "id": 155
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.7938378,
+          1.4272942
+        ]
+      },
+      "properties": {
+        "id": 156,
+        "name": "Woodlands South",
+        "line": "SingaporeTEL",
+        "order": 2,
+        "alternate_names": [
+          "உட்லண்ட்ஸ் சவுத்",
+          "兀兰南",
+          "wu lan nan",
+          "兀蘭南"
+        ]
+      },
+      "id": 156
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.818031,
+          1.3982108
+        ]
+      },
+      "properties": {
+        "id": 157,
+        "name": "Springleaf",
+        "line": "SingaporeTEL",
+        "order": 3,
+        "alternate_names": [
+          "ஸ்பிரிங்லீஃவ்",
+          "春叶",
+          "chun ye",
+          "春葉"
+        ]
+      },
+      "id": 157
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8365515,
+          1.3849484
+        ]
+      },
+      "properties": {
+        "id": 158,
+        "name": "Lentor",
+        "line": "SingaporeTEL",
+        "order": 4,
+        "alternate_names": [
+          "லென்ட்டோர்",
+          "伦多",
+          "lun duo",
+          "倫多"
+        ]
+      },
+      "id": 158
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8368425,
+          1.3722457
+        ]
+      },
+      "properties": {
+        "id": 159,
+        "name": "Mayflower",
+        "line": "SingaporeTEL",
+        "order": 5,
+        "alternate_names": [
+          "மேஃபிளவர்",
+          "美华",
+          "mei hua",
+          "美華"
+        ]
+      },
+      "id": 159
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8337511,
+          1.3640242
+        ]
+      },
+      "properties": {
+        "id": 160,
+        "name": "Bright Hill",
+        "line": "SingaporeTEL",
+        "order": 6,
+        "alternate_names": [
+          "பிரைட் ஹில்",
+          "光明山",
+          "guang ming shan"
+        ]
+      },
+      "id": 160
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8327997,
+          1.3545309
+        ]
+      },
+      "properties": {
+        "id": 161,
+        "name": "Upper Thomson",
+        "line": "SingaporeTEL",
+        "order": 7,
+        "alternate_names": [
+          "அப்பர் தாம்சன்",
+          "汤申路上段",
+          "湯申路上段",
+          "tang shen lu shang duan"
+        ]
+      },
+      "id": 161
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8401673,
+          1.3373903
+        ]
+      },
+      "properties": {
+        "id": 162,
+        "name": "Caldecott",
+        "line": "SingaporeTEL",
+        "order": 8,
+        "alternate_names": [
+          "கால்டிகாட்",
+          "加利谷",
+          "jia li gu"
+        ]
+      },
+      "id": 162
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.83517685000001,
+          1.3285726
+        ]
+      },
+      "properties": {
+        "id": 163,
+        "name": "Mount Pleasant",
+        "line": "SingaporeTEL",
+        "order": 9,
+        "alternate_names": [
+          "மவுண்ட் பிளசண்ட்",
+          "快乐山",
+          "kuai le shan",
+          "快樂山"
+        ]
+      },
+      "id": 163
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8254544,
+          1.3202722
+        ]
+      },
+      "properties": {
+        "id": 164,
+        "name": "Stevens",
+        "line": "SingaporeTEL",
+        "order": 10,
+        "alternate_names": [
+          "ஸ்டீவன்ஸ்",
+          "史蒂芬",
+          "shi di fen"
+        ]
+      },
+      "id": 164
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8188512,
+          1.3067537
+        ]
+      },
+      "properties": {
+        "id": 165,
+        "name": "Napier",
+        "line": "SingaporeTEL",
+        "order": 11,
+        "alternate_names": [
+          "நேப்பியர்",
+          "纳比雅",
+          "na bi ya",
+          "納比雅"
+        ]
+      },
+      "id": 165
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8240197,
+          1.3025144
+        ]
+      },
+      "properties": {
+        "id": 166,
+        "name": "Orchard Boulevard",
+        "line": "SingaporeTEL",
+        "order": 12,
+        "alternate_names": [
+          "ஆர்ச்சர்ட் பொலிவார்ட்",
+          "乌节林荫道",
+          "wu jie lin yin dao",
+          "烏節林蔭道"
+        ]
+      },
+      "id": 166
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8326923,
+          1.3013808
+        ]
+      },
+      "properties": {
+        "id": 167,
+        "name": "Orchard",
+        "line": "SingaporeTEL",
+        "order": 13,
+        "alternate_names": [
+          "ஆர்ச்சர்ட்",
+          "乌节",
+          "wu jie",
+          "烏節"
+        ]
+      },
+      "id": 167
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8335553,
+          1.2947081
+        ]
+      },
+      "properties": {
+        "id": 168,
+        "name": "Great World",
+        "line": "SingaporeTEL",
+        "order": 14,
+        "alternate_names": [
+          "கிரேட் வோர்ல்ட்",
+          "大世界",
+          "da shi jie"
+        ]
+      },
+      "id": 168
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8335899,
+          1.2885472
+        ]
+      },
+      "properties": {
+        "id": 169,
+        "name": "Havelock",
+        "line": "SingaporeTEL",
+        "order": 15,
+        "alternate_names": [
+          "ஹவ்லாக்",
+          "合乐",
+          "he le",
+          "合樂"
+        ]
+      },
+      "id": 169
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8404948,
+          1.2808106
+        ]
+      },
+      "properties": {
+        "id": 170,
+        "name": "Outram Park",
+        "line": "SingaporeTEL",
+        "order": 16,
+        "alternate_names": [
+          "ஊட்ரம் பார்க்",
+          "欧南园",
+          "ou nan yuan",
+          "歐南園"
+        ]
+      },
+      "id": 170
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8439117,
+          1.280467
+        ]
+      },
+      "properties": {
+        "id": 171,
+        "name": "Maxwell",
+        "line": "SingaporeTEL",
+        "order": 17,
+        "alternate_names": [
+          "மெச்ஸ்வெல்",
+          "麦士威",
+          "mai shi wei",
+          "麥士威"
+        ]
+      },
+      "id": 171
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8508924,
+          1.277447
+        ]
+      },
+      "properties": {
+        "id": 172,
+        "name": "Shenton Way",
+        "line": "SingaporeTEL",
+        "order": 18,
+        "alternate_names": [
+          "ஷென்ட்டன் வே",
+          "珊顿大道",
+          "shan dun da dao",
+          "珊頓大道"
+        ]
+      },
+      "id": 172
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8547235,
+          1.2751336
+        ]
+      },
+      "properties": {
+        "id": 173,
+        "name": "Marina Bay",
+        "line": "SingaporeTEL",
+        "order": 19,
+        "alternate_names": [
+          "மரீனா பே",
+          "滨海湾",
+          "bin hai wan",
+          "濱海灣"
+        ]
+      },
+      "id": 173
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8631043,
+          1.2740421
+        ]
+      },
+      "properties": {
+        "id": 174,
+        "name": "Marina South",
+        "line": "SingaporeTEL",
+        "order": 20,
+        "alternate_names": [
+          "மரினா சவுத்",
+          "滨海南",
+          "bin hai nan",
+          "濱海南"
+        ],
+        "cluster_key": "marina-south-pier-complex"
+      },
+      "id": 174
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8679883,
+          1.2791957
+        ]
+      },
+      "properties": {
+        "id": 175,
+        "name": "Gardens by the Bay",
+        "line": "SingaporeTEL",
+        "order": 21,
+        "alternate_names": [
+          "Taman di Pesisiran",
+          "கரையோரப் பூந்தோட்டங்கள்",
+          "濱海灣花園",
+          "bin hai wan hua yuan",
+          "滨海湾花园"
+        ]
+      },
+      "id": 175
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8689903,
+          1.2909428
+        ]
+      },
+      "properties": {
+        "id": 176,
+        "name": "Founders' Memorial",
+        "line": "SingaporeTEL",
+        "order": 22,
+        "alternate_names": [
+          "தேச நிறுவனர்கள் நினைவிட நிலையம்",
+          "建国元勋纪念堂",
+          "jian guo yuan xun ji nian tang",
+          "建國元勳紀念堂"
+        ]
+      },
+      "id": 176
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8734616,
+          1.2971827
+        ]
+      },
+      "properties": {
+        "id": 177,
+        "name": "Tanjong Rhu",
+        "line": "SingaporeTEL",
+        "order": 23,
+        "alternate_names": [
+          "தஞ்சோங் ரூ",
+          "丹戎禺",
+          "dan rong yu"
+        ]
+      },
+      "id": 177
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8862178,
+          1.2979605
+        ]
+      },
+      "properties": {
+        "id": 178,
+        "name": "Katong Park",
+        "line": "SingaporeTEL",
+        "order": 24,
+        "alternate_names": [
+          "காத்தோங் பார்க்",
+          "加东公园",
+          "jia dong gong yuan",
+          "加東公園"
+        ]
+      },
+      "id": 178
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.897742,
+          1.2992659
+        ]
+      },
+      "properties": {
+        "id": 179,
+        "name": "Tanjong Katong",
+        "line": "SingaporeTEL",
+        "order": 25,
+        "alternate_names": [
+          "தஞ்சோங் காத்தோங்",
+          "丹戎加东",
+          "dan rong jia dong",
+          "丹戎加東"
+        ]
+      },
+      "id": 179
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.906888,
+          1.3039642
+        ]
+      },
+      "properties": {
+        "id": 180,
+        "name": "Marine Parade",
+        "line": "SingaporeTEL",
+        "order": 26,
+        "alternate_names": [
+          "மரீன் பரேட்",
+          "马林百列",
+          "ma lin bai lie",
+          "馬林百列"
+        ]
+      },
+      "id": 180
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9149693,
+          1.3068398
+        ]
+      },
+      "properties": {
+        "id": 181,
+        "name": "Marine Terrace",
+        "line": "SingaporeTEL",
+        "order": 27,
+        "alternate_names": [
+          "மரீன் டெரஸ்",
+          "马林台",
+          "ma lin tai",
+          "馬林台"
+        ]
+      },
+      "id": 181
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9299231,
+          1.3099795
+        ]
+      },
+      "properties": {
+        "id": 182,
+        "name": "Siglap",
+        "line": "SingaporeTEL",
+        "order": 28,
+        "alternate_names": [
+          "சிக்லாப்",
+          "实乞纳",
+          "shi qi na",
+          "實乞納"
+        ]
+      },
+      "id": 182
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9422009,
+          1.3130985
+        ]
+      },
+      "properties": {
+        "id": 183,
+        "name": "Bayshore",
+        "line": "SingaporeTEL",
+        "order": 29,
+        "alternate_names": [
+          "பேஷோர்",
+          "碧湾",
+          "bi wan",
+          "碧灣"
+        ]
+      },
+      "id": 183
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.7445482,
+          1.3846997
+        ]
+      },
+      "properties": {
+        "id": 186,
+        "name": "Choa Chu Kang",
+        "line": "SingaporeBPLRT",
+        "order": 0,
+        "alternate_names": [
+          "சுவா சூ காங்",
+          "蔡厝港",
+          "cai cuo gang"
+        ]
+      },
+      "id": 186
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.7452826,
+          1.3802716
+        ]
+      },
+      "properties": {
+        "id": 187,
+        "name": "South View",
+        "line": "SingaporeBPLRT",
+        "order": 1,
+        "alternate_names": [
+          "சவுத் வியூ",
+          "南景",
+          "nan jing"
+        ]
+      },
+      "id": 187
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.7490207,
+          1.3786034
+        ]
+      },
+      "properties": {
+        "id": 188,
+        "name": "Keat Hong",
+        "line": "SingaporeBPLRT",
+        "order": 2,
+        "alternate_names": [
+          "கியட் ஹோங்",
+          "吉丰",
+          "ji feng",
+          "吉豐"
+        ]
+      },
+      "id": 188
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.7536471,
+          1.3766705
+        ]
+      },
+      "properties": {
+        "id": 189,
+        "name": "Teck Whye",
+        "line": "SingaporeBPLRT",
+        "order": 3,
+        "alternate_names": [
+          "டெக் வாய்",
+          "德惠",
+          "de hui"
+        ]
+      },
+      "id": 189
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.758008,
+          1.3786164
+        ]
+      },
+      "properties": {
+        "id": 190,
+        "name": "Phoenix",
+        "line": "SingaporeBPLRT",
+        "order": 4,
+        "alternate_names": [
+          "ஃபீனிக்ஸ்",
+          "凤凰",
+          "feng huang",
+          "鳳凰"
+        ]
+      },
+      "id": 190
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.763064,
+          1.3779031
+        ]
+      },
+      "properties": {
+        "id": 191,
+        "name": "Bukit Panjang",
+        "line": "SingaporeBPLRT",
+        "order": 5,
+        "alternate_names": [
+          "புக்கிட் பாஞ்சாங்",
+          "武吉班让",
+          "wu ji ban rang",
+          "武吉班讓"
+        ]
+      },
+      "id": 191
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.7666291,
+          1.3777652
+        ]
+      },
+      "properties": {
+        "id": 192,
+        "name": "Petir",
+        "line": "SingaporeBPLRT",
+        "order": 6,
+        "alternate_names": [
+          "பெட்டீர்",
+          "柏提",
+          "bai ti"
+        ]
+      },
+      "id": 192
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.7712587,
+          1.3761841
+        ]
+      },
+      "properties": {
+        "id": 193,
+        "name": "Pending",
+        "line": "SingaporeBPLRT",
+        "order": 7,
+        "alternate_names": [
+          "பெண்டிங்",
+          "秉定",
+          "bing ding"
+        ]
+      },
+      "id": 193
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.7726501,
+          1.3800412
+        ]
+      },
+      "properties": {
+        "id": 194,
+        "name": "Bangkit",
+        "line": "SingaporeBPLRT",
+        "order": 8,
+        "alternate_names": [
+          "பங்கிட்",
+          "万吉",
+          "wan ji",
+          "萬吉"
+        ]
+      },
+      "id": 194
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.7708754,
+          1.3845932
+        ]
+      },
+      "properties": {
+        "id": 195,
+        "name": "Fajar",
+        "line": "SingaporeBPLRT",
+        "order": 9,
+        "alternate_names": [
+          "ஃபஜார்",
+          "法嘉",
+          "fa jia"
+        ]
+      },
+      "id": 195
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.7695804,
+          1.3877855
+        ]
+      },
+      "properties": {
+        "id": 196,
+        "name": "Segar",
+        "line": "SingaporeBPLRT",
+        "order": 10,
+        "alternate_names": [
+          "செகார்",
+          "实加",
+          "shi jia",
+          "實加"
+        ]
+      },
+      "id": 196
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.7645139,
+          1.3866937
+        ]
+      },
+      "properties": {
+        "id": 197,
+        "name": "Jelapang",
+        "line": "SingaporeBPLRT",
+        "order": 11,
+        "alternate_names": [
+          "ஜெலப்பாங்",
+          "泽拉邦",
+          "ze la bang",
+          "澤拉邦"
+        ]
+      },
+      "id": 197
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.7623822,
+          1.3826778
+        ]
+      },
+      "properties": {
+        "id": 198,
+        "name": "Senja",
+        "line": "SingaporeBPLRT",
+        "order": 12,
+        "alternate_names": [
+          "சென்ஜா",
+          "信佳",
+          "xin jia"
+        ]
+      },
+      "id": 198
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8954485,
+          1.3917102
+        ]
+      },
+      "properties": {
+        "id": 199,
+        "name": "Sengkang",
+        "line": "SingaporeSKLRT",
+        "order": 0,
+        "alternate_names": [
+          "செங்காங்",
+          "盛港",
+          "sheng gang"
+        ]
+      },
+      "id": 199
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9004349,
+          1.394518
+        ]
+      },
+      "properties": {
+        "id": 200,
+        "name": "Compassvale",
+        "line": "SingaporeSKLRT",
+        "order": 1,
+        "alternate_names": [
+          "கம்பஸ்வேல்",
+          "康埔桦",
+          "kang pu hua",
+          "康埔樺"
+        ]
+      },
+      "id": 200
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9059729,
+          1.3914749
+        ]
+      },
+      "properties": {
+        "id": 201,
+        "name": "Rumbia",
+        "line": "SingaporeSKLRT",
+        "order": 2,
+        "alternate_names": [
+          "ரூம்பியா",
+          "棕美",
+          "zong mei"
+        ]
+      },
+      "id": 201
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.905418,
+          1.3880083
+        ]
+      },
+      "properties": {
+        "id": 202,
+        "name": "Bakau",
+        "line": "SingaporeSKLRT",
+        "order": 3,
+        "alternate_names": [
+          "பக்காவ்",
+          "码高",
+          "ma gao",
+          "碼高"
+        ]
+      },
+      "id": 202
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9022055,
+          1.3839286
+        ]
+      },
+      "properties": {
+        "id": 203,
+        "name": "Kangkar",
+        "line": "SingaporeSKLRT",
+        "order": 4,
+        "alternate_names": [
+          "கங்கார்",
+          "港脚",
+          "gang jiao",
+          "港腳"
+        ]
+      },
+      "id": 203
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8973612,
+          1.3840465
+        ]
+      },
+      "properties": {
+        "id": 204,
+        "name": "Ranggung",
+        "line": "SingaporeSKLRT",
+        "order": 5,
+        "alternate_names": [
+          "ரங்கோங்",
+          "兰岗",
+          "lan gang",
+          "蘭崗"
+        ]
+      },
+      "id": 204
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8937904,
+          1.3962917
+        ]
+      },
+      "properties": {
+        "id": 205,
+        "name": "Cheng Lim",
+        "line": "SingaporeSKLRT",
+        "order": 6,
+        "alternate_names": [
+          "செங் லிம்",
+          "振林",
+          "zhen lin"
+        ]
+      },
+      "id": 205
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8892243,
+          1.3971948
+        ]
+      },
+      "properties": {
+        "id": 206,
+        "name": "Farmway",
+        "line": "SingaporeSKLRT",
+        "order": 7,
+        "alternate_names": [
+          "ஃபாம்வே",
+          "农道",
+          "nong dao",
+          "農道"
+        ]
+      },
+      "id": 206
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.881246,
+          1.3982038
+        ]
+      },
+      "properties": {
+        "id": 207,
+        "name": "Kupang",
+        "line": "SingaporeSKLRT",
+        "order": 8,
+        "alternate_names": [
+          "கூப்பாங்",
+          "古邦",
+          "gu bang"
+        ]
+      },
+      "id": 207
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8756345,
+          1.3973334
+        ]
+      },
+      "properties": {
+        "id": 208,
+        "name": "Thanggam",
+        "line": "SingaporeSKLRT",
+        "order": 9,
+        "alternate_names": [
+          "தங்கம்",
+          "丹甘",
+          "dan gan"
+        ]
+      },
+      "id": 208
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8762794,
+          1.3919037
+        ]
+      },
+      "properties": {
+        "id": 209,
+        "name": "Fernvale",
+        "line": "SingaporeSKLRT",
+        "order": 10,
+        "alternate_names": [
+          "ஃபொ்ன்வேல்",
+          "芬微",
+          "fen wei"
+        ]
+      },
+      "id": 209
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8800319,
+          1.3920846
+        ]
+      },
+      "properties": {
+        "id": 210,
+        "name": "Layar",
+        "line": "SingaporeSKLRT",
+        "order": 11,
+        "alternate_names": [
+          "லாயார்",
+          "拉雅",
+          "la ya"
+        ]
+      },
+      "id": 210
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8858267,
+          1.3894081
+        ]
+      },
+      "properties": {
+        "id": 211,
+        "name": "Tongkang",
+        "line": "SingaporeSKLRT",
+        "order": 12,
+        "alternate_names": [
+          "தொங்காங்",
+          "同港",
+          "tong gang"
+        ]
+      },
+      "id": 211
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8905331,
+          1.3867294
+        ]
+      },
+      "properties": {
+        "id": 212,
+        "name": "Renjong",
+        "line": "SingaporeSKLRT",
+        "order": 13,
+        "alternate_names": [
+          "ரெஞ்சோங்",
+          "仁宗",
+          "ren zong"
+        ]
+      },
+      "id": 212
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.90264015,
+          1.4053833500000001
+        ]
+      },
+      "properties": {
+        "id": 213,
+        "name": "Punggol",
+        "line": "SingaporePGLRT",
+        "order": 0,
+        "alternate_names": [
+          "பொங்கோல்",
+          "榜鹅",
+          "榜鵝",
+          "bang e"
+        ]
+      },
+      "id": 213
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.90580245000001,
+          1.39946145
+        ]
+      },
+      "properties": {
+        "id": 214,
+        "name": "Cove",
+        "line": "SingaporePGLRT",
+        "order": 1,
+        "alternate_names": [
+          "கோவ்",
+          "海湾",
+          "hai wan",
+          "海灣"
+        ]
+      },
+      "id": 214
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.90888325,
+          1.3969372500000001
+        ]
+      },
+      "properties": {
+        "id": 215,
+        "name": "Meridian",
+        "line": "SingaporePGLRT",
+        "order": 2,
+        "alternate_names": [
+          "மெரிடியன்",
+          "丽园",
+          "li yuan",
+          "麗園"
+        ]
+      },
+      "id": 215
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.91266685,
+          1.39384965
+        ]
+      },
+      "properties": {
+        "id": 216,
+        "name": "Coral Edge",
+        "line": "SingaporePGLRT",
+        "order": 3,
+        "alternate_names": [
+          "கோரல் எட்ஜ்",
+          "珊瑚",
+          "shan hu"
+        ]
+      },
+      "id": 216
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.91615005,
+          1.39454595
+        ]
+      },
+      "properties": {
+        "id": 217,
+        "name": "Riviera",
+        "line": "SingaporePGLRT",
+        "order": 4,
+        "alternate_names": [
+          "ரிவியாரா",
+          "里维拉",
+          "li wei la",
+          "里維拉"
+        ]
+      },
+      "id": 217
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.916508,
+          1.3995492500000002
+        ]
+      },
+      "properties": {
+        "id": 218,
+        "name": "Kadaloor",
+        "line": "SingaporePGLRT",
+        "order": 5,
+        "alternate_names": [
+          "கடலூர்",
+          "卡达鲁",
+          "ka da lu",
+          "卡達魯"
+        ]
+      },
+      "id": 218
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9127339,
+          1.40229025
+        ]
+      },
+      "properties": {
+        "id": 219,
+        "name": "Oasis",
+        "line": "SingaporePGLRT",
+        "order": 6,
+        "alternate_names": [
+          "ஓய்சிஸ்",
+          "绿洲",
+          "lü zhou",
+          "綠洲"
+        ]
+      },
+      "id": 219
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.90861774999999,
+          1.40524075
+        ]
+      },
+      "properties": {
+        "id": 220,
+        "name": "Damai",
+        "line": "SingaporePGLRT",
+        "order": 7,
+        "alternate_names": [
+          "டாமாய்",
+          "达迈",
+          "da mai",
+          "達邁"
+        ]
+      },
+      "id": 220
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9048838,
+          1.4097175
+        ]
+      },
+      "properties": {
+        "id": 221,
+        "name": "Sam Kee",
+        "line": "SingaporePGLRT",
+        "order": 8,
+        "alternate_names": [
+          "சாம் கீ",
+          "三记",
+          "san ji",
+          "三記"
+        ]
+      },
+      "id": 221
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.90658945,
+          1.41278215
+        ]
+      },
+      "properties": {
+        "id": 222,
+        "name": "Teck Lee",
+        "line": "SingaporePGLRT",
+        "order": 9,
+        "alternate_names": [
+          "டெக் லீ",
+          "德利",
+          "de li"
+        ]
+      },
+      "id": 222
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9066511,
+          1.4168517
+        ]
+      },
+      "properties": {
+        "id": 223,
+        "name": "Punggol Point",
+        "line": "SingaporePGLRT",
+        "order": 10,
+        "alternate_names": [
+          "பொங்கோல் பாயிண்ட்",
+          "榜鹅坊",
+          "bang e fang",
+          "榜鵝坊"
+        ]
+      },
+      "id": 223
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9021396,
+          1.41588895
+        ]
+      },
+      "properties": {
+        "id": 224,
+        "name": "Samudera",
+        "line": "SingaporePGLRT",
+        "order": 11,
+        "alternate_names": [
+          "சமுத்திரா",
+          "山姆",
+          "shan mu"
+        ]
+      },
+      "id": 224
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.90035295,
+          1.4118607
+        ]
+      },
+      "properties": {
+        "id": 225,
+        "name": "Nibong",
+        "line": "SingaporePGLRT",
+        "order": 12,
+        "alternate_names": [
+          "நிபொங்",
+          "尼蒙",
+          "ni meng"
+        ]
+      },
+      "id": 225
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8985641,
+          1.40846145
+        ]
+      },
+      "properties": {
+        "id": 226,
+        "name": "Sumang",
+        "line": "SingaporePGLRT",
+        "order": 13,
+        "alternate_names": [
+          "சுமாங்",
+          "苏芒",
+          "su mang",
+          "蘇芒"
+        ]
+      },
+      "id": 226
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.89726815,
+          1.4053322000000001
+        ]
+      },
+      "properties": {
+        "id": 227,
+        "name": "Soo Teck",
+        "line": "SingaporePGLRT",
+        "order": 14,
+        "alternate_names": [
+          "சூ டெக்",
+          "树德",
+          "shu de",
+          "樹德"
+        ]
+      },
+      "id": 227
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.7621858,
+          1.4662412
+        ]
+      },
+      "properties": {
+        "id": 228,
+        "name": "Bukit Chagar",
+        "line": "SingaporeRTS",
+        "order": 0,
+        "alternate_names": [
+          "武吉查卡",
+          "wu ji cha ka"
+        ]
+      },
+      "id": 228
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.7866218,
+          1.4478100999999999
+        ]
+      },
+      "properties": {
+        "id": 229,
+        "name": "Woodlands North",
+        "line": "SingaporeRTS",
+        "order": 1,
+        "alternate_names": [
+          "Woodlands North RTS",
+          "Sistem Transit Aliran Woodlands Utara",
+          "உட்லண்ட்ஸ் நார்த் விரைவுப் போக்குவரத்து அமைப்பு",
+          "兀兰北捷运系统",
+          "兀蘭北捷運系統",
+          "wu lan bei jie yun xi tong",
+          "உட்லண்ட்ஸ் நார்த்",
+          "兀兰北",
+          "wu lan bei",
+          "兀蘭北"
+        ]
+      },
+      "id": 229
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8194592,
+          1.2711516
+        ]
+      },
+      "properties": {
+        "id": 230,
+        "name": "Mount Faber",
+        "line": "SingaporeCableMountFaber",
+        "order": 0,
+        "alternate_names": [
+          "花柏山顶",
+          "hua bai shan ding",
+          "花柏山頂"
+        ]
+      },
+      "id": 230
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8188329,
+          1.2658882
+        ]
+      },
+      "properties": {
+        "id": 231,
+        "name": "HarbourFront",
+        "line": "SingaporeCableMountFaber",
+        "order": 1,
+        "alternate_names": [
+          "துறைமுகம்",
+          "港湾",
+          "gang wan",
+          "港灣"
+        ]
+      },
+      "id": 231
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8176647,
+          1.2555598
+        ]
+      },
+      "properties": {
+        "id": 232,
+        "name": "Sentosa",
+        "line": "SingaporeCableMountFaber",
+        "order": 2,
+        "alternate_names": [
+          "英比奥山顶景区",
+          "ying bi ao shan ding jing qu",
+          "英比奧山頂景區"
+        ]
+      },
+      "id": 232
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.811429,
+          1.2572088
+        ]
+      },
+      "properties": {
+        "id": 233,
+        "name": "Siloso Point",
+        "line": "SingaporeCableSentosa",
+        "order": 0,
+        "alternate_names": [
+          "西罗索角",
+          "xi luo suo jiao",
+          "西羅索角"
+        ]
+      },
+      "id": 233
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8167759,
+          1.2550487
+        ]
+      },
+      "properties": {
+        "id": 234,
+        "name": "Imbiah Lookout",
+        "line": "SingaporeCableSentosa",
+        "order": 1,
+        "alternate_names": [
+          "英比奥山顶景区",
+          "ying bi ao shan ding jing qu",
+          "英比奧山頂景區",
+          "Sentosa"
+        ]
+      },
+      "id": 234
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9889622,
+          1.3619808
+        ]
+      },
+      "properties": {
+        "id": 235,
+        "name": "Station C",
+        "line": "SingaporePMSNorth",
+        "order": 0,
+        "alternate_names": []
+      },
+      "id": 235
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9873758,
+          1.358383
+        ]
+      },
+      "properties": {
+        "id": 236,
+        "name": "Station B",
+        "line": "SingaporePMSNorth",
+        "order": 1,
+        "alternate_names": [],
+        "cluster_key": "changi-airport-pms-complex"
+      },
+      "id": 236
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9900385,
+          1.3570046
+        ]
+      },
+      "properties": {
+        "id": 237,
+        "name": "Station E",
+        "line": "SingaporePMSNorth",
+        "order": 2,
+        "alternate_names": [],
+        "cluster_key": "changi-airport-pms-complex"
+      },
+      "id": 237
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9918185,
+          1.3610209
+        ]
+      },
+      "properties": {
+        "id": 238,
+        "name": "Station D",
+        "line": "SingaporePMSNorth",
+        "order": 3,
+        "alternate_names": []
+      },
+      "id": 238
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9854577,
+          1.3539198
+        ]
+      },
+      "properties": {
+        "id": 239,
+        "name": "Station A",
+        "line": "SingaporePMSSouth",
+        "order": 0,
+        "alternate_names": [
+          "A"
+        ],
+        "cluster_key": "changi-airport-pms-complex"
+      },
+      "id": 239
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9838301,
+          1.350108
+        ]
+      },
+      "properties": {
+        "id": 240,
+        "name": "Station A South",
+        "line": "SingaporePMSSouth",
+        "order": 1,
+        "alternate_names": [
+          "A 南",
+          "South A South",
+          "A nan"
+        ]
+      },
+      "id": 240
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9885985,
+          1.35336105
+        ]
+      },
+      "properties": {
+        "id": 241,
+        "name": "Station F",
+        "line": "SingaporePMSSouth",
+        "order": 2,
+        "alternate_names": [
+          "F"
+        ],
+        "cluster_key": "changi-airport-pms-complex"
+      },
+      "id": 241
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8187713,
+          1.254123
+        ]
+      },
+      "properties": {
+        "id": 242,
+        "name": "Merlion",
+        "line": "SingaporeCableSentosa",
+        "order": 2,
+        "cluster_key": "imbiah-merlion-complex",
+        "alternate_names": [
+          "鱼尾狮",
+          "yu wei shi",
+          "魚尾獅"
+        ]
+      },
+      "id": 242
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.822332,
+          1.265099
+        ]
+      },
+      "properties": {
+        "id": 243,
+        "name": "Vivo City",
+        "line": "SingaporeSentosaExpress",
+        "order": 0,
+        "alternate_names": [
+          "怡丰城",
+          "yi feng cheng",
+          "怡豐城"
+        ],
+        "cluster_key": "harbourfront-vivocity-complex"
+      },
+      "id": 243
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.820963,
+          1.255542
+        ]
+      },
+      "properties": {
+        "id": 244,
+        "name": "Resorts World",
+        "line": "SingaporeSentosaExpress",
+        "order": 1,
+        "alternate_names": [
+          "名胜世界",
+          "ming sheng shi jie",
+          "名勝世界"
+        ]
+      },
+      "id": 244
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.819453,
+          1.253915
+        ]
+      },
+      "properties": {
+        "id": 245,
+        "name": "Imbiah",
+        "line": "SingaporeSentosaExpress",
+        "order": 2,
+        "cluster_key": "imbiah-merlion-complex",
+        "alternate_names": [
+          "ஜூரோங் ஹில்",
+          "英比奥",
+          "ying bi ao",
+          "英比奧"
+        ]
+      },
+      "id": 245
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.817766,
+          1.251294
+        ]
+      },
+      "properties": {
+        "id": 246,
+        "name": "Beach",
+        "line": "SingaporeSentosaExpress",
+        "order": 3,
+        "alternate_names": [
+          "海滩",
+          "hai tan",
+          "海灘"
+        ]
+      },
+      "id": 246
     }
   ],
   "properties": {
-    "totalStations": 162,
+    "totalStations": 238,
     "stationsPerLine": {
-      "SingaporeMRTCircleLine": 30,
-      "SingaporeMRTDowntownLine": 34,
-      "SingaporeMRTEastwestLine": 35,
-      "SingaporeMRTNortheastLine": 16,
-      "SingaporeMRTNorthsouthLine": 27,
-      "CM_SingaporeMRT_tel": 20
+      "SingaporeNSL": 29,
+      "SingaporeEWL": 35,
+      "SingaporeNEL": 17,
+      "SingaporeCCL": 31,
+      "SingaporeDTL": 35,
+      "SingaporeTEL": 30,
+      "SingaporeBPLRT": 13,
+      "SingaporeSKLRT": 14,
+      "SingaporePGLRT": 15,
+      "SingaporeRTS": 2,
+      "SingaporeCableMountFaber": 3,
+      "SingaporeCableSentosa": 3,
+      "SingaporePMSNorth": 4,
+      "SingaporePMSSouth": 3,
+      "SingaporeSentosaExpress": 4
     }
   }
 }

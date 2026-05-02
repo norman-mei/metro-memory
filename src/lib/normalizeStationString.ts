@@ -455,6 +455,9 @@ const getCustomReplacer = (cityName: string) => {
   return replacers[cityName] || replacers.default
 }
 
+const NON_LATIN_ALLOWED_CHARACTERS_PATTERN =
+  /[^a-z0-9\u0600-\u06ff\u0b80-\u0bff\u0e00-\u0e7f\u1100-\u11ff\u3040-\u30ff\u3100-\u312f\u3130-\u318f\u31a0-\u31bf\u31f0-\u31ff\u3400-\u4dbf\u4e00-\u9fff\uac00-\ud7af]/g
+
 export const normalizeString = (city: string) => {
   const reorderSeparatedSegments = (str: string) => {
     const parts = str.split(/\s*[/-]\s*/)
@@ -482,7 +485,7 @@ export const normalizeString = (city: string) => {
       .normalize('NFD')
       .replace(
         isNonLatinAllowedCity(city)
-          ? /[^a-z0-9\u3100-\u312f\u31a0-\u31bf\u3400-\u4dbf\u4e00-\u9fff]/g
+          ? NON_LATIN_ALLOWED_CHARACTERS_PATTERN
           : /[^a-z0-9]/g,
         '',
       )

@@ -65,3 +65,31 @@ test('auto submit accepts street-number guesses with or without ordinal suffixes
     true,
   )
 })
+
+test('non-latin Singapore aliases survive normalization and auto submit', () => {
+  const normalizeSingapore = normalizeString('singapore')
+  const tamilAlias =
+    '\u0b9a\u0bbe\u0b99\u0bcd\u0b95\u0bbf \u0bb5\u0bbf\u0bae\u0bbe\u0ba9\u0ba8\u0bbf\u0bb2\u0bc8\u0baf\u0bae\u0bcd'
+  const chineseAlias = '\u6a1f\u5b9c\u673a\u573a'
+
+  assert.notEqual(normalizeSingapore(tamilAlias), '')
+  assert.equal(
+    shouldAutoSubmitStationInput({
+      features: [pointFeature(3, 'Changi Airport', [tamilAlias, chineseAlias])],
+      rawInput: tamilAlias,
+      normalizeValue: normalizeSingapore,
+      stripOptionalPrefixes: (value) => value,
+    }),
+    true,
+  )
+
+  assert.equal(
+    shouldAutoSubmitStationInput({
+      features: [pointFeature(4, 'Changi Airport', [tamilAlias, chineseAlias])],
+      rawInput: chineseAlias,
+      normalizeValue: normalizeSingapore,
+      stripOptionalPrefixes: (value) => value,
+    }),
+    true,
+  )
+})

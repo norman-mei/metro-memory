@@ -689,12 +689,13 @@ const Input = ({
           {
             'animate-shake': wrong,
             'shadow-md !shadow-emerald-400': success,
-            'border-emerald-300 bg-emerald-50/80 text-emerald-900 ring-2 ring-emerald-300/70 shadow-emerald-500/30':
+            '!border-emerald-300 !bg-emerald-50/80 !text-emerald-900 ring-2 !ring-emerald-300/70 shadow-emerald-500/30':
               success,
-            'dark:border-emerald-500/70 dark:bg-emerald-950/40 dark:text-emerald-100 dark:ring-emerald-500/40':
+            'dark:!border-emerald-500/70 dark:!bg-emerald-950/40 dark:!text-emerald-100 dark:!ring-emerald-500/40':
               success,
-            'border-red-300 bg-red-50/80 text-red-900 ring-2 ring-red-300/70 shadow-red-500/30': wrong,
-            'dark:border-red-500/70 dark:bg-red-950/40 dark:text-red-100 dark:ring-red-500/40':
+            '!border-red-300 !bg-red-50/80 !text-red-900 ring-2 !ring-red-300/70 shadow-red-500/30':
+              wrong,
+            'dark:!border-red-500/70 dark:!bg-red-950/40 dark:!text-red-100 dark:!ring-red-500/40':
               wrong,
           },
           'relative z-40 w-full rounded-full border border-zinc-200 bg-white py-2 pl-4 pr-12 text-lg font-bold text-zinc-900 caret-current shadow-lg outline-none ring-zinc-800 transition-shadow duration-300 focus:ring-2 placeholder:text-zinc-500 disabled:cursor-not-allowed disabled:bg-zinc-100 disabled:text-zinc-400 dark:border-[#18181b] dark:bg-zinc-900 dark:text-zinc-100 dark:placeholder:text-zinc-400 dark:disabled:bg-zinc-800 dark:disabled:text-zinc-500',
@@ -705,6 +706,15 @@ const Input = ({
         value={search}
         onChange={(e) => {
           const value = (e.target as HTMLInputElement).value
+          if (wrong) {
+            setWrong(false)
+          }
+          if (success) {
+            setSuccess(false)
+          }
+          if (alreadyFound) {
+            setAlreadyFound(false)
+          }
           if (value === '' && lastSearchRef.current.trim().length > 0) {
             pushHistory(lastSearchRef.current)
           }

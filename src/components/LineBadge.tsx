@@ -33,7 +33,13 @@ const LINE_BADGE_METRICS: Record<LineBadgeSize, Record<LineBadgeShape, LineBadge
       padding: 0,
     },
     capsule: {
-      width: 46,
+      width: 60,
+      height: 24,
+      radius: 8,
+      padding: 0,
+    },
+    wide: {
+      width: 88,
       height: 24,
       radius: 8,
       padding: 0,
@@ -53,7 +59,13 @@ const LINE_BADGE_METRICS: Record<LineBadgeSize, Record<LineBadgeShape, LineBadge
       padding: 0,
     },
     capsule: {
-      width: 76,
+      width: 96,
+      height: 40,
+      radius: 12,
+      padding: 0,
+    },
+    wide: {
+      width: 136,
       height: 40,
       radius: 12,
       padding: 0,

@@ -139,7 +139,7 @@ export const STATION_TOTALS: Record<string, number> = {
   "sheffield": 86,
   "shenyang": 310,
   "shijiazhuang": 63,
-  "singapore": 162,
+  "singapore": 238,
   "slc": 94,
   "stl": 65,
   "stockholm": 140,

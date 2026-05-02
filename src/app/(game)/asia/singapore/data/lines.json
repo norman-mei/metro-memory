@@ -1,79 +1,167 @@
 {
-  "SingaporeMRTCircleLine": {
-    "name": "CC",
-    "color": "#F79F07",
-    "backgroundColor": "#7C5003",
+  "SingaporeNSL": {
+    "name": "North-South Line",
+    "color": "#D42E12",
+    "backgroundColor": "#75190A",
     "textColor": "#FFFFFF",
-    "order": 0
+    "progressOutlineColor": "#D42E12",
+    "order": 0,
+    "icon": "asia/singapore/NSLine.png",
+    "badgeShape": "wide",
+    "badgeFit": "contain"
   },
-  "SingaporeMRTDowntownLine": {
-    "name": "DT",
-    "color": "#03529F",
-    "backgroundColor": "#012950",
+  "SingaporeEWL": {
+    "name": "East-West Line",
+    "color": "#009645",
+    "backgroundColor": "#005326",
     "textColor": "#FFFFFF",
-    "order": 1
+    "progressOutlineColor": "#009645",
+    "order": 1,
+    "icon": "asia/singapore/EWLine.png",
+    "badgeShape": "wide",
+    "badgeFit": "contain"
   },
-  "SingaporeMRTEastwestLine": {
-    "name": "EW",
-    "color": "#009D57",
-    "backgroundColor": "#004F2C",
+  "SingaporeNEL": {
+    "name": "North East Line",
+    "color": "#9900AA",
+    "backgroundColor": "#54005D",
     "textColor": "#FFFFFF",
-    "order": 2
+    "progressOutlineColor": "#9900AA",
+    "order": 2,
+    "icon": "asia/singapore/NELine.png",
+    "badgeShape": "wide",
+    "badgeFit": "contain"
   },
-  "SingaporeMRTNortheastLine": {
-    "name": "NE",
-    "color": "#851197",
-    "backgroundColor": "#43084C",
-    "textColor": "#FFFFFF",
-    "order": 3
+  "SingaporeCCL": {
+    "name": "Circle Line",
+    "color": "#FA9E0D",
+    "backgroundColor": "#8E5803",
+    "textColor": "#1F1F1F",
+    "progressOutlineColor": "#FA9E0D",
+    "order": 3,
+    "icon": "asia/singapore/CircleLine.png",
+    "badgeShape": "wide",
+    "badgeFit": "contain"
   },
-  "SingaporeMRTNorthsouthLine": {
-    "name": "NS",
-    "color": "#DF2518",
-    "backgroundColor": "#70130C",
+  "SingaporeDTL": {
+    "name": "Downtown Line",
+    "color": "#005EC4",
+    "backgroundColor": "#00346C",
     "textColor": "#FFFFFF",
-    "order": 4
+    "progressOutlineColor": "#005EC4",
+    "order": 4,
+    "icon": "asia/singapore/DTLine.png",
+    "badgeShape": "wide",
+    "badgeFit": "contain"
   },
-  "CM_SingaporeMRT_tel": {
-    "name": "TE",
-    "color": "#8b572a",
-    "backgroundColor": "#462C15",
+  "SingaporeTEL": {
+    "name": "Thomson-East Coast Line",
+    "color": "#9D5B25",
+    "backgroundColor": "#563214",
     "textColor": "#FFFFFF",
-    "order": 5
+    "progressOutlineColor": "#9D5B25",
+    "order": 5,
+    "icon": "asia/singapore/TECLine.png",
+    "badgeShape": "wide",
+    "badgeFit": "contain"
   },
-  "SingaporeLRTBukitPanjangLine": {
-    "name": "BPLRT",
-    "color": "#748477",
-    "backgroundColor": "#3A423C",
-    "textColor": "#FFFFFF",
-    "order": 6
+  "SingaporeBPLRT": {
+    "name": "Bukit Panjang LRT",
+    "color": "#758578",
+    "backgroundColor": "#404942",
+    "textColor": "#1F1F1F",
+    "progressOutlineColor": "#758578",
+    "order": 6,
+    "icon": "asia/singapore/BPLRT.png",
+    "badgeShape": "wide",
+    "badgeFit": "contain"
   },
-  "SingaporeLRTPunggolLineEastLoop": {
-    "name": "PGLRT (East)",
-    "color": "#748477",
-    "backgroundColor": "#3A423C",
-    "textColor": "#FFFFFF",
-    "order": 7
+  "SingaporeSKLRT": {
+    "name": "Sengkang LRT",
+    "color": "#758578",
+    "backgroundColor": "#404942",
+    "textColor": "#1F1F1F",
+    "progressOutlineColor": "#758578",
+    "order": 7,
+    "icon": "asia/singapore/SKLRT.png",
+    "badgeShape": "wide",
+    "badgeFit": "contain"
   },
-  "SingaporeLRTPunggolLineWestLoop": {
-    "name": "PGLRT (West)",
-    "color": "#748477",
-    "backgroundColor": "#3A423C",
-    "textColor": "#FFFFFF",
-    "order": 8
+  "SingaporePGLRT": {
+    "name": "Punggol LRT",
+    "color": "#758578",
+    "backgroundColor": "#404942",
+    "textColor": "#1F1F1F",
+    "progressOutlineColor": "#758578",
+    "order": 8,
+    "icon": "asia/singapore/PGLRT.png",
+    "badgeShape": "wide",
+    "badgeFit": "contain"
   },
-  "SingaporeLRTSengkangLineEastLoop": {
-    "name": "SKLRT (East)",
-    "color": "#748477",
-    "backgroundColor": "#3A423C",
-    "textColor": "#FFFFFF",
-    "order": 9
+  "SingaporeRTS": {
+    "name": "RTS Link",
+    "color": "#87CEFA",
+    "backgroundColor": "#0881CB",
+    "textColor": "#1F1F1F",
+    "progressOutlineColor": "#87CEFA",
+    "order": 9,
+    "icon": "asia/singapore/RTS.png",
+    "badgeShape": "capsule",
+    "badgeFit": "contain"
   },
-  "SingaporeLRTSengkangLineWestLoop": {
-    "name": "SKLRT (West)",
-    "color": "#748477",
-    "backgroundColor": "#3A423C",
+  "SingaporeCableMountFaber": {
+    "name": "Mount Faber",
+    "color": "#9ACD01",
+    "backgroundColor": "#557101",
+    "textColor": "#1F1F1F",
+    "progressOutlineColor": "#9ACD01",
+    "order": 10,
+    "icon": "asia/singapore/MF.png",
+    "badgeShape": "circle",
+    "badgeFit": "contain"
+  },
+  "SingaporeCableSentosa": {
+    "name": "Sentosa",
+    "color": "#FF6601",
+    "backgroundColor": "#8D3800",
     "textColor": "#FFFFFF",
-    "order": 10
+    "progressOutlineColor": "#FF6601",
+    "order": 11,
+    "icon": "asia/singapore/ST.png",
+    "badgeShape": "circle",
+    "badgeFit": "contain"
+  },
+  "SingaporePMSNorth": {
+    "name": "PMS North",
+    "color": "#0079BF",
+    "backgroundColor": "#004369",
+    "textColor": "#FFFFFF",
+    "progressOutlineColor": "#0079BF",
+    "order": 12,
+    "icon": "asia/singapore/PMSNorth.png",
+    "badgeShape": "circle",
+    "badgeFit": "contain"
+  },
+  "SingaporePMSSouth": {
+    "name": "PMS South",
+    "color": "#FF6600",
+    "backgroundColor": "#8C3800",
+    "textColor": "#FFFFFF",
+    "progressOutlineColor": "#FF6600",
+    "order": 13,
+    "icon": "asia/singapore/PMSSouth.png",
+    "badgeShape": "circle",
+    "badgeFit": "contain"
+  },
+  "SingaporeSentosaExpress": {
+    "name": "Sentosa Express",
+    "color": "#F49101",
+    "backgroundColor": "#8D3800",
+    "textColor": "#FFFFFF",
+    "progressOutlineColor": "#F49101",
+    "order": 14,
+    "icon": "asia/singapore/sentosa.png",
+    "badgeShape": "wide",
+    "badgeFit": "contain"
   }
 }

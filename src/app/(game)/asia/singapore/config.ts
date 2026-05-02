@@ -1,97 +1,71 @@
 import { Metadata } from 'next'
 import type { MapboxOptions } from 'mapbox-gl'
 import { Config, Line, LineGroup } from '@/lib/types'
+import linesData from './data/lines.json'
 
-
-export const LINES: {
-  [name: string]: Line
-} = {
-  SingaporeMRTCircleLine: {
-    name: 'Circle Line',
-    color: '#F79F07',
-    backgroundColor: '#7C5003',
-    textColor: '#FFFFFF',
-    order: 0,
-  },
-  SingaporeMRTDowntownLine: {
-    name: 'Downtown Line',
-    color: '#03529F',
-    backgroundColor: '#012950',
-    textColor: '#FFFFFF',
-    order: 1,
-  },
-  SingaporeMRTEastwestLine: {
-    name: 'East West Line',
-    color: '#009D57',
-    backgroundColor: '#004F2C',
-    textColor: '#FFFFFF',
-    order: 2,
-  },
-  SingaporeMRTNortheastLine: {
-    name: 'North East Line',
-    color: '#851197',
-    backgroundColor: '#43084C',
-    textColor: '#FFFFFF',
-    order: 3,
-  },
-  SingaporeMRTNorthsouthLine: {
-    name: 'North South Line',
-    color: '#DF2518',
-    backgroundColor: '#70130C',
-    textColor: '#FFFFFF',
-    order: 4,
-  },
-  CM_SingaporeMRT_tel: {
-    name: 'Thomson-East Coast Line',
-    color: '#8b572a',
-    backgroundColor: '#462C15',
-    textColor: '#FFFFFF',
-    order: 5,
-  },
-  // SingaporeLRTBukitPanjangLine: {
-  //   name: 'Bukit Panjang Line',
-  //   color: '#748477',
-  //   backgroundColor: '#3A423C',
-  //   textColor: '#FFFFFF',
-  //   order: 6,
-  // },
-  // SingaporeLRTPunggolLineEastLoop: {
-  //   name: 'Punggol (East)',
-  //   color: '#748477',
-  //   backgroundColor: '#3A423C',
-  //   textColor: '#FFFFFF',
-  //   order: 7,
-  // },
-  // SingaporeLRTPunggolLineWestLoop: {
-  //   name: 'Punggol (West)',
-  //   color: '#748477',
-  //   backgroundColor: '#3A423C',
-  //   textColor: '#FFFFFF',
-  //   order: 8,
-  // },
-  // SingaporeLRTSengkangLineEastLoop: {
-  //   name: 'Sengkang (East)',
-  //   color: '#748477',
-  //   backgroundColor: '#3A423C',
-  //   textColor: '#FFFFFF',
-  //   order: 9,
-  // },
-  // SingaporeLRTSengkangLineWestLoop: {
-  //   name: 'Sengkang (West)',
-  //   color: '#748477',
-  //   backgroundColor: '#3A423C',
-  //   textColor: '#FFFFFF',
-  //   order: 10,
-  // },
-}
+export const LINES = linesData as { [name: string]: Line }
 
 export const LINE_GROUPS: LineGroup[] = [
   {
-    title: 'Lines',
+    title: 'Mass Rapid Transit (MRT)',
+    titleImage: 'MRT.png',
     items: [
       {
         type: 'lines',
-        lines: ['SingaporeMRTCircleLine', 'SingaporeMRTDowntownLine', 'SingaporeMRTEastwestLine', 'SingaporeMRTNortheastLine', 'SingaporeMRTNorthsouthLine', 'CM_SingaporeMRT_tel', 'SingaporeLRTBukitPanjangLine', 'SingaporeLRTPunggolLineEastLoop', 'SingaporeLRTPunggolLineWestLoop', 'SingaporeLRTSengkangLineEastLoop', 'SingaporeLRTSengkangLineWestLoop'],
+        lines: [
+          'SingaporeNSL',
+          'SingaporeEWL',
+          'SingaporeNEL',
+          'SingaporeCCL',
+          'SingaporeDTL',
+          'SingaporeTEL',
+        ],
+      },
+    ],
+  },
+  {
+    title: 'Light Rail Transit (LRT)',
+    titleImage: 'LRT.png',
+    items: [
+      {
+        type: 'lines',
+        lines: ['SingaporeBPLRT', 'SingaporeSKLRT', 'SingaporePGLRT'],
+      },
+    ],
+  },
+  {
+    title: 'Johor Bahru–Singapore Rapid Transit System',
+    titleImage: 'RTS.png',
+    items: [
+      {
+        type: 'lines',
+        lines: ['SingaporeRTS'],
+      },
+    ],
+  },
+  {
+    title: 'Sentosa Development Corporation',
+    titleImage: 'sentosa.png',
+    items: [
+      {
+        type: 'lines',
+        title: 'Cable Car',
+        lines: ['SingaporeCableMountFaber', 'SingaporeCableSentosa'],
+      },
+      {
+        type: 'lines',
+        title: 'Monorail',
+        lines: ['SingaporeSentosaExpress'],
+      },
+    ],
+  },
+  {
+    title: 'Changi Airport Skytrain',
+    titleImage: 'ChangiAirport.png',
+    items: [
+      {
+        type: 'lines',
+        lines: ['SingaporePMSNorth', 'SingaporePMSSouth'],
       },
     ],
   },
@@ -104,11 +78,11 @@ export const METADATA: Metadata = {
   },
   title: 'Singapore Metro Memory Game',
   description:
-    'How many of the Singapore MRT/LRT stations can you name from memory?',
+    'How many of the Singapore MRT, LRT, RTS, cable car, and airport people-mover stations can you name from memory?',
   openGraph: {
     title: 'Singapore Metro Memory Game',
     description:
-      'How many of the Singapore MRT/LRT stations can you name from memory?',
+      'How many of the Singapore MRT, LRT, RTS, cable car, and airport people-mover stations can you name from memory?',
     type: 'website',
     locale: 'en_GB',
     url: 'https://metro-memory.xyz/asia/singapore',
@@ -129,7 +103,6 @@ export const MAP_CONFIG: MapboxOptions = {
   minZoom: 6,
   fadeDuration: 50,
 }
-
 
 export const CITY_NAME = 'singapore'
 
