@@ -95,6 +95,7 @@ export const STATION_TOTALS: Record<string, number> = {
   "lv": 13,
   "madrid": 326,
   "manchester": 178,
+  "manila": 68,
   "maracaibo": 6,
   "memphis": 41,
   "mexico-city": 195,

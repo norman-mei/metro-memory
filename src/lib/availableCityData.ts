@@ -94,6 +94,7 @@ export const AVAILABLE_CITY_SLUGS = new Set([
   'lv',
   'madrid',
   'manchester',
+  'manila',
   'maracaibo',
   'memphis',
   'mexico-city',

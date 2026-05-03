@@ -774,7 +774,8 @@ const rawCities: CityBase[] = [
     name: 'Manila, PH',
     link: '/asia/philippines/manila',
     continent: 'Asia',
-    hideInStats: true,
+    disabled: false,
+    hideInStats: false,
   },
   {
     name: 'Palembang, SS',
@@ -1068,7 +1069,6 @@ const PLACEHOLDER_CITY_PATHS = new Set([
   'asia/japan/nagoya',
   'asia/japan/osaka-kobe',
   'asia/malaysia/kuala-lumpur',
-  'asia/philippines/manila',
   'north-america/canada/toronto',
   'north-america/canada/viarail',
   'oceania/australia/adelaide',

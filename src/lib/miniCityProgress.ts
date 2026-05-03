@@ -1,14 +1,24 @@
 type CityDataPayload = {
-  features?: Array<{
-    id?: number | string | null
-  }>
+  features?:
+    | Array<{
+        id?: number | string | null
+      }>
+    | {
+        features?: Array<{
+          id?: number | string | null
+        }>
+      }
 }
 
 const miniCityStationIdSetCache = new Map<string, Promise<Set<number>>>()
 
 const extractStationIds = (payload: CityDataPayload): Set<number> => {
   const ids = new Set<number>()
-  payload.features?.forEach((feature) => {
+  const features = Array.isArray(payload.features)
+    ? payload.features
+    : payload.features?.features ?? []
+
+  features.forEach((feature) => {
     if (typeof feature?.id === 'number' && Number.isFinite(feature.id)) {
       ids.add(feature.id)
     }

@@ -1,0 +1,46 @@
+{
+  "ManilaLRT1": {
+    "name": "LRT Line 1",
+    "color": "#007541",
+    "backgroundColor": "#004125",
+    "textColor": "#FFFFFF",
+    "progressOutlineColor": "#007541",
+    "order": 0,
+    "icon": "asia/philippines/manila/Line1.png",
+    "badgeShape": "circle",
+    "badgeFit": "contain"
+  },
+  "ManilaLRT2": {
+    "name": "LRT Line 2",
+    "color": "#6A0DAD",
+    "backgroundColor": "#39065E",
+    "textColor": "#FFFFFF",
+    "progressOutlineColor": "#6A0DAD",
+    "order": 1,
+    "icon": "asia/philippines/manila/Line2.png",
+    "badgeShape": "circle",
+    "badgeFit": "contain"
+  },
+  "ManilaMRT3": {
+    "name": "MRT Line 3",
+    "color": "#FDC92D",
+    "backgroundColor": "#8C6E0A",
+    "textColor": "#1F1F1F",
+    "progressOutlineColor": "#FDC92D",
+    "order": 2,
+    "icon": "asia/philippines/manila/Line3.jpg",
+    "badgeShape": "circle",
+    "badgeFit": "contain"
+  },
+  "ManilaMRT7": {
+    "name": "MRT Line 7",
+    "color": "#800000",
+    "backgroundColor": "#470000",
+    "textColor": "#FFFFFF",
+    "progressOutlineColor": "#800000",
+    "order": 3,
+    "icon": "asia/philippines/manila/Line7.png",
+    "badgeShape": "circle",
+    "badgeFit": "contain"
+  }
+}

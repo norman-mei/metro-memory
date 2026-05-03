@@ -148,6 +148,21 @@ export const getCityIconPath = (
   )
 }
 
+export const getCityIconMetadataPath = (
+  slug: string | null | undefined,
+  fallbackPath = DEFAULT_CITY_ICON_PATH,
+) => {
+  const assetSlug = resolveCityAssetSlug(slug, 'icon')
+  if (!assetSlug) {
+    return fallbackPath
+  }
+
+  return appendVersionQuery(
+    `/api/city-icon/${assetSlug}`,
+    CITY_ASSET_MANIFEST[assetSlug]?.iconVersion,
+  )
+}
+
 export const getCityOpenGraphImagePath = (
   slug: string | null | undefined,
   fallbackPath = DEFAULT_CITY_OPEN_GRAPH_IMAGE_PATH,
@@ -180,7 +195,7 @@ export const withCityAssetMetadata = (
   slug: string,
   metadata: Metadata,
 ): Metadata => {
-  const icon = getCityIconPath(slug)
+  const icon = getCityIconMetadataPath(slug)
   const openGraphImage = getCityOpenGraphImagePath(slug)
 
   return {
