@@ -2,6 +2,7 @@ import { NextResponse } from 'next/server'
 
 import { getCurrentUser } from '@/lib/auth'
 import { buildAuthDebugId, logAuthRouteError } from '@/lib/authRouteSupport'
+import { deriveMiniCityProgressSummaries } from '@/lib/miniCityProgressServer'
 import { normalizeUiPreferences } from '@/lib/preferences'
 import { prisma } from '@/lib/prisma'
 
@@ -16,14 +17,7 @@ export async function GET() {
       where: { userId: user.id },
     })
 
-    const summaries = progress.map((entry: any) => {
-      const raw = Array.isArray(entry.foundIds) ? entry.foundIds : []
-      const foundIds = raw.filter((id: any): id is number => typeof id === 'number')
-      return {
-        citySlug: entry.citySlug,
-        foundCount: new Set(foundIds).size,
-      }
-    })
+    const summaries = await deriveMiniCityProgressSummaries(progress)
 
     return NextResponse.json({
       user: {

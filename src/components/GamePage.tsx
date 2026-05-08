@@ -3500,6 +3500,7 @@ function GamePageContent({
         `${slug}-stations-is-new-player`,
         ids.length > 0 ? 'false' : String(isNewPlayer),
       )
+      updateProgressSummary(slug, ids.length)
     }
 
     const buildScopedTimestamps = (ids: number[]) =>
@@ -3554,6 +3555,7 @@ function GamePageContent({
     rankedMode,
     siblingMiniCityStationIds,
     scopeFound,
+    updateProgressSummary,
   ])
 
   useEffect(() => {

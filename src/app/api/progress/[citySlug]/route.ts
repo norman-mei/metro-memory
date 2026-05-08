@@ -2,6 +2,12 @@ import { NextRequest, NextResponse } from 'next/server'
 import { z } from 'zod'
 
 import { getCurrentUser } from '@/lib/auth'
+import {
+  getMiniCityFamilyParentSlug,
+  getMiniCityFamilySlugs,
+  normalizeFoundIds,
+  resolveProgressPayloadForSlug,
+} from '@/lib/miniCityProgressServer'
 import { prisma } from '@/lib/prisma'
 
 type RouteParams = {
@@ -15,15 +21,6 @@ const progressSchema = z.object({
   foundTimestamps: z.record(z.string(), z.string()).optional(),
 })
 
-const isRecordOfStrings = (value: unknown): value is Record<string, string> => {
-  if (typeof value !== 'object' || value === null) {
-    return false
-  }
-  return Object.values(value as Record<string, unknown>).every(
-    (entry): entry is string => typeof entry === 'string',
-  )
-}
-
 export async function GET(_: NextRequest, { params }: RouteParams) {
   const { citySlug } = await params
   const user = await getCurrentUser()
@@ -35,29 +32,37 @@ export async function GET(_: NextRequest, { params }: RouteParams) {
     return NextResponse.json({ error: 'Missing city' }, { status: 400 })
   }
 
-  const record = await prisma.progress.findUnique({
-    where: {
-      userId_citySlug: {
-        userId: user.id,
-        citySlug,
-      },
-    },
-  })
+  const familyParentSlug = getMiniCityFamilyParentSlug(citySlug)
+  const records = familyParentSlug
+    ? await prisma.progress.findMany({
+        where: {
+          userId: user.id,
+          citySlug: {
+            in: getMiniCityFamilySlugs(familyParentSlug),
+          },
+        },
+      })
+    : await prisma.progress
+        .findUnique({
+          where: {
+            userId_citySlug: {
+              userId: user.id,
+              citySlug,
+            },
+          },
+        })
+        .then((record) => (record ? [record] : []))
 
-  if (!record) {
+  const resolved = await resolveProgressPayloadForSlug(records, citySlug)
+
+  if (!resolved) {
     return NextResponse.json({ progress: null })
   }
 
-  const storedTimestamps = isRecordOfStrings(record.foundTimestamps)
-    ? record.foundTimestamps
-    : {}
-
   return NextResponse.json({
     progress: {
-      foundIds: Array.isArray(record.foundIds)
-        ? record.foundIds.filter((id: any): id is number => typeof id === 'number')
-        : [],
-      foundTimestamps: storedTimestamps,
+      foundIds: resolved.foundIds,
+      foundTimestamps: resolved.foundTimestamps,
     },
   })
 }
@@ -80,16 +85,16 @@ export async function POST(request: NextRequest, { params }: RouteParams) {
     return NextResponse.json({ error: 'Invalid payload' }, { status: 400 })
   }
 
-  const uniqueIds = Array.from(
-    new Set(parsed.data.foundIds.filter((id) => Number.isFinite(id))),
-  )
+  const uniqueIds = normalizeFoundIds(parsed.data.foundIds)
   const foundTimestamps: Record<string, string> = parsed.data.foundTimestamps ?? {}
+  const familyParentSlug = getMiniCityFamilyParentSlug(citySlug)
+  const targetCitySlug = familyParentSlug ?? citySlug
 
   await prisma.progress.upsert({
     where: {
       userId_citySlug: {
         userId: user.id,
-        citySlug,
+        citySlug: targetCitySlug,
       },
     },
     update: {
@@ -98,7 +103,7 @@ export async function POST(request: NextRequest, { params }: RouteParams) {
     },
     create: {
       userId: user.id,
-      citySlug,
+      citySlug: targetCitySlug,
       foundIds: uniqueIds,
       foundTimestamps,
     },
