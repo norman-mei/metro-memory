@@ -77,11 +77,15 @@ export const normalizeFoundTimestamps = (
     return {}
   }
 
-  return Object.fromEntries(
-    Object.entries(value as Record<string, unknown>).filter(
-      ([, entry]): entry is string => typeof entry === 'string',
-    ),
-  )
+  const normalized: Record<string, string> = {}
+
+  Object.entries(value as Record<string, unknown>).forEach(([key, entry]) => {
+    if (typeof entry === 'string') {
+      normalized[key] = entry
+    }
+  })
+
+  return normalized
 }
 
 export const buildProgressBySlug = (records: ProgressRecordLike[]) =>
