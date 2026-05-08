@@ -990,6 +990,7 @@ export default function CitiesGlobe({
               color: #27272a !important; /* text-zinc-800 */
               padding: 0 !important;
               border-radius: 1rem !important;
+              overflow: visible !important;
               box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1) !important;
             }
             .dark .city-popup .mapboxgl-popup-content {
@@ -1005,14 +1006,14 @@ export default function CitiesGlobe({
               border-bottom-color: #27272a !important;
             }
           `}</style>
-          <div className="relative w-64 p-1">
+          <div className="relative z-20 w-64 p-1">
             <CloseButton
               ariaLabel="Close popup"
               onClick={(e) => {
                 e.stopPropagation()
                 handleClosePopup()
               }}
-              className="absolute -right-1 -top-1 z-10 h-8 w-8 bg-white text-zinc-800 shadow-lg hover:bg-zinc-100 focus:ring-zinc-300 dark:bg-zinc-800 dark:text-zinc-100 dark:hover:bg-zinc-700 dark:focus:ring-zinc-700"
+              className="absolute -right-2 -top-2 z-50 h-9 w-9 bg-white text-zinc-800 shadow-xl ring-1 ring-black/10 hover:bg-zinc-100 focus:ring-zinc-300 dark:bg-zinc-800 dark:text-zinc-100 dark:ring-white/10 dark:hover:bg-zinc-700 dark:focus:ring-zinc-700"
             />
             <CityCard
               city={activePopup.city}
