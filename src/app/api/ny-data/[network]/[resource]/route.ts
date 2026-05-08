@@ -28,6 +28,16 @@ const NETWORK_DIR_MAP: Record<string, string[]> = {
 export async function GET(_request: NextRequest, { params }: RouteParams) {
   const { network, resource } = await params
 
+  if (
+    (network === 'rapid' || network === 'regional-rail') &&
+    (resource === 'features' || resource === 'routes')
+  ) {
+    return NextResponse.redirect(
+      new URL(`/city-data/nyc-${resource}.json`, _request.url),
+      307,
+    )
+  }
+
   const networkDir = NETWORK_DIR_MAP[network]
   const resourceFile = RESOURCE_FILE_MAP[resource]
 

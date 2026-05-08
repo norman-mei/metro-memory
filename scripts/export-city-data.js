@@ -4,6 +4,7 @@ const fg = require('fast-glob')
 
 const SOURCE_ROOT = path.join(process.cwd(), 'src', 'app', '(game)')
 const DEST_ROOT = path.join(process.cwd(), 'public', 'city-data')
+const SPLIT_RESOURCE_EXPORT_SLUGS = new Set(['nyc'])
 const MINI_CITY_REGISTRY_PATH = path.join(
   process.cwd(),
   'src',
@@ -34,6 +35,56 @@ async function buildCityPayload(baseDir) {
     features: JSON.parse(featuresRaw),
     routes: JSON.parse(routesRaw),
   }
+}
+
+function normalizeNycSirExpressGeometry(payload) {
+  const routes = Array.isArray(payload?.routes?.features)
+    ? payload.routes.features
+    : null
+
+  if (!routes) {
+    return payload
+  }
+
+  const local = routes.filter(
+    (feature) => feature?.properties?.line === 'NewYorkSubwaySI',
+  )
+  const express = routes.filter(
+    (feature) => feature?.properties?.line === 'NewYorkSubwaySIExpress',
+  )
+
+  if (local.length === 0 || local.length !== express.length) {
+    return payload
+  }
+
+  for (let index = 0; index < express.length; index += 1) {
+    express[index].geometry = JSON.parse(JSON.stringify(local[index].geometry))
+  }
+
+  return payload
+}
+
+async function writePayloadFiles(slug, payload) {
+  const combinedPath = path.join(DEST_ROOT, `${slug}.json`)
+  await fs.writeFile(combinedPath, JSON.stringify(payload))
+
+  let written = 1
+
+  if (SPLIT_RESOURCE_EXPORT_SLUGS.has(slug)) {
+    await Promise.all([
+      fs.writeFile(
+        path.join(DEST_ROOT, `${slug}-features.json`),
+        JSON.stringify(payload.features),
+      ),
+      fs.writeFile(
+        path.join(DEST_ROOT, `${slug}-routes.json`),
+        JSON.stringify(payload.routes),
+      ),
+    ])
+    written += 2
+  }
+
+  return written
 }
 
 async function buildParentPayloadFromRegistryPath(parentPath) {
@@ -84,10 +135,11 @@ async function main() {
 
     try {
       const payload = await buildCityPayload(cityDataDir)
+      if (slug === 'nyc') {
+        normalizeNycSirExpressGeometry(payload)
+      }
       payloadsBySlug.set(slug, payload)
-      const destPath = path.join(DEST_ROOT, `${slug}.json`)
-      await fs.writeFile(destPath, JSON.stringify(payload))
-      written++
+      written += await writePayloadFiles(slug, payload)
     } catch (err) {
       console.warn(`Skipping ${slug}: ${err.message}`)
     }
@@ -113,6 +165,11 @@ async function main() {
       if (!parentPayload) {
         console.warn(`Skipping mini cities for ${parentSlug}: missing parent payload`)
         continue
+      }
+
+      if (!payloadsBySlug.has(parentSlug)) {
+        payloadsBySlug.set(parentSlug, parentPayload)
+        written += await writePayloadFiles(parentSlug, parentPayload)
       }
 
       for (const child of children) {

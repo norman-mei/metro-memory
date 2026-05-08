@@ -8,6 +8,9 @@ import { DataFeatureCollection, RoutesFeatureCollection } from '@/lib/types'
 import config from './config'
 import NyFutureMapNotice, { useNyFutureMapNotice } from './FutureMapNotice'
 
+const NY_FEATURES_URL = '/city-data/nyc-features.json'
+const NY_ROUTES_URL = '/city-data/nyc-routes.json'
+
 const buildFeatureCollection = (data: DataFeatureCollection) => {
   return {
     ...data,
@@ -39,8 +42,8 @@ export default function NYGameClient() {
     const load = async () => {
       try {
         const [featuresRes, routesRes] = await Promise.all([
-          fetch('/api/ny-data/rapid/features'),
-          fetch('/api/ny-data/rapid/routes'),
+          fetch(NY_FEATURES_URL),
+          fetch(NY_ROUTES_URL),
         ])
 
         if (!featuresRes.ok || !routesRes.ok) {

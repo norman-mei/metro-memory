@@ -19,6 +19,19 @@ const miniCityRegistryPath = path.join(
 const totals = {}
 const featureCollectionsByCity = {}
 
+const registerFeatureCollection = (citySlug, json, priority) => {
+  const existing = featureCollectionsByCity[citySlug]
+  if (existing && existing.__priority > priority) {
+    return
+  }
+
+  featureCollectionsByCity[citySlug] = {
+    ...json,
+    __priority: priority,
+  }
+  totals[citySlug] = json.features.length
+}
+
 const walk = (dir) => {
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
     const entryPath = path.join(dir, entry.name)
@@ -28,14 +41,21 @@ const walk = (dir) => {
     }
     if (entry.isFile() && entry.name === 'features.json') {
       const parent = path.basename(dir)
-      if (parent !== 'data') continue
-      const cityDir = path.basename(path.dirname(dir))
+      const grandparent = path.basename(path.dirname(dir))
+      const isPrimaryData = parent === 'data'
+      const isFullData = parent === 'full' && grandparent === 'data'
+      if (!isPrimaryData && !isFullData) continue
+
+      const cityDir = isFullData
+        ? path.basename(path.dirname(path.dirname(dir)))
+        : path.basename(path.dirname(dir))
+      const priority = isFullData ? 1 : 0
+
       try {
         const raw = fs.readFileSync(entryPath, 'utf-8')
         const json = JSON.parse(raw)
         if (json && Array.isArray(json.features)) {
-          featureCollectionsByCity[cityDir] = json
-          totals[cityDir] = json.features.length
+          registerFeatureCollection(cityDir, json, priority)
         }
       } catch (err) {
         console.warn(`Skipping ${cityDir}: ${err.message}`)

@@ -852,9 +852,29 @@ export const ACHIEVEMENTS: Record<string, AchievementDefinition> = {
     title: "Hudson-Harlem-Haven Hero",
     description: "You've conquered Metro-North from Grand Central to the outer terminals with commuter-class precision.",
   },
+  "nyc-mta-commuter-rail": {
+    title: "Terminal District Tactician",
+    description: "You've mastered MTA commuter rail from Penn and Grand Central to the outer branches with peak-hour precision.",
+  },
   "nyc-mta": {
     title: "Empire State of Transit",
     description: "You've mastered the MTA's sprawling empire like a true New York lifer.",
+  },
+  "nyc-path": {
+    title: "Hudson Tube Tactician",
+    description: "You've mastered PATH's cross-river tubes and terminal turns like a true bi-state regular.",
+  },
+  "nyc-rapid-transit": {
+    title: "Interborough Iron Navigator",
+    description: "You've mastered New York rapid transit across subway tunnels, PATH tubes, airport links, and Jersey light rail with regional precision.",
+  },
+  "nyc-njt-light-rail": {
+    title: "Garden State Street Runner",
+    description: "You've stitched together NJT's light rail lines with switch-by-switch precision from Jersey City to Camden.",
+  },
+  "nyc-njt-commuter-rail": {
+    title: "Secaucus Signal Chief",
+    description: "You've mastered NJT commuter rail from the core trunk lines to the outer branches with rush-hour discipline.",
   },
   "nyc-njt": {
     title: "Jersey Junction Genius",

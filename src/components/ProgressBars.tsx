@@ -392,7 +392,7 @@ const ProgressBars = ({
   if (minimized) {
     return (
       <div
-        className="flex max-w-full flex-wrap items-start content-start gap-2 overflow-x-hidden overflow-y-auto pr-1"
+        className="flex max-w-full flex-wrap items-start content-start gap-2 overflow-x-hidden overflow-y-auto pr-1 md:!max-h-none md:overflow-y-visible md:pr-0"
         style={
           minimizedMaxHeight && minimizedMaxHeight > 0
             ? { maxHeight: minimizedMaxHeight }

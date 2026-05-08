@@ -845,17 +845,47 @@
     "openGraphExtension": "jpg",
     "openGraphVersion": "93b91f6bd505"
   },
+  "nyc-mta-commuter-rail": {
+    "icon": true,
+    "iconVersion": "a52d4f443a7a",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "366fcb868cf6"
+  },
   "nyc-njt": {
     "icon": true,
     "iconVersion": "a52d4f443a7a",
     "openGraphExtension": "jpg",
     "openGraphVersion": "8048b1c7580a"
   },
+  "nyc-njt-commuter-rail": {
+    "icon": true,
+    "iconVersion": "a52d4f443a7a",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "79553448ef32"
+  },
+  "nyc-njt-light-rail": {
+    "icon": true,
+    "iconVersion": "a52d4f443a7a",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "ecc0b15a3e98"
+  },
   "nyc-panynj": {
     "icon": true,
     "iconVersion": "1a2d3e03ea07",
     "openGraphExtension": "jpg",
+    "openGraphVersion": "2c0f40ea9dfa"
+  },
+  "nyc-path": {
+    "icon": true,
+    "iconVersion": "2cf763f3b6c3",
+    "openGraphExtension": "jpg",
     "openGraphVersion": "dfd7f80d0574"
+  },
+  "nyc-rapid-transit": {
+    "icon": true,
+    "iconVersion": "a52d4f443a7a",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "9005cf32bb97"
   },
   "nyc-subway": {
     "icon": true,
