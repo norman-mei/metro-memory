@@ -593,7 +593,8 @@
             "Subway",
             "PATH",
             "Port Authority",
-            "NJT Light Rail"
+            "NJT Light Rail",
+            "IBX"
           ],
           "countingMode": "mini",
           "includeLines": [
@@ -627,6 +628,7 @@
             "NewYorkSubwayZ",
             "NewYorkSubwaySI",
             "NewYorkSubwaySIExpress",
+            "IBX",
             "NewYorkSubwayPATHHob33",
             "NewYorkSubwayPATHHobwtc",
             "NewYorkSubwayPATHJsq33",

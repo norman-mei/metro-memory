@@ -3348,7 +3348,7 @@ const SearcheableCitiesList = ({
       <div className="my-16 mt-16 sm:mt-20 lg:pl-20">
         {/* Top Navigation (Mobile/Tablet) & Action Bar (Desktop Sticky) */}
         <div className={classNames(
-          "sticky top-6 z-30 mb-6 flex flex-col gap-4 rounded-3xl border border-zinc-200/80 bg-white/70 p-4 shadow-sm backdrop-blur dark:border-zinc-800/80 dark:bg-zinc-900/70",
+          "z-30 mb-6 flex flex-col gap-4 rounded-3xl border border-zinc-200/80 bg-white/70 p-4 shadow-sm backdrop-blur dark:border-zinc-800/80 dark:bg-zinc-900/70 lg:sticky lg:top-6",
           !['cities', 'achievements'].includes(activeTab) && "lg:hidden"
         )}>
           <div className="lg:hidden">

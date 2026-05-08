@@ -122,7 +122,7 @@ export const STATION_TOTALS: Record<string, number> = {
   "nyc-njt-light-rail": 90,
   "nyc-panynj": 49,
   "nyc-path": 24,
-  "nyc-rapid-transit": 1019,
+  "nyc-rapid-transit": 1038,
   "nyc-subway": 870,
   "okayama": 38,
   "okc": 31,
