@@ -483,6 +483,7 @@ const MANUAL_ALTERNATE_NAMES: Record<string, string[]> = repairStringArrayRecord
   'P4': ['P4 Station'],
   "E 143 St - St Mary's St": ["E 143 St - St Marys St"],
   'Jackson Hts - Roosevelt Av': [
+    'Jackson Hts',
     'Jackson Heights - Roosevelt Av',
     'Jackson Heights - Roosevelt Avenue',
   ],
@@ -544,23 +545,36 @@ const AMTRAK_BLOCKED_ALTERNATE_NAMES: Record<string, string[]> = {
 }
 
 const MANUAL_COMPLEX_GROUPS: ManualComplexSelector[][] = repairManualComplexGroups([
-    [
-      { name: 'Westlake Hub', line: 'SeattleStreetcarSLU' },
-      { name: 'Westlake Center', line: 'SeattleCenterMonorail' },
-      { name: 'Westlake' },
-    ],
-    [
-      { name: 'Capitol Hill' },
-      { name: 'Broadway & Howell', line: 'SeattleStreetcarFirstHill' },
-    ],
-    [
-      { name: 'International District / Chinatown' },
-      { name: '5th & Jackson', line: 'SeattleStreetcarFirstHill' },
-    ],
-    [
-      { name: 'Metropolitan Av', line: 'IBX' },
-      { name: 'Middle Village - Metropolitan Av', line: 'NewYorkSubwayM' },
-    ],
+  [
+    { name: 'Westlake Hub', line: 'SeattleStreetcarSLU' },
+    { name: 'Westlake Center', line: 'SeattleCenterMonorail' },
+    { name: 'Westlake' },
+  ],
+  [
+    { name: 'Capitol Hill' },
+    { name: 'Broadway & Howell', line: 'SeattleStreetcarFirstHill' },
+  ],
+  [
+    { name: 'International District / Chinatown' },
+    { name: '5th & Jackson', line: 'SeattleStreetcarFirstHill' },
+  ],
+  [
+    { name: 'Metropolitan Av', line: 'IBX' },
+    { name: 'Middle Village - Metropolitan Av', line: 'NewYorkSubwayM' },
+  ],
+  [
+    { name: 'Roosevelt Av', line: 'IBX' },
+    { name: '69 St - Fisk Av', line: 'NewYorkSubway7' },
+    { name: 'Jackson Hts - Roosevelt Av', line: 'NewYorkSubwayE' },
+    { name: 'Jackson Hts - Roosevelt Av', line: 'NewYorkSubwayF' },
+    { name: 'Jackson Hts - Roosevelt Av', line: 'NewYorkSubwayM' },
+    { name: 'Jackson Hts - Roosevelt Av', line: 'NewYorkSubwayR' },
+    { name: '74 St - Broadway', line: 'NewYorkSubway7' },
+  ],
+  [
+    { name: 'Howard Beach - JFK Airport', line: 'NewYorkSubwayA' },
+    { name: 'Howard Beach', line: 'AirTrainJFKHowardBeach' },
+  ],
   [
     { name: 'Avenue H', line: 'NewYorkSubwayQ' },
     { name: 'East 16 St', line: 'IBX' },
