@@ -24067,23 +24067,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -73.90226880583795,
-          40.669469348349494
-        ]
-      },
-      "properties": {
-        "id": 1834,
-        "name": "Sutter Av",
-        "line": "IBX",
-        "order": 811
-      },
-      "id": 1834
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -73.9037625744301,
           40.6752128070212
         ]
@@ -28478,40 +28461,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -73.803326,
-          40.707564
-        ]
-      },
-      "properties": {
-        "id": 27269,
-        "name": "Parsons Blvd",
-        "line": "NewYorkSubwayE",
-        "order": 282
-      },
-      "id": 27269
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -73.783817,
-          40.712646
-        ]
-      },
-      "properties": {
-        "id": 27270,
-        "name": "Jamaica - 179 St",
-        "line": "NewYorkSubwayE",
-        "order": 293
-      },
-      "id": 27270
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -73.8468785,
           40.6947676
         ]
@@ -28558,10 +28507,27 @@
         "order": 400
       },
       "id": 27273
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.957735,
+          40.60867
+        ]
+      },
+      "properties": {
+        "id": 27274,
+        "name": "Kings Hwy",
+        "line": "NewYorkSubwayN",
+        "order": 195
+      },
+      "id": 27274
     }
   ],
   "properties": {
-    "totalStations": 1648,
+    "totalStations": 1646,
     "stationsPerLine": {
       "NewYorkSubway1": 38,
       "NewYorkSubway2": 49,
@@ -28574,8 +28540,8 @@
       "NewYorkSubway7X": 12,
       "NewYorkSubwayA": 48,
       "NewYorkSubwayC": 37,
-      "NewYorkSubwayE": 24,
-      "NewYorkSubwayN": 23,
+      "NewYorkSubwayE": 22,
+      "NewYorkSubwayN": 24,
       "NewYorkSubwayB": 33,
       "NewYorkSubwayD": 36,
       "NewYorkSubwayF": 45,
@@ -28635,7 +28601,7 @@
       "AirTrainJFKHowardBeach": 8,
       "AirTrainJFKJamaica": 7,
       "AirTrainJFKAllTerminals": 5,
-      "IBX": 19,
+      "IBX": 18,
       "NJTLR8thStHoboken": 15,
       "NJTLRWestSideTonnelle": 18,
       "NJTLRHobokenTonnelle": 7,

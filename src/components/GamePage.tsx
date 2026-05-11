@@ -562,6 +562,10 @@ const MANUAL_COMPLEX_GROUPS: ManualComplexSelector[][] = repairManualComplexGrou
       { name: 'Middle Village - Metropolitan Av', line: 'NewYorkSubwayM' },
     ],
   [
+    { name: 'Avenue H', line: 'NewYorkSubwayQ' },
+    { name: 'East 16 St', line: 'IBX' },
+  ],
+  [
     { name: 'Tai Koo', line: 'ISL' },
     { name: 'Kornhill', line: 'HKT' },
   ],
@@ -574,12 +578,17 @@ const MANUAL_COMPLEX_GROUPS: ManualComplexSelector[][] = repairManualComplexGrou
     { name: 'Avenue I' },
   ],
   [
+    { name: '4 Av', line: 'IBX' },
+    { name: 'Bay Ridge Av', line: 'NewYorkSubwayR' },
+  ],
+  [
     { name: 'Flatbush Av - Brooklyn College' },
     { name: 'Flatbush-Nostrand Av', line: 'IBX' },
   ],
   [
     { name: 'East New York', linePrefix: 'LIRR' },
     { name: 'Broadway Jct' },
+    { name: 'Atlantic Av', line: 'IBX' },
   ],
   [
     { name: 'Metropolitan Av', line: 'NewYorkSubwayG' },

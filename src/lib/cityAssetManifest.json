@@ -161,9 +161,7 @@
   },
   "california-state-muni": {
     "icon": true,
-    "iconVersion": "bb8b25a8d8ba",
-    "openGraphExtension": "jpg",
-    "openGraphVersion": "87bacc9340c9"
+    "iconVersion": "bb8b25a8d8ba"
   },
   "california-state-sacramento": {
     "icon": true,
