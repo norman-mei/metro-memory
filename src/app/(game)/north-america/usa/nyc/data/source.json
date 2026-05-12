@@ -9641,7 +9641,7 @@
             ]
         },
         {
-            "name": "<6>",
+            "name": "6 Express",
             "color": "#00A65C",
             "text_color": "#FFFFFF",
             "icon_name": "us-nyc-subway-6x",
@@ -11519,7 +11519,7 @@
             ]
         },
         {
-            "name": "<7>",
+            "name": "7 Express",
             "color": "#B933AD",
             "text_color": "#FFFFFF",
             "icon_name": "us-nyc-subway-7x",
@@ -23711,7 +23711,7 @@
             ]
         },
         {
-            "name": "FX",
+            "name": "F Express",
             "color": "#FF6319",
             "text_color": "#FFFFFF",
             "icon_name": "us-nyc-subway-fx",
@@ -35740,8 +35740,8 @@
             ],
             "name": "4 Av - 9 St",
             "coords": [
-                40.670272,
-                -73.989779
+                40.6699366,
+                -73.9890724
             ],
             "route_icon_names": [
                 "us-nyc-subway-f",
@@ -37765,8 +37765,8 @@
             ],
             "name": "149 St - Grand Concourse",
             "coords": [
-                40.81841,
-                -73.926718
+                40.8185656,
+                -73.9273142
             ],
             "route_icon_names": [
                 "us-nyc-subway-2",
@@ -37863,8 +37863,8 @@
             ],
             "name": "Queens Plaza",
             "coords": [
-                40.748973,
-                -73.937243
+                40.7489818,
+                -73.9374534
             ],
             "route_icon_names": [
                 "us-nyc-subway-e",
@@ -38050,8 +38050,8 @@
             ],
             "name": "Exchange Pl",
             "coords": [
-                40.716723,
-                -74.032423
+                40.7167903,
+                -74.0331114
             ],
             "route_icon_names": [
                 "us-nyc-path"
@@ -41124,8 +41124,8 @@
             ],
             "name": "Grove St",
             "coords": [
-                40.719281,
-                -74.042043
+                40.7193141,
+                -74.0423196
             ],
             "route_icon_names": [
                 "us-nyc-path"
@@ -43324,8 +43324,8 @@
             ],
             "name": "155 St",
             "coords": [
-                40.830135,
-                -73.938209
+                40.8303253,
+                -73.9381778
             ],
             "route_icon_names": [
                 "us-nyc-subway-b",
@@ -44511,8 +44511,8 @@
             ],
             "name": "Newport",
             "coords": [
-                40.726972,
-                -74.033838
+                40.7269401,
+                -74.0346956
             ],
             "route_icon_names": [
                 "us-nyc-path"
@@ -49510,8 +49510,8 @@
             ],
             "name": "Wall St",
             "coords": [
-                40.706732,
-                -74.009191
+                40.7067347,
+                -74.0091808
             ],
             "route_icon_names": [
                 "us-nyc-subway-2",

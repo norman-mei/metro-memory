@@ -48,7 +48,7 @@
     "icon": "north-america/usa/nyc/6.png"
   },
   "NewYorkSubway6X": {
-    "name": "6",
+    "name": "6 Express",
     "color": "#00A65C",
     "backgroundColor": "#00532E",
     "textColor": "#FFFFFF",
@@ -64,7 +64,7 @@
     "icon": "north-america/usa/nyc/7.png"
   },
   "NewYorkSubway7X": {
-    "name": "7",
+    "name": "7 Express",
     "color": "#B933AD",
     "backgroundColor": "#5C1A56",
     "textColor": "#FFFFFF",
@@ -120,7 +120,7 @@
     "icon": "north-america/usa/nyc/F.png"
   },
   "NewYorkSubwayFX": {
-    "name": "<F>",
+    "name": "F Express",
     "color": "#FF6319",
     "backgroundColor": "#8C2D00",
     "textColor": "#FFFFFF",
