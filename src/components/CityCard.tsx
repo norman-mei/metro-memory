@@ -467,14 +467,20 @@ const CityCard = ({
 
     if (variant === 'globe' || variant === 'map') {
       return (
-        <p
-          className={classNames(headingClasses, 'truncate leading-tight')}
+        <OverflowMarquee
+          className={classNames(headingClasses, 'leading-tight')}
+          speed={30}
+          minDuration={8}
+          gap={24}
+          aria-label={`${headingContent}${comingSoonSuffix}`}
           style={headingStyle}
           title={headingContent}
         >
-          {headingContent}
-          {comingSoonSuffix}
-        </p>
+          <>
+            {headingContent}
+            {comingSoonSuffix}
+          </>
+        </OverflowMarquee>
       )
     }
 
@@ -753,11 +759,23 @@ const CityCard = ({
           {renderHeadingSection()}
           {renderMeta()}
           {renderMiniCityCards()}
-            {variant === 'globe' && (
-              <div className="mt-3 flex w-full items-center justify-center rounded-md bg-zinc-600 px-3 py-2 text-sm font-semibold text-white shadow-sm group-hover:bg-zinc-500">
-                {t('playMetroMemoryCta', { city: city.name })}
+          {variant === 'globe' && (() => {
+            const playCta = t('playMetroMemoryCta', { city: city.name })
+            return (
+              <div className="mt-3 flex w-full min-w-0 items-center justify-center rounded-md bg-zinc-600 px-3 py-2 text-sm font-semibold text-white shadow-sm group-hover:bg-zinc-500">
+                <OverflowMarquee
+                  className="w-full justify-center"
+                  speed={36}
+                  minDuration={8}
+                  gap={28}
+                  aria-label={playCta}
+                  title={playCta}
+                >
+                  {playCta}
+                </OverflowMarquee>
               </div>
-            )}
+            )
+          })()}
         </div>
       </>
     )

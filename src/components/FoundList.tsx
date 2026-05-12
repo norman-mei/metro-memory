@@ -666,12 +666,7 @@ const GroupedLine = memo(
           aria-pressed={isActive}
         >
           <div className="flex min-w-0 flex-1 flex-col items-start gap-1 text-left">
-            <div
-              className={classNames(
-                'flex flex-wrap items-center',
-                CITY_NAME === 'nyc' ? 'gap-0' : 'gap-1',
-              )}
-            >
+            <div className="flex flex-wrap items-center gap-1">
               {lineIds.map((lineId) => {
                 return (
                   <LineBadge

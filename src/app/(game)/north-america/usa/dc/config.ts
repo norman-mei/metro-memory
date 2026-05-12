@@ -122,6 +122,16 @@ export const LINES: {
     order: 5000,
     icon: 'north-america/usa/dc/MWAAAeroTrain.png',
   },
+  AOCSenateCapitolSubway: {
+    name: 'Senate Capitol Subway',
+    color: '#005A85',
+    backgroundColor: '#005A85',
+    textColor: '#FFFFFF',
+    badgeShape: 'square',
+    badgeFit: 'contain',
+    order: 6000,
+    icon: 'north-america/usa/dc/AOC.png',
+  },
 }
 
 export const METADATA: Metadata = {
@@ -177,6 +187,19 @@ export const LINE_GROUPS: LineGroup[] = [
           'WMATAMetroSilver',
           'WMATAMetroYellow',
         ],
+      },
+    ],
+  },
+  {
+    items: [{ type: 'separator' }],
+  },
+  {
+    title: 'Architect of the Capitol (AOC)',
+    titleImage: 'AOC.png',
+    items: [
+      {
+        type: 'lines',
+        lines: ['AOCSenateCapitolSubway'],
       },
     ],
   },

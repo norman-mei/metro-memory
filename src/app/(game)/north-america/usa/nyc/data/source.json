@@ -41454,8 +41454,8 @@
             ],
             "name": "Lexington Av/59 St",
             "coords": [
-                40.762729,
-                -73.967441
+                40.7628598,
+                -73.967721
             ],
             "route_icon_names": [
                 "us-nyc-subway-4",
@@ -42388,8 +42388,8 @@
             ],
             "name": "Wtc Cortlandt",
             "coords": [
-                40.711835,
-                -74.012188
+                40.711832,
+                -74.0119852
             ],
             "route_icon_names": [
                 "us-nyc-subway-1"
@@ -43004,8 +43004,8 @@
             ],
             "name": "Junius St",
             "coords": [
-                40.663515,
-                -73.902447
+                40.6636698,
+                -73.9014451
             ],
             "route_icon_names": [
                 "us-nyc-subway-3"
@@ -45641,8 +45641,8 @@
             ],
             "name": "59 St - Columbus Circle",
             "coords": [
-                40.768247,
-                -73.981929
+                40.7681844,
+                -73.9818176
             ],
             "route_icon_names": [
                 "us-nyc-subway-1",
@@ -47670,8 +47670,8 @@
             ],
             "name": "Journal Square",
             "coords": [
-                40.732181,
-                -74.062869
+                40.7318372,
+                -74.0630308
             ],
             "route_icon_names": [
                 "us-nyc-path"

@@ -40,8 +40,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -74.012188,
-          40.711835
+          -74.0119852,
+          40.711832
         ]
       },
       "properties": {
@@ -264,8 +264,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -73.981933,
-          40.768246
+          -73.9818176,
+          40.7681844
         ]
       },
       "properties": {
@@ -417,8 +417,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -73.958368,
-          40.815579
+          -73.9582531,
+          40.8157263
         ]
       },
       "properties": {
@@ -1127,8 +1127,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -73.945495,
-          40.807754
+          -73.9455321,
+          40.8077749
         ]
       },
       "properties": {
@@ -1559,8 +1559,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -73.945495,
-          40.807754
+          -73.9455321,
+          40.8077749
         ]
       },
       "properties": {
@@ -1994,8 +1994,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -73.902446,
-          40.66351
+          -73.9014451,
+          40.6636698
         ]
       },
       "properties": {
@@ -2303,13 +2303,13 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -73.937592,
-          40.804137
+          -73.9374178,
+          40.8043785
         ]
       },
       "properties": {
         "id": 197,
-        "name": "125 St - Lexington Av (4,5,6,6X,Q,T)",
+        "name": "125 St - Lexington Av",
         "line": "NewYorkSubway4",
         "order": 56,
         "alternate_names": [
@@ -2340,8 +2340,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -73.96773,
-          40.76285
+          -73.967721,
+          40.7628598
         ]
       },
       "properties": {
@@ -2914,13 +2914,13 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -73.937592,
-          40.804137
+          -73.9374178,
+          40.8043785
         ]
       },
       "properties": {
         "id": 253,
-        "name": "125 St - Lexington Av (4,5,6,6X,Q,T)",
+        "name": "125 St - Lexington Av",
         "line": "NewYorkSubway5",
         "order": 102,
         "alternate_names": [
@@ -2951,8 +2951,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -73.967966,
-          40.762526
+          -73.967721,
+          40.7628598
         ]
       },
       "properties": {
@@ -3695,13 +3695,13 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -73.937592,
-          40.804137
+          -73.9374178,
+          40.8043785
         ]
       },
       "properties": {
         "id": 385,
-        "name": "125 St - Lexington Av (4,5,6,6X,Q,T)",
+        "name": "125 St - Lexington Av",
         "line": "NewYorkSubway6",
         "order": 92,
         "alternate_names": [
@@ -3834,8 +3834,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -73.96773,
-          40.76285
+          -73.967721,
+          40.7628598
         ]
       },
       "properties": {
@@ -4262,8 +4262,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -73.96773,
-          40.76285
+          -73.967721,
+          40.7628598
         ]
       },
       "properties": {
@@ -4401,13 +4401,13 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -73.937592,
-          40.804137
+          -73.9374178,
+          40.8043785
         ]
       },
       "properties": {
         "id": 445,
-        "name": "125 St - Lexington Av (4,5,6,6X,Q,T)",
+        "name": "125 St - Lexington Av",
         "line": "NewYorkSubway6X",
         "order": 50,
         "alternate_names": [
@@ -5365,8 +5365,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -73.952342,
-          40.811109
+          -73.9525637,
+          40.8108184
         ]
       },
       "properties": {
@@ -5386,8 +5386,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -73.981736,
-          40.768296
+          -73.9818176,
+          40.7681844
         ]
       },
       "properties": {
@@ -6035,8 +6035,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -73.952342,
-          40.811109
+          -73.9525637,
+          40.8108184
         ]
       },
       "properties": {
@@ -6178,8 +6178,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -73.981808,
-          40.768197
+          -73.9818176,
+          40.7681844
         ]
       },
       "properties": {
@@ -7245,8 +7245,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -73.981726,
-          40.768292
+          -73.9818176,
+          40.7681844
         ]
       },
       "properties": {
@@ -7384,8 +7384,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -73.952342,
-          40.811109
+          -73.9525637,
+          40.8108184
         ]
       },
       "properties": {
@@ -7813,8 +7813,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -73.952342,
-          40.811109
+          -73.9525637,
+          40.8108184
         ]
       },
       "properties": {
@@ -7834,8 +7834,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -73.981726,
-          40.768292
+          -73.9818176,
+          40.7681844
         ]
       },
       "properties": {
@@ -11995,8 +11995,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -73.967261,
-          40.762656
+          -73.967721,
+          40.7628598
         ]
       },
       "properties": {
@@ -13370,8 +13370,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -73.967439,
-          40.762731
+          -73.967721,
+          40.7628598
         ]
       },
       "properties": {
@@ -13719,8 +13719,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -73.967261,
-          40.762656
+          -73.967721,
+          40.7628598
         ]
       },
       "properties": {
@@ -14577,8 +14577,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -74.012051,
-          40.712677
+          -74.0124475,
+          40.7118375
         ]
       },
       "properties": {
@@ -14782,8 +14782,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -74.062337,
-          40.732649
+          -74.0630308,
+          40.7318372
         ]
       },
       "properties": {
@@ -14799,8 +14799,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -74.012159,
-          40.712777
+          -74.0126467,
+          40.7119069
         ]
       },
       "properties": {
@@ -14853,8 +14853,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -74.062768,
-          40.732225
+          -74.0630308,
+          40.7318372
         ]
       },
       "properties": {
@@ -14887,8 +14887,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -74.163875,
-          40.734711
+          -74.163385,
+          40.7348257
         ]
       },
       "properties": {
@@ -22718,8 +22718,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -74.1634890092023,
-          40.7349338544041
+          -74.162977,
+          40.7345962
         ]
       },
       "properties": {
@@ -23897,8 +23897,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -74.0217364119244,
-          40.6376717836632
+          -74.0216973,
+          40.6377119
         ]
       },
       "properties": {
@@ -23948,8 +23948,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -73.97639364,
-          40.62716371
+          -73.9765057,
+          40.6273014
         ]
       },
       "properties": {
@@ -23965,8 +23965,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -73.96159302,
-          40.62909045
+          -73.9616009,
+          40.6291138
         ]
       },
       "properties": {
@@ -23982,8 +23982,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -73.94776731,
-          40.6304877
+          -73.9474547,
+          40.6305724
         ]
       },
       "properties": {
@@ -23999,8 +23999,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -73.92881685,
-          40.63670305
+          -73.9287863,
+          40.6367687
         ]
       },
       "properties": {
@@ -24016,8 +24016,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -73.91442745719085,
-          40.6469492416271
+          -73.9137123,
+          40.6472139
         ]
       },
       "properties": {
@@ -24033,8 +24033,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -73.9000380643817,
-          40.6571954332542
+          -73.8998933,
+          40.6573373
         ]
       },
       "properties": {
@@ -24050,8 +24050,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -73.9007750372458,
-          40.6637258896778
+          -73.9007034,
+          40.6637694
         ]
       },
       "properties": {
@@ -24169,8 +24169,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -73.89459762,
-          40.74651405
+          -73.8944633,
+          40.7465434
         ]
       },
       "properties": {
@@ -24492,8 +24492,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -74.0292025618616,
-          40.7340587735873
+          -74.0297283,
+          40.7339349
         ]
       },
       "properties": {
@@ -24696,8 +24696,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -74.0292025618616,
-          40.7340587735873
+          -74.0297283,
+          40.7339349
         ]
       },
       "properties": {
@@ -24815,8 +24815,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -74.0292025618616,
-          40.7340587735873
+          -74.0297283,
+          40.7339349
         ]
       },
       "properties": {
@@ -25087,8 +25087,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -74.0292025618616,
-          40.7340587735873
+          -74.0297283,
+          40.7339349
         ]
       },
       "properties": {
@@ -25104,8 +25104,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -74.1634890092023,
-          40.7349338544041
+          -74.162977,
+          40.7345962
         ]
       },
       "properties": {
@@ -27641,8 +27641,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -73.958368,
-          40.815579
+          -73.9582531,
+          40.8157263
         ]
       },
       "properties": {
@@ -27662,8 +27662,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -73.952342,
-          40.811109
+          -73.9525637,
+          40.8108184
         ]
       },
       "properties": {
@@ -27683,8 +27683,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -73.945495,
-          40.807754
+          -73.9455321,
+          40.8077749
         ]
       },
       "properties": {
@@ -27704,13 +27704,13 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -73.937592,
-          40.804137
+          -73.9374178,
+          40.8043785
         ]
       },
       "properties": {
         "id": 2056,
-        "name": "125 St - Lexington Av (4,5,6,6X,Q,T)",
+        "name": "125 St - Lexington Av",
         "line": "NewYorkSubwayQ",
         "order": -12,
         "alternate_names": [
@@ -27792,8 +27792,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -73.99790366337328,
-          40.71373648866536
+          -73.997787,
+          40.713752
         ]
       },
       "properties": {
@@ -28013,13 +28013,13 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -73.937592,
-          40.804137
+          -73.9374178,
+          40.8043785
         ]
       },
       "properties": {
         "id": 2074,
-        "name": "125 St - Lexington Av (4,5,6,6X,Q,T)",
+        "name": "125 St - Lexington Av",
         "line": "NewYorkSubwayT",
         "order": 150,
         "alternate_names": [
@@ -28033,8 +28033,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -73.945495,
-          40.807754
+          -73.9455321,
+          40.8077749
         ]
       },
       "properties": {
@@ -28054,8 +28054,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -73.952342,
-          40.811109
+          -73.9525637,
+          40.8108184
         ]
       },
       "properties": {
@@ -28075,8 +28075,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -73.958368,
-          40.815579
+          -73.9582531,
+          40.8157263
         ]
       },
       "properties": {

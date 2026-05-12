@@ -234,8 +234,8 @@
                          "geometry":  {
                                           "type":  "Point",
                                           "coordinates":  [
-                                                              -77.022802,
-                                                              38.89838
+                                                              -77.0219542,
+                                                              38.8983841
                                                           ]
                                       },
                          "properties":  {
@@ -252,8 +252,8 @@
                          "geometry":  {
                                           "type":  "Point",
                                           "coordinates":  [
-                                                              -77.022802,
-                                                              38.89838
+                                                              -77.0219542,
+                                                              38.8983841
                                                           ]
                                       },
                          "properties":  {
@@ -270,8 +270,8 @@
                          "geometry":  {
                                           "type":  "Point",
                                           "coordinates":  [
-                                                              -77.022802,
-                                                              38.89838
+                                                              -77.0219542,
+                                                              38.8983841
                                                           ]
                                       },
                          "properties":  {
@@ -951,8 +951,8 @@
                          "geometry":  {
                                           "type":  "Point",
                                           "coordinates":  [
-                                                              -77.002296,
-                                                              38.951786
+                                                              -77.0021118,
+                                                              38.951875
                                                           ]
                                       },
                          "properties":  {
@@ -967,8 +967,8 @@
                          "geometry":  {
                                           "type":  "Point",
                                           "coordinates":  [
-                                                              -77.002296,
-                                                              38.951786
+                                                              -77.0021118,
+                                                              38.951875
                                                           ]
                                       },
                          "properties":  {
@@ -4803,10 +4803,116 @@
                                             "line":  "MWAAAeroTrain"
                                         },
                          "id":  296
+                     },
+                     {
+                         "type":  "Feature",
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              -77.004178,
+                                                              38.892886
+                                                          ]
+                                      },
+                         "properties":  {
+                                            "id":  297,
+                                            "name":  "Hart",
+                                            "line":  "AOCSenateCapitolSubway"
+                                        },
+                         "id":  297
+                     },
+                     {
+                         "type":  "Feature",
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              -77.005616,
+                                                              38.89213
+                                                          ]
+                                      },
+                         "properties":  {
+                                            "id":  298,
+                                            "name":  "Dirksen",
+                                            "line":  "AOCSenateCapitolSubway"
+                                        },
+                         "id":  298
+                     },
+                     {
+                         "type":  "Feature",
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              -77.007591,
+                                                              38.892043
+                                                          ]
+                                      },
+                         "properties":  {
+                                            "id":  299,
+                                            "name":  "Russell",
+                                            "line":  "AOCSenateCapitolSubway"
+                                        },
+                         "id":  299
+                     },
+                     {
+                         "type":  "Feature",
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              -77.008299,
+                                                              38.890677
+                                                          ]
+                                      },
+                         "properties":  {
+                                            "id":  300,
+                                            "name":  "U.S. Capitol",
+                                            "line":  "AOCSenateCapitolSubway",
+                                            "alternate_names":  [
+                                                                    "US Capitol",
+                                                                    "Capitol",
+                                                                    "The Capitol"
+                                                                ]
+                                        },
+                         "id":  300
+                     },
+                     {
+                         "type":  "Feature",
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              -77.0098202,
+                                                              38.8888717
+                                                          ]
+                                      },
+                         "properties":  {
+                                            "id":  302,
+                                            "name":  "U.S. Capitol",
+                                            "line":  "AOCSenateCapitolSubway",
+                                            "alternate_names":  [
+                                                                    "US Capitol",
+                                                                    "Capitol",
+                                                                    "The Capitol"
+                                                                ]
+                                        },
+                         "id":  302
+                     },
+                     {
+                         "type":  "Feature",
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              -77.010453,
+                                                              38.887454
+                                                          ]
+                                      },
+                         "properties":  {
+                                            "id":  301,
+                                            "name":  "Rayburn",
+                                            "line":  "AOCSenateCapitolSubway"
+                                        },
+                         "id":  301
                      }
                  ],
     "properties":  {
-                       "totalStations":  294,
+                       "totalStations":  300,
                        "stationsPerLine":  {
                                                "MARCBrunswickLine":  19,
                                                "MARCCamdenLine":  12,
@@ -4822,7 +4928,8 @@
                                                "WMATAMetroRed":  27,
                                                "WMATAMetroSilver":  39,
                                                "WMATAMetroYellow":  13,
-                                               "MWAAAeroTrain":  4
+                                               "MWAAAeroTrain":  4,
+                                               "AOCSenateCapitolSubway":  6
                                            }
                    }
 }

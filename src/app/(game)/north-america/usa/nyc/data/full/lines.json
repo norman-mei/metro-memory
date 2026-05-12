@@ -5,7 +5,7 @@
     "backgroundColor": "#830F0B",
     "textColor": "#FFFFFF",
     "order": 0,
-    "icon": "north-america/usa/nyc/NewYorkSubway1.svg"
+    "icon": "north-america/usa/nyc/1.png"
   },
   "NewYorkSubway2": {
     "name": "2",
@@ -13,7 +13,7 @@
     "backgroundColor": "#830F0B",
     "textColor": "#FFFFFF",
     "order": 1,
-    "icon": "north-america/usa/nyc/NewYorkSubway2.svg"
+    "icon": "north-america/usa/nyc/2.png"
   },
   "NewYorkSubway3": {
     "name": "3",
@@ -21,7 +21,7 @@
     "backgroundColor": "#830F0B",
     "textColor": "#FFFFFF",
     "order": 2,
-    "icon": "north-america/usa/nyc/NewYorkSubway3.svg"
+    "icon": "north-america/usa/nyc/3.png"
   },
   "NewYorkSubway4": {
     "name": "4",
@@ -29,7 +29,7 @@
     "backgroundColor": "#004A1E",
     "textColor": "#FFFFFF",
     "order": 3,
-    "icon": "north-america/usa/nyc/NewYorkSubway4.svg"
+    "icon": "north-america/usa/nyc/4.png"
   },
   "NewYorkSubway5": {
     "name": "5",
@@ -37,7 +37,7 @@
     "backgroundColor": "#004A1E",
     "textColor": "#FFFFFF",
     "order": 4,
-    "icon": "north-america/usa/nyc/NewYorkSubway5.svg"
+    "icon": "north-america/usa/nyc/5.png"
   },
   "NewYorkSubway6": {
     "name": "6",
@@ -45,7 +45,7 @@
     "backgroundColor": "#00532E",
     "textColor": "#FFFFFF",
     "order": 5,
-    "icon": "north-america/usa/nyc/NewYorkSubway6.svg"
+    "icon": "north-america/usa/nyc/6.png"
   },
   "NewYorkSubway6X": {
     "name": "<6>",
@@ -53,7 +53,7 @@
     "backgroundColor": "#00532E",
     "textColor": "#FFFFFF",
     "order": 6,
-    "icon": "north-america/usa/nyc/NewYorkSubway6X.svg"
+    "icon": "north-america/usa/nyc/6X.png"
   },
   "NewYorkSubway7": {
     "name": "7",
@@ -61,7 +61,7 @@
     "backgroundColor": "#5C1A56",
     "textColor": "#FFFFFF",
     "order": 7,
-    "icon": "north-america/usa/nyc/NewYorkSubway7.svg"
+    "icon": "north-america/usa/nyc/7.png"
   },
   "NewYorkSubway7X": {
     "name": "<7>",
@@ -69,7 +69,7 @@
     "backgroundColor": "#5C1A56",
     "textColor": "#FFFFFF",
     "order": 8,
-    "icon": "north-america/usa/nyc/NewYorkSubway7X.svg"
+    "icon": "north-america/usa/nyc/7X.png"
   },
   "NewYorkSubwayA": {
     "name": "A",
@@ -77,7 +77,7 @@
     "backgroundColor": "#142857",
     "textColor": "#FFFFFF",
     "order": 9,
-    "icon": "north-america/usa/nyc/NewYorkSubwayA.svg"
+    "icon": "north-america/usa/nyc/A.png"
   },
   "NewYorkSubwayC": {
     "name": "C",
@@ -85,7 +85,7 @@
     "backgroundColor": "#142857",
     "textColor": "#FFFFFF",
     "order": 11,
-    "icon": "north-america/usa/nyc/NewYorkSubwayC.svg"
+    "icon": "north-america/usa/nyc/C.png"
   },
   "NewYorkSubwayE": {
     "name": "E",
@@ -93,7 +93,7 @@
     "backgroundColor": "#142857",
     "textColor": "#FFFFFF",
     "order": 13,
-    "icon": "north-america/usa/nyc/NewYorkSubwayE.svg"
+    "icon": "north-america/usa/nyc/E.png"
   },
   "NewYorkSubwayB": {
     "name": "B",
@@ -101,7 +101,7 @@
     "backgroundColor": "#8C2D00",
     "textColor": "#FFFFFF",
     "order": 10,
-    "icon": "north-america/usa/nyc/NewYorkSubwayB.svg"
+    "icon": "north-america/usa/nyc/B.png"
   },
   "NewYorkSubwayD": {
     "name": "D",
@@ -109,7 +109,7 @@
     "backgroundColor": "#8C2D00",
     "textColor": "#FFFFFF",
     "order": 12,
-    "icon": "north-america/usa/nyc/NewYorkSubwayD.svg"
+    "icon": "north-america/usa/nyc/D.png"
   },
   "NewYorkSubwayF": {
     "name": "F",
@@ -117,7 +117,7 @@
     "backgroundColor": "#8C2D00",
     "textColor": "#FFFFFF",
     "order": 14,
-    "icon": "north-america/usa/nyc/NewYorkSubwayF.svg"
+    "icon": "north-america/usa/nyc/F.png"
   },
   "NewYorkSubwayFX": {
     "name": "<F>",
@@ -125,7 +125,7 @@
     "backgroundColor": "#8C2D00",
     "textColor": "#FFFFFF",
     "order": 15,
-    "icon": "north-america/usa/nyc/NewYorkSubwayFX.svg"
+    "icon": "north-america/usa/nyc/FX.png"
   },
   "NewYorkSubwayM": {
     "name": "M",
@@ -133,7 +133,7 @@
     "backgroundColor": "#8C2D00",
     "textColor": "#FFFFFF",
     "order": 19,
-    "icon": "north-america/usa/nyc/NewYorkSubwayM.svg"
+    "icon": "north-america/usa/nyc/M.png"
   },
   "NewYorkSubwayG": {
     "name": "G",
@@ -141,7 +141,7 @@
     "backgroundColor": "#366022",
     "textColor": "#FFFFFF",
     "order": 16,
-    "icon": "north-america/usa/nyc/NewYorkSubwayG.svg"
+    "icon": "north-america/usa/nyc/G.png"
   },
   "NewYorkSubwayJ": {
     "name": "J",
@@ -149,7 +149,7 @@
     "backgroundColor": "#4D3319",
     "textColor": "#FFFFFF",
     "order": 17,
-    "icon": "north-america/usa/nyc/NewYorkSubwayJ.svg"
+    "icon": "north-america/usa/nyc/J.png"
   },
   "NewYorkSubwayZ": {
     "name": "Z",
@@ -157,7 +157,7 @@
     "backgroundColor": "#4D3319",
     "textColor": "#FFFFFF",
     "order": 24,
-    "icon": "north-america/usa/nyc/NewYorkSubwayZ.svg"
+    "icon": "north-america/usa/nyc/Z.png"
   },
   "NewYorkSubwayL": {
     "name": "L",
@@ -165,7 +165,7 @@
     "backgroundColor": "#525457",
     "textColor": "#FFFFFF",
     "order": 18,
-    "icon": "north-america/usa/nyc/NewYorkSubwayL.svg"
+    "icon": "north-america/usa/nyc/L.png"
   },
   "NewYorkSubwayN": {
     "name": "N",
@@ -173,7 +173,7 @@
     "backgroundColor": "#816802",
     "textColor": "#FFFFFF",
     "order": 20,
-    "icon": "north-america/usa/nyc/NewYorkSubwayN.svg"
+    "icon": "north-america/usa/nyc/N.png"
   },
   "NewYorkSubwayQ": {
     "name": "Q",
@@ -181,7 +181,7 @@
     "backgroundColor": "#816802",
     "textColor": "#FFFFFF",
     "order": 21,
-    "icon": "north-america/usa/nyc/NewYorkSubwayQ.svg"
+    "icon": "north-america/usa/nyc/Q.png"
   },
   "NewYorkSubwayT": {
     "name": "T",
@@ -189,7 +189,7 @@
     "backgroundColor": "#00728A",
     "textColor": "#FFFFFF",
     "order": 29,
-    "icon": "north-america/usa/nyc/NewYorkSubwayT.svg"
+    "icon": "north-america/usa/nyc/T.png"
   },
   "NewYorkSubwayR": {
     "name": "R",
@@ -197,7 +197,7 @@
     "backgroundColor": "#816802",
     "textColor": "#FFFFFF",
     "order": 22,
-    "icon": "north-america/usa/nyc/NewYorkSubwayR.svg"
+    "icon": "north-america/usa/nyc/R.png"
   },
   "NewYorkSubwayW": {
     "name": "W",
@@ -205,7 +205,7 @@
     "backgroundColor": "#816802",
     "textColor": "#FFFFFF",
     "order": 23,
-    "icon": "north-america/usa/nyc/NewYorkSubwayW.svg"
+    "icon": "north-america/usa/nyc/W.png"
   },
   "NewYorkSubwaySI": {
     "name": "SIR Local",
@@ -229,7 +229,7 @@
     "backgroundColor": "#373739",
     "textColor": "#FFFFFF",
     "order": 28,
-    "icon": "north-america/usa/nyc/NewYorkSubwayGS.svg"
+    "icon": "north-america/usa/nyc/S.png"
   },
   "NewYorkSubwayFS": {
     "name": "Franklin Av Shuttle",
@@ -237,7 +237,7 @@
     "backgroundColor": "#373739",
     "textColor": "#FFFFFF",
     "order": 27,
-    "icon": "north-america/usa/nyc/NewYorkSubwayFS.svg"
+    "icon": "north-america/usa/nyc/SF.png"
   },
   "NewYorkSubwayPATHHob33": {
     "name": "HOB-33",
