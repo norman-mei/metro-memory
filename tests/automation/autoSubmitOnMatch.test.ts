@@ -2,7 +2,10 @@ import test from 'node:test'
 import assert from 'node:assert/strict'
 
 import { DEFAULT_AUTO_SUBMIT_ON_MATCH } from '../../src/lib/guessInputDefaults.ts'
-import { shouldAutoSubmitStationInput } from '../../src/lib/stationMatching.ts'
+import {
+  findExactStationMatches,
+  shouldAutoSubmitStationInput,
+} from '../../src/lib/stationMatching.ts'
 import type { DataFeature } from '../../src/lib/types.ts'
 
 const normalize = (value: string) =>
@@ -73,5 +76,46 @@ test('auto submit stays off while IME composition is active', () => {
       isComposing: true,
     }),
     false,
+  )
+})
+
+test('NYC prefixed airport terminals keep old inputs without EWR numeric aliases', () => {
+  const features = [
+    pointFeature(1807, 'EWR Terminal A', [
+      'Terminal A',
+      'Newark Terminal A',
+      'Newark Airport Terminal A',
+    ]),
+    pointFeature(1820, 'JFK Terminal 1', ['Terminal 1']),
+  ]
+
+  assert.deepEqual(
+    findExactStationMatches(
+      features,
+      normalize('terminal 1'),
+      normalize,
+      (value) => value,
+    ).map((match) => match.id),
+    [1820],
+  )
+
+  assert.equal(
+    shouldAutoSubmitStationInput({
+      features,
+      rawInput: 'terminal 1',
+      normalizeValue: normalize,
+      stripOptionalPrefixes: (value) => value,
+    }),
+    true,
+  )
+
+  assert.deepEqual(
+    findExactStationMatches(
+      features,
+      normalize('terminal a'),
+      normalize,
+      (value) => value,
+    ).map((match) => match.id),
+    [1807],
   )
 })

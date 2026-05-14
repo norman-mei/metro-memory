@@ -411,7 +411,7 @@ const MANUAL_ALTERNATE_NAMES: Record<string, string[]> = repairStringArrayRecord
     'Logan Airport',
     'Boston Airport',
   ],
-  'Newark Penn Station': ['Newark Penn'],
+  'Newark Penn Station': ['Newark Penn', 'Newark'],
   'Grand Central - 42 St': ['Grand Central'],
   'Grand Central': ['Grand Central - 42 St'],
   'Bedford Park Blvd - Lehman College': [
@@ -421,9 +421,9 @@ const MANUAL_ALTERNATE_NAMES: Record<string, string[]> = repairStringArrayRecord
   ],
   'Bedford Park Blvd': ['Bedford Pk Blvd'],
   'Briarwood': ['Briarwood - Van Wyck Blvd'],
-  'Court Sq': [
+  'Court Sq - 23 St': [
+    'Court Sq',
     'Court Sq-23 St',
-    'Court Sq - 23 St',
     'Court Square',
     'Court Square - 23 St',
     'Court Square - 23rd St',
@@ -449,6 +449,7 @@ const MANUAL_ALTERNATE_NAMES: Record<string, string[]> = repairStringArrayRecord
   'Sutphin Blvd': ['Sutphin Boulevard'],
   'Parsons Blvd': ['Parsons Boulevard'],
   'Jamaica - 179 St': ['179 St', '179 Street', 'Jamaica 179 St', 'Jamiaca'],
+  'Jamaica - Van Wyck': ['Jamaica Van Wyck', 'Jamaica-Van Wyck'],
   'Ozone Park - Lefferts Blvd': ['Ozone Park'],
   'Rockaway Park - Beach 116 St': ['Rockaway Park'],
   'Canarsie - Rockaway Pkwy': ['Canarsie'],
@@ -477,7 +478,7 @@ const MANUAL_ALTERNATE_NAMES: Record<string, string[]> = repairStringArrayRecord
   'Harlem-125 St': ['Harlem'],
   'Harlem - 148 St': ['Harlem'],
   'Flatbush Av - Brooklyn College': ['Brooklyn College'],
-  'Crown Hts - Utica Av': ['Crown Heights'],
+  'Crown Hts - Utica Av': ['Crown Heights', 'Utica'],
   'Middle Village - Metropolitan Av': ['Middle Village'],
   'Metropolitan Av': ['Parkside'],
   'P4': ['P4 Station'],
@@ -489,31 +490,33 @@ const MANUAL_ALTERNATE_NAMES: Record<string, string[]> = repairStringArrayRecord
   ],
   '74 St - Broadway': ['74 Street - Broadway'],
   '4 Av - 9 St': ['4 Av', '4 Ave', '4 Av 9 St', '4 Ave 9 St', '9 St'],
+  'Smith - 9 Sts': ['Smith', 'Smith St', 'Smith Sts', '9 St', '9 Sts'],
   'Sutphin Blvd - Archer Av - JFK Airport': ['Jamaica Station'],
+  'E 105 St': ['105 St'],
   '110 St - Malcolm X Plaza': ['110 St Central Park North'],
-  'Terminal A': [
-    'EWR Terminal A',
+  'EWR Terminal A': [
+    'Terminal A',
     'Newark Terminal A',
     'Newark Airport Terminal A',
     'Newark Liberty Terminal A',
   ],
-  'Terminal B': [
-    'EWR Terminal B',
+  'EWR Terminal B': [
+    'Terminal B',
     'Newark Terminal B',
     'Newark Airport Terminal B',
     'Newark Liberty Terminal B',
   ],
-  'Terminal C': [
-    'EWR Terminal C',
+  'EWR Terminal C': [
+    'Terminal C',
     'Newark Terminal C',
     'Newark Airport Terminal C',
     'Newark Liberty Terminal C',
   ],
-  'Terminal 1': ['JFK Terminal 1'],
-  'Terminal 4': ['JFK Terminal 4'],
-  'Terminal 5': ['JFK Terminal 5'],
-  'Terminal 7': ['JFK Terminal 7'],
-  'Terminal 8': ['JFK Terminal 8'],
+  'JFK Terminal 1': ['Terminal 1'],
+  'JFK Terminal 4': ['Terminal 4'],
+  'JFK Terminal 5': ['Terminal 5'],
+  'JFK Terminal 7': ['Terminal 7'],
+  'JFK Terminal 8': ['Terminal 8'],
   'Glen Rock-Boro Hall': ['Boro Hall - Glen Rock'],
   'Lo Wu (羅湖)': ['Lo Hu', 'Lo Hu Station'],
   'Luohu (罗湖)': ['Lo Wu', 'Lo Hu', 'Lo Wu Station', 'Lo Hu Station'],
@@ -561,6 +564,11 @@ const MANUAL_COMPLEX_GROUPS: ManualComplexSelector[][] = repairManualComplexGrou
   [
     { name: 'Metropolitan Av', line: 'IBX' },
     { name: 'Middle Village - Metropolitan Av', line: 'NewYorkSubwayM' },
+  ],
+  [
+    { name: '62 St', line: 'NewYorkSubwayD' },
+    { name: 'New Utrecht Av', line: 'NewYorkSubwayN' },
+    { name: 'New Utrecht Av', line: 'IBX' },
   ],
   [
     { name: 'Roosevelt Av', line: 'IBX' },
@@ -705,6 +713,7 @@ const MANUAL_COMPLEX_GROUPS: ManualComplexSelector[][] = repairManualComplexGrou
   ],
   [
     { name: 'Sutphin Blvd - Archer Av - JFK Airport' },
+    { name: 'Jamaica - Van Wyck' },
     { name: 'Jamaica', linePrefix: 'LIRR' },
     { name: 'Jamaica', linePrefix: 'AirTrainJFK' },
   ],
@@ -734,6 +743,7 @@ const MANUAL_COMPLEX_GROUPS: ManualComplexSelector[][] = repairManualComplexGrou
     { name: '59 St', line: 'NewYorkSubway5' },
     { name: '59 St', line: 'NewYorkSubway6' },
     { name: 'Lexington Av/59 St' },
+    { name: 'Lexington Av/63 St' },
   ],
   [
     { name: '33 St', line: 'NewYorkSubway6' },

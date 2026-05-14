@@ -389,9 +389,12 @@
       },
       "properties": {
         "id": 23,
-        "name": "Cathedral Pkwy",
+        "name": "Cathedral Pkwy - 110 St",
         "line": "NewYorkSubway1",
-        "order": 77
+        "order": 77,
+        "alternate_names": [
+          "Cathedral Pkwy"
+        ]
       },
       "id": 23
     },
@@ -4734,9 +4737,12 @@
       },
       "properties": {
         "id": 494,
-        "name": "Court Sq",
+        "name": "Court Sq - 23 St",
         "line": "NewYorkSubway7",
-        "order": 36
+        "order": 36,
+        "alternate_names": [
+          "Court Sq"
+        ]
       },
       "id": 494
     },
@@ -5212,9 +5218,12 @@
       },
       "properties": {
         "id": 526,
-        "name": "Court Sq",
+        "name": "Court Sq - 23 St",
         "line": "NewYorkSubway7X",
-        "order": 36
+        "order": 36,
+        "alternate_names": [
+          "Court Sq"
+        ]
       },
       "id": 526
     },
@@ -6735,9 +6744,12 @@
       },
       "properties": {
         "id": 674,
-        "name": "Court Sq",
+        "name": "Court Sq - 23 St",
         "line": "NewYorkSubwayE",
-        "order": 116
+        "order": 116,
+        "alternate_names": [
+          "Court Sq"
+        ]
       },
       "id": 674
     },
@@ -9810,9 +9822,12 @@
       },
       "properties": {
         "id": 999,
-        "name": "Court Sq",
+        "name": "Court Sq - 23 St",
         "line": "NewYorkSubwayF",
-        "order": 185
+        "order": 185,
+        "alternate_names": [
+          "Court Sq"
+        ]
       },
       "id": 999
     },
@@ -10205,9 +10220,12 @@
       },
       "properties": {
         "id": 1022,
-        "name": "Court Sq",
+        "name": "Court Sq - 23 St",
         "line": "NewYorkSubwayG",
-        "order": 0
+        "order": 0,
+        "alternate_names": [
+          "Court Sq"
+        ]
       },
       "id": 1022
     },
@@ -23574,19 +23592,14 @@
       },
       "properties": {
         "id": 1807,
-        "name": "Terminal A",
+        "name": "EWR Terminal A",
         "line": "AirTrainEWR",
         "order": 700,
         "alternate_names": [
-          "EWR Terminal A",
+          "Terminal A",
           "Newark Terminal A",
           "Newark Airport Terminal A",
-          "Newark Liberty Terminal A",
-          "Terminal 1",
-          "EWR Terminal 1",
-          "Newark Terminal 1",
-          "Newark Airport Terminal 1",
-          "Newark Liberty Terminal 1"
+          "Newark Liberty Terminal A"
         ]
       },
       "id": 1807
@@ -23602,19 +23615,14 @@
       },
       "properties": {
         "id": 1808,
-        "name": "Terminal B",
+        "name": "EWR Terminal B",
         "line": "AirTrainEWR",
         "order": 700,
         "alternate_names": [
-          "EWR Terminal B",
+          "Terminal B",
           "Newark Terminal B",
           "Newark Airport Terminal B",
-          "Newark Liberty Terminal B",
-          "Terminal 2",
-          "EWR Terminal 2",
-          "Newark Terminal 2",
-          "Newark Airport Terminal 2",
-          "Newark Liberty Terminal 2"
+          "Newark Liberty Terminal B"
         ]
       },
       "id": 1808
@@ -23630,19 +23638,14 @@
       },
       "properties": {
         "id": 1809,
-        "name": "Terminal C",
+        "name": "EWR Terminal C",
         "line": "AirTrainEWR",
         "order": 700,
         "alternate_names": [
-          "EWR Terminal C",
+          "Terminal C",
           "Newark Terminal C",
           "Newark Airport Terminal C",
-          "Newark Liberty Terminal C",
-          "Terminal 3",
-          "EWR Terminal 3",
-          "Newark Terminal 3",
-          "Newark Airport Terminal 3",
-          "Newark Liberty Terminal 3"
+          "Newark Liberty Terminal C"
         ]
       },
       "id": 1809
@@ -23766,11 +23769,11 @@
       },
       "properties": {
         "id": 1817,
-        "name": "Terminal 5",
+        "name": "JFK Terminal 5",
         "line": "AirTrainJFKAllTerminals",
         "order": 710,
         "alternate_names": [
-          "JFK Terminal 5"
+          "Terminal 5"
         ]
       },
       "id": 1817
@@ -23786,11 +23789,11 @@
       },
       "properties": {
         "id": 1818,
-        "name": "Terminal 4",
+        "name": "JFK Terminal 4",
         "line": "AirTrainJFKAllTerminals",
         "order": 710,
         "alternate_names": [
-          "JFK Terminal 4"
+          "Terminal 4"
         ]
       },
       "id": 1818
@@ -23806,11 +23809,11 @@
       },
       "properties": {
         "id": 1819,
-        "name": "Terminal 8",
+        "name": "JFK Terminal 8",
         "line": "AirTrainJFKAllTerminals",
         "order": 710,
         "alternate_names": [
-          "JFK Terminal 8"
+          "Terminal 8"
         ]
       },
       "id": 1819
@@ -23826,11 +23829,11 @@
       },
       "properties": {
         "id": 1820,
-        "name": "Terminal 1",
+        "name": "JFK Terminal 1",
         "line": "AirTrainJFKAllTerminals",
         "order": 710,
         "alternate_names": [
-          "JFK Terminal 1"
+          "Terminal 1"
         ]
       },
       "id": 1820
@@ -23846,11 +23849,11 @@
       },
       "properties": {
         "id": 1821,
-        "name": "Terminal 7",
+        "name": "JFK Terminal 7",
         "line": "AirTrainJFKAllTerminals",
         "order": 710,
         "alternate_names": [
-          "JFK Terminal 7"
+          "Terminal 7"
         ]
       },
       "id": 1821
@@ -26148,11 +26151,11 @@
       },
       "properties": {
         "id": 1967,
-        "name": "Terminal 5",
+        "name": "JFK Terminal 5",
         "line": "AirTrainJFKHowardBeach",
         "order": 710,
         "alternate_names": [
-          "JFK Terminal 5"
+          "Terminal 5"
         ]
       },
       "id": 1967
@@ -26168,11 +26171,11 @@
       },
       "properties": {
         "id": 1968,
-        "name": "Terminal 4",
+        "name": "JFK Terminal 4",
         "line": "AirTrainJFKHowardBeach",
         "order": 710,
         "alternate_names": [
-          "JFK Terminal 4"
+          "Terminal 4"
         ]
       },
       "id": 1968
@@ -26188,11 +26191,11 @@
       },
       "properties": {
         "id": 1969,
-        "name": "Terminal 8",
+        "name": "JFK Terminal 8",
         "line": "AirTrainJFKHowardBeach",
         "order": 710,
         "alternate_names": [
-          "JFK Terminal 8"
+          "Terminal 8"
         ]
       },
       "id": 1969
@@ -26208,11 +26211,11 @@
       },
       "properties": {
         "id": 1970,
-        "name": "Terminal 1",
+        "name": "JFK Terminal 1",
         "line": "AirTrainJFKHowardBeach",
         "order": 710,
         "alternate_names": [
-          "JFK Terminal 1"
+          "Terminal 1"
         ]
       },
       "id": 1970
@@ -26228,11 +26231,11 @@
       },
       "properties": {
         "id": 1971,
-        "name": "Terminal 7",
+        "name": "JFK Terminal 7",
         "line": "AirTrainJFKHowardBeach",
         "order": 710,
         "alternate_names": [
-          "JFK Terminal 7"
+          "Terminal 7"
         ]
       },
       "id": 1971
@@ -26265,11 +26268,11 @@
       },
       "properties": {
         "id": 1974,
-        "name": "Terminal 5",
+        "name": "JFK Terminal 5",
         "line": "AirTrainJFKJamaica",
         "order": 710,
         "alternate_names": [
-          "JFK Terminal 5"
+          "Terminal 5"
         ]
       },
       "id": 1974
@@ -26285,11 +26288,11 @@
       },
       "properties": {
         "id": 1975,
-        "name": "Terminal 4",
+        "name": "JFK Terminal 4",
         "line": "AirTrainJFKJamaica",
         "order": 710,
         "alternate_names": [
-          "JFK Terminal 4"
+          "Terminal 4"
         ]
       },
       "id": 1975
@@ -26305,11 +26308,11 @@
       },
       "properties": {
         "id": 1976,
-        "name": "Terminal 8",
+        "name": "JFK Terminal 8",
         "line": "AirTrainJFKJamaica",
         "order": 710,
         "alternate_names": [
-          "JFK Terminal 8"
+          "Terminal 8"
         ]
       },
       "id": 1976
@@ -26325,11 +26328,11 @@
       },
       "properties": {
         "id": 1977,
-        "name": "Terminal 1",
+        "name": "JFK Terminal 1",
         "line": "AirTrainJFKJamaica",
         "order": 710,
         "alternate_names": [
-          "JFK Terminal 1"
+          "Terminal 1"
         ]
       },
       "id": 1977
@@ -26345,11 +26348,11 @@
       },
       "properties": {
         "id": 1978,
-        "name": "Terminal 7",
+        "name": "JFK Terminal 7",
         "line": "AirTrainJFKJamaica",
         "order": 710,
         "alternate_names": [
-          "JFK Terminal 7"
+          "Terminal 7"
         ]
       },
       "id": 1978
@@ -28170,9 +28173,12 @@
       },
       "properties": {
         "id": 27253,
-        "name": "Court Sq",
+        "name": "Court Sq - 23 St",
         "line": "NewYorkSubwayFX",
-        "order": 290
+        "order": 290,
+        "alternate_names": [
+          "Court Sq"
+        ]
       },
       "id": 27253
     },

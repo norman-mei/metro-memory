@@ -26,6 +26,7 @@ import CloseButton from '@/components/CloseButton'
 import CityStatsPanel from '@/components/CityStatsPanel'
 import CollapsibleSection from '@/components/CollapsibleSection'
 import CreditsContent from '@/components/CreditsContent'
+import OverflowMarquee from '@/components/OverflowMarquee'
 import PrivacyPanel from '@/components/PrivacyPanel'
 import SettingsPanel from '@/components/SettingsPanel'
 import { GitHubIcon } from '@/components/SocialIcons'
@@ -4347,16 +4348,28 @@ const Achievements = ({
               sizes="80px"
               iconSrc={meta.iconSrc}
           />
-          <div>
-            <h4
-                className={classNames(
-                  'text-lg font-semibold',
-                  isUnlocked ? 'text-zinc-800 dark:text-zinc-100' : '',
-                )}
-              >
-                {displayMeta.title}
-              </h4>
-              <p className="text-sm text-zinc-600 dark:text-zinc-400">{description}</p>
+          <div className="min-w-0 flex-1">
+            <OverflowMarquee
+              className={classNames(
+                'max-w-full text-lg font-semibold',
+                isUnlocked ? 'text-zinc-800 dark:text-zinc-100' : '',
+              )}
+              speed={30}
+              minDuration={8}
+              gap={24}
+              title={displayMeta.title}
+            >
+              {displayMeta.title}
+            </OverflowMarquee>
+            <OverflowMarquee
+              className="mt-1 max-w-full text-sm text-zinc-600 dark:text-zinc-400"
+              speed={34}
+              minDuration={9}
+              gap={24}
+              title={description}
+            >
+              {description}
+            </OverflowMarquee>
             {showProgress && (
               <div className="mt-3">
                 <div
