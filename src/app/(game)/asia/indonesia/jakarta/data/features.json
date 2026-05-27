@@ -1,0 +1,1356 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.7749299,
+          -6.2892721
+        ]
+      },
+      "properties": {
+        "id": 1,
+        "name": "Lebak Bulus",
+        "line": "JakartaMRTNorthSouth",
+        "order": 0,
+        "alternate_names": [
+          "Lebak Bulus"
+        ]
+      },
+      "id": 1
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.7924544,
+          -6.2924478
+        ]
+      },
+      "properties": {
+        "id": 2,
+        "name": "Fatmawati Indomaret",
+        "line": "JakartaMRTNorthSouth",
+        "order": 1,
+        "alternate_names": [
+          "Fatmawati Indomaret"
+        ]
+      },
+      "id": 2
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.797316,
+          -6.27836
+        ]
+      },
+      "properties": {
+        "id": 3,
+        "name": "Cipete Raya Tuku",
+        "line": "JakartaMRTNorthSouth",
+        "order": 2,
+        "alternate_names": [
+          "Cipete Raya Tuku",
+          "Cipete Raya TUKU",
+          "Stasiun Cipete Raya"
+        ]
+      },
+      "id": 3
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.797326,
+          -6.266695
+        ]
+      },
+      "properties": {
+        "id": 4,
+        "name": "Haji Nawi",
+        "line": "JakartaMRTNorthSouth",
+        "order": 3,
+        "alternate_names": [
+          "Haji Nawi",
+          "Stasiun Haji Nawi"
+        ]
+      },
+      "id": 4
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.79714,
+          -6.255779
+        ]
+      },
+      "properties": {
+        "id": 5,
+        "name": "Blok A",
+        "line": "JakartaMRTNorthSouth",
+        "order": 4,
+        "alternate_names": [
+          "Blok A",
+          "Stasiun Blok A"
+        ]
+      },
+      "id": 5
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.798133,
+          -6.244464
+        ]
+      },
+      "properties": {
+        "id": 6,
+        "name": "Blok M BCA",
+        "line": "JakartaMRTNorthSouth",
+        "order": 5,
+        "alternate_names": [
+          "Blok M BCA",
+          "Stasiun Blok M"
+        ]
+      },
+      "id": 6
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.798446,
+          -6.238774
+        ]
+      },
+      "properties": {
+        "id": 7,
+        "name": "ASEAN Headquarters",
+        "line": "JakartaMRTNorthSouth",
+        "order": 6,
+        "alternate_names": [
+          "ASEAN Headquarters",
+          "ASEAN",
+          "ASEAN HQ",
+          "Stasiun ASEAN"
+        ]
+      },
+      "id": 7
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.802493,
+          -6.226734
+        ]
+      },
+      "properties": {
+        "id": 8,
+        "name": "Senayan Mastercard",
+        "line": "JakartaMRTNorthSouth",
+        "order": 7,
+        "alternate_names": [
+          "Senayan Mastercard",
+          "Stasiun Senayan"
+        ]
+      },
+      "id": 8
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.808623,
+          -6.22239
+        ]
+      },
+      "properties": {
+        "id": 9,
+        "name": "Istora Mandiri",
+        "line": "JakartaMRTNorthSouth",
+        "order": 8,
+        "alternate_names": [
+          "Istora Mandiri",
+          "Stasiun Istora"
+        ]
+      },
+      "id": 9
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.817948,
+          -6.215026
+        ]
+      },
+      "properties": {
+        "id": 10,
+        "name": "Bendungan Hilir",
+        "line": "JakartaMRTNorthSouth",
+        "order": 9,
+        "alternate_names": [
+          "Bendungan Hilir",
+          "Stasiun Bendungan Hilir"
+        ]
+      },
+      "id": 10
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.821695,
+          -6.209065
+        ]
+      },
+      "properties": {
+        "id": 11,
+        "name": "Setiabudi Astra",
+        "line": "JakartaMRTNorthSouth",
+        "order": 10,
+        "alternate_names": [
+          "Setiabudi Astra",
+          "Stasiun Setiabudi"
+        ]
+      },
+      "id": 11
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.822788,
+          -6.200796
+        ]
+      },
+      "properties": {
+        "id": 12,
+        "name": "Dukuh Atas BNI",
+        "line": "JakartaMRTNorthSouth",
+        "order": 11,
+        "alternate_names": [
+          "Dukuh Atas BNI",
+          "Dukuh Atas Bank Syariah Indonesia",
+          "Dukuh Atas",
+          "Stasiun Dukuh Atas"
+        ],
+        "cluster_key": "jakarta-bni-city-dukuh-atas-complex"
+      },
+      "id": 12
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.823008,
+          -6.191864
+        ]
+      },
+      "properties": {
+        "id": 13,
+        "name": "Bundaran HI Bank Jakarta",
+        "line": "JakartaMRTNorthSouth",
+        "order": 12,
+        "alternate_names": [
+          "Bundaran HI Bank Jakarta",
+          "Stasiun Bundaran HI"
+        ]
+      },
+      "id": 13
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.914209,
+          -6.157213
+        ]
+      },
+      "properties": {
+        "id": 14,
+        "name": "Pegangsaan Dua",
+        "line": "JakartaLRTSouth",
+        "order": 0,
+        "alternate_names": [
+          "Pegangsaan Dua"
+        ]
+      },
+      "id": 14
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.905982,
+          -6.159437
+        ]
+      },
+      "properties": {
+        "id": 15,
+        "name": "Boulevard Utara",
+        "line": "JakartaLRTSouth",
+        "order": 1,
+        "alternate_names": [
+          "Boulevard Utara"
+        ]
+      },
+      "id": 15
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.900015,
+          -6.168993
+        ]
+      },
+      "properties": {
+        "id": 16,
+        "name": "Boulevard Selatan",
+        "line": "JakartaLRTSouth",
+        "order": 2,
+        "alternate_names": [
+          "Boulevard Selatan"
+        ]
+      },
+      "id": 16
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.893393,
+          -6.17731
+        ]
+      },
+      "properties": {
+        "id": 17,
+        "name": "Pulomas",
+        "line": "JakartaLRTSouth",
+        "order": 3,
+        "alternate_names": [
+          "Pulomas"
+        ]
+      },
+      "id": 17
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.891279,
+          -6.184057
+        ]
+      },
+      "properties": {
+        "id": 18,
+        "name": "Equestrian",
+        "line": "JakartaLRTSouth",
+        "order": 4,
+        "alternate_names": [
+          "Equestrian"
+        ]
+      },
+      "id": 18
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.8911771,
+          -6.1921316
+        ]
+      },
+      "properties": {
+        "id": 19,
+        "name": "Velodrome",
+        "line": "JakartaLRTSouth",
+        "order": 5,
+        "alternate_names": [
+          "Velodrome",
+          "Halte Velodrome"
+        ]
+      },
+      "id": 19
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.82553,
+          -6.204828
+        ]
+      },
+      "properties": {
+        "id": 20,
+        "name": "Dukuh Atas BNI",
+        "line": "JabodebekLRTBekasi",
+        "order": 0,
+        "alternate_names": [
+          "Dukuh Atas BNI",
+          "Dukuh Atas Bank Syariah Indonesia",
+          "Dukuh Atas"
+        ],
+        "cluster_key": "jakarta-bni-city-dukuh-atas-complex"
+      },
+      "id": 20
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.830221,
+          -6.209318
+        ]
+      },
+      "properties": {
+        "id": 21,
+        "name": "Setiabudi",
+        "line": "JabodebekLRTBekasi",
+        "order": 1,
+        "alternate_names": [
+          "Setiabudi"
+        ]
+      },
+      "id": 21
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.832237,
+          -6.221609
+        ]
+      },
+      "properties": {
+        "id": 22,
+        "name": "Rasuna Said",
+        "line": "JabodebekLRTBekasi",
+        "order": 2,
+        "alternate_names": [
+          "Rasuna Said"
+        ]
+      },
+      "id": 22
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.833203,
+          -6.228773
+        ]
+      },
+      "properties": {
+        "id": 23,
+        "name": "Kuningan",
+        "line": "JabodebekLRTBekasi",
+        "order": 3,
+        "alternate_names": [
+          "Kuningan"
+        ]
+      },
+      "id": 23
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.838515,
+          -6.242141
+        ]
+      },
+      "properties": {
+        "id": 24,
+        "name": "Pancoran Bank BJB",
+        "line": "JabodebekLRTBekasi",
+        "order": 4,
+        "alternate_names": [
+          "Pancoran Bank BJB",
+          "Pancoran"
+        ]
+      },
+      "id": 24
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.857072,
+          -6.243485
+        ]
+      },
+      "properties": {
+        "id": 25,
+        "name": "Cikoko",
+        "line": "JabodebekLRTBekasi",
+        "order": 5,
+        "alternate_names": [
+          "Cikoko"
+        ]
+      },
+      "id": 25
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.863971,
+          -6.243446
+        ]
+      },
+      "properties": {
+        "id": 26,
+        "name": "Ciliwung",
+        "line": "JabodebekLRTBekasi",
+        "order": 6,
+        "alternate_names": [
+          "Ciliwung"
+        ]
+      },
+      "id": 26
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.87123,
+          -6.245907
+        ]
+      },
+      "properties": {
+        "id": 27,
+        "name": "Cawang",
+        "line": "JabodebekLRTBekasi",
+        "order": 7,
+        "alternate_names": [
+          "Cawang"
+        ]
+      },
+      "id": 27
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.887288,
+          -6.245866
+        ]
+      },
+      "properties": {
+        "id": 28,
+        "name": "Halim",
+        "line": "JabodebekLRTBekasi",
+        "order": 8,
+        "alternate_names": [
+          "Halim"
+        ]
+      },
+      "id": 28
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.92792,
+          -6.257748
+        ]
+      },
+      "properties": {
+        "id": 29,
+        "name": "Jati Bening Baru",
+        "line": "JabodebekLRTBekasi",
+        "order": 9,
+        "alternate_names": [
+          "Jati Bening Baru",
+          "Jatibening Baru"
+        ]
+      },
+      "id": 29
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.951873,
+          -6.2566
+        ]
+      },
+      "properties": {
+        "id": 30,
+        "name": "Cikunir 1",
+        "line": "JabodebekLRTBekasi",
+        "order": 10,
+        "alternate_names": [
+          "Cikunir 1"
+        ]
+      },
+      "id": 30
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.963211,
+          -6.25465
+        ]
+      },
+      "properties": {
+        "id": 31,
+        "name": "Cikunir 2",
+        "line": "JabodebekLRTBekasi",
+        "order": 11,
+        "alternate_names": [
+          "Cikunir 2"
+        ]
+      },
+      "id": 31
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.9904158,
+          -6.2529526
+        ]
+      },
+      "properties": {
+        "id": 32,
+        "name": "Bekasi Barat",
+        "line": "JabodebekLRTBekasi",
+        "order": 12,
+        "alternate_names": [
+          "Bekasi Barat"
+        ]
+      },
+      "id": 32
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          107.0216319,
+          -6.2640917
+        ]
+      },
+      "properties": {
+        "id": 33,
+        "name": "Jati Mulya",
+        "line": "JabodebekLRTBekasi",
+        "order": 13,
+        "alternate_names": [
+          "Jati Mulya"
+        ]
+      },
+      "id": 33
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.82553,
+          -6.204828
+        ]
+      },
+      "properties": {
+        "id": 34,
+        "name": "Dukuh Atas BNI",
+        "line": "JabodebekLRTCibubur",
+        "order": 0,
+        "alternate_names": [
+          "Dukuh Atas BNI",
+          "Dukuh Atas Bank Syariah Indonesia",
+          "Dukuh Atas"
+        ],
+        "cluster_key": "jakarta-bni-city-dukuh-atas-complex"
+      },
+      "id": 34
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.830221,
+          -6.209318
+        ]
+      },
+      "properties": {
+        "id": 35,
+        "name": "Setiabudi",
+        "line": "JabodebekLRTCibubur",
+        "order": 1,
+        "alternate_names": [
+          "Setiabudi"
+        ]
+      },
+      "id": 35
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.832237,
+          -6.221609
+        ]
+      },
+      "properties": {
+        "id": 36,
+        "name": "Rasuna Said",
+        "line": "JabodebekLRTCibubur",
+        "order": 2,
+        "alternate_names": [
+          "Rasuna Said"
+        ]
+      },
+      "id": 36
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.833203,
+          -6.228773
+        ]
+      },
+      "properties": {
+        "id": 37,
+        "name": "Kuningan",
+        "line": "JabodebekLRTCibubur",
+        "order": 3,
+        "alternate_names": [
+          "Kuningan"
+        ]
+      },
+      "id": 37
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.838515,
+          -6.242141
+        ]
+      },
+      "properties": {
+        "id": 38,
+        "name": "Pancoran Bank BJB",
+        "line": "JabodebekLRTCibubur",
+        "order": 4,
+        "alternate_names": [
+          "Pancoran Bank BJB",
+          "Pancoran"
+        ]
+      },
+      "id": 38
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.857072,
+          -6.243485
+        ]
+      },
+      "properties": {
+        "id": 39,
+        "name": "Cikoko",
+        "line": "JabodebekLRTCibubur",
+        "order": 5,
+        "alternate_names": [
+          "Cikoko"
+        ]
+      },
+      "id": 39
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.863971,
+          -6.243446
+        ]
+      },
+      "properties": {
+        "id": 40,
+        "name": "Ciliwung",
+        "line": "JabodebekLRTCibubur",
+        "order": 6,
+        "alternate_names": [
+          "Ciliwung"
+        ]
+      },
+      "id": 40
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.87123,
+          -6.245907
+        ]
+      },
+      "properties": {
+        "id": 41,
+        "name": "Cawang",
+        "line": "JabodebekLRTCibubur",
+        "order": 7,
+        "alternate_names": [
+          "Cawang"
+        ]
+      },
+      "id": 41
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.8805495,
+          -6.2929066
+        ]
+      },
+      "properties": {
+        "id": 42,
+        "name": "TMII",
+        "line": "JabodebekLRTCibubur",
+        "order": 8,
+        "alternate_names": [
+          "TMII"
+        ]
+      },
+      "id": 42
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.8843688,
+          -6.3095462
+        ]
+      },
+      "properties": {
+        "id": 43,
+        "name": "Kampung Rambutan",
+        "line": "JabodebekLRTCibubur",
+        "order": 9,
+        "alternate_names": [
+          "Kampung Rambutan"
+        ]
+      },
+      "id": 43
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.8866361,
+          -6.3237709
+        ]
+      },
+      "properties": {
+        "id": 44,
+        "name": "Ciracas",
+        "line": "JabodebekLRTCibubur",
+        "order": 10,
+        "alternate_names": [
+          "Ciracas"
+        ]
+      },
+      "id": 44
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.8956638,
+          -6.3738768
+        ]
+      },
+      "properties": {
+        "id": 45,
+        "name": "Harjamukti",
+        "line": "JabodebekLRTCibubur",
+        "order": 11,
+        "alternate_names": [
+          "Harjamukti"
+        ]
+      },
+      "id": 45
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.849935,
+          -6.21017
+        ]
+      },
+      "properties": {
+        "id": 46,
+        "name": "Manggarai",
+        "line": "KAICommuterSoekarnoHatta",
+        "order": 0,
+        "alternate_names": [
+          "Manggarai",
+          "Stasiun Manggarai"
+        ]
+      },
+      "id": 46
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.819717,
+          -6.201594
+        ]
+      },
+      "properties": {
+        "id": 47,
+        "name": "BNI City",
+        "line": "KAICommuterSoekarnoHatta",
+        "order": 1,
+        "alternate_names": [
+          "BNI City",
+          "Sudirman Baru"
+        ],
+        "cluster_key": "jakarta-bni-city-dukuh-atas-complex"
+      },
+      "id": 47
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.801297,
+          -6.155276
+        ]
+      },
+      "properties": {
+        "id": 48,
+        "name": "Duri",
+        "line": "KAICommuterSoekarnoHatta",
+        "order": 2,
+        "alternate_names": [
+          "Duri"
+        ]
+      },
+      "id": 48
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.722754,
+          -6.162744
+        ]
+      },
+      "properties": {
+        "id": 49,
+        "name": "Rawa Buaya",
+        "line": "KAICommuterSoekarnoHatta",
+        "order": 3,
+        "alternate_names": [
+          "Rawa Buaya",
+          "Stasiun Rawa Buaya"
+        ]
+      },
+      "id": 49
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.6651038,
+          -6.1718455
+        ]
+      },
+      "properties": {
+        "id": 50,
+        "name": "Batu Ceper",
+        "line": "KAICommuterSoekarnoHatta",
+        "order": 4,
+        "alternate_names": [
+          "Batu Ceper",
+          "Stasiun Batu Ceper"
+        ]
+      },
+      "id": 50
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.6517671,
+          -6.1275756
+        ]
+      },
+      "properties": {
+        "id": 51,
+        "name": "SHIA",
+        "line": "KAICommuterSoekarnoHatta",
+        "order": 5,
+        "alternate_names": [
+          "SHIA",
+          "Soekarno-Hatta International Airport",
+          "Soekarno-Hatta Airport",
+          "Bandara Soekarno-Hatta",
+          "Airport",
+          "CGK",
+          "Jakarta Airport",
+          "WIII",
+          "Stasiun Bandara Soekarno-Hatta"
+        ],
+        "cluster_key": "jakarta-shia-integrated-building-complex"
+      },
+      "id": 51
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.665118,
+          -6.11979
+        ]
+      },
+      "properties": {
+        "id": 52,
+        "name": "Terminal 3",
+        "line": "SoekarnoHattaAirportSkytrain",
+        "order": 0,
+        "alternate_names": [
+          "Terminal 3"
+        ]
+      },
+      "id": 52
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.653021,
+          -6.123135
+        ]
+      },
+      "properties": {
+        "id": 53,
+        "name": "Terminal 2",
+        "line": "SoekarnoHattaAirportSkytrain",
+        "order": 1,
+        "alternate_names": [
+          "Terminal 2"
+        ]
+      },
+      "id": 53
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.655816,
+          -6.130291
+        ]
+      },
+      "properties": {
+        "id": 54,
+        "name": "Terminal 1",
+        "line": "SoekarnoHattaAirportSkytrain",
+        "order": 2,
+        "alternate_names": [
+          "Terminal 1"
+        ]
+      },
+      "id": 54
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.652947,
+          -6.127128
+        ]
+      },
+      "properties": {
+        "id": 55,
+        "name": "Integrated Building",
+        "line": "SoekarnoHattaAirportSkytrain",
+        "order": 3,
+        "alternate_names": [
+          "Integrated Building",
+          "Integrated Terminal Building",
+          "SHIA Railway Station",
+          "Bandara Soekarno-Hatta"
+        ],
+        "cluster_key": "jakarta-shia-integrated-building-complex"
+      },
+      "id": 55
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.841209,
+          -6.12562
+        ]
+      },
+      "properties": {
+        "id": 56,
+        "name": "Stasiun C",
+        "line": "AncolGondola",
+        "order": 0,
+        "alternate_names": [
+          "Stasiun C",
+          "Station C"
+        ],
+        "cluster_key": "jakarta-ancol-sea-world-stasiun-c-complex"
+      },
+      "id": 56
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.838432,
+          -6.12139
+        ]
+      },
+      "properties": {
+        "id": 57,
+        "name": "Stasiun B",
+        "line": "AncolGondola",
+        "order": 1,
+        "alternate_names": [
+          "Stasiun B",
+          "Station B"
+        ]
+      },
+      "id": 57
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.832495,
+          -6.121136
+        ]
+      },
+      "properties": {
+        "id": 58,
+        "name": "Stasiun A",
+        "line": "AncolGondola",
+        "order": 2,
+        "alternate_names": [
+          "Stasiun A",
+          "Station A"
+        ]
+      },
+      "id": 58
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.831205,
+          -6.126921
+        ]
+      },
+      "properties": {
+        "id": 59,
+        "name": "Marina",
+        "line": "KeretaWisataSatoSato",
+        "order": 0,
+        "alternate_names": [
+          "Marina"
+        ]
+      },
+      "id": 59
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.833604,
+          -6.12722
+        ]
+      },
+      "properties": {
+        "id": 60,
+        "name": "Dunia Fantasi",
+        "line": "KeretaWisataSatoSato",
+        "order": 1,
+        "alternate_names": [
+          "Dunia Fantasi"
+        ]
+      },
+      "id": 60
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.838893,
+          -6.128133
+        ]
+      },
+      "properties": {
+        "id": 61,
+        "name": "Pasar Seni",
+        "line": "KeretaWisataSatoSato",
+        "order": 2,
+        "alternate_names": [
+          "Pasar Seni"
+        ]
+      },
+      "id": 61
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.841594,
+          -6.127152
+        ]
+      },
+      "properties": {
+        "id": 62,
+        "name": "Sea World",
+        "line": "KeretaWisataSatoSato",
+        "order": 3,
+        "alternate_names": [
+          "Sea World",
+          "Seaworld"
+        ],
+        "cluster_key": "jakarta-ancol-sea-world-stasiun-c-complex"
+      },
+      "id": 62
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.844568,
+          -6.123029
+        ]
+      },
+      "properties": {
+        "id": 63,
+        "name": "Gerbang Timur",
+        "line": "KeretaWisataSatoSato",
+        "order": 4,
+        "alternate_names": [
+          "Gerbang Timur"
+        ]
+      },
+      "id": 63
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.847684,
+          -6.120901
+        ]
+      },
+      "properties": {
+        "id": 64,
+        "name": "Beach Pool",
+        "line": "KeretaWisataSatoSato",
+        "order": 5,
+        "alternate_names": [
+          "Beach Pool"
+        ]
+      },
+      "id": 64
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.852659,
+          -6.11937
+        ]
+      },
+      "properties": {
+        "id": 65,
+        "name": "Bende",
+        "line": "KeretaWisataSatoSato",
+        "order": 6,
+        "alternate_names": [
+          "Bende"
+        ]
+      },
+      "id": 65
+    }
+  ]
+}

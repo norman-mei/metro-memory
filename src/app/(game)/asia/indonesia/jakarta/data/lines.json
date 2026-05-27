@@ -1,0 +1,98 @@
+{
+  "JakartaMRTNorthSouth": {
+    "name": "North-South",
+    "color": "#D21A48",
+    "backgroundColor": "#D21A48",
+    "textColor": "#FFFFFF",
+    "progressOutlineColor": "#D21A48",
+    "statsColor": "#D21A48",
+    "order": 0,
+    "icon": "asia/indonesia/jakarta/MRTNorth-South.png",
+    "badgeShape": "circle",
+    "badgeFit": "contain"
+  },
+  "JakartaLRTSouth": {
+    "name": "South",
+    "color": "#F26324",
+    "backgroundColor": "#F26324",
+    "textColor": "#1F1F1F",
+    "progressOutlineColor": "#F26324",
+    "statsColor": "#F26324",
+    "order": 1,
+    "icon": "asia/indonesia/jakarta/LRTSouth.png",
+    "badgeShape": "circle",
+    "badgeFit": "contain"
+  },
+  "JabodebekLRTBekasi": {
+    "name": "Bekasi",
+    "color": "#076C3B",
+    "backgroundColor": "#076C3B",
+    "textColor": "#FFFFFF",
+    "progressOutlineColor": "#076C3B",
+    "statsColor": "#076C3B",
+    "order": 2,
+    "icon": "asia/indonesia/jakarta/bekasi.png",
+    "badgeShape": "circle",
+    "badgeFit": "contain"
+  },
+  "JabodebekLRTCibubur": {
+    "name": "Cibubur",
+    "color": "#1B3D9C",
+    "backgroundColor": "#1B3D9C",
+    "textColor": "#FFFFFF",
+    "progressOutlineColor": "#1B3D9C",
+    "statsColor": "#1B3D9C",
+    "order": 3,
+    "icon": "asia/indonesia/jakarta/cibubur.png",
+    "badgeShape": "circle",
+    "badgeFit": "contain"
+  },
+  "KAICommuterSoekarnoHatta": {
+    "name": "Soekarno-Hatta Commuter",
+    "color": "#252065",
+    "backgroundColor": "#252065",
+    "textColor": "#FFFFFF",
+    "progressOutlineColor": "#252065",
+    "statsColor": "#252065",
+    "order": 4,
+    "icon": "asia/indonesia/jakarta/airport.png",
+    "badgeShape": "circle",
+    "badgeFit": "contain"
+  },
+  "SoekarnoHattaAirportSkytrain": {
+    "name": "Soekarno-Hatta Airport Skytrain",
+    "color": "#67686C",
+    "backgroundColor": "#67686C",
+    "textColor": "#FFFFFF",
+    "progressOutlineColor": "#67686C",
+    "statsColor": "#67686C",
+    "order": 5,
+    "icon": "asia/indonesia/jakarta/skytrain.png",
+    "badgeShape": "circle",
+    "badgeFit": "contain"
+  },
+  "AncolGondola": {
+    "name": "Gondola Ancol",
+    "color": "#1B3E9B",
+    "backgroundColor": "#1B3E9B",
+    "textColor": "#FFFFFF",
+    "progressOutlineColor": "#1B3E9B",
+    "statsColor": "#1B3E9B",
+    "order": 6,
+    "icon": "asia/indonesia/jakarta/gondola.png",
+    "badgeShape": "circle",
+    "badgeFit": "contain"
+  },
+  "KeretaWisataSatoSato": {
+    "name": "Kereta Wisata Sato-Sato",
+    "color": "#1B3E9B",
+    "backgroundColor": "#1B3E9B",
+    "textColor": "#FFFFFF",
+    "progressOutlineColor": "#1B3E9B",
+    "statsColor": "#1B3E9B",
+    "order": 7,
+    "icon": "asia/indonesia/jakarta/satosato.png",
+    "badgeShape": "circle",
+    "badgeFit": "contain"
+  }
+}

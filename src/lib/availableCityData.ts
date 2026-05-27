@@ -80,6 +80,7 @@ export const AVAILABLE_CITY_SLUGS = new Set([
   'honolulu',
   'houston',
   'istanbul',
+  'jakarta',
   'jinhua',
   'kaohsiung',
   'karlsruhe',
