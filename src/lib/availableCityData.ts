@@ -84,6 +84,7 @@ export const AVAILABLE_CITY_SLUGS = new Set([
   'kaohsiung',
   'karlsruhe',
   'kc',
+  'kuala-lumpur',
   'kyoto',
   'lanzhou',
   'lijiang',

@@ -74,7 +74,11 @@ const buildEtag = (buffer: Buffer) =>
     '',
   )
 
-const detectIconContentType = (buffer: Buffer) => {
+const detectIconContentType = (buffer: Buffer, filePath?: string | null) => {
+  if (filePath?.toLowerCase().endsWith('.ico')) {
+    return 'image/x-icon'
+  }
+
   if (buffer.length >= 8 && buffer.subarray(0, 8).equals(Buffer.from([0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a]))) {
     return 'image/png'
   }
@@ -136,9 +140,11 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
   ]
 
   let iconBuffer: Buffer | null = null
+  let iconPath: string | null = null
   for (const candidate of iconCandidates) {
     iconBuffer = await readIconFromDisk(candidate)
     if (iconBuffer) {
+      iconPath = candidate
       break
     }
   }
@@ -159,7 +165,7 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
   return new NextResponse(iconBuffer, {
     headers: {
       ...cacheHeaders,
-      'Content-Type': detectIconContentType(iconBuffer),
+      'Content-Type': detectIconContentType(iconBuffer, iconPath),
     },
   })
 }

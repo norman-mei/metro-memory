@@ -43,6 +43,7 @@ export interface Line {
   textColor: string
   badgeShape?: 'circle' | 'capsule' | 'square' | 'wide'
   badgeFit?: 'contain' | 'cover'
+  badgeAspectRatio?: number
   progressOutlineColor?: string
   statsColor?: string
   order: number

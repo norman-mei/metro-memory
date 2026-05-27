@@ -755,7 +755,8 @@ const rawCities: CityBase[] = [
     name: 'Kuala Lumpur, MY',
     link: '/asia/malaysia/kuala-lumpur',
     continent: 'Asia',
-    hideInStats: true,
+    disabled: false,
+    hideInStats: false,
   },
   {
     name: 'Bangkok (กรุงเทพฯ), TH',

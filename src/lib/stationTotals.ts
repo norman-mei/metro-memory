@@ -85,6 +85,7 @@ export const STATION_TOTALS: Record<string, number> = {
   "kaohsiung": 77,
   "karlsruhe": 837,
   "kc": 19,
+  "kuala-lumpur": 171,
   "kyoto": 72,
   "lanzhou": 29,
   "lijiang": 5,

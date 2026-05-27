@@ -277,7 +277,7 @@ const ProgressBars = ({
     const completionColor = getCompletionColor(percentComplete)
     const badgeShape = meta.badgeShape ?? 'circle'
     const usesFramedShell = badgeShape !== 'circle'
-    const badgeMetrics = getLineBadgeMetrics(badgeShape, 'small')
+    const badgeMetrics = getLineBadgeMetrics(badgeShape, 'small', meta.badgeAspectRatio)
     const shellInsetX = usesFramedShell ? 3 : 2
     const shellInsetY = 2
     const shellWidth = badgeMetrics.width + shellInsetX * 2

@@ -22,6 +22,7 @@ type LineBadgeProps = {
   alt?: string
   className?: string
   imageClassName?: string
+  maxWidth?: number
 }
 
 const LINE_BADGE_METRICS: Record<LineBadgeSize, Record<LineBadgeShape, LineBadgeMetrics>> = {
@@ -82,7 +83,24 @@ const LINE_BADGE_METRICS: Record<LineBadgeSize, Record<LineBadgeShape, LineBadge
 export const getLineBadgeMetrics = (
   shape: LineBadgeShape = 'circle',
   size: LineBadgeSize = 'small',
-) => LINE_BADGE_METRICS[size][shape]
+  aspectRatio?: number | null,
+) => {
+  const metrics = LINE_BADGE_METRICS[size][shape]
+
+  if (
+    aspectRatio &&
+    Number.isFinite(aspectRatio) &&
+    aspectRatio > 0 &&
+    (shape === 'wide' || shape === 'capsule')
+  ) {
+    return {
+      ...metrics,
+      width: Math.round(metrics.height * aspectRatio),
+    }
+  }
+
+  return metrics
+}
 
 export const resolveLineBadgeSrc = ({
   lineId,
@@ -120,33 +138,47 @@ const LineBadge = ({
   alt,
   className,
   imageClassName,
+  maxWidth,
 }: LineBadgeProps) => {
   const shape = line?.badgeShape ?? 'circle'
   const fit = line?.badgeFit ?? defaultFit
-  const metrics = getLineBadgeMetrics(shape, size)
+  const metrics = getLineBadgeMetrics(shape, size, line?.badgeAspectRatio)
+  const scale =
+    maxWidth && metrics.width > maxWidth ? maxWidth / metrics.width : 1
+  const renderedWidth = Math.round(metrics.width * scale)
+  const renderedHeight = Math.round(metrics.height * scale)
+  const renderedRadius = metrics.radius === 999 ? 999 : Math.round(metrics.radius * scale)
+  const renderedPadding = Math.round(metrics.padding * scale)
   const src = resolveLineBadgeSrc({ lineId, line, iconBasePath })
 
   return (
     <div
-      className={clsx('relative shrink-0 overflow-hidden', className)}
+      className={clsx(
+        'relative shrink-0',
+        fit === 'contain' ? 'overflow-visible' : 'overflow-hidden',
+        className,
+      )}
       style={{
-        width: metrics.width,
-        height: metrics.height,
-        borderRadius: metrics.radius,
+        width: renderedWidth,
+        height: renderedHeight,
+        borderRadius: renderedRadius,
       }}
     >
       <div
-        className="absolute overflow-hidden"
+        className={clsx(
+          'absolute',
+          fit === 'contain' ? 'overflow-visible' : 'overflow-hidden',
+        )}
         style={{
-          inset: metrics.padding,
-          borderRadius: Math.max(metrics.radius - metrics.padding, 0),
+          inset: renderedPadding,
+          borderRadius: Math.max(renderedRadius - renderedPadding, 0),
         }}
       >
         <Image
           alt={alt ?? line?.name ?? lineId}
           src={src}
           fill
-          sizes={`${metrics.width}px`}
+          sizes={`${renderedWidth}px`}
           quality={100}
           unoptimized
           className={clsx(

@@ -32,7 +32,7 @@ import {
 } from 'react-icons/md'
 import { createPortal } from 'react-dom'
 import CloseButton from './CloseButton'
-import LineBadge from './LineBadge'
+import LineBadge, { getLineBadgeMetrics } from './LineBadge'
 
 type CityStatsPanelProps = {
   cityDisplayName: string
@@ -48,6 +48,7 @@ type StationTimelineEntry = {
   id: number
   name: string
   lineId?: string
+  line?: Line
   lineName?: string
   lineColor?: string
   timestamp?: string
@@ -62,6 +63,7 @@ type LineStat = {
   textColor?: string
   badgeShape?: Line['badgeShape']
   badgeFit?: Line['badgeFit']
+  badgeAspectRatio?: Line['badgeAspectRatio']
   progressOutlineColor?: string
   found: number
   total: number
@@ -74,11 +76,13 @@ type LineStat = {
 
 type GroupStat = {
   title?: string
+  titleImage?: string
   items: Array<
     | { type: 'separator' }
     | {
         type: 'lines'
         title: string
+        titleImage?: string
         found: number
         total: number
         percent: number
@@ -155,6 +159,55 @@ const formatPercent = (value: number) => `${(value * 100).toFixed(2)}%`
 const MODERN_STATS_FONT_STYLE = {
   fontFamily: 'Aptos, "Segoe UI", "Helvetica Neue", Arial, sans-serif',
 } as const
+
+const resolveGroupTitleImageSrc = (
+  cityPath: string | null | undefined,
+  titleImage: string | null | undefined,
+) => {
+  if (!cityPath || !titleImage) {
+    return null
+  }
+
+  return `/images/${cityPath.replace(/^\//, '')}/${titleImage}`
+}
+
+const TitleWithImage = ({
+  cityPath,
+  image,
+  label,
+  imageClassName,
+  textClassName,
+}: {
+  cityPath?: string | null
+  image?: string
+  label: string
+  imageClassName: string
+  textClassName: string
+}) => {
+  const imageSrc = resolveGroupTitleImageSrc(cityPath, image)
+
+  return (
+    <div className="flex min-w-0 items-center gap-2">
+      {imageSrc && (
+        <span
+          className={`relative flex shrink-0 overflow-hidden rounded-md border border-zinc-200 bg-white dark:border-zinc-700 dark:bg-zinc-950 ${imageClassName}`}
+        >
+          <Image
+            alt=""
+            src={imageSrc}
+            fill
+            sizes="64px"
+            unoptimized
+            className="object-contain"
+          />
+        </span>
+      )}
+      <span className={textClassName} style={MODERN_STATS_FONT_STYLE}>
+        {label}
+      </span>
+    </div>
+  )
+}
 
 const readLocalProgress = (slug: string): LocalProgress => {
   if (typeof window === 'undefined' || !slug) {
@@ -237,6 +290,7 @@ const resolveLineGroupStats = (
 
   return lineGroups.map((group, groupIndex) => ({
     title: formatLocalizedChinaUiTitle(group.title, slug, language),
+    titleImage: group.titleImage,
     items: group.items.map((item, itemIndex) => {
       if (item.type === 'separator') {
         return { type: 'separator' as const }
@@ -282,6 +336,7 @@ const resolveLineGroupStats = (
       return {
         type: 'lines' as const,
         title: derivedTitle,
+        titleImage: item.titleImage,
         total: aggregate.total,
         found: aggregate.found,
         percent: aggregate.total > 0 ? aggregate.found / aggregate.total : 0,
@@ -379,14 +434,16 @@ const computeStats = ({
     }
 
     const timestamp = normalizedProgress.timestamps[String(id)]
+    const lineMeta = line ? config.LINES[line] : undefined
     const entry: StationTimelineEntry = {
       id,
       name: resolveStationName(feature, language),
       lineId: line ?? undefined,
+      line: lineMeta,
       lineName: line
-        ? formatLocalizedLineName(config.LINES[line]?.name ?? line, language)
+        ? formatLocalizedLineName(lineMeta?.name ?? line, language)
         : undefined,
-      lineColor: line ? config.LINES[line]?.color : undefined,
+      lineColor: lineMeta?.color,
       timestamp: timestamp && !Number.isNaN(Date.parse(timestamp)) ? timestamp : undefined,
     }
     timeline.push(entry)
@@ -445,6 +502,7 @@ const computeStats = ({
         textColor: meta?.textColor,
         badgeShape: meta?.badgeShape,
         badgeFit: meta?.badgeFit,
+        badgeAspectRatio: meta?.badgeAspectRatio,
         progressOutlineColor: meta?.progressOutlineColor,
         found: foundCount,
         total,
@@ -795,9 +853,13 @@ const CityStatsPanel = ({
           {stats.groupStats.map((group, groupIndex) => (
             <div key={`${group.title ?? 'group'}-${groupIndex}`} className="space-y-3">
               {group.title && (
-                <p className="text-xs font-semibold uppercase tracking-wide text-zinc-500 dark:text-zinc-400">
-                  {group.title}
-                </p>
+                <TitleWithImage
+                  cityPath={cityPath}
+                  image={group.titleImage}
+                  label={group.title}
+                  imageClassName="h-8 w-14"
+                  textClassName="text-xs font-semibold uppercase tracking-wide text-zinc-500 dark:text-zinc-400"
+                />
               )}
               {group.items.map((item, itemIndex) => {
                 if (item.type === 'separator') {
@@ -822,30 +884,41 @@ const CityStatsPanel = ({
                     key={`${item.title ?? 'lines'}-${groupIndex}-${itemIndex}`}
                     className="space-y-2"
                   >
-                    {item.title && (
-                       <p
-                        className="text-sm font-semibold tracking-[0.01em] text-zinc-700 dark:text-zinc-200"
-                        style={MODERN_STATS_FONT_STYLE}
-                      >
-                        {item.title}
-                      </p>
+                    {item.titleImage && (
+                      <TitleWithImage
+                        cityPath={cityPath}
+                        image={item.titleImage}
+                        label={item.title}
+                        imageClassName="h-7 w-12"
+                        textClassName="text-sm font-semibold tracking-[0.01em] text-zinc-700 dark:text-zinc-200"
+                      />
                     )}
                     <div className="space-y-2">
                       {itemVisibleLines.map((line) => {
                         const fillColor = line.color ?? '#4f46e5'
                         const needsContrastBorder = isColorLight(fillColor)
+                        const badgeMetrics = getLineBadgeMetrics(
+                          line.badgeShape,
+                          'medium',
+                          line.badgeAspectRatio,
+                        )
+                        const badgeColumnWidth = Math.min(badgeMetrics.width, 96)
                         return (
                           <div
                             key={line.lineId}
                             className="flex gap-3 rounded-2xl border border-zinc-200 bg-white p-3 dark:border-[#18181b] dark:bg-zinc-900"
                           >
-                            <div className="flex w-14 flex-shrink-0 items-center justify-center">
+                            <div
+                              className="flex flex-shrink-0 items-center justify-center"
+                              style={{ width: badgeColumnWidth }}
+                            >
                               <LineBadge
                                 lineId={line.lineId}
                                 line={line}
                                 iconBasePath={cityPath}
                                 size="medium"
                                 defaultFit="contain"
+                                maxWidth={badgeColumnWidth}
                               />
                             </div>
                             <div className="flex-1">
@@ -911,9 +984,13 @@ const CityStatsPanel = ({
           {stats.groupStats.map((group, idx) => (
             <div key={`${group.title ?? 'group'}-${idx}`}>
               {group.title && (
-                <p className="text-xs font-semibold uppercase tracking-wide text-[var(--accent-500)] dark:text-[var(--accent-300)]">
-                  {group.title}
-                </p>
+                <TitleWithImage
+                  cityPath={cityPath}
+                  image={group.titleImage}
+                  label={group.title}
+                  imageClassName="h-8 w-14"
+                  textClassName="text-xs font-semibold uppercase tracking-wide text-[var(--accent-500)] dark:text-[var(--accent-300)]"
+                />
               )}
               <div className="mt-2 space-y-2">
                 {group.items.map((item, itemIdx) =>
@@ -928,12 +1005,13 @@ const CityStatsPanel = ({
                       className="rounded-2xl border border-zinc-200 bg-white p-3 dark:border-[#18181b] dark:bg-zinc-900"
                     >
                       <div className="flex items-center justify-between">
-                        <p
-                          className="text-sm font-semibold tracking-[0.01em] text-zinc-800 dark:text-zinc-100"
-                          style={MODERN_STATS_FONT_STYLE}
-                        >
-                          {item.title}
-                        </p>
+                        <TitleWithImage
+                          cityPath={cityPath}
+                          image={item.titleImage}
+                          label={item.title}
+                          imageClassName="h-7 w-12"
+                          textClassName="text-sm font-semibold tracking-[0.01em] text-zinc-800 dark:text-zinc-100"
+                        />
                         <p
                           className="text-sm font-semibold"
                           style={{ color: getCompletionColor(item.percent) }}
@@ -1003,23 +1081,27 @@ const CityStatsPanel = ({
                 {index + 1}
               </span>
             </div>
-            <div className="flex items-center justify-between gap-2">
-              <div>
+            <div className="flex min-w-0 flex-1 items-center justify-between gap-3">
+              <div className="min-w-0">
                 <p className="text-sm font-semibold text-zinc-900 dark:text-zinc-100">
                   {entry.name}
                 </p>
-                <p className="text-xs text-zinc-500 dark:text-zinc-400">
-                  {entry.lineName ?? '—'}
-                </p>
+                {entry.lineId && entry.line && (
+                  <div className="mt-1">
+                    <LineBadge
+                      lineId={entry.lineId}
+                      line={entry.line}
+                      iconBasePath={cityPath}
+                      defaultFit="contain"
+                      maxWidth={64}
+                    />
+                  </div>
+                )}
               </div>
               <div className="text-right text-xs text-zinc-500 dark:text-zinc-300">
                 {entry.timestamp
                   ? formatDateTime(entry.timestamp, settings.language)
                   : t('unknownLabel')}
-                <br />
-                {entry.deltaMs !== undefined && entry.deltaMs >= 0
-                  ? `+${formatDuration(entry.deltaMs)}`
-                  : ''}
               </div>
             </div>
           </li>

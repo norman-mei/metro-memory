@@ -1,0 +1,4421 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.6953129,
+          3.1859187
+        ]
+      },
+      "properties": {
+        "id": 1,
+        "name": "Sentul Timur",
+        "line": "KualaLumpurLRTAmpang",
+        "order": 0,
+        "alternate_names": [
+          "Sentul Timur",
+          "Sentul East",
+          "AG1 SP1 Sentul Timur",
+          "冼都东",
+          "冼都東",
+          "Sentul Timur LRT Station",
+          "AG1;SP1",
+          "xian dou dong"
+        ]
+      },
+      "id": 1
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.695491,
+          3.1785924
+        ]
+      },
+      "properties": {
+        "id": 2,
+        "name": "Sentul",
+        "line": "KualaLumpurLRTAmpang",
+        "order": 1,
+        "alternate_names": [
+          "Sentul",
+          "AG2 SP2 Sentul",
+          "冼都",
+          "Sentul LRT Station",
+          "AG2;SP2",
+          "xian dou"
+        ]
+      },
+      "id": 2
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.6952662,
+          3.1735465
+        ]
+      },
+      "properties": {
+        "id": 3,
+        "name": "Titiwangsa",
+        "line": "KualaLumpurLRTAmpang",
+        "order": 2,
+        "alternate_names": [
+          "Titiwangsa",
+          "AG3 SP3 Titiwangsa",
+          "蒂蒂旺沙",
+          "Titiwangsa LRT Station",
+          "AG3;SP3",
+          "di di wang sha"
+        ]
+      },
+      "id": 3
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.6935796,
+          3.1665816
+        ]
+      },
+      "properties": {
+        "id": 4,
+        "name": "PWTC",
+        "line": "KualaLumpurLRTAmpang",
+        "order": 3,
+        "alternate_names": [
+          "PWTC",
+          "AG4 SP4 PWTC",
+          "布特拉世界贸易中心",
+          "布特拉世界貿易中心",
+          "PWTC LRT Station",
+          "AG4;SP4",
+          "bu te la shi jie mao yi zhong xin"
+        ]
+      },
+      "id": 4
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.6941476,
+          3.1612595
+        ]
+      },
+      "properties": {
+        "id": 5,
+        "name": "Sultan Ismail",
+        "line": "KualaLumpurLRTAmpang",
+        "order": 4,
+        "alternate_names": [
+          "Sultan Ismail",
+          "AG5 SP5 Sultan Ismail",
+          "苏丹依斯迈",
+          "蘇丹依斯邁",
+          "Sultan Ismail LRT Station",
+          "AG5;SP5",
+          "su dan yi si mai"
+        ],
+        "cluster_key": "kuala-lumpur-sultan-ismail-medan-tuanku-complex"
+      },
+      "id": 5
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.6944773,
+          3.1555866
+        ]
+      },
+      "properties": {
+        "id": 6,
+        "name": "Bandaraya-UOB",
+        "line": "KualaLumpurLRTAmpang",
+        "order": 5,
+        "alternate_names": [
+          "Bandaraya-UOB",
+          "Bandaraya",
+          "City Hall",
+          "AG6 SP6 Bandaraya",
+          "市政局",
+          "Bandaraya LRT Station",
+          "AG6;SP6",
+          "shi zheng ju"
+        ]
+      },
+      "id": 6
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.696461,
+          3.1494076
+        ]
+      },
+      "properties": {
+        "id": 7,
+        "name": "Masjid Jamek",
+        "line": "KualaLumpurLRTAmpang",
+        "order": 6,
+        "alternate_names": [
+          "Masjid Jamek",
+          "AG7 SP7 KJ13 Masjid Jamek",
+          "占美清真寺",
+          "zhan mei qing zhen si"
+        ]
+      },
+      "id": 7
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.7020686,
+          3.1443241
+        ]
+      },
+      "properties": {
+        "id": 8,
+        "name": "Plaza Rakyat",
+        "line": "KualaLumpurLRTAmpang",
+        "order": 7,
+        "alternate_names": [
+          "Plaza Rakyat",
+          "AG8 SP8 Plaza Rakyat",
+          "人民广场",
+          "人民廣場",
+          "Plaza Rakyat LRT Station",
+          "AG8;SP8",
+          "ren min guang chang"
+        ]
+      },
+      "id": 8
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.7056076,
+          3.1402684
+        ]
+      },
+      "properties": {
+        "id": 9,
+        "name": "BBCC-Hang Tuah",
+        "line": "KualaLumpurLRTAmpang",
+        "order": 8,
+        "alternate_names": [
+          "BBCC-Hang Tuah",
+          "Hang Tuah",
+          "BBCC - Hang Tuah",
+          "AG9 SP9 Hang Tuah",
+          "汉都亚",
+          "漢都亞",
+          "Hang Tuah LRT Station",
+          "AG9;SP9",
+          "han dou ya"
+        ]
+      },
+      "id": 9
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.7120271,
+          3.1349288
+        ]
+      },
+      "properties": {
+        "id": 10,
+        "name": "Pudu",
+        "line": "KualaLumpurLRTAmpang",
+        "order": 9,
+        "alternate_names": [
+          "Pudu",
+          "AG10 SP10 Pudu",
+          "半山芭",
+          "Pudu LRT Station",
+          "AG10;SP10",
+          "ban shan ba"
+        ]
+      },
+      "id": 10
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.7156159,
+          3.1278117
+        ]
+      },
+      "properties": {
+        "id": 11,
+        "name": "Chan Sow Lin",
+        "line": "KualaLumpurLRTAmpang",
+        "order": 10,
+        "alternate_names": [
+          "Chan Sow Lin",
+          "AG11 SP11 Chan Sow Lin",
+          "陈秀连",
+          "陳秀連",
+          "Chan Sow Lin LRT Station",
+          "AG11;SP11",
+          "chen xiu lian"
+        ]
+      },
+      "id": 11
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.7178669,
+          3.1209584
+        ]
+      },
+      "properties": {
+        "id": 12,
+        "name": "Miharja",
+        "line": "KualaLumpurLRTAmpang",
+        "order": 11,
+        "alternate_names": [
+          "Miharja",
+          "AG12 Miharja",
+          "美和家",
+          "Miharja LRT Station",
+          "AG12",
+          "mei he jia"
+        ]
+      },
+      "id": 12
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.7269277,
+          3.1232973
+        ]
+      },
+      "properties": {
+        "id": 13,
+        "name": "Maluri",
+        "line": "KualaLumpurLRTAmpang",
+        "order": 12,
+        "alternate_names": [
+          "Maluri",
+          "AG13 Maluri",
+          "马鲁里",
+          "馬魯裡",
+          "Maluri LRT Station",
+          "AG13",
+          "ma lu li"
+        ],
+        "cluster_key": "kuala-lumpur-maluri-aeon-complex"
+      },
+      "id": 13
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.7389686,
+          3.1302047
+        ]
+      },
+      "properties": {
+        "id": 14,
+        "name": "Pandan Jaya",
+        "line": "KualaLumpurLRTAmpang",
+        "order": 13,
+        "alternate_names": [
+          "Pandan Jaya",
+          "AG14 Pandan Jaya",
+          "班登再也",
+          "Pandan Jaya LRT Station",
+          "AG14",
+          "ban deng zai ye"
+        ]
+      },
+      "id": 14
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.7466563,
+          3.1347472
+        ]
+      },
+      "properties": {
+        "id": 15,
+        "name": "Pandan Indah",
+        "line": "KualaLumpurLRTAmpang",
+        "order": 14,
+        "alternate_names": [
+          "Pandan Indah",
+          "AG15 Pandan Indah",
+          "班登英达",
+          "班登英達",
+          "Pandan Indah LRT Station",
+          "AG15",
+          "ban deng ying da"
+        ]
+      },
+      "id": 15
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.753015,
+          3.1384655
+        ]
+      },
+      "properties": {
+        "id": 16,
+        "name": "Cempaka",
+        "line": "KualaLumpurLRTAmpang",
+        "order": 15,
+        "alternate_names": [
+          "Cempaka",
+          "AG16 Cempaka",
+          "千百家",
+          "Cempaka LRT Station",
+          "AG16",
+          "qian bai jia"
+        ]
+      },
+      "id": 16
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.756554,
+          3.1406061
+        ]
+      },
+      "properties": {
+        "id": 17,
+        "name": "Cahaya",
+        "line": "KualaLumpurLRTAmpang",
+        "order": 16,
+        "alternate_names": [
+          "Cahaya",
+          "AG17 Cahaya",
+          "丽阳",
+          "麗陽",
+          "Cahaya LRT Station",
+          "AG17",
+          "li yang"
+        ]
+      },
+      "id": 17
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.7602419,
+          3.1503935
+        ]
+      },
+      "properties": {
+        "id": 18,
+        "name": "Ampang",
+        "line": "KualaLumpurLRTAmpang",
+        "order": 17,
+        "alternate_names": [
+          "Ampang",
+          "AG18 Ampang",
+          "安邦",
+          "Ampang LRT Station",
+          "AG18",
+          "an bang"
+        ]
+      },
+      "id": 18
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.6953129,
+          3.1859187
+        ]
+      },
+      "properties": {
+        "id": 19,
+        "name": "Sentul Timur",
+        "line": "KualaLumpurLRTSriPetaling",
+        "order": 0,
+        "alternate_names": [
+          "Sentul Timur",
+          "Sentul East",
+          "AG1 SP1 Sentul Timur",
+          "冼都东",
+          "冼都東",
+          "Sentul Timur LRT Station",
+          "AG1;SP1",
+          "xian dou dong"
+        ]
+      },
+      "id": 19
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.695491,
+          3.1785924
+        ]
+      },
+      "properties": {
+        "id": 20,
+        "name": "Sentul",
+        "line": "KualaLumpurLRTSriPetaling",
+        "order": 1,
+        "alternate_names": [
+          "Sentul",
+          "AG2 SP2 Sentul",
+          "冼都",
+          "Sentul LRT Station",
+          "AG2;SP2",
+          "xian dou"
+        ]
+      },
+      "id": 20
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.6952662,
+          3.1735465
+        ]
+      },
+      "properties": {
+        "id": 21,
+        "name": "Titiwangsa",
+        "line": "KualaLumpurLRTSriPetaling",
+        "order": 2,
+        "alternate_names": [
+          "Titiwangsa",
+          "AG3 SP3 Titiwangsa",
+          "蒂蒂旺沙",
+          "Titiwangsa LRT Station",
+          "AG3;SP3",
+          "di di wang sha"
+        ]
+      },
+      "id": 21
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.6935796,
+          3.1665816
+        ]
+      },
+      "properties": {
+        "id": 22,
+        "name": "PWTC",
+        "line": "KualaLumpurLRTSriPetaling",
+        "order": 3,
+        "alternate_names": [
+          "PWTC",
+          "AG4 SP4 PWTC",
+          "布特拉世界贸易中心",
+          "布特拉世界貿易中心",
+          "PWTC LRT Station",
+          "AG4;SP4",
+          "bu te la shi jie mao yi zhong xin"
+        ]
+      },
+      "id": 22
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.6941476,
+          3.1612595
+        ]
+      },
+      "properties": {
+        "id": 23,
+        "name": "Sultan Ismail",
+        "line": "KualaLumpurLRTSriPetaling",
+        "order": 4,
+        "alternate_names": [
+          "Sultan Ismail",
+          "AG5 SP5 Sultan Ismail",
+          "苏丹依斯迈",
+          "蘇丹依斯邁",
+          "Sultan Ismail LRT Station",
+          "AG5;SP5",
+          "su dan yi si mai"
+        ]
+      },
+      "id": 23
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.6944773,
+          3.1555866
+        ]
+      },
+      "properties": {
+        "id": 24,
+        "name": "Bandaraya-UOB",
+        "line": "KualaLumpurLRTSriPetaling",
+        "order": 5,
+        "alternate_names": [
+          "Bandaraya-UOB",
+          "Bandaraya",
+          "City Hall",
+          "AG6 SP6 Bandaraya",
+          "市政局",
+          "Bandaraya LRT Station",
+          "AG6;SP6",
+          "shi zheng ju"
+        ]
+      },
+      "id": 24
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.696461,
+          3.1494076
+        ]
+      },
+      "properties": {
+        "id": 25,
+        "name": "Masjid Jamek",
+        "line": "KualaLumpurLRTSriPetaling",
+        "order": 6,
+        "alternate_names": [
+          "Masjid Jamek",
+          "AG7 SP7 KJ13 Masjid Jamek",
+          "占美清真寺",
+          "zhan mei qing zhen si"
+        ]
+      },
+      "id": 25
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.7020686,
+          3.1443241
+        ]
+      },
+      "properties": {
+        "id": 26,
+        "name": "Plaza Rakyat",
+        "line": "KualaLumpurLRTSriPetaling",
+        "order": 7,
+        "alternate_names": [
+          "Plaza Rakyat",
+          "AG8 SP8 Plaza Rakyat",
+          "人民广场",
+          "人民廣場",
+          "Plaza Rakyat LRT Station",
+          "AG8;SP8",
+          "ren min guang chang"
+        ]
+      },
+      "id": 26
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.7056076,
+          3.1402684
+        ]
+      },
+      "properties": {
+        "id": 27,
+        "name": "BBCC-Hang Tuah",
+        "line": "KualaLumpurLRTSriPetaling",
+        "order": 8,
+        "alternate_names": [
+          "BBCC-Hang Tuah",
+          "Hang Tuah",
+          "BBCC - Hang Tuah",
+          "AG9 SP9 Hang Tuah",
+          "汉都亚",
+          "漢都亞",
+          "Hang Tuah LRT Station",
+          "AG9;SP9",
+          "han dou ya"
+        ]
+      },
+      "id": 27
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.7120271,
+          3.1349288
+        ]
+      },
+      "properties": {
+        "id": 28,
+        "name": "Pudu",
+        "line": "KualaLumpurLRTSriPetaling",
+        "order": 9,
+        "alternate_names": [
+          "Pudu",
+          "AG10 SP10 Pudu",
+          "半山芭",
+          "Pudu LRT Station",
+          "AG10;SP10",
+          "ban shan ba"
+        ]
+      },
+      "id": 28
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.7156159,
+          3.1278117
+        ]
+      },
+      "properties": {
+        "id": 29,
+        "name": "Chan Sow Lin",
+        "line": "KualaLumpurLRTSriPetaling",
+        "order": 10,
+        "alternate_names": [
+          "Chan Sow Lin",
+          "AG11 SP11 Chan Sow Lin",
+          "陈秀连",
+          "陳秀連",
+          "Chan Sow Lin LRT Station",
+          "AG11;SP11",
+          "chen xiu lian"
+        ]
+      },
+      "id": 29
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.7143177,
+          3.1127197
+        ]
+      },
+      "properties": {
+        "id": 30,
+        "name": "Cheras",
+        "line": "KualaLumpurLRTSriPetaling",
+        "order": 11,
+        "alternate_names": [
+          "Cheras",
+          "SP12 Cheras",
+          "蕉赖",
+          "蕉賴",
+          "Cheras LRT Station",
+          "SP12",
+          "jiao lai"
+        ]
+      },
+      "id": 30
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.7062734,
+          3.1021207
+        ]
+      },
+      "properties": {
+        "id": 31,
+        "name": "Salak Selatan",
+        "line": "KualaLumpurLRTSriPetaling",
+        "order": 12,
+        "alternate_names": [
+          "Salak Selatan",
+          "SP13 Salak Selatan",
+          "沙叻秀",
+          "Salak Selatan LRT Station",
+          "LRT Salak Selatan",
+          "SP13",
+          "sha le xiu"
+        ]
+      },
+      "id": 31
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.7124492,
+          3.0896551
+        ]
+      },
+      "properties": {
+        "id": 32,
+        "name": "Bandar Tun Razak",
+        "line": "KualaLumpurLRTSriPetaling",
+        "order": 13,
+        "alternate_names": [
+          "Bandar Tun Razak",
+          "SP14 Bandar Tun Razak",
+          "敦拉萨镇",
+          "敦拉薩鎮",
+          "Bandar Tun Razak LRT Station",
+          "LRT Bandar Tun Razak",
+          "SP14",
+          "dun la sa zhen"
+        ]
+      },
+      "id": 32
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.7112202,
+          3.0760706
+        ]
+      },
+      "properties": {
+        "id": 33,
+        "name": "Bandar Tasik Selatan",
+        "line": "KualaLumpurLRTSriPetaling",
+        "order": 14,
+        "alternate_names": [
+          "Bandar Tasik Selatan",
+          "ERL Bandar Tasik Selatan",
+          "SP15 Bandar Tasik Selatan",
+          "南湖镇",
+          "南湖鎮",
+          "Bandar Tasik Selatan LRT Station",
+          "SP15",
+          "nan hu zhen"
+        ]
+      },
+      "id": 33
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.7080736,
+          3.0639306
+        ]
+      },
+      "properties": {
+        "id": 34,
+        "name": "Sungai Besi",
+        "line": "KualaLumpurLRTSriPetaling",
+        "order": 15,
+        "alternate_names": [
+          "Sungai Besi",
+          "SP16 Sungai Besi",
+          "新街场",
+          "LRT Sungai Besi",
+          "Sungai Besi LRT Station",
+          "SP16",
+          "xin jie chang"
+        ]
+      },
+      "id": 34
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.6922007,
+          3.058149
+        ]
+      },
+      "properties": {
+        "id": 35,
+        "name": "Bukit Jalil",
+        "line": "KualaLumpurLRTSriPetaling",
+        "order": 16,
+        "alternate_names": [
+          "Bukit Jalil",
+          "SP17 Bukit Jalil",
+          "武吉加里尔",
+          "武吉加里爾",
+          "Bukit Jalil LRT Station",
+          "SP17",
+          "wu ji jia li er"
+        ]
+      },
+      "id": 35
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.6870681,
+          3.0614257
+        ]
+      },
+      "properties": {
+        "id": 36,
+        "name": "Sri Petaling",
+        "line": "KualaLumpurLRTSriPetaling",
+        "order": 17,
+        "alternate_names": [
+          "Sri Petaling",
+          "SP18 Sri Petaling",
+          "大城堡",
+          "Sri Petaling LRT Station",
+          "SP18",
+          "dai cheng bao"
+        ]
+      },
+      "id": 36
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.6705881,
+          3.0620889
+        ]
+      },
+      "properties": {
+        "id": 37,
+        "name": "Awan Besar",
+        "line": "KualaLumpurLRTSriPetaling",
+        "order": 18,
+        "alternate_names": [
+          "Awan Besar",
+          "SP19 Awan Besar",
+          "阿旺柏沙",
+          "Awan Besar LRT Station",
+          "SP19",
+          "a wang bai sha"
+        ]
+      },
+      "id": 37
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.6625662,
+          3.0619292
+        ]
+      },
+      "properties": {
+        "id": 38,
+        "name": "Muhibbah",
+        "line": "KualaLumpurLRTSriPetaling",
+        "order": 19,
+        "alternate_names": [
+          "Muhibbah",
+          "SP20 Muhibbah",
+          "亲善",
+          "親善",
+          "Muhibbah LRT Station",
+          "SP20",
+          "qin shan"
+        ]
+      },
+      "id": 38
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.6565197,
+          3.0546657
+        ]
+      },
+      "properties": {
+        "id": 39,
+        "name": "Alam Sutera",
+        "line": "KualaLumpurLRTSriPetaling",
+        "order": 20,
+        "alternate_names": [
+          "Alam Sutera",
+          "SP21 Alam Sutera",
+          "阿南苏特拉",
+          "阿南蘇特拉",
+          "Alam Sutera LRT Station",
+          "SP21",
+          "a nan su te la"
+        ]
+      },
+      "id": 39
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.6442457,
+          3.0504524
+        ]
+      },
+      "properties": {
+        "id": 40,
+        "name": "Kinrara BK 5",
+        "line": "KualaLumpurLRTSriPetaling",
+        "order": 21,
+        "alternate_names": [
+          "Kinrara BK 5",
+          "SP22 Kinrara BK 5",
+          "金銮第五区",
+          "金鑾第五區",
+          "Kinrara BK5 LRT Station",
+          "LRT Kinrara BK 5",
+          "SP22",
+          "jin luan di wu qu"
+        ]
+      },
+      "id": 40
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.6210966,
+          3.0481531
+        ]
+      },
+      "properties": {
+        "id": 41,
+        "name": "IOI Puchong Jaya",
+        "line": "KualaLumpurLRTSriPetaling",
+        "order": 22,
+        "alternate_names": [
+          "IOI Puchong Jaya",
+          "SP24 IOI Puchong Jaya",
+          "IOI蒲种再也",
+          "IOI蒲種再也",
+          "IOI Puchong Jaya LRT Station",
+          "LRT IOI Mall",
+          "SP24",
+          "I O I pu zhong zai ye"
+        ]
+      },
+      "id": 41
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.6160821,
+          3.0332601
+        ]
+      },
+      "properties": {
+        "id": 42,
+        "name": "Pusat Bandar Puchong",
+        "line": "KualaLumpurLRTSriPetaling",
+        "order": 23,
+        "alternate_names": [
+          "Pusat Bandar Puchong",
+          "SP25 Pusat Bandar Puchong",
+          "蒲种市中心",
+          "蒲種市中心",
+          "Pusat Bandar Puchong LRT Station",
+          "SP25",
+          "pu zhong shi zhong xin"
+        ]
+      },
+      "id": 42
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.6135363,
+          3.0227317
+        ]
+      },
+      "properties": {
+        "id": 43,
+        "name": "Taman Perindustrian Puchong",
+        "line": "KualaLumpurLRTSriPetaling",
+        "order": 24,
+        "alternate_names": [
+          "Taman Perindustrian Puchong",
+          "SP26 Taman Perindustrian Puchong",
+          "蒲种工业区",
+          "蒲種工業區",
+          "Taman Perindustrian Puchong LRT Station",
+          "SP26",
+          "pu zhong gong ye qu"
+        ]
+      },
+      "id": 43
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.6129474,
+          3.0169662
+        ]
+      },
+      "properties": {
+        "id": 44,
+        "name": "Bandar Puteri",
+        "line": "KualaLumpurLRTSriPetaling",
+        "order": 25,
+        "alternate_names": [
+          "Bandar Puteri",
+          "SP27 Bandar Puteri",
+          "公主城",
+          "Bandar Puteri LRT Station",
+          "SP27",
+          "gong zhu cheng"
+        ]
+      },
+      "id": 44
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.6052453,
+          3.0078461
+        ]
+      },
+      "properties": {
+        "id": 45,
+        "name": "Puchong Perdana",
+        "line": "KualaLumpurLRTSriPetaling",
+        "order": 26,
+        "alternate_names": [
+          "Puchong Perdana",
+          "SP28 Puchong Perdana",
+          "蒲种柏兰岭",
+          "蒲種柏蘭嶺",
+          "Puchong Perdana LRT Station",
+          "SP28",
+          "pu zhong bai lan ling"
+        ]
+      },
+      "id": 45
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.5967598,
+          2.9999134
+        ]
+      },
+      "properties": {
+        "id": 46,
+        "name": "Puchong Prima",
+        "line": "KualaLumpurLRTSriPetaling",
+        "order": 27,
+        "alternate_names": [
+          "Puchong Prima",
+          "SP29 Puchong Prima",
+          "蒲种柏丽玛",
+          "蒲種柏麗瑪",
+          "Puchong Prima LRT Station",
+          "SP29",
+          "pu zhong bai li ma"
+        ]
+      },
+      "id": 46
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.5754695,
+          2.9960888
+        ]
+      },
+      "properties": {
+        "id": 47,
+        "name": "Putra Heights",
+        "line": "KualaLumpurLRTSriPetaling",
+        "order": 28,
+        "alternate_names": [
+          "Putra Heights",
+          "SP31 KJ37 Putra Heights",
+          "布特拉高原",
+          "Putra Heights LRT Station",
+          "SP31;KJ37",
+          "bu te la gao yuan"
+        ]
+      },
+      "id": 47
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.7244071,
+          3.2312815
+        ]
+      },
+      "properties": {
+        "id": 48,
+        "name": "Gombak",
+        "line": "KualaLumpurLRTKelanaJaya",
+        "order": 0,
+        "alternate_names": [
+          "Gombak",
+          "KJ1 Gombak",
+          "鹅唛",
+          "鵝嘜",
+          "Gombak LRT Station",
+          "Terminal PUTRA LRT Station",
+          "KJ1",
+          "e mai"
+        ]
+      },
+      "id": 48
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.7217714,
+          3.2196351
+        ]
+      },
+      "properties": {
+        "id": 49,
+        "name": "Taman Melati",
+        "line": "KualaLumpurLRTKelanaJaya",
+        "order": 1,
+        "alternate_names": [
+          "Taman Melati",
+          "KJ2 Taman Melati",
+          "美拉蒂花园",
+          "美拉蒂花園",
+          "Taman Melati LRT Station",
+          "KJ2",
+          "mei la di hua yuan"
+        ]
+      },
+      "id": 49
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.7319943,
+          3.205667
+        ]
+      },
+      "properties": {
+        "id": 50,
+        "name": "Wangsa Maju",
+        "line": "KualaLumpurLRTKelanaJaya",
+        "order": 2,
+        "alternate_names": [
+          "Wangsa Maju",
+          "KJ3 Wangsa Maju",
+          "旺沙玛珠",
+          "旺沙瑪珠",
+          "Wangsa Maju LRT Station",
+          "KJ3",
+          "wang sha ma zhu"
+        ]
+      },
+      "id": 50
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.737458,
+          3.1989643
+        ]
+      },
+      "properties": {
+        "id": 51,
+        "name": "Sri Rampai",
+        "line": "KualaLumpurLRTKelanaJaya",
+        "order": 3,
+        "alternate_names": [
+          "Sri Rampai",
+          "KJ4 Sri Rampai",
+          "南北花园",
+          "南北花園",
+          "Sri Rampai LRT Station",
+          "KJ4",
+          "nan bei hua yuan"
+        ]
+      },
+      "id": 51
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.7359251,
+          3.1758888
+        ]
+      },
+      "properties": {
+        "id": 52,
+        "name": "Setiawangsa",
+        "line": "KualaLumpurLRTKelanaJaya",
+        "order": 4,
+        "alternate_names": [
+          "Setiawangsa",
+          "KJ5 Setiawangsa",
+          "斯迪亚旺沙",
+          "斯迪亞旺沙",
+          "Setiawangsa LRT Station",
+          "KJ5",
+          "si di ya wang sha"
+        ]
+      },
+      "id": 52
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.735306,
+          3.1672364
+        ]
+      },
+      "properties": {
+        "id": 53,
+        "name": "Jelatek",
+        "line": "KualaLumpurLRTKelanaJaya",
+        "order": 5,
+        "alternate_names": [
+          "Jelatek",
+          "KJ6 Jelatek",
+          "遮拉迪",
+          "Jelatek LRT Station",
+          "KJ6",
+          "zhe la di"
+        ]
+      },
+      "id": 53
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.7318569,
+          3.1650831
+        ]
+      },
+      "properties": {
+        "id": 54,
+        "name": "Dato' Keramat",
+        "line": "KualaLumpurLRTKelanaJaya",
+        "order": 6,
+        "alternate_names": [
+          "Dato' Keramat",
+          "KJ7 Dato' Keramat",
+          "拿督克拉末",
+          "LRT Dato Keramat",
+          "KJ7",
+          "na du ke la mo"
+        ]
+      },
+      "id": 54
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.7243428,
+          3.1645074
+        ]
+      },
+      "properties": {
+        "id": 55,
+        "name": "Damai",
+        "line": "KualaLumpurLRTKelanaJaya",
+        "order": 7,
+        "alternate_names": [
+          "Damai",
+          "KJ8 Damai",
+          "达迈",
+          "達邁",
+          "Damai LRT Station",
+          "KJ8",
+          "da mai"
+        ]
+      },
+      "id": 55
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.7188601,
+          3.1601253
+        ]
+      },
+      "properties": {
+        "id": 56,
+        "name": "Ampang Park",
+        "line": "KualaLumpurLRTKelanaJaya",
+        "order": 8,
+        "alternate_names": [
+          "Ampang Park",
+          "KJ9 Ampang Park",
+          "安邦购物中心",
+          "安邦購物中心",
+          "Ampang Park LRT Station",
+          "KJ9",
+          "an bang gou wu zhong xin"
+        ]
+      },
+      "id": 56
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.7133662,
+          3.1592469
+        ]
+      },
+      "properties": {
+        "id": 57,
+        "name": "KLCC",
+        "line": "KualaLumpurLRTKelanaJaya",
+        "order": 9,
+        "alternate_names": [
+          "KLCC",
+          "KJ10 KLCC",
+          "城中城",
+          "KLCC LRT Station",
+          "KJ10",
+          "cheng zhong cheng"
+        ]
+      },
+      "id": 57
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.7069895,
+          3.1614615
+        ]
+      },
+      "properties": {
+        "id": 58,
+        "name": "Kampung Baru-Co-opbank Pertama",
+        "line": "KualaLumpurLRTKelanaJaya",
+        "order": 10,
+        "alternate_names": [
+          "Kampung Baru-Co-opbank Pertama",
+          "Kampung Baru",
+          "KJ11 Kampung Baru",
+          "甘榜峇鲁",
+          "甘榜峇魯",
+          "Kampung Baru LRT Station",
+          "KJ11",
+          "gan bang ba lu"
+        ]
+      },
+      "id": 58
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.7018975,
+          3.1568365
+        ]
+      },
+      "properties": {
+        "id": 59,
+        "name": "Dang Wangi",
+        "line": "KualaLumpurLRTKelanaJaya",
+        "order": 11,
+        "alternate_names": [
+          "Dang Wangi",
+          "KJ12 Dang Wangi",
+          "金马律",
+          "金馬律",
+          "Dang Wangi LRT Station",
+          "KJ12",
+          "jin ma lü"
+        ]
+      },
+      "id": 59
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.696461,
+          3.1494076
+        ]
+      },
+      "properties": {
+        "id": 60,
+        "name": "Masjid Jamek",
+        "line": "KualaLumpurLRTKelanaJaya",
+        "order": 12,
+        "alternate_names": [
+          "Masjid Jamek",
+          "AG7 SP7 KJ13 Masjid Jamek",
+          "占美清真寺",
+          "zhan mei qing zhen si"
+        ]
+      },
+      "id": 60
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.6953107,
+          3.1423985
+        ]
+      },
+      "properties": {
+        "id": 61,
+        "name": "Pasar Seni",
+        "line": "KualaLumpurLRTKelanaJaya",
+        "order": 13,
+        "alternate_names": [
+          "Pasar Seni",
+          "KJ14 Pasar Seni",
+          "中央艺术坊",
+          "中央藝術坊",
+          "Pasar Seni LRT Station",
+          "KJ14",
+          "zhong yang yi shu fang"
+        ]
+      },
+      "id": 61
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.6864969,
+          3.1341011
+        ]
+      },
+      "properties": {
+        "id": 62,
+        "name": "KL Sentral",
+        "line": "KualaLumpurLRTKelanaJaya",
+        "order": 14,
+        "alternate_names": [
+          "KL Sentral",
+          "吉隆坡中央",
+          "Kuala Lumpur Sentral",
+          "KA01;KJ15;ERL",
+          "ji long po zhong yang"
+        ]
+      },
+      "id": 62
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.6789597,
+          3.1273991
+        ]
+      },
+      "properties": {
+        "id": 63,
+        "name": "Bank Rakyat-Bangsar",
+        "line": "KualaLumpurLRTKelanaJaya",
+        "order": 15,
+        "alternate_names": [
+          "Bank Rakyat-Bangsar",
+          "Bangsar",
+          "KJ16 Bangsar",
+          "孟沙",
+          "Bank Rakyat-Bangsar LRT Station",
+          "LRT Bangsar",
+          "KJ16",
+          "meng sha"
+        ]
+      },
+      "id": 63
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.6729429,
+          3.118761
+        ]
+      },
+      "properties": {
+        "id": 64,
+        "name": "Abdullah Hukum",
+        "line": "KualaLumpurLRTKelanaJaya",
+        "order": 16,
+        "alternate_names": [
+          "Abdullah Hukum",
+          "KJ17 Abdullah Hukum",
+          "Abdullah Hukum (LRT)",
+          "阿都拉胡坤（轻快铁）",
+          "Abdullah Hukum LRT Station",
+          "LRT Abdullah Hukum",
+          "KJ17",
+          "a dou la hu kun （ qing kuai tie ）"
+        ]
+      },
+      "id": 64
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.6685243,
+          3.1155023
+        ]
+      },
+      "properties": {
+        "id": 65,
+        "name": "Kerinchi",
+        "line": "KualaLumpurLRTKelanaJaya",
+        "order": 17,
+        "alternate_names": [
+          "Kerinchi",
+          "KJ18 Kerinchi",
+          "格灵芝",
+          "格靈芝",
+          "Kerinchi LRT Station",
+          "LRT Kerinchi",
+          "KJ18",
+          "ge ling zhi"
+        ]
+      },
+      "id": 65
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.6617373,
+          3.11456
+        ]
+      },
+      "properties": {
+        "id": 66,
+        "name": "Universiti",
+        "line": "KualaLumpurLRTKelanaJaya",
+        "order": 18,
+        "alternate_names": [
+          "Universiti",
+          "KJ19 Universiti",
+          "大学",
+          "大學",
+          "Universiti LRT Station",
+          "LRT Universiti",
+          "KJ19",
+          "da xue"
+        ]
+      },
+      "id": 66
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.6454025,
+          3.1040096
+        ]
+      },
+      "properties": {
+        "id": 67,
+        "name": "Taman Jaya",
+        "line": "KualaLumpurLRTKelanaJaya",
+        "order": 19,
+        "alternate_names": [
+          "Taman Jaya",
+          "KJ20 Taman Jaya",
+          "再也花园",
+          "再也花園",
+          "Taman Jaya LRT Station",
+          "LRT Taman Jaya",
+          "KJ20",
+          "zai ye hua yuan"
+        ]
+      },
+      "id": 67
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.6378766,
+          3.1043673
+        ]
+      },
+      "properties": {
+        "id": 68,
+        "name": "Asia Jaya",
+        "line": "KualaLumpurLRTKelanaJaya",
+        "order": 20,
+        "alternate_names": [
+          "Asia Jaya",
+          "KJ21 Asia Jaya",
+          "亚洲再也",
+          "亞洲再也",
+          "Asia Jaya LRT Station",
+          "KJ21",
+          "ya zhou zai ye"
+        ]
+      },
+      "id": 68
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.6230868,
+          3.1047597
+        ]
+      },
+      "properties": {
+        "id": 69,
+        "name": "Taman Paramount",
+        "line": "KualaLumpurLRTKelanaJaya",
+        "order": 21,
+        "alternate_names": [
+          "Taman Paramount",
+          "KJ22 Taman Paramount",
+          "百乐花园",
+          "百樂花園",
+          "Taman Paramount LRT Station",
+          "KJ22",
+          "bai le hua yuan"
+        ]
+      },
+      "id": 69
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.6127624,
+          3.1106828
+        ]
+      },
+      "properties": {
+        "id": 70,
+        "name": "Taman Bahagia",
+        "line": "KualaLumpurLRTKelanaJaya",
+        "order": 22,
+        "alternate_names": [
+          "Taman Bahagia",
+          "KJ23 Taman Bahagia",
+          "幸福花园",
+          "幸福花園",
+          "Taman Bahagia LRT Station",
+          "LRT Taman Bahagia",
+          "xing fu hua yuan"
+        ]
+      },
+      "id": 70
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.6045918,
+          3.1124581
+        ]
+      },
+      "properties": {
+        "id": 71,
+        "name": "Kelana Jaya",
+        "line": "KualaLumpurLRTKelanaJaya",
+        "order": 23,
+        "alternate_names": [
+          "Kelana Jaya",
+          "KJ24 Kelana Jaya",
+          "格拉那再也",
+          "Kelana Jaya LRT Station",
+          "LRT Kelana Jaya",
+          "KJ24",
+          "ge la na zai ye"
+        ]
+      },
+      "id": 71
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.5912239,
+          3.1121053
+        ]
+      },
+      "properties": {
+        "id": 72,
+        "name": "Lembah Subang",
+        "line": "KualaLumpurLRTKelanaJaya",
+        "order": 24,
+        "alternate_names": [
+          "Lembah Subang",
+          "KJ25 Lembah Subang",
+          "梳邦谷",
+          "Lembah Subang LRT Station",
+          "KJ25",
+          "shu bang gu"
+        ]
+      },
+      "id": 72
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.5865157,
+          3.1084236
+        ]
+      },
+      "properties": {
+        "id": 73,
+        "name": "Ara Damansara",
+        "line": "KualaLumpurLRTKelanaJaya",
+        "order": 25,
+        "alternate_names": [
+          "Ara Damansara",
+          "KJ26 Ara Damansara",
+          "阿拉白沙罗",
+          "阿拉白沙羅",
+          "Ara Damansara LRT Station",
+          "LRT Ara Damansara",
+          "KJ26",
+          "a la bai sha luo"
+        ]
+      },
+      "id": 73
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.5902584,
+          3.0957928
+        ]
+      },
+      "properties": {
+        "id": 74,
+        "name": "Glenmarie",
+        "line": "KualaLumpurLRTKelanaJaya",
+        "order": 26,
+        "alternate_names": [
+          "Glenmarie",
+          "KJ27 Glenmarie",
+          "格林玛丽",
+          "格林瑪麗",
+          "Glenmarie LRT Station",
+          "LRT Glenmarie",
+          "KJ27",
+          "ge lin ma li"
+        ]
+      },
+      "id": 74
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.5872712,
+          3.0849072
+        ]
+      },
+      "properties": {
+        "id": 75,
+        "name": "Subang Jaya",
+        "line": "KualaLumpurLRTKelanaJaya",
+        "order": 27,
+        "alternate_names": [
+          "Subang Jaya",
+          "KJ28 Subang Jaya",
+          "LRT Subang Jaya",
+          "梳邦再也（轻快铁）",
+          "梳邦再也（輕快鐵）",
+          "Subang Jaya LRT Station",
+          "KJ28",
+          "shu bang zai ye （ qing kuai tie ）"
+        ]
+      },
+      "id": 75
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.5862141,
+          3.0757459
+        ]
+      },
+      "properties": {
+        "id": 76,
+        "name": "SS15",
+        "line": "KualaLumpurLRTKelanaJaya",
+        "order": 28,
+        "alternate_names": [
+          "SS15",
+          "KJ29 SS15",
+          "SS15区",
+          "SS15區",
+          "SS15 LRT Station",
+          "KJ29",
+          "S S 1 5 qu"
+        ]
+      },
+      "id": 76
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.5861356,
+          3.0670051
+        ]
+      },
+      "properties": {
+        "id": 77,
+        "name": "SS18",
+        "line": "KualaLumpurLRTKelanaJaya",
+        "order": 29,
+        "alternate_names": [
+          "SS18",
+          "KJ30 SS18",
+          "SS18区",
+          "SS18區",
+          "SS18 LRT Station",
+          "KJ30",
+          "S S 1 8 qu"
+        ]
+      },
+      "id": 77
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.5919933,
+          3.05466
+        ]
+      },
+      "properties": {
+        "id": 78,
+        "name": "USJ 7",
+        "line": "KualaLumpurLRTKelanaJaya",
+        "order": 30,
+        "alternate_names": [
+          "USJ 7",
+          "USJ7",
+          "KJ31 USJ7",
+          "USJ7区",
+          "USJ7區",
+          "USJ7 LRT Station",
+          "KJ31",
+          "U S J 7 qu"
+        ]
+      },
+      "id": 78
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.5901755,
+          3.0479102
+        ]
+      },
+      "properties": {
+        "id": 79,
+        "name": "Taipan",
+        "line": "KualaLumpurLRTKelanaJaya",
+        "order": 31,
+        "alternate_names": [
+          "Taipan",
+          "KJ32 Taipan",
+          "大班",
+          "Taipan LRT Station",
+          "KJ32",
+          "da ban"
+        ]
+      },
+      "id": 79
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.5881322,
+          3.0351279
+        ]
+      },
+      "properties": {
+        "id": 80,
+        "name": "Wawasan",
+        "line": "KualaLumpurLRTKelanaJaya",
+        "order": 32,
+        "alternate_names": [
+          "Wawasan",
+          "KJ33 Wawasan",
+          "宏愿",
+          "宏願",
+          "Wawasan LRT Station",
+          "KJ33",
+          "hong yuan"
+        ]
+      },
+      "id": 80
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.5818466,
+          3.0297984
+        ]
+      },
+      "properties": {
+        "id": 81,
+        "name": "USJ 21",
+        "line": "KualaLumpurLRTKelanaJaya",
+        "order": 33,
+        "alternate_names": [
+          "USJ 21",
+          "USJ21",
+          "KJ34 USJ21",
+          "USJ21区",
+          "USJ21區",
+          "USJ21 LRT Station",
+          "KJ34",
+          "U S J 2 1 qu"
+        ]
+      },
+      "id": 81
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.5721442,
+          3.0231316
+        ]
+      },
+      "properties": {
+        "id": 82,
+        "name": "Alam Megah",
+        "line": "KualaLumpurLRTKelanaJaya",
+        "order": 34,
+        "alternate_names": [
+          "Alam Megah",
+          "KJ35 Alam Megah",
+          "美佳园",
+          "美佳園",
+          "Alam Megah LRT Station",
+          "KJ35",
+          "mei jia yuan"
+        ]
+      },
+      "id": 82
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.5720932,
+          3.0096917
+        ]
+      },
+      "properties": {
+        "id": 83,
+        "name": "Subang Alam",
+        "line": "KualaLumpurLRTKelanaJaya",
+        "order": 35,
+        "alternate_names": [
+          "Subang Alam",
+          "KJ36 Subang Alam",
+          "梳邦阿南",
+          "Subang Alam LRT Station",
+          "KJ36",
+          "shu bang a nan"
+        ]
+      },
+      "id": 83
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.5754695,
+          2.9960888
+        ]
+      },
+      "properties": {
+        "id": 84,
+        "name": "Putra Heights",
+        "line": "KualaLumpurLRTKelanaJaya",
+        "order": 36,
+        "alternate_names": [
+          "Putra Heights",
+          "SP31 KJ37 Putra Heights",
+          "布特拉高原",
+          "Putra Heights LRT Station",
+          "SP31;KJ37",
+          "bu te la gao yuan"
+        ]
+      },
+      "id": 84
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.6879247,
+          3.1326546
+        ]
+      },
+      "properties": {
+        "id": 85,
+        "name": "KL Sentral",
+        "line": "KualaLumpurKLMonorail",
+        "order": 0,
+        "alternate_names": [
+          "KL Sentral",
+          "MR1 KL Sentral (Monorail)",
+          "吉隆坡中央",
+          "Kuala Lumpur Sentral Monorail Station",
+          "ji long po zhong yang"
+        ]
+      },
+      "id": 85
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.6909052,
+          3.1314625
+        ]
+      },
+      "properties": {
+        "id": 86,
+        "name": "Tun Sambanthan",
+        "line": "KualaLumpurKLMonorail",
+        "order": 1,
+        "alternate_names": [
+          "Tun Sambanthan",
+          "MR2 Tun Sambanthan",
+          "敦善班丹",
+          "Tun Sambanthan Monorail Station",
+          "敦辛班丹",
+          "MR2",
+          "dun shan ban dan"
+        ]
+      },
+      "id": 86
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.6991807,
+          3.1389083
+        ]
+      },
+      "properties": {
+        "id": 87,
+        "name": "Maharajalela",
+        "line": "KualaLumpurKLMonorail",
+        "order": 2,
+        "alternate_names": [
+          "Maharajalela",
+          "MR3 Maharajalela",
+          "Maharajarela",
+          "马哈拉惹里拉",
+          "馬哈拉惹里拉",
+          "Maharajalela Monorail Station",
+          "MR3",
+          "ma ha la re li la"
+        ]
+      },
+      "id": 87
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.7056076,
+          3.1402684
+        ]
+      },
+      "properties": {
+        "id": 88,
+        "name": "BBCC-Hang Tuah",
+        "line": "KualaLumpurKLMonorail",
+        "order": 3,
+        "alternate_names": [
+          "BBCC-Hang Tuah",
+          "Hang Tuah",
+          "BBCC - Hang Tuah",
+          "AG9 SP9 Hang Tuah",
+          "汉都亚",
+          "漢都亞",
+          "Hang Tuah LRT Station",
+          "AG9;SP9",
+          "han dou ya"
+        ]
+      },
+      "id": 88
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.7093748,
+          3.142777
+        ]
+      },
+      "properties": {
+        "id": 89,
+        "name": "Imbi",
+        "line": "KualaLumpurKLMonorail",
+        "order": 4,
+        "alternate_names": [
+          "Imbi",
+          "MR5 Imbi",
+          "燕美",
+          "Imbi Monorail Station",
+          "MR5",
+          "yan mei"
+        ]
+      },
+      "id": 89
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.7115122,
+          3.146064
+        ]
+      },
+      "properties": {
+        "id": 90,
+        "name": "Bukit Bintang",
+        "line": "KualaLumpurKLMonorail",
+        "order": 5,
+        "alternate_names": [
+          "Bukit Bintang",
+          "MR6 Bukit Bintang",
+          "武吉免登（单轨）",
+          "武吉免登（單軌）",
+          "Bukit Bintang Monorail Station",
+          "星光大道（单轨）",
+          "MR6",
+          "wu ji mian deng （ dan gui ）"
+        ],
+        "cluster_key": "kuala-lumpur-pavilion-bukit-bintang-complex"
+      },
+      "id": 90
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.7104333,
+          3.1508406
+        ]
+      },
+      "properties": {
+        "id": 91,
+        "name": "Raja Chulan",
+        "line": "KualaLumpurKLMonorail",
+        "order": 6,
+        "alternate_names": [
+          "Raja Chulan",
+          "MR7 Raja Chulan",
+          "拉惹朱兰",
+          "拉惹朱蘭",
+          "Raja Chulan Monorail Station",
+          "MR7",
+          "la re zhu lan"
+        ]
+      },
+      "id": 91
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.7048764,
+          3.1561067
+        ]
+      },
+      "properties": {
+        "id": 92,
+        "name": "Bukit Nanas",
+        "line": "KualaLumpurKLMonorail",
+        "order": 7,
+        "alternate_names": [
+          "Bukit Nanas",
+          "MR8 Bukit Nanas",
+          "咖啡山",
+          "Bukit Nanas Monorail Station",
+          "MR8",
+          "ka fei shan"
+        ]
+      },
+      "id": 92
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.6988857,
+          3.1592555
+        ]
+      },
+      "properties": {
+        "id": 93,
+        "name": "Medan Tuanku",
+        "line": "KualaLumpurKLMonorail",
+        "order": 8,
+        "alternate_names": [
+          "Medan Tuanku",
+          "MR9 Medan Tuanku",
+          "美丹端姑",
+          "Medan Tuanku Monorail Station",
+          "MR9",
+          "mei dan duan gu"
+        ],
+        "cluster_key": "kuala-lumpur-sultan-ismail-medan-tuanku-complex"
+      },
+      "id": 93
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.6983798,
+          3.1673669
+        ]
+      },
+      "properties": {
+        "id": 94,
+        "name": "Chow Kit",
+        "line": "KualaLumpurKLMonorail",
+        "order": 9,
+        "alternate_names": [
+          "Chow Kit",
+          "MR10 Chow Kit",
+          "秋杰",
+          "秋傑",
+          "Chow Kit Monorail Station",
+          "MR10",
+          "qiu jie"
+        ]
+      },
+      "id": 94
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.6959864,
+          3.1732282
+        ]
+      },
+      "properties": {
+        "id": 95,
+        "name": "Titiwangsa",
+        "line": "KualaLumpurKLMonorail",
+        "order": 10,
+        "alternate_names": [
+          "Titiwangsa",
+          "MR11 Titiwangsa",
+          "蒂蒂旺沙",
+          "Titiwangsa Monorail Station",
+          "MR11",
+          "di di wang sha"
+        ]
+      },
+      "id": 95
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.5723534,
+          3.1763399
+        ]
+      },
+      "properties": {
+        "id": 96,
+        "name": "Kwasa Damansara",
+        "line": "KualaLumpurMRTKajang",
+        "order": 0,
+        "alternate_names": [
+          "Kwasa Damansara",
+          "KG04 PY01 Kwasa Damansara",
+          "桂莎白沙罗",
+          "桂莎白沙羅",
+          "Kwasa Damansara MRT Station",
+          "KG04;PY01",
+          "gui sha bai sha luo"
+        ]
+      },
+      "id": 96
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.5647665,
+          3.1697087
+        ]
+      },
+      "properties": {
+        "id": 97,
+        "name": "Kwasa Sentral",
+        "line": "KualaLumpurMRTKajang",
+        "order": 1,
+        "alternate_names": [
+          "Kwasa Sentral",
+          "KG05 Kwasa Sentral",
+          "桂莎中央",
+          "Kwasa Sentral MRT Station",
+          "KG05",
+          "gui sha zhong yang"
+        ]
+      },
+      "id": 97
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.5788409,
+          3.1501908
+        ]
+      },
+      "properties": {
+        "id": 98,
+        "name": "Kota Damansara-Thomson Hospital",
+        "line": "KualaLumpurMRTKajang",
+        "order": 2,
+        "alternate_names": [
+          "Kota Damansara-Thomson Hospital",
+          "Kota Damansara",
+          "KG06 Kota Damansara",
+          "哥打白沙罗",
+          "哥打白沙羅",
+          "Kota Damansara MRT Station",
+          "KG06",
+          "ge da bai sha luo"
+        ]
+      },
+      "id": 98
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.593874,
+          3.1495885
+        ]
+      },
+      "properties": {
+        "id": 99,
+        "name": "Surian-IOI Mall Damansara",
+        "line": "KualaLumpurMRTKajang",
+        "order": 3,
+        "alternate_names": [
+          "Surian-IOI Mall Damansara",
+          "Surian",
+          "KG07 Surian",
+          "苏丽雅",
+          "蘇麗雅",
+          "KG07",
+          "su li ya"
+        ]
+      },
+      "id": 99
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.6087702,
+          3.1552283
+        ]
+      },
+      "properties": {
+        "id": 100,
+        "name": "Mutiara Damansara",
+        "line": "KualaLumpurMRTKajang",
+        "order": 4,
+        "alternate_names": [
+          "Mutiara Damansara",
+          "KG08 Mutiara Damansara",
+          "珍珠白沙罗",
+          "珍珠白沙羅",
+          "Mutiara Damansara MRT Station",
+          "KG08",
+          "zhen zhu bai sha luo"
+        ]
+      },
+      "id": 100
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.6187511,
+          3.1466686
+        ]
+      },
+      "properties": {
+        "id": 101,
+        "name": "Bandar Utama",
+        "line": "KualaLumpurMRTKajang",
+        "order": 5,
+        "alternate_names": [
+          "Bandar Utama",
+          "KG09 Bandar Utama",
+          "万达镇",
+          "萬達鎮",
+          "Bandar Utama MRT Station",
+          "KG09",
+          "wan da zhen"
+        ]
+      },
+      "id": 101
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.6308822,
+          3.1360155
+        ]
+      },
+      "properties": {
+        "id": 102,
+        "name": "Taman Tun Dr Ismail-Deloitte",
+        "line": "KualaLumpurMRTKajang",
+        "order": 6,
+        "alternate_names": [
+          "Taman Tun Dr Ismail-Deloitte",
+          "Taman Tun Dr Ismail",
+          "TTDI",
+          "TTDI-Deloitte",
+          "KG10 Taman Tun Dr Ismail",
+          "敦依斯迈花园",
+          "Taman Tun Dr Ismail MRT Station",
+          "KG10",
+          "dun yi si mai hua yuan"
+        ]
+      },
+      "id": 102
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.642924,
+          3.1292514
+        ]
+      },
+      "properties": {
+        "id": 103,
+        "name": "Phileo Damansara",
+        "line": "KualaLumpurMRTKajang",
+        "order": 7,
+        "alternate_names": [
+          "Phileo Damansara",
+          "KG12 Phileo Damansara",
+          "菲利欧白沙罗",
+          "菲利歐白沙羅",
+          "Phileo Damansara MRT Station",
+          "KG12",
+          "fei li ou bai sha luo"
+        ]
+      },
+      "id": 103
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.6624119,
+          3.1433474
+        ]
+      },
+      "properties": {
+        "id": 104,
+        "name": "Pavilion Damansara Heights-Pusat Bandar Damansara",
+        "line": "KualaLumpurMRTKajang",
+        "order": 8,
+        "alternate_names": [
+          "Pavilion Damansara Heights-Pusat Bandar Damansara",
+          "Pusat Bandar Damansara",
+          "KG13 Pusat Bandar Damansara",
+          "白沙罗市中心",
+          "白沙羅市中心",
+          "Pusat Bandar Damansara MRT Station",
+          "Pavilion Pusat Bandar Damansara",
+          "KG13",
+          "bai sha luo shi zhong xin"
+        ]
+      },
+      "id": 104
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.6655061,
+          3.1510246
+        ]
+      },
+      "properties": {
+        "id": 105,
+        "name": "Semantan",
+        "line": "KualaLumpurMRTKajang",
+        "order": 9,
+        "alternate_names": [
+          "Semantan",
+          "KG14 Semantan",
+          "士曼丹",
+          "Semantan MRT Station",
+          "KG14",
+          "shi man dan"
+        ]
+      },
+      "id": 105
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.6870564,
+          3.1372102
+        ]
+      },
+      "properties": {
+        "id": 106,
+        "name": "Muzium Negara",
+        "line": "KualaLumpurMRTKajang",
+        "order": 10,
+        "alternate_names": [
+          "Muzium Negara",
+          "National Museum",
+          "KG15 Muzium Negara",
+          "国家博物馆",
+          "國家博物館",
+          "Muzium Negara MRT Station",
+          "KG15",
+          "guo jia bo wu guan"
+        ]
+      },
+      "id": 106
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.6960254,
+          3.1423717
+        ]
+      },
+      "properties": {
+        "id": 107,
+        "name": "Pasar Seni",
+        "line": "KualaLumpurMRTKajang",
+        "order": 11,
+        "alternate_names": [
+          "Pasar Seni",
+          "KG16 Pasar Seni",
+          "中央艺术坊",
+          "中央藝術坊",
+          "Stesen MRT Pasar Seni",
+          "KG16",
+          "zhong yang yi shu fang"
+        ]
+      },
+      "id": 107
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.7022047,
+          3.1421254
+        ]
+      },
+      "properties": {
+        "id": 108,
+        "name": "Merdeka",
+        "line": "KualaLumpurMRTKajang",
+        "order": 12,
+        "alternate_names": [
+          "Merdeka",
+          "KG17 Merdeka",
+          "默迪卡",
+          "Merdeka MRT Station",
+          "KG17",
+          "mo di ka"
+        ]
+      },
+      "id": 108
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.7108907,
+          3.1464307
+        ]
+      },
+      "properties": {
+        "id": 109,
+        "name": "Pavilion Kuala Lumpur-Bukit Bintang",
+        "line": "KualaLumpurMRTKajang",
+        "order": 13,
+        "alternate_names": [
+          "Pavilion Kuala Lumpur-Bukit Bintang",
+          "Bukit Bintang",
+          "KG18A Bukit Bintang",
+          "武吉免登（捷运）",
+          "武吉免登（捷運）",
+          "Bukit Bintang MRT Station",
+          "星光大道（捷运）",
+          "KG18A",
+          "wu ji mian deng （ jie yun ）"
+        ],
+        "cluster_key": "kuala-lumpur-pavilion-bukit-bintang-complex"
+      },
+      "id": 109
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.719992,
+          3.1427165
+        ]
+      },
+      "properties": {
+        "id": 110,
+        "name": "Tun Razak Exchange",
+        "line": "KualaLumpurMRTKajang",
+        "order": 14,
+        "alternate_names": [
+          "Tun Razak Exchange",
+          "KG20 PY23 Tun Razak Exchange",
+          "敦拉萨国际贸易中心",
+          "敦拉薩國際貿易中心",
+          "Tun Razak Exchange MRT Station",
+          "KG20;PY23",
+          "dun la sa guo ji mao yi zhong xin"
+        ]
+      },
+      "id": 110
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.7230179,
+          3.1324862
+        ]
+      },
+      "properties": {
+        "id": 111,
+        "name": "Cochrane",
+        "line": "KualaLumpurMRTKajang",
+        "order": 15,
+        "alternate_names": [
+          "Cochrane",
+          "KG21 Cochrane",
+          "葛京",
+          "Cochrane MRT Station",
+          "KG21",
+          "ge jing"
+        ]
+      },
+      "id": 111
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.7273802,
+          3.12439
+        ]
+      },
+      "properties": {
+        "id": 112,
+        "name": "Maluri-AEON",
+        "line": "KualaLumpurMRTKajang",
+        "order": 16,
+        "alternate_names": [
+          "Maluri-AEON",
+          "Maluri",
+          "KG22 Maluri",
+          "马鲁里",
+          "馬魯裡",
+          "Maluri MRT Station",
+          "KG22",
+          "ma lu li"
+        ],
+        "cluster_key": "kuala-lumpur-maluri-aeon-complex"
+      },
+      "id": 112
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.7293376,
+          3.1125018
+        ]
+      },
+      "properties": {
+        "id": 113,
+        "name": "Taman Pertama",
+        "line": "KualaLumpurMRTKajang",
+        "order": 17,
+        "alternate_names": [
+          "Taman Pertama",
+          "KG23 Taman Pertama",
+          "第一花园",
+          "第一花園",
+          "Taman Pertama MRT Station",
+          "KG23",
+          "di yi hua yuan"
+        ]
+      },
+      "id": 113
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.7322123,
+          3.104486
+        ]
+      },
+      "properties": {
+        "id": 114,
+        "name": "Taman Midah",
+        "line": "KualaLumpurMRTKajang",
+        "order": 18,
+        "alternate_names": [
+          "Taman Midah",
+          "KG24 Taman Midah",
+          "美达花园",
+          "美達花園",
+          "Taman Midah MRT Station",
+          "KG24",
+          "mei da hua yuan"
+        ]
+      },
+      "id": 114
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.7403929,
+          3.0911487
+        ]
+      },
+      "properties": {
+        "id": 115,
+        "name": "Taman Mutiara",
+        "line": "KualaLumpurMRTKajang",
+        "order": 19,
+        "alternate_names": [
+          "Taman Mutiara",
+          "KG25 Taman Mutiara",
+          "珍珠花园",
+          "珍珠花園",
+          "Taman Mutiara MRT Station",
+          "KG25",
+          "zhen zhu hua yuan"
+        ]
+      },
+      "id": 115
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.7450646,
+          3.0792238
+        ]
+      },
+      "properties": {
+        "id": 116,
+        "name": "Taman Connaught",
+        "line": "KualaLumpurMRTKajang",
+        "order": 20,
+        "alternate_names": [
+          "Taman Connaught",
+          "KG26 Taman Connaught",
+          "康乐花园",
+          "康樂花園",
+          "Taman Connaught Railway Station",
+          "KG26",
+          "kang le hua yuan"
+        ]
+      },
+      "id": 116
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.7634594,
+          3.0716827
+        ]
+      },
+      "properties": {
+        "id": 117,
+        "name": "Taman Suntex",
+        "line": "KualaLumpurMRTKajang",
+        "order": 21,
+        "alternate_names": [
+          "Taman Suntex",
+          "KG27 Taman Suntex",
+          "山力花园",
+          "山力花園",
+          "Taman Suntex MRT Station",
+          "KG27",
+          "shan li hua yuan"
+        ]
+      },
+      "id": 117
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.7730158,
+          3.06212
+        ]
+      },
+      "properties": {
+        "id": 118,
+        "name": "Sri Raya",
+        "line": "KualaLumpurMRTKajang",
+        "order": 22,
+        "alternate_names": [
+          "Sri Raya",
+          "KG28 Sri Raya",
+          "斯里拉也",
+          "Sri Raya MRT Station",
+          "KG28",
+          "si li la ye"
+        ]
+      },
+      "id": 118
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.7750561,
+          3.0484315
+        ]
+      },
+      "properties": {
+        "id": 119,
+        "name": "Bandar Tun Hussein Onn",
+        "line": "KualaLumpurMRTKajang",
+        "order": 23,
+        "alternate_names": [
+          "Bandar Tun Hussein Onn",
+          "KG29 Bandar Tun Hussein Onn",
+          "敦胡先翁镇",
+          "敦胡先翁鎮",
+          "Bandar Tun Hussein Onn MRT Station",
+          "KG29",
+          "dun hu xian weng zhen"
+        ]
+      },
+      "id": 119
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.7733515,
+          3.0413914
+        ]
+      },
+      "properties": {
+        "id": 120,
+        "name": "Batu 11 Cheras",
+        "line": "KualaLumpurMRTKajang",
+        "order": 24,
+        "alternate_names": [
+          "Batu 11 Cheras",
+          "KG30 Batu 11 Cheras",
+          "Cheras 11 Miles",
+          "蕉赖十一哩",
+          "蕉賴十一哩",
+          "Batu 11 Cheras MRT Station",
+          "KG30",
+          "jiao lai shi yi li"
+        ]
+      },
+      "id": 120
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.7710991,
+          3.0265316
+        ]
+      },
+      "properties": {
+        "id": 121,
+        "name": "Bukit Dukung",
+        "line": "KualaLumpurMRTKajang",
+        "order": 25,
+        "alternate_names": [
+          "Bukit Dukung",
+          "KG31 Bukit Dukung",
+          "武吉杜蓊",
+          "Bukit Dukung MRT Station",
+          "KG31",
+          "wu ji du weng"
+        ]
+      },
+      "id": 121
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.7840873,
+          3.0009206
+        ]
+      },
+      "properties": {
+        "id": 122,
+        "name": "Sungai Jernih",
+        "line": "KualaLumpurMRTKajang",
+        "order": 26,
+        "alternate_names": [
+          "Sungai Jernih",
+          "KG33 Sungai Jernih",
+          "双溪遮内",
+          "雙溪遮內",
+          "Sungai Jernih MRT Station",
+          "KG33",
+          "shuang xi zhe nei"
+        ]
+      },
+      "id": 122
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.7861944,
+          2.994146
+        ]
+      },
+      "properties": {
+        "id": 123,
+        "name": "Stadium Kajang",
+        "line": "KualaLumpurMRTKajang",
+        "order": 27,
+        "alternate_names": [
+          "Stadium Kajang",
+          "KG34 Stadium Kajang",
+          "加影体育场",
+          "加影體育場",
+          "Stadium Kajang MRT Station",
+          "KG34",
+          "jia ying ti yu chang"
+        ]
+      },
+      "id": 123
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.7861944,
+          2.994146
+        ]
+      },
+      "properties": {
+        "id": 124,
+        "name": "Kajang",
+        "line": "KualaLumpurMRTKajang",
+        "order": 28,
+        "alternate_names": [
+          "Kajang",
+          "KG34 Stadium Kajang",
+          "Stadium Kajang",
+          "加影体育场",
+          "加影體育場",
+          "Stadium Kajang MRT Station",
+          "KG34",
+          "jia ying ti yu chang"
+        ]
+      },
+      "id": 124
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.5723534,
+          3.1763399
+        ]
+      },
+      "properties": {
+        "id": 125,
+        "name": "Kwasa Damansara",
+        "line": "KualaLumpurMRTPutrajaya",
+        "order": 0,
+        "alternate_names": [
+          "Kwasa Damansara",
+          "KG04 PY01 Kwasa Damansara",
+          "桂莎白沙罗",
+          "桂莎白沙羅",
+          "Kwasa Damansara MRT Station",
+          "KG04;PY01",
+          "gui sha bai sha luo"
+        ]
+      },
+      "id": 125
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.5784077,
+          3.1972477
+        ]
+      },
+      "properties": {
+        "id": 126,
+        "name": "Kampung Selamat",
+        "line": "KualaLumpurMRTPutrajaya",
+        "order": 1,
+        "alternate_names": [
+          "Kampung Selamat",
+          "PY03 Kampung Selamat",
+          "甘榜士拉玛",
+          "Kampung Selamat MRT Station",
+          "PY03",
+          "gan bang shi la ma"
+        ]
+      },
+      "id": 126
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.5817624,
+          3.2062762
+        ]
+      },
+      "properties": {
+        "id": 127,
+        "name": "Sungai Buloh",
+        "line": "KualaLumpurMRTPutrajaya",
+        "order": 2,
+        "alternate_names": [
+          "Sungai Buloh",
+          "PY04 Sungai Buloh",
+          "Sungai Buloh (MRT)",
+          "双溪毛糯（捷运）",
+          "雙溪毛糯（捷運）",
+          "Sungai Buloh MRT Station",
+          "PY04",
+          "shuang xi mao nuo （ jie yun ）"
+        ]
+      },
+      "id": 127
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.5926245,
+          3.1997935
+        ]
+      },
+      "properties": {
+        "id": 128,
+        "name": "Damansara Damai",
+        "line": "KualaLumpurMRTPutrajaya",
+        "order": 3,
+        "alternate_names": [
+          "Damansara Damai",
+          "PY05 Damansara Damai",
+          "白沙罗达迈",
+          "白沙羅達邁",
+          "Damansara Damai MRT Station",
+          "PY05",
+          "bai sha luo da mai"
+        ]
+      },
+      "id": 128
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.6081854,
+          3.1982001
+        ]
+      },
+      "properties": {
+        "id": 129,
+        "name": "Sri Damansara Barat",
+        "line": "KualaLumpurMRTPutrajaya",
+        "order": 4,
+        "alternate_names": [
+          "Sri Damansara Barat",
+          "PY06 Sri Damansara Barat",
+          "斯里白沙罗西",
+          "斯里白沙羅西",
+          "Sri Damansara Barat MRT Station",
+          "PY06",
+          "si li bai sha luo xi"
+        ]
+      },
+      "id": 129
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.6210824,
+          3.1984935
+        ]
+      },
+      "properties": {
+        "id": 130,
+        "name": "Sri Damansara Sentral",
+        "line": "KualaLumpurMRTPutrajaya",
+        "order": 5,
+        "alternate_names": [
+          "Sri Damansara Sentral",
+          "PY07 Sri Damansara Sentral",
+          "斯里白沙罗中心",
+          "斯里白沙羅中心",
+          "Sri Damansara Sentral MRT Station",
+          "PY07",
+          "si li bai sha luo zhong xin"
+        ]
+      },
+      "id": 130
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.6286557,
+          3.207798
+        ]
+      },
+      "properties": {
+        "id": 131,
+        "name": "Sri Damansara Timur",
+        "line": "KualaLumpurMRTPutrajaya",
+        "order": 6,
+        "alternate_names": [
+          "Sri Damansara Timur",
+          "PY08 Sri Damansara Timur",
+          "斯里白沙罗东",
+          "斯里白沙羅東",
+          "Sri Damansara Timur MRT Station",
+          "PY08",
+          "si li bai sha luo dong"
+        ]
+      },
+      "id": 131
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.6402123,
+          3.2144708
+        ]
+      },
+      "properties": {
+        "id": 132,
+        "name": "Metro Prima",
+        "line": "KualaLumpurMRTPutrajaya",
+        "order": 7,
+        "alternate_names": [
+          "Metro Prima",
+          "PY09 Metro Prima",
+          "美娜园",
+          "美娜園",
+          "Metro Prima MRT Station",
+          "PY09",
+          "mei na yuan"
+        ]
+      },
+      "id": 132
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.6482325,
+          3.2116181
+        ]
+      },
+      "properties": {
+        "id": 133,
+        "name": "Kepong Baru",
+        "line": "KualaLumpurMRTPutrajaya",
+        "order": 8,
+        "alternate_names": [
+          "Kepong Baru",
+          "PY10 Kepong Baru",
+          "甲洞卫星市",
+          "甲洞衛星市",
+          "Kepong Baru MRT station",
+          "PY10",
+          "jia dong wei xing shi"
+        ]
+      },
+      "id": 133
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.6557686,
+          3.209521
+        ]
+      },
+      "properties": {
+        "id": 134,
+        "name": "Jinjang",
+        "line": "KualaLumpurMRTPutrajaya",
+        "order": 9,
+        "alternate_names": [
+          "Jinjang",
+          "Jinjiang",
+          "PY11 Jinjang",
+          "增江",
+          "Jinjang MRT Station",
+          "PY11",
+          "zeng jiang"
+        ]
+      },
+      "id": 134
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.6655625,
+          3.2072068
+        ]
+      },
+      "properties": {
+        "id": 135,
+        "name": "Sri Delima",
+        "line": "KualaLumpurMRTPutrajaya",
+        "order": 10,
+        "alternate_names": [
+          "Sri Delima",
+          "PY12 Sri Delima",
+          "斯里德里玛",
+          "斯里德里瑪",
+          "Sri Delima MRT station",
+          "PY12",
+          "si li de li ma"
+        ]
+      },
+      "id": 135
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.6750792,
+          3.2059924
+        ]
+      },
+      "properties": {
+        "id": 136,
+        "name": "Kampung Batu",
+        "line": "KualaLumpurMRTPutrajaya",
+        "order": 11,
+        "alternate_names": [
+          "Kampung Batu",
+          "PY13 Kampung Batu",
+          "甘榜峇都",
+          "Kampung Batu MRT station",
+          "PY13",
+          "gan bang ba dou"
+        ]
+      },
+      "id": 136
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.6795683,
+          3.1955936
+        ]
+      },
+      "properties": {
+        "id": 137,
+        "name": "Kentonmen",
+        "line": "KualaLumpurMRTPutrajaya",
+        "order": 12,
+        "alternate_names": [
+          "Kentonmen",
+          "PY14 Kentonmen",
+          "肯都门",
+          "肯都門",
+          "PY14",
+          "ken dou men"
+        ]
+      },
+      "id": 137
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.6810615,
+          3.1895272
+        ]
+      },
+      "properties": {
+        "id": 138,
+        "name": "Jalan Ipoh",
+        "line": "KualaLumpurMRTPutrajaya",
+        "order": 13,
+        "alternate_names": [
+          "Jalan Ipoh",
+          "PY15 Jalan Ipoh",
+          "怡保路",
+          "PY15",
+          "yi bao lu"
+        ]
+      },
+      "id": 138
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.6850139,
+          3.1788868
+        ]
+      },
+      "properties": {
+        "id": 139,
+        "name": "Sentul Barat",
+        "line": "KualaLumpurMRTPutrajaya",
+        "order": 14,
+        "alternate_names": [
+          "Sentul Barat",
+          "Sentul West",
+          "PY16 Sentul Barat",
+          "冼都西",
+          "PY16",
+          "xian dou xi"
+        ]
+      },
+      "id": 139
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.6963117,
+          3.1745999
+        ]
+      },
+      "properties": {
+        "id": 140,
+        "name": "Titiwangsa",
+        "line": "KualaLumpurMRTPutrajaya",
+        "order": 15,
+        "alternate_names": [
+          "Titiwangsa",
+          "PY17 Titiwangsa",
+          "Titiwangsa (MRT)",
+          "蒂蒂旺沙（捷运）",
+          "蒂蒂旺沙（捷運）",
+          "Titiwangsa MRT Station",
+          "PY17",
+          "di di wang sha （ jie yun ）"
+        ]
+      },
+      "id": 140
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.7014632,
+          3.1738046
+        ]
+      },
+      "properties": {
+        "id": 141,
+        "name": "Hospital Kuala Lumpur",
+        "line": "KualaLumpurMRTPutrajaya",
+        "order": 16,
+        "alternate_names": [
+          "Hospital Kuala Lumpur",
+          "Kuala Lumpur Hospital",
+          "PY18 Hospital Kuala Lumpur",
+          "吉隆坡医院",
+          "吉隆坡醫院",
+          "Hospital Kuala Lumpur MRT station",
+          "PY18",
+          "ji long po yi yuan"
+        ]
+      },
+      "id": 141
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.7109855,
+          3.1678152
+        ]
+      },
+      "properties": {
+        "id": 142,
+        "name": "Raja Uda",
+        "line": "KualaLumpurMRTPutrajaya",
+        "order": 17,
+        "alternate_names": [
+          "Raja Uda",
+          "PY19 Raja Uda",
+          "拉惹乌达",
+          "拉惹烏達",
+          "Raja Uda MRT station",
+          "PY19",
+          "la re wu da"
+        ]
+      },
+      "id": 142
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.7179239,
+          3.1618625
+        ]
+      },
+      "properties": {
+        "id": 143,
+        "name": "Ampang Park",
+        "line": "KualaLumpurMRTPutrajaya",
+        "order": 18,
+        "alternate_names": [
+          "Ampang Park",
+          "PY20 Ampang Park",
+          "安邦购物中心",
+          "安邦購物中心",
+          "Ampang Park MRT station",
+          "PY20",
+          "an bang gou wu zhong xin"
+        ]
+      },
+      "id": 143
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.7181054,
+          3.156735
+        ]
+      },
+      "properties": {
+        "id": 144,
+        "name": "Persiaran KLCC",
+        "line": "KualaLumpurMRTPutrajaya",
+        "order": 19,
+        "alternate_names": [
+          "Persiaran KLCC",
+          "PY21 Persiaran KLCC",
+          "城中城道",
+          "Persiaran KLCC MRT station",
+          "KLCC Drive",
+          "PY21",
+          "cheng zhong cheng dao"
+        ]
+      },
+      "id": 144
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.7183193,
+          3.1509233
+        ]
+      },
+      "properties": {
+        "id": 145,
+        "name": "Conlay-Kompleks Kraf",
+        "line": "KualaLumpurMRTPutrajaya",
+        "order": 20,
+        "alternate_names": [
+          "Conlay-Kompleks Kraf",
+          "Conlay",
+          "PY22 Conlay",
+          "康莱",
+          "康萊",
+          "Conlay MRT station",
+          "PY22",
+          "kang lai"
+        ]
+      },
+      "id": 145
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.719992,
+          3.1427165
+        ]
+      },
+      "properties": {
+        "id": 146,
+        "name": "Tun Razak Exchange",
+        "line": "KualaLumpurMRTPutrajaya",
+        "order": 21,
+        "alternate_names": [
+          "Tun Razak Exchange",
+          "KG20 PY23 Tun Razak Exchange",
+          "敦拉萨国际贸易中心",
+          "敦拉薩國際貿易中心",
+          "Tun Razak Exchange MRT Station",
+          "KG20;PY23",
+          "dun la sa guo ji mao yi zhong xin"
+        ]
+      },
+      "id": 146
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.7167263,
+          3.1285383
+        ]
+      },
+      "properties": {
+        "id": 147,
+        "name": "Chan Sow Lin",
+        "line": "KualaLumpurMRTPutrajaya",
+        "order": 22,
+        "alternate_names": [
+          "Chan Sow Lin",
+          "PY24 Chan Sow Lin",
+          "陈秀连",
+          "陳秀連",
+          "Chan Sow Lin MRT Station",
+          "PY24",
+          "chen xiu lian"
+        ]
+      },
+      "id": 147
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.6940247,
+          3.0893847
+        ]
+      },
+      "properties": {
+        "id": 148,
+        "name": "Kuchai",
+        "line": "KualaLumpurMRTPutrajaya",
+        "order": 23,
+        "alternate_names": [
+          "Kuchai",
+          "PY27 Kuchai",
+          "古仔",
+          "Kuchai MRT Station",
+          "PY27",
+          "gu zai"
+        ]
+      },
+      "id": 148
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.6994973,
+          3.077702
+        ]
+      },
+      "properties": {
+        "id": 149,
+        "name": "Taman Naga Emas",
+        "line": "KualaLumpurMRTPutrajaya",
+        "order": 24,
+        "alternate_names": [
+          "Taman Naga Emas",
+          "PY28 Taman Naga Emas",
+          "金龙园",
+          "金龍園",
+          "Taman Naga Emas MRT Station",
+          "PY28",
+          "jin long yuan"
+        ]
+      },
+      "id": 149
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.7084203,
+          3.0640819
+        ]
+      },
+      "properties": {
+        "id": 150,
+        "name": "Sungai Besi",
+        "line": "KualaLumpurMRTPutrajaya",
+        "order": 25,
+        "alternate_names": [
+          "Sungai Besi",
+          "PY29 Sungai Besi",
+          "新街场",
+          "新街場",
+          "Sungai Besi MRT Station",
+          "PY29",
+          "xin jie chang"
+        ]
+      },
+      "id": 150
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.7048919,
+          3.041898
+        ]
+      },
+      "properties": {
+        "id": 151,
+        "name": "Serdang Raya Utara",
+        "line": "KualaLumpurMRTPutrajaya",
+        "order": 26,
+        "alternate_names": [
+          "Serdang Raya Utara",
+          "PY31 Serdang Raya Utara",
+          "Serdang Raya North",
+          "沙登拉也北",
+          "Serdang Raya Utara MRT Station",
+          "PY31",
+          "sha deng la ye bei"
+        ]
+      },
+      "id": 151
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.7073958,
+          3.0286222
+        ]
+      },
+      "properties": {
+        "id": 152,
+        "name": "Serdang Raya Selatan",
+        "line": "KualaLumpurMRTPutrajaya",
+        "order": 27,
+        "alternate_names": [
+          "Serdang Raya Selatan",
+          "PY32 Serdang Raya Selatan",
+          "Serdang Raya South",
+          "沙登拉也南",
+          "Serdang Raya Selatan MRT Station",
+          "PY32",
+          "sha deng la ye nan"
+        ]
+      },
+      "id": 152
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.7089116,
+          3.0216852
+        ]
+      },
+      "properties": {
+        "id": 153,
+        "name": "Serdang Jaya",
+        "line": "KualaLumpurMRTPutrajaya",
+        "order": 28,
+        "alternate_names": [
+          "Serdang Jaya",
+          "PY33 Serdang Jaya",
+          "沙登再也",
+          "Serdang Jaya MRT Station",
+          "PY33",
+          "sha deng zai ye"
+        ]
+      },
+      "id": 153
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.7055314,
+          3.0085184
+        ]
+      },
+      "properties": {
+        "id": 154,
+        "name": "UPM",
+        "line": "KualaLumpurMRTPutrajaya",
+        "order": 29,
+        "alternate_names": [
+          "UPM",
+          "PY34 UPM",
+          "博特拉大学",
+          "博特拉大學",
+          "UPM MRT Station",
+          "PY34",
+          "bo te la da xue"
+        ]
+      },
+      "id": 154
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.672666,
+          2.9894676
+        ]
+      },
+      "properties": {
+        "id": 155,
+        "name": "Taman Equine",
+        "line": "KualaLumpurMRTPutrajaya",
+        "order": 30,
+        "alternate_names": [
+          "Taman Equine",
+          "Equine Park",
+          "PY36 Taman Equine",
+          "怡观园",
+          "怡觀園",
+          "Taman Equine MRT Station",
+          "PY36",
+          "yi guan yuan"
+        ]
+      },
+      "id": 155
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.6607368,
+          2.9832407
+        ]
+      },
+      "properties": {
+        "id": 156,
+        "name": "Putra Permai",
+        "line": "KualaLumpurMRTPutrajaya",
+        "order": 31,
+        "alternate_names": [
+          "Putra Permai",
+          "PY37 Putra Permai",
+          "布特拉柏迈",
+          "布特拉柏邁",
+          "Putra Permai MRT Station",
+          "PY37",
+          "bu te la bai mai"
+        ]
+      },
+      "id": 156
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.6547995,
+          2.9654426
+        ]
+      },
+      "properties": {
+        "id": 157,
+        "name": "16 Sierra",
+        "line": "KualaLumpurMRTPutrajaya",
+        "order": 32,
+        "alternate_names": [
+          "16 Sierra",
+          "PY38 16 Sierra",
+          "16岭",
+          "16嶺",
+          "16 Sierra MRT Station",
+          "PY38",
+          "1 6 ling"
+        ]
+      },
+      "id": 157
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.6574005,
+          2.9493949
+        ]
+      },
+      "properties": {
+        "id": 158,
+        "name": "Cyberjaya Utara-Finexus",
+        "line": "KualaLumpurMRTPutrajaya",
+        "order": 33,
+        "alternate_names": [
+          "Cyberjaya Utara-Finexus",
+          "Cyberjaya Utara",
+          "PY39 Cyberjaya Utara",
+          "赛城北",
+          "賽城北",
+          "Cyberjaya Utara MRT Station",
+          "PY39",
+          "sai cheng bei"
+        ]
+      },
+      "id": 158
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.6656063,
+          2.9390113
+        ]
+      },
+      "properties": {
+        "id": 159,
+        "name": "Cyberjaya City Centre",
+        "line": "KualaLumpurMRTPutrajaya",
+        "order": 34,
+        "alternate_names": [
+          "Cyberjaya City Centre",
+          "PY40 Cyberjaya City Centre",
+          "赛城市中心",
+          "賽城市中心",
+          "Cyberjaya City Centre MRT Station",
+          "PY40",
+          "sai cheng shi zhong xin"
+        ]
+      },
+      "id": 159
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.6714934,
+          2.9315059
+        ]
+      },
+      "properties": {
+        "id": 160,
+        "name": "Putrajaya Sentral",
+        "line": "KualaLumpurMRTPutrajaya",
+        "order": 35,
+        "alternate_names": [
+          "Putrajaya Sentral",
+          "PY41 Putrajaya Sentral",
+          "布城中央车站",
+          "布城中央車站",
+          "Putrajaya Sentral MRT Station",
+          "PY41",
+          "bu cheng zhong yang che zhan"
+        ]
+      },
+      "id": 160
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.6863891,
+          3.1343218
+        ]
+      },
+      "properties": {
+        "id": 161,
+        "name": "KL Sentral",
+        "line": "KualaLumpurERLKliaEkspres",
+        "order": 0,
+        "alternate_names": [
+          "KL Sentral",
+          "吉隆坡中央",
+          "Kuala Lumpur Sentral",
+          "KA01;KJ15;ERL",
+          "ji long po zhong yang"
+        ]
+      },
+      "id": 161
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.7046397,
+          2.7547334
+        ]
+      },
+      "properties": {
+        "id": 162,
+        "name": "KLIA T1",
+        "line": "KualaLumpurERLKliaEkspres",
+        "order": 1,
+        "alternate_names": [
+          "KLIA T1",
+          "吉隆坡国际机场1号航站楼",
+          "ji long po guo ji ji chang 1 hao hang zhan lou"
+        ]
+      },
+      "id": 162
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.6852027,
+          2.7444513
+        ]
+      },
+      "properties": {
+        "id": 163,
+        "name": "KLIA T2",
+        "line": "KualaLumpurERLKliaEkspres",
+        "order": 2,
+        "alternate_names": [
+          "KLIA T2",
+          "吉隆坡国际机场2号航站楼",
+          "ji long po guo ji ji chang 2 hao hang zhan lou"
+        ]
+      },
+      "id": 163
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.6866021,
+          3.1340706
+        ]
+      },
+      "properties": {
+        "id": 164,
+        "name": "KL Sentral",
+        "line": "KualaLumpurERLKliaTransit",
+        "order": 0,
+        "alternate_names": [
+          "KL Sentral",
+          "吉隆坡中央",
+          "Kuala Lumpur Sentral",
+          "KA01;KJ15;ERL",
+          "ji long po zhong yang"
+        ]
+      },
+      "id": 164
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.7105668,
+          3.076251
+        ]
+      },
+      "properties": {
+        "id": 165,
+        "name": "Bandar Tasik Selatan",
+        "line": "KualaLumpurERLKliaTransit",
+        "order": 1,
+        "alternate_names": [
+          "Bandar Tasik Selatan",
+          "ERL Bandar Tasik Selatan",
+          "南湖镇",
+          "nan hu zhen"
+        ]
+      },
+      "id": 165
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.6709918,
+          2.9317886
+        ]
+      },
+      "properties": {
+        "id": 166,
+        "name": "Putrajaya & Cyberjaya",
+        "line": "KualaLumpurERLKliaTransit",
+        "order": 2,
+        "alternate_names": [
+          "Putrajaya & Cyberjaya",
+          "Putrajaya/Cyberjaya",
+          "ERL Putrajaya/Cyberjaya",
+          "布城/赛城",
+          "布城/賽城",
+          "KT3",
+          "bu cheng / sai cheng"
+        ]
+      },
+      "id": 166
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.7134329,
+          2.8254656
+        ]
+      },
+      "properties": {
+        "id": 167,
+        "name": "Salak Tinggi",
+        "line": "KualaLumpurERLKliaTransit",
+        "order": 3,
+        "alternate_names": [
+          "Salak Tinggi",
+          "ERL Salak Tinggi",
+          "沙叻丁宜",
+          "sha le ding yi"
+        ]
+      },
+      "id": 167
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.7046397,
+          2.7547334
+        ]
+      },
+      "properties": {
+        "id": 168,
+        "name": "KLIA T1",
+        "line": "KualaLumpurERLKliaTransit",
+        "order": 4,
+        "alternate_names": [
+          "KLIA T1",
+          "吉隆坡国际机场1号航站楼",
+          "ji long po guo ji ji chang 1 hao hang zhan lou"
+        ]
+      },
+      "id": 168
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.6852027,
+          2.7444513
+        ]
+      },
+      "properties": {
+        "id": 169,
+        "name": "KLIA T2",
+        "line": "KualaLumpurERLKliaTransit",
+        "order": 5,
+        "alternate_names": [
+          "KLIA T2",
+          "吉隆坡国际机场2号航站楼",
+          "ji long po guo ji ji chang 2 hao hang zhan lou"
+        ]
+      },
+      "id": 169
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.7128047,
+          2.7474325
+        ]
+      },
+      "properties": {
+        "id": 170,
+        "name": "Terminal A",
+        "line": "KualaLumpurKLIAAerotrain",
+        "order": 0,
+        "alternate_names": [
+          "Terminal A",
+          "KLIA Terminal 1 (Satellite Building)",
+          "Satellite Building A",
+          "Satellite A",
+          "KLIA卫星航站楼A",
+          "K L I A wei xing hang zhan lou A"
+        ]
+      },
+      "id": 170
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.7056607,
+          2.7525893
+        ]
+      },
+      "properties": {
+        "id": 171,
+        "name": "Main Terminal",
+        "line": "KualaLumpurKLIAAerotrain",
+        "order": 1,
+        "alternate_names": [
+          "Main Terminal",
+          "KLIA Terminal 1 (Main Building)",
+          "Kuala Lumpur International Airport",
+          "吉隆坡国际机场1号主航站楼",
+          "ji long po guo ji ji chang 1 hao zhu hang zhan lou"
+        ]
+      },
+      "id": 171
+    }
+  ]
+}
