@@ -113,6 +113,7 @@ export const AVAILABLE_CITY_SLUGS = new Set([
   'norfolk',
   'nottingham',
   'nyc',
+  'nyc-ctrail',
   'nyc-features',
   'nyc-lirr',
   'nyc-mnr',

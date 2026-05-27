@@ -114,6 +114,7 @@ export const STATION_TOTALS: Record<string, number> = {
   "norfolk": 11,
   "nottingham": 66,
   "nyc": 1648,
+  "nyc-ctrail": 37,
   "nyc-lirr": 206,
   "nyc-mnr": 150,
   "nyc-mta": 1276,

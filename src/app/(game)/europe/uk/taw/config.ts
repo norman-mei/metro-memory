@@ -8,10 +8,12 @@ export const LINES = linesData as { [name: string]: Line }
 export const LINE_GROUPS: LineGroup[] = [
   {
     title: 'Tyne and Wear Passenger Transport Executive (Nexus)',
+    titleImage: 'Nexus.png',
     items: [
       {
         type: 'lines',
         title: 'Tyne and Wear Metro',
+        titleImage: 'taw.png',
         lines: ['Green', 'Orange'],
       },
     ],

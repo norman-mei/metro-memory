@@ -142,6 +142,7 @@ export const CITY_PATH_MAP: Record<string, string> = {
   'nyc': 'north-america/usa/nyc',
   'nyc-lirr': 'north-america/usa/nyc-lirr',
   'nyc-mnr': 'north-america/usa/nyc-mnr',
+  'nyc-ctrail': 'north-america/usa/nyc-ctrail',
   'nyc-mta-commuter-rail': 'north-america/usa/nyc-mta-commuter-rail',
   'nyc-mta': 'north-america/usa/nyc-mta',
   'nyc-path': 'north-america/usa/nyc-path',

@@ -8,10 +8,12 @@ export const LINES = linesData as { [name: string]: Line }
 export const LINE_GROUPS: LineGroup[] = [
   {
     title: 'South Yorkshire Mayoral Combined Authority (SYMCA)',
+    titleImage: 'SYMCA.png',
     items: [
       {
         type: 'lines',
         title: 'South Yorkshire Supertram',
+        titleImage: 'supertram.png',
         lines: ['Yellow', 'Blue', 'Purple', 'TramTrain'],
       },
     ],

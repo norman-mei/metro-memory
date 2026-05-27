@@ -329,6 +329,7 @@ const SIMPLIFIED_CITY_NAME_OVERRIDES: Record<string, string> = {
   'nyc-subway': '纽约地铁',
   'nyc-lirr': '长岛铁路',
   'nyc-mnr': '大都会北方铁路',
+  'nyc-ctrail': 'CTrail',
   'nyc-mta-commuter-rail': '纽约 MTA 通勤铁路',
   'nyc-mta': '纽约 MTA',
   'nyc-path': 'PATH',

@@ -32,6 +32,13 @@ const CITY_STATION_ALIASES: Record<string, CityStationAliasMap> = {
       'Jefferson Pk.',
     ],
   },
+  edinburgh: {
+    'Edinburgh Airport': [
+      'airport',
+      'edi',
+      'egph',
+    ],
+  },
   'gba-hong-kong': {
     'Terminal 1 West Hall (一號客運大樓西大堂站)': [
       'T1',

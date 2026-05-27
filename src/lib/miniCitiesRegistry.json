@@ -736,6 +736,22 @@
           ]
         },
         {
+          "slug": "nyc-ctrail",
+          "name": "CTrail",
+          "link": "/north-america/usa/nyc-ctrail",
+          "assetSourceSlug": "nyc",
+          "keywords": [
+            "CTrail",
+            "Shore Line East",
+            "Hartford Line"
+          ],
+          "countingMode": "mini",
+          "includeLines": [
+            "CTRailShoreLineEast",
+            "CTRailHartfordLine"
+          ]
+        },
+        {
           "slug": "nyc-mta-commuter-rail",
           "name": "MTA Commuter Rail",
           "link": "/north-america/usa/nyc-mta-commuter-rail",

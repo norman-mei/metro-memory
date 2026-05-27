@@ -852,6 +852,10 @@ export const ACHIEVEMENTS: Record<string, AchievementDefinition> = {
     title: "Hudson-Harlem-Haven Hero",
     description: "You've conquered Metro-North from Grand Central to the outer terminals with commuter-class precision.",
   },
+  "nyc-ctrail": {
+    title: "Constitution Corridor Captain",
+    description: "You've mastered CTrail's Hartford Line and Shore Line East stops with Connecticut commuter precision.",
+  },
   "nyc-mta-commuter-rail": {
     title: "Terminal District Tactician",
     description: "You've mastered MTA commuter rail from Penn and Grand Central to the outer branches with peak-hour precision.",

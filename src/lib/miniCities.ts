@@ -45,6 +45,7 @@ export const MINI_CITY_MARKER_COORDINATES: Record<string, [number, number]> = {
   'nyc-subway': [-73.9911, 40.7506],
   'nyc-lirr': [-73.7906, 40.7003],
   'nyc-mnr': [-73.9772, 40.7527],
+  'nyc-ctrail': [-72.9251, 41.2977],
   'nyc-mta-commuter-rail': [-73.9715, 40.7512],
   'nyc-mta': [-73.9816, 40.7561],
   'nyc-path': [-74.0138, 40.7162],

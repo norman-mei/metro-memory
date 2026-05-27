@@ -11,6 +11,17 @@ const MINI_CITY_REGISTRY_PATH = path.join(
   'lib',
   'miniCitiesRegistry.json',
 )
+const NYC_GRAND_CENTRAL_GEOJSON_PATH = path.join(
+  process.cwd(),
+  'src',
+  'app',
+  '(game)',
+  'north-america',
+  'usa',
+  'nyc',
+  'data',
+  'grand central.geojson',
+)
 
 async function ensureDestDir() {
   await fs.mkdir(DEST_ROOT, { recursive: true })
@@ -116,6 +127,140 @@ function filterPayloadByLines(payload, includeLines) {
   }
 }
 
+async function loadNycLirrGrandCentralBranchSegments() {
+  const raw = await fs.readFile(NYC_GRAND_CENTRAL_GEOJSON_PATH, 'utf-8')
+  const geojson = JSON.parse(raw)
+  const features = Array.isArray(geojson?.features) ? geojson.features : []
+
+  return features
+    .filter(
+      (feature) =>
+        feature?.geometry?.type === 'LineString' &&
+        feature?.properties?.operator === 'Long Island Rail Road' &&
+        feature?.properties?.name === 'Grand Central Branch' &&
+        feature?.properties?.usage === 'main',
+    )
+    .map((feature) => feature.geometry.coordinates)
+    .filter(
+      (coordinates) =>
+        Array.isArray(coordinates) &&
+        coordinates.length >= 2 &&
+        coordinates.every(
+          (point) =>
+            Array.isArray(point) &&
+            typeof point[0] === 'number' &&
+            typeof point[1] === 'number',
+        ),
+    )
+}
+
+const samePoint = (left, right) =>
+  Array.isArray(left) &&
+  Array.isArray(right) &&
+  left[0] === right[0] &&
+  left[1] === right[1]
+
+const sameSegment = (left, right) =>
+  Array.isArray(left) &&
+  Array.isArray(right) &&
+  left.length === right.length &&
+  left.every((point, index) => samePoint(point, right[index]))
+
+function normalizeRouteSegments(feature) {
+  const coordinates = Array.isArray(feature?.geometry?.coordinates)
+    ? feature.geometry.coordinates
+    : []
+  if (coordinates.length === 0) {
+    return []
+  }
+
+  if (
+    Array.isArray(coordinates[0]) &&
+    typeof coordinates[0][0] === 'number' &&
+    typeof coordinates[0][1] === 'number'
+  ) {
+    return [coordinates]
+  }
+
+  return coordinates
+}
+
+function removeNycLirrGrandCentralTerminalRoutes(
+  payload,
+  grandCentralBranchSegments,
+) {
+  const grandCentralBranchLineSet = new Set([
+    'LIRRBabylon',
+    'LIRRBelmont',
+    'LIRRFarRockaway',
+    'LIRRHempstead',
+    'LIRRLongBeach',
+    'LIRRPortJefferson',
+    'LIRRPortWashington',
+    'LIRRRonkonkoma',
+    'LIRRWestHempstead',
+  ])
+  const inGrandCentralArea = (point) => {
+    if (!Array.isArray(point) || point.length < 2) {
+      return false
+    }
+
+    const [lng, lat] = point
+    return lng > -73.985 && lng < -73.968 && lat > 40.745 && lat < 40.766
+  }
+
+  return {
+    ...payload,
+    routes: {
+      ...payload.routes,
+      features: payload.routes.features.map((feature) => {
+        const line = feature?.properties?.line
+        const coordinates = normalizeRouteSegments(feature)
+
+        if (grandCentralBranchLineSet.has(line)) {
+          return {
+            ...feature,
+            geometry: {
+              ...feature.geometry,
+              type: 'MultiLineString',
+              coordinates: coordinates.filter(
+                (segment) =>
+                  !grandCentralBranchSegments.some((branchSegment) =>
+                    sameSegment(segment, branchSegment),
+                  ),
+              ),
+            },
+          }
+        }
+
+        if (line !== 'LIRRAtlantic') {
+          return feature
+        }
+
+        const cleanedCoordinates = coordinates.filter(
+          (segment) =>
+            Array.isArray(segment) && !segment.some(inGrandCentralArea),
+        )
+        const missingBranchSegments = grandCentralBranchSegments.filter(
+          (branchSegment) =>
+            !cleanedCoordinates.some((segment) =>
+              sameSegment(segment, branchSegment),
+            ),
+        )
+
+        return {
+          ...feature,
+          geometry: {
+            ...feature.geometry,
+            type: 'MultiLineString',
+            coordinates: [...missingBranchSegments, ...cleanedCoordinates],
+          },
+        }
+      }),
+    },
+  }
+}
+
 async function main() {
   await ensureDestDir()
 
@@ -172,6 +317,11 @@ async function main() {
         written += await writePayloadFiles(parentSlug, parentPayload)
       }
 
+      const nycLirrGrandCentralBranchSegments =
+        parentSlug === 'nyc'
+          ? await loadNycLirrGrandCentralBranchSegments().catch(() => [])
+          : []
+
       for (const child of children) {
         const childSlug = child?.slug
         const includeLines = Array.isArray(child?.includeLines)
@@ -181,7 +331,13 @@ async function main() {
           continue
         }
 
-        const payload = filterPayloadByLines(parentPayload, includeLines)
+        const payload =
+          childSlug === 'nyc-lirr'
+            ? removeNycLirrGrandCentralTerminalRoutes(
+                filterPayloadByLines(parentPayload, includeLines),
+                nycLirrGrandCentralBranchSegments,
+              )
+            : filterPayloadByLines(parentPayload, includeLines)
         const destPath = path.join(DEST_ROOT, `${childSlug}.json`)
         await fs.writeFile(destPath, JSON.stringify(payload))
         written++
