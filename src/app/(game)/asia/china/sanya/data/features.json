@@ -1,0 +1,346 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          109.488294,
+          18.297426
+        ]
+      },
+      "properties": {
+        "id": 1,
+        "name": "Sanya Railway Station (三亚火车站)",
+        "line": "SanyaTramT1",
+        "order": 0,
+        "alternate_names": [
+          "Sanya Railway Station",
+          "三亚火车站",
+          "三亞火車站",
+          "san ya huo che zhan"
+        ]
+      },
+      "id": 1
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          109.4830956,
+          18.2962977
+        ]
+      },
+      "properties": {
+        "id": 2,
+        "name": "Yuxiu Road (育秀路)",
+        "line": "SanyaTramT1",
+        "order": 1,
+        "alternate_names": [
+          "Yuxiu Road",
+          "育秀路",
+          "yu xiu lu"
+        ]
+      },
+      "id": 2
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          109.4846462,
+          18.2894071
+        ]
+      },
+      "properties": {
+        "id": 3,
+        "name": "Fenghuang Road (凤凰路)",
+        "line": "SanyaTramT1",
+        "order": 2,
+        "alternate_names": [
+          "Fenghuang Road",
+          "凤凰路",
+          "鳳凰路",
+          "feng huang lu"
+        ]
+      },
+      "id": 3
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          109.489395,
+          18.2834569
+        ]
+      },
+      "properties": {
+        "id": 4,
+        "name": "Shuicheng Road (解放路)",
+        "line": "SanyaTramT1",
+        "order": 3,
+        "alternate_names": [
+          "Shuicheng Road",
+          "解放路",
+          "水城路",
+          "jie fang lu"
+        ]
+      },
+      "id": 4
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          109.4922019,
+          18.2801624
+        ]
+      },
+      "properties": {
+        "id": 5,
+        "name": "Sanya River East Road (三亚河东路)",
+        "line": "SanyaTramT1",
+        "order": 4,
+        "alternate_names": [
+          "Sanya River East Road",
+          "三亚河东路",
+          "三亞河東路",
+          "san ya he dong lu"
+        ]
+      },
+      "id": 5
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          109.4875221,
+          18.2726336
+        ]
+      },
+      "properties": {
+        "id": 6,
+        "name": "Jiefang Road (解放路)",
+        "line": "SanyaTramT1",
+        "order": 5,
+        "alternate_names": [
+          "Jiefang Road",
+          "解放路",
+          "jie fang lu"
+        ]
+      },
+      "id": 6
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          109.488709,
+          18.2692594
+        ]
+      },
+      "properties": {
+        "id": 7,
+        "name": "Jinjiling Street (金鸡岭街)",
+        "line": "SanyaTramT1",
+        "order": 6,
+        "alternate_names": [
+          "Jinjiling Street",
+          "金鸡岭街",
+          "金雞嶺街",
+          "jin ji ling jie"
+        ]
+      },
+      "id": 7
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          109.4908853,
+          18.2666093
+        ]
+      },
+      "properties": {
+        "id": 8,
+        "name": "Youyi Street (友谊街)",
+        "line": "SanyaTramT1",
+        "order": 7,
+        "alternate_names": [
+          "Youyi Street",
+          "友谊街",
+          "友誼街",
+          "you yi jie"
+        ]
+      },
+      "id": 8
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          109.4931261,
+          18.2637576
+        ]
+      },
+      "properties": {
+        "id": 9,
+        "name": "Yingbin Road (迎宾路)",
+        "line": "SanyaTramT1",
+        "order": 8,
+        "alternate_names": [
+          "Yingbin Road",
+          "迎宾路",
+          "迎賓路",
+          "ying bin lu"
+        ]
+      },
+      "id": 9
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          109.4954855,
+          18.2598138
+        ]
+      },
+      "properties": {
+        "id": 10,
+        "name": "Jixiang Street (吉祥街)",
+        "line": "SanyaTramT1",
+        "order": 9,
+        "alternate_names": [
+          "Jixiang Street",
+          "吉祥街",
+          "ji xiang jie"
+        ]
+      },
+      "id": 10
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          109.4968228,
+          18.2553774
+        ]
+      },
+      "properties": {
+        "id": 11,
+        "name": "Tuanjie Street (团结街)",
+        "line": "SanyaTramT1",
+        "order": 10,
+        "alternate_names": [
+          "Tuanjie Street",
+          "团结街",
+          "團結街",
+          "tuan jie jie"
+        ]
+      },
+      "id": 11
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          109.4977227,
+          18.2523391
+        ]
+      },
+      "properties": {
+        "id": 12,
+        "name": "Xinfeng Street (新风街)",
+        "line": "SanyaTramT1",
+        "order": 11,
+        "alternate_names": [
+          "Xinfeng Street",
+          "新风街",
+          "新風街",
+          "xin feng jie"
+        ]
+      },
+      "id": 12
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          109.4989499,
+          18.2481686
+        ]
+      },
+      "properties": {
+        "id": 13,
+        "name": "Guangming Street (光明街)",
+        "line": "SanyaTramT1",
+        "order": 12,
+        "alternate_names": [
+          "Guangming Street",
+          "光明街",
+          "guang ming jie"
+        ]
+      },
+      "id": 13
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          109.5004011,
+          18.2423595
+        ]
+      },
+      "properties": {
+        "id": 14,
+        "name": "Yuejin Street (跃进街)",
+        "line": "SanyaTramT1",
+        "order": 13,
+        "alternate_names": [
+          "Yuejin Street",
+          "跃进街",
+          "躍進街",
+          "yue jin jie"
+        ]
+      },
+      "id": 14
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          109.5018083,
+          18.2368146
+        ]
+      },
+      "properties": {
+        "id": 15,
+        "name": "Jiangang Road (建港路)",
+        "line": "SanyaTramT1",
+        "order": 14,
+        "alternate_names": [
+          "Jiangang Road",
+          "建港路",
+          "Jiangaang Road",
+          "jian gang lu"
+        ]
+      },
+      "id": 15
+    }
+  ]
+}

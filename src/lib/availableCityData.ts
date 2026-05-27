@@ -142,6 +142,7 @@ export const AVAILABLE_CITY_SLUGS = new Set([
   'potsdam',
   'pyongyang',
   'san-juan',
+  'sanya',
   'sapporo',
   'seattle',
   'sendai',

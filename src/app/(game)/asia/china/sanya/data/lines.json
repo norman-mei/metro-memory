@@ -1,0 +1,14 @@
+{
+  "SanyaTramT1": {
+    "name": "T1",
+    "color": "#6DB6D6",
+    "backgroundColor": "#6DB6D6",
+    "textColor": "#1F1F1F",
+    "progressOutlineColor": "#6DB6D6",
+    "statsColor": "#6DB6D6",
+    "order": 0,
+    "icon": "asia/china/sanya/sanya1.png",
+    "badgeShape": "circle",
+    "badgeFit": "contain"
+  }
+}

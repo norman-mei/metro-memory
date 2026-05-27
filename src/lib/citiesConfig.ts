@@ -820,7 +820,8 @@ const rawCities: CityBase[] = [
     name: 'Sanya (三亚), HI',
     link: '/asia/china/sanya',
     continent: 'Asia',
-    hideInStats: true,
+    disabled: false,
+    hideInStats: false,
   },
   {
     name: 'Tianshui (天水), GS',
@@ -1054,7 +1055,6 @@ const PLACEHOLDER_CITY_PATHS = new Set([
   'asia/china/ningbo',
   'asia/china/qingdao',
   'asia/china/qiubei',
-  'asia/china/sanya',
   'asia/china/suzhou',
   'asia/china/tianjin',
   'asia/china/tianshui',
