@@ -415,9 +415,20 @@ const ProgressBars = ({
   return (
     <div className="space-y-6">
       {LINE_GROUPS.map((group, groupIndex) => {
+        const isPureSeparator =
+          !group.title && group.items.length === 1 && group.items[0].type === 'separator'
+        const prevGroup = groupIndex > 0 ? LINE_GROUPS[groupIndex - 1] : null
+        const prevIsPureSeparator = prevGroup
+          ? !prevGroup.title &&
+            prevGroup.items.length === 1 &&
+            prevGroup.items[0].type === 'separator'
+          : false
+        const shouldRenderGroupHr =
+          groupIndex > 0 && !isPureSeparator && !prevIsPureSeparator
+
         return (
           <div key={`${group.title ?? 'group'}-${groupIndex}`} className="space-y-3">
-            {groupIndex > 0 ? (
+            {shouldRenderGroupHr ? (
               <hr className="border-zinc-200 dark:border-[#18181b]" />
             ) : null}
             <GroupHeading
