@@ -1,4 +1,5 @@
-const CACHE_NAME = 'metro-memory-v3'
+const CACHE_NAME = 'metro-memory-v4'
+const CITY_CACHE_PREFIX = 'metro-memory-city-'
 const OFFLINE_MANIFEST_URL = '/offline-manifest.json'
 const CORE_ASSETS = [
   '/',
@@ -51,6 +52,14 @@ self.addEventListener('activate', (event) => {
 })
 
 async function cacheFirst(request) {
+  const cityCacheKeys = (await caches.keys()).filter((key) =>
+    key.startsWith(CITY_CACHE_PREFIX),
+  )
+  for (const key of cityCacheKeys) {
+    const cityMatch = await caches.open(key).then((cache) => cache.match(request))
+    if (cityMatch) return cityMatch
+  }
+
   const cache = await caches.open(CACHE_NAME)
   const match = await cache.match(request)
   if (match) return match
@@ -71,6 +80,13 @@ async function networkFirst(request) {
     }
     return response
   } catch (error) {
+    const cityCacheKeys = (await caches.keys()).filter((key) =>
+      key.startsWith(CITY_CACHE_PREFIX),
+    )
+    for (const key of cityCacheKeys) {
+      const cityMatch = await caches.open(key).then((cityCache) => cityCache.match(request))
+      if (cityMatch) return cityMatch
+    }
     const match = await cache.match(request)
     if (match) return match
     throw error
@@ -94,7 +110,11 @@ self.addEventListener('fetch', (event) => {
     return
   }
 
-  if (url.pathname.startsWith('/city-icons') || url.pathname.startsWith('/images')) {
+  if (
+    url.pathname.startsWith('/city-icons') ||
+    url.pathname.startsWith('/city-cards') ||
+    url.pathname.startsWith('/images')
+  ) {
     event.respondWith(networkFirst(request))
     return
   }
@@ -108,5 +128,55 @@ self.addEventListener('fetch', (event) => {
       }),
     )
     return
+  }
+})
+
+self.addEventListener('message', (event) => {
+  const { type, payload } = event.data || {}
+  const port = event.ports?.[0]
+  const reply = (message) => {
+    if (port) {
+      port.postMessage(message)
+    }
+  }
+
+  if (type === 'CACHE_CITY') {
+    event.waitUntil(
+      (async () => {
+        try {
+          const citySlug = payload?.citySlug
+          const assets = Array.isArray(payload?.assets) ? payload.assets : []
+          if (!citySlug || assets.length === 0) {
+            throw new Error('Missing city assets')
+          }
+          const cache = await caches.open(`${CITY_CACHE_PREFIX}${citySlug}`)
+          const results = await Promise.allSettled(
+            assets.map((asset) => cache.add(new Request(asset, { cache: 'reload' }))),
+          )
+          const failed = results.filter((result) => result.status === 'rejected').length
+          reply({ ok: true, cached: assets.length - failed, failed })
+        } catch (error) {
+          reply({ ok: false, error: error?.message || 'Unable to cache city' })
+        }
+      })(),
+    )
+    return
+  }
+
+  if (type === 'DELETE_CITY') {
+    event.waitUntil(
+      (async () => {
+        try {
+          const citySlug = payload?.citySlug
+          if (!citySlug) {
+            throw new Error('Missing city')
+          }
+          await caches.delete(`${CITY_CACHE_PREFIX}${citySlug}`)
+          reply({ ok: true })
+        } catch (error) {
+          reply({ ok: false, error: error?.message || 'Unable to delete city' })
+        }
+      })(),
+    )
   }
 })

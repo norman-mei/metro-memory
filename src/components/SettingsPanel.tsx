@@ -30,6 +30,12 @@ import {
   writeSolutionsAccess,
   writeSolutionsSelection,
 } from '@/lib/solutionsAccess'
+import { apiFetch } from '@/lib/apiClient'
+import {
+  deleteOfflineCity,
+  listOfflineCities,
+  type OfflineCityRecord,
+} from '@/lib/offlineCityManager'
 import { STATION_TOTALS } from '@/lib/stationTotals'
 import { getCityFlagEmojiFromPath } from '@/lib/countryFlags'
 import classNames from 'classnames'
@@ -850,6 +856,12 @@ const SettingsPanel = ({ className, showHeading = true, disableScroll = false }:
         </div>
       </div>
       <div className="space-y-3">
+        <p className="text-sm font-semibold uppercase tracking-wide text-zinc-500 dark:text-zinc-400">
+          Mobile and offline
+        </p>
+        <MobileOfflinePanel />
+      </div>
+      <div className="space-y-3">
         <p className="text-sm font-semibold uppercase tracking-wide text-red-500 dark:text-red-400">
           {t('dangerZone')}
         </p>
@@ -903,6 +915,125 @@ const SettingToggle = ({
     </button>
   </label>
 )
+
+const MobileOfflinePanel = () => {
+  const [autoDownloadDataUpdates, setAutoDownloadDataUpdates] = useState(false)
+  const [offlineCities, setOfflineCities] = useState<OfflineCityRecord[]>([])
+  const [syncStatus, setSyncStatus] = useState<string>('Not synced in this session')
+
+  useEffect(() => {
+    if (typeof window === 'undefined') {
+      return
+    }
+    setAutoDownloadDataUpdates(
+      window.localStorage.getItem('mm-auto-download-data-updates') === '1',
+    )
+    setOfflineCities(listOfflineCities())
+    const refreshOfflineCities = () => setOfflineCities(listOfflineCities())
+    const refreshSyncStatus = () => {
+      const raw = window.localStorage.getItem('mm-progress-sync-status')
+      if (!raw) {
+        setSyncStatus('Not synced in this session')
+        return
+      }
+      try {
+        const parsed = JSON.parse(raw) as {
+          state?: string
+          lastSyncedAt?: string | null
+          error?: string
+        }
+        setSyncStatus(
+          parsed.state === 'synced' && parsed.lastSyncedAt
+            ? `Last synced ${new Date(parsed.lastSyncedAt).toLocaleString()}`
+            : parsed.state === 'error'
+              ? `Sync error${parsed.error ? `: ${parsed.error}` : ''}`
+              : parsed.state === 'syncing'
+                ? 'Syncing progress...'
+                : 'Not synced in this session',
+        )
+      } catch {
+        setSyncStatus('Not synced in this session')
+      }
+    }
+    refreshSyncStatus()
+    window.addEventListener('metro-offline-cities-change', refreshOfflineCities)
+    window.addEventListener('metro-progress-sync-status', refreshSyncStatus)
+    return () => {
+      window.removeEventListener('metro-offline-cities-change', refreshOfflineCities)
+      window.removeEventListener('metro-progress-sync-status', refreshSyncStatus)
+    }
+  }, [])
+
+  const toggleAutoDownload = useCallback((next: boolean) => {
+    setAutoDownloadDataUpdates(next)
+    window.localStorage.setItem('mm-auto-download-data-updates', next ? '1' : '0')
+  }, [])
+
+  return (
+    <div className="space-y-3 rounded-2xl border border-zinc-200 bg-zinc-50 p-4 dark:border-[#18181b] dark:bg-zinc-900/40">
+      <SettingToggle
+        label="Auto-download city data updates"
+        description="When a downloaded city has a newer data pack, refresh its data while online."
+        checked={autoDownloadDataUpdates}
+        onChange={toggleAutoDownload}
+      />
+      <div className="rounded-xl border border-zinc-200 bg-white p-3 text-sm dark:border-zinc-800 dark:bg-zinc-950">
+        <p className="font-semibold text-zinc-900 dark:text-zinc-100">Progress sync</p>
+        <p className="mt-1 text-zinc-600 dark:text-zinc-400">{syncStatus}</p>
+      </div>
+      <div className="rounded-xl border border-zinc-200 bg-white p-3 text-sm dark:border-zinc-800 dark:bg-zinc-950">
+        <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+          <div>
+            <p className="font-semibold text-zinc-900 dark:text-zinc-100">App updates</p>
+            <p className="text-zinc-600 dark:text-zinc-400">
+              Checks the mobile update manifest and prompts for store updates.
+            </p>
+          </div>
+          <button
+            type="button"
+            className="rounded-xl bg-[var(--accent-600)] px-4 py-2 text-sm font-semibold text-white"
+            onClick={() => window.dispatchEvent(new Event('metro-check-mobile-updates'))}
+          >
+            Check updates
+          </button>
+        </div>
+      </div>
+      <div className="rounded-xl border border-zinc-200 bg-white p-3 text-sm dark:border-zinc-800 dark:bg-zinc-950">
+        <p className="font-semibold text-zinc-900 dark:text-zinc-100">Downloaded cities</p>
+        {offlineCities.length === 0 ? (
+          <p className="mt-1 text-zinc-600 dark:text-zinc-400">
+            No cities have been downloaded for offline use on this device.
+          </p>
+        ) : (
+          <div className="mt-3 space-y-2">
+            {offlineCities.map((city) => (
+              <div
+                key={city.citySlug}
+                className="flex items-center justify-between gap-3 rounded-lg bg-zinc-50 px-3 py-2 dark:bg-zinc-900"
+              >
+                <div>
+                  <p className="font-medium text-zinc-900 dark:text-zinc-100">
+                    {city.citySlug}
+                  </p>
+                  <p className="text-xs text-zinc-500 dark:text-zinc-400">
+                    {city.assetCount} assets, map {city.mapDownloaded ? 'downloaded' : 'pending native support'}
+                  </p>
+                </div>
+                <button
+                  type="button"
+                  className="rounded-lg px-3 py-1 text-xs font-semibold text-red-600 hover:bg-red-50 dark:text-red-300 dark:hover:bg-red-950/40"
+                  onClick={() => void deleteOfflineCity(city.citySlug)}
+                >
+                  Delete
+                </button>
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
+    </div>
+  )
+}
 
 const SolutionsAccessPanel = ({ onSettingsChange }: { onSettingsChange?: () => void }) => {
   const { t } = useTranslation()
@@ -1358,11 +1489,14 @@ const clearLocalProgressStorage = (slugs?: string[]) => {
   for (let i = 0; i < window.localStorage.length; i += 1) {
     const key = window.localStorage.key(i)
     if (!key) continue
+    const progressPrefix = 'mm-progress-v1:'
     const suffix = LOCAL_PROGRESS_SUFFIXES.find((candidate) => key.endsWith(candidate))
-    if (!suffix) {
+    if (!suffix && !key.startsWith(progressPrefix)) {
       continue
     }
-    const slug = key.slice(0, -suffix.length)
+    const slug = key.startsWith(progressPrefix)
+      ? key.slice(progressPrefix.length)
+      : key.slice(0, -(suffix?.length ?? 0))
     if (slugFilter && !slugFilter.has(slug)) {
       continue
     }
@@ -1569,7 +1703,7 @@ const ResetProgressButton = ({
       )
       clearAchievementStorage()
       if (isAuthenticated) {
-        const response = await fetch('/api/progress/reset', {
+        const response = await apiFetch('/api/progress/reset', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body:

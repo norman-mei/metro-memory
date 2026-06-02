@@ -4,6 +4,7 @@ import { fileURLToPath } from 'url'
 /** @type {import('next').NextConfig} */
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
+const isCapacitorExport = process.env.METRO_MEMORY_CAPACITOR_EXPORT === '1'
 const reactIconsRoot = path.join(__dirname, 'node_modules', 'react-icons')
 const reactIconsMdPath = `./${path
   .relative(__dirname, path.join(reactIconsRoot, 'md', 'index.mjs'))
@@ -40,7 +41,14 @@ const nextConfig = {
     '/api/auth/change-email': LARGE_GAME_EXCLUDES,
     '/api/auth/resend-verification': LARGE_GAME_EXCLUDES,
   },
-  output: 'standalone',
+  output: isCapacitorExport ? 'export' : 'standalone',
+  trailingSlash: isCapacitorExport,
+  distDir: isCapacitorExport ? '.next-mobile' : '.next',
+  env: {
+    NEXT_PUBLIC_METRO_MOBILE_APP:
+      process.env.NEXT_PUBLIC_METRO_MOBILE_APP ?? (isCapacitorExport ? '1' : ''),
+    NEXT_PUBLIC_APP_VERSION: process.env.npm_package_version ?? '0.1.0',
+  },
   images: {
     localPatterns: [
       {

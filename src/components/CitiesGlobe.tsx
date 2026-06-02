@@ -14,6 +14,8 @@ import { useSettings } from '@/context/SettingsContext'
 import { buildChinaSafeMapStyle } from '@/lib/chinaSafeMapStyle'
 import { convertLngLatTupleForAmap } from '@/lib/amapCoordinateTransform'
 import { appConfig } from '@/lib/appConfig'
+import { isNativeMobileRuntime } from '@/lib/capacitorMapboxOffline'
+import { configureMapboxRuntime } from '@/lib/mapboxRuntime'
 import CloseButton from './CloseButton'
 import CityCard from './CityCard'
 
@@ -176,7 +178,9 @@ export default function CitiesGlobe({
   const effectiveMapProvider =
     mapProvider ?? (requestInMainlandChina ? 'amap' : 'mapbox')
   const usingAmapMapStyle = effectiveMapProvider === 'amap'
-  const effectiveProjection: 'globe' | 'mercator' = usingAmapMapStyle ? 'mercator' : projection
+  const nativeMobileRuntime = isNativeMobileRuntime()
+  const effectiveProjection: 'globe' | 'mercator' =
+    usingAmapMapStyle || nativeMobileRuntime ? 'mercator' : projection
   const defaultHomeView = usingAmapMapStyle
     ? DEFAULT_AMAP_HOME_VIEW
     : DEFAULT_HOME_VIEW[effectiveProjection]
@@ -325,6 +329,7 @@ export default function CitiesGlobe({
   useEffect(() => {
     if (!mapContainerRef.current) return
     const token = appConfig.mapbox.token
+    configureMapboxRuntime(mapboxgl)
     if (!token && !usingAmapMapStyle) {
       setMapError('Map cannot load because NEXT_PUBLIC_MAPBOX_TOKEN is missing.')
       return
@@ -334,7 +339,12 @@ export default function CitiesGlobe({
       mapboxgl.accessToken = token
     }
 
-    if (!mapboxgl.supported()) {
+    const supported =
+      typeof mapboxgl.supported === 'function'
+        ? mapboxgl.supported({ failIfMajorPerformanceCaveat: false })
+        : true
+
+    if (!supported) {
       setMapError('3D globe is unavailable because WebGL is not supported on this device or browser.')
       return
     }
@@ -367,15 +377,69 @@ export default function CitiesGlobe({
     }
 
     mapRef.current = map
+    let initialLoadComplete = false
+    let loadTimeout: number | null = null
+
+    const resizeAfterLayout = () => {
+      window.requestAnimationFrame(() => {
+        map.resize()
+      })
+    }
+
     map.once('load', () => {
+      initialLoadComplete = true
+      if (loadTimeout) {
+        window.clearTimeout(loadTimeout)
+        loadTimeout = null
+      }
       setMapReady(true)
+      setMapError(null)
       setMapBearing(map.getBearing())
+      resizeAfterLayout()
     })
 
     const syncBearing = () => {
       setMapBearing(map.getBearing())
     }
     map.on('rotate', syncBearing)
+
+    const handleMapError = (event: mapboxgl.MapboxEvent & { error?: unknown }) => {
+      const message =
+        (event?.error as { message?: string })?.message ??
+        (event?.error ? String(event.error) : '')
+      const normalizedMessage = message.toLowerCase()
+
+      if (
+        normalizedMessage.includes('style') ||
+        normalizedMessage.includes('sprite') ||
+        normalizedMessage.includes('glyph') ||
+        normalizedMessage.includes('tile') ||
+        normalizedMessage.includes('network') ||
+        normalizedMessage.includes('unauthorized') ||
+        normalizedMessage.includes('forbidden') ||
+        normalizedMessage.includes('401') ||
+        normalizedMessage.includes('403')
+      ) {
+        console.error('CitiesGlobe Mapbox resource error', event.error)
+      }
+
+      if (normalizedMessage.includes('webgl')) {
+        setMapError('Map cannot load because WebGL failed on this device.')
+      }
+    }
+
+    map.on('error', handleMapError)
+
+    if (nativeMobileRuntime) {
+      loadTimeout = window.setTimeout(() => {
+        if (initialLoadComplete) {
+          return
+        }
+        setMapError(
+          'Mapbox did not finish loading. Check that this device has internet and that the Mapbox token allows the mobile app origin.',
+        )
+      }, 9000)
+    }
 
     // Add interactions immediately (they persist across style changes)
     map.on('mousemove', CITY_POINTS_LAYER_ID, () => {
@@ -435,7 +499,11 @@ export default function CitiesGlobe({
     map.on('click', CITY_FAVORITES_LAYER_ID, handleCityClick)
 
     return () => {
+      if (loadTimeout) {
+        window.clearTimeout(loadTimeout)
+      }
       map.off('rotate', syncBearing)
+      map.off('error', handleMapError)
       map.remove()
     }
     // create map once; style/projection/satellite handled in other effects

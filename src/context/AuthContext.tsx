@@ -16,6 +16,8 @@ import {
     normalizeUiPreferences,
     type UiPreferences,
 } from '@/lib/preferences'
+import { apiFetch } from '@/lib/apiClient'
+import { syncDirtyProgressFromStorage } from '@/lib/progressRepository'
 
 type AuthUser = {
   id: string
@@ -53,7 +55,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const refresh = useCallback(async () => {
     setLoading(true)
     try {
-      const response = await fetch('/api/auth/session', { cache: 'no-store' })
+      const response = await apiFetch('/api/auth/session', { cache: 'no-store' })
       if (!response.ok) {
         setUser(null)
         setProgressSummaries({})
@@ -99,6 +101,46 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     [],
   )
 
+  useEffect(() => {
+    if (!user) {
+      return
+    }
+
+    let cancelled = false
+    const sync = async () => {
+      try {
+        const result = await syncDirtyProgressFromStorage()
+        if (cancelled || !result.ok) {
+          return
+        }
+        result.records.forEach((record) => {
+          updateProgressSummary(record.citySlug, record.foundCount)
+        })
+      } catch {
+        // Network failures are expected offline; records stay dirty locally.
+      }
+    }
+
+    void sync()
+    const handleOnline = () => void sync()
+    const handleFocus = () => void sync()
+    const handleVisibility = () => {
+      if (document.visibilityState === 'visible') {
+        void sync()
+      }
+    }
+
+    window.addEventListener('online', handleOnline)
+    window.addEventListener('focus', handleFocus)
+    document.addEventListener('visibilitychange', handleVisibility)
+    return () => {
+      cancelled = true
+      window.removeEventListener('online', handleOnline)
+      window.removeEventListener('focus', handleFocus)
+      document.removeEventListener('visibilitychange', handleVisibility)
+    }
+  }, [updateProgressSummary, user])
+
   const logoutLocally = useCallback(() => {
     setUser(null)
     setProgressSummaries({})
@@ -117,7 +159,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       }))
 
       try {
-        const response = await fetch('/api/user/preferences', {
+        const response = await apiFetch('/api/user/preferences', {
           method: 'PATCH',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
@@ -177,7 +219,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       })
 
       try {
-        const response = await fetch('/api/user/preferences', {
+        const response = await apiFetch('/api/user/preferences', {
           method: 'PATCH',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(updates),
@@ -303,7 +345,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     const controller = new AbortController()
     const persistLanguage = async () => {
       try {
-        const response = await fetch('/api/user/preferences', {
+        const response = await apiFetch('/api/user/preferences', {
           method: 'PATCH',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(changes),

@@ -5,6 +5,7 @@ import DevSiteRefreshWatcher from '@/components/DevSiteRefreshWatcher'
 import ServiceWorkerRegister from '@/components/ServiceWorkerRegister'
 import SettingsSaveToast from '@/components/SettingsSaveToast'
 import ThemeProviderClient from '@/components/ThemeProviderClient'
+import MobileUpdatePrompt from '@/components/MobileUpdatePrompt'
 import { AuthProvider } from '@/context/AuthContext'
 import { SettingsProvider } from '@/context/SettingsContext'
 import { ADSENSE_CLIENT_ID, ADSENSE_SCRIPT_SRC } from '@/lib/adsense'
@@ -100,10 +101,14 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-  const headersList = await headers()
-  const requestLocaleDefaults = getRequestLocaleDefaults(headersList)
-  const country = headersList.get('x-vercel-ip-country') || ''
+  const isMobileAppBuild = process.env.NEXT_PUBLIC_METRO_MOBILE_APP === '1'
+  const headersList = isMobileAppBuild ? null : await headers()
+  const requestLocaleDefaults = getRequestLocaleDefaults(
+    headersList ?? { get: () => null },
+  )
+  const country = headersList?.get('x-vercel-ip-country') || ''
   const isChina = country === 'CN'
+  const shouldLoadWebOnlyServices = !isChina && !isMobileAppBuild
 
   return (
     <html lang={requestLocaleDefaults.defaultLanguage} suppressHydrationWarning>
@@ -111,7 +116,7 @@ export default async function RootLayout({
         suppressHydrationWarning
         className="bg-zinc-50 text-zinc-900 antialiased overflow-y-auto dark:bg-black dark:text-zinc-100"
       >
-        {!isChina && (<>
+        {shouldLoadWebOnlyServices && (<>
             <Script
               id="funding-choices-controlled-messaging"
               strategy="beforeInteractive"
@@ -137,14 +142,15 @@ export default async function RootLayout({
             <AuthProvider>
               <AdRails />
               <ServiceWorkerRegister />
+              <MobileUpdatePrompt />
               <DevSiteRefreshWatcher />
               {children}
             </AuthProvider>
             <SettingsSaveToast />
           </SettingsProvider>
         </ThemeProviderClient>
-        {!isChina && <Analytics />}
-        {!isChina && <SpeedInsights />}
+        {shouldLoadWebOnlyServices && <Analytics />}
+        {shouldLoadWebOnlyServices && <SpeedInsights />}
       </body>
     </html>
   )

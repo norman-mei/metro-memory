@@ -6,9 +6,11 @@ import {
   getMiniCityFamilyParentSlug,
   getMiniCityFamilySlugs,
   normalizeFoundIds,
+  normalizeFoundTimestamps,
   resolveProgressPayloadForSlug,
 } from '@/lib/miniCityProgressServer'
 import { prisma } from '@/lib/prisma'
+import { mergeProgressPayloads } from '@/lib/progressMerge'
 
 type RouteParams = {
   params: Promise<{
@@ -89,6 +91,26 @@ export async function POST(request: NextRequest, { params }: RouteParams) {
   const foundTimestamps: Record<string, string> = parsed.data.foundTimestamps ?? {}
   const familyParentSlug = getMiniCityFamilyParentSlug(citySlug)
   const targetCitySlug = familyParentSlug ?? citySlug
+  const existing = await prisma.progress.findUnique({
+    where: {
+      userId_citySlug: {
+        userId: user.id,
+        citySlug: targetCitySlug,
+      },
+    },
+  })
+  const merged = mergeProgressPayloads(
+    existing
+      ? {
+          foundIds: normalizeFoundIds(existing.foundIds),
+          foundTimestamps: normalizeFoundTimestamps(existing.foundTimestamps),
+        }
+      : null,
+    {
+      foundIds: uniqueIds,
+      foundTimestamps,
+    },
+  )
 
   await prisma.progress.upsert({
     where: {
@@ -98,16 +120,16 @@ export async function POST(request: NextRequest, { params }: RouteParams) {
       },
     },
     update: {
-      foundIds: uniqueIds,
-      foundTimestamps,
+      foundIds: merged.foundIds,
+      foundTimestamps: merged.foundTimestamps ?? {},
     },
     create: {
       userId: user.id,
       citySlug: targetCitySlug,
-      foundIds: uniqueIds,
-      foundTimestamps,
+      foundIds: merged.foundIds,
+      foundTimestamps: merged.foundTimestamps ?? {},
     },
   })
 
-  return NextResponse.json({ ok: true, foundCount: uniqueIds.length })
+  return NextResponse.json({ ok: true, foundCount: merged.foundIds.length })
 }

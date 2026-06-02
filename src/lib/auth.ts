@@ -48,9 +48,15 @@ async function getCookieStore() {
 }
 
 function buildCookieOptions(expiresAt: Date) {
+  const mobileCorsEnabled = Boolean(
+    process.env.ENABLE_MOBILE_APP_CORS === '1' || process.env.MOBILE_APP_ORIGINS,
+  )
   return {
     httpOnly: true,
-    sameSite: 'lax' as const,
+    sameSite:
+      mobileCorsEnabled && process.env.NODE_ENV === 'production'
+        ? ('none' as const)
+        : ('lax' as const),
     secure: process.env.NODE_ENV === 'production',
     expires: expiresAt,
     path: '/',
@@ -86,7 +92,11 @@ export async function clearSessionCookie() {
   }
   store.set(SESSION_COOKIE_NAME, '', {
     httpOnly: true,
-    sameSite: 'lax',
+    sameSite:
+      (process.env.ENABLE_MOBILE_APP_CORS === '1' || process.env.MOBILE_APP_ORIGINS) &&
+      process.env.NODE_ENV === 'production'
+        ? 'none'
+        : 'lax',
     secure: process.env.NODE_ENV === 'production',
     expires: new Date(0),
     path: '/',

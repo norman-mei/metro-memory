@@ -45,8 +45,18 @@ import {
     type ManualComplexSelector,
 } from '@/lib/manualComplexes'
 import { disableMapboxTelemetry } from '@/lib/mapboxTelemetry'
+import { configureMapboxRuntime } from '@/lib/mapboxRuntime'
 import { loadMiniCityStationIdSet } from '@/lib/miniCityProgress'
 import { getMiniCityLinksForSlug, isMiniCitySlug } from '@/lib/miniCities'
+import {
+    clearLocalProgressRecord,
+    fetchRemoteProgress,
+    readLocalProgress,
+    syncDirtyProgressFromStorage,
+    syncProgressRecords,
+    writeLocalProgress,
+} from '@/lib/progressRepository'
+import { downloadCityForOffline } from '@/lib/offlineCityManager'
 import { repairMojibakeArray, repairMojibakeString } from '@/lib/repairMojibake'
 import {
     DEFAULT_RANKED_RULESET,
@@ -84,7 +94,7 @@ import 'mapbox-gl/dist/mapbox-gl.css'
 import { useTheme } from 'next-themes'
 import Link from 'next/link'
 import { usePathname, useRouter, useSearchParams } from 'next/navigation'
-import { MdLayers, MdMap, MdRestartAlt } from 'react-icons/md'
+import { MdDownload, MdLayers, MdMap, MdRestartAlt } from 'react-icons/md'
 import {
     CSSProperties,
     ChangeEvent,
@@ -2488,6 +2498,9 @@ function GamePageContent({
   const [resetConfirmOpen, setResetConfirmOpen] = useState(false)
   const [mapError, setMapError] = useState<string | null>(null)
   const [showMapFallbackPreview, setShowMapFallbackPreview] = useState(false)
+  const [offlineDownloadStatus, setOfflineDownloadStatus] = useState<
+    'idle' | 'downloading' | 'downloaded' | 'error'
+  >('idle')
   const [mapStyleModeReady, setMapStyleModeReady] = useState(false)
   const [mapRetryNonce, setMapRetryNonce] = useState(0)
   const mapStylePreferenceRef = useRef<MapStyleMode | null>(null)
@@ -3307,24 +3320,34 @@ function GamePageContent({
       if (rankedMode) {
         return
       }
-      if (!user) {
+      const localRecord = writeLocalProgress(
+        progressScopeSlug,
+        {
+          foundIds: ids,
+          foundTimestamps: timestamps,
+        },
+        { dirty: Boolean(user) },
+      )
+
+      if (!user || !localRecord) {
         return
       }
 
-      const payload = {
-        foundIds: ids,
-        foundTimestamps: timestamps,
+      if (typeof navigator !== 'undefined' && !navigator.onLine) {
+        return
       }
 
       const send = async () => {
         try {
-          const response = await fetch(`/api/progress/${progressScopeSlug}`, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(payload),
-          })
-          if (response.ok) {
-            updateProgressSummary(progressScopeSlug, ids.length)
+          const result = await syncProgressRecords([localRecord])
+          if (result.ok) {
+            const syncedRecord =
+              result.records.find((entry) => entry.citySlug === progressScopeSlug) ??
+              result.records[0]
+            updateProgressSummary(
+              progressScopeSlug,
+              syncedRecord?.foundCount ?? ids.length,
+            )
           }
         } catch (error) {
           if (process.env.NODE_ENV !== 'production') {
@@ -3369,37 +3392,34 @@ function GamePageContent({
     let cancelled = false
     ;(async () => {
       try {
-        const response = await fetch(`/api/progress/${progressScopeSlug}`, {
-          cache: 'no-store',
-        })
-        if (!response.ok) {
-          return
-        }
-        const data = await response.json()
+        const [remoteProgress] = await Promise.all([
+          fetchRemoteProgress(progressScopeSlug),
+          syncDirtyProgressFromStorage([progressScopeSlug]).catch(() => null),
+        ])
         if (cancelled) {
           return
         }
-        if (data?.progress) {
-          const remoteFound = Array.isArray(data.progress.foundIds)
-            ? data.progress.foundIds.filter(
-                (id: unknown): id is number => typeof id === 'number',
-              )
-            : []
-          if (remoteFound.length > 0) {
-            setStoredFound(remoteFound)
-            if (
-              data.progress.foundTimestamps &&
-              typeof data.progress.foundTimestamps === 'object'
-            ) {
-              setFoundTimestamps(
-                () =>
-                  data.progress
-                    .foundTimestamps as Record<string, string>,
-              )
-            }
-            updateProgressSummary(progressScopeSlug, remoteFound.length)
-            return
-          }
+        const localRecord = readLocalProgress(progressScopeSlug)
+        const remoteFound = remoteProgress?.foundIds ?? []
+        const localFoundIds = localRecord?.foundIds ?? []
+        const mergedFound = Array.from(new Set([...localFoundIds, ...remoteFound]))
+        const mergedTimestamps = {
+          ...(remoteProgress?.foundTimestamps ?? {}),
+          ...(localRecord?.foundTimestamps ?? {}),
+        }
+        if (mergedFound.length > 0) {
+          writeLocalProgress(
+            progressScopeSlug,
+            {
+              foundIds: mergedFound,
+              foundTimestamps: mergedTimestamps,
+            },
+            { dirty: Boolean(localRecord?.dirty), lastSyncedAt: localRecord?.lastSyncedAt },
+          )
+          setStoredFound(mergedFound)
+          setFoundTimestamps(() => mergedTimestamps)
+          updateProgressSummary(progressScopeSlug, mergedFound.length)
+          return
         }
         const fallbackIds = localFoundRef.current ?? []
         if (fallbackIds.length > 0) {
@@ -3533,6 +3553,14 @@ function GamePageContent({
         `${slug}-stations-is-new-player`,
         ids.length > 0 ? 'false' : String(isNewPlayer),
       )
+      writeLocalProgress(
+        slug,
+        {
+          foundIds: ids,
+          foundTimestamps: timestamps,
+        },
+        { dirty: Boolean(user) },
+      )
       updateProgressSummary(slug, ids.length)
     }
 
@@ -3589,6 +3617,7 @@ function GamePageContent({
     siblingMiniCityStationIds,
     scopeFound,
     updateProgressSummary,
+    user,
   ])
 
   useEffect(() => {
@@ -3621,15 +3650,18 @@ function GamePageContent({
       window.localStorage.removeItem(`${progressScopeSlug}-stations`)
       window.localStorage.removeItem(`${progressScopeSlug}-stations-found-at`)
       window.localStorage.removeItem(`${progressScopeSlug}-stations-is-new-player`)
+      clearLocalProgressRecord(progressScopeSlug)
       miniCityLinks?.siblings.forEach((miniCity) => {
         window.localStorage.removeItem(`${miniCity.slug}-stations`)
         window.localStorage.removeItem(`${miniCity.slug}-stations-found-at`)
         window.localStorage.removeItem(`${miniCity.slug}-stations-is-new-player`)
+        clearLocalProgressRecord(miniCity.slug)
       })
       if (progressScopeSlug !== CITY_NAME) {
         window.localStorage.removeItem(`${CITY_NAME}-stations`)
         window.localStorage.removeItem(`${CITY_NAME}-stations-found-at`)
         window.localStorage.removeItem(`${CITY_NAME}-stations-is-new-player`)
+        clearLocalProgressRecord(CITY_NAME)
       }
     } catch {
       // ignore storage errors
@@ -4802,6 +4834,7 @@ function GamePageContent({
       return
     }
 
+    configureMapboxRuntime(mapboxgl)
     disableMapboxTelemetry()
     if (appConfig.mapbox.token) {
       mapboxgl.accessToken = appConfig.mapbox.token
@@ -5911,6 +5944,22 @@ function GamePageContent({
       ? '\u4f7f\u7528 AMap \u5730\u56fe'
       : 'Use AMap map'
 
+  const handleOfflineDownload = useCallback(async () => {
+    if (offlineDownloadStatus === 'downloading') {
+      return
+    }
+    setOfflineDownloadStatus('downloading')
+    try {
+      await downloadCityForOffline(progressScopeSlug)
+      setOfflineDownloadStatus('downloaded')
+    } catch (error) {
+      setOfflineDownloadStatus('error')
+      if (process.env.NODE_ENV !== 'production') {
+        console.warn('Unable to download city for offline use', error)
+      }
+    }
+  }, [offlineDownloadStatus, progressScopeSlug])
+
   return (
     <div className="relative flex h-screen flex-row items-start justify-start bg-zinc-50 text-zinc-900 dark:bg-zinc-950 dark:text-zinc-100">
       <ZenModeToast zenMode={zenMode} toggleKey={settings.keybindings.TOGGLE_ZEN_MODE} />
@@ -6062,10 +6111,26 @@ function GamePageContent({
             <button
               type="button"
               onClick={() => map.zoomOut()}
-              className="flex h-10 w-10 items-center justify-center bg-transparent text-lg font-semibold text-zinc-700 transition hover:bg-white focus:outline-none focus:ring-2 focus:ring-[var(--accent-ring)] dark:text-zinc-100 dark:hover:bg-zinc-800/80"
+              className="flex h-10 w-10 items-center justify-center border-b border-zinc-200/80 bg-transparent text-lg font-semibold text-zinc-700 transition hover:bg-white focus:outline-none focus:ring-2 focus:ring-[var(--accent-ring)] dark:border-zinc-700/80 dark:text-zinc-100 dark:hover:bg-zinc-800/80"
               aria-label="Zoom out"
             >
               -
+            </button>
+            <button
+              type="button"
+              onClick={() => void handleOfflineDownload()}
+              disabled={offlineDownloadStatus === 'downloading'}
+              className="flex h-10 w-10 items-center justify-center bg-transparent text-zinc-700 transition hover:bg-white focus:outline-none focus:ring-2 focus:ring-[var(--accent-ring)] disabled:cursor-wait disabled:opacity-60 dark:text-zinc-100 dark:hover:bg-zinc-800/80"
+              aria-label="Download city for offline use"
+              title={
+                offlineDownloadStatus === 'downloaded'
+                  ? 'Downloaded for offline use'
+                  : offlineDownloadStatus === 'error'
+                    ? 'Download failed. Try again'
+                    : 'Download city for offline use'
+              }
+            >
+              <MdDownload className="h-5 w-5" aria-hidden="true" />
             </button>
           </div>
         ) : null}
