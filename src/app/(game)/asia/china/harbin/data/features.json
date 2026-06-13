@@ -54,7 +54,7 @@
       },
       "properties": {
         "id": 3,
-        "name": "Jiaotongxueyuan (交通学院)",
+        "name": "Jiaotong College (交通学院)",
         "alternate_names": [
           "交通学院",
           "Jiaotongxueyuan"
@@ -75,7 +75,7 @@
       },
       "properties": {
         "id": 4,
-        "name": "Taipingqiao (太平桥)",
+        "name": "Taiping Bridge (太平桥)",
         "alternate_names": [
           "太平桥",
           "Taipingqiao"
@@ -224,7 +224,7 @@
       },
       "properties": {
         "id": 11,
-        "name": "Xidaqiao (西大橋)",
+        "name": "Xida Bridge (西大橋)",
         "alternate_names": [
           "西大桥",
           "西大橋",
@@ -1398,7 +1398,7 @@
       },
       "properties": {
         "id": 66,
-        "name": "Taipingqiao (太平桥)",
+        "name": "Taiping Bridge (太平桥)",
         "alternate_names": [
           "太平桥",
           "Taipingqiao"

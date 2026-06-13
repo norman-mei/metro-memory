@@ -53,7 +53,7 @@
         ]
       },
       "properties": {
-        "name": "Hanshan (韩山)",
+        "name": "Han Mountain (韩山)",
         "alternate_names": [
           "韩山",
           "Hanshan"
@@ -74,7 +74,7 @@
         ]
       },
       "properties": {
-        "name": "Gongnonglu (工农路)",
+        "name": "Gongnong Road (工农路)",
         "alternate_names": [
           "工农路",
           "Gongnonglu"
@@ -95,7 +95,7 @@
         ]
       },
       "properties": {
-        "name": "Renminguangchang (人民广场)",
+        "name": "Renmin Square (人民广场)",
         "alternate_names": [
           "人民广场",
           "Renminguangchang"
@@ -116,7 +116,7 @@
         ]
       },
       "properties": {
-        "name": "Sudilu (苏堤路)",
+        "name": "Sudi Road (苏堤路)",
         "alternate_names": [
           "苏堤路",
           "Sudilu"
@@ -158,7 +158,7 @@
         ]
       },
       "properties": {
-        "name": "Pengchengguangchang (彭城广场)",
+        "name": "Pengcheng Square (彭城广场)",
         "alternate_names": [
           "彭城广场",
           "Pengchengguangchang"
@@ -179,7 +179,7 @@
         ]
       },
       "properties": {
-        "name": "Minzhubeilu (民主北路)",
+        "name": "Minzhu North Road (民主北路)",
         "alternate_names": [
           "民主北路",
           "Minzhubeilu"
@@ -221,7 +221,7 @@
         ]
       },
       "properties": {
-        "name": "Zifangshan (子房山)",
+        "name": "Zifang Mountain (子房山)",
         "alternate_names": [
           "子房山",
           "Zifangshan"
@@ -242,7 +242,7 @@
         ]
       },
       "properties": {
-        "name": "Tongshanlu (铜山路)",
+        "name": "Tongshan Road (铜山路)",
         "alternate_names": [
           "铜山路",
           "Tongshanlu"
@@ -284,7 +284,7 @@
         ]
       },
       "properties": {
-        "name": "Qingfenglu (庆丰路)",
+        "name": "Qingfeng Road (庆丰路)",
         "alternate_names": [
           "庆丰路",
           "Qingfenglu"
@@ -431,7 +431,7 @@
         ]
       },
       "properties": {
-        "name": "Jiulishan (九里山)",
+        "name": "Jiuli Mountain (九里山)",
         "alternate_names": [
           "九里山",
           "Jiulishan"
@@ -452,7 +452,7 @@
         ]
       },
       "properties": {
-        "name": "Bentengdadao (奔腾大道)",
+        "name": "Benteng Avenue (奔腾大道)",
         "alternate_names": [
           "奔腾大道",
           "Bentengdadao"
@@ -494,7 +494,7 @@
         ]
       },
       "properties": {
-        "name": "Qingyunqiao (庆云桥)",
+        "name": "Qingyun Bridge (庆云桥)",
         "alternate_names": [
           "庆云桥",
           "Qingyunqiao"
@@ -515,7 +515,7 @@
         ]
       },
       "properties": {
-        "name": "Pengchengguangchang (彭城广场)",
+        "name": "Pengcheng Square (彭城广场)",
         "alternate_names": [
           "彭城广场",
           "Pengchengguangchang"
@@ -536,7 +536,7 @@
         ]
       },
       "properties": {
-        "name": "Hubushan (户部山)",
+        "name": "Hubu Mountain (户部山)",
         "alternate_names": [
           "户部山",
           "Hubushan"
@@ -620,7 +620,7 @@
         ]
       },
       "properties": {
-        "name": "Kejicheng (科技城)",
+        "name": "Keji City (科技城)",
         "alternate_names": [
           "科技城",
           "Kejicheng"
@@ -683,7 +683,7 @@
         ]
       },
       "properties": {
-        "name": "Tuolongshan (拖龙山)",
+        "name": "Tuolong Mountain (拖龙山)",
         "alternate_names": [
           "拖龙山",
           "Tuolongshan"
@@ -746,7 +746,7 @@
         ]
       },
       "properties": {
-        "name": "Hanyuandadao (汉源大道)",
+        "name": "Hanyuan Avenue (汉源大道)",
         "alternate_names": [
           "汉源大道",
           "Hanyuandadao"
@@ -767,7 +767,7 @@
         ]
       },
       "properties": {
-        "name": "Xinyuandadao (新元大道)",
+        "name": "Xinyuan Avenue (新元大道)",
         "alternate_names": [
           "新元大道",
           "Xinyuandadao"
@@ -788,7 +788,7 @@
         ]
       },
       "properties": {
-        "name": "Xinchengqudong (新城区东)",
+        "name": "Xinchengqu East (新城区东)",
         "alternate_names": [
           "新城区东",
           "Xinchengqudong"
@@ -809,7 +809,7 @@
         ]
       },
       "properties": {
-        "name": "Zhenxingdadao (振兴大道)",
+        "name": "Zhenxing Avenue (振兴大道)",
         "alternate_names": [
           "振兴大道",
           "Zhenxingdadao"
@@ -872,7 +872,7 @@
         ]
       },
       "properties": {
-        "name": "Jinshanqiao (金山桥)",
+        "name": "Jinshan Bridge (金山桥)",
         "alternate_names": [
           "金山桥",
           "Jinshanqiao"
@@ -935,7 +935,7 @@
         ]
       },
       "properties": {
-        "name": "Baiyunshan (白云山)",
+        "name": "Baiyun Mountain (白云山)",
         "alternate_names": [
           "白云山",
           "Baiyunshan"
@@ -977,7 +977,7 @@
         ]
       },
       "properties": {
-        "name": "Tianqiao (天桥)",
+        "name": "Tian Bridge (天桥)",
         "alternate_names": [
           "天桥",
           "Tianqiao"
@@ -998,7 +998,7 @@
         ]
       },
       "properties": {
-        "name": "Hepingdaqiao (和平大桥)",
+        "name": "Hepingda Bridge (和平大桥)",
         "alternate_names": [
           "和平大桥",
           "Hepingdaqiao"
@@ -1061,7 +1061,7 @@
         ]
       },
       "properties": {
-        "name": "Nansanhuanlu (南三环路)",
+        "name": "Nansanhuan Road (南三环路)",
         "alternate_names": [
           "南三环路",
           "Nansanhuanlu"
@@ -1082,7 +1082,7 @@
         ]
       },
       "properties": {
-        "name": "Zhaishan (翟山)",
+        "name": "Zhai Mountain (翟山)",
         "alternate_names": [
           "翟山",
           "Zhaishan"
@@ -1166,7 +1166,7 @@
         ]
       },
       "properties": {
-        "name": "Pujianglu (浦江路)",
+        "name": "Pujiang Road (浦江路)",
         "alternate_names": [
           "浦江路",
           "Pujianglu"
@@ -1187,7 +1187,7 @@
         ]
       },
       "properties": {
-        "name": "Jiaoshan (焦山)",
+        "name": "Jiao Mountain (焦山)",
         "alternate_names": [
           "焦山",
           "Jiaoshan"
@@ -1208,7 +1208,7 @@
         ]
       },
       "properties": {
-        "name": "Qianjianglu (钱江路)",
+        "name": "Qianjiang Road (钱江路)",
         "alternate_names": [
           "钱江路",
           "Qianjianglu"
@@ -1229,7 +1229,7 @@
         ]
       },
       "properties": {
-        "name": "Gaoxinqu'nan (高新区南)",
+        "name": "Gaoxinqu' South (高新区南)",
         "alternate_names": [
           "高新区南",
           "Gaoxinqu'nan"
@@ -1250,7 +1250,7 @@
         ]
       },
       "properties": {
-        "name": "Yinshan (银山)",
+        "name": "Yin Mountain (银山)",
         "alternate_names": [
           "银山",
           "Yinshan"
@@ -1754,7 +1754,7 @@
         ]
       },
       "properties": {
-        "name": "Yizhongnan (一中南)",
+        "name": "Yizhong South (一中南)",
         "alternate_names": [
           "一中南",
           "Yizhongnan"
@@ -1796,7 +1796,7 @@
         ]
       },
       "properties": {
-        "name": "Lishuilu (丽水路)",
+        "name": "Lishui Road (丽水路)",
         "alternate_names": [
           "丽水路",
           "Lishuilu"
@@ -1817,7 +1817,7 @@
         ]
       },
       "properties": {
-        "name": "Yingbindadao (迎宾大道)",
+        "name": "Yingbin Avenue (迎宾大道)",
         "alternate_names": [
           "迎宾大道",
           "Yingbindadao"
@@ -1901,7 +1901,7 @@
         ]
       },
       "properties": {
-        "name": "Yicheng (驿城)",
+        "name": "Yi City (驿城)",
         "alternate_names": [
           "驿城",
           "Yicheng"

@@ -4,9 +4,10 @@
     "color": "#004A91",
     "backgroundColor": "#004A91",
     "textColor": "#FFFFFF",
-    "badgeShape": "capsule",
+    "badgeShape": "wide",
     "badgeFit": "contain",
     "order": 0,
-    "icon": "north-america/usa/buffalo/MR.png"
+    "icon": "north-america/usa/buffalo/MR.png",
+    "badgeAspectRatio": 2.7073
   }
 }

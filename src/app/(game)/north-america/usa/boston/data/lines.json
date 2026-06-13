@@ -142,8 +142,9 @@
     "textColor": "#FFFFFF",
     "order": 20,
     "icon": "north-america/usa/boston/CapeFlyer.png",
-    "badgeShape": "capsule",
-    "badgeFit": "contain"
+    "badgeShape": "wide",
+    "badgeFit": "contain",
+    "badgeAspectRatio": 1.6182
   },
   "GB": {
     "name": "Greenbush",

@@ -36,8 +36,8 @@
       },
       "properties": {
         "id": 1,
-        "name": "Xiushan",
-        "display_name": "Xiushan (秀山)",
+        "name": "Xiu Mountain",
+        "display_name": "Xiu Mountain (秀山)",
         "line": "fuzhou1",
         "alternate_names": [
           "Xiushan",
@@ -59,8 +59,8 @@
       },
       "properties": {
         "id": 2,
-        "name": "Luohanshan",
-        "display_name": "Luohanshan (罗汉山)",
+        "name": "Luohan Mountain",
+        "display_name": "Luohan Mountain (罗汉山)",
         "line": "fuzhou1",
         "alternate_names": [
           "Luohanshan",
@@ -131,8 +131,8 @@
       },
       "properties": {
         "id": 5,
-        "name": "Doumen",
-        "display_name": "Doumen (斗门)",
+        "name": "Dou Gate",
+        "display_name": "Dou Gate (斗门)",
         "line": "fuzhou1",
         "alternate_names": [
           "Doumen",
@@ -179,8 +179,8 @@
       },
       "properties": {
         "id": 7,
-        "name": "Pingshan",
-        "display_name": "Pingshan (屏山)",
+        "name": "Ping Mountain",
+        "display_name": "Ping Mountain (屏山)",
         "line": "fuzhou1",
         "alternate_names": [
           "Pingshan",
@@ -368,8 +368,8 @@
       },
       "properties": {
         "id": 15,
-        "name": "Sanchajie",
-        "display_name": "Sanchajie (三叉街)",
+        "name": "Sancha Street",
+        "display_name": "Sancha Street (三叉街)",
         "line": "fuzhou1",
         "alternate_names": [
           "Sanchajie",
@@ -391,8 +391,8 @@
       },
       "properties": {
         "id": 16,
-        "name": "Sanchajie",
-        "display_name": "Sanchajie (三叉街)",
+        "name": "Sancha Street",
+        "display_name": "Sancha Street (三叉街)",
         "line": "fuzhou1",
         "alternate_names": [
           "Sanchajie",
@@ -484,8 +484,8 @@
       },
       "properties": {
         "id": 20,
-        "name": "Huangshan",
-        "display_name": "Huangshan (黄山)",
+        "name": "Huang Mountain",
+        "display_name": "Huang Mountain (黄山)",
         "line": "fuzhou1",
         "alternate_names": [
           "Huangshan",
@@ -531,8 +531,8 @@
       },
       "properties": {
         "id": 22,
-        "name": "Chengmen",
-        "display_name": "Chengmen (城门)",
+        "name": "Cheng Gate",
+        "display_name": "Cheng Gate (城门)",
         "line": "fuzhou1",
         "alternate_names": [
           "Chengmen",
@@ -555,8 +555,8 @@
       },
       "properties": {
         "id": 23,
-        "name": "Chengmen",
-        "display_name": "Chengmen (城门)",
+        "name": "Cheng Gate",
+        "display_name": "Cheng Gate (城门)",
         "line": "fuzhou1",
         "alternate_names": [
           "Chengmen",
@@ -789,8 +789,8 @@
       },
       "properties": {
         "id": 33,
-        "name": "Shangjie",
-        "display_name": "Shangjie (上街)",
+        "name": "Shang Street",
+        "display_name": "Shang Street (上街)",
         "line": "fuzhou2",
         "alternate_names": [
           "Shangjie",
@@ -933,8 +933,8 @@
       },
       "properties": {
         "id": 39,
-        "name": "Hongwan",
-        "display_name": "Hongwan (洪湾)",
+        "name": "Hong Bay",
+        "display_name": "Hong Bay (洪湾)",
         "line": "fuzhou2",
         "alternate_names": [
           "Hongwan",
@@ -957,8 +957,8 @@
       },
       "properties": {
         "id": 40,
-        "name": "Jinshan",
-        "display_name": "Jinshan (金山)",
+        "name": "Jin Mountain",
+        "display_name": "Jin Mountain (金山)",
         "line": "fuzhou2",
         "alternate_names": [
           "Jinshan",
@@ -980,8 +980,8 @@
       },
       "properties": {
         "id": 41,
-        "name": "Jinshan",
-        "display_name": "Jinshan (金山)",
+        "name": "Jin Mountain",
+        "display_name": "Jin Mountain (金山)",
         "line": "fuzhou2",
         "alternate_names": [
           "Jinshan",
@@ -1286,8 +1286,8 @@
       },
       "properties": {
         "id": 54,
-        "name": "Gushan",
-        "display_name": "Gushan (鼓山)",
+        "name": "Gu Mountain",
+        "display_name": "Gu Mountain (鼓山)",
         "line": "fuzhou2",
         "alternate_names": [
           "Gushan",
@@ -1310,8 +1310,8 @@
       },
       "properties": {
         "id": 55,
-        "name": "Yangli",
-        "display_name": "Yangli (洋里)",
+        "name": "Yang Lane",
+        "display_name": "Yang Lane (洋里)",
         "line": "fuzhou2",
         "alternate_names": [
           "Yangli",
@@ -1403,8 +1403,8 @@
       },
       "properties": {
         "id": 59,
-        "name": "Jinniushan",
-        "display_name": "Jinniushan (金牛山)",
+        "name": "Jinniu Mountain",
+        "display_name": "Jinniu Mountain (金牛山)",
         "line": "fuzhou4",
         "alternate_names": [
           "Jinniushan",
@@ -1474,8 +1474,8 @@
       },
       "properties": {
         "id": 62,
-        "name": "Ximen",
-        "display_name": "Ximen (西门)",
+        "name": "West Gate",
+        "display_name": "West Gate (西门)",
         "line": "fuzhou4",
         "alternate_names": [
           "Ximen",
@@ -1546,8 +1546,8 @@
       },
       "properties": {
         "id": 65,
-        "name": "Dongmen",
-        "display_name": "Dongmen (东门)",
+        "name": "East Gate",
+        "display_name": "East Gate (东门)",
         "line": "fuzhou4",
         "alternate_names": [
           "Dongmen",
@@ -1570,8 +1570,8 @@
       },
       "properties": {
         "id": 66,
-        "name": "Dongmen",
-        "display_name": "Dongmen (东门)",
+        "name": "East Gate",
+        "display_name": "East Gate (东门)",
         "line": "fuzhou4",
         "alternate_names": [
           "Dongmen",
@@ -1855,8 +1855,8 @@
       },
       "properties": {
         "id": 78,
-        "name": "Chengmen",
-        "display_name": "Chengmen (城门)",
+        "name": "Cheng Gate",
+        "display_name": "Cheng Gate (城门)",
         "line": "fuzhou4",
         "alternate_names": [
           "Chengmen",
@@ -1879,8 +1879,8 @@
       },
       "properties": {
         "id": 79,
-        "name": "Chengmen",
-        "display_name": "Chengmen (城门)",
+        "name": "Cheng Gate",
+        "display_name": "Cheng Gate (城门)",
         "line": "fuzhou4",
         "alternate_names": [
           "Chengmen",
@@ -2117,8 +2117,8 @@
       },
       "properties": {
         "id": 89,
-        "name": "Jinshan",
-        "display_name": "Jinshan (金山)",
+        "name": "Jin Mountain",
+        "display_name": "Jin Mountain (金山)",
         "line": "fuzhou5",
         "alternate_names": [
           "Jinshan",
@@ -2140,8 +2140,8 @@
       },
       "properties": {
         "id": 90,
-        "name": "Jinshan",
-        "display_name": "Jinshan (金山)",
+        "name": "Jin Mountain",
+        "display_name": "Jin Mountain (金山)",
         "line": "fuzhou5",
         "alternate_names": [
           "Jinshan",
@@ -2163,8 +2163,8 @@
       },
       "properties": {
         "id": 91,
-        "name": "Fenggangli",
-        "display_name": "Fenggangli (凤冈里)",
+        "name": "Fenggang Lane",
+        "display_name": "Fenggang Lane (凤冈里)",
         "line": "fuzhou5",
         "alternate_names": [
           "Fenggangli",
@@ -2187,8 +2187,8 @@
       },
       "properties": {
         "id": 92,
-        "name": "Fenggangli",
-        "display_name": "Fenggangli (凤冈里)",
+        "name": "Fenggang Lane",
+        "display_name": "Fenggang Lane (凤冈里)",
         "line": "fuzhou5",
         "alternate_names": [
           "Fenggangli",
@@ -2211,8 +2211,8 @@
       },
       "properties": {
         "id": 93,
-        "name": "Pushang Dadao",
-        "display_name": "Pushang Dadao (浦上大道)",
+        "name": "Pushang Avenue",
+        "display_name": "Pushang Avenue (浦上大道)",
         "line": "fuzhou5",
         "alternate_names": [
           "Pushang Dadao",
@@ -2402,8 +2402,8 @@
       },
       "properties": {
         "id": 101,
-        "name": "Wushan",
-        "display_name": "Wushan (吴山)",
+        "name": "Wu Mountain",
+        "display_name": "Wu Mountain (吴山)",
         "line": "fuzhou5",
         "alternate_names": [
           "Wushan",
@@ -2733,8 +2733,8 @@
       },
       "properties": {
         "id": 115,
-        "name": "Hangcheng",
-        "display_name": "Hangcheng (航城)",
+        "name": "Hang City",
+        "display_name": "Hang City (航城)",
         "line": "fuzhou6",
         "alternate_names": [
           "Hangcheng",
@@ -3115,8 +3115,8 @@
       },
       "properties": {
         "id": 131,
-        "name": "Dongmen",
-        "display_name": "Dongmen (东门)",
+        "name": "East Gate",
+        "display_name": "East Gate (东门)",
         "line": "fuzhouf1",
         "alternate_names": [
           "Dongmen",
@@ -3164,8 +3164,8 @@
       },
       "properties": {
         "id": 133,
-        "name": "Nangongyuan",
-        "display_name": "Nangongyuan (南公园)",
+        "name": "Nan Park",
+        "display_name": "Nan Park (南公园)",
         "line": "fuzhouf1",
         "alternate_names": [
           "Nangongyuan",
@@ -3188,8 +3188,8 @@
       },
       "properties": {
         "id": 134,
-        "name": "Sanchajie",
-        "display_name": "Sanchajie (三叉街)",
+        "name": "Sancha Street",
+        "display_name": "Sancha Street (三叉街)",
         "line": "fuzhouf1",
         "alternate_names": [
           "Sanchajie",
@@ -3330,8 +3330,8 @@
       },
       "properties": {
         "id": 140,
-        "name": "Gaishan",
-        "display_name": "Gaishan (盖山)",
+        "name": "Gai Mountain",
+        "display_name": "Gai Mountain (盖山)",
         "line": "fuzhouf1",
         "alternate_names": [
           "Gaishan",
@@ -3380,8 +3380,8 @@
       },
       "properties": {
         "id": 142,
-        "name": "Lianhuashan",
-        "display_name": "Lianhuashan (莲花山)",
+        "name": "Lianhua Mountain",
+        "display_name": "Lianhua Mountain (莲花山)",
         "line": "fuzhouf1",
         "alternate_names": [
           "Lianhuashan",
@@ -3404,8 +3404,8 @@
       },
       "properties": {
         "id": 143,
-        "name": "Binhaixi",
-        "display_name": "Binhaixi (滨海西)",
+        "name": "Binhai West",
+        "display_name": "Binhai West (滨海西)",
         "line": "fuzhouf1",
         "alternate_names": [
           "Binhaixi",

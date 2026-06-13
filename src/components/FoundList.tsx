@@ -10,11 +10,18 @@ import classNames from 'classnames'
 import { sortBy } from 'lodash'
 import { useTheme } from 'next-themes'
 import { memo, useCallback, useEffect, useMemo, useRef, useState } from 'react'
+import { MdClose, MdHistory } from 'react-icons/md'
 import { DateAddedIcon } from './DateAddedIcon'
 import LineBadge from './LineBadge'
 
 let isGlobalMouseDown = false
 const EM_DASH = '\u2014'
+
+type SearchHistoryEntry = {
+  id: string
+  value: string
+  createdAt: string
+}
 
 const keepApostropheWordsTogether = (value: string) =>
   value.replace(/\u2019/g, "'")
@@ -192,6 +199,28 @@ const FoundList = ({
 
   const [sort, setSort] = useState<SortOptionType>('order')
   const [filter, setFilter] = useState<string>('')
+  const [searchHistory, setSearchHistory] = useState<SearchHistoryEntry[]>([])
+  const [searchHistoryOpen, setSearchHistoryOpen] = useState(false)
+  const [searchHistoryIndex, setSearchHistoryIndex] = useState<number | null>(null)
+  const lastFilterRef = useRef('')
+
+  const pushSearchHistory = useCallback((value: string) => {
+    const trimmed = value.trim()
+    if (!trimmed) return
+
+    setSearchHistory((prev) => {
+      const withoutDuplicate = prev.filter((item) => item.value !== trimmed)
+      return [
+        ...withoutDuplicate,
+        {
+          id: `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`,
+          value: trimmed,
+          createdAt: new Date().toISOString(),
+        },
+      ].slice(-100)
+    })
+    setSearchHistoryIndex(null)
+  }, [])
 
   const sorted = useMemo(() => {
     const ids = [...found]
@@ -299,6 +328,27 @@ const FoundList = ({
       return false
     })
   }, [sorted, normalizedFilter, idMap])
+
+  useEffect(() => {
+    if (activeStationId === null || !normalizedFilter) return
+    if (filtered.includes(activeStationId)) return
+
+    const activeFeature = idMap.get(activeStationId)
+    if (!activeFeature) return
+
+    pushSearchHistory(filter)
+    setFilter('')
+    lastFilterRef.current = ''
+    setSearchHistoryIndex(null)
+    setSearchHistoryOpen(false)
+  }, [
+    activeStationId,
+    filter,
+    filtered,
+    idMap,
+    normalizedFilter,
+    pushSearchHistory,
+  ])
 
   const grouped = useMemo(() => {
     const groups = new Map<string, DataFeature[]>()
@@ -431,7 +481,7 @@ const FoundList = ({
           </div>
         )}
 
-        <div>
+        <div className="relative">
           <label className="sr-only" htmlFor="found-stations-search">
             {t('searchFoundStations')}
           </label>
@@ -439,11 +489,123 @@ const FoundList = ({
             id="found-stations-search"
             type="search"
             value={filter}
-            onChange={(event) => setFilter(event.target.value)}
+            onChange={(event) => {
+              const value = event.target.value
+              if (value === '' && lastFilterRef.current.trim().length > 0) {
+                pushSearchHistory(lastFilterRef.current)
+              }
+              setSearchHistoryIndex(null)
+              setFilter(value)
+              lastFilterRef.current = value
+            }}
+            onKeyDown={(event) => {
+              if (disabled) return
+
+              if (event.key === 'ArrowUp') {
+                if (searchHistory.length === 0) return
+                event.preventDefault()
+                setSearchHistoryIndex((prev) => {
+                  const nextIndex =
+                    prev === null ? searchHistory.length - 1 : Math.max(prev - 1, 0)
+                  const nextValue = searchHistory[nextIndex]?.value ?? ''
+                  setFilter(nextValue)
+                  lastFilterRef.current = nextValue
+                  return nextIndex
+                })
+                return
+              }
+
+              if (event.key === 'ArrowDown') {
+                if (searchHistory.length === 0) return
+                event.preventDefault()
+                setSearchHistoryIndex((prev) => {
+                  if (prev === null) return null
+                  if (prev === searchHistory.length - 1) {
+                    setFilter('')
+                    lastFilterRef.current = ''
+                    return null
+                  }
+                  const nextIndex = Math.min(prev + 1, searchHistory.length - 1)
+                  const nextValue = searchHistory[nextIndex]?.value ?? ''
+                  setFilter(nextValue)
+                  lastFilterRef.current = nextValue
+                  return nextIndex
+                })
+                return
+              }
+
+              if (event.key === 'Enter') {
+                pushSearchHistory(filter)
+                setSearchHistoryOpen(false)
+              }
+            }}
             disabled={disabled}
-            className="w-full rounded-full border border-zinc-200 px-3 py-2 text-sm text-zinc-900 shadow-sm outline-none transition focus:border-zinc-400 focus:ring-2 focus:ring-zinc-300 disabled:cursor-not-allowed disabled:bg-zinc-100 disabled:text-zinc-400 dark:border-[#18181b] dark:bg-zinc-900/60 dark:text-zinc-100 dark:focus:border-zinc-500 dark:focus:ring-zinc-600 dark:disabled:bg-zinc-800 dark:disabled:text-zinc-500"
+            className="w-full rounded-full border border-zinc-200 py-2 pl-3 pr-11 text-sm text-zinc-900 shadow-sm outline-none transition focus:border-zinc-400 focus:ring-2 focus:ring-zinc-300 disabled:cursor-not-allowed disabled:bg-zinc-100 disabled:text-zinc-400 dark:border-[#18181b] dark:bg-zinc-900/60 dark:text-zinc-100 dark:focus:border-zinc-500 dark:focus:ring-zinc-600 dark:disabled:bg-zinc-800 dark:disabled:text-zinc-500"
             placeholder={t('searchFoundStations')}
           />
+          <button
+            type="button"
+            aria-label="Show found station search history"
+            title="Show found station search history"
+            disabled={disabled}
+            onMouseDown={(event) => event.preventDefault()}
+            onClick={() => setSearchHistoryOpen((prev) => !prev)}
+            className="absolute right-1.5 top-1/2 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full text-zinc-500 transition hover:bg-zinc-100 hover:text-zinc-900 focus:outline-none focus:ring-2 focus:ring-zinc-300 disabled:cursor-not-allowed disabled:text-zinc-300 dark:text-zinc-400 dark:hover:bg-zinc-800 dark:hover:text-zinc-100 dark:focus:ring-zinc-600 dark:disabled:text-zinc-600"
+          >
+            <MdHistory className="h-5 w-5" aria-hidden="true" />
+          </button>
+          {searchHistoryOpen && (
+            <div className="absolute right-0 top-full z-50 mt-2 w-[min(22rem,calc(100vw-2rem))] overflow-hidden rounded-2xl border border-zinc-200 bg-white shadow-2xl dark:border-zinc-800 dark:bg-zinc-950">
+              <div className="flex items-center justify-between border-b border-zinc-200 px-4 py-3 dark:border-zinc-800">
+                <p className="text-sm font-black text-zinc-950 dark:text-zinc-50">
+                  Search history
+                </p>
+                <button
+                  type="button"
+                  onClick={() => setSearchHistoryOpen(false)}
+                  aria-label="Close found station search history"
+                  title="Close found station search history"
+                  className="flex h-8 w-8 items-center justify-center rounded-full text-zinc-500 transition hover:bg-zinc-100 hover:text-zinc-900 dark:text-zinc-400 dark:hover:bg-zinc-800 dark:hover:text-zinc-100"
+                >
+                  <MdClose className="h-5 w-5" aria-hidden="true" />
+                </button>
+              </div>
+              <div
+                className="max-h-72 overflow-y-auto p-3"
+                style={{ scrollbarGutter: 'stable' }}
+              >
+                {searchHistory.length === 0 ? (
+                  <p className="rounded-xl border border-dashed border-zinc-300 p-4 text-sm text-zinc-600 dark:border-zinc-700 dark:text-zinc-400">
+                    No searches yet.
+                  </p>
+                ) : (
+                  <div className="space-y-2">
+                    {[...searchHistory].reverse().map((entry) => (
+                      <button
+                        key={entry.id}
+                        type="button"
+                        onMouseDown={(event) => event.preventDefault()}
+                        onClick={() => {
+                          setFilter(entry.value)
+                          lastFilterRef.current = entry.value
+                          setSearchHistoryIndex(null)
+                          setSearchHistoryOpen(false)
+                        }}
+                        className="block w-full rounded-xl border border-zinc-200 bg-zinc-50 px-3 py-2 text-left transition hover:bg-zinc-100 dark:border-zinc-800 dark:bg-zinc-900/70 dark:hover:bg-zinc-800"
+                      >
+                        <span className="block truncate text-sm font-bold text-zinc-950 dark:text-zinc-50">
+                          {entry.value}
+                        </span>
+                        <span className="mt-1 block text-xs font-medium text-zinc-500 dark:text-zinc-400">
+                          {formatTimestamp(entry.createdAt)}
+                        </span>
+                      </button>
+                    ))}
+                  </div>
+                )}
+              </div>
+            </div>
+          )}
         </div>
       </div>
       <ol className={classNames({ 'blur-md transition-all': hideLabels })}>
@@ -560,12 +722,12 @@ const GroupedLine = memo(
 
       return Array.from(ids).sort((a, b) => {
         const aOrder =
-          lineOrderMap.get(a) ??
           LINES[a]?.order ??
+          lineOrderMap.get(a) ??
           Number.MAX_SAFE_INTEGER
         const bOrder =
-          lineOrderMap.get(b) ??
           LINES[b]?.order ??
+          lineOrderMap.get(b) ??
           Number.MAX_SAFE_INTEGER
         if (aOrder !== bOrder) {
           return aOrder - bOrder

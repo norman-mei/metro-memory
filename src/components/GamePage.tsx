@@ -36,6 +36,15 @@ import {
 import { buildChinaSafeMapStyle } from '@/lib/chinaSafeMapStyle'
 import { formatLocalizedCityName } from '@/lib/cityNameDisplay'
 import { getCityStationAliases } from '@/lib/cityStationAliases'
+import { generateChineseDirectionalAlternates } from '@/lib/chineseDirectionalAliases'
+import {
+    extractChineseStationNameContext,
+    normalizeChineseStationDisplayName,
+} from '@/lib/chineseStationNameNormalization'
+import {
+    generateChineseStreetAlternates,
+    generateContextualChineseStreetAlternates,
+} from '@/lib/chineseStreetAliases'
 import { getKeystrokeFromEvent } from '@/lib/keyboardUtils'
 import { rememberLastPlayedCity } from '@/lib/lastPlayedCities'
 import { generateOrdinalNumberAlternates } from '@/lib/normalizeStationString'
@@ -78,8 +87,10 @@ import {
     autoClusterAliasSetsOverlap,
     buildAutoClusterAliases,
 } from '@/lib/stationComplexes'
+import { generateStationlessAlternates } from '@/lib/stationlessAliases'
 import { formatLocalizedStationDisplayName } from '@/lib/stationNameDisplay'
 import { getStationKey } from '@/lib/stationUtils'
+import { generateUniversityStationAlternates } from '@/lib/universityStationAliases'
 import {
     DataFeature,
     DataFeatureCollection,
@@ -1281,22 +1292,6 @@ const normalizeAliasSpacing = (value: string) =>
     .replace(/\s*[,\-]\s*$/g, '')
     .trim()
 
-const generateStationlessAlternates = (value?: string): string[] => {
-  const input = (value ?? '').trim()
-  if (!input || !/\bstation(s)?\b/i.test(input)) {
-    return []
-  }
-
-  const stripped = normalizeAliasSpacing(
-    input.replace(/\bstations?\b/gi, ' '),
-  )
-  if (!stripped || stripped.toLowerCase() === input.toLowerCase()) {
-    return []
-  }
-
-  return [stripped]
-}
-
 const USPS_STREET_SUFFIX_GROUPS = [
   ['ALLEY', 'ALLEE', 'ALLEY', 'ALLY', 'ALY'],
   ['ANEX', 'ANEX', 'ANNEX', 'ANNX', 'ANX'],
@@ -1852,18 +1847,56 @@ function GamePageContent({
         ...generatedAlternates,
         ...cityConfiguredAlternates,
       ]
+      const chineseNameContext = extractChineseStationNameContext(originalName)
+      const englishifiedChineseStationAlternates = stationlessAliasSource
+        .map((value) => normalizeChineseStationDisplayName(value, chineseNameContext))
+        .filter(
+          (value) =>
+            value.trim().length > 0 && !stationlessAliasSource.includes(value),
+        )
+      const chineseDirectionalAlternates = stationlessAliasSource.flatMap((value) =>
+        generateChineseDirectionalAlternates(value),
+      )
+      const stationlessAliasSourceWithDirectional = [
+        ...stationlessAliasSource,
+        ...englishifiedChineseStationAlternates,
+        ...chineseDirectionalAlternates,
+      ]
+      const universityAlternates = stationlessAliasSourceWithDirectional.flatMap((value) =>
+        generateUniversityStationAlternates(value),
+      )
+      const chineseStreetAlternates = [
+        ...stationlessAliasSourceWithDirectional,
+        ...universityAlternates,
+      ].flatMap((value) => generateChineseStreetAlternates(value))
+      const contextualChineseStreetAlternates =
+        generateContextualChineseStreetAlternates([
+          ...stationlessAliasSourceWithDirectional,
+          ...universityAlternates,
+          ...chineseStreetAlternates,
+        ])
 
       const mergedAlternates = Array.from(
         new Set([
             ...existingAlternates,
             ...cityConfiguredAlternates,
+            ...englishifiedChineseStationAlternates,
+            ...chineseDirectionalAlternates,
+            ...universityAlternates,
+            ...chineseStreetAlternates,
+            ...contextualChineseStreetAlternates,
             ...hyphenSegmentAlternates,
             ...streetSuffixAlternates,
             ...ordinalAlternates,
             ...generatedAlternates.filter(
               (alt) => typeof alt === 'string' && alt.trim().length > 0,
             ),
-          ...stationlessAliasSource.flatMap((value) =>
+          ...[
+            ...stationlessAliasSourceWithDirectional,
+            ...universityAlternates,
+            ...chineseStreetAlternates,
+            ...contextualChineseStreetAlternates,
+          ].flatMap((value) =>
             generateStationlessAlternates(value),
           ),
           ...(CITY_NAME === 'amtrak'
@@ -1937,28 +1970,28 @@ function GamePageContent({
         name:
           typeof feature.properties.name === 'string'
             ? formatLocalizedStationDisplayName(
-                repairMojibakeString(feature.properties.name),
+                normalizeChineseStationDisplayName(feature.properties.name),
                 settings.language,
               )
             : feature.properties.name,
         display_name:
           typeof feature.properties.display_name === 'string'
             ? formatLocalizedStationDisplayName(
-                repairMojibakeString(feature.properties.display_name),
+                normalizeChineseStationDisplayName(feature.properties.display_name),
                 settings.language,
               )
             : feature.properties.display_name,
         long_name:
           typeof feature.properties.long_name === 'string'
             ? formatLocalizedStationDisplayName(
-                repairMojibakeString(feature.properties.long_name),
+                normalizeChineseStationDisplayName(feature.properties.long_name),
                 settings.language,
               )
             : feature.properties.long_name,
         short_name:
           typeof feature.properties.short_name === 'string'
             ? formatLocalizedStationDisplayName(
-                repairMojibakeString(feature.properties.short_name),
+                normalizeChineseStationDisplayName(feature.properties.short_name),
                 settings.language,
               )
             : feature.properties.short_name,

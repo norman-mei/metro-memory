@@ -8,7 +8,8 @@
     "order": 0,
     "icon": "asia/singapore/NSLine.png",
     "badgeShape": "wide",
-    "badgeFit": "contain"
+    "badgeFit": "contain",
+    "badgeAspectRatio": 6.5306
   },
   "SingaporeEWL": {
     "name": "East-West Line",
@@ -19,7 +20,8 @@
     "order": 1,
     "icon": "asia/singapore/EWLine.png",
     "badgeShape": "wide",
-    "badgeFit": "contain"
+    "badgeFit": "contain",
+    "badgeAspectRatio": 6.5306
   },
   "SingaporeNEL": {
     "name": "North East Line",
@@ -30,7 +32,8 @@
     "order": 2,
     "icon": "asia/singapore/NELine.png",
     "badgeShape": "wide",
-    "badgeFit": "contain"
+    "badgeFit": "contain",
+    "badgeAspectRatio": 6.5306
   },
   "SingaporeCCL": {
     "name": "Circle Line",
@@ -41,7 +44,8 @@
     "order": 3,
     "icon": "asia/singapore/CircleLine.png",
     "badgeShape": "wide",
-    "badgeFit": "contain"
+    "badgeFit": "contain",
+    "badgeAspectRatio": 6.5306
   },
   "SingaporeDTL": {
     "name": "Downtown Line",
@@ -52,7 +56,8 @@
     "order": 4,
     "icon": "asia/singapore/DTLine.png",
     "badgeShape": "wide",
-    "badgeFit": "contain"
+    "badgeFit": "contain",
+    "badgeAspectRatio": 6.5306
   },
   "SingaporeTEL": {
     "name": "Thomson-East Coast Line",
@@ -63,7 +68,8 @@
     "order": 5,
     "icon": "asia/singapore/TECLine.png",
     "badgeShape": "wide",
-    "badgeFit": "contain"
+    "badgeFit": "contain",
+    "badgeAspectRatio": 6.5306
   },
   "SingaporeBPLRT": {
     "name": "Bukit Panjang LRT",
@@ -74,7 +80,8 @@
     "order": 6,
     "icon": "asia/singapore/BPLRT.png",
     "badgeShape": "wide",
-    "badgeFit": "contain"
+    "badgeFit": "contain",
+    "badgeAspectRatio": 6.5306
   },
   "SingaporeSKLRT": {
     "name": "Sengkang LRT",
@@ -85,7 +92,8 @@
     "order": 7,
     "icon": "asia/singapore/SKLRT.png",
     "badgeShape": "wide",
-    "badgeFit": "contain"
+    "badgeFit": "contain",
+    "badgeAspectRatio": 6.5306
   },
   "SingaporePGLRT": {
     "name": "Punggol LRT",
@@ -96,7 +104,8 @@
     "order": 8,
     "icon": "asia/singapore/PGLRT.png",
     "badgeShape": "wide",
-    "badgeFit": "contain"
+    "badgeFit": "contain",
+    "badgeAspectRatio": 6.5306
   },
   "SingaporeRTS": {
     "name": "RTS Link",
@@ -106,8 +115,9 @@
     "progressOutlineColor": "#87CEFA",
     "order": 9,
     "icon": "asia/singapore/RTS.png",
-    "badgeShape": "capsule",
-    "badgeFit": "contain"
+    "badgeShape": "wide",
+    "badgeFit": "contain",
+    "badgeAspectRatio": 2.5176
   },
   "SingaporeCableMountFaber": {
     "name": "Mount Faber",
@@ -162,6 +172,7 @@
     "order": 14,
     "icon": "asia/singapore/sentosa.png",
     "badgeShape": "wide",
-    "badgeFit": "contain"
+    "badgeFit": "contain",
+    "badgeAspectRatio": 4.7162
   }
 }

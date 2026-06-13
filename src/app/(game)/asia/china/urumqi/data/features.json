@@ -59,7 +59,7 @@
       },
       "properties": {
         "id": 3,
-        "name": "Erdaoqiao (二道桥)",
+        "name": "Erdao Bridge (二道桥)",
         "alternate_names": [
           "二道桥",
           "Erdaoqiao",
@@ -83,7 +83,7 @@
       },
       "properties": {
         "id": 4,
-        "name": "Nanmen (南门)",
+        "name": "South Gate (南门)",
         "alternate_names": [
           "南门",
           "Nanmen",
@@ -107,7 +107,7 @@
       },
       "properties": {
         "id": 5,
-        "name": "Beimen (北门)",
+        "name": "North Gate (北门)",
         "alternate_names": [
           "北门",
           "Beimen",
@@ -553,7 +553,7 @@
       },
       "properties": {
         "id": 24,
-        "name": "Jiujiawan (九家湾)",
+        "name": "Jiujia Bay (九家湾)",
         "alternate_names": [
           "九家湾",
           "Jiujiawan",
@@ -685,7 +685,7 @@
       },
       "properties": {
         "id": 30,
-        "name": "Zhongqiao (中桥)",
+        "name": "Zhong Bridge (中桥)",
         "alternate_names": [
           "中桥",
           "Zhongqiao",
@@ -707,7 +707,7 @@
       },
       "properties": {
         "id": 31,
-        "name": "Nanmen (南门)",
+        "name": "South Gate (南门)",
         "alternate_names": [
           "南门",
           "Nanmen",
@@ -907,7 +907,7 @@
       },
       "properties": {
         "id": 40,
-        "name": "Beiguangchang (北广场)",
+        "name": "North Square (北广场)",
         "alternate_names": [
           "北广场",
           "Beiguangchang",

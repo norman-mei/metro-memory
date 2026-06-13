@@ -36,7 +36,7 @@
       },
       "properties": {
         "id": 2,
-        "name": "Xi'erhuanlu (西二环路)",
+        "name": "Xi'erhuan Road (西二环路)",
         "alternate_names": [
           "西二环路",
           "Xi'erhuanlu",
@@ -84,7 +84,7 @@
       },
       "properties": {
         "id": 4,
-        "name": "Hugangnanlu (呼钢南路)",
+        "name": "Hugang South Road (呼钢南路)",
         "alternate_names": [
           "呼钢南路",
           "Hugangnanlu",
@@ -275,7 +275,7 @@
       },
       "properties": {
         "id": 12,
-        "name": "Dongyinglu (东影路)",
+        "name": "Dongying Road (东影路)",
         "alternate_names": [
           "东影路",
           "Dongyinglu",
@@ -490,7 +490,7 @@
       },
       "properties": {
         "id": 21,
-        "name": "Talidonglu (塔利东路)",
+        "name": "Tali East Road (塔利东路)",
         "alternate_names": [
           "塔利东路",
           "Talidonglu",
@@ -536,7 +536,7 @@
       },
       "properties": {
         "id": 23,
-        "name": "Baihelu (百合路)",
+        "name": "Baihe Road (百合路)",
         "alternate_names": [
           "百合路",
           "Baihelu",
@@ -582,7 +582,7 @@
       },
       "properties": {
         "id": 25,
-        "name": "Sichouzhiludadao (丝绸之路大道)",
+        "name": "Sichouzhilu Avenue (丝绸之路大道)",
         "alternate_names": [
           "丝绸之路大道",
           "Sichouzhiludadao",
@@ -814,7 +814,7 @@
       },
       "properties": {
         "id": 35,
-        "name": "Zhongshanlu (中山路)",
+        "name": "Zhongshan Road (中山路)",
         "alternate_names": [
           "中山路",
           "Zhongshanlu",
@@ -837,7 +837,7 @@
       },
       "properties": {
         "id": 36,
-        "name": "Daxuexijie (大学西街)",
+        "name": "Daxuexi Street (大学西街)",
         "alternate_names": [
           "大学西街",
           "Daxuexijie",
@@ -952,7 +952,7 @@
       },
       "properties": {
         "id": 41,
-        "name": "Neida Nanxiaoqu (内大南校区)",
+        "name": "Neida South Campus (内大南校区)",
         "alternate_names": [
           "内大南校区",
           "Neida Nanxiaoqu",
@@ -1021,7 +1021,7 @@
       },
       "properties": {
         "id": 44,
-        "name": "A'ershanlu (阿尔山路)",
+        "name": "A'ershan Road (阿尔山路)",
         "alternate_names": [
           "阿尔山路",
           "A'ershanlu",

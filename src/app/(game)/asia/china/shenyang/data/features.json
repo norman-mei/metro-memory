@@ -12,7 +12,7 @@
       },
       "properties": {
         "id": 1,
-        "name": "Shisanhaojie (十三号街)",
+        "name": "Shisanhao Street (十三号街)",
         "alternate_names": [
           "十三号街",
           "十三號街",
@@ -35,7 +35,7 @@
       },
       "properties": {
         "id": 2,
-        "name": "Zhongyangdajie (中央大街)",
+        "name": "Zhongyang Avenue (中央大街)",
         "alternate_names": [
           "中央大街",
           "Zhongyangdajie",
@@ -57,7 +57,7 @@
       },
       "properties": {
         "id": 3,
-        "name": "Qihaojie (七号街)",
+        "name": "Qihao Street (七号街)",
         "alternate_names": [
           "七号街",
           "七號街",
@@ -80,7 +80,7 @@
       },
       "properties": {
         "id": 4,
-        "name": "Sihaojie (四号街)",
+        "name": "Sihao Street (四号街)",
         "alternate_names": [
           "四号街",
           "四號街",
@@ -126,7 +126,7 @@
       },
       "properties": {
         "id": 6,
-        "name": "Kaifadadao (开发大道)",
+        "name": "Kaifa Avenue (开发大道)",
         "alternate_names": [
           "开发大道",
           "開發大道",
@@ -149,7 +149,7 @@
       },
       "properties": {
         "id": 7,
-        "name": "Yuhongguangchang (于洪广场)",
+        "name": "Yuhong Square (于洪广场)",
         "alternate_names": [
           "于洪广场",
           "於洪廣場",
@@ -172,7 +172,7 @@
       },
       "properties": {
         "id": 8,
-        "name": "Yingbinlu (迎宾路)",
+        "name": "Yingbin Road (迎宾路)",
         "alternate_names": [
           "迎宾路",
           "迎賓路",
@@ -195,7 +195,7 @@
       },
       "properties": {
         "id": 9,
-        "name": "Zhonggongjie (重工街)",
+        "name": "Zhonggong Street (重工街)",
         "alternate_names": [
           "重工街",
           "Zhonggongjie",
@@ -217,7 +217,7 @@
       },
       "properties": {
         "id": 10,
-        "name": "Qigongjie (启工街)",
+        "name": "Qigong Street (启工街)",
         "alternate_names": [
           "启工街",
           "啓工街",
@@ -240,7 +240,7 @@
       },
       "properties": {
         "id": 11,
-        "name": "Baogongjie (保工街)",
+        "name": "Baogong Street (保工街)",
         "alternate_names": [
           "保工街",
           "Baogongjie",
@@ -262,7 +262,7 @@
       },
       "properties": {
         "id": 12,
-        "name": "Tiexiguangchang (铁西广场)",
+        "name": "Tiexi Square (铁西广场)",
         "alternate_names": [
           "铁西广场",
           "鐵西廣場",
@@ -285,7 +285,7 @@
       },
       "properties": {
         "id": 13,
-        "name": "Yunfengbeijie (云峰北街)",
+        "name": "Yunfengbei Street (云峰北街)",
         "alternate_names": [
           "云峰北街",
           "雲峯北街",
@@ -331,7 +331,7 @@
       },
       "properties": {
         "id": 15,
-        "name": "Taiyuanjie (太原街)",
+        "name": "Taiyuan Street (太原街)",
         "alternate_names": [
           "太原街",
           "Taiyuanjie",
@@ -376,7 +376,7 @@
       },
       "properties": {
         "id": 17,
-        "name": "Qingniandajie (青年大街)",
+        "name": "Qingnian Avenue (青年大街)",
         "alternate_names": [
           "青年大街",
           "Qingniandajie",
@@ -398,7 +398,7 @@
       },
       "properties": {
         "id": 18,
-        "name": "Huaiyuanmen (怀远门)",
+        "name": "Huaiyuan Gate (怀远门)",
         "alternate_names": [
           "怀远门",
           "懷遠門",
@@ -421,7 +421,7 @@
       },
       "properties": {
         "id": 19,
-        "name": "Zhongjie (中街)",
+        "name": "Zhong Street (中街)",
         "alternate_names": [
           "中街",
           "Zhongjie",
@@ -443,7 +443,7 @@
       },
       "properties": {
         "id": 20,
-        "name": "Dongzhongjie (东中街)",
+        "name": "Dongzhong Street (东中街)",
         "alternate_names": [
           "东中街",
           "東中街",
@@ -466,7 +466,7 @@
       },
       "properties": {
         "id": 21,
-        "name": "Pangjiangjie (滂江街)",
+        "name": "Pangjiang Street (滂江街)",
         "alternate_names": [
           "滂江街",
           "Pangjiangjie",
@@ -488,7 +488,7 @@
       },
       "properties": {
         "id": 22,
-        "name": "Limingguangchang (黎明广场)",
+        "name": "Liming Square (黎明广场)",
         "alternate_names": [
           "黎明广场",
           "黎明廣場",
@@ -511,7 +511,7 @@
       },
       "properties": {
         "id": 23,
-        "name": "Xinhuijie (新惠街)",
+        "name": "Xinhui Street (新惠街)",
         "alternate_names": [
           "新惠街",
           "Xinhuijie",
@@ -533,7 +533,7 @@
       },
       "properties": {
         "id": 24,
-        "name": "Xinningjie (新宁街)",
+        "name": "Xinning Street (新宁街)",
         "alternate_names": [
           "新宁街",
           "新寧街",
@@ -556,7 +556,7 @@
       },
       "properties": {
         "id": 25,
-        "name": "Dongdayingjie (东大营街)",
+        "name": "Dongdaying Street (东大营街)",
         "alternate_names": [
           "东大营街",
           "東大營街",
@@ -579,7 +579,7 @@
       },
       "properties": {
         "id": 26,
-        "name": "Nongyedaxue (农业大学)",
+        "name": "Nongye University (农业大学)",
         "alternate_names": [
           "农业大学",
           "農業大學",
@@ -624,7 +624,7 @@
       },
       "properties": {
         "id": 28,
-        "name": "Donglinggongyuan (东陵公园)",
+        "name": "Dongling Park (东陵公园)",
         "alternate_names": [
           "东陵公园",
           "東陵公園",
@@ -669,7 +669,7 @@
       },
       "properties": {
         "id": 30,
-        "name": "Boguanbeidajie (伯官北大街)",
+        "name": "Boguanbei Avenue (伯官北大街)",
         "alternate_names": [
           "伯官北大街",
           "Boguanbeidajie",
@@ -737,7 +737,7 @@
       },
       "properties": {
         "id": 33,
-        "name": "Putianlu (蒲田路)",
+        "name": "Putian Road (蒲田路)",
         "alternate_names": [
           "蒲田路",
           "Putianlu",
@@ -759,7 +759,7 @@
       },
       "properties": {
         "id": 34,
-        "name": "Puhelu (蒲河路)",
+        "name": "Puhe Road (蒲河路)",
         "alternate_names": [
           "蒲河路",
           "Puhelu",
@@ -781,7 +781,7 @@
       },
       "properties": {
         "id": 35,
-        "name": "Renjiehugongyuan (人杰湖公园)",
+        "name": "Renjiehu Park (人杰湖公园)",
         "alternate_names": [
           "人杰湖公园",
           "人傑湖公園",
@@ -804,7 +804,7 @@
       },
       "properties": {
         "id": 36,
-        "name": "Liaoningdaxue (辽宁大学)",
+        "name": "Liaoning University (辽宁大学)",
         "alternate_names": [
           "辽宁大学",
           "遼寧大學",
@@ -827,7 +827,7 @@
       },
       "properties": {
         "id": 37,
-        "name": "Hangkonghangtiandaxue (航空航天大学)",
+        "name": "Hangkonghangtian University (航空航天大学)",
         "alternate_names": [
           "航空航天大学",
           "航空航天大學",
@@ -850,7 +850,7 @@
       },
       "properties": {
         "id": 38,
-        "name": "Shifandaxue (师范大学)",
+        "name": "Shifan University (师范大学)",
         "alternate_names": [
           "师范大学",
           "師範大學",
@@ -873,7 +873,7 @@
       },
       "properties": {
         "id": 39,
-        "name": "Yixueyuan (医学院)",
+        "name": "Yi College (医学院)",
         "alternate_names": [
           "医学院",
           "醫學院",
@@ -919,7 +919,7 @@
       },
       "properties": {
         "id": 41,
-        "name": "Lingxi (陵西)",
+        "name": "Ling West (陵西)",
         "alternate_names": [
           "陵西",
           "Lingxi",
@@ -964,7 +964,7 @@
       },
       "properties": {
         "id": 43,
-        "name": "Beilinggongyuan (北陵公园)",
+        "name": "Beiling Park (北陵公园)",
         "alternate_names": [
           "北陵公园",
           "北陵公園",
@@ -987,7 +987,7 @@
       },
       "properties": {
         "id": 44,
-        "name": "Zhongyiyaodaxue (中医药大学)",
+        "name": "Zhongyiyao University (中医药大学)",
         "alternate_names": [
           "中医药大学",
           "中醫藥大學",
@@ -1010,7 +1010,7 @@
       },
       "properties": {
         "id": 45,
-        "name": "Qishanlu (岐山路)",
+        "name": "Qishan Road (岐山路)",
         "alternate_names": [
           "岐山路",
           "Qishanlu",
@@ -1055,7 +1055,7 @@
       },
       "properties": {
         "id": 47,
-        "name": "Jinrongzhongxin (金融中心)",
+        "name": "Jinrong Center (金融中心)",
         "alternate_names": [
           "金融中心",
           "Jinrongzhongxin",
@@ -1077,7 +1077,7 @@
       },
       "properties": {
         "id": 48,
-        "name": "Renminguangchang (人民广场)",
+        "name": "Renmin Square (人民广场)",
         "alternate_names": [
           "人民广场",
           "人民廣場",
@@ -1100,7 +1100,7 @@
       },
       "properties": {
         "id": 49,
-        "name": "Qingniandajie (青年大街)",
+        "name": "Qingnian Avenue (青年大街)",
         "alternate_names": [
           "青年大街",
           "Qingniandajie",
@@ -1122,7 +1122,7 @@
       },
       "properties": {
         "id": 50,
-        "name": "Qingniangongyuan (青年公园)",
+        "name": "Qingnian Park (青年公园)",
         "alternate_names": [
           "青年公园",
           "青年公園",
@@ -1145,7 +1145,7 @@
       },
       "properties": {
         "id": 51,
-        "name": "Gongyezhanlanguan (工业展览馆)",
+        "name": "Gongye Exhibition Hall (工业展览馆)",
         "alternate_names": [
           "工业展览馆",
           "工業展覽館",
@@ -1168,7 +1168,7 @@
       },
       "properties": {
         "id": 52,
-        "name": "Shitushuguan (市图书馆)",
+        "name": "Shi Library (市图书馆)",
         "alternate_names": [
           "市图书馆",
           "市圖書館",
@@ -1238,7 +1238,7 @@
       },
       "properties": {
         "id": 56,
-        "name": "Yingpanjie (营盘街)",
+        "name": "Yingpan Street (营盘街)",
         "alternate_names": [
           "营盘街",
           "營盤街",
@@ -1284,7 +1284,7 @@
       },
       "properties": {
         "id": 59,
-        "name": "Baitahelu (白塔河路)",
+        "name": "Baitahe Road (白塔河路)",
         "alternate_names": [
           "白塔河路",
           "Baitahelu",
@@ -1306,7 +1306,7 @@
       },
       "properties": {
         "id": 60,
-        "name": "Baitahelu (白塔河路)",
+        "name": "Baitahe Road (白塔河路)",
         "alternate_names": [
           "白塔河路",
           "Baitahelu",
@@ -1328,7 +1328,7 @@
       },
       "properties": {
         "id": 61,
-        "name": "Baitahelu (白塔河路)",
+        "name": "Baitahe Road (白塔河路)",
         "alternate_names": [
           "白塔河路",
           "Baitahelu",
@@ -1350,7 +1350,7 @@
       },
       "properties": {
         "id": 62,
-        "name": "Baitahelu (白塔河路)",
+        "name": "Baitahe Road (白塔河路)",
         "alternate_names": [
           "白塔河路",
           "Baitahelu",
@@ -1372,7 +1372,7 @@
       },
       "properties": {
         "id": 63,
-        "name": "Baitahelu (白塔河路)",
+        "name": "Baitahe Road (白塔河路)",
         "alternate_names": [
           "白塔河路",
           "Baitahelu",
@@ -1394,7 +1394,7 @@
       },
       "properties": {
         "id": 64,
-        "name": "Quanyunlu (全运路)",
+        "name": "Quanyun Road (全运路)",
         "alternate_names": [
           "全运路",
           "全運路",
@@ -1486,7 +1486,7 @@
       },
       "properties": {
         "id": 73,
-        "name": "Zhongdedajie (中德大街)",
+        "name": "Zhongde Avenue (中德大街)",
         "alternate_names": [
           "中德大街",
           "Zhongdedajie",
@@ -1553,7 +1553,7 @@
       },
       "properties": {
         "id": 76,
-        "name": "Gongyedaxue (工业大学)",
+        "name": "Gongye University (工业大学)",
         "alternate_names": [
           "工业大学",
           "工業大學",
@@ -1644,7 +1644,7 @@
       },
       "properties": {
         "id": 80,
-        "name": "Qiandaohujie (千岛湖街)",
+        "name": "Qiandaohu Street (千岛湖街)",
         "alternate_names": [
           "千岛湖街",
           "千島湖街",
@@ -1667,7 +1667,7 @@
       },
       "properties": {
         "id": 81,
-        "name": "Nanyanghujie (南阳湖街)",
+        "name": "Nanyanghu Street (南阳湖街)",
         "alternate_names": [
           "南阳湖街",
           "南陽湖街",
@@ -1690,7 +1690,7 @@
       },
       "properties": {
         "id": 82,
-        "name": "Datonghujie (大通湖街)",
+        "name": "Datonghu Street (大通湖街)",
         "alternate_names": [
           "大通湖街",
           "Datonghujie",
@@ -1712,7 +1712,7 @@
       },
       "properties": {
         "id": 83,
-        "name": "Datonghujie (大通湖街)",
+        "name": "Datonghu Street (大通湖街)",
         "alternate_names": [
           "大通湖街",
           "Datonghujie",
@@ -1734,7 +1734,7 @@
       },
       "properties": {
         "id": 84,
-        "name": "Datonghujie (大通湖街)",
+        "name": "Datonghu Street (大通湖街)",
         "alternate_names": [
           "大通湖街",
           "Datonghujie",
@@ -1756,7 +1756,7 @@
       },
       "properties": {
         "id": 85,
-        "name": "Datonghujie (大通湖街)",
+        "name": "Datonghu Street (大通湖街)",
         "alternate_names": [
           "大通湖街",
           "Datonghujie",
@@ -1800,7 +1800,7 @@
       },
       "properties": {
         "id": 87,
-        "name": "Zhengxinlu (正新路)",
+        "name": "Zhengxin Road (正新路)",
         "alternate_names": [
           "正新路",
           "Zhengxinlu",
@@ -1822,7 +1822,7 @@
       },
       "properties": {
         "id": 88,
-        "name": "Wenguanjie (文官街)",
+        "name": "Wenguan Street (文官街)",
         "alternate_names": [
           "文官街",
           "Wenguanjie",
@@ -1866,7 +1866,7 @@
       },
       "properties": {
         "id": 90,
-        "name": "Guanquanlu (观泉路)",
+        "name": "Guanquan Road (观泉路)",
         "alternate_names": [
           "观泉路",
           "觀泉路",
@@ -1912,7 +1912,7 @@
       },
       "properties": {
         "id": 92,
-        "name": "Hezuojie (合作街)",
+        "name": "Hezuo Street (合作街)",
         "alternate_names": [
           "合作街",
           "Hezuojie",
@@ -1934,7 +1934,7 @@
       },
       "properties": {
         "id": 93,
-        "name": "Taochangjie (洮昌街)",
+        "name": "Taochang Street (洮昌街)",
         "alternate_names": [
           "洮昌街",
           "Taochangjie",
@@ -1956,7 +1956,7 @@
       },
       "properties": {
         "id": 94,
-        "name": "Shenyangdaxue (沈阳大学)",
+        "name": "Shenyang University (沈阳大学)",
         "alternate_names": [
           "沈阳大学",
           "瀋陽大學",
@@ -2002,7 +2002,7 @@
       },
       "properties": {
         "id": 96,
-        "name": "Huangsilu (皇寺路)",
+        "name": "Huangsi Road (皇寺路)",
         "alternate_names": [
           "皇寺路",
           "Huangsilu",
@@ -2024,7 +2024,7 @@
       },
       "properties": {
         "id": 97,
-        "name": "Shifudalu (市府大路)",
+        "name": "Shifu Avenue (市府大路)",
         "alternate_names": [
           "市府大路",
           "Shifudalu",
@@ -2046,7 +2046,7 @@
       },
       "properties": {
         "id": 98,
-        "name": "Taiyuanjie (太原街)",
+        "name": "Taiyuan Street (太原街)",
         "alternate_names": [
           "太原街",
           "Taiyuanjie",
@@ -2068,7 +2068,7 @@
       },
       "properties": {
         "id": 99,
-        "name": "Nanwumalu (南五马路)",
+        "name": "Nanwuma Road (南五马路)",
         "alternate_names": [
           "南五马路",
           "南五馬路",
@@ -2114,7 +2114,7 @@
       },
       "properties": {
         "id": 101,
-        "name": "Nanjingqiao (南京桥)",
+        "name": "Nanjing Bridge (南京桥)",
         "alternate_names": [
           "南京桥",
           "南京橋",
@@ -2160,7 +2160,7 @@
       },
       "properties": {
         "id": 103,
-        "name": "Changbainan (长白南)",
+        "name": "Changbai South (长白南)",
         "alternate_names": [
           "长白南",
           "長白南",
@@ -2183,7 +2183,7 @@
       },
       "properties": {
         "id": 104,
-        "name": "Jincanglu (金仓路)",
+        "name": "Jincang Road (金仓路)",
         "alternate_names": [
           "金仓路",
           "金倉路",
@@ -2206,7 +2206,7 @@
       },
       "properties": {
         "id": 105,
-        "name": "Yunshanlu (云杉路)",
+        "name": "Yunshan Road (云杉路)",
         "alternate_names": [
           "云杉路",
           "雲杉路",
@@ -2229,7 +2229,7 @@
       },
       "properties": {
         "id": 106,
-        "name": "Hongchunlu (红椿路)",
+        "name": "Hongchun Road (红椿路)",
         "alternate_names": [
           "红椿路",
           "紅椿路",
@@ -2252,7 +2252,7 @@
       },
       "properties": {
         "id": 108,
-        "name": "Chengjianxueyuan (城建学院)",
+        "name": "Chengjian College (城建学院)",
         "alternate_names": [
           "城建学院",
           "城建學院",
@@ -2275,7 +2275,7 @@
       },
       "properties": {
         "id": 109,
-        "name": "Shenyangnanzhan (沈阳南站)",
+        "name": "Shenyang South Railway Station (沈阳南站)",
         "alternate_names": [
           "沈阳南站",
           "瀋陽南站",
@@ -2298,7 +2298,7 @@
       },
       "properties": {
         "id": 110,
-        "name": "Chuangxinlu (创新路)",
+        "name": "Chuangxin Road (创新路)",
         "alternate_names": [
           "创新路",
           "創新路",
@@ -2321,7 +2321,7 @@
       },
       "properties": {
         "id": 111,
-        "name": "Nujianggongyuan (怒江公园)",
+        "name": "Nujiang Park (怒江公园)",
         "alternate_names": [
           "怒江公园",
           "怒江公園",
@@ -2389,7 +2389,7 @@
       },
       "properties": {
         "id": 114,
-        "name": "Zhongxingwenhuaguangchang (重型文化广场)",
+        "name": "Zhongxingwenhua Square (重型文化广场)",
         "alternate_names": [
           "重型文化广场",
           "重型文化廣場",
@@ -2412,7 +2412,7 @@
       },
       "properties": {
         "id": 115,
-        "name": "Beierlu (北二路)",
+        "name": "Beier Road (北二路)",
         "alternate_names": [
           "北二路",
           "Beierlu",
@@ -2434,7 +2434,7 @@
       },
       "properties": {
         "id": 116,
-        "name": "Tiexiguangchang (铁西广场)",
+        "name": "Tiexi Square (铁西广场)",
         "alternate_names": [
           "铁西广场",
           "鐵西廣場",
@@ -2457,7 +2457,7 @@
       },
       "properties": {
         "id": 117,
-        "name": "Xinghuagongyuan (兴华公园)",
+        "name": "Xinghua Park (兴华公园)",
         "alternate_names": [
           "兴华公园",
           "興華公園",
@@ -2480,7 +2480,7 @@
       },
       "properties": {
         "id": 118,
-        "name": "Shenliaolu (沈辽路)",
+        "name": "Shenliao Road (沈辽路)",
         "alternate_names": [
           "沈辽路",
           "沈遼路",
@@ -2525,7 +2525,7 @@
       },
       "properties": {
         "id": 120,
-        "name": "Jilihujie (吉力湖街)",
+        "name": "Jilihu Street (吉力湖街)",
         "alternate_names": [
           "吉力湖街",
           "Jilihujie",
@@ -2547,7 +2547,7 @@
       },
       "properties": {
         "id": 121,
-        "name": "Datonghujie (大通湖街)",
+        "name": "Datonghu Street (大通湖街)",
         "alternate_names": [
           "大通湖街",
           "Datonghujie",
@@ -2569,7 +2569,7 @@
       },
       "properties": {
         "id": 122,
-        "name": "Datonghujie (大通湖街)",
+        "name": "Datonghu Street (大通湖街)",
         "alternate_names": [
           "大通湖街",
           "Datonghujie",
@@ -2591,7 +2591,7 @@
       },
       "properties": {
         "id": 123,
-        "name": "Datonghujie (大通湖街)",
+        "name": "Datonghu Street (大通湖街)",
         "alternate_names": [
           "大通湖街",
           "Datonghujie",
@@ -2613,7 +2613,7 @@
       },
       "properties": {
         "id": 124,
-        "name": "Datonghujie (大通湖街)",
+        "name": "Datonghu Street (大通湖街)",
         "alternate_names": [
           "大通湖街",
           "Datonghujie",
@@ -2680,7 +2680,7 @@
       },
       "properties": {
         "id": 127,
-        "name": "Shenglinanjie (胜利南街)",
+        "name": "Shenglinan Street (胜利南街)",
         "alternate_names": [
           "胜利南街",
           "勝利南街",
@@ -2703,7 +2703,7 @@
       },
       "properties": {
         "id": 128,
-        "name": "Changbainan (长白南)",
+        "name": "Changbai South (长白南)",
         "alternate_names": [
           "长白南",
           "長白南",
@@ -2749,7 +2749,7 @@
       },
       "properties": {
         "id": 130,
-        "name": "Jinyangdajie (金阳大街)",
+        "name": "Jinyang Avenue (金阳大街)",
         "alternate_names": [
           "金阳大街",
           "金陽大街",
@@ -2772,7 +2772,7 @@
       },
       "properties": {
         "id": 131,
-        "name": "Caixiajie (彩霞街)",
+        "name": "Caixia Street (彩霞街)",
         "alternate_names": [
           "彩霞街",
           "Caixiajie",
@@ -2819,7 +2819,7 @@
       },
       "properties": {
         "id": 134,
-        "name": "Tianchengjie (天成街)",
+        "name": "Tiancheng Street (天成街)",
         "alternate_names": [
           "天成街",
           "Tianchengjie",
@@ -2841,7 +2841,7 @@
       },
       "properties": {
         "id": 135,
-        "name": "Langrijie (朗日街)",
+        "name": "Langri Street (朗日街)",
         "alternate_names": [
           "朗日街",
           "Langrijie",
@@ -2863,7 +2863,7 @@
       },
       "properties": {
         "id": 136,
-        "name": "Changqingnanjie (长青南街)",
+        "name": "Changqingnan Street (长青南街)",
         "alternate_names": [
           "长青南街",
           "長青南街",
@@ -2887,7 +2887,7 @@
       },
       "properties": {
         "id": 139,
-        "name": "Jianzhudaxue (建筑大学)",
+        "name": "Jianzhu University (建筑大学)",
         "alternate_names": [
           "建筑大学",
           "建築大學",
@@ -2932,7 +2932,7 @@
       },
       "properties": {
         "id": 141,
-        "name": "Yuanjiangjie (元江街)",
+        "name": "Yuanjiang Street (元江街)",
         "alternate_names": [
           "元江街",
           "Yuanjiangjie",
@@ -2954,7 +2954,7 @@
       },
       "properties": {
         "id": 142,
-        "name": "Xianggongjie (向工街)",
+        "name": "Xianggong Street (向工街)",
         "alternate_names": [
           "向工街",
           "Xianggongjie",
@@ -2976,7 +2976,7 @@
       },
       "properties": {
         "id": 143,
-        "name": "Tawanjie (塔湾街)",
+        "name": "Tawan Street (塔湾街)",
         "alternate_names": [
           "塔湾街",
           "塔灣街",
@@ -3022,7 +3022,7 @@
       },
       "properties": {
         "id": 145,
-        "name": "Bainiaogongyuan (百鸟公园)",
+        "name": "Bainiao Park (百鸟公园)",
         "alternate_names": [
           "百鸟公园",
           "百鳥公園",
@@ -3045,7 +3045,7 @@
       },
       "properties": {
         "id": 146,
-        "name": "Changjiangjie (长江街)",
+        "name": "Changjiang Street (长江街)",
         "alternate_names": [
           "长江街",
           "長江街",
@@ -3068,7 +3068,7 @@
       },
       "properties": {
         "id": 147,
-        "name": "Zhongyiyaodaxue (中医药大学)",
+        "name": "Zhongyiyao University (中医药大学)",
         "alternate_names": [
           "中医药大学",
           "中醫藥大學",
@@ -3091,7 +3091,7 @@
       },
       "properties": {
         "id": 148,
-        "name": "Lingdongjie (陵东街)",
+        "name": "Lingdong Street (陵东街)",
         "alternate_names": [
           "陵东街",
           "陵東街",
@@ -3136,7 +3136,7 @@
       },
       "properties": {
         "id": 150,
-        "name": "Hezuojie (合作街)",
+        "name": "Hezuo Street (合作街)",
         "alternate_names": [
           "合作街",
           "Hezuojie",
@@ -3158,7 +3158,7 @@
       },
       "properties": {
         "id": 151,
-        "name": "Dongbeidamalu (东北大马路)",
+        "name": "Dongbeidama Road (东北大马路)",
         "alternate_names": [
           "东北大马路",
           "東北大馬路",
@@ -3181,7 +3181,7 @@
       },
       "properties": {
         "id": 152,
-        "name": "Pangjiangjie (滂江街)",
+        "name": "Pangjiang Street (滂江街)",
         "alternate_names": [
           "滂江街",
           "Pangjiangjie",
@@ -3203,7 +3203,7 @@
       },
       "properties": {
         "id": 153,
-        "name": "Chang'anlu (长安路)",
+        "name": "Chang'an Road (长安路)",
         "alternate_names": [
           "长安路",
           "長安路",
@@ -3272,7 +3272,7 @@
       },
       "properties": {
         "id": 156,
-        "name": "Jiangdongjie (江东街)",
+        "name": "Jiangdong Street (江东街)",
         "alternate_names": [
           "江东街",
           "江東街",
@@ -3295,7 +3295,7 @@
       },
       "properties": {
         "id": 157,
-        "name": "Changqingqiao (长青桥)",
+        "name": "Changqing Bridge (长青桥)",
         "alternate_names": [
           "长青桥",
           "長青橋",
@@ -3318,7 +3318,7 @@
       },
       "properties": {
         "id": 158,
-        "name": "Changqingnanjie (长青南街)",
+        "name": "Changqingnan Street (长青南街)",
         "alternate_names": [
           "长青南街",
           "長青南街",
@@ -3342,7 +3342,7 @@
       },
       "properties": {
         "id": 159,
-        "name": "Ligongdaxue (理工大学)",
+        "name": "Ligong University (理工大学)",
         "alternate_names": [
           "理工大学",
           "理工大學",
@@ -4230,7 +4230,7 @@
       },
       "properties": {
         "id": 198,
-        "name": "Shangying Licheng (尚盈丽城)",
+        "name": "Shangying Li City (尚盈丽城)",
         "alternate_names": [
           "尚盈丽城",
           "尚盈麗城",
@@ -4253,7 +4253,7 @@
       },
       "properties": {
         "id": 199,
-        "name": "Shangying Licheng (尚盈丽城)",
+        "name": "Shangying Li City (尚盈丽城)",
         "alternate_names": [
           "尚盈丽城",
           "尚盈麗城",
@@ -4437,7 +4437,7 @@
       },
       "properties": {
         "id": 207,
-        "name": "Chengjianxueyuan (城建学院)",
+        "name": "Chengjian College (城建学院)",
         "alternate_names": [
           "城建学院",
           "城建學院",
@@ -5335,7 +5335,7 @@
       },
       "properties": {
         "id": 250,
-        "name": "Zhonghai Kangcheng (中海康城)",
+        "name": "Zhonghai Kang City (中海康城)",
         "alternate_names": [
           "中海康城",
           "Zhonghai Kangcheng",
@@ -5357,7 +5357,7 @@
       },
       "properties": {
         "id": 251,
-        "name": "Zhonghai Kangcheng (中海康城)",
+        "name": "Zhonghai Kang City (中海康城)",
         "alternate_names": [
           "中海康城",
           "Zhonghai Kangcheng",
@@ -5692,7 +5692,7 @@
       },
       "properties": {
         "id": 266,
-        "name": "Jinshui Huacheng (金水花城)",
+        "name": "Jinshui Hua City (金水花城)",
         "alternate_names": [
           "金水花城",
           "Jinshui Huacheng",
@@ -5714,7 +5714,7 @@
       },
       "properties": {
         "id": 267,
-        "name": "Jinshui Huacheng (金水花城)",
+        "name": "Jinshui Hua City (金水花城)",
         "alternate_names": [
           "金水花城",
           "Jinshui Huacheng",
@@ -5976,7 +5976,7 @@
       },
       "properties": {
         "id": 278,
-        "name": "Jianzhudaxue (建筑大学)",
+        "name": "Jianzhu University (建筑大学)",
         "alternate_names": [
           "建筑大学",
           "建築大學",
@@ -6000,7 +6000,7 @@
       },
       "properties": {
         "id": 279,
-        "name": "Jianzhudaxue (建筑大学)",
+        "name": "Jianzhu University (建筑大学)",
         "alternate_names": [
           "建筑大学",
           "建築大學",
@@ -6024,7 +6024,7 @@
       },
       "properties": {
         "id": 280,
-        "name": "Jianzhudaxue (建筑大学)",
+        "name": "Jianzhu University (建筑大学)",
         "alternate_names": [
           "建筑大学",
           "建築大學",
@@ -6209,7 +6209,7 @@
       },
       "properties": {
         "id": 288,
-        "name": "Wenxingangwan (温馨港湾)",
+        "name": "Wenxingang Bay (温馨港湾)",
         "alternate_names": [
           "温馨港湾",
           "溫馨港灣",
@@ -6232,7 +6232,7 @@
       },
       "properties": {
         "id": 289,
-        "name": "Wenxingangwan (温馨港湾)",
+        "name": "Wenxingang Bay (温馨港湾)",
         "alternate_names": [
           "温馨港湾",
           "溫馨港灣",
@@ -6393,7 +6393,7 @@
       },
       "properties": {
         "id": 296,
-        "name": "Wangjia Xincheng (汪家馨城)",
+        "name": "Wangjia Xin City (汪家馨城)",
         "alternate_names": [
           "汪家馨城",
           "Wangjia Xincheng",
@@ -6415,7 +6415,7 @@
       },
       "properties": {
         "id": 297,
-        "name": "Wangjia Xincheng (汪家馨城)",
+        "name": "Wangjia Xin City (汪家馨城)",
         "alternate_names": [
           "汪家馨城",
           "Wangjia Xincheng",
@@ -6571,7 +6571,7 @@
       },
       "properties": {
         "id": 304,
-        "name": "CICC Gongyuan Qicheng (中金公元启城)",
+        "name": "CICC Gongyuan Qi City (中金公元启城)",
         "alternate_names": [
           "中金公元启城",
           "中金公元啓城",
@@ -6594,7 +6594,7 @@
       },
       "properties": {
         "id": 305,
-        "name": "CICC Gongyuan Qicheng (中金公元启城)",
+        "name": "CICC Gongyuan Qi City (中金公元启城)",
         "alternate_names": [
           "中金公元启城",
           "中金公元啓城",

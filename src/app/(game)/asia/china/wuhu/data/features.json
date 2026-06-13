@@ -12,7 +12,7 @@
       },
       "properties": {
         "id": 1,
-        "name": "Baoshunlu (保顺路)",
+        "name": "Baoshun Road (保顺路)",
         "alternate_names": [
           "保顺路",
           "Baoshunlu",
@@ -35,7 +35,7 @@
       },
       "properties": {
         "id": 2,
-        "name": "Huashanlu (华山路)",
+        "name": "Huashan Road (华山路)",
         "alternate_names": [
           "华山路",
           "Huashanlu",
@@ -58,7 +58,7 @@
       },
       "properties": {
         "id": 3,
-        "name": "Taishanlu (泰山路)",
+        "name": "Taishan Road (泰山路)",
         "alternate_names": [
           "泰山路",
           "Taishanlu",
@@ -80,7 +80,7 @@
       },
       "properties": {
         "id": 4,
-        "name": "Hengshanlu (衡山路)",
+        "name": "Hengshan Road (衡山路)",
         "alternate_names": [
           "衡山路",
           "Hengshanlu",
@@ -102,7 +102,7 @@
       },
       "properties": {
         "id": 5,
-        "name": "Longshanlu (龙山路)",
+        "name": "Longshan Road (龙山路)",
         "alternate_names": [
           "龙山路",
           "Longshanlu",
@@ -125,7 +125,7 @@
       },
       "properties": {
         "id": 6,
-        "name": "Anshanlu (鞍山路)",
+        "name": "Anshan Road (鞍山路)",
         "alternate_names": [
           "鞍山路",
           "Anshanlu",
@@ -147,7 +147,7 @@
       },
       "properties": {
         "id": 7,
-        "name": "Gangwanlu (港湾路)",
+        "name": "Gangwan Road (港湾路)",
         "alternate_names": [
           "港湾路",
           "Gangwanlu",
@@ -170,7 +170,7 @@
       },
       "properties": {
         "id": 8,
-        "name": "Yu'anlu (裕安路)",
+        "name": "Yu'an Road (裕安路)",
         "alternate_names": [
           "裕安路",
           "Yu'anlu",
@@ -192,7 +192,7 @@
       },
       "properties": {
         "id": 9,
-        "name": "Wuyishanlu (武夷山路)",
+        "name": "Wuyishan Road (武夷山路)",
         "alternate_names": [
           "武夷山路",
           "Wuyishanlu",
@@ -214,7 +214,7 @@
       },
       "properties": {
         "id": 10,
-        "name": "Gangyilu (港一路)",
+        "name": "Gangyi Road (港一路)",
         "alternate_names": [
           "港一路",
           "Gangyilu",
@@ -236,7 +236,7 @@
       },
       "properties": {
         "id": 11,
-        "name": "Tianzhushanlu (天柱山路)",
+        "name": "Tianzhushan Road (天柱山路)",
         "alternate_names": [
           "天柱山路",
           "Tianzhushanlu",
@@ -258,7 +258,7 @@
       },
       "properties": {
         "id": 12,
-        "name": "Tianmenshanlu (天门山路)",
+        "name": "Tianmenshan Road (天门山路)",
         "alternate_names": [
           "天门山路",
           "Tianmenshanlu",
@@ -281,7 +281,7 @@
       },
       "properties": {
         "id": 13,
-        "name": "Chizhushanlu (赤铸山路)",
+        "name": "Chizhushan Road (赤铸山路)",
         "alternate_names": [
           "赤铸山路",
           "Chizhushanlu",
@@ -304,7 +304,7 @@
       },
       "properties": {
         "id": 14,
-        "name": "Zheshanlu (赭山路)",
+        "name": "Zheshan Road (赭山路)",
         "alternate_names": [
           "赭山路",
           "Zheshanlu",
@@ -326,7 +326,7 @@
       },
       "properties": {
         "id": 15,
-        "name": "Zheshangongyuan (赭山公园)",
+        "name": "Zheshan Park (赭山公园)",
         "alternate_names": [
           "赭山公园",
           "Zheshangongyuan",
@@ -349,7 +349,7 @@
       },
       "properties": {
         "id": 16,
-        "name": "Zhongshanbeilu (中山北路)",
+        "name": "Zhongshan North Road (中山北路)",
         "alternate_names": [
           "中山北路",
           "Zhongshanbeilu",
@@ -371,7 +371,7 @@
       },
       "properties": {
         "id": 17,
-        "name": "Jiuziguangchang (鸠兹广场)",
+        "name": "Jiuzi Square (鸠兹广场)",
         "alternate_names": [
           "鸠兹广场",
           "Jiuziguangchang",
@@ -394,7 +394,7 @@
       },
       "properties": {
         "id": 18,
-        "name": "Huanchengbeilu (环城北路)",
+        "name": "Huancheng North Road (环城北路)",
         "alternate_names": [
           "环城北路",
           "Huanchengbeilu",
@@ -417,7 +417,7 @@
       },
       "properties": {
         "id": 19,
-        "name": "Aotizhongxin (奥体中心)",
+        "name": "Aoti Center (奥体中心)",
         "alternate_names": [
           "奥体中心",
           "Aotizhongxin",
@@ -440,7 +440,7 @@
       },
       "properties": {
         "id": 20,
-        "name": "Honghuashanlu (红花山路)",
+        "name": "Honghuashan Road (红花山路)",
         "alternate_names": [
           "红花山路",
           "Honghuashanlu",
@@ -463,7 +463,7 @@
       },
       "properties": {
         "id": 21,
-        "name": "Bolanzhongxin (博览中心)",
+        "name": "Bolan Center (博览中心)",
         "alternate_names": [
           "博览中心",
           "Bolanzhongxin",
@@ -486,7 +486,7 @@
       },
       "properties": {
         "id": 22,
-        "name": "Wenjindonglu (文津东路)",
+        "name": "Wenjin East Road (文津东路)",
         "alternate_names": [
           "文津东路",
           "Wenjindonglu",
@@ -509,7 +509,7 @@
       },
       "properties": {
         "id": 23,
-        "name": "Henglangshanlu (珩琅山路)",
+        "name": "Henglangshan Road (珩琅山路)",
         "alternate_names": [
           "珩琅山路",
           "Henglangshanlu",
@@ -554,7 +554,7 @@
       },
       "properties": {
         "id": 25,
-        "name": "Baimashan (白马山)",
+        "name": "Baima Mountain (白马山)",
         "alternate_names": [
           "白马山",
           "Baimashan",
@@ -577,7 +577,7 @@
       },
       "properties": {
         "id": 26,
-        "name": "Wanchunhulu (万春湖路)",
+        "name": "Wanchunhu Road (万春湖路)",
         "alternate_names": [
           "万春湖路",
           "Wanchunhulu",
@@ -600,7 +600,7 @@
       },
       "properties": {
         "id": 27,
-        "name": "Mengxilu (梦溪路)",
+        "name": "Mengxi Road (梦溪路)",
         "alternate_names": [
           "梦溪路",
           "Mengxilu",
@@ -623,7 +623,7 @@
       },
       "properties": {
         "id": 28,
-        "name": "Huizhoulu (徽州路)",
+        "name": "Huizhou Road (徽州路)",
         "alternate_names": [
           "徽州路",
           "Huizhoulu",
@@ -645,7 +645,7 @@
       },
       "properties": {
         "id": 29,
-        "name": "Haiyanlu (海晏路)",
+        "name": "Haiyan Road (海晏路)",
         "alternate_names": [
           "海晏路",
           "Haiyanlu",
@@ -667,7 +667,7 @@
       },
       "properties": {
         "id": 30,
-        "name": "Zhengwuzhongxin (政务中心)",
+        "name": "Zhengwu Center (政务中心)",
         "alternate_names": [
           "政务中心",
           "Zhengwuzhongxin",
@@ -690,7 +690,7 @@
       },
       "properties": {
         "id": 31,
-        "name": "Yunconglu (云从路)",
+        "name": "Yuncong Road (云从路)",
         "alternate_names": [
           "云从路",
           "Yunconglu",
@@ -713,7 +713,7 @@
       },
       "properties": {
         "id": 32,
-        "name": "Shenshangongyuan (神山公园)",
+        "name": "Shenshan Park (神山公园)",
         "alternate_names": [
           "神山公园",
           "Shenshangongyuan",
@@ -781,7 +781,7 @@
       },
       "properties": {
         "id": 35,
-        "name": "Wenhualu (文化路)",
+        "name": "Wenhua Road (文化路)",
         "alternate_names": [
           "文化路",
           "Wenhualu",
@@ -803,7 +803,7 @@
       },
       "properties": {
         "id": 36,
-        "name": "Jiuziguangchang (鸠兹广场)",
+        "name": "Jiuzi Square (鸠兹广场)",
         "alternate_names": [
           "鸠兹广场",
           "Jiuziguangchang",

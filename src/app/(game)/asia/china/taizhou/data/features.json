@@ -12,7 +12,7 @@
       },
       "properties": {
         "id": 1,
-        "name": "Taizhou Huochezhan (台州火车站)",
+        "name": "Taizhou Railway Station (台州火车站)",
         "alternate_names": [
           "台州火车站",
           "臺州火車站",
@@ -36,7 +36,7 @@
       },
       "properties": {
         "id": 2,
-        "name": "Xueyuan Lu (学院路)",
+        "name": "Xueyuan Road (学院路)",
         "alternate_names": [
           "学院路",
           "學院路",
@@ -59,7 +59,7 @@
       },
       "properties": {
         "id": 3,
-        "name": "Guobo Zhongxin (国博中心)",
+        "name": "Guobo Center (国博中心)",
         "alternate_names": [
           "国博中心",
           "國博中心",
@@ -83,7 +83,7 @@
       },
       "properties": {
         "id": 4,
-        "name": "Huifeng Lu (汇丰路)",
+        "name": "Huifeng Road (汇丰路)",
         "alternate_names": [
           "汇丰路",
           "匯豐路",
@@ -200,7 +200,7 @@
       },
       "properties": {
         "id": 9,
-        "name": "Wenling Huochezhan (温岭火车站)",
+        "name": "Wenling Railway Station (温岭火车站)",
         "alternate_names": [
           "温岭火车站",
           "溫嶺火車站",
@@ -271,7 +271,7 @@
       },
       "properties": {
         "id": 12,
-        "name": "Jiulong Dadao (九龙大道)",
+        "name": "Jiulong Avenue (九龙大道)",
         "alternate_names": [
           "九龙大道",
           "九龍大道",
@@ -295,7 +295,7 @@
       },
       "properties": {
         "id": 13,
-        "name": "Wanchang Lu (万昌路)",
+        "name": "Wanchang Road (万昌路)",
         "alternate_names": [
           "万昌路",
           "萬昌路",
@@ -341,7 +341,7 @@
       },
       "properties": {
         "id": 15,
-        "name": "Chengnan (城南)",
+        "name": "City South (城南)",
         "alternate_names": [
           "城南",
           "Chengnan",

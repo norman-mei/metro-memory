@@ -1,15 +1,18 @@
-import PlaceholderPage from '@/app/(game)/_placeholder/PlaceholderPage'
-import { buildPlaceholderConfig } from '@/app/(game)/_placeholder/config'
-
-const config = buildPlaceholderConfig({
-  citySlug: 'beijing',
-  cityPath: 'asia/china/beijing',
-  cityTitle: 'Beijing',
-})
-
+import CityDataGamePage from '@/components/CityDataGamePage'
+import Main from '@/components/Main'
+import { Provider } from '@/lib/configContext'
+import 'mapbox-gl/dist/mapbox-gl.css'
+import 'react-circular-progressbar/dist/styles.css'
+import config from './config'
 
 export const metadata = config.METADATA
 
 export default function Page() {
-  return <PlaceholderPage config={config} />
+  return (
+    <Provider value={config}>
+      <Main className="min-h-screen">
+        <CityDataGamePage slug="beijing" />
+      </Main>
+    </Provider>
+  )
 }

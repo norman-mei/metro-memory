@@ -19,6 +19,7 @@ import {
   KeyboardEventHandler,
   useCallback,
   useEffect,
+  useMemo,
   useRef,
   useState,
 } from 'react'
@@ -92,6 +93,19 @@ const Input = ({
   const { t } = useTranslation()
   const normalizeString = useNormalizeString()
   const { CITY_NAME } = useConfig()
+  const timestampFormatter = useMemo(
+    () =>
+      new Intl.DateTimeFormat('en-US', {
+        month: '2-digit',
+        day: '2-digit',
+        year: '2-digit',
+        hour: '2-digit',
+        minute: '2-digit',
+        hour12: false,
+        timeZoneName: 'short',
+      }),
+    [],
+  )
   const [search, setSearch] = useState<string>('')
   const [history, setHistory] = useState<string[]>([])
   const [guessHistory, setGuessHistory] = useState<GuessHistoryEntry[]>([])
@@ -179,6 +193,20 @@ const Input = ({
       ].slice(0, 100))
     },
     [],
+  )
+
+  const formatHistoryTimestamp = useCallback(
+    (iso?: string) => {
+      if (!iso) return ''
+      const date = new Date(iso)
+      if (Number.isNaN(date.getTime())) return ''
+      return timestampFormatter
+        .format(date)
+        .replace(',', '')
+        .replace(/\s+/g, ' ')
+        .trim()
+    },
+    [timestampFormatter],
   )
 
   const stripOptionalPrefixes = useCallback(
@@ -767,7 +795,10 @@ const Input = ({
               <MdClose className="h-5 w-5" aria-hidden="true" />
             </button>
           </div>
-          <div className="max-h-80 overflow-y-auto p-3">
+          <div
+            className="max-h-80 overflow-y-auto p-3"
+            style={{ scrollbarGutter: 'stable' }}
+          >
             {guessHistory.length === 0 ? (
               <p className="rounded-xl border border-dashed border-zinc-300 p-4 text-sm text-zinc-600 dark:border-zinc-700 dark:text-zinc-400">
                 No submitted guesses yet.
@@ -796,6 +827,9 @@ const Input = ({
                         {guessHistoryIcons[entry.type]} {guessHistoryLabels[entry.type]}
                       </span>
                     </div>
+                    <p className="mt-1 text-xs font-medium text-zinc-500 dark:text-zinc-400">
+                      {formatHistoryTimestamp(entry.createdAt)}
+                    </p>
                     {entry.stationNames.length > 0 && (
                       <p className="mt-1 text-xs text-zinc-500 dark:text-zinc-400">
                         {entry.stationNames.join(', ')}

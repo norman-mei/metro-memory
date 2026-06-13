@@ -49,8 +49,9 @@
     "order": 5,
     "icon": "north-america/usa/amtrak/acs-v2.png",
     "progressOutlineColor": "#215240",
-    "badgeShape": "square",
-    "badgeFit": "contain"
+    "badgeShape": "wide",
+    "badgeFit": "contain",
+    "badgeAspectRatio": 2.016
   },
   "HTF": {
     "name": "Hartford Line",

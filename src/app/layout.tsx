@@ -1,4 +1,3 @@
-import AdSenseScript from '@/components/ads/AdSenseScript'
 import AdRails from '@/components/ads/AdRails'
 import FundingChoicesRecoveryScript from '@/components/ads/FundingChoicesRecoveryScript'
 import DevSiteRefreshWatcher from '@/components/DevSiteRefreshWatcher'
@@ -112,6 +111,15 @@ export default async function RootLayout({
 
   return (
     <html lang={requestLocaleDefaults.defaultLanguage} suppressHydrationWarning>
+      <head>
+        {shouldLoadWebOnlyServices && (
+          <script
+            async
+            src={ADSENSE_SCRIPT_SRC}
+            crossOrigin="anonymous"
+          />
+        )}
+      </head>
       <body
         suppressHydrationWarning
         className="bg-zinc-50 text-zinc-900 antialiased overflow-y-auto dark:bg-black dark:text-zinc-100"
@@ -133,7 +141,6 @@ export default async function RootLayout({
               strategy="afterInteractive"
               src="/funding-choices-error-protection.js"
             />
-            <AdSenseScript src={ADSENSE_SCRIPT_SRC} />
           </>
         )}
         <div className="fixed top-0 left-0 right-0 z-50 h-[env(safe-area-inset-top)] bg-black" />

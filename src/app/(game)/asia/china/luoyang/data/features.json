@@ -12,7 +12,7 @@
       },
       "properties": {
         "id": 1,
-        "name": "Hongshan (红山)",
+        "name": "Hong Mountain (红山)",
         "alternate_names": [
           "红山",
           "紅山",
@@ -273,7 +273,7 @@
       },
       "properties": {
         "id": 12,
-        "name": "Yingtianmen (应天门)",
+        "name": "Yingtian Gate (应天门)",
         "alternate_names": [
           "应天门",
           "應天門",
@@ -297,7 +297,7 @@
       },
       "properties": {
         "id": 13,
-        "name": "Lijingmen (丽景门)",
+        "name": "Lijing Gate (丽景门)",
         "alternate_names": [
           "丽景门",
           "麗景門",
@@ -321,7 +321,7 @@
       },
       "properties": {
         "id": 14,
-        "name": "Luoyigucheng (洛邑古城)",
+        "name": "Luoyi Ancient City (洛邑古城)",
         "alternate_names": [
           "洛邑古城",
           "Luoyigucheng",
@@ -392,7 +392,7 @@
       },
       "properties": {
         "id": 17,
-        "name": "Tawan (塔湾)",
+        "name": "Ta Bay (塔湾)",
         "alternate_names": [
           "塔湾",
           "塔灣",
@@ -416,7 +416,7 @@
       },
       "properties": {
         "id": 18,
-        "name": "Shijiawan (史家湾)",
+        "name": "Shijia Bay (史家湾)",
         "alternate_names": [
           "史家湾",
           "史家灣",
@@ -440,7 +440,7 @@
       },
       "properties": {
         "id": 19,
-        "name": "Yangwan (杨湾)",
+        "name": "Yang Bay (杨湾)",
         "alternate_names": [
           "杨湾",
           "楊灣",

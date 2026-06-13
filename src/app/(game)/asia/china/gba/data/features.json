@@ -386,7 +386,7 @@
       },
       "properties": {
         "id": 90006,
-        "name": "Fengshan (凤山)",
+        "name": "Feng Mountain (凤山)",
         "long_name": "凤山 Fengshan",
         "alternate_names": [
           "Fengshan",
@@ -611,7 +611,7 @@
       },
       "properties": {
         "id": 90013,
-        "name": "Dalingshan (大岭山)",
+        "name": "Daling Mountain (大岭山)",
         "long_name": "大岭山 Dalingshan",
         "alternate_names": [
           "Dalingshan",
@@ -677,7 +677,7 @@
       },
       "properties": {
         "id": 90015,
-        "name": "Niushan (牛山)",
+        "name": "Niu Mountain (牛山)",
         "long_name": "牛山 Niushan",
         "alternate_names": [
           "Niushan",
@@ -1304,7 +1304,7 @@
       },
       "properties": {
         "id": 20010,
-        "name": "Dongcheng (东城)",
+        "name": "Dong City (东城)",
         "alternate_names": [
           "Dongcheng",
           "Dongcheng Station",
@@ -1362,7 +1362,7 @@
       },
       "properties": {
         "id": 20012,
-        "name": "Xiaqiao (下桥)",
+        "name": "Xia Bridge (下桥)",
         "alternate_names": [
           "Xiaqiao",
           "Xiaqiao Station",
@@ -1422,7 +1422,7 @@
       },
       "properties": {
         "id": 20014,
-        "name": "Chashan (茶山)",
+        "name": "Cha Mountain (茶山)",
         "alternate_names": [
           "Chashan",
           "Chashan Station",
@@ -2279,8 +2279,8 @@
       },
       "properties": {
         "id": 90483,
-        "name": "Guicheng (桂城)",
-        "long_name": "Guicheng (桂城)",
+        "name": "Gui City (桂城)",
+        "long_name": "Gui City (桂城)",
         "alternate_names": [
           "Guicheng",
           "桂城",
@@ -2594,8 +2594,8 @@
       },
       "properties": {
         "id": 90495,
-        "name": "Jihua Liulu (季华六路)",
-        "long_name": "Jihua Liulu (季华六路)",
+        "name": "Jihua Liu Road (季华六路)",
+        "long_name": "Jihua Liu Road (季华六路)",
         "alternate_names": [
           "Jihua Liulu",
           "季华六路",
@@ -2681,8 +2681,8 @@
       },
       "properties": {
         "id": 90498,
-        "name": "Huanshi Bei (环市北)",
-        "long_name": "Huanshi Bei (环市北)",
+        "name": "Huanshi North (环市北)",
+        "long_name": "Huanshi North (环市北)",
         "alternate_names": [
           "Huanshi Bei",
           "环市北",
@@ -2825,8 +2825,8 @@
       },
       "properties": {
         "id": 90503,
-        "name": "Jurong Beilu (驹荣北路)",
-        "long_name": "Jurong Beilu (驹荣北路)",
+        "name": "Jurong North Road (驹荣北路)",
+        "long_name": "Jurong North Road (驹荣北路)",
         "alternate_names": [
           "Jurong Beilu",
           "驹荣北路",
@@ -2883,8 +2883,8 @@
       },
       "properties": {
         "id": 90505,
-        "name": "Dongle Lu (东乐路)",
-        "long_name": "Dongle Lu (东乐路)",
+        "name": "Dongle Road (东乐路)",
+        "long_name": "Dongle Road (东乐路)",
         "alternate_names": [
           "Dongle Lu",
           "东乐路",
@@ -2970,8 +2970,8 @@
       },
       "properties": {
         "id": 90508,
-        "name": "Xingye Donglu (兴业东路)",
-        "long_name": "Xingye Donglu (兴业东路)",
+        "name": "Xingye East Road (兴业东路)",
+        "long_name": "Xingye East Road (兴业东路)",
         "alternate_names": [
           "Xingye Donglu",
           "兴业东路",
@@ -3028,8 +3028,8 @@
       },
       "properties": {
         "id": 90510,
-        "name": "Xiaode Dong (孝德东)",
-        "long_name": "Xiaode Dong (孝德东)",
+        "name": "Xiaode East (孝德东)",
+        "long_name": "Xiaode East (孝德东)",
         "alternate_names": [
           "Xiaode Dong",
           "孝德东",
@@ -3115,8 +3115,8 @@
       },
       "properties": {
         "id": 90513,
-        "name": "Kesheng Lu (科盛路)",
-        "long_name": "Kesheng Lu (科盛路)",
+        "name": "Kesheng Road (科盛路)",
+        "long_name": "Kesheng Road (科盛路)",
         "alternate_names": [
           "Kesheng Lu",
           "科盛路",
@@ -3229,8 +3229,8 @@
       },
       "properties": {
         "id": 90517,
-        "name": "Bo'ai Zhonglu (博爱中路)",
-        "long_name": "Bo'ai Zhonglu (博爱中路)",
+        "name": "Bo'ai Middle Road (博爱中路)",
+        "long_name": "Bo'ai Middle Road (博爱中路)",
         "alternate_names": [
           "Bo'ai Zhonglu",
           "博爱中路",
@@ -3347,8 +3347,8 @@
       },
       "properties": {
         "id": 90538,
-        "name": "Huacheng Dadao (花城大道)",
-        "long_name": "Huacheng Dadao (花城大道)",
+        "name": "Huacheng Avenue (花城大道)",
+        "long_name": "Huacheng Avenue (花城大道)",
         "alternate_names": [
           "Huacheng Dadao",
           "花城大道",
@@ -3406,8 +3406,8 @@
       },
       "properties": {
         "id": 90540,
-        "name": "Huangpu Dadao (黄埔大道)",
-        "long_name": "Huangpu Dadao (黄埔大道)",
+        "name": "Huangpu Avenue (黄埔大道)",
+        "long_name": "Huangpu Avenue (黄埔大道)",
         "alternate_names": [
           "Huangpu Dadao",
           "黄埔大道",
@@ -3436,8 +3436,8 @@
       },
       "properties": {
         "id": 90543,
-        "name": "Tianhenan (天河南)",
-        "long_name": "Tianhenan (天河南)",
+        "name": "Tianhe South (天河南)",
+        "long_name": "Tianhe South (天河南)",
         "alternate_names": [
           "Tianhenan",
           "天河南",
@@ -3500,8 +3500,8 @@
       },
       "properties": {
         "id": 90542,
-        "name": "Linhexi (林和西)",
-        "long_name": "Linhexi (林和西)",
+        "name": "Linhe West (林和西)",
+        "long_name": "Linhe West (林和西)",
         "alternate_names": [
           "Linhexi",
           "林和西",
@@ -3614,8 +3614,8 @@
       },
       "properties": {
         "id": 90029,
-        "name": "Changshou Lu (长寿路)",
-        "long_name": "Changshou Lu (长寿路)",
+        "name": "Changshou Road (长寿路)",
+        "long_name": "Changshou Road (长寿路)",
         "alternate_names": [
           "Changshou Lu",
           "长寿路",
@@ -3817,8 +3817,8 @@
       },
       "properties": {
         "id": 90036,
-        "name": "Tiyu Xilu (体育西路)",
-        "long_name": "Tiyu Xilu (体育西路)",
+        "name": "Tiyu West Road (体育西路)",
+        "long_name": "Tiyu West Road (体育西路)",
         "alternate_names": [
           "Tiyu Xilu",
           "体育西路",
@@ -3875,8 +3875,8 @@
       },
       "properties": {
         "id": 90038,
-        "name": "Huadiwan (花地湾)",
-        "long_name": "Huadiwan (花地湾)",
+        "name": "Huadi Bay (花地湾)",
+        "long_name": "Huadi Bay (花地湾)",
         "alternate_names": [
           "Huadiwan",
           "花地湾",
@@ -6455,8 +6455,8 @@
       },
       "properties": {
         "id": 90352,
-        "name": "Xinnan (新南)",
-        "long_name": "Xinnan (新南)",
+        "name": "Xin South (新南)",
+        "long_name": "Xin South (新南)",
         "alternate_names": [
           "Xinnan",
           "新南",
@@ -6626,8 +6626,8 @@
       },
       "properties": {
         "id": 90358,
-        "name": "Zhenlongbei (镇龙北)",
-        "long_name": "Zhenlongbei (镇龙北)",
+        "name": "Zhenlong North (镇龙北)",
+        "long_name": "Zhenlong North (镇龙北)",
         "alternate_names": [
           "Zhenlongbei",
           "镇龙北",
@@ -7355,8 +7355,8 @@
       },
       "properties": {
         "id": 90050,
-        "name": "Jiangnanxi (江南西)",
-        "long_name": "Jiangnanxi (江南西)",
+        "name": "Jiangnan West (江南西)",
+        "long_name": "Jiangnan West (江南西)",
         "alternate_names": [
           "Jiangnanxi",
           "江南西",
@@ -7559,8 +7559,8 @@
       },
       "properties": {
         "id": 90057,
-        "name": "Sanyuanli (三元里)",
-        "long_name": "Sanyuanli (三元里)",
+        "name": "Sanyuan Lane (三元里)",
+        "long_name": "Sanyuan Lane (三元里)",
         "alternate_names": [
           "Sanyuanli",
           "三元里",
@@ -7876,8 +7876,8 @@
       },
       "properties": {
         "id": 90369,
-        "name": "Tangdong (棠东)",
-        "long_name": "Tangdong (棠东)",
+        "name": "Tang East (棠东)",
+        "long_name": "Tang East (棠东)",
         "alternate_names": [
           "Tangdong",
           "棠东",
@@ -7934,8 +7934,8 @@
       },
       "properties": {
         "id": 90371,
-        "name": "Daguan Nanlu (大观南路)",
-        "long_name": "Daguan Nanlu (大观南路)",
+        "name": "Daguan South Road (大观南路)",
+        "long_name": "Daguan South Road (大观南路)",
         "alternate_names": [
           "Daguan Nanlu",
           "大观南路",
@@ -7991,8 +7991,8 @@
       },
       "properties": {
         "id": 90373,
-        "name": "Shenzhoulu (神舟路)",
-        "long_name": "Shenzhoulu (神舟路)",
+        "name": "Shenzhou Road (神舟路)",
+        "long_name": "Shenzhou Road (神舟路)",
         "alternate_names": [
           "Shenzhoulu",
           "神舟路",
@@ -8077,8 +8077,8 @@
       },
       "properties": {
         "id": 90376,
-        "name": "Shuixi (水西)",
-        "long_name": "Shuixi (水西)",
+        "name": "Shui West (水西)",
+        "long_name": "Shui West (水西)",
         "alternate_names": [
           "Shuixi",
           "水西",
@@ -8133,8 +8133,8 @@
       },
       "properties": {
         "id": 90378,
-        "name": "Zhenlongxi (镇龙西)",
-        "long_name": "Zhenlongxi (镇龙西)",
+        "name": "Zhenlong West (镇龙西)",
+        "long_name": "Zhenlong West (镇龙西)",
         "alternate_names": [
           "Zhenlongxi",
           "镇龙西",
@@ -8391,8 +8391,8 @@
       },
       "properties": {
         "id": 90391,
-        "name": "Shiguanglu (市广路)",
-        "long_name": "Shiguanglu (市广路)",
+        "name": "Shiguang Road (市广路)",
+        "long_name": "Shiguang Road (市广路)",
         "alternate_names": [
           "Shiguanglu",
           "市广路",
@@ -8780,8 +8780,8 @@
       },
       "properties": {
         "id": 90068,
-        "name": "Shiqiao (市桥)",
-        "long_name": "Shiqiao (市桥)",
+        "name": "Shi Bridge (市桥)",
+        "long_name": "Shi Bridge (市桥)",
         "alternate_names": [
           "Shiqiao",
           "市桥",
@@ -9040,8 +9040,8 @@
       },
       "properties": {
         "id": 90077,
-        "name": "Tiyu Xilu (体育西路)",
-        "long_name": "Tiyu Xilu (体育西路)",
+        "name": "Tiyu West Road (体育西路)",
+        "long_name": "Tiyu West Road (体育西路)",
         "alternate_names": [
           "Tiyu Xilu",
           "体育西路",
@@ -9070,8 +9070,8 @@
       },
       "properties": {
         "id": 90078,
-        "name": "Shipaiqiao (石牌桥)",
-        "long_name": "Shipaiqiao (石牌桥)",
+        "name": "Shipai Bridge (石牌桥)",
+        "long_name": "Shipai Bridge (石牌桥)",
         "alternate_names": [
           "Shipaiqiao",
           "石牌桥",
@@ -9157,8 +9157,8 @@
       },
       "properties": {
         "id": 90081,
-        "name": "Wushan (五山)",
-        "long_name": "Wushan (五山)",
+        "name": "Wu Mountain (五山)",
+        "long_name": "Wu Mountain (五山)",
         "alternate_names": [
           "Wushan",
           "五山",
@@ -9185,8 +9185,8 @@
       },
       "properties": {
         "id": 90082,
-        "name": "Linhexi (林和西)",
-        "long_name": "Linhexi (林和西)",
+        "name": "Linhe West (林和西)",
+        "long_name": "Linhe West (林和西)",
         "alternate_names": [
           "Linhexi",
           "林和西",
@@ -9389,8 +9389,8 @@
       },
       "properties": {
         "id": 90089,
-        "name": "Baiyun Dadaobei (白云大道北)",
-        "long_name": "Baiyun Dadaobei (白云大道北)",
+        "name": "Baiyun Avenue North (白云大道北)",
+        "long_name": "Baiyun Avenue North (白云大道北)",
         "alternate_names": [
           "Baiyun Dadaobei",
           "白云大道北",
@@ -9657,8 +9657,8 @@
       },
       "properties": {
         "id": 90100,
-        "name": "Haichong Lu (海涌路)",
-        "long_name": "Haichong Lu (海涌路)",
+        "name": "Haichong Road (海涌路)",
+        "long_name": "Haichong Road (海涌路)",
         "alternate_names": [
           "Haichong Lu",
           "海涌路",
@@ -9686,8 +9686,8 @@
       },
       "properties": {
         "id": 90101,
-        "name": "Shiqinan (石碁南)",
-        "long_name": "Shiqinan (石碁南)",
+        "name": "Shiqi South (石碁南)",
+        "long_name": "Shiqi South (石碁南)",
         "alternate_names": [
           "Shiqinan",
           "石碁南",
@@ -9942,8 +9942,8 @@
       },
       "properties": {
         "id": 90110,
-        "name": "Jiaomen (蕉门)",
-        "long_name": "Jiaomen (蕉门)",
+        "name": "Jiao Gate (蕉门)",
+        "long_name": "Jiao Gate (蕉门)",
         "alternate_names": [
           "Jiaomen",
           "蕉门",
@@ -10315,8 +10315,8 @@
       },
       "properties": {
         "id": 90123,
-        "name": "Chebeinan (车陂南)",
-        "long_name": "Chebeinan (车陂南)",
+        "name": "Chebei South (车陂南)",
+        "long_name": "Chebei South (车陂南)",
         "alternate_names": [
           "Chebeinan",
           "车陂南",
@@ -10402,8 +10402,8 @@
       },
       "properties": {
         "id": 90126,
-        "name": "Guanqiao (官桥)",
-        "long_name": "Guanqiao (官桥)",
+        "name": "Guan Bridge (官桥)",
+        "long_name": "Guan Bridge (官桥)",
         "alternate_names": [
           "Guanqiao",
           "官桥",
@@ -10632,8 +10632,8 @@
       },
       "properties": {
         "id": 90133,
-        "name": "Xiaobei (小北)",
-        "long_name": "Xiaobei (小北)",
+        "name": "Xiao North (小北)",
+        "long_name": "Xiao North (小北)",
         "alternate_names": [
           "Xiaobei",
           "小北",
@@ -10917,8 +10917,8 @@
       },
       "properties": {
         "id": 90143,
-        "name": "Keyun Lu (科韵路)",
-        "long_name": "Keyun Lu (科韵路)",
+        "name": "Keyun Road (科韵路)",
+        "long_name": "Keyun Road (科韵路)",
         "alternate_names": [
           "Keyun Lu",
           "科韵路",
@@ -10946,8 +10946,8 @@
       },
       "properties": {
         "id": 90144,
-        "name": "Chebeinan (车陂南)",
-        "long_name": "Chebeinan (车陂南)",
+        "name": "Chebei South (车陂南)",
+        "long_name": "Chebei South (车陂南)",
         "alternate_names": [
           "Chebeinan",
           "车陂南",
@@ -11089,8 +11089,8 @@
       },
       "properties": {
         "id": 90149,
-        "name": "Dashadong (大沙东)",
-        "long_name": "Dashadong (大沙东)",
+        "name": "Dasha East (大沙东)",
+        "long_name": "Dasha East (大沙东)",
         "alternate_names": [
           "Dashadong",
           "大沙东",
@@ -11205,8 +11205,8 @@
       },
       "properties": {
         "id": 90153,
-        "name": "Baoying Dadao (保盈大道)",
-        "long_name": "Baoying Dadao (保盈大道)",
+        "name": "Baoying Avenue (保盈大道)",
+        "long_name": "Baoying Avenue (保盈大道)",
         "alternate_names": [
           "Baoying Dadao",
           "保盈大道",
@@ -11519,8 +11519,8 @@
       },
       "properties": {
         "id": 90164,
-        "name": "Beijing Lu (北京路)",
-        "long_name": "Beijing Lu (北京路)",
+        "name": "Beijing Road (北京路)",
+        "long_name": "Beijing Road (北京路)",
         "alternate_names": [
           "Beijing Lu",
           "北京路",
@@ -12209,8 +12209,8 @@
       },
       "properties": {
         "id": 90187,
-        "name": "Yide Lu (一德路)",
-        "long_name": "Yide Lu (一德路)",
+        "name": "Yide Road (一德路)",
+        "long_name": "Yide Road (一德路)",
         "alternate_names": [
           "Yide Lu",
           "一德路",
@@ -12294,8 +12294,8 @@
       },
       "properties": {
         "id": 90191,
-        "name": "Chencunbei (陈村北)",
-        "long_name": "Chencunbei (陈村北)",
+        "name": "Chencun North (陈村北)",
+        "long_name": "Chencun North (陈村北)",
         "alternate_names": [
           "Chencunbei",
           "陈村北",
@@ -12466,8 +12466,8 @@
       },
       "properties": {
         "id": 90197,
-        "name": "Meidi Dadao (美的大道)",
-        "long_name": "Meidi Dadao (美的大道)",
+        "name": "Meidi Avenue (美的大道)",
+        "long_name": "Meidi Avenue (美的大道)",
         "alternate_names": [
           "Meidi Dadao",
           "美的大道",
@@ -12667,8 +12667,8 @@
       },
       "properties": {
         "id": 90202,
-        "name": "Banqiao (板桥)",
-        "long_name": "Banqiao (板桥)",
+        "name": "Ban Bridge (板桥)",
+        "long_name": "Ban Bridge (板桥)",
         "alternate_names": [
           "Banqiao",
           "板桥",
@@ -12811,8 +12811,8 @@
       },
       "properties": {
         "id": 90207,
-        "name": "Dashadong (大沙东)",
-        "long_name": "Dashadong (大沙东)",
+        "name": "Dasha East (大沙东)",
+        "long_name": "Dasha East (大沙东)",
         "alternate_names": [
           "Dashadong",
           "大沙东",
@@ -12897,8 +12897,8 @@
       },
       "properties": {
         "id": 90210,
-        "name": "Kefenglu (科丰路)",
-        "long_name": "Kefenglu (科丰路)",
+        "name": "Kefeng Road (科丰路)",
+        "long_name": "Kefeng Road (科丰路)",
         "alternate_names": [
           "Kefenglu",
           "科丰路",
@@ -12955,8 +12955,8 @@
       },
       "properties": {
         "id": 90212,
-        "name": "Shuixi (水西)",
-        "long_name": "Shuixi (水西)",
+        "name": "Shui West (水西)",
+        "long_name": "Shui West (水西)",
         "alternate_names": [
           "Shuixi",
           "水西",
@@ -12984,8 +12984,8 @@
       },
       "properties": {
         "id": 90213,
-        "name": "Yanshan (燕山)",
-        "long_name": "Yanshan (燕山)",
+        "name": "Yan Mountain (燕山)",
+        "long_name": "Yan Mountain (燕山)",
         "alternate_names": [
           "Yanshan",
           "燕山",
@@ -13415,8 +13415,8 @@
       },
       "properties": {
         "id": 90230,
-        "name": "Tongfuxi (同福西)",
-        "long_name": "Tongfuxi (同福西)",
+        "name": "Tongfu West (同福西)",
+        "long_name": "Tongfu West (同福西)",
         "alternate_names": [
           "Tongfuxi",
           "同福西",
@@ -13501,8 +13501,8 @@
       },
       "properties": {
         "id": 90233,
-        "name": "Baogang Dadao (宝岗大道)",
-        "long_name": "Baogang Dadao (宝岗大道)",
+        "name": "Baogang Avenue (宝岗大道)",
+        "long_name": "Baogang Avenue (宝岗大道)",
         "alternate_names": [
           "Baogang Dadao",
           "宝岗大道",
@@ -13701,8 +13701,8 @@
       },
       "properties": {
         "id": 90240,
-        "name": "Xingangdong (新港东)",
-        "long_name": "Xingangdong (新港东)",
+        "name": "Xingang East (新港东)",
+        "long_name": "Xingang East (新港东)",
         "alternate_names": [
           "Xingangdong",
           "新港东",
@@ -13934,8 +13934,8 @@
       },
       "properties": {
         "id": 90247,
-        "name": "Huachenglu (花城路)",
-        "long_name": "Huachenglu (花城路)",
+        "name": "Huacheng Road (花城路)",
+        "long_name": "Huacheng Road (花城路)",
         "alternate_names": [
           "Huachenglu",
           "花城路",
@@ -34710,7 +34710,7 @@
       },
       "properties": {
         "id": 20019,
-        "name": "Guangmingcheng (光明城)",
+        "name": "Guangming City (光明城)",
         "long_name": "光明城 Guangmingcheng",
         "alternate_names": [
           "Guangmingcheng",
@@ -34842,8 +34842,8 @@
       },
       "properties": {
         "id": 91865,
-        "name": "Binhaiwan (滨海湾)",
-        "long_name": "Binhaiwan (滨海湾)",
+        "name": "Binhai Bay (滨海湾)",
+        "long_name": "Binhai Bay (滨海湾)",
         "alternate_names": [
           "Binhaiwan",
           "滨海湾",
@@ -34868,8 +34868,8 @@
       },
       "properties": {
         "id": 91866,
-        "name": "Qingchuangcheng (青创城)",
-        "long_name": "Qingchuangcheng (青创城)",
+        "name": "Qingchuang City (青创城)",
+        "long_name": "Qingchuang City (青创城)",
         "alternate_names": [
           "Qingchuangcheng",
           "青创城",
@@ -34948,8 +34948,8 @@
       },
       "properties": {
         "id": 91869,
-        "name": "Jiaoyiwan (交椅湾)",
-        "long_name": "Jiaoyiwan (交椅湾)",
+        "name": "Jiaoyi Bay (交椅湾)",
+        "long_name": "Jiaoyi Bay (交椅湾)",
         "alternate_names": [
           "Jiaoyiwan",
           "交椅湾",
@@ -35105,7 +35105,7 @@
       },
       "properties": {
         "id": 20020,
-        "name": "Humen (虎门)",
+        "name": "Hu Gate (虎门)",
         "long_name": "虎门 Humen",
         "alternate_names": [
           "Humen",
@@ -35854,8 +35854,8 @@
       },
       "properties": {
         "id": 90437,
-        "name": "Xincheng Dong (新城东)",
-        "long_name": "Xincheng Dong (新城东)",
+        "name": "Xin City East (新城东)",
+        "long_name": "Xin City East (新城东)",
         "alternate_names": [
           "Xincheng Dong",
           "新城东",
@@ -35970,8 +35970,8 @@
       },
       "properties": {
         "id": 90441,
-        "name": "Kuiqi Lu (魁奇路)",
-        "long_name": "Kuiqi Lu (魁奇路)",
+        "name": "Kuiqi Road (魁奇路)",
+        "long_name": "Kuiqi Road (魁奇路)",
         "alternate_names": [
           "Kuiqi Lu",
           "魁奇路",
@@ -36027,8 +36027,8 @@
       },
       "properties": {
         "id": 90443,
-        "name": "Tongji Lu (同济路)",
-        "long_name": "Tongji Lu (同济路)",
+        "name": "Tongji Road (同济路)",
+        "long_name": "Tongji Road (同济路)",
         "alternate_names": [
           "Tongji Lu",
           "同济路",
@@ -36085,8 +36085,8 @@
       },
       "properties": {
         "id": 90445,
-        "name": "Pujun Beilu (普君北路)",
-        "long_name": "Pujun Beilu (普君北路)",
+        "name": "Pujun North Road (普君北路)",
+        "long_name": "Pujun North Road (普君北路)",
         "alternate_names": [
           "Pujun Beilu",
           "普君北路",
@@ -36141,8 +36141,8 @@
       },
       "properties": {
         "id": 90447,
-        "name": "Guicheng (桂城)",
-        "long_name": "Guicheng (桂城)",
+        "name": "Gui City (桂城)",
+        "long_name": "Gui City (桂城)",
         "alternate_names": [
           "Guicheng",
           "桂城",
@@ -36660,8 +36660,8 @@
       },
       "properties": {
         "id": 90466,
-        "name": "Zhihui Xincheng (智慧新城)",
-        "long_name": "Zhihui Xincheng (智慧新城)",
+        "name": "Zhihui Xin City (智慧新城)",
+        "long_name": "Zhihui Xin City (智慧新城)",
         "alternate_names": [
           "Zhihui Xincheng",
           "智慧新城",
@@ -36717,8 +36717,8 @@
       },
       "properties": {
         "id": 90468,
-        "name": "Shiwan (石湾)",
-        "long_name": "Shiwan (石湾)",
+        "name": "Shi Bay (石湾)",
+        "long_name": "Shi Bay (石湾)",
         "alternate_names": [
           "Shiwan",
           "石湾",
@@ -36775,8 +36775,8 @@
       },
       "properties": {
         "id": 90470,
-        "name": "Kuiqi Lu (魁奇路)",
-        "long_name": "Kuiqi Lu (魁奇路)",
+        "name": "Kuiqi Road (魁奇路)",
+        "long_name": "Kuiqi Road (魁奇路)",
         "alternate_names": [
           "Kuiqi Lu",
           "魁奇路",
@@ -36975,8 +36975,8 @@
       },
       "properties": {
         "id": 90477,
-        "name": "Linyue Xi (林岳西)",
-        "long_name": "Linyue Xi (林岳西)",
+        "name": "Linyue West (林岳西)",
+        "long_name": "Linyue West (林岳西)",
         "alternate_names": [
           "Linyue Xi",
           "林岳西",
@@ -37004,8 +37004,8 @@
       },
       "properties": {
         "id": 90478,
-        "name": "Linyue Dong (林岳东)",
-        "long_name": "Linyue Dong (林岳东)",
+        "name": "Linyue East (林岳东)",
+        "long_name": "Linyue East (林岳东)",
         "alternate_names": [
           "Linyue Dong",
           "林岳东",
@@ -37063,8 +37063,8 @@
       },
       "properties": {
         "id": 90519,
-        "name": "Huacuilu (华翠路)",
-        "long_name": "Huacuilu (华翠路)",
+        "name": "Huacui Road (华翠路)",
+        "long_name": "Huacui Road (华翠路)",
         "alternate_names": [
           "Huacuilu",
           "华翠路",
@@ -37092,8 +37092,8 @@
       },
       "properties": {
         "id": 90520,
-        "name": "Xiaxi (夏西)",
-        "long_name": "Xiaxi (夏西)",
+        "name": "Xia West (夏西)",
+        "long_name": "Xia West (夏西)",
         "alternate_names": [
           "Xiaxi",
           "夏西",
@@ -37120,8 +37120,8 @@
       },
       "properties": {
         "id": 90521,
-        "name": "Xiadong (夏东)",
-        "long_name": "Xiadong (夏东)",
+        "name": "Xia East (夏东)",
+        "long_name": "Xia East (夏东)",
         "alternate_names": [
           "Xiadong",
           "夏东",
@@ -37178,8 +37178,8 @@
       },
       "properties": {
         "id": 90523,
-        "name": "Pingxi (平西)",
-        "long_name": "Pingxi (平西)",
+        "name": "Ping West (平西)",
+        "long_name": "Ping West (平西)",
         "alternate_names": [
           "Pingxi",
           "平西",
@@ -37206,8 +37206,8 @@
       },
       "properties": {
         "id": 90524,
-        "name": "Pingnan (平南)",
-        "long_name": "Pingnan (平南)",
+        "name": "Ping South (平南)",
+        "long_name": "Ping South (平南)",
         "alternate_names": [
           "Pingnan",
           "平南",
@@ -37234,8 +37234,8 @@
       },
       "properties": {
         "id": 90525,
-        "name": "Yuqijie (玉器街)",
-        "long_name": "Yuqijie (玉器街)",
+        "name": "Yuqi Street (玉器街)",
+        "long_name": "Yuqi Street (玉器街)",
         "alternate_names": [
           "Yuqijie",
           "玉器街",
@@ -37291,8 +37291,8 @@
       },
       "properties": {
         "id": 90527,
-        "name": "Sanshanxinchengbei (三山新城北)",
-        "long_name": "Sanshanxinchengbei (三山新城北)",
+        "name": "Sanshanxin City North (三山新城北)",
+        "long_name": "Sanshanxin City North (三山新城北)",
         "alternate_names": [
           "Sanshanxinchengbei",
           "三山新城北",
@@ -37349,8 +37349,8 @@
       },
       "properties": {
         "id": 90529,
-        "name": "Sanshanxinchengnan (三山新城南)",
-        "long_name": "Sanshanxinchengnan (三山新城南)",
+        "name": "Sanshanxin City South (三山新城南)",
+        "long_name": "Sanshanxin City South (三山新城南)",
         "alternate_names": [
           "Sanshanxinchengnan",
           "三山新城南",
@@ -37406,8 +37406,8 @@
       },
       "properties": {
         "id": 90531,
-        "name": "Linyuebei (林岳北)",
-        "long_name": "Linyuebei (林岳北)",
+        "name": "Linyue North (林岳北)",
+        "long_name": "Linyue North (林岳北)",
         "alternate_names": [
           "Linyuebei",
           "林岳北",
@@ -37435,8 +37435,8 @@
       },
       "properties": {
         "id": 90533,
-        "name": "Linyue Xi (林岳西)",
-        "long_name": "Linyue Xi (林岳西)",
+        "name": "Linyue West (林岳西)",
+        "long_name": "Linyue West (林岳西)",
         "alternate_names": [
           "Linyue Xi",
           "林岳西",
@@ -37464,8 +37464,8 @@
       },
       "properties": {
         "id": 90534,
-        "name": "Linyue Dong (林岳东)",
-        "long_name": "Linyue Dong (林岳东)",
+        "name": "Linyue East (林岳东)",
+        "long_name": "Linyue East (林岳东)",
         "alternate_names": [
           "Linyue Dong",
           "林岳东",
@@ -37783,8 +37783,8 @@
       },
       "properties": {
         "id": 90411,
-        "name": "Juntai Lu (峻泰路)",
-        "long_name": "Juntai Lu (峻泰路)",
+        "name": "Juntai Road (峻泰路)",
+        "long_name": "Juntai Road (峻泰路)",
         "alternate_names": [
           "Juntai Lu",
           "峻泰路",
@@ -37956,8 +37956,8 @@
       },
       "properties": {
         "id": 90417,
-        "name": "Xinfeng Lu (新丰路)",
-        "long_name": "Xinfeng Lu (新丰路)",
+        "name": "Xinfeng Road (新丰路)",
+        "long_name": "Xinfeng Road (新丰路)",
         "alternate_names": [
           "Xinfeng Lu",
           "新丰路",
@@ -38137,7 +38137,7 @@
       },
       "properties": {
         "id": 91002,
-        "name": "Laojie (老街)",
+        "name": "Lao Street (老街)",
         "long_name": "老街 Laojie",
         "alternate_names": [
           "Laojie",
@@ -38708,7 +38708,7 @@
       },
       "properties": {
         "id": 91020,
-        "name": "Liyumen (鲤鱼门)",
+        "name": "Liyu Gate (鲤鱼门)",
         "long_name": "鲤鱼门 Liyumen",
         "alternate_names": [
           "Liyumen",
@@ -38740,7 +38740,7 @@
       },
       "properties": {
         "id": 91021,
-        "name": "Qianhaiwan (前海湾)",
+        "name": "Qianhai Bay (前海湾)",
         "long_name": "前海湾 Qianhaiwan",
         "alternate_names": [
           "Qianhaiwan",
@@ -39025,7 +39025,7 @@
       },
       "properties": {
         "id": 91030,
-        "name": "Chiwan (赤湾)",
+        "name": "Chi Bay (赤湾)",
         "long_name": "赤湾 Chiwan",
         "alternate_names": [
           "Chiwan",
@@ -39119,7 +39119,7 @@
       },
       "properties": {
         "id": 91033,
-        "name": "Shuiwan (水湾)",
+        "name": "Shui Bay (水湾)",
         "long_name": "水湾 Shuiwan",
         "alternate_names": [
           "Shuiwan",
@@ -39340,7 +39340,7 @@
       },
       "properties": {
         "id": 91040,
-        "name": "Hongshuwan (红树湾)",
+        "name": "Hongshu Bay (红树湾)",
         "long_name": "红树湾 Hongshuwan",
         "alternate_names": [
           "Hongshuwan",
@@ -39781,7 +39781,7 @@
       },
       "properties": {
         "id": 91054,
-        "name": "Yannan (燕南)",
+        "name": "Yan South (燕南)",
         "long_name": "燕南 Yannan",
         "alternate_names": [
           "Yannan",
@@ -40354,7 +40354,7 @@
       },
       "properties": {
         "id": 91071,
-        "name": "Laojie (老街)",
+        "name": "Lao Street (老街)",
         "long_name": "老街 Laojie",
         "alternate_names": [
           "Laojie",
@@ -40579,7 +40579,7 @@
       },
       "properties": {
         "id": 91078,
-        "name": "Mumianwan (木棉湾)",
+        "name": "Mumian Bay (木棉湾)",
         "long_name": "木棉湾 Mumianwan",
         "alternate_names": [
           "Mumianwan",
@@ -41085,7 +41085,7 @@
       },
       "properties": {
         "id": 91094,
-        "name": "Pingxi (坪西)",
+        "name": "Ping West (坪西)",
         "long_name": "坪西 Pingxi",
         "alternate_names": [
           "Pingxi",
@@ -41560,7 +41560,7 @@
       },
       "properties": {
         "id": 91108,
-        "name": "Hongshan (红山)",
+        "name": "Hong Mountain (红山)",
         "long_name": "红山 Hongshan",
         "alternate_names": [
           "Hongshan",
@@ -41970,7 +41970,7 @@
       },
       "properties": {
         "id": 91121,
-        "name": "Chiwan (赤湾)",
+        "name": "Chi Bay (赤湾)",
         "long_name": "赤湾 Chiwan",
         "alternate_names": [
           "Chiwan",
@@ -42002,7 +42002,7 @@
       },
       "properties": {
         "id": 91122,
-        "name": "Liwan (荔湾)",
+        "name": "Li Bay (荔湾)",
         "long_name": "荔湾 Liwan",
         "alternate_names": [
           "Liwan",
@@ -42066,7 +42066,7 @@
       },
       "properties": {
         "id": 91124,
-        "name": "Mawan (妈湾)",
+        "name": "Ma Bay (妈湾)",
         "long_name": "妈湾 Mawan",
         "alternate_names": [
           "Mawan",
@@ -42130,7 +42130,7 @@
       },
       "properties": {
         "id": 91126,
-        "name": "Qianwan (前湾)",
+        "name": "Qian Bay (前湾)",
         "long_name": "前湾 Qianwan",
         "alternate_names": [
           "Qianwan",
@@ -42162,7 +42162,7 @@
       },
       "properties": {
         "id": 91127,
-        "name": "Guiwan (桂湾)",
+        "name": "Gui Bay (桂湾)",
         "long_name": "桂湾 Guiwan",
         "alternate_names": [
           "Guiwan",
@@ -42194,7 +42194,7 @@
       },
       "properties": {
         "id": 91128,
-        "name": "Qianhaiwan (前海湾)",
+        "name": "Qianhai Bay (前海湾)",
         "long_name": "前海湾 Qianhaiwan",
         "alternate_names": [
           "Qianhaiwan",
@@ -42416,7 +42416,7 @@
       },
       "properties": {
         "id": 91135,
-        "name": "Xingdong (兴东)",
+        "name": "Xing East (兴东)",
         "long_name": "兴东 Xingdong",
         "alternate_names": [
           "Xingdong",
@@ -43051,7 +43051,7 @@
       },
       "properties": {
         "id": 91155,
-        "name": "Dongmen (东门)",
+        "name": "East Gate (东门)",
         "long_name": "东门 Dongmen",
         "alternate_names": [
           "Dongmen",
@@ -43370,7 +43370,7 @@
       },
       "properties": {
         "id": 91165,
-        "name": "Hongshan (红山)",
+        "name": "Hong Mountain (红山)",
         "long_name": "红山 Hongshan",
         "alternate_names": [
           "Hongshan",
@@ -43748,7 +43748,7 @@
       },
       "properties": {
         "id": 91177,
-        "name": "Honghuashan (红花山)",
+        "name": "Honghua Mountain (红花山)",
         "long_name": "红花山 Honghuashan",
         "alternate_names": [
           "Honghuashan",
@@ -44157,7 +44157,7 @@
       },
       "properties": {
         "id": 91190,
-        "name": "Guangmingcheng (光明城)",
+        "name": "Guangming City (光明城)",
         "long_name": "光明城 Guangmingcheng",
         "alternate_names": [
           "Guangmingcheng",
@@ -45202,7 +45202,7 @@
       },
       "properties": {
         "id": 91223,
-        "name": "Haishan (海山)",
+        "name": "Hai Mountain (海山)",
         "long_name": "海山 Haishan",
         "alternate_names": [
           "Haishan",
@@ -45625,7 +45625,7 @@
       },
       "properties": {
         "id": 91232,
-        "name": "Qianwan (前湾)",
+        "name": "Qian Bay (前湾)",
         "long_name": "前湾 Qianwan",
         "alternate_names": [
           "Qianwan",
@@ -45876,7 +45876,7 @@
       },
       "properties": {
         "id": 91240,
-        "name": "Yuehaimen (粤海门)",
+        "name": "Yuehai Gate (粤海门)",
         "long_name": "粤海门 Yuehaimen",
         "alternate_names": [
           "Yuehaimen",
@@ -45971,7 +45971,7 @@
       },
       "properties": {
         "id": 91243,
-        "name": "Shenwan (深湾)",
+        "name": "Shen Bay (深湾)",
         "long_name": "深湾 Shenwan",
         "alternate_names": [
           "Shenwan",
@@ -47269,7 +47269,7 @@
       },
       "properties": {
         "id": 91284,
-        "name": "Huanancheng (华南城)",
+        "name": "Huanan City (华南城)",
         "long_name": "华南城 Huanancheng",
         "alternate_names": [
           "Huanancheng",
@@ -47514,7 +47514,7 @@
       },
       "properties": {
         "id": 91290,
-        "name": "Ma’anshan (马安山)",
+        "name": "Ma’an Mountain (马安山)",
         "long_name": "马安山 Ma’anshan",
         "alternate_names": [
           "Ma’anshan",
@@ -47706,7 +47706,7 @@
       },
       "properties": {
         "id": 91296,
-        "name": "Bihaiwan (碧海湾)",
+        "name": "Bihai Bay (碧海湾)",
         "long_name": "碧海湾 Bihaiwan",
         "alternate_names": [
           "Bihaiwan",
@@ -47770,7 +47770,7 @@
       },
       "properties": {
         "id": 91298,
-        "name": "Qianhaiwan (前海湾)",
+        "name": "Qianhai Bay (前海湾)",
         "long_name": "前海湾 Qianhaiwan",
         "alternate_names": [
           "Qianhaiwan",
@@ -47802,7 +47802,7 @@
       },
       "properties": {
         "id": 91299,
-        "name": "Nanshan (南山)",
+        "name": "Nan Mountain (南山)",
         "long_name": "南山 Nanshan",
         "alternate_names": [
           "Nanshan",
@@ -48087,7 +48087,7 @@
       },
       "properties": {
         "id": 91308,
-        "name": "Taiziwan (太子湾)",
+        "name": "Taizi Bay (太子湾)",
         "long_name": "太子湾 Taiziwan",
         "alternate_names": [
           "Taiziwan",
@@ -48150,7 +48150,7 @@
       },
       "properties": {
         "id": 91310,
-        "name": "Huaguoshan (花果山)",
+        "name": "Huaguo Mountain (花果山)",
         "long_name": "花果山 Huaguoshan",
         "alternate_names": [
           "Huaguoshan",
@@ -48274,7 +48274,7 @@
       },
       "properties": {
         "id": 91314,
-        "name": "Nanshan (南山)",
+        "name": "Nan Mountain (南山)",
         "long_name": "南山 Nanshan",
         "alternate_names": [
           "Nanshan",
@@ -49450,7 +49450,7 @@
       },
       "properties": {
         "id": 91351,
-        "name": "Yuehaimen (粤海门)",
+        "name": "Yuehai Gate (粤海门)",
         "long_name": "粤海门 Yuehaimen",
         "alternate_names": [
           "Yuehaimen",
@@ -50682,7 +50682,7 @@
       },
       "properties": {
         "id": 91390,
-        "name": "Yuanshan (园山)",
+        "name": "Yuan Mountain (园山)",
         "long_name": "园山 Yuanshan",
         "alternate_names": [
           "Yuanshan",
@@ -51157,7 +51157,7 @@
       },
       "properties": {
         "id": 91405,
-        "name": "Longdong (龙东)",
+        "name": "Long East (龙东)",
         "long_name": "龙东 Longdong",
         "alternate_names": [
           "Longdong",
@@ -51221,7 +51221,7 @@
       },
       "properties": {
         "id": 91407,
-        "name": "Pingshan (坪山)",
+        "name": "Ping Mountain (坪山)",
         "long_name": "坪山 Pingshan",
         "alternate_names": [
           "Pingshan",
@@ -51566,7 +51566,7 @@
       },
       "properties": {
         "id": 91418,
-        "name": "Laojie (老街)",
+        "name": "Lao Street (老街)",
         "long_name": "老街 Laojie",
         "alternate_names": [
           "Laojie",
@@ -52655,7 +52655,7 @@
       },
       "properties": {
         "id": 91574,
-        "name": "Lishan (丽山)",
+        "name": "Li Mountain (丽山)",
         "long_name": "丽山 Lishan",
         "alternate_names": [
           "Lishan",
@@ -52973,7 +52973,7 @@
       },
       "properties": {
         "id": 91582,
-        "name": "Huacheng (华城)",
+        "name": "Hua City (华城)",
         "long_name": "华城 Huacheng",
         "alternate_names": [
           "Huacheng",
@@ -53346,7 +53346,7 @@
       },
       "properties": {
         "id": 91445,
-        "name": "Xingdong (兴东)",
+        "name": "Xing East (兴东)",
         "long_name": "兴东 Xingdong",
         "alternate_names": [
           "Xingdong",
@@ -54077,7 +54077,7 @@
       },
       "properties": {
         "id": 91468,
-        "name": "Guancheng (观城)",
+        "name": "Guan City (观城)",
         "long_name": "观城 Guancheng",
         "alternate_names": [
           "Guancheng",
@@ -55253,7 +55253,7 @@
       },
       "properties": {
         "id": 91510,
-        "name": "Haicheng (海城)",
+        "name": "Hai City (海城)",
         "long_name": "海城 Haicheng",
         "alternate_names": [
           "Haicheng",
@@ -55308,7 +55308,7 @@
       },
       "properties": {
         "id": 91512,
-        "name": "Chanwan (铲湾)",
+        "name": "Chan Bay (铲湾)",
         "long_name": "铲湾 Chanwan",
         "alternate_names": [
           "Chanwan",
@@ -55392,7 +55392,7 @@
       },
       "properties": {
         "id": 91517,
-        "name": "Guangmingcheng (光明城)",
+        "name": "Guangming City (光明城)",
         "long_name": "光明城 Guangmingcheng",
         "alternate_names": [
           "Guangmingcheng",
@@ -55617,7 +55617,7 @@
       },
       "properties": {
         "id": 91525,
-        "name": "Qiushuishan (求水山)",
+        "name": "Qiushui Mountain (求水山)",
         "long_name": "求水山 Qiushuishan",
         "alternate_names": [
           "Qiushuishan",
@@ -55838,7 +55838,7 @@
       },
       "properties": {
         "id": 91533,
-        "name": "Hangcheng (航城)",
+        "name": "Hang City (航城)",
         "long_name": "航城 Hangcheng",
         "alternate_names": [
           "Hangcheng",
@@ -56526,7 +56526,7 @@
       },
       "properties": {
         "id": 91597,
-        "name": "Fengxiang Lu (凤翔路)",
+        "name": "Fengxiang Road (凤翔路)",
         "long_name": "凤翔路 Fengxiang Lu",
         "alternate_names": [
           "Fengxiang Lu",
@@ -56973,7 +56973,7 @@
       },
       "properties": {
         "id": 91613,
-        "name": "Beishan (北山)",
+        "name": "Bei Mountain (北山)",
         "long_name": "北山 Beishan",
         "alternate_names": [
           "Beishan",
@@ -57448,7 +57448,7 @@
       },
       "properties": {
         "id": 91631,
-        "name": "Fenghuangnanlu (凤凰南路)",
+        "name": "Fenghuang South Road (凤凰南路)",
         "long_name": "凤凰南路 Fenghuangnanlu",
         "alternate_names": [
           "Fenghuangnanlu",
@@ -57474,7 +57474,7 @@
       },
       "properties": {
         "id": 91632,
-        "name": "Huachengjie (花城街)",
+        "name": "Huacheng Street (花城街)",
         "long_name": "花城街 Huachengjie",
         "alternate_names": [
           "Huachengjie",
@@ -57583,7 +57583,7 @@
       },
       "properties": {
         "id": 91636,
-        "name": "Xiangshan (香山)",
+        "name": "Xiang Mountain (香山)",
         "long_name": "香山 Xiangshan",
         "alternate_names": [
           "Xiangshan",
@@ -57684,7 +57684,7 @@
       },
       "properties": {
         "id": 91640,
-        "name": "Zhongshan (中山)",
+        "name": "Zhong Mountain (中山)",
         "long_name": "中山 Zhongshan",
         "alternate_names": [
           "Zhongshan",
@@ -58023,7 +58023,7 @@
       },
       "properties": {
         "id": 91653,
-        "name": "Shenshandong (神山东)",
+        "name": "Shen Mountain East (神山东)",
         "long_name": "神山东 Shenshandong",
         "alternate_names": [
           "Shenshandong",
@@ -59133,7 +59133,7 @@
       },
       "properties": {
         "id": 91692,
-        "name": "Zhongshan (中山)",
+        "name": "Zhong Mountain (中山)",
         "long_name": "中山 Zhongshan",
         "alternate_names": [
           "Zhongshan",
@@ -59233,7 +59233,7 @@
       },
       "properties": {
         "id": 91696,
-        "name": "Tangjiawan (唐家湾)",
+        "name": "Tangjia Bay (唐家湾)",
         "long_name": "唐家湾",
         "alternate_names": [
           "Tangjiawan",
@@ -59283,7 +59283,7 @@
       },
       "properties": {
         "id": 91698,
-        "name": "Qianshan (前山)",
+        "name": "Qian Mountain (前山)",
         "long_name": "前山",
         "alternate_names": [
           "Qianshan",
@@ -59498,7 +59498,7 @@
       },
       "properties": {
         "id": 91706,
-        "name": "Houjie (厚街)",
+        "name": "Hou Street (厚街)",
         "long_name": "厚街",
         "alternate_names": [
           "Houjie",
@@ -59915,7 +59915,7 @@
       },
       "properties": {
         "id": 91722,
-        "name": "Shizimen (十字门)",
+        "name": "Shizi Gate (十字门)",
         "long_name": "十字门",
         "alternate_names": [
           "Shizimen",
@@ -60160,8 +60160,8 @@
       },
       "properties": {
         "id": 91731,
-        "name": "Guangzhou Lianhuashan (广州莲花山)",
-        "long_name": "Guangzhou Lianhuashan (广州莲花山)",
+        "name": "Guangzhou Lianhua Mountain (广州莲花山)",
+        "long_name": "Guangzhou Lianhua Mountain (广州莲花山)",
         "alternate_names": [
           "Lotus",
           "Lotus Station",
@@ -60645,7 +60645,7 @@
       },
       "properties": {
         "id": 91749,
-        "name": "Yunshan (云山)",
+        "name": "Yun Mountain (云山)",
         "long_name": "云山",
         "alternate_names": [
           "Yunshan",
@@ -60896,7 +60896,7 @@
       },
       "properties": {
         "id": 91758,
-        "name": "Shishan (鑽石山)",
+        "name": "Shi Mountain (鑽石山)",
         "long_name": "鑽石山 Diamond Hill",
         "alternate_names": [
           "Diamond Hill",
@@ -61086,7 +61086,7 @@
       },
       "properties": {
         "id": 91765,
-        "name": "Dinghushan (鼎湖山)",
+        "name": "Dinghu Mountain (鼎湖山)",
         "long_name": "鼎湖山",
         "alternate_names": [
           "Dinghushan",
@@ -61241,7 +61241,7 @@
       },
       "properties": {
         "id": 91771,
-        "name": "Qingcheng (清城)",
+        "name": "Qing City (清城)",
         "long_name": "清城",
         "alternate_names": [
           "Qingcheng",
@@ -61408,8 +61408,8 @@
       },
       "properties": {
         "id": 91777,
-        "name": "Shenshan (神山)",
-        "long_name": "Shenshan (神山)",
+        "name": "Shen Mountain (神山)",
+        "long_name": "Shen Mountain (神山)",
         "alternate_names": [
           "Shenshandong",
           "神山",
@@ -61553,7 +61553,7 @@
       },
       "properties": {
         "id": 91783,
-        "name": "Huachengjie (花城街)",
+        "name": "Huacheng Street (花城街)",
         "long_name": "花城街 Huachengjie",
         "alternate_names": [
           "Huachengjie",
@@ -61708,7 +61708,7 @@
       },
       "properties": {
         "id": 91789,
-        "name": "Maofengshan (帽峰山)",
+        "name": "Maofeng Mountain (帽峰山)",
         "long_name": "帽峰山",
         "alternate_names": [
           "Maofengshan",
@@ -61812,7 +61812,7 @@
       },
       "properties": {
         "id": 91793,
-        "name": "Keyun Lu (科韵路)",
+        "name": "Keyun Road (科韵路)",
         "long_name": "科韵路 Keyun Lu",
         "alternate_names": [
           "Keyun Lu",
@@ -62506,8 +62506,8 @@
       },
       "properties": {
         "id": 91818,
-        "name": "Jiangmen (江门)",
-        "long_name": "Jiangmen (江门)",
+        "name": "Jiang Gate (江门)",
+        "long_name": "Jiang Gate (江门)",
         "alternate_names": [
           "Jiangmen",
           "江门",
@@ -62642,8 +62642,8 @@
       },
       "properties": {
         "id": 91823,
-        "name": "Jingwan (井湾)",
-        "long_name": "Jingwan (井湾)",
+        "name": "Jing Bay (井湾)",
+        "long_name": "Jing Bay (井湾)",
         "alternate_names": [
           "Jingwan",
           "井湾",

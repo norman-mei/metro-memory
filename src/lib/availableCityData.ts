@@ -8,6 +8,7 @@ export const AVAILABLE_CITY_SLUGS = new Set([
   'austin',
   'bangkok',
   'barcelona',
+  'beijing',
   'berlin',
   'blackpool',
   'boston',

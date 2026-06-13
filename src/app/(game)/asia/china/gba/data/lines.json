@@ -7,8 +7,9 @@
     "textColor": "#FFFFFF",
     "order": 0,
     "icon": "asia/china/gba/HKEAL.png",
-    "badgeShape": "capsule",
-    "badgeFit": "contain"
+    "badgeShape": "wide",
+    "badgeFit": "contain",
+    "badgeAspectRatio": 2.2222
   },
   "TCL": {
     "name": "Tung Chung",
@@ -18,8 +19,9 @@
     "textColor": "#FFFFFF",
     "order": 1,
     "icon": "asia/china/gba/HKTCL.png",
-    "badgeShape": "capsule",
-    "badgeFit": "contain"
+    "badgeShape": "wide",
+    "badgeFit": "contain",
+    "badgeAspectRatio": 2.2222
   },
   "TML": {
     "name": "Tuen Ma",
@@ -29,8 +31,9 @@
     "textColor": "#FFFFFF",
     "order": 2,
     "icon": "asia/china/gba/HKTML.png",
-    "badgeShape": "capsule",
-    "badgeFit": "contain"
+    "badgeShape": "wide",
+    "badgeFit": "contain",
+    "badgeAspectRatio": 2.223
   },
   "NOL": {
     "name": "Northern Link",
@@ -49,8 +52,9 @@
     "textColor": "#FFFFFF",
     "order": 4,
     "icon": "asia/china/gba/HKKTL.png",
-    "badgeShape": "capsule",
-    "badgeFit": "contain"
+    "badgeShape": "wide",
+    "badgeFit": "contain",
+    "badgeAspectRatio": 2.2222
   },
   "TWL": {
     "name": "Tsuen Wan",
@@ -60,8 +64,9 @@
     "textColor": "#FFFFFF",
     "order": 5,
     "icon": "asia/china/gba/HKTWL.png",
-    "badgeShape": "capsule",
-    "badgeFit": "contain"
+    "badgeShape": "wide",
+    "badgeFit": "contain",
+    "badgeAspectRatio": 2.2222
   },
   "ISL": {
     "name": "Island",
@@ -71,8 +76,9 @@
     "textColor": "#FFFFFF",
     "order": 6,
     "icon": "asia/china/gba/HKISL.png",
-    "badgeShape": "capsule",
-    "badgeFit": "contain"
+    "badgeShape": "wide",
+    "badgeFit": "contain",
+    "badgeAspectRatio": 2.2222
   },
   "TKL": {
     "name": "Tseung Kwan O",
@@ -82,8 +88,9 @@
     "textColor": "#FFFFFF",
     "order": 7,
     "icon": "asia/china/gba/HKTKL.png",
-    "badgeShape": "capsule",
-    "badgeFit": "contain"
+    "badgeShape": "wide",
+    "badgeFit": "contain",
+    "badgeAspectRatio": 2.2222
   },
   "SIL": {
     "name": "South Island",
@@ -93,8 +100,9 @@
     "textColor": "#000000",
     "order": 8,
     "icon": "asia/china/gba/HKSIL.png",
-    "badgeShape": "capsule",
-    "badgeFit": "contain"
+    "badgeShape": "wide",
+    "badgeFit": "contain",
+    "badgeAspectRatio": 2.2222
   },
   "AEL": {
     "name": "Airport Express",
@@ -115,8 +123,9 @@
     "textColor": "#FFFFFF",
     "order": 10,
     "icon": "asia/china/gba/HKDRL.png",
-    "badgeShape": "capsule",
-    "badgeFit": "contain"
+    "badgeShape": "wide",
+    "badgeFit": "contain",
+    "badgeAspectRatio": 2.2222
   },
   "XRL": {
     "name": "Express Rail Link",
@@ -137,8 +146,9 @@
     "textColor": "#1D1D1B",
     "order": 12,
     "icon": "asia/china/gba/NgongPing360.png",
-    "badgeShape": "square",
-    "badgeFit": "contain"
+    "badgeShape": "wide",
+    "badgeFit": "contain",
+    "badgeAspectRatio": 1.9065
   },
   "HKAPMT1": {
     "name": "T1 Line",
@@ -364,8 +374,9 @@
     "textColor": "#000000",
     "order": 32,
     "icon": "asia/china/gba/GZLine1.png",
-    "badgeShape": "capsule",
-    "badgeFit": "contain"
+    "badgeShape": "wide",
+    "badgeFit": "contain",
+    "badgeAspectRatio": 1.9979
   },
   "gzline2": {
     "name": "Line 2",
@@ -375,8 +386,9 @@
     "textColor": "#FFFFFF",
     "order": 33,
     "icon": "asia/china/gba/GZLine2.png",
-    "badgeShape": "capsule",
-    "badgeFit": "contain"
+    "badgeShape": "wide",
+    "badgeFit": "contain",
+    "badgeAspectRatio": 1.9979
   },
   "gzline3": {
     "name": "Line 3",
@@ -386,8 +398,9 @@
     "textColor": "#000000",
     "order": 34,
     "icon": "asia/china/gba/GZLine3.png",
-    "badgeShape": "capsule",
-    "badgeFit": "contain"
+    "badgeShape": "wide",
+    "badgeFit": "contain",
+    "badgeAspectRatio": 1.9979
   },
   "gzline4": {
     "name": "Line 4",
@@ -397,8 +410,9 @@
     "textColor": "#FFFFFF",
     "order": 35,
     "icon": "asia/china/gba/GZLine4.png",
-    "badgeShape": "capsule",
-    "badgeFit": "contain"
+    "badgeShape": "wide",
+    "badgeFit": "contain",
+    "badgeAspectRatio": 1.9979
   },
   "gzline5": {
     "name": "Line 5",
@@ -408,8 +422,9 @@
     "textColor": "#FFFFFF",
     "order": 36,
     "icon": "asia/china/gba/GZLine5.png",
-    "badgeShape": "capsule",
-    "badgeFit": "contain"
+    "badgeShape": "wide",
+    "badgeFit": "contain",
+    "badgeAspectRatio": 1.9979
   },
   "gzline6": {
     "name": "Line 6",
@@ -419,8 +434,9 @@
     "textColor": "#FFFFFF",
     "order": 37,
     "icon": "asia/china/gba/GZLine6.png",
-    "badgeShape": "capsule",
-    "badgeFit": "contain"
+    "badgeShape": "wide",
+    "badgeFit": "contain",
+    "badgeAspectRatio": 1.9979
   },
   "gzline7": {
     "name": "Line 7",
@@ -430,8 +446,9 @@
     "textColor": "#000000",
     "order": 38,
     "icon": "asia/china/gba/GZLine7.png",
-    "badgeShape": "capsule",
-    "badgeFit": "contain"
+    "badgeShape": "wide",
+    "badgeFit": "contain",
+    "badgeAspectRatio": 1.9979
   },
   "gzline8": {
     "name": "Line 8",
@@ -441,8 +458,9 @@
     "textColor": "#FFFFFF",
     "order": 39,
     "icon": "asia/china/gba/GZLine8.png",
-    "badgeShape": "capsule",
-    "badgeFit": "contain"
+    "badgeShape": "wide",
+    "badgeFit": "contain",
+    "badgeAspectRatio": 1.9979
   },
   "gzline9": {
     "name": "Line 9",
@@ -452,8 +470,9 @@
     "textColor": "#000000",
     "order": 40,
     "icon": "asia/china/gba/GZLine9.png",
-    "badgeShape": "capsule",
-    "badgeFit": "contain"
+    "badgeShape": "wide",
+    "badgeFit": "contain",
+    "badgeAspectRatio": 1.9979
   },
   "gzline10": {
     "name": "Line 10",
@@ -463,8 +482,9 @@
     "textColor": "#FFFFFF",
     "order": 41,
     "icon": "asia/china/gba/GZLine10.png",
-    "badgeShape": "capsule",
-    "badgeFit": "contain"
+    "badgeShape": "wide",
+    "badgeFit": "contain",
+    "badgeAspectRatio": 1.9979
   },
   "gzline11": {
     "name": "Line 11",
@@ -474,8 +494,9 @@
     "textColor": "#000000",
     "order": 42,
     "icon": "asia/china/gba/GZLine11.png",
-    "badgeShape": "capsule",
-    "badgeFit": "contain"
+    "badgeShape": "wide",
+    "badgeFit": "contain",
+    "badgeAspectRatio": 1.9979
   },
   "gzline12": {
     "name": "Line 12",
@@ -485,8 +506,9 @@
     "textColor": "#FFFFFF",
     "order": 43,
     "icon": "asia/china/gba/GZLine12.png",
-    "badgeShape": "capsule",
-    "badgeFit": "contain"
+    "badgeShape": "wide",
+    "badgeFit": "contain",
+    "badgeAspectRatio": 1.9979
   },
   "gzline13": {
     "name": "Line 13",
@@ -496,8 +518,9 @@
     "textColor": "#FFFFFF",
     "order": 44,
     "icon": "asia/china/gba/GZLine13.png",
-    "badgeShape": "capsule",
-    "badgeFit": "contain"
+    "badgeShape": "wide",
+    "badgeFit": "contain",
+    "badgeAspectRatio": 1.9979
   },
   "gzline14": {
     "name": "Line 14",
@@ -507,8 +530,9 @@
     "textColor": "#FFFFFF",
     "order": 45,
     "icon": "asia/china/gba/GZLine14.png",
-    "badgeShape": "capsule",
-    "badgeFit": "contain"
+    "badgeShape": "wide",
+    "badgeFit": "contain",
+    "badgeAspectRatio": 1.9979
   },
   "gzline18": {
     "name": "Line 18",
@@ -518,8 +542,9 @@
     "textColor": "#ffffff",
     "order": 46,
     "icon": "asia/china/gba/GZLine18.png",
-    "badgeShape": "capsule",
-    "badgeFit": "contain"
+    "badgeShape": "wide",
+    "badgeFit": "contain",
+    "badgeAspectRatio": 1.9979
   },
   "gzline21": {
     "name": "Line 21",
@@ -529,8 +554,9 @@
     "textColor": "#ffffff",
     "order": 47,
     "icon": "asia/china/gba/GZLine21.png",
-    "badgeShape": "capsule",
-    "badgeFit": "contain"
+    "badgeShape": "wide",
+    "badgeFit": "contain",
+    "badgeAspectRatio": 1.9979
   },
   "gzline22": {
     "name": "Line 22",
@@ -540,8 +566,9 @@
     "textColor": "#ffffff",
     "order": 48,
     "icon": "asia/china/gba/GZLine22.png",
-    "badgeShape": "capsule",
-    "badgeFit": "contain"
+    "badgeShape": "wide",
+    "badgeFit": "contain",
+    "badgeAspectRatio": 1.9979
   },
   "gzapm": {
     "name": "Zhujiang New Town Automated People Mover System",
@@ -551,8 +578,9 @@
     "textColor": "#FFFFFF",
     "order": 49,
     "icon": "asia/china/gba/GZAPM.png",
-    "badgeShape": "capsule",
-    "badgeFit": "contain"
+    "badgeShape": "wide",
+    "badgeFit": "contain",
+    "badgeAspectRatio": 1.9979
   },
   "gzt_thp1": {
     "name": "Huangpu Tram Line 1",
@@ -589,8 +617,9 @@
     "textColor": "#000000",
     "order": 53,
     "icon": "asia/china/gba/Guangfo.png",
-    "badgeShape": "capsule",
-    "badgeFit": "contain"
+    "badgeShape": "wide",
+    "badgeFit": "contain",
+    "badgeAspectRatio": 1.9979
   },
   "fs_line2": {
     "name": "Line 2",
@@ -636,8 +665,9 @@
     "textColor": "#FFFFFF",
     "order": 100,
     "icon": "asia/china/gba/SZLine1.png",
-    "badgeShape": "capsule",
-    "badgeFit": "contain"
+    "badgeShape": "wide",
+    "badgeFit": "contain",
+    "badgeAspectRatio": 1.9029
   },
   "szline2": {
     "name": "Line 2",
@@ -647,8 +677,9 @@
     "textColor": "#FFFFFF",
     "order": 101,
     "icon": "asia/china/gba/SZLine2.png",
-    "badgeShape": "capsule",
-    "badgeFit": "contain"
+    "badgeShape": "wide",
+    "badgeFit": "contain",
+    "badgeAspectRatio": 1.9029
   },
   "szline3": {
     "name": "Line 3",
@@ -658,8 +689,9 @@
     "textColor": "#FFFFFF",
     "order": 102,
     "icon": "asia/china/gba/SZLine3.png",
-    "badgeShape": "capsule",
-    "badgeFit": "contain"
+    "badgeShape": "wide",
+    "badgeFit": "contain",
+    "badgeAspectRatio": 1.9029
   },
   "szline4": {
     "name": "Line 4",
@@ -669,8 +701,9 @@
     "textColor": "#FFFFFF",
     "order": 103,
     "icon": "asia/china/gba/SZLine4.png",
-    "badgeShape": "capsule",
-    "badgeFit": "contain"
+    "badgeShape": "wide",
+    "badgeFit": "contain",
+    "badgeAspectRatio": 1.9029
   },
   "szline5": {
     "name": "Line 5",
@@ -680,8 +713,9 @@
     "textColor": "#FFFFFF",
     "order": 104,
     "icon": "asia/china/gba/SZLine5.png",
-    "badgeShape": "capsule",
-    "badgeFit": "contain"
+    "badgeShape": "wide",
+    "badgeFit": "contain",
+    "badgeAspectRatio": 1.9029
   },
   "szline6": {
     "name": "Line 6",
@@ -691,8 +725,9 @@
     "textColor": "#FFFFFF",
     "order": 105,
     "icon": "asia/china/gba/SZLine6.png",
-    "badgeShape": "capsule",
-    "badgeFit": "contain"
+    "badgeShape": "wide",
+    "badgeFit": "contain",
+    "badgeAspectRatio": 1.9029
   },
   "szline6b": {
     "name": "Line 6B",
@@ -711,8 +746,9 @@
     "textColor": "#FFFFFF",
     "order": 107,
     "icon": "asia/china/gba/SZLine7.png",
-    "badgeShape": "capsule",
-    "badgeFit": "contain"
+    "badgeShape": "wide",
+    "badgeFit": "contain",
+    "badgeAspectRatio": 1.9029
   },
   "szline8": {
     "name": "Line 8",
@@ -722,8 +758,9 @@
     "textColor": "#FFFFFF",
     "order": 108,
     "icon": "asia/china/gba/SZLine8.png",
-    "badgeShape": "capsule",
-    "badgeFit": "contain"
+    "badgeShape": "wide",
+    "badgeFit": "contain",
+    "badgeAspectRatio": 1.9029
   },
   "szline9": {
     "name": "Line 9",
@@ -733,8 +770,9 @@
     "textColor": "#FFFFFF",
     "order": 109,
     "icon": "asia/china/gba/SZLine9.png",
-    "badgeShape": "capsule",
-    "badgeFit": "contain"
+    "badgeShape": "wide",
+    "badgeFit": "contain",
+    "badgeAspectRatio": 1.9029
   },
   "szline10": {
     "name": "Line 10",
@@ -744,8 +782,9 @@
     "textColor": "#FFFFFF",
     "order": 110,
     "icon": "asia/china/gba/SZLine10.png",
-    "badgeShape": "capsule",
-    "badgeFit": "contain"
+    "badgeShape": "wide",
+    "badgeFit": "contain",
+    "badgeAspectRatio": 1.9029
   },
   "szline11": {
     "name": "Line 11",
@@ -755,8 +794,9 @@
     "textColor": "#FFFFFF",
     "order": 111,
     "icon": "asia/china/gba/SZLine11.png",
-    "badgeShape": "capsule",
-    "badgeFit": "contain"
+    "badgeShape": "wide",
+    "badgeFit": "contain",
+    "badgeAspectRatio": 1.9029
   },
   "szline12": {
     "name": "Line 12",
@@ -766,8 +806,9 @@
     "textColor": "#FFFFFF",
     "order": 112,
     "icon": "asia/china/gba/SZLine12.png",
-    "badgeShape": "capsule",
-    "badgeFit": "contain"
+    "badgeShape": "wide",
+    "badgeFit": "contain",
+    "badgeAspectRatio": 1.9029
   },
   "szline13": {
     "name": "Line 13",
@@ -777,8 +818,9 @@
     "textColor": "#FFFFFF",
     "order": 113,
     "icon": "asia/china/gba/SZLine13.png",
-    "badgeShape": "capsule",
-    "badgeFit": "contain"
+    "badgeShape": "wide",
+    "badgeFit": "contain",
+    "badgeAspectRatio": 1.9029
   },
   "szline14": {
     "name": "Line 14",
@@ -788,8 +830,9 @@
     "textColor": "#FFFFFF",
     "order": 114,
     "icon": "asia/china/gba/SZLine14.png",
-    "badgeShape": "capsule",
-    "badgeFit": "contain"
+    "badgeShape": "wide",
+    "badgeFit": "contain",
+    "badgeAspectRatio": 1.9029
   },
   "szline15": {
     "name": "Line 15",
@@ -799,8 +842,9 @@
     "textColor": "#FFFFFF",
     "order": 115,
     "icon": "asia/china/gba/SZLine15.png",
-    "badgeShape": "capsule",
-    "badgeFit": "contain"
+    "badgeShape": "wide",
+    "badgeFit": "contain",
+    "badgeAspectRatio": 1.9029
   },
   "szline16": {
     "name": "Line 16",
@@ -810,8 +854,9 @@
     "textColor": "#FFFFFF",
     "order": 116,
     "icon": "asia/china/gba/SZLine16.png",
-    "badgeShape": "capsule",
-    "badgeFit": "contain"
+    "badgeShape": "wide",
+    "badgeFit": "contain",
+    "badgeAspectRatio": 1.9029
   },
   "szline17": {
     "name": "Line 17",
@@ -830,8 +875,9 @@
     "textColor": "#FFFFFF",
     "order": 118,
     "icon": "asia/china/gba/SZLine20.png",
-    "badgeShape": "capsule",
-    "badgeFit": "contain"
+    "badgeShape": "wide",
+    "badgeFit": "contain",
+    "badgeAspectRatio": 1.9029
   },
   "szline25": {
     "name": "Line 25",
@@ -1028,10 +1074,11 @@
     "progressOutlineColor": "#C5B358",
     "backgroundColor": "#D9DEE4",
     "textColor": "#000000",
-    "badgeShape": "square",
+    "badgeShape": "wide",
     "badgeFit": "contain",
     "order": 139,
-    "icon": "asia/china/gba/Wynn.png"
+    "icon": "asia/china/gba/Wynn.png",
+    "badgeAspectRatio": 2.041
   },
   "mab_guia": {
     "name": "Guia Hill Cable Car",

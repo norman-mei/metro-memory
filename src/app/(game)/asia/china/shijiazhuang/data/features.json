@@ -34,7 +34,7 @@
       },
       "properties": {
         "id": 2,
-        "name": "Shiguangjie (时光街)",
+        "name": "Shiguang Street (时光街)",
         "alternate_names": [
           "时光街",
           "時光街",
@@ -57,7 +57,7 @@
       },
       "properties": {
         "id": 3,
-        "name": "Changchengqiao (长城桥)",
+        "name": "Changcheng Bridge (长城桥)",
         "alternate_names": [
           "长城桥",
           "長城橋",
@@ -126,7 +126,7 @@
       },
       "properties": {
         "id": 6,
-        "name": "Xinbaiguangchang (新百广场)",
+        "name": "Xinbai Square (新百广场)",
         "alternate_names": [
           "新百广场",
           "新百廣場",
@@ -149,7 +149,7 @@
       },
       "properties": {
         "id": 7,
-        "name": "Jiefangguangchang (解放广场)",
+        "name": "Jiefang Square (解放广场)",
         "alternate_names": [
           "解放广场",
           "解放廣場",
@@ -172,7 +172,7 @@
       },
       "properties": {
         "id": 8,
-        "name": "Ping'andajie (平安大街)",
+        "name": "Ping'an Avenue (平安大街)",
         "alternate_names": [
           "平安大街",
           "ping'andajie",
@@ -197,7 +197,7 @@
       },
       "properties": {
         "id": 9,
-        "name": "Beiguoshangcheng (北国商城)",
+        "name": "Beiguo Mall (北国商城)",
         "alternate_names": [
           "北国商城",
           "北國商城",
@@ -310,7 +310,7 @@
       },
       "properties": {
         "id": 14,
-        "name": "Zhaohuiqiao (朝晖桥)",
+        "name": "Zhaohui Bridge (朝晖桥)",
         "alternate_names": [
           "朝晖桥",
           "朝暉橋",
@@ -377,7 +377,7 @@
       },
       "properties": {
         "id": 17,
-        "name": "Huojuguangchang (火炬广场)",
+        "name": "Huoju Square (火炬广场)",
         "alternate_names": [
           "火炬广场",
           "火炬廣場",
@@ -446,7 +446,7 @@
       },
       "properties": {
         "id": 20,
-        "name": "Xiaohedadao (洨河大道)",
+        "name": "Xiaohe Avenue (洨河大道)",
         "alternate_names": [
           "洨河大道",
           "Xiaohedadao",
@@ -514,7 +514,7 @@
       },
       "properties": {
         "id": 23,
-        "name": "Huizhanzhongxin (会展中心)",
+        "name": "Exhibition Center (会展中心)",
         "alternate_names": [
           "会展中心",
           "會展中心",
@@ -537,7 +537,7 @@
       },
       "properties": {
         "id": 24,
-        "name": "Shangwuzhongxin (商务中心)",
+        "name": "Shangwu Center (商务中心)",
         "alternate_names": [
           "商务中心",
           "商務中心",
@@ -629,7 +629,7 @@
       },
       "properties": {
         "id": 28,
-        "name": "Zhuangke · Tiedaodaxue (庄窠·铁道大学)",
+        "name": "Zhuangke · Tiedao University (庄窠·铁道大学)",
         "alternate_names": [
           "庄窠·铁道大学",
           "莊窠·鐵道大學",
@@ -678,7 +678,7 @@
       },
       "properties": {
         "id": 30,
-        "name": "Jianheqiao (建和桥)",
+        "name": "Jianhe Bridge (建和桥)",
         "alternate_names": [
           "建和桥",
           "建和橋",
@@ -701,7 +701,7 @@
       },
       "properties": {
         "id": 31,
-        "name": "Chang'angongyuan (长安公园)",
+        "name": "Chang'an Park (长安公园)",
         "alternate_names": [
           "长安公园",
           "長安公園",
@@ -727,7 +727,7 @@
       },
       "properties": {
         "id": 32,
-        "name": "Beiguoshangcheng (北国商城)",
+        "name": "Beiguo Mall (北国商城)",
         "alternate_names": [
           "北国商城",
           "北國商城",
@@ -750,7 +750,7 @@
       },
       "properties": {
         "id": 33,
-        "name": "Yuhualu (裕华路)",
+        "name": "Yuhua Road (裕华路)",
         "alternate_names": [
           "裕华路",
           "裕華路",
@@ -773,7 +773,7 @@
       },
       "properties": {
         "id": 34,
-        "name": "Huaizhonglu (槐中路)",
+        "name": "Huai Middle Road (槐中路)",
         "alternate_names": [
           "槐中路",
           "huaizhonglu",
@@ -795,7 +795,7 @@
       },
       "properties": {
         "id": 35,
-        "name": "Ouyungongyuan (欧韵公园)",
+        "name": "Ouyun Park (欧韵公园)",
         "alternate_names": [
           "欧韵公园",
           "歐韻公園",
@@ -932,7 +932,7 @@
       },
       "properties": {
         "id": 41,
-        "name": "Jiahualu (嘉华路)",
+        "name": "Jiahua Road (嘉华路)",
         "alternate_names": [
           "嘉华路",
           "嘉華路",
@@ -1068,7 +1068,7 @@
       },
       "properties": {
         "id": 47,
-        "name": "Xinbaiguangchang (新百广场)",
+        "name": "Xinbai Square (新百广场)",
         "alternate_names": [
           "新百广场",
           "新百廣場",
@@ -1091,7 +1091,7 @@
       },
       "properties": {
         "id": 48,
-        "name": "Dongli (东里)",
+        "name": "Dong Lane (东里)",
         "alternate_names": [
           "东里",
           "東里",
@@ -1114,7 +1114,7 @@
       },
       "properties": {
         "id": 49,
-        "name": "Huai'anqiao (槐安桥)",
+        "name": "Huai'an Bridge (槐安桥)",
         "alternate_names": [
           "槐安桥",
           "槐安橋",
@@ -1186,7 +1186,7 @@
       },
       "properties": {
         "id": 52,
-        "name": "Huitonglu (汇通路)",
+        "name": "Huitong Road (汇通路)",
         "alternate_names": [
           "汇通路",
           "匯通路",
@@ -1321,7 +1321,7 @@
       },
       "properties": {
         "id": 58,
-        "name": "Dong'erhuannanlu (东二环南路)",
+        "name": "Dong'erhuan South Road (东二环南路)",
         "alternate_names": [
           "东二环南路",
           "東二環南路",
@@ -1413,7 +1413,7 @@
       },
       "properties": {
         "id": 62,
-        "name": "Taihangnandajie (太行南大街)",
+        "name": "Taihangnan Avenue (太行南大街)",
         "alternate_names": [
           "太行南大街",
           "taihangnandajie",

@@ -117,7 +117,8 @@
     "progressOutlineColor": "#025937",
     "order": 10,
     "icon": "asia/thailand/bangkok/AirportAPM.png",
-    "badgeShape": "square",
-    "badgeFit": "contain"
+    "badgeShape": "wide",
+    "badgeFit": "contain",
+    "badgeAspectRatio": 1.4362
   }
 }

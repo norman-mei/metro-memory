@@ -84,7 +84,7 @@
       },
       "properties": {
         "id": 4,
-        "name": "Xinqiao (新桥)",
+        "name": "Xin Bridge (新桥)",
         "alternate_names": [
           "新桥",
           "新橋",
@@ -346,7 +346,7 @@
       },
       "properties": {
         "id": 15,
-        "name": "Boai Lu (博爱路)",
+        "name": "Boai Road (博爱路)",
         "alternate_names": [
           "博爱路",
           "博愛路",
@@ -394,7 +394,7 @@
       },
       "properties": {
         "id": 17,
-        "name": "Tongjiqiao (同济桥)",
+        "name": "Tongji Bridge (同济桥)",
         "alternate_names": [
           "同济桥",
           "同濟橋",
@@ -442,7 +442,7 @@
       },
       "properties": {
         "id": 19,
-        "name": "Chashan (茶山)",
+        "name": "Cha Mountain (茶山)",
         "alternate_names": [
           "茶山",
           "Chashan",
@@ -465,7 +465,7 @@
       },
       "properties": {
         "id": 20,
-        "name": "Juhu Lu (聚湖路)",
+        "name": "Juhu Road (聚湖路)",
         "alternate_names": [
           "聚湖路",
           "Juhu Lu",
@@ -535,7 +535,7 @@
       },
       "properties": {
         "id": 23,
-        "name": "Changhong Lu (长虹路)",
+        "name": "Changhong Road (长虹路)",
         "alternate_names": [
           "长虹路",
           "長虹路",
@@ -559,7 +559,7 @@
       },
       "properties": {
         "id": 24,
-        "name": "Yanzheng Dadao (延政大道)",
+        "name": "Yanzheng Avenue (延政大道)",
         "alternate_names": [
           "延政大道",
           "Yanzheng Dadao",
@@ -582,7 +582,7 @@
       },
       "properties": {
         "id": 25,
-        "name": "Kejiaocheng Bei (科教城北)",
+        "name": "Kejiao City North (科教城北)",
         "alternate_names": [
           "科教城北",
           "Kejiaocheng Bei",
@@ -605,7 +605,7 @@
       },
       "properties": {
         "id": 26,
-        "name": "Kejiaocheng Nan (科教城南)",
+        "name": "Kejiao City South (科教城南)",
         "alternate_names": [
           "科教城南",
           "Kejiaocheng Nan",
@@ -652,7 +652,7 @@
       },
       "properties": {
         "id": 28,
-        "name": "Yanghu Lu (阳湖路)",
+        "name": "Yanghu Road (阳湖路)",
         "alternate_names": [
           "阳湖路",
           "陽湖路",
@@ -723,7 +723,7 @@
       },
       "properties": {
         "id": 31,
-        "name": "Haitang Lu (海棠路)",
+        "name": "Haitang Road (海棠路)",
         "alternate_names": [
           "海棠路",
           "Haitang Lu",
@@ -817,7 +817,7 @@
       },
       "properties": {
         "id": 35,
-        "name": "Nandajie (南大街)",
+        "name": "South Avenue (南大街)",
         "alternate_names": [
           "南大街",
           "Nandajie",
@@ -960,7 +960,7 @@
       },
       "properties": {
         "id": 41,
-        "name": "Qingyang Lu (青洋路)",
+        "name": "Qingyang Road (青洋路)",
         "alternate_names": [
           "青洋路",
           "Qingyang Lu",
@@ -1006,7 +1006,7 @@
       },
       "properties": {
         "id": 43,
-        "name": "Lucheng (潞城)",
+        "name": "Lu City (潞城)",
         "alternate_names": [
           "潞城",
           "Lucheng",
@@ -1029,7 +1029,7 @@
       },
       "properties": {
         "id": 44,
-        "name": "Wuyi Lu (五一路)",
+        "name": "Wuyi Road (五一路)",
         "alternate_names": [
           "五一路",
           "Wuyi Lu",
@@ -1052,7 +1052,7 @@
       },
       "properties": {
         "id": 45,
-        "name": "Lanyuewan (揽月湾)",
+        "name": "Lanyue Bay (揽月湾)",
         "alternate_names": [
           "揽月湾",
           "攬月灣",
@@ -1689,7 +1689,7 @@
       },
       "properties": {
         "id": 72,
-        "name": "Kejiaocheng Dong (科教城东)",
+        "name": "Kejiao City East (科教城东)",
         "alternate_names": [
           "科教城东",
           "科教城東",
@@ -1713,7 +1713,7 @@
       },
       "properties": {
         "id": 73,
-        "name": "Tianrun Dadao (天润大道)",
+        "name": "Tianrun Avenue (天润大道)",
         "alternate_names": [
           "天润大道",
           "天潤大道",
