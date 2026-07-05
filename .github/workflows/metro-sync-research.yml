@@ -36,4 +36,7 @@ jobs:
           AUTOMATION_GITHUB_REPO: ${{ github.repository }}
           METRO_SYNC_AUTO_APPLY_GREEN: '1'
           SERPAPI_API_KEY: ${{ secrets.SERPAPI_API_KEY }}
+          AUTOMATION_LLM_API_KEY: ${{ secrets.AUTOMATION_LLM_API_KEY }}
+          AUTOMATION_LLM_MODEL: ${{ vars.AUTOMATION_LLM_MODEL }}
+          AUTOMATION_LLM_BASE_URL: ${{ vars.AUTOMATION_LLM_BASE_URL }}
         run: npm run metro-sync:research-loop -- --max-rounds=8 --limit=8
