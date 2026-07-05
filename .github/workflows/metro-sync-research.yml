@@ -27,11 +27,13 @@ jobs:
       - name: Apply Prisma migrations
         env:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          DIRECT_URL: ${{ secrets.DIRECT_URL }}
         run: npx prisma migrate deploy
 
       - name: Process due follow-up research runs
         env:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          DIRECT_URL: ${{ secrets.DIRECT_URL }}
           GITHUB_TOKEN: ${{ github.token }}
           AUTOMATION_GITHUB_REPO: ${{ github.repository }}
           METRO_SYNC_AUTO_APPLY_GREEN: '1'

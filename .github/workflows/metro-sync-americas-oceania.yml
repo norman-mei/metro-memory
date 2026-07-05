@@ -27,6 +27,7 @@ jobs:
       - name: Apply Prisma migrations
         env:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          DIRECT_URL: ${{ secrets.DIRECT_URL }}
         run: npx prisma migrate deploy
 
       - name: Run metro sync
@@ -36,6 +37,7 @@ jobs:
           METRO_SYNC_AUTO_APPLY_GREEN: '1'
           METRO_SYNC_DEEP_RESEARCH_MODE: batch
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          DIRECT_URL: ${{ secrets.DIRECT_URL }}
           GITHUB_TOKEN: ${{ github.token }}
           AUTOMATION_GITHUB_REPO: ${{ github.repository }}
           SERPAPI_API_KEY: ${{ secrets.SERPAPI_API_KEY }}
@@ -68,11 +70,13 @@ jobs:
       - name: Apply Prisma migrations
         env:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          DIRECT_URL: ${{ secrets.DIRECT_URL }}
         run: npx prisma migrate deploy
 
       - name: Drain follow-up research queue
         env:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          DIRECT_URL: ${{ secrets.DIRECT_URL }}
           GITHUB_TOKEN: ${{ github.token }}
           AUTOMATION_GITHUB_REPO: ${{ github.repository }}
           METRO_SYNC_AUTO_APPLY_GREEN: '1'
