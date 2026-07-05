@@ -1,0 +1,62 @@
+{
+  "Metro A": {
+    "name": "Line A",
+    "color": "#f36c21",
+    "backgroundColor": "#f36c21",
+    "textColor": "#000000",
+    "icon": "europe/italy/rome/A.png",
+    "order": 0,
+    "badgeShape": "square",
+    "badgeFit": "contain"
+  },
+  "Metro B": {
+    "name": "Line B",
+    "color": "#0071bb",
+    "backgroundColor": "#0071bb",
+    "textColor": "#000000",
+    "icon": "europe/italy/rome/B.png",
+    "order": 1,
+    "badgeShape": "square",
+    "badgeFit": "contain"
+  },
+  "Metro B1": {
+    "name": "Line B1",
+    "color": "#0071bb",
+    "backgroundColor": "#0071bb",
+    "textColor": "#000000",
+    "icon": "europe/italy/rome/B1.png",
+    "order": 2,
+    "badgeShape": "square",
+    "badgeFit": "contain"
+  },
+  "Metro C": {
+    "name": "Line C",
+    "color": "#008751",
+    "backgroundColor": "#008751",
+    "textColor": "#000000",
+    "icon": "europe/italy/rome/C.png",
+    "order": 3,
+    "badgeShape": "square",
+    "badgeFit": "contain"
+  },
+  "Roma-Viterbo": {
+    "name": "Rome–Civita Castellana–Viterbo railway",
+    "color": "#0eb248",
+    "backgroundColor": "#0eb248",
+    "textColor": "#000000",
+    "icon": "europe/italy/rome/romaviterbo.png",
+    "order": 4,
+    "badgeShape": "square",
+    "badgeFit": "contain"
+  },
+  "Roma-Lido": {
+    "name": "Metromare",
+    "color": "#35cdfb",
+    "backgroundColor": "#35cdfb",
+    "textColor": "#000000",
+    "icon": "europe/italy/rome/metromare.png",
+    "order": 5,
+    "badgeShape": "square",
+    "badgeFit": "contain"
+  }
+}

@@ -10,7 +10,7 @@ export default function Rome() {
   return (
     <Provider value={config}>
       <Main className="min-h-screen">
-        <CityDataGamePage slug="Rome" />
+        <CityDataGamePage slug="rome" />
       </Main>
     </Provider>
   )

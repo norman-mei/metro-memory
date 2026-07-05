@@ -12,6 +12,11 @@ import {
   getFlagEmojiFromCountryCode,
 } from '@/lib/countryFlags'
 import { STATION_TOTALS } from '@/lib/stationTotals'
+import {
+  UNAVAILABLE_CITY_ACCESS_EVENT,
+  isPreviewUnlockableCity,
+  readUnavailableCityAccess,
+} from '@/lib/unavailableCityAccess'
 import classNames from 'classnames'
 import clsx from 'clsx'
 import Image from 'next/image'
@@ -141,6 +146,7 @@ const CityCard = ({
   const [statsSlug, setStatsSlug] = useState<string | null>(null)
   const [statsPath, setStatsPath] = useState<string | null>(null)
   const [isHovered, setIsHovered] = useState(false)
+  const [hasUnavailableCityAccess, setHasUnavailableCityAccess] = useState(false)
   const slug = useMemo(() => getSlugFromLink(city.link), [city.link])
   const cityPath = useMemo(() => getPathFromLink(city.link), [city.link])
   const { progressSummaries } = useAuth()
@@ -222,11 +228,27 @@ const CityCard = ({
     setIsHovered(false)
   }, [slug])
 
-  const isUnavailableCity = slug ? UNAVAILABLE_CITY_SLUGS.has(slug) : false
-  const showComingSoon = isUnavailableCity && isHovered
+  useEffect(() => {
+    if (typeof window === 'undefined') {
+      return
+    }
+
+    const refreshAccess = () => setHasUnavailableCityAccess(readUnavailableCityAccess())
+    refreshAccess()
+    window.addEventListener('storage', refreshAccess)
+    window.addEventListener(UNAVAILABLE_CITY_ACCESS_EVENT, refreshAccess)
+    return () => {
+      window.removeEventListener('storage', refreshAccess)
+      window.removeEventListener(UNAVAILABLE_CITY_ACCESS_EVENT, refreshAccess)
+    }
+  }, [])
+
   const cityDisabled = isCityDisabledFlag(city)
-  const isCityDisabled = cityDisabled || isUnavailableCity
-  const displayAsDisabled = cityDisabled || showComingSoon
+  const previewUnlocked = isPreviewUnlockableCity(slug) && hasUnavailableCityAccess
+  const unavailableCityLocked = slug ? UNAVAILABLE_CITY_SLUGS.has(slug) && !previewUnlocked : false
+  const showComingSoon = unavailableCityLocked && isHovered
+  const isCityDisabled = (cityDisabled || unavailableCityLocked) && !previewUnlocked
+  const displayAsDisabled = isCityDisabled || showComingSoon
   const isMiniCity = isMiniCityProp ?? isMiniCitySlug(slug)
   const supportsMiniCityDeck =
     miniCities.length > 0 && !isCityDisabled && (variant === 'comfortable' || variant === 'compact')
@@ -445,7 +467,7 @@ const CityCard = ({
       ? { color: variant === 'cover' ? '#d4d4d8' : '#a1a1aa' }
       : undefined
     const headingContent = showComingSoon ? t('comingSoonLabel') : city.name
-    const comingSoonSuffix = cityDisabled && !showComingSoon ? ` ${t('comingSoonSuffix')}` : ''
+    const comingSoonSuffix = isCityDisabled && !showComingSoon ? ` ${t('comingSoonSuffix')}` : ''
 
     if (variant === 'cover') {
       return (
@@ -784,7 +806,7 @@ const CityCard = ({
   const content = renderBody()
 
   const handleHover = (value: boolean) => {
-    if (isUnavailableCity) {
+    if (unavailableCityLocked) {
       setIsHovered(value)
     }
   }
@@ -909,7 +931,7 @@ const CityCard = ({
           onMouseLeave={handleCardMouseLeave}
           onClick={handleMapCardClick}
           onKeyDown={handleMapCardKeyDown}
-          aria-disabled={cityDisabled}
+          aria-disabled={isCityDisabled}
         >
           {showRightConnector && (
             <span
@@ -954,7 +976,7 @@ const CityCard = ({
         className={cardWrapperClasses}
         onMouseEnter={handleCardMouseEnter}
         onMouseLeave={handleCardMouseLeave}
-        aria-disabled={cityDisabled}
+        aria-disabled={isCityDisabled}
       >
         {showRightConnector && !isMapCardVariant && (
           <span

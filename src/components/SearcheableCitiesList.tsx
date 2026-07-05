@@ -43,6 +43,11 @@ import { formatDisplayCountryLabel } from '@/lib/countryNameDisplay'
 import { GLOBAL_ACHIEVEMENTS } from '@/lib/globalAchievements'
 import { resolveI18nLocaleCode } from '@/lib/i18n'
 import {
+  UNAVAILABLE_CITY_ACCESS_EVENT,
+  isPreviewUnlockableCity,
+  readUnavailableCityAccess,
+} from '@/lib/unavailableCityAccess'
+import {
   MINI_CITIES,
   type MiniCityDefinition,
   type MiniCityStatsEntry,
@@ -750,6 +755,7 @@ const SearcheableCitiesList = ({
   )
   const [countryFocus, setCountryFocus] = useState<{ name: string; token: number } | null>(null)
   const [favoriteSlugs, setFavoriteSlugs] = useState<Set<string>>(new Set())
+  const [hasUnavailableCityAccess, setHasUnavailableCityAccess] = useState(false)
   const [favoriteToast, setFavoriteToast] = useState<{ message: string; ts: number } | null>(null)
   const viewPrefsHydratedRef = useRef(false)
   const mapProviderHydratedRef = useRef(false)
@@ -821,6 +827,33 @@ const SearcheableCitiesList = ({
     return () => window.clearTimeout(timeout)
   }, [favoriteToast])
 
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return
+
+    const refreshAccess = () => setHasUnavailableCityAccess(readUnavailableCityAccess())
+    refreshAccess()
+    window.addEventListener('storage', refreshAccess)
+    window.addEventListener(UNAVAILABLE_CITY_ACCESS_EVENT, refreshAccess)
+    return () => {
+      window.removeEventListener('storage', refreshAccess)
+      window.removeEventListener(UNAVAILABLE_CITY_ACCESS_EVENT, refreshAccess)
+    }
+  }, [])
+
+  const isPreviewCityUnlocked = useCallback(
+    (city: Pick<ICity, 'link'>) => {
+      const slug = getSlugFromLink(city.link)
+      return isPreviewUnlockableCity(slug) && hasUnavailableCityAccess
+    },
+    [hasUnavailableCityAccess],
+  )
+
+  const isCityDisabledForPreview = useCallback(
+    (city: Pick<ICity, 'disabled' | 'hideInStats' | 'link'>) =>
+      isCityDisabledFlag(city) && !isPreviewCityUnlocked(city),
+    [isPreviewCityUnlocked],
+  )
   const filteredCities = useMemo(
     () =>
       cities.filter((city) => {
@@ -897,7 +930,7 @@ const SearcheableCitiesList = ({
   const isMapView = cityViewMode === 'globe' || cityViewMode === 'map'
   const cityAchievementCatalog = useMemo(() => {
     return enrichedCities
-      .filter((city) => !isCityDisabledFlag(city))
+      .filter((city) => !isCityDisabledForPreview(city))
       .map((city, index) => {
         const slug = getSlugFromLink(city.link)
         if (!slug) return null
@@ -2678,7 +2711,7 @@ const SearcheableCitiesList = ({
         const { latitude, longitude } = position.coords
         setUserLocation([longitude, latitude])
         const candidates = enrichedCities
-          .filter((city) => !isCityDisabledFlag(city))
+          .filter((city) => !isCityDisabledForPreview(city))
           .map((city) => {
             const slug = getSlugFromLink(city.link)
             if (!slug) return null
@@ -2703,11 +2736,11 @@ const SearcheableCitiesList = ({
       },
       { enableHighAccuracy: false, timeout: 10000 },
     )
-  }, [enrichedCities])
+  }, [enrichedCities, isCityDisabledForPreview])
 
   const handlePlayRandomCity = useCallback(() => {
     const eligible = enrichedCities
-      .filter((city) => !isCityDisabledFlag(city))
+      .filter((city) => !isCityDisabledForPreview(city))
       .map((city) => {
         const slug = getSlugFromLink(city.link)
         if (!slug) return null
@@ -2726,7 +2759,7 @@ const SearcheableCitiesList = ({
 
     const pick = eligible[Math.floor(Math.random() * eligible.length)]
     router.push(pick.link)
-  }, [cityProgress, enrichedCities, router])
+  }, [cityProgress, enrichedCities, isCityDisabledForPreview, router])
 
   const openStatsPanelForCity = (slug: string) => {
     const city = cityMetaBySlug.get(slug)

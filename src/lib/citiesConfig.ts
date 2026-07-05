@@ -374,6 +374,11 @@ const rawCities: CityBase[] = [
     continent: 'Europe',
   },
   {
+    name: 'Rome, IT',
+    link: '/europe/italy/rome',
+    continent: 'Europe',
+  },
+  {
     name: 'Manchester, ENG',
     link: '/europe/uk/manchester',
     continent: 'Europe',

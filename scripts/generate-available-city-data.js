@@ -7,6 +7,7 @@ const path = require('path')
 const ROOT = process.cwd()
 const DATA_DIR = path.join(ROOT, 'public', 'city-data')
 const OUT_FILE = path.join(ROOT, 'src', 'lib', 'availableCityData.ts')
+const CLOSED_CITY_SLUGS = new Set(['beijing'])
 
 const run = async () => {
   let entries = []
@@ -20,7 +21,7 @@ const run = async () => {
   const slugs = entries
     .filter((file) => file.endsWith('.json'))
     .map((file) => file.replace(/\.json$/, ''))
-    .filter((slug) => slug && slug !== '_placeholder')
+    .filter((slug) => slug && slug !== '_placeholder' && !CLOSED_CITY_SLUGS.has(slug))
     .sort((a, b) => a.localeCompare(b))
 
   const lines = [

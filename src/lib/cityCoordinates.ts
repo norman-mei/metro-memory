@@ -76,6 +76,7 @@ export const CITY_COORDINATES: Record<string, [number, number]> = {
   karlsruhe: [8.4037, 49.0069],
   london: [-0.1276, 51.5072],
   madrid: [-3.7038, 40.4168],
+  rome: [12.4964, 41.9028],
   manchester: [-2.2426, 53.4808],
   munich: [11.5820, 48.1351], // Munich
   nottingham: [-1.1581, 52.9548],

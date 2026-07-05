@@ -7,17 +7,19 @@ export const LINES = linesData as { [name: string]: Line }
 
 export const LINE_GROUPS: LineGroup[] = [
   {
-    title: 'ATAC / Roma Servizi per la Mobilità',
+    title: 'ATAC / Roma Servizi per la Mobilita',
+    titleImage: 'ATAC.png',
     items: [
       {
         type: 'lines',
         title: 'Metropolitana di Roma',
-        lines: ['MetroA', 'MetroB','MetroB1', 'MetroC'],
+        titleImage: 'romemetro.png',
+        lines: ['Metro A', 'Metro B', 'Metro B1', 'Metro C'],
       },
       {
         type: 'lines',
         title: 'Ferrovie Concesse',
-        lines: ['RomaViterbo', 'RomaLido'],
+        lines: ['Roma-Viterbo', 'Roma-Lido'],
       },
     ],
   },
@@ -35,7 +37,7 @@ export const METADATA: Metadata = {
     description: 'Quante stazioni della metro di Roma riesci a ricordare?',
     type: 'website',
     locale: 'it_IT',
-    url: 'https://metro-memory.xyz/europe/it/rome',
+    url: 'https://metro-memory.xyz/europe/italy/rome',
   },
 }
 

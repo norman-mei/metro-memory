@@ -1613,6 +1613,43 @@ const shouldAutoFocus = () => {
   return window.matchMedia('(hover: hover) and (pointer: fine)').matches
 }
 
+const isTextEntryElement = (element: Element | null) => {
+  if (!element || !(element instanceof HTMLElement)) {
+    return false
+  }
+
+  const tagName = element.tagName.toLowerCase()
+  return (
+    tagName === 'input' ||
+    tagName === 'textarea' ||
+    tagName === 'select' ||
+    element.isContentEditable
+  )
+}
+
+const shouldRestoreMainInputFocus = (inputElement: HTMLInputElement | null) => {
+  if (!shouldAutoFocus()) {
+    return false
+  }
+
+  if (typeof document === 'undefined') {
+    return false
+  }
+
+  const activeElement = document.activeElement
+
+  if (
+    !activeElement ||
+    activeElement === document.body ||
+    activeElement === document.documentElement ||
+    activeElement === inputElement
+  ) {
+    return true
+  }
+
+  return !isTextEntryElement(activeElement)
+}
+
 export default function GamePage({
   fc,
   routes,
@@ -3737,7 +3774,7 @@ function GamePageContent({
       clearStoredProgress()
       void submitProgress([], {}, true)
     }
-    if (shouldAutoFocus()) {
+    if (shouldRestoreMainInputFocus(inputRef.current)) {
       setTimeout(() => {
         inputRef.current?.focus()
       }, 0)
@@ -3767,12 +3804,12 @@ function GamePageContent({
 
   const handleResetCancel = useCallback(() => {
     setResetConfirmOpen(false)
-    if (shouldAutoFocus()) {
+    if (shouldRestoreMainInputFocus(inputRef.current)) {
       setTimeout(() => {
         inputRef.current?.focus()
       }, 0)
     }
-  }, [inputRef, shouldAutoFocus])
+  }, [inputRef])
 
   const handleResetConfirm = useCallback(() => {
     setResetConfirmOpen(false)
@@ -3936,7 +3973,7 @@ function GamePageContent({
     handleProtectedAction(() => {
         clearAutoRevealSuppressionForCity(CITY_NAME)
         revealAllStations()
-        if (shouldAutoFocus()) {
+        if (shouldRestoreMainInputFocus(inputRef.current)) {
           setTimeout(() => {
             inputRef.current?.focus()
           }, 0)
@@ -3963,7 +4000,7 @@ function GamePageContent({
     setSolutionsPromptOpen(false)
     setSolutionsPassword('')
     setSolutionsError(false)
-    if (shouldAutoFocus()) {
+    if (shouldRestoreMainInputFocus(inputRef.current)) {
       setTimeout(() => {
         inputRef.current?.focus()
       }, 0)
@@ -4011,7 +4048,7 @@ function GamePageContent({
         setSolutionsPromptOpen(false)
         setSolutionsPassword('')
         setSolutionsError(false)
-        if (shouldAutoFocus()) {
+        if (shouldRestoreMainInputFocus(inputRef.current)) {
           setTimeout(() => {
             inputRef.current?.focus()
           }, 0)
@@ -5742,7 +5779,7 @@ function GamePageContent({
         
         if (action === 'FOCUS_INPUT') {
             event.preventDefault()
-            if (shouldAutoFocus()) {
+            if (shouldRestoreMainInputFocus(inputRef.current)) {
                 inputRef.current?.focus()
             }
         } else if (action === 'CLEAR_INPUT') {
@@ -6242,7 +6279,7 @@ function GamePageContent({
                   map={map}
                   idMap={idMap}
                   clusterGroups={clusterGroups}
-                  autoFocus={!solutionsPromptOpen && !resetConfirmOpen}
+                  autoFocus={!solutionsPromptOpen && !resetConfirmOpen && shouldRestoreMainInputFocus(inputRef.current)}
                   disabled={solutionsPromptOpen || resetConfirmOpen || oneLifeFailed}
                   onGuessResult={handleGuessResult}
                   onInputEdit={handleInputEdit}

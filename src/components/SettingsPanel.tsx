@@ -31,12 +31,17 @@ import {
   writeSolutionsSelection,
 } from '@/lib/solutionsAccess'
 import { apiFetch } from '@/lib/apiClient'
+import { isNativeMobileRuntime } from '@/lib/capacitorMapboxOffline'
 import {
   deleteOfflineCity,
   listOfflineCities,
   type OfflineCityRecord,
 } from '@/lib/offlineCityManager'
 import { STATION_TOTALS } from '@/lib/stationTotals'
+import {
+  readUnavailableCityAccess,
+  writeUnavailableCityAccess,
+} from '@/lib/unavailableCityAccess'
 import { getCityFlagEmojiFromPath } from '@/lib/countryFlags'
 import classNames from 'classnames'
 import Link from 'next/link'
@@ -181,6 +186,12 @@ const SettingsPanel = ({ className, showHeading = true, disableScroll = false }:
   }, [settings.timezone])
   const [isLocating, setIsLocating] = useState(false)
   const [timezoneStatus, setTimezoneStatus] = useState<string | null>(null)
+  const [showMobileOffline, setShowMobileOffline] = useState(false)
+
+  useEffect(() => {
+    setShowMobileOffline(isNativeMobileRuntime())
+  }, [])
+
   useEffect(() => {
     if (customAccentSelected) {
       setCustomAccentInput(currentAccentOption.palette[500])
@@ -755,6 +766,7 @@ const SettingsPanel = ({ className, showHeading = true, disableScroll = false }:
         </div>
       </div>
       <SolutionsAccessPanel onSettingsChange={notifySettingsSaved} />
+      <UnavailableCitiesAccessPanel onSettingsChange={notifySettingsSaved} />
       <AchievementsUnlockPanel />
       <div className="space-y-3">
         <p className="text-sm font-semibold uppercase tracking-wide text-zinc-500 dark:text-zinc-400">
@@ -855,12 +867,14 @@ const SettingsPanel = ({ className, showHeading = true, disableScroll = false }:
           </div>
         </div>
       </div>
-      <div className="space-y-3">
-        <p className="text-sm font-semibold uppercase tracking-wide text-zinc-500 dark:text-zinc-400">
-          Mobile and offline
-        </p>
-        <MobileOfflinePanel />
-      </div>
+      {showMobileOffline && (
+        <div className="space-y-3">
+          <p className="text-sm font-semibold uppercase tracking-wide text-zinc-500 dark:text-zinc-400">
+            Mobile and offline
+          </p>
+          <MobileOfflinePanel />
+        </div>
+      )}
       <div className="space-y-3">
         <p className="text-sm font-semibold uppercase tracking-wide text-red-500 dark:text-red-400">
           {t('dangerZone')}
@@ -1327,6 +1341,113 @@ const SolutionsAccessPanel = ({ onSettingsChange }: { onSettingsChange?: () => v
             {t('solutionsAutoMark')}
           </p>
         </div>
+      )}
+    </div>
+  )
+}
+
+const UnavailableCitiesAccessPanel = ({ onSettingsChange }: { onSettingsChange?: () => void }) => {
+  const { t } = useTranslation()
+  const [hasAccess, setHasAccess] = useState(false)
+  const [passwordInput, setPasswordInput] = useState('')
+  const [passwordError, setPasswordError] = useState<string | null>(null)
+
+  useEffect(() => {
+    setHasAccess(readUnavailableCityAccess())
+  }, [])
+
+  const handleUnlockSubmit = useCallback(
+    async (event: React.FormEvent<HTMLFormElement>) => {
+      event.preventDefault()
+      const password = passwordInput.trim()
+      if (!password) {
+        return
+      }
+
+      setPasswordError(null)
+      try {
+        const response = await fetch('/api/solutions', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ password }),
+        })
+        const payload = await response.json().catch(() => ({}))
+        if (!response.ok || !payload?.success) {
+          setPasswordError(t('incorrectPassword'))
+          return
+        }
+
+        writeUnavailableCityAccess(true)
+        setHasAccess(true)
+        setPasswordInput('')
+        setPasswordError(null)
+        onSettingsChange?.()
+      } catch (error) {
+        setPasswordError('Unable to verify password. Please try again.')
+        if (process.env.NODE_ENV !== 'production') {
+          console.error(error)
+        }
+      }
+    },
+    [onSettingsChange, passwordInput, t],
+  )
+
+  const handleLock = useCallback(() => {
+    writeUnavailableCityAccess(false)
+    setHasAccess(false)
+    setPasswordInput('')
+    setPasswordError(null)
+    onSettingsChange?.()
+  }, [onSettingsChange])
+
+  return (
+    <div className="space-y-3 rounded-2xl border border-zinc-200 bg-zinc-50 p-4 dark:border-[#18181b] dark:bg-zinc-900/40">
+      <div>
+        <p className="text-sm font-semibold uppercase tracking-wide text-zinc-500 dark:text-zinc-400">
+          Preview unavailable cities
+        </p>
+        <p className="text-sm text-zinc-600 dark:text-zinc-300">
+          Enter the password to play unavailable cities that are still being prepared.
+        </p>
+      </div>
+      {hasAccess ? (
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+          <p className="text-sm font-medium text-emerald-700 dark:text-emerald-300">
+            Preview access is enabled on this browser.
+          </p>
+          <button
+            type="button"
+            onClick={handleLock}
+            className="rounded-xl border border-zinc-200 bg-white px-4 py-2 text-sm font-semibold text-zinc-700 transition hover:border-zinc-300 hover:bg-zinc-50 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100 dark:hover:border-zinc-600 dark:hover:bg-zinc-800"
+          >
+            Lock unavailable cities
+          </button>
+        </div>
+      ) : (
+        <form className="space-y-2" onSubmit={handleUnlockSubmit}>
+          <label className="text-xs font-semibold uppercase text-zinc-500 dark:text-zinc-400">
+            {t('enterPassword')}
+          </label>
+          <div className="flex gap-2">
+            <input
+              type="password"
+              value={passwordInput}
+              onChange={(event) => setPasswordInput(event.target.value)}
+              className="flex-1 rounded-xl border border-zinc-300 bg-white px-3 py-2 text-sm text-zinc-900 shadow-sm dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-100"
+              placeholder={t('password')}
+            />
+            <button
+              type="submit"
+              className="rounded-xl bg-[var(--accent-600)] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[var(--accent-500)] disabled:opacity-60 dark:bg-[var(--accent-600)] dark:hover:bg-[var(--accent-500)]"
+              disabled={!passwordInput.trim()}
+            >
+              {t('unlock')}
+            </button>
+          </div>
+          {passwordError && (
+            <p className="text-xs text-red-600 dark:text-red-300">{passwordError}</p>
+          )}
+        </form>
       )}
     </div>
   )

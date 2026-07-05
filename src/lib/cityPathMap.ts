@@ -169,6 +169,7 @@ export const CITY_PATH_MAP: Record<string, string> = {
   'pyongyang': 'asia/north-korea/pyongyang',
   'qingdao': 'asia/china/qingdao',
   'qiubei': 'asia/china/qiubei',
+  'rome': 'europe/italy/rome',
   'san-juan': 'north-america/usa/san-juan',
   'sanya': 'asia/china/sanya',
   'sapporo': 'asia/japan/sapporo',

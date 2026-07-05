@@ -20,7 +20,8 @@
         "line": "Metro C",
         "id": 1,
         "alternate_names": []
-      }
+      },
+      "id": 1
     },
     {
       "type": "Feature",
@@ -30,7 +31,8 @@
         "line": "Metro C",
         "id": 2,
         "alternate_names": ["Finocchio-Antica città di Gabii", "Finocchio Antica città di Gabii","Finocchio - Antica città di Gabii"]
-      }
+      },
+      "id": 2
     },
     {
       "type": "Feature",
@@ -40,7 +42,8 @@
         "line": "Metro C",
         "id": 3,
         "alternate_names": []
-      }
+      },
+      "id": 3
     },
     {
       "type": "Feature",
@@ -50,7 +53,8 @@
         "line": "Metro C",
         "id": 4,
         "alternate_names": []
-      }
+      },
+      "id": 4
     },
     {
       "type": "Feature",
@@ -60,7 +64,8 @@
         "line": "Metro C",
         "id": 5,
         "alternate_names": ["Due Leoni Fontana Candida"]
-      }
+      },
+      "id": 5
     },
     {
       "type": "Feature",
@@ -70,7 +75,8 @@
         "line": "Metro C",
         "id": 6,
         "alternate_names": []
-      }
+      },
+      "id": 6
     },
     {
       "type": "Feature",
@@ -80,7 +86,8 @@
         "line": "Metro C",
         "id": 7,
         "alternate_names": []
-      }
+      },
+      "id": 7
     },
     {
       "type": "Feature",
@@ -90,7 +97,8 @@
         "line": "Metro C",
         "id": 8,
         "alternate_names": []
-      }
+      },
+      "id": 8
     },
     {
       "type": "Feature",
@@ -100,7 +108,8 @@
         "line": "Metro C",
         "id": 9,
         "alternate_names": ["Torre Nova"]
-      }
+      },
+      "id": 9
     },
     {
       "type": "Feature",
@@ -110,7 +119,8 @@
         "line": "Metro C",
         "id": 10,
         "alternate_names": []
-      }
+      },
+      "id": 10
     },
     {
       "type": "Feature",
@@ -120,7 +130,8 @@
         "line": "Metro C",
         "id": 11,
         "alternate_names": []
-      }
+      },
+      "id": 11
     },
     {
       "type": "Feature",
@@ -130,7 +141,8 @@
         "line": "Metro C",
         "id": 12,
         "alternate_names": []
-      }
+      },
+      "id": 12
     },
     {
       "type": "Feature",
@@ -140,7 +152,8 @@
         "line": "Metro C",
         "id": 13,
         "alternate_names": []
-      }
+      },
+      "id": 13
     },
     {
       "type": "Feature",
@@ -150,7 +163,8 @@
         "line": "Metro C",
         "id": 14,
         "alternate_names": []
-      }
+      },
+      "id": 14
     },
     {
       "type": "Feature",
@@ -160,7 +174,8 @@
         "line": "Metro C",
         "id": 15,
         "alternate_names": []
-      }
+      },
+      "id": 15
     },
     {
       "type": "Feature",
@@ -170,7 +185,8 @@
         "line": "Metro C",
         "id": 16,
         "alternate_names": []
-      }
+      },
+      "id": 16
     },
     {
       "type": "Feature",
@@ -180,7 +196,8 @@
         "line": "Metro C",
         "id": 17,
         "alternate_names": []
-      }
+      },
+      "id": 17
     },
     {
       "type": "Feature",
@@ -190,7 +207,8 @@
         "line": "Metro C",
         "id": 18,
         "alternate_names": []
-      }
+      },
+      "id": 18
     },
     {
       "type": "Feature",
@@ -200,7 +218,8 @@
         "line": "Metro C",
         "id": 19,
         "alternate_names": []
-      }
+      },
+      "id": 19
     },
     {
       "type": "Feature",
@@ -210,7 +229,8 @@
         "line": "Metro C",
         "id": 20,
         "alternate_names": []
-      }
+      },
+      "id": 20
     },
     {
       "type": "Feature",
@@ -221,7 +241,8 @@
         "id": 21,
         "cluster_key": "San Giovanni",
         "alternate_names": []
-      }
+      },
+      "id": 21
     },
     {
       "type": "Feature",
@@ -231,7 +252,8 @@
         "line": "Metro C",
         "id": 22,
         "alternate_names": []
-      }
+      },
+      "id": 22
     },
     {
       "type": "Feature",
@@ -242,7 +264,8 @@
         "id": 23,
         "cluster_key": "Colosseo",
         "alternate_names": ["Colosseo", "Colosseo Fori Imperiali","Colosseo Fori","Colosseo-Fori Imperiali"]
-      }
+      },
+      "id": 23
     },
     {
       "type": "Feature",
@@ -252,7 +275,8 @@
         "line": "Metro A",
         "id": 24,
         "alternate_names": []
-      }
+      },
+      "id": 24
     },
     {
       "type": "Feature",
@@ -262,7 +286,8 @@
         "line": "Metro A",
         "id": 25,
         "alternate_names": ["Cinecitta"]
-      }
+      },
+      "id": 25
     },
     {
       "type": "Feature",
@@ -272,7 +297,8 @@
         "line": "Metro A",
         "id": 26,
         "alternate_names": []
-      }
+      },
+      "id": 26
     },
     {
       "type": "Feature",
@@ -282,7 +308,8 @@
         "line": "Metro A",
         "id": 27,
         "alternate_names": []
-      }
+      },
+      "id": 27
     },
     {
       "type": "Feature",
@@ -292,7 +319,8 @@
         "line": "Metro A",
         "id": 28,
         "alternate_names": []
-      }
+      },
+      "id": 28
     },
     {
       "type": "Feature",
@@ -302,7 +330,8 @@
         "line": "Metro A",
         "id": 29,
         "alternate_names": []
-      }
+      },
+      "id": 29
     },
     {
       "type": "Feature",
@@ -312,7 +341,8 @@
         "line": "Metro A",
         "id": 30,
         "alternate_names": []
-      }
+      },
+      "id": 30
     },
     {
       "type": "Feature",
@@ -322,7 +352,8 @@
         "line": "Metro A",
         "id": 31,
         "alternate_names": []
-      }
+      },
+      "id": 31
     },
     {
       "type": "Feature",
@@ -332,7 +363,8 @@
         "line": "Metro A",
         "id": 32,
         "alternate_names": []
-      }
+      },
+      "id": 32
     },
     {
       "type": "Feature",
@@ -342,7 +374,8 @@
         "line": "Metro A",
         "id": 33,
         "alternate_names": []
-      }
+      },
+      "id": 33
     },
     {
       "type": "Feature",
@@ -352,7 +385,8 @@
         "line": "Metro A",
         "id": 34,
         "alternate_names": []
-      }
+      },
+      "id": 34
     },
     {
       "type": "Feature",
@@ -362,7 +396,8 @@
         "line": "Metro A",
         "id": 35,
         "alternate_names": []
-      }
+      },
+      "id": 35
     },
     {
       "type": "Feature",
@@ -373,7 +408,8 @@
         "id": 36,
         "cluster_key": "San Giovanni",
         "alternate_names": []
-      }
+      },
+      "id": 36
     },
     {
       "type": "Feature",
@@ -383,7 +419,8 @@
         "line": "Metro A",
         "id": 37,
         "alternate_names": []
-      }
+      },
+      "id": 37
     },
     {
       "type": "Feature",
@@ -393,7 +430,8 @@
         "line": "Metro A",
         "id": 38,
         "alternate_names": []
-      }
+      },
+      "id": 38
     },
     {
       "type": "Feature",
@@ -404,7 +442,8 @@
         "id": 39,
         "cluster_key": "Termini",
         "alternate_names": []
-      }
+      },
+      "id": 39
     },
     {
       "type": "Feature",
@@ -414,7 +453,8 @@
         "line": "Metro A",
         "id": 40,
         "alternate_names": []
-      }
+      },
+      "id": 40
     },
     {
       "type": "Feature",
@@ -424,7 +464,8 @@
         "line": "Metro A",
         "id": 41,
         "alternate_names": []
-      }
+      },
+      "id": 41
     },
     {
       "type": "Feature",
@@ -434,7 +475,8 @@
         "line": "Metro A",
         "id": 43,
         "alternate_names": []
-      }
+      },
+      "id": 43
     },
     {
       "type": "Feature",
@@ -445,7 +487,8 @@
         "id": 44,
         "cluster_key": "Flaminio",
         "alternate_names": []
-      }
+      },
+      "id": 44
     },
     {
       "type": "Feature",
@@ -455,7 +498,8 @@
         "line": "Metro A",
         "id": 45,
         "alternate_names": []
-      }
+      },
+      "id": 45
     },
     {
       "type": "Feature",
@@ -465,7 +509,8 @@
         "line": "Metro A",
         "id": 46,
         "alternate_names": []
-      }
+      },
+      "id": 46
     },
     {
       "type": "Feature",
@@ -475,7 +520,8 @@
         "line": "Metro A",
         "id": 47,
         "alternate_names": []
-      }
+      },
+      "id": 47
     },
     {
       "type": "Feature",
@@ -485,17 +531,19 @@
         "line": "Metro A",
         "id": 48,
         "alternate_names": []
-      }
+      },
+      "id": 48
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [12.443387, 41.898989] },
+      "geometry": { "type": "Point", "coordinates": [12.433397311036614, 41.89899114641169] },
       "properties": {
         "name": "Baldo degli Ubaldi",
         "line": "Metro A",
         "id": 49,
         "alternate_names": []
-      }
+      },
+      "id": 49
     },
     {
       "type": "Feature",
@@ -505,7 +553,8 @@
         "line": "Metro A",
         "id": 50,
         "alternate_names": []
-      }
+      },
+      "id": 50
     },
     {
       "type": "Feature",
@@ -515,7 +564,8 @@
         "line": "Metro A",
         "id": 51,
         "alternate_names": []
-      }
+      },
+      "id": 51
     },
     {
       "type": "Feature",
@@ -526,7 +576,8 @@
         "id": 52,
         "cluster_key":"Laurentina",
         "alternate_names": []
-      }
+      },
+      "id": 52
     },
     {
       "type": "Feature",
@@ -537,7 +588,8 @@
         "id": 53,
         "cluster_key":"EUR Fermi",
         "alternate_names": ["Fermi"]
-      }
+      },
+      "id": 53
     },
     {
       "type": "Feature",
@@ -548,7 +600,8 @@
         "id": 54,
         "cluster_key":"EUR Palasport",
         "alternate_names": ["Palasport"]
-      }
+      },
+      "id": 54
     },
     {
       "type": "Feature",
@@ -559,7 +612,8 @@
         "id": 55,
         "cluster_key":"EUR Magliana",
         "alternate_names": ["Magliana"]
-      }
+      },
+      "id": 55
     },
     {
       "type": "Feature",
@@ -570,7 +624,8 @@
         "id": 56,
         "cluster_key":"Marconi",
         "alternate_names": []
-      }
+      },
+      "id": 56
     },
     {
       "type": "Feature",
@@ -581,7 +636,8 @@
         "id": 57,
         "cluster_key":"Basilica San Paolo",
         "alternate_names": ["San Paolo"]
-      }
+      },
+      "id": 57
     },
     {
       "type": "Feature",
@@ -592,7 +648,8 @@
         "id": 58,
         "cluster_key":"Garbatella",
         "alternate_names": []
-      }
+      },
+      "id": 58
     },
     {
       "type": "Feature",
@@ -603,7 +660,8 @@
         "id": 59,
         "cluster_key":"Piramide",
         "alternate_names": ["Porta San Paolo"]
-      }
+      },
+      "id": 59
     },
     {
       "type": "Feature",
@@ -614,7 +672,8 @@
         "id": 60,
         "cluster_key":"Circo Massimo",
         "alternate_names": []
-      }
+      },
+      "id": 60
     },
     {
       "type": "Feature",
@@ -625,7 +684,8 @@
         "id": 61,
         "cluster_key": "Colosseo",
         "alternate_names": ["Colosseo - Fori Imperiali", "Colosseo Fori Imperiali","Colosseo Fori","Colosseo-Fori Imperiali"]
-      }
+      },
+      "id": 61
     },
     {
       "type": "Feature",
@@ -636,7 +696,8 @@
         "id": 62,
         "cluster_key": "Cavour",
         "alternate_names": []
-      }
+      },
+      "id": 62
     },
     {
       "type": "Feature",
@@ -647,7 +708,8 @@
         "id": 63,
         "cluster_key": "",
         "alternate_names": []
-      }
+      },
+      "id": 63
     },
     {
       "type": "Feature",
@@ -658,7 +720,8 @@
         "id": 64,
         "cluster_key": "Castro Pretorio",
         "alternate_names": []
-      }
+      },
+      "id": 64
     },
     {
       "type": "Feature",
@@ -669,7 +732,8 @@
         "id": 65,
         "cluster_key": "Policlinico",
         "alternate_names": []
-      }
+      },
+      "id": 65
     },
     {
       "type": "Feature",
@@ -680,7 +744,8 @@
         "id": 66,
         "cluster_key": "Bologna",
         "alternate_names": []
-      }
+      },
+      "id": 66
     },
     {
       "type": "Feature",
@@ -690,7 +755,8 @@
         "line": "Metro B",
         "id": 67,
         "alternate_names": ["Tiburtina"]
-      }
+      },
+      "id": 67
     },
     {
       "type": "Feature",
@@ -700,7 +766,8 @@
         "line": "Metro B",
         "id": 68,
         "alternate_names": []
-      }
+      },
+      "id": 68
     },
     {
       "type": "Feature",
@@ -710,7 +777,8 @@
         "line": "Metro B",
         "id": 69,
         "alternate_names": []
-      }
+      },
+      "id": 69
     },
     {
       "type": "Feature",
@@ -720,7 +788,8 @@
         "line": "Metro B",
         "id": 70,
         "alternate_names": []
-      }
+      },
+      "id": 70
     },
     {
       "type": "Feature",
@@ -730,7 +799,8 @@
         "line": "Metro B",
         "id": 71,
         "alternate_names": []
-      }
+      },
+      "id": 71
     },
     {
       "type": "Feature",
@@ -740,7 +810,8 @@
         "line": "Metro B",
         "id": 72,
         "alternate_names": []
-      }
+      },
+      "id": 72
     },
     {
       "type": "Feature",
@@ -750,7 +821,8 @@
         "line": "Metro B",
         "id": 73,
         "alternate_names": []
-      }
+      },
+      "id": 73
     },
     {
       "type": "Feature",
@@ -761,7 +833,8 @@
         "id": 74,
         "cluster_key":"Laurentina",
         "alternate_names": []
-      }
+      },
+      "id": 74
     },
     {
       "type": "Feature",
@@ -772,7 +845,8 @@
         "id": 75,
         "cluster_key":"EUR Fermi",
         "alternate_names": ["Fermi"]
-      }
+      },
+      "id": 75
     },
     {
       "type": "Feature",
@@ -783,7 +857,8 @@
         "id": 76,
         "cluster_key":"EUR Palasport",
         "alternate_names": ["Palasport"]
-      }
+      },
+      "id": 76
     },
     {
       "type": "Feature",
@@ -794,7 +869,8 @@
         "id": 77,
         "cluster_key":"EUR Magliana",
         "alternate_names": ["Magliana"]
-      }
+      },
+      "id": 77
     },
     {
       "type": "Feature",
@@ -805,7 +881,8 @@
         "id": 78,
         "cluster_key":"Marconi",
         "alternate_names": []
-      }
+      },
+      "id": 78
     },
     {
       "type": "Feature",
@@ -816,7 +893,8 @@
         "id": 79,
         "cluster_key":"Basilica San Paolo",
         "alternate_names": ["San Paolo"]
-      }
+      },
+      "id": 79
     },
     {
       "type": "Feature",
@@ -827,7 +905,8 @@
         "id": 80,
         "cluster_key":"Garbatella",
         "alternate_names": []
-      }
+      },
+      "id": 80
     },
     {
       "type": "Feature",
@@ -838,7 +917,8 @@
         "id": 81,
         "cluster_key":"Piramide",
         "alternate_names": ["Porta San Paolo"]
-      }
+      },
+      "id": 81
     },
     {
       "type": "Feature",
@@ -849,7 +929,8 @@
         "id": 82,
         "cluster_key":"Circo Massimo",
         "alternate_names": []
-      }
+      },
+      "id": 82
     },
     {
       "type": "Feature",
@@ -860,7 +941,8 @@
         "id": 83,
         "cluster_key": "Colosseo",
         "alternate_names": ["Colosseo - Fori Imperiali", "Colosseo Fori Imperiali","Colosseo Fori","Colosseo-Fori Imperiali"]
-      }
+      },
+      "id": 83
     },
     {
       "type": "Feature",
@@ -871,7 +953,8 @@
         "id": 84,
         "cluster_key": "Cavour",
         "alternate_names": []
-      }
+      },
+      "id": 84
     },
     {
       "type": "Feature",
@@ -882,7 +965,8 @@
         "id": 85,
         "cluster_key": "",
         "alternate_names": []
-      }
+      },
+      "id": 85
     },
     {
       "type": "Feature",
@@ -893,7 +977,8 @@
         "id": 86,
         "cluster_key": "Castro Pretorio",
         "alternate_names": []
-      }
+      },
+      "id": 86
     },
     {
       "type": "Feature",
@@ -904,7 +989,8 @@
         "id": 87,
         "cluster_key": "Policlinico",
         "alternate_names": []
-      }
+      },
+      "id": 87
     },
     {
       "type": "Feature",
@@ -915,7 +1001,8 @@
         "id": 88,
         "cluster_key": "Bologna",
         "alternate_names": []
-      }
+      },
+      "id": 88
     },
     {
       "type": "Feature",
@@ -925,7 +1012,8 @@
         "line": "Metro B1",
         "id": 89,
         "alternate_names": ["Sant Agnese Annibaliano"]
-      }
+      },
+      "id": 89
     },
     {
       "type": "Feature",
@@ -935,7 +1023,8 @@
         "line": "Metro B1",
         "id": 90,
         "alternate_names": []
-      }
+      },
+      "id": 90
     },
     {
       "type": "Feature",
@@ -945,7 +1034,8 @@
         "line": "Metro B",
         "id": 91,
         "alternate_names": ["Conca d Oro"]
-      }
+      },
+      "id": 91
     },
     {
       "type": "Feature",
@@ -955,7 +1045,8 @@
         "line": "Metro B",
         "id": 92,
         "alternate_names": ["Ionio"]
-      }
+      },
+      "id": 92
     },
     {
       "type": "Feature",
@@ -966,7 +1057,8 @@
         "id": 93,
         "cluster_key": "Flaminio",
         "alternate_names": []
-      }
+      },
+      "id": 93
     },
     {
       "type": "Feature",
@@ -976,7 +1068,8 @@
         "line": "Roma-Viterbo",
         "id": 94,
         "alternate_names": []
-      }
+      },
+      "id": 94
     },
     {
       "type": "Feature",
@@ -986,7 +1079,8 @@
         "line": "Roma-Viterbo",
         "id": 95,
         "alternate_names": []
-      }
+      },
+      "id": 95
     },
     {
       "type": "Feature",
@@ -996,7 +1090,8 @@
         "line": "Roma-Viterbo",
         "id": 96,
         "alternate_names": []
-      }
+      },
+      "id": 96
     },
     {
       "type": "Feature",
@@ -1006,7 +1101,8 @@
         "line": "Roma-Viterbo",
         "id": 97,
         "alternate_names": []
-      }
+      },
+      "id": 97
     },
     {
       "type": "Feature",
@@ -1016,7 +1112,8 @@
         "line": "Roma-Viterbo",
         "id": 98,
         "alternate_names": []
-      }
+      },
+      "id": 98
     },
     {
       "type": "Feature",
@@ -1026,7 +1123,8 @@
         "line": "Roma-Viterbo",
         "id": 99,
         "alternate_names": []
-      }
+      },
+      "id": 99
     },
     {
       "type": "Feature",
@@ -1036,7 +1134,8 @@
         "line": "Roma-Viterbo",
         "id": 100,
         "alternate_names": []
-      }
+      },
+      "id": 100
     },
     {
       "type": "Feature",
@@ -1046,7 +1145,8 @@
         "line": "Roma-Viterbo",
         "id": 101,
         "alternate_names": []
-      }
+      },
+      "id": 101
     },
     {
       "type": "Feature",
@@ -1056,7 +1156,8 @@
         "line": "Roma-Viterbo",
         "id": 102,
         "alternate_names": []
-      }
+      },
+      "id": 102
     },
     {
       "type": "Feature",
@@ -1066,7 +1167,8 @@
         "line": "Roma-Viterbo",
         "id": 103,
         "alternate_names": []
-      }
+      },
+      "id": 103
     },
     {
       "type": "Feature",
@@ -1076,7 +1178,8 @@
         "line": "Roma-Viterbo",
         "id": 104,
         "alternate_names": []
-      }
+      },
+      "id": 104
     },
     {
       "type": "Feature",
@@ -1086,7 +1189,8 @@
         "line": "Roma-Viterbo",
         "id": 105,
         "alternate_names": []
-      }
+      },
+      "id": 105
     },
     {
       "type": "Feature",
@@ -1096,7 +1200,8 @@
         "line": "Roma-Viterbo",
         "id": 106,
         "alternate_names": []
-      }
+      },
+      "id": 106
     },
     {
       "type": "Feature",
@@ -1106,7 +1211,8 @@
         "line": "Roma-Viterbo",
         "id": 107,
         "alternate_names": []
-      }
+      },
+      "id": 107
     },
     {
       "type": "Feature",
@@ -1117,7 +1223,8 @@
         "id": 108,
         "cluster_key":"Piramide",
         "alternate_names": ["Piramide"]
-      }
+      },
+      "id": 108
     },
 {
       "type": "Feature",
@@ -1128,7 +1235,8 @@
         "id": 109,
         "cluster_key":"Basilica San Paolo",
         "alternate_names": ["San Paolo"]
-      }
+      },
+      "id": 109
     },
     {
       "type": "Feature",
@@ -1139,7 +1247,8 @@
         "id": 110,
         "cluster_key":"EUR Magliana",
         "alternate_names": ["Magliana"]
-      }
+      },
+      "id": 110
     },
     {
       "type": "Feature",
@@ -1149,7 +1258,8 @@
         "line": "Roma-Lido",
         "id": 111,
         "alternate_names": []
-      }
+      },
+      "id": 111
     },
     {
       "type": "Feature",
@@ -1159,7 +1269,8 @@
         "line": "Roma-Lido",
         "id": 112,
         "alternate_names": []
-      }
+      },
+      "id": 112
     },
     {
       "type": "Feature",
@@ -1169,7 +1280,8 @@
         "line": "Roma-Lido",
         "id": 113,
         "alternate_names": ["Casal Bernocchi","Bernocchi","Casal Bernocchi Centro Giano","Casal Bernocchi-Centro Giano"]
-      }
+      },
+      "id": 113
     },
     {
       "type": "Feature",
@@ -1179,7 +1291,8 @@
         "line": "Roma-Lido",
         "id": 114,
         "alternate_names": []
-      }
+      },
+      "id": 114
     },
     {
       "type": "Feature",
@@ -1189,7 +1302,8 @@
         "line": "Roma-Lido",
         "id": 115,
         "alternate_names": ["Acilia Sud","Acilia Sud-Dragona","Acilia Sud Dragona"]
-      }
+      },
+      "id": 115
     },
     {
       "type": "Feature",
@@ -1199,7 +1313,8 @@
         "line": "Roma-Lido",
         "id": 116,
         "alternate_names": []
-      }
+      },
+      "id": 116
     },
     {
       "type": "Feature",
@@ -1209,7 +1324,8 @@
         "line": "Roma-Lido",
         "id": 117,
         "alternate_names": ["Lido Nord"]
-      }
+      },
+      "id": 117
     },
     {
       "type": "Feature",
@@ -1219,7 +1335,8 @@
         "line": "Roma-Lido",
         "id": 118,
         "alternate_names": ["Lido Centro"]
-      }
+      },
+      "id": 118
     },
     {
       "type": "Feature",
@@ -1229,7 +1346,8 @@
         "line": "Roma-Lido",
         "id": 119,
         "alternate_names": ["Ostia Stella Polare"]
-      }
+      },
+      "id": 119
     },
     {
       "type": "Feature",
@@ -1239,7 +1357,8 @@
         "line": "Roma-Lido",
         "id": 120,
         "alternate_names": ["Castelfusano"]
-      }
+      },
+      "id": 120
     },
     {
       "type": "Feature",
@@ -1249,7 +1368,8 @@
         "line": "Roma-Lido",
         "id": 121,
         "alternate_names": ["Colombo"]
-      }
+      },
+      "id": 121
     }
   ]
 }

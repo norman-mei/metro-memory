@@ -5,7 +5,7 @@
     41.7914,
     12.2342,
     42.0094,
-    12.6160
+    12.616
   ],
   "localLanguages": [
     "it"
@@ -18,7 +18,7 @@
   ],
   "lines": [
     {
-      "id": "MetroA",
+      "id": "Metro A",
       "name": "Battistini – Anagnina",
       "keywords": [
         "Metro A",
@@ -27,10 +27,10 @@
         "Orange Line"
       ],
       "order": 0,
-      "icon": "europe/it/rome/MetroA.svg"
+      "icon": "europe/italy/rome/MetroA.svg"
     },
     {
-      "id": "MetroB",
+      "id": "Metro B",
       "name": "Laurentina – Rebibbia",
       "keywords": [
         "Metro B",
@@ -39,10 +39,10 @@
         "Blue Line"
       ],
       "order": 1,
-      "icon": "europe/it/rome/MetroB.svg"
+      "icon": "europe/italy/rome/MetroB.svg"
     },
     {
-      "id": "MetroB1",
+      "id": "Metro B1",
       "name": "Laurentina – Jonio",
       "keywords": [
         "Metro B1",
@@ -51,10 +51,10 @@
         "Blue Line"
       ],
       "order": 2,
-      "icon": "europe/it/rome/MetroB.svg"
+      "icon": "europe/italy/rome/MetroB1.svg"
     },
     {
-      "id": "MetroC",
+      "id": "Metro C",
       "name": "Monte Compatri-Pantano – San Giovanni",
       "keywords": [
         "Metro C",
@@ -63,10 +63,10 @@
         "Dark Green Line"
       ],
       "order": 3,
-      "icon": "europe/it/rome/MetroC.svg"
+      "icon": "europe/italy/rome/MetroC.svg"
     },
     {
-      "id": "RomaViterbo",
+      "id": "Roma-Viterbo",
       "name": "Piazzale Flaminio – Viterbo",
       "keywords": [
         "Roma Viterbo",
@@ -75,10 +75,10 @@
         "Roma Nord"
       ],
       "order": 4,
-      "icon": "europe/it/rome/RomaViterbo.svg"
+      "icon": "europe/italy/rome/RomaViterbo.svg"
     },
     {
-      "id": "RomaLido",
+      "id": "Roma-Lido",
       "name": "Roma Porta San Paolo – Cristoforo Colombo",
       "keywords": [
         "Roma Lido",
@@ -87,7 +87,7 @@
         "Lido Line"
       ],
       "order": 5,
-      "icon": "europe/it/rome/RomaLido.svg"
+      "icon": "europe/italy/rome/RomaLido.svg"
     }
   ],
   "stationAliases": {},
