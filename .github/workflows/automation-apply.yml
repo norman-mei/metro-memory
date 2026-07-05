@@ -43,14 +43,14 @@ jobs:
       - name: Apply Prisma migrations
         env:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
-          DIRECT_URL: ${{ secrets.DIRECT_URL }}
+          DIRECT_URL: ${{ secrets.DIRECT_URL || secrets.DATABASE_URL }}
         run: npx prisma migrate deploy
 
       - name: Apply automation run and open PR
         id: apply
         env:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
-          DIRECT_URL: ${{ secrets.DIRECT_URL }}
+          DIRECT_URL: ${{ secrets.DIRECT_URL || secrets.DATABASE_URL }}
           GITHUB_TOKEN: ${{ github.token }}
           AUTOMATION_GITHUB_REPO: ${{ github.repository }}
           AUTOMATION_BASE_BRANCH: ${{ github.event.repository.default_branch }}
