@@ -1223,3 +1223,132 @@ model AutomationEvalRun {
 
   @@index([createdAt])
 }
+
+// ============================================================
+// Research automation v2 (rebuilt) — review-queue-centric.
+// Leaner replacement for the Automation* models above.
+// ============================================================
+
+enum ResearchTrigger {
+  SCHEDULED
+  MANUAL
+  CHAT
+}
+
+enum ResearchRunStatus {
+  RUNNING
+  COMPLETED
+  FAILED
+}
+
+enum ResearchLane {
+  GREEN
+  YELLOW
+  RED
+}
+
+enum ResearchClaimStatus {
+  PENDING
+  APPROVED
+  REJECTED
+  APPLIED
+}
+
+enum ChatRole {
+  USER
+  ASSISTANT
+  SYSTEM
+}
+
+model ResearchRun {
+  id          String            @id @default(cuid())
+  trigger     ResearchTrigger   @default(SCHEDULED)
+  scope       String?
+  citySlugs   String[]
+  status      ResearchRunStatus @default(RUNNING)
+  summaryJson Json?
+  errorLog    String?
+  startedAt   DateTime          @default(now())
+  finishedAt  DateTime?
+  createdAt   DateTime          @default(now())
+  claims      ResearchClaim[]
+  session     ChatSession?      @relation(fields: [sessionId], references: [id], onDelete: SetNull)
+  sessionId   String?
+
+  @@index([status, createdAt])
+  @@index([trigger, createdAt])
+}
+
+model ResearchClaim {
+  id          String              @id @default(cuid())
+  run         ResearchRun         @relation(fields: [runId], references: [id], onDelete: Cascade)
+  runId       String
+  citySlug    String
+  claimType   String
+  title       String
+  summary     String?
+  beforeJson  Json?
+  afterJson   Json?
+  confidence  Float?
+  lane        ResearchLane        @default(YELLOW)
+  status      ResearchClaimStatus @default(PENDING)
+  reviewNotes String?
+  reviewedBy  String?
+  reviewedAt  DateTime?
+  createdAt   DateTime            @default(now())
+  updatedAt   DateTime            @updatedAt
+  evidence    ClaimEvidence[]
+
+  @@index([status, lane, createdAt])
+  @@index([citySlug, claimType])
+  @@index([runId])
+}
+
+model ClaimEvidence {
+  id          String        @id @default(cuid())
+  claim       ResearchClaim @relation(fields: [claimId], references: [id], onDelete: Cascade)
+  claimId     String
+  sourceUrl   String
+  sourceTitle String?
+  sourceDate  DateTime?
+  excerpt     String?
+  tier        Int           @default(2)
+  createdAt   DateTime      @default(now())
+
+  @@index([claimId])
+}
+
+model SourceDomain {
+  id         String   @id @default(cuid())
+  domain     String   @unique
+  tier       Int      @default(2)
+  trustScore Float    @default(0.5)
+  blocked    Boolean  @default(false)
+  notes      String?
+  lastSeenAt DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+}
+
+model ChatSession {
+  id        String        @id @default(cuid())
+  title     String?
+  createdBy String?
+  createdAt DateTime      @default(now())
+  updatedAt DateTime      @updatedAt
+  messages  ChatMessage[]
+  runs      ResearchRun[]
+
+  @@index([createdAt])
+}
+
+model ChatMessage {
+  id             String      @id @default(cuid())
+  session        ChatSession @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+  sessionId      String
+  role           ChatRole
+  content        String
+  structuredJson Json?
+  createdAt      DateTime    @default(now())
+
+  @@index([sessionId, createdAt])
+}
