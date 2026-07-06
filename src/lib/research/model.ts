@@ -1,8 +1,10 @@
-// OpenAI-compatible chat-completions helper for the research engine.
+// OpenAI-compatible chat-completions helpers for the research engine.
 // Env-gated: disabled (returns null) unless both an API key and a model are set,
 // mirroring the pattern the old system used in src/lib/automationAgentModel.ts.
 
 type JsonRecord = Record<string, any>
+
+export type ModelMessage = { role: 'system' | 'user' | 'assistant'; content: string }
 
 function getModelConfig() {
   const apiKey =
@@ -27,15 +29,10 @@ export function isResearchModelEnabled(): boolean {
 }
 
 /**
- * Calls the configured LLM with a strict-JSON response format and returns the
- * parsed object, or null on any failure (disabled, HTTP error, invalid JSON).
- * Callers must always handle the null case and fall back to heuristics.
+ * Low-level call: posts a message array and returns the raw assistant string,
+ * or null on any failure. When `json` is true, requests a JSON-object response.
  */
-export async function callResearchModel(
-  schemaName: string,
-  system: string,
-  user: string,
-): Promise<JsonRecord | null> {
+async function postCompletion(messages: ModelMessage[], json: boolean): Promise<string | null> {
   const config = getModelConfig()
   if (!config.enabled) return null
 
@@ -50,33 +47,60 @@ export async function callResearchModel(
       },
       body: JSON.stringify({
         model: config.model,
-        temperature: 0.1,
-        response_format: { type: 'json_object' },
-        messages: [
-          {
-            role: 'system',
-            content: `${system}\nReturn a single JSON object only. Schema name: ${schemaName}.`,
-          },
-          { role: 'user', content: user },
-        ],
+        temperature: json ? 0.1 : 0.4,
+        ...(json ? { response_format: { type: 'json_object' } } : {}),
+        messages,
       }),
       signal: controller.signal,
     })
-
     if (!response.ok) return null
-
     const payload = (await response.json().catch(() => null)) as JsonRecord | null
     const content = payload?.choices?.[0]?.message?.content
-    if (typeof content !== 'string' || !content.trim()) return null
-
-    try {
-      return JSON.parse(content) as JsonRecord
-    } catch {
-      return null
-    }
+    return typeof content === 'string' && content.trim() ? content : null
   } catch {
     return null
   } finally {
     clearTimeout(timeout)
+  }
+}
+
+/**
+ * Single-turn strict-JSON call (system + user). Returns the parsed object, or null
+ * on any failure. Callers must handle null and fall back to heuristics.
+ */
+export async function callResearchModel(
+  schemaName: string,
+  system: string,
+  user: string,
+): Promise<JsonRecord | null> {
+  const raw = await postCompletion(
+    [
+      {
+        role: 'system',
+        content: `${system}\nReturn a single JSON object only. Schema name: ${schemaName}.`,
+      },
+      { role: 'user', content: user },
+    ],
+    true,
+  )
+  if (!raw) return null
+  try {
+    return JSON.parse(raw) as JsonRecord
+  } catch {
+    return null
+  }
+}
+
+/**
+ * Multi-turn strict-JSON call over a full message history (for the conversational
+ * agent). Returns the parsed object, or null on failure.
+ */
+export async function callResearchModelJson(messages: ModelMessage[]): Promise<JsonRecord | null> {
+  const raw = await postCompletion(messages, true)
+  if (!raw) return null
+  try {
+    return JSON.parse(raw) as JsonRecord
+  } catch {
+    return null
   }
 }

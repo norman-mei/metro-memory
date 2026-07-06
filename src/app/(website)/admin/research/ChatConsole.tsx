@@ -56,7 +56,7 @@ export default function ChatConsole() {
           messages.map((m, i) => (
             <div key={i} className={`flex ${m.role === 'user' ? 'justify-end' : 'justify-start'}`}>
               <div
-                className={`max-w-[80%] rounded-2xl px-4 py-2 text-sm ${
+                className={`max-w-[80%] whitespace-pre-wrap rounded-2xl px-4 py-2 text-sm ${
                   m.role === 'user'
                     ? 'bg-sky-500 text-white'
                     : 'bg-zinc-100 text-zinc-800 dark:bg-zinc-800 dark:text-zinc-100'
