@@ -8,7 +8,7 @@ export const maxDuration = 300
 
 const schema = z.object({
   message: z.string().min(1).max(2000),
-  sessionId: z.string().optional(),
+  sessionId: z.string().nullish(),
 })
 
 export async function POST(request: Request) {
