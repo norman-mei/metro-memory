@@ -14,10 +14,10 @@ test.describe('auth smoke', () => {
     await expect(page.getByTestId('account-switch-create')).toBeVisible()
   })
 
-  test('@smoke admin automation login page renders', async ({ page }) => {
-    await page.goto('/admin/automation/login')
+  test('@smoke admin research login page renders', async ({ page }) => {
+    await page.goto('/admin/research/login')
 
-    await expect(page.getByTestId('automation-admin-login-page')).toBeVisible()
+    await expect(page.getByRole('heading', { name: 'Research console' })).toBeVisible()
   })
 
   test('@smoke existing account can log in when smoke credentials are configured', async ({

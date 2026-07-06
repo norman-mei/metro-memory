@@ -36,10 +36,10 @@ const NAV_ITEMS = [
       pathname === '/' && new URLSearchParams(search).get('tab') === 'settings',
   },
   {
-    href: '/admin/automation',
-    label: 'Automation',
+    href: '/admin/research',
+    label: 'Research',
     icon: MdAutorenew,
-    match: (pathname: string) => pathname.startsWith('/admin/automation'),
+    match: (pathname: string) => pathname.startsWith('/admin/research'),
   },
 ] as const
 
