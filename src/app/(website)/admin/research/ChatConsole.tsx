@@ -12,6 +12,11 @@ type SessionSummary = {
 type Message = { id: string; role: 'USER' | 'ASSISTANT' | 'SYSTEM'; content: string }
 
 const ACTIVE_KEY = 'research-chat-active-session'
+const STREAM_ID = '__streaming__'
+
+function isRealMessage(id: string) {
+  return id !== STREAM_ID && !id.startsWith('tmp-')
+}
 
 export default function ChatConsole() {
   const router = useRouter()
@@ -35,6 +40,7 @@ export default function ChatConsole() {
   const loadSession = useCallback(async (id: string | null) => {
     setActiveId(id)
     setEditingId(null)
+    setError(null)
     if (typeof window !== 'undefined') {
       if (id) window.localStorage.setItem(ACTIVE_KEY, id)
       else window.localStorage.removeItem(ACTIVE_KEY)
@@ -43,12 +49,22 @@ export default function ChatConsole() {
       setMessages([])
       return
     }
-    const res = await fetch(`/api/admin/research/sessions/${id}`)
-    if (res.ok) setMessages((await res.json()).session?.messages ?? [])
-    else setMessages([])
+    try {
+      const res = await fetch(`/api/admin/research/sessions/${id}`)
+      if (!res.ok) {
+        const p = await res.json().catch(() => ({}))
+        setError(p?.error ?? `Could not load chat (HTTP ${res.status}).`)
+        setMessages([])
+        return
+      }
+      const data = await res.json()
+      setMessages(data.session?.messages ?? [])
+    } catch {
+      setError('Could not load chat.')
+      setMessages([])
+    }
   }, [])
 
-  // Initial load: sessions + restore last active chat.
   useEffect(() => {
     ;(async () => {
       await refreshSessions()
@@ -72,18 +88,69 @@ export default function ChatConsole() {
     setError(null)
     setBusy(true)
     setInput('')
-    setMessages((m) => [...m, { id: `tmp-${Date.now()}`, role: 'USER', content: message }])
+    setMessages((m) => [
+      ...m,
+      { id: `tmp-u-${Date.now()}`, role: 'USER', content: message },
+      { id: STREAM_ID, role: 'ASSISTANT', content: '' },
+    ])
+
     try {
-      const res = await fetch('/api/admin/research/chat', {
+      const res = await fetch('/api/admin/research/chat/stream', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ message, sessionId: activeId }),
       })
-      if (!res.ok) return fail(res, 'Chat request failed.')
-      const payload = await res.json()
-      await loadSession(payload.sessionId)
-      await refreshSessions()
-      if (payload.runId) router.refresh()
+      if (!res.ok || !res.body) {
+        await fail(res, 'Chat request failed.')
+        setMessages((m) => m.filter((x) => x.id !== STREAM_ID))
+        return
+      }
+
+      const reader = res.body.getReader()
+      const decoder = new TextDecoder()
+      let buffer = ''
+      let sid = activeId
+      let runId: string | null = null
+
+      for (;;) {
+        const { done, value } = await reader.read()
+        if (done) break
+        buffer += decoder.decode(value, { stream: true })
+        const parts = buffer.split('\n\n')
+        buffer = parts.pop() ?? ''
+        for (const part of parts) {
+          const line = part.trim()
+          if (!line.startsWith('data:')) continue
+          let obj: any
+          try {
+            obj = JSON.parse(line.slice(5).trim())
+          } catch {
+            continue
+          }
+          if (obj.type === 'delta') {
+            setMessages((m) => {
+              const copy = [...m]
+              const last = copy[copy.length - 1]
+              if (last && last.id === STREAM_ID) {
+                copy[copy.length - 1] = { ...last, content: last.content + obj.delta }
+              }
+              return copy
+            })
+          } else if (obj.type === 'done') {
+            sid = obj.sessionId
+            runId = obj.runId
+          } else if (obj.type === 'error') {
+            setError(obj.error ?? 'Chat failed.')
+          }
+        }
+      }
+
+      if (sid) {
+        if (typeof window !== 'undefined') window.localStorage.setItem(ACTIVE_KEY, sid)
+        await loadSession(sid)
+        await refreshSessions()
+      }
+      if (runId) router.refresh()
     } catch {
       setError('Chat request failed.')
     } finally {
@@ -271,9 +338,9 @@ export default function ChatConsole() {
                           : 'bg-zinc-100 text-zinc-800 dark:bg-zinc-800 dark:text-zinc-100'
                       }`}
                     >
-                      {m.content}
+                      {m.content || (m.id === STREAM_ID ? '▍' : '')}
                     </div>
-                    {!m.id.startsWith('tmp-') && (
+                    {isRealMessage(m.id) && (
                       <div className="mt-1 flex gap-2 text-xs text-zinc-400 opacity-0 transition group-hover:opacity-100">
                         {m.role === 'USER' && (
                           <button
@@ -304,7 +371,6 @@ export default function ChatConsole() {
               </div>
             ))
           )}
-          {busy && <p className="text-xs text-zinc-400">Thinking…</p>}
           <div ref={endRef} />
         </div>
 

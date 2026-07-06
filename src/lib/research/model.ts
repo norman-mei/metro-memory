@@ -120,3 +120,77 @@ export async function callResearchModelJson(messages: ModelMessage[]): Promise<J
     return null
   }
 }
+
+/**
+ * Streams a plain-text completion, invoking `onDelta` for each token chunk as it
+ * arrives. Returns the full accumulated text, or null if disabled / the request
+ * fails before any content. Parses the OpenAI-style Server-Sent Events format.
+ */
+export async function streamResearchModel(
+  messages: ModelMessage[],
+  onDelta: (text: string) => void,
+): Promise<string | null> {
+  const config = getModelConfig()
+  if (!config.enabled) {
+    console.warn(
+      `[research-model] stream disabled — apiKey:${config.apiKey ? 'set' : 'MISSING'} model:${
+        config.model || 'MISSING'
+      }`,
+    )
+    return null
+  }
+
+  const controller = new AbortController()
+  const timeout = setTimeout(() => controller.abort(), config.timeoutMs)
+  try {
+    const response = await fetch(`${config.baseUrl}/chat/completions`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${config.apiKey}`,
+      },
+      body: JSON.stringify({ model: config.model, temperature: 0.4, stream: true, messages }),
+      signal: controller.signal,
+    })
+    if (!response.ok || !response.body) {
+      const body = response.ok ? '' : await response.text().catch(() => '')
+      console.warn(`[research-model] stream HTTP ${response.status}: ${body.slice(0, 300)}`)
+      return null
+    }
+
+    const reader = response.body.getReader()
+    const decoder = new TextDecoder()
+    let buffer = ''
+    let full = ''
+
+    for (;;) {
+      const { done, value } = await reader.read()
+      if (done) break
+      buffer += decoder.decode(value, { stream: true })
+      const lines = buffer.split('\n')
+      buffer = lines.pop() ?? ''
+      for (const line of lines) {
+        const trimmed = line.trim()
+        if (!trimmed.startsWith('data:')) continue
+        const data = trimmed.slice(5).trim()
+        if (!data || data === '[DONE]') continue
+        try {
+          const json = JSON.parse(data)
+          const delta = json?.choices?.[0]?.delta?.content
+          if (typeof delta === 'string' && delta) {
+            full += delta
+            onDelta(delta)
+          }
+        } catch {
+          // ignore keep-alive / non-JSON lines
+        }
+      }
+    }
+    return full || null
+  } catch (error) {
+    console.warn(`[research-model] stream failed: ${error instanceof Error ? error.message : error}`)
+    return null
+  } finally {
+    clearTimeout(timeout)
+  }
+}
