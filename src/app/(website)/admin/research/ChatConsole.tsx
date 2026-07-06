@@ -1,17 +1,70 @@
 'use client'
 
-import { useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import { useRouter } from 'next/navigation'
 
-type Msg = { role: 'user' | 'assistant'; content: string }
+type SessionSummary = {
+  id: string
+  title: string | null
+  updatedAt: string
+  _count?: { messages: number }
+}
+type Message = { id: string; role: 'USER' | 'ASSISTANT' | 'SYSTEM'; content: string }
+
+const ACTIVE_KEY = 'research-chat-active-session'
 
 export default function ChatConsole() {
   const router = useRouter()
-  const [messages, setMessages] = useState<Msg[]>([])
+  const [sessions, setSessions] = useState<SessionSummary[]>([])
+  const [activeId, setActiveId] = useState<string | null>(null)
+  const [messages, setMessages] = useState<Message[]>([])
   const [input, setInput] = useState('')
-  const [sessionId, setSessionId] = useState<string | null>(null)
   const [busy, setBusy] = useState(false)
   const [error, setError] = useState<string | null>(null)
+  const [editingId, setEditingId] = useState<string | null>(null)
+  const [editText, setEditText] = useState('')
+  const [renamingId, setRenamingId] = useState<string | null>(null)
+  const [renameText, setRenameText] = useState('')
+  const endRef = useRef<HTMLDivElement>(null)
+
+  const refreshSessions = useCallback(async () => {
+    const res = await fetch('/api/admin/research/sessions')
+    if (res.ok) setSessions((await res.json()).sessions ?? [])
+  }, [])
+
+  const loadSession = useCallback(async (id: string | null) => {
+    setActiveId(id)
+    setEditingId(null)
+    if (typeof window !== 'undefined') {
+      if (id) window.localStorage.setItem(ACTIVE_KEY, id)
+      else window.localStorage.removeItem(ACTIVE_KEY)
+    }
+    if (!id) {
+      setMessages([])
+      return
+    }
+    const res = await fetch(`/api/admin/research/sessions/${id}`)
+    if (res.ok) setMessages((await res.json()).session?.messages ?? [])
+    else setMessages([])
+  }, [])
+
+  // Initial load: sessions + restore last active chat.
+  useEffect(() => {
+    ;(async () => {
+      await refreshSessions()
+      const stored = typeof window !== 'undefined' ? window.localStorage.getItem(ACTIVE_KEY) : null
+      if (stored) await loadSession(stored)
+    })()
+  }, [refreshSessions, loadSession])
+
+  useEffect(() => {
+    endRef.current?.scrollIntoView({ behavior: 'smooth' })
+  }, [messages, busy])
+
+  const fail = async (res: Response, fallback: string) => {
+    const p = await res.json().catch(() => ({}))
+    setError(p?.error ?? fallback)
+  }
 
   const send = async () => {
     const message = input.trim()
@@ -19,83 +72,267 @@ export default function ChatConsole() {
     setError(null)
     setBusy(true)
     setInput('')
-    setMessages((m) => [...m, { role: 'user', content: message }])
-
+    setMessages((m) => [...m, { id: `tmp-${Date.now()}`, role: 'USER', content: message }])
     try {
       const res = await fetch('/api/admin/research/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ message, sessionId }),
+        body: JSON.stringify({ message, sessionId: activeId }),
       })
-      const payload = await res.json().catch(() => ({}))
-      if (!res.ok) {
-        throw new Error(payload?.error ?? 'Chat request failed.')
-      }
-      setSessionId(payload.sessionId ?? sessionId)
-      setMessages((m) => [
-        ...m,
-        { role: 'assistant', content: payload.assistantContent ?? '(no response)' },
-      ])
+      if (!res.ok) return fail(res, 'Chat request failed.')
+      const payload = await res.json()
+      await loadSession(payload.sessionId)
+      await refreshSessions()
       if (payload.runId) router.refresh()
-    } catch (e) {
-      setError(e instanceof Error ? e.message : 'Chat request failed.')
+    } catch {
+      setError('Chat request failed.')
     } finally {
       setBusy(false)
     }
   }
 
+  const newChat = async () => {
+    setError(null)
+    const res = await fetch('/api/admin/research/sessions', { method: 'POST' })
+    if (!res.ok) return fail(res, 'Could not create chat.')
+    const { session } = await res.json()
+    await refreshSessions()
+    await loadSession(session.id)
+  }
+
+  const removeChat = async (id: string) => {
+    const res = await fetch(`/api/admin/research/sessions/${id}`, { method: 'DELETE' })
+    if (!res.ok) return fail(res, 'Could not delete chat.')
+    await refreshSessions()
+    if (id === activeId) await loadSession(null)
+  }
+
+  const saveRename = async (id: string) => {
+    const title = renameText.trim()
+    setRenamingId(null)
+    if (!title) return
+    const res = await fetch(`/api/admin/research/sessions/${id}`, {
+      method: 'PATCH',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ title }),
+    })
+    if (!res.ok) return fail(res, 'Rename failed.')
+    await refreshSessions()
+  }
+
+  const deleteMessage = async (id: string) => {
+    const res = await fetch(`/api/admin/research/messages/${id}`, { method: 'DELETE' })
+    if (!res.ok) return fail(res, 'Delete failed.')
+    await loadSession(activeId)
+  }
+
+  const saveEdit = async (id: string) => {
+    const content = editText.trim()
+    if (!content) return
+    setEditingId(null)
+    setBusy(true)
+    try {
+      const res = await fetch(`/api/admin/research/messages/${id}`, {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ content }),
+      })
+      if (!res.ok) return fail(res, 'Edit failed.')
+      await loadSession(activeId)
+      await refreshSessions()
+    } finally {
+      setBusy(false)
+    }
+  }
+
+  const branch = async (messageId: string) => {
+    setError(null)
+    const res = await fetch(`/api/admin/research/sessions/${activeId}/branch`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ messageId }),
+    })
+    if (!res.ok) return fail(res, 'Branch failed.')
+    const { sessionId } = await res.json()
+    await refreshSessions()
+    await loadSession(sessionId)
+  }
+
   return (
-    <div className="flex h-[32rem] flex-col rounded-2xl border border-zinc-200 bg-white dark:border-zinc-800 dark:bg-zinc-900">
-      <div className="flex-1 space-y-3 overflow-y-auto p-4">
-        {messages.length === 0 ? (
-          <div className="flex h-full flex-col items-center justify-center text-center text-sm text-zinc-400">
-            <p>Ask the research agent to investigate cities.</p>
-            <p className="mt-1 text-xs">e.g. &ldquo;Research Tokyo and Osaka for station openings&rdquo;</p>
-          </div>
-        ) : (
-          messages.map((m, i) => (
-            <div key={i} className={`flex ${m.role === 'user' ? 'justify-end' : 'justify-start'}`}>
-              <div
-                className={`max-w-[80%] whitespace-pre-wrap rounded-2xl px-4 py-2 text-sm ${
-                  m.role === 'user'
-                    ? 'bg-sky-500 text-white'
-                    : 'bg-zinc-100 text-zinc-800 dark:bg-zinc-800 dark:text-zinc-100'
-                }`}
-              >
-                {m.content}
-              </div>
-            </div>
-          ))
-        )}
-        {busy && <p className="text-xs text-zinc-400">Researching…</p>}
-      </div>
-
-      {error ? (
-        <p className="px-4 text-xs text-rose-500">{error}</p>
-      ) : null}
-
-      <div className="flex gap-2 border-t border-zinc-200 p-3 dark:border-zinc-800">
-        <input
-          value={input}
-          onChange={(e) => setInput(e.target.value)}
-          onKeyDown={(e) => {
-            if (e.key === 'Enter' && !e.shiftKey) {
-              e.preventDefault()
-              void send()
-            }
-          }}
-          placeholder="Type a research request…"
-          disabled={busy}
-          className="flex-1 rounded-xl border border-zinc-200 bg-white px-4 py-2 text-sm outline-none focus:border-sky-400 disabled:opacity-60 dark:border-zinc-700 dark:bg-zinc-950"
-        />
+    <div className="flex h-[34rem] overflow-hidden rounded-2xl border border-zinc-200 bg-white dark:border-zinc-800 dark:bg-zinc-900">
+      {/* Sidebar */}
+      <aside className="flex w-60 shrink-0 flex-col border-r border-zinc-200 bg-zinc-50 dark:border-zinc-800 dark:bg-zinc-950/50">
         <button
           type="button"
-          onClick={() => void send()}
-          disabled={busy || !input.trim()}
-          className="rounded-xl bg-sky-500 px-5 py-2 text-sm font-semibold text-white transition hover:bg-sky-400 disabled:opacity-60"
+          onClick={newChat}
+          className="m-2 rounded-xl bg-sky-500 px-3 py-2 text-sm font-semibold text-white transition hover:bg-sky-400"
         >
-          Send
+          + New chat
         </button>
+        <div className="flex-1 space-y-0.5 overflow-y-auto px-2 pb-2">
+          {sessions.length === 0 && (
+            <p className="px-2 py-4 text-center text-xs text-zinc-400">No chats yet.</p>
+          )}
+          {sessions.map((s) => (
+            <div
+              key={s.id}
+              className={`group flex items-center gap-1 rounded-lg px-2 py-1.5 text-sm ${
+                s.id === activeId
+                  ? 'bg-sky-100 text-sky-900 dark:bg-sky-950 dark:text-sky-200'
+                  : 'text-zinc-700 hover:bg-zinc-100 dark:text-zinc-300 dark:hover:bg-zinc-800'
+              }`}
+            >
+              {renamingId === s.id ? (
+                <input
+                  autoFocus
+                  value={renameText}
+                  onChange={(e) => setRenameText(e.target.value)}
+                  onBlur={() => saveRename(s.id)}
+                  onKeyDown={(e) => e.key === 'Enter' && saveRename(s.id)}
+                  className="w-full rounded border border-zinc-300 bg-white px-1 py-0.5 text-xs dark:border-zinc-600 dark:bg-zinc-900"
+                />
+              ) : (
+                <>
+                  <button
+                    type="button"
+                    onClick={() => loadSession(s.id)}
+                    onDoubleClick={() => {
+                      setRenamingId(s.id)
+                      setRenameText(s.title ?? '')
+                    }}
+                    className="flex-1 truncate text-left"
+                    title={s.title ?? 'Untitled'}
+                  >
+                    {s.title || 'Untitled'}
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => removeChat(s.id)}
+                    className="opacity-0 transition group-hover:opacity-100 hover:text-rose-500"
+                    title="Delete chat"
+                  >
+                    ✕
+                  </button>
+                </>
+              )}
+            </div>
+          ))}
+        </div>
+      </aside>
+
+      {/* Main pane */}
+      <div className="flex flex-1 flex-col">
+        <div className="flex-1 space-y-4 overflow-y-auto p-4">
+          {messages.length === 0 ? (
+            <div className="flex h-full flex-col items-center justify-center text-center text-sm text-zinc-400">
+              <p>Ask about your queue, or start a research run.</p>
+              <p className="mt-1 text-xs">
+                e.g. &ldquo;What&apos;s in my queue?&rdquo; · &ldquo;Research Tokyo for station openings&rdquo;
+              </p>
+            </div>
+          ) : (
+            messages.map((m) => (
+              <div
+                key={m.id}
+                className={`group flex flex-col ${m.role === 'USER' ? 'items-end' : 'items-start'}`}
+              >
+                {editingId === m.id ? (
+                  <div className="w-full max-w-[85%]">
+                    <textarea
+                      autoFocus
+                      value={editText}
+                      onChange={(e) => setEditText(e.target.value)}
+                      rows={3}
+                      className="w-full rounded-xl border border-zinc-300 bg-white px-3 py-2 text-sm dark:border-zinc-600 dark:bg-zinc-950"
+                    />
+                    <div className="mt-1 flex gap-2">
+                      <button
+                        type="button"
+                        onClick={() => saveEdit(m.id)}
+                        className="rounded-lg bg-sky-500 px-3 py-1 text-xs font-semibold text-white hover:bg-sky-400"
+                      >
+                        Save &amp; regenerate
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => setEditingId(null)}
+                        className="rounded-lg bg-zinc-200 px-3 py-1 text-xs font-semibold text-zinc-700 dark:bg-zinc-700 dark:text-zinc-200"
+                      >
+                        Cancel
+                      </button>
+                    </div>
+                  </div>
+                ) : (
+                  <>
+                    <div
+                      className={`max-w-[85%] whitespace-pre-wrap rounded-2xl px-4 py-2 text-sm ${
+                        m.role === 'USER'
+                          ? 'bg-sky-500 text-white'
+                          : 'bg-zinc-100 text-zinc-800 dark:bg-zinc-800 dark:text-zinc-100'
+                      }`}
+                    >
+                      {m.content}
+                    </div>
+                    {!m.id.startsWith('tmp-') && (
+                      <div className="mt-1 flex gap-2 text-xs text-zinc-400 opacity-0 transition group-hover:opacity-100">
+                        {m.role === 'USER' && (
+                          <button
+                            type="button"
+                            onClick={() => {
+                              setEditingId(m.id)
+                              setEditText(m.content)
+                            }}
+                            className="hover:text-sky-500"
+                          >
+                            Edit
+                          </button>
+                        )}
+                        <button type="button" onClick={() => branch(m.id)} className="hover:text-sky-500">
+                          Branch
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() => deleteMessage(m.id)}
+                          className="hover:text-rose-500"
+                        >
+                          Delete
+                        </button>
+                      </div>
+                    )}
+                  </>
+                )}
+              </div>
+            ))
+          )}
+          {busy && <p className="text-xs text-zinc-400">Thinking…</p>}
+          <div ref={endRef} />
+        </div>
+
+        {error ? <p className="px-4 text-xs text-rose-500">{error}</p> : null}
+
+        <div className="flex gap-2 border-t border-zinc-200 p-3 dark:border-zinc-800">
+          <input
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter' && !e.shiftKey) {
+                e.preventDefault()
+                void send()
+              }
+            }}
+            placeholder="Message the research agent…"
+            disabled={busy}
+            className="flex-1 rounded-xl border border-zinc-200 bg-white px-4 py-2 text-sm outline-none focus:border-sky-400 disabled:opacity-60 dark:border-zinc-700 dark:bg-zinc-950"
+          />
+          <button
+            type="button"
+            onClick={() => void send()}
+            disabled={busy || !input.trim()}
+            className="rounded-xl bg-sky-500 px-5 py-2 text-sm font-semibold text-white transition hover:bg-sky-400 disabled:opacity-60"
+          >
+            Send
+          </button>
+        </div>
       </div>
     </div>
   )

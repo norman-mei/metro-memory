@@ -102,35 +102,19 @@ function parseAction(raw: unknown): AgentAction {
 }
 
 /**
- * Handles one conversational turn: loads session history, grounds the model in the
- * live queue, produces a reply, optionally launches research, and persists both
- * messages. Falls back to a research-command heuristic if the model is disabled.
+ * Reads a session's conversation, grounds the model in the live queue, produces a
+ * reply, optionally launches research, and persists the assistant message. Assumes
+ * the latest user message is already stored. Falls back to a heuristic if the model
+ * is disabled.
  */
-export async function handleChatTurn(args: {
-  message: string
-  sessionId?: string | null
-  reviewer: string
-}) {
-  const existing = args.sessionId
-    ? await prisma.chatSession.findUnique({ where: { id: args.sessionId } })
-    : null
-  const session =
-    existing ??
-    (await prisma.chatSession.create({
-      data: { title: args.message.slice(0, 80), createdBy: args.reviewer },
-    }))
-
-  // Prior turns (before recording the new user message).
-  const priorDesc = await prisma.chatMessage.findMany({
-    where: { sessionId: session.id },
+async function generateReply(sessionId: string, reviewer: string) {
+  const stored = await prisma.chatMessage.findMany({
+    where: { sessionId },
     orderBy: { createdAt: 'desc' },
     take: HISTORY_LIMIT,
   })
-  const history = priorDesc.reverse()
-
-  await prisma.chatMessage.create({
-    data: { sessionId: session.id, role: 'USER', content: args.message },
-  })
+  const history = stored.reverse()
+  const lastUser = [...history].reverse().find((m) => m.role === 'USER')
 
   let reply: string
   let action: AgentAction
@@ -149,12 +133,11 @@ export async function handleChatTurn(args: {
         content: m.content,
       }),
     ),
-    { role: 'user', content: args.message },
   ]
 
   const parsed = await callResearchModelJson(messages)
   if (!parsed || typeof parsed.reply !== 'string') {
-    const fb = heuristicFallback(args.message)
+    const fb = heuristicFallback(lastUser?.content ?? '')
     reply = fb.reply
     action = fb.action
   } else {
@@ -168,21 +151,85 @@ export async function handleChatTurn(args: {
       citySlugs: action.citySlugs,
       scope: action.scope,
       trigger: 'CHAT',
-      sessionId: session.id,
-      reviewer: args.reviewer,
+      sessionId,
+      reviewer,
     })
     runId = summary.runId
     reply += `\n\n✅ Ran research for ${action.citySlugs.join(', ')} — ${summary.claimsCreated} claim(s) filed (${summary.green} green, ${summary.yellow} yellow, ${summary.red} red). Check the Review Queue tab.`
   }
 
-  await prisma.chatMessage.create({
+  const assistant = await prisma.chatMessage.create({
     data: {
-      sessionId: session.id,
+      sessionId,
       role: 'ASSISTANT',
       content: reply,
       structuredJson: { action, runId } as any,
     },
   })
+  await prisma.chatSession.update({ where: { id: sessionId }, data: { updatedAt: new Date() } })
 
-  return { sessionId: session.id, runId, assistantContent: reply }
+  return { sessionId, runId, assistantContent: reply, assistantId: assistant.id }
+}
+
+/**
+ * Handles one conversational turn: creates/continues the session (account-scoped),
+ * records the user message, and generates the assistant reply.
+ */
+export async function handleChatTurn(args: {
+  message: string
+  sessionId?: string | null
+  reviewer: string
+}) {
+  const existing = args.sessionId
+    ? await prisma.chatSession.findFirst({
+        where: { id: args.sessionId, createdBy: args.reviewer },
+      })
+    : null
+  const session =
+    existing ??
+    (await prisma.chatSession.create({
+      data: { title: args.message.slice(0, 80), createdBy: args.reviewer },
+    }))
+
+  // Give a brand-new session a title from its first message.
+  if (!existing) {
+    await prisma.chatSession.update({
+      where: { id: session.id },
+      data: { title: args.message.slice(0, 80) || 'New chat' },
+    })
+  }
+
+  await prisma.chatMessage.create({
+    data: { sessionId: session.id, role: 'USER', content: args.message },
+  })
+
+  return generateReply(session.id, args.reviewer)
+}
+
+/**
+ * ChatGPT-style edit: replaces a user message's content, discards everything after
+ * it, and regenerates the assistant reply. Returns null if not found / not owned.
+ */
+export async function editAndRegenerate(args: {
+  messageId: string
+  content: string
+  reviewer: string
+}) {
+  const message = await prisma.chatMessage.findUnique({
+    where: { id: args.messageId },
+    include: { session: { select: { createdBy: true } } },
+  })
+  if (!message || message.session.createdBy !== args.reviewer || message.role !== 'USER') {
+    return null
+  }
+
+  await prisma.chatMessage.update({
+    where: { id: message.id },
+    data: { content: args.content },
+  })
+  await prisma.chatMessage.deleteMany({
+    where: { sessionId: message.sessionId, createdAt: { gt: message.createdAt } },
+  })
+
+  return generateReply(message.sessionId, args.reviewer)
 }
