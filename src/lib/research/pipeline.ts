@@ -3,6 +3,8 @@
 
 import { prisma } from '@/lib/prisma'
 
+import { loadCityGrounding } from './cityData'
+import { ENABLED_CLAIM_TYPES } from './config'
 import { extractClaims, type CollectedSource } from './extract'
 import { assignLane } from './policy'
 import { resolveTier, touchDomain } from './domains'
@@ -78,9 +80,18 @@ export async function runResearch(input: RunResearchInput): Promise<RunResearchS
   for (const citySlug of citySlugs) {
     try {
       const sources = await collectForCity(citySlug, input.scope, maxSources)
-      const claims = await extractClaims(citySlug, sources)
+      const grounding = loadCityGrounding(citySlug)
+      const claims = await extractClaims(citySlug, sources, grounding, ENABLED_CLAIM_TYPES)
 
       for (const claim of claims) {
+        // Skip anything already filed before (any status) so reviewed/rejected
+        // claims don't keep reappearing on later runs.
+        const duplicate = await prisma.researchClaim.findFirst({
+          where: { citySlug: claim.citySlug, claimType: claim.claimType, title: claim.title },
+          select: { id: true },
+        })
+        if (duplicate) continue
+
         const evidenceTiers = await Promise.all(
           claim.evidence.map((e) => resolveTier(e.sourceUrl)),
         )
