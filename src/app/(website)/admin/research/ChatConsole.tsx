@@ -30,7 +30,7 @@ export default function ChatConsole() {
   const [editText, setEditText] = useState('')
   const [renamingId, setRenamingId] = useState<string | null>(null)
   const [renameText, setRenameText] = useState('')
-  const endRef = useRef<HTMLDivElement>(null)
+  const scrollRef = useRef<HTMLDivElement>(null)
 
   const refreshSessions = useCallback(async () => {
     const res = await fetch('/api/admin/research/sessions')
@@ -73,8 +73,11 @@ export default function ChatConsole() {
     })()
   }, [refreshSessions, loadSession])
 
+  // Keep the message list pinned to the bottom by scrolling ONLY its own
+  // container — never scrollIntoView, which would scroll the whole page.
   useEffect(() => {
-    endRef.current?.scrollIntoView({ behavior: 'smooth' })
+    const el = scrollRef.current
+    if (el) el.scrollTop = el.scrollHeight
   }, [messages, busy])
 
   const fail = async (res: Response, fallback: string) => {
@@ -289,7 +292,7 @@ export default function ChatConsole() {
 
       {/* Main pane */}
       <div className="flex flex-1 flex-col">
-        <div className="flex-1 space-y-4 overflow-y-auto p-4">
+        <div ref={scrollRef} className="flex-1 space-y-4 overflow-y-auto p-4">
           {messages.length === 0 ? (
             <div className="flex h-full flex-col items-center justify-center text-center text-sm text-zinc-400">
               <p>Ask about your queue, or start a research run.</p>
@@ -371,7 +374,6 @@ export default function ChatConsole() {
               </div>
             ))
           )}
-          <div ref={endRef} />
         </div>
 
         {error ? <p className="px-4 text-xs text-rose-500">{error}</p> : null}
