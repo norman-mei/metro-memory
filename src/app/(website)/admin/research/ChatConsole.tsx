@@ -39,6 +39,11 @@ export default function ChatConsole() {
   const [archivedLoading, setArchivedLoading] = useState(false)
   // Archived chat about to be permanently deleted (shows a confirm dialog).
   const [confirmPurgeId, setConfirmPurgeId] = useState<string | null>(null)
+  // Undo toast: { message, onUndo }. The pending server action (e.g. the actual
+  // delete) is held in a ref and committed after 5s unless undone.
+  const [toast, setToast] = useState<{ message: string; onUndo: () => void } | null>(null)
+  const toastTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
+  const pendingExpire = useRef<(() => void) | null>(null)
   const scrollRef = useRef<HTMLDivElement>(null)
 
   const refreshSessions = useCallback(async () => {
@@ -93,6 +98,49 @@ export default function ChatConsole() {
     const p = await res.json().catch(() => ({}))
     setError(p?.error ?? fallback)
   }
+
+  // Commit any pending deferred action immediately (clears the timer).
+  const flushPending = useCallback(() => {
+    if (toastTimer.current) {
+      clearTimeout(toastTimer.current)
+      toastTimer.current = null
+    }
+    const fn = pendingExpire.current
+    pendingExpire.current = null
+    fn?.()
+  }, [])
+
+  // Show an undo toast. `onExpire` runs after 5s unless the user hits Undo, which
+  // runs `onUndo` instead. Starting a new toast commits any previous pending action.
+  const showToast = useCallback(
+    (message: string, opts: { onUndo?: () => void; onExpire?: () => void }) => {
+      flushPending()
+      pendingExpire.current = opts.onExpire ?? null
+      setToast({
+        message,
+        onUndo: () => {
+          if (toastTimer.current) {
+            clearTimeout(toastTimer.current)
+            toastTimer.current = null
+          }
+          pendingExpire.current = null
+          setToast(null)
+          opts.onUndo?.()
+        },
+      })
+      toastTimer.current = setTimeout(() => {
+        toastTimer.current = null
+        const fn = pendingExpire.current
+        pendingExpire.current = null
+        setToast(null)
+        fn?.()
+      }, 5000)
+    },
+    [flushPending],
+  )
+
+  // Commit any pending delete if the console unmounts.
+  useEffect(() => () => flushPending(), [flushPending])
 
   const send = async () => {
     const message = input.trim()
@@ -189,12 +237,18 @@ export default function ChatConsole() {
     }
   }, [])
 
-  const removeChat = async (id: string) => {
+  const removeChat = (id: string) => {
     setConfirmDeleteId(null)
-    const res = await fetch(`/api/admin/research/sessions/${id}`, { method: 'DELETE' })
-    if (!res.ok) return fail(res, 'Could not delete chat.')
-    await refreshSessions()
-    if (id === activeId) await loadSession(null)
+    // Optimistically remove; actually delete on the server after the undo window.
+    setSessions((prev) => prev.filter((s) => s.id !== id))
+    if (id === activeId) void loadSession(null)
+    showToast('Chat deleted.', {
+      onUndo: () => void refreshSessions(),
+      onExpire: async () => {
+        await fetch(`/api/admin/research/sessions/${id}`, { method: 'DELETE' }).catch(() => {})
+        void refreshSessions()
+      },
+    })
   }
 
   const archiveChat = async (id: string) => {
@@ -208,6 +262,7 @@ export default function ChatConsole() {
     await refreshSessions()
     if (id === activeId) await loadSession(null)
     if (showArchived) await refreshArchived()
+    showToast('Chat archived.', { onUndo: () => void unarchiveChat(id) })
   }
 
   const unarchiveChat = async (id: string) => {
@@ -221,13 +276,18 @@ export default function ChatConsole() {
     await Promise.all([refreshSessions(), refreshArchived()])
   }
 
-  const purgeChat = async (id: string) => {
+  const purgeChat = (id: string) => {
     setConfirmPurgeId(null)
-    const res = await fetch(`/api/admin/research/sessions/${id}`, { method: 'DELETE' })
-    if (!res.ok) return fail(res, 'Could not delete chat.')
-    await refreshArchived()
-    await refreshSessions()
-    if (id === activeId) await loadSession(null)
+    // Optimistically remove from the archived list; delete on the server after undo.
+    setArchivedSessions((prev) => prev.filter((s) => s.id !== id))
+    showToast('Chat permanently deleted.', {
+      onUndo: () => void refreshArchived(),
+      onExpire: async () => {
+        await fetch(`/api/admin/research/sessions/${id}`, { method: 'DELETE' }).catch(() => {})
+        void refreshArchived()
+        void refreshSessions()
+      },
+    })
   }
 
   const openArchived = async () => {
@@ -596,6 +656,29 @@ export default function ChatConsole() {
             </button>
           </div>
         </Modal>
+      )}
+
+      {/* Undo toast */}
+      {toast && (
+        <div className="fixed bottom-6 left-1/2 z-[60] w-72 -translate-x-1/2">
+          <style>{`@keyframes rc_toastbar{from{width:100%}to{width:0%}}`}</style>
+          <div className="flex items-center gap-4 rounded-xl bg-zinc-900 px-4 py-2.5 text-sm text-white shadow-xl dark:bg-zinc-100 dark:text-zinc-900">
+            <span className="flex-1">{toast.message}</span>
+            <button
+              type="button"
+              onClick={toast.onUndo}
+              className="font-semibold text-sky-400 transition hover:text-sky-300 dark:text-sky-600 dark:hover:text-sky-500"
+            >
+              Undo
+            </button>
+          </div>
+          <div className="mt-1 h-0.5 overflow-hidden rounded-full bg-zinc-700/40 dark:bg-zinc-400/40">
+            <div
+              className="h-full bg-sky-400"
+              style={{ animation: 'rc_toastbar 5s linear forwards' }}
+            />
+          </div>
+        </div>
       )}
     </div>
   )
