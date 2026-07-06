@@ -577,15 +577,17 @@ model SourceDomain {
 }
 
 model ChatSession {
-  id        String        @id @default(cuid())
-  title     String?
-  createdBy String?
-  createdAt DateTime      @default(now())
-  updatedAt DateTime      @updatedAt
-  messages  ChatMessage[]
-  runs      ResearchRun[]
+  id         String        @id @default(cuid())
+  title      String?
+  createdBy  String?
+  createdAt  DateTime      @default(now())
+  updatedAt  DateTime      @updatedAt
+  archivedAt DateTime?
+  messages   ChatMessage[]
+  runs       ResearchRun[]
 
   @@index([createdAt])
+  @@index([archivedAt])
 }
 
 model ChatMessage {

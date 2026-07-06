@@ -4,15 +4,17 @@
 
 import { prisma } from '@/lib/prisma'
 
-export async function listSessions(owner: string) {
+export async function listSessions(owner: string, opts?: { archived?: boolean }) {
+  const archived = opts?.archived ?? false
   return prisma.chatSession.findMany({
-    where: { createdBy: owner },
+    where: { createdBy: owner, archivedAt: archived ? { not: null } : null },
     orderBy: { updatedAt: 'desc' },
     select: {
       id: true,
       title: true,
       createdAt: true,
       updatedAt: true,
+      archivedAt: true,
       _count: { select: { messages: true } },
     },
   })
@@ -36,6 +38,14 @@ export async function renameSession(id: string, owner: string, title: string) {
   const result = await prisma.chatSession.updateMany({
     where: { id, createdBy: owner },
     data: { title: title.slice(0, 120) || 'Untitled' },
+  })
+  return result.count > 0
+}
+
+export async function setSessionArchived(id: string, owner: string, archived: boolean) {
+  const result = await prisma.chatSession.updateMany({
+    where: { id, createdBy: owner },
+    data: { archivedAt: archived ? new Date() : null },
   })
   return result.count > 0
 }
