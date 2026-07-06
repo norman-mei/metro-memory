@@ -1,12 +1,15 @@
 'use client'
 
-import { useMemo, useState, useTransition } from 'react'
+import { useEffect, useMemo, useState, useTransition } from 'react'
 import { useRouter } from 'next/navigation'
 
 import ChatConsole from './ChatConsole'
 import type { ClaimDTO, QueueMetricsDTO, RunDTO } from './types'
 
 type Tab = 'queue' | 'runs' | 'chat' | 'sources'
+
+const TAB_KEY = 'research-active-tab'
+const TABS: Tab[] = ['queue', 'runs', 'chat', 'sources']
 
 const LANE_STYLES: Record<string, string> = {
   GREEN: 'bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300',
@@ -32,6 +35,18 @@ export default function ResearchWorkspace({
   const [typeFilter, setTypeFilter] = useState<string>('ALL')
   const [error, setError] = useState<string | null>(null)
   const [, startTransition] = useTransition()
+
+  // Restore the last active tab from localStorage (after mount, to avoid a
+  // hydration mismatch), and persist it whenever it changes.
+  useEffect(() => {
+    const stored = window.localStorage.getItem(TAB_KEY) as Tab | null
+    if (stored && TABS.includes(stored)) setTab(stored)
+  }, [])
+
+  const selectTab = (t: Tab) => {
+    setTab(t)
+    window.localStorage.setItem(TAB_KEY, t)
+  }
 
   const claimTypes = useMemo(
     () => Array.from(new Set(claims.map((c) => c.claimType))).sort(),
@@ -120,11 +135,11 @@ export default function ResearchWorkspace({
 
       {/* Tabs */}
       <nav className="flex gap-1 border-b border-zinc-200 dark:border-zinc-800">
-        {(['queue', 'runs', 'chat', 'sources'] as Tab[]).map((t) => (
+        {TABS.map((t) => (
           <button
             key={t}
             type="button"
-            onClick={() => setTab(t)}
+            onClick={() => selectTab(t)}
             className={`-mb-px border-b-2 px-4 py-2.5 text-sm font-medium capitalize transition ${
               tab === t
                 ? 'border-sky-500 text-sky-600 dark:text-sky-400'
