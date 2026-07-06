@@ -34,7 +34,14 @@ export function isResearchModelEnabled(): boolean {
  */
 async function postCompletion(messages: ModelMessage[], json: boolean): Promise<string | null> {
   const config = getModelConfig()
-  if (!config.enabled) return null
+  if (!config.enabled) {
+    console.warn(
+      `[research-model] disabled — apiKey:${config.apiKey ? 'set' : 'MISSING'} model:${
+        config.model ? config.model : 'MISSING'
+      }`,
+    )
+    return null
+  }
 
   const controller = new AbortController()
   const timeout = setTimeout(() => controller.abort(), config.timeoutMs)
@@ -53,11 +60,20 @@ async function postCompletion(messages: ModelMessage[], json: boolean): Promise<
       }),
       signal: controller.signal,
     })
-    if (!response.ok) return null
+    if (!response.ok) {
+      const body = await response.text().catch(() => '')
+      console.warn(`[research-model] HTTP ${response.status} from ${config.baseUrl}: ${body.slice(0, 300)}`)
+      return null
+    }
     const payload = (await response.json().catch(() => null)) as JsonRecord | null
     const content = payload?.choices?.[0]?.message?.content
-    return typeof content === 'string' && content.trim() ? content : null
-  } catch {
+    if (typeof content !== 'string' || !content.trim()) {
+      console.warn('[research-model] empty response content')
+      return null
+    }
+    return content
+  } catch (error) {
+    console.warn(`[research-model] request failed: ${error instanceof Error ? error.message : error}`)
     return null
   } finally {
     clearTimeout(timeout)
