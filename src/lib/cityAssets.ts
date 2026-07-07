@@ -5,7 +5,7 @@ import { CITY_PATH_MAP } from './cityPathMap'
 import { getMiniCityBySlug } from './miniCities'
 
 export const CITY_ASSETS_BASE_PATH = '/images'
-export const DEFAULT_CITY_ICON_PATH = '/favicon.ico'
+export const DEFAULT_CITY_ICON_PATH = '/icon.ico'
 export const DEFAULT_CITY_OPEN_GRAPH_IMAGE_PATH = '/city-cards/_default.jpg'
 
 type CityAssetManifestEntry = {
@@ -83,11 +83,13 @@ const resolveCityAssetSlug = (
     return assetSourceSlug
   }
 
-  if (resolveCityAssetRoutePath(normalizedSlug)) {
+  if (kind === 'openGraph' && resolveCityAssetRoutePath(normalizedSlug)) {
     return normalizedSlug
   }
 
-  return resolveCityAssetRoutePath(assetSourceSlug) ? assetSourceSlug : null
+  return kind === 'openGraph' && resolveCityAssetRoutePath(assetSourceSlug)
+    ? assetSourceSlug
+    : null
 }
 
 export const resolveCityAssetRoutePath = (

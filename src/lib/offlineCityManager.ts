@@ -91,13 +91,24 @@ export const downloadCityForOffline = async (citySlug: string) => {
     `/city-cards/${citySlug}.jpg`,
   ]
   const assets = Array.from(new Set(['/', '/manifest.webmanifest', ...cityAssets]))
-  await postToServiceWorker('CACHE_CITY', { citySlug, assets })
+
+  // Verify the SW cache succeeded before marking the city as downloaded.
+  let cacheResult: { cachedCount?: number } | undefined
+  try {
+    cacheResult = (await postToServiceWorker('CACHE_CITY', { citySlug, assets })) as { cachedCount?: number } | undefined
+  } catch (error) {
+    // Remove any partial record so the UI doesn't show a broken offline entry.
+    writeOfflineCities(
+      listOfflineCities().filter((entry) => entry.citySlug !== citySlug),
+    )
+    throw error
+  }
 
   const nativeMap = await downloadNativeMapRegion({ citySlug })
   const record: OfflineCityRecord = {
     citySlug,
     downloadedAt: new Date().toISOString(),
-    assetCount: assets.length,
+    assetCount: cacheResult?.cachedCount ?? assets.length,
     mapDownloaded: nativeMap.ok,
     version: manifest.generatedAt ?? 'unknown',
   }

@@ -50,7 +50,7 @@ export default function MenuComponent({
   const { t } = useTranslation()
   const getLabel = (key: string, fallback: string) => {
     const value = t(key)
-    return typeof value === 'string' && value !== key ? value : fallback
+    return typeof value === 'string' && value.trim() && value !== key ? value : fallback
   }
   const menuButtonLabel = getLabel('menuButtonLabel', 'Menu')
   const showSolutionsDisabled = foundProportion >= 1
@@ -75,7 +75,7 @@ export default function MenuComponent({
           }}
         >
           <MenuIcon className="h-5 w-5 shrink-0 text-gray-400" aria-hidden="true" />
-          <span className="pointer-events-none hidden max-w-0 shrink-0 overflow-hidden whitespace-nowrap text-sm font-medium opacity-0 transition-all duration-200 group-hover:ml-2 group-hover:max-w-[220px] group-hover:opacity-100 group-focus-visible:ml-2 group-focus-visible:max-w-[220px] group-focus-visible:opacity-100 lg:inline-block">
+          <span className="pointer-events-none inline-block max-w-0 shrink-0 overflow-hidden whitespace-nowrap text-sm font-medium opacity-0 transition-all duration-200 group-hover:ml-2 group-hover:max-w-[220px] group-hover:opacity-100 group-focus-visible:ml-2 group-focus-visible:max-w-[220px] group-focus-visible:opacity-100">
             {menuButtonLabel}
           </span>
         </Menu.Button>

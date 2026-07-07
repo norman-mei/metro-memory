@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-01T23:46:42.963Z",
+  "generatedAt": "2026-07-06T00:32:50.918Z",
   "assets": [
     "/",
     "/city-data/albuquerque.json",
@@ -9,6 +9,7 @@
     "/city-data/austin.json",
     "/city-data/bangkok.json",
     "/city-data/barcelona.json",
+    "/city-data/beijing.json",
     "/city-data/berlin.json",
     "/city-data/blackpool.json",
     "/city-data/boston-commuter-rail.json",
@@ -142,6 +143,7 @@
     "/city-data/portland.json",
     "/city-data/potsdam.json",
     "/city-data/pyongyang.json",
+    "/city-data/rome.json",
     "/city-data/san-juan.json",
     "/city-data/sanya.json",
     "/city-data/sapporo.json",
@@ -567,6 +569,7 @@
     "/city-cards/pyongyang.jpg",
     "/city-cards/qingdao.jpg",
     "/city-cards/qiubei.jpg",
+    "/city-cards/rome.jpg",
     "/city-cards/san-juan.jpg",
     "/city-cards/sanya.jpg",
     "/city-cards/sapporo.jpg",
@@ -624,8 +627,50 @@
     "/city-cards/_default.jpg",
     "/images/africa/algeria/algiers/icon.ico",
     "/images/africa/algeria/algiers/opengraph-image.jpg",
+    "/images/asia/china/beijing/1.png",
+    "/images/asia/china/beijing/10.png",
+    "/images/asia/china/beijing/11.png",
+    "/images/asia/china/beijing/12.png",
+    "/images/asia/china/beijing/13.png",
+    "/images/asia/china/beijing/14.png",
+    "/images/asia/china/beijing/15.png",
+    "/images/asia/china/beijing/16.png",
+    "/images/asia/china/beijing/17.png",
+    "/images/asia/china/beijing/18.png",
+    "/images/asia/china/beijing/19.png",
+    "/images/asia/china/beijing/2.png",
+    "/images/asia/china/beijing/3.png",
+    "/images/asia/china/beijing/4.png",
+    "/images/asia/china/beijing/5.png",
+    "/images/asia/china/beijing/6.png",
+    "/images/asia/china/beijing/7.png",
+    "/images/asia/china/beijing/8.png",
+    "/images/asia/china/beijing/9.png",
+    "/images/asia/china/beijing/batong.png",
+    "/images/asia/china/beijing/BCIA.png",
+    "/images/asia/china/beijing/BCR.png",
+    "/images/asia/china/beijing/beijingMTR.png",
+    "/images/asia/china/beijing/BeijingPT.png",
+    "/images/asia/china/beijing/beijingsubway.png",
+    "/images/asia/china/beijing/bjmoa.png",
+    "/images/asia/china/beijing/cae.png",
+    "/images/asia/china/beijing/CapitalAPM.png",
+    "/images/asia/china/beijing/capitalmetro.png",
+    "/images/asia/china/beijing/changping.png",
+    "/images/asia/china/beijing/dae.png",
+    "/images/asia/china/beijing/daxing.png",
+    "/images/asia/china/beijing/fangshan.png",
+    "/images/asia/china/beijing/huairou.png",
     "/images/asia/china/beijing/icon.ico",
     "/images/asia/china/beijing/opengraph-image.jpg",
+    "/images/asia/china/beijing/s1.png",
+    "/images/asia/china/beijing/s2.png",
+    "/images/asia/china/beijing/subcenter.png",
+    "/images/asia/china/beijing/tongmi.png",
+    "/images/asia/china/beijing/xijiao.png",
+    "/images/asia/china/beijing/yanfang.png",
+    "/images/asia/china/beijing/yizhuang.png",
+    "/images/asia/china/beijing/yizhuangt1.png",
     "/images/asia/china/bengbu/icon.ico",
     "/images/asia/china/bengbu/opengraph-image.jpg",
     "/images/asia/china/changchun/changchun1.png",
@@ -912,8 +957,37 @@
     "/images/asia/china/sanya/icon.ico",
     "/images/asia/china/sanya/opengraph-image.jpg",
     "/images/asia/china/sanya/sanya1.png",
+    "/images/asia/china/shanghai/1.png",
+    "/images/asia/china/shanghai/10.png",
+    "/images/asia/china/shanghai/11.png",
+    "/images/asia/china/shanghai/12.png",
+    "/images/asia/china/shanghai/13.png",
+    "/images/asia/china/shanghai/14.png",
+    "/images/asia/china/shanghai/15.png",
+    "/images/asia/china/shanghai/16.png",
+    "/images/asia/china/shanghai/17.png",
+    "/images/asia/china/shanghai/18.png",
+    "/images/asia/china/shanghai/2.png",
+    "/images/asia/china/shanghai/3.png",
+    "/images/asia/china/shanghai/4.png",
+    "/images/asia/china/shanghai/5.png",
+    "/images/asia/china/shanghai/6.png",
+    "/images/asia/china/shanghai/7.png",
+    "/images/asia/china/shanghai/8.png",
+    "/images/asia/china/shanghai/9.png",
+    "/images/asia/china/shanghai/airportlink.png",
+    "/images/asia/china/shanghai/apm.png",
+    "/images/asia/china/shanghai/AVINEX.png",
     "/images/asia/china/shanghai/icon.ico",
+    "/images/asia/china/shanghai/jinshan.png",
+    "/images/asia/china/shanghai/maglev.png",
     "/images/asia/china/shanghai/opengraph-image.jpg",
+    "/images/asia/china/shanghai/pujiang.png",
+    "/images/asia/china/shanghai/shanghaimetro.png",
+    "/images/asia/china/shanghai/songjiangtram.png",
+    "/images/asia/china/shanghai/ssr.png",
+    "/images/asia/china/shanghai/t1.png",
+    "/images/asia/china/shanghai/t2.png",
     "/images/asia/china/shenyang/icon.ico",
     "/images/asia/china/shenyang/opengraph-image.jpg",
     "/images/asia/china/shenyang/shenyang1.png",
@@ -2308,25 +2382,86 @@
   ],
   "cityAssets": {
     "1": [
+      "/images/asia/china/beijing/1.png",
+      "/images/asia/china/shanghai/1.png",
       "/images/north-america/usa/nyc/1.png"
     ],
     "2": [
+      "/images/asia/china/beijing/2.png",
+      "/images/asia/china/shanghai/2.png",
       "/images/north-america/usa/nyc/2.png"
     ],
     "3": [
+      "/images/asia/china/beijing/3.png",
+      "/images/asia/china/shanghai/3.png",
       "/images/north-america/usa/nyc/3.png"
     ],
     "4": [
+      "/images/asia/china/beijing/4.png",
+      "/images/asia/china/shanghai/4.png",
       "/images/north-america/usa/nyc/4.png"
     ],
     "5": [
+      "/images/asia/china/beijing/5.png",
+      "/images/asia/china/shanghai/5.png",
       "/images/north-america/usa/nyc/5.png"
     ],
     "6": [
+      "/images/asia/china/beijing/6.png",
+      "/images/asia/china/shanghai/6.png",
       "/images/north-america/usa/nyc/6.png"
     ],
     "7": [
+      "/images/asia/china/beijing/7.png",
+      "/images/asia/china/shanghai/7.png",
       "/images/north-america/usa/nyc/7.png"
+    ],
+    "8": [
+      "/images/asia/china/beijing/8.png",
+      "/images/asia/china/shanghai/8.png"
+    ],
+    "9": [
+      "/images/asia/china/beijing/9.png",
+      "/images/asia/china/shanghai/9.png"
+    ],
+    "10": [
+      "/images/asia/china/beijing/10.png",
+      "/images/asia/china/shanghai/10.png"
+    ],
+    "11": [
+      "/images/asia/china/beijing/11.png",
+      "/images/asia/china/shanghai/11.png"
+    ],
+    "12": [
+      "/images/asia/china/beijing/12.png",
+      "/images/asia/china/shanghai/12.png"
+    ],
+    "13": [
+      "/images/asia/china/beijing/13.png",
+      "/images/asia/china/shanghai/13.png"
+    ],
+    "14": [
+      "/images/asia/china/beijing/14.png",
+      "/images/asia/china/shanghai/14.png"
+    ],
+    "15": [
+      "/images/asia/china/beijing/15.png",
+      "/images/asia/china/shanghai/15.png"
+    ],
+    "16": [
+      "/images/asia/china/beijing/16.png",
+      "/images/asia/china/shanghai/16.png"
+    ],
+    "17": [
+      "/images/asia/china/beijing/17.png",
+      "/images/asia/china/shanghai/17.png"
+    ],
+    "18": [
+      "/images/asia/china/beijing/18.png",
+      "/images/asia/china/shanghai/18.png"
+    ],
+    "19": [
+      "/images/asia/china/beijing/19.png"
     ],
     "100": [
       "/images/north-america/usa/cincinnati/100.png"
@@ -2371,6 +2506,11 @@
       "/city-data/barcelona.json",
       "/city-icons/barcelona.ico",
       "/city-cards/barcelona.jpg"
+    ],
+    "beijing": [
+      "/city-data/beijing.json",
+      "/city-icons/beijing.ico",
+      "/city-cards/beijing.jpg"
     ],
     "berlin": [
       "/city-data/berlin.json",
@@ -3028,6 +3168,10 @@
       "/city-icons/pyongyang.ico",
       "/city-cards/pyongyang.jpg"
     ],
+    "rome": [
+      "/city-data/rome.json",
+      "/city-cards/rome.jpg"
+    ],
     "san-juan": [
       "/city-data/san-juan.json",
       "/city-icons/san-juan.ico",
@@ -3220,10 +3364,6 @@
     "auckland": [
       "/city-icons/auckland.ico",
       "/city-cards/auckland.jpg"
-    ],
-    "beijing": [
-      "/city-icons/beijing.ico",
-      "/city-cards/beijing.jpg"
     ],
     "bengbu": [
       "/city-icons/bengbu.ico",
@@ -3857,6 +3997,75 @@
       "/images/oceania/new-zealand/wellington/opengraph-image.jpg",
       "/images/south-america/venezuela/maracaibo/opengraph-image.jpg"
     ],
+    "batong": [
+      "/images/asia/china/beijing/batong.png"
+    ],
+    "BCIA": [
+      "/images/asia/china/beijing/BCIA.png"
+    ],
+    "BCR": [
+      "/images/asia/china/beijing/BCR.png"
+    ],
+    "beijingMTR": [
+      "/images/asia/china/beijing/beijingMTR.png"
+    ],
+    "BeijingPT": [
+      "/images/asia/china/beijing/BeijingPT.png"
+    ],
+    "beijingsubway": [
+      "/images/asia/china/beijing/beijingsubway.png"
+    ],
+    "bjmoa": [
+      "/images/asia/china/beijing/bjmoa.png"
+    ],
+    "cae": [
+      "/images/asia/china/beijing/cae.png"
+    ],
+    "CapitalAPM": [
+      "/images/asia/china/beijing/CapitalAPM.png"
+    ],
+    "capitalmetro": [
+      "/images/asia/china/beijing/capitalmetro.png"
+    ],
+    "changping": [
+      "/images/asia/china/beijing/changping.png"
+    ],
+    "dae": [
+      "/images/asia/china/beijing/dae.png"
+    ],
+    "daxing": [
+      "/images/asia/china/beijing/daxing.png"
+    ],
+    "fangshan": [
+      "/images/asia/china/beijing/fangshan.png"
+    ],
+    "huairou": [
+      "/images/asia/china/beijing/huairou.png"
+    ],
+    "s1": [
+      "/images/asia/china/beijing/s1.png"
+    ],
+    "s2": [
+      "/images/asia/china/beijing/s2.png"
+    ],
+    "subcenter": [
+      "/images/asia/china/beijing/subcenter.png"
+    ],
+    "tongmi": [
+      "/images/asia/china/beijing/tongmi.png"
+    ],
+    "xijiao": [
+      "/images/asia/china/beijing/xijiao.png"
+    ],
+    "yanfang": [
+      "/images/asia/china/beijing/yanfang.png"
+    ],
+    "yizhuang": [
+      "/images/asia/china/beijing/yizhuang.png"
+    ],
+    "yizhuangt1": [
+      "/images/asia/china/beijing/yizhuangt1.png"
+    ],
     "changchun1": [
       "/images/asia/china/changchun/changchun1.png"
     ],
@@ -4441,6 +4650,39 @@
     ],
     "sanya1": [
       "/images/asia/china/sanya/sanya1.png"
+    ],
+    "airportlink": [
+      "/images/asia/china/shanghai/airportlink.png"
+    ],
+    "apm": [
+      "/images/asia/china/shanghai/apm.png"
+    ],
+    "AVINEX": [
+      "/images/asia/china/shanghai/AVINEX.png"
+    ],
+    "jinshan": [
+      "/images/asia/china/shanghai/jinshan.png"
+    ],
+    "maglev": [
+      "/images/asia/china/shanghai/maglev.png"
+    ],
+    "pujiang": [
+      "/images/asia/china/shanghai/pujiang.png"
+    ],
+    "shanghaimetro": [
+      "/images/asia/china/shanghai/shanghaimetro.png"
+    ],
+    "songjiangtram": [
+      "/images/asia/china/shanghai/songjiangtram.png"
+    ],
+    "ssr": [
+      "/images/asia/china/shanghai/ssr.png"
+    ],
+    "t1": [
+      "/images/asia/china/shanghai/t1.png"
+    ],
+    "t2": [
+      "/images/asia/china/shanghai/t2.png"
     ],
     "shenyang1": [
       "/images/asia/china/shenyang/shenyang1.png"

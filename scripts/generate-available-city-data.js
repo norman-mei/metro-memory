@@ -1,12 +1,11 @@
 #!/usr/bin/env node
-/* eslint-disable no-console */
-
 const fs = require('fs/promises')
 const path = require('path')
 
 const ROOT = process.cwd()
 const DATA_DIR = path.join(ROOT, 'public', 'city-data')
 const OUT_FILE = path.join(ROOT, 'src', 'lib', 'availableCityData.ts')
+const INTERNAL_CITY_DATA_RESOURCE_PATTERN = /-(features|routes)$/
 
 const run = async () => {
   let entries = []
@@ -20,7 +19,12 @@ const run = async () => {
   const slugs = entries
     .filter((file) => file.endsWith('.json'))
     .map((file) => file.replace(/\.json$/, ''))
-    .filter((slug) => slug && slug !== '_placeholder')
+    .filter(
+      (slug) =>
+        slug &&
+        slug !== '_placeholder' &&
+        !INTERNAL_CITY_DATA_RESOURCE_PATTERN.test(slug),
+    )
     .sort((a, b) => a.localeCompare(b))
 
   const lines = [

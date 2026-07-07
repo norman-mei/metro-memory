@@ -384,10 +384,6 @@ export const SettingsProvider = ({
       if (!raw) return
       const parsed = JSON.parse(raw)
       if (typeof parsed === 'object' && parsed !== null) {
-        if (
-          typeof parsed.confettiEnabled === 'boolean' &&
-          typeof parsed.achievementToastsEnabled === 'boolean'
-        ) {
           setSettings({
             confettiEnabled: parsed.confettiEnabled,
             achievementToastsEnabled: parsed.achievementToastsEnabled,
@@ -442,7 +438,6 @@ export const SettingsProvider = ({
                 ? { ...DEFAULT_SETTINGS.keybindings, ...parsed.keybindings }
                 : DEFAULT_SETTINGS.keybindings,
           })
-        }
       }
     } catch {
       // ignore malformed entries

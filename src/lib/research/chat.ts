@@ -168,7 +168,7 @@ async function generateReply(sessionId: string, reviewer: string) {
       reviewer,
     })
     runId = summary.runId
-    reply += `\n\n✅ Ran research for ${action.citySlugs.join(', ')} — ${summary.claimsCreated} claim(s) filed (${summary.green} green, ${summary.yellow} yellow, ${summary.red} red). Check the Review Queue tab.`
+    reply += `\n\nâœ… Ran research for ${action.citySlugs.join(', ')} â€” ${summary.claimsCreated} claim(s) filed (${summary.green} green, ${summary.yellow} yellow, ${summary.red} red). Check the Review Queue tab.`
   }
 
   const assistant = await prisma.chatMessage.create({
@@ -193,6 +193,9 @@ export async function handleChatTurn(args: {
   sessionId?: string | null
   reviewer: string
 }) {
+  // Bail early when the client already disconnected -- avoid wasted DB work.
+  args.signal?.throwIfAborted()
+
   const existing = args.sessionId
     ? await prisma.chatSession.findFirst({
         where: { id: args.sessionId, createdBy: args.reviewer },
@@ -259,6 +262,9 @@ export async function streamChatTurn(
   args: { message: string; sessionId?: string | null; reviewer: string; signal?: AbortSignal },
   onDelta: (text: string) => void,
 ): Promise<{ sessionId: string; runId: string | null }> {
+  // Bail early when the client already disconnected -- avoid wasted DB work.
+  args.signal?.throwIfAborted()
+
   const existing = args.sessionId
     ? await prisma.chatSession.findFirst({
         where: { id: args.sessionId, createdBy: args.reviewer },
@@ -378,7 +384,7 @@ export async function streamChatTurn(
     })
     runId = summary.runId
     flush(
-      `\n✅ ${action.citySlugs.join(', ')}: ${summary.claimsCreated} claim(s) filed (${summary.green} green, ${summary.yellow} yellow, ${summary.red} red). Check the Review Queue tab.`,
+      `\nâœ… ${action.citySlugs.join(', ')}: ${summary.claimsCreated} claim(s) filed (${summary.green} green, ${summary.yellow} yellow, ${summary.red} red). Check the Review Queue tab.`,
     )
   }
 

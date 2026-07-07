@@ -38,8 +38,10 @@ import { formatAchievementDisplayMeta } from '@/lib/achievementDisplay'
 import { getCityOpenGraphImagePath } from '@/lib/cityAssets'
 import { formatLocalizedCityName } from '@/lib/cityNameDisplay'
 import { ICity, cities, isCityDisabled as isCityDisabledFlag } from '@/lib/citiesConfig'
+import { readLastPlayedCities, type LastPlayedCityEntry } from '@/lib/lastPlayedCities'
 import { CITY_COORDINATES } from '@/lib/cityCoordinates'
 import { formatDisplayCountryLabel } from '@/lib/countryNameDisplay'
+import { getFlagEmojiFromCountryCode } from '@/lib/countryFlags'
 import { GLOBAL_ACHIEVEMENTS } from '@/lib/globalAchievements'
 import { resolveI18nLocaleCode } from '@/lib/i18n'
 import {
@@ -69,6 +71,8 @@ import {
     MdSatellite,
     MdSettings,
     MdShuffle,
+    MdFavorite,
+    MdFavoriteBorder,
 } from 'react-icons/md'
 
 import { STATION_TOTALS } from '@/lib/stationTotals'
@@ -450,40 +454,43 @@ const COUNTRY_LABEL_OVERRIDES: Record<string, string> = {
   'secret-fun': 'Secret & Fun',
 }
 
-const COUNTRY_FLAG_EMOJIS: Record<string, string> = {
-  usa: '🇺🇸',
-  canada: '🇨🇦',
-  mexico: '🇲🇽',
-  uk: '🇬🇧',
-  ireland: '🇮🇪',
-  france: '🇫🇷',
-  germany: '🇩🇪',
-  spain: '🇪🇸',
-  italy: '🇮🇹',
-  austria: '🇦🇹',
-  sweden: '🇸🇪',
-  hungary: '🇭🇺',
-  turkey: '🇹🇷',
-  australia: '🇦🇺',
-  'new-zealand': '🇳🇿',
-  china: '🇨🇳',
-  japan: '🇯🇵',
-  'south-korea': '🇰🇷',
-  'north-korea': '🇰🇵',
-  singapore: '🇸🇬',
-  taiwan: '🇹🇼',
-  malaysia: '🇲🇾',
-  indonesia: '🇮🇩',
-  vietnam: '🇻🇳',
-  thailand: '🇹🇭',
-  philippines: '🇵🇭',
-  'united-arab-emirates': '🇦🇪',
-  argentina: '🇦🇷',
-  venezuela: '🇻🇪',
-  brazil: '🇧🇷',
-  'south-africa': '🇿🇦',
-  algeria: '🇩🇿',
+const COUNTRY_FLAG_ISO_CODES: Record<string, string> = {
+  usa: 'US',
+  canada: 'CA',
+  mexico: 'MX',
+  uk: 'GB',
+  ireland: 'IE',
+  france: 'FR',
+  germany: 'DE',
+  spain: 'ES',
+  italy: 'IT',
+  austria: 'AT',
+  sweden: 'SE',
+  hungary: 'HU',
+  turkey: 'TR',
+  australia: 'AU',
+  'new-zealand': 'NZ',
+  china: 'CN',
+  japan: 'JP',
+  'south-korea': 'KR',
+  'north-korea': 'KP',
+  singapore: 'SG',
+  taiwan: 'TW',
+  malaysia: 'MY',
+  indonesia: 'ID',
+  vietnam: 'VN',
+  thailand: 'TH',
+  philippines: 'PH',
+  uae: 'AE',
+  'united-arab-emirates': 'AE',
+  argentina: 'AR',
+  venezuela: 'VE',
+  brazil: 'BR',
+  'south-africa': 'ZA',
+  algeria: 'DZ',
 }
+
+const FALLBACK_COUNTRY_FLAG = String.fromCodePoint(0x1f310)
 
 const formatCountryLabel = (slug: string | null, language?: string) => {
   const localized = formatDisplayCountryLabel(slug, language)
@@ -523,9 +530,11 @@ const formatAchievementContinentLabel = (
 
 const getCountryFlagEmoji = (slug: string | null) => {
   if (!slug) {
-    return '🌍'
+    return FALLBACK_COUNTRY_FLAG
   }
-  return COUNTRY_FLAG_EMOJIS[slug] ?? '🌍'
+
+  const countryCode = COUNTRY_FLAG_ISO_CODES[slug]
+  return countryCode ? getFlagEmojiFromCountryCode(countryCode) : FALLBACK_COUNTRY_FLAG
 }
 
 interface AchievementMeta {
@@ -678,6 +687,7 @@ const SearcheableCitiesList = ({
   const [globalStatsSort, setGlobalStatsSort] = useState<CitySortOption>('default')
   const [cityViewMode, setCityViewMode] = useState<CityCardVariant>('map')
   const [isSatellite, setIsSatellite] = useState(false)
+  const [showFavoritesOnly, setShowFavoritesOnly] = useState(false)
   const [mapProvider, setMapProvider] = useState<HomeMapProvider>('mapbox')
   const [achievementSearch, setAchievementSearch] = useState('')
   const [achievementSort, setAchievementSort] = useState<AchievementSortOption>('name-asc')
@@ -746,6 +756,22 @@ const SearcheableCitiesList = ({
   )
   const [countryFocus, setCountryFocus] = useState<{ name: string; token: number } | null>(null)
   const [favoriteSlugs, setFavoriteSlugs] = useState<Set<string>>(new Set())
+
+  const recentCities = useMemo(() => {
+    if (typeof window === 'undefined') return []
+    const played = readLastPlayedCities()
+    if (played.length === 0) return []
+    return played
+      .map((entry) => {
+        const city = cities.find((c) => {
+          const s = getSlugFromLink(c.link)
+          return s === entry.slug
+        })
+        return city ?? null
+      })
+      .filter((c): c is ICity => c !== null)
+      .slice(0, 8)
+  }, [cities])
   const [favoriteToast, setFavoriteToast] = useState<{ message: string; ts: number } | null>(null)
   const viewPrefsHydratedRef = useRef(false)
   const mapProviderHydratedRef = useRef(false)
@@ -1033,7 +1059,7 @@ const SearcheableCitiesList = ({
       continent: 'Global',
       country: 'global',
       order: Number.MAX_SAFE_INTEGER,
-      iconSrc: '/favicon.ico',
+      iconSrc: '/icon.ico',
     }
   }, [cityAchievementCatalog.length])
 
@@ -1048,7 +1074,7 @@ const SearcheableCitiesList = ({
         continent: 'Global',
         country: entry.country ?? 'global',
         order: entry.order,
-        iconSrc: '/favicon.ico',
+        iconSrc: '/icon.ico',
       })),
     [],
   )
@@ -1898,11 +1924,17 @@ const SearcheableCitiesList = ({
   )
 
   const groupsWithFavorites = useMemo(
-    () =>
-      favoriteCities.length > 0
+    () => {
+      if (showFavoritesOnly) {
+        return favoriteCities.length > 0
+          ? [{ continent: 'Favorites', cities: favoriteCities }]
+          : []
+      }
+      return favoriteCities.length > 0
         ? [{ continent: 'Favorites', cities: favoriteCities }, ...displayGroups]
-        : displayGroups,
-    [displayGroups, favoriteCities],
+        : displayGroups
+    },
+    [displayGroups, favoriteCities, showFavoritesOnly],
   )
 
   const unlockedSet = useMemo(() => new Set(unlockedData.keys()), [unlockedData])
@@ -2923,7 +2955,7 @@ const SearcheableCitiesList = ({
                     {getCountryFlagEmoji(country)}
                   </span>
                   <span>
-                    {formatCountryLabel(country, settings.language)} · {cityCountLabel}
+                    {formatCountryLabel(country, settings.language)}{' \u00b7 '}{cityCountLabel}
                     {miniCityCountLabel}{' '}
                   <span className="text-sm font-semibold" style={{ color: headerColor }}>
                     ({progressLabel})
@@ -3508,6 +3540,21 @@ const SearcheableCitiesList = ({
               )}
               <button
                 type="button"
+                onClick={() => setShowFavoritesOnly((v) => !v)}
+                className={clsx(
+                  "group flex items-center justify-center rounded-full border px-4 py-2.5 text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-[var(--accent-600)] dark:focus:ring-[var(--accent-400)]",
+                  showFavoritesOnly
+                    ? "border-rose-300 bg-rose-100 text-rose-700 dark:border-rose-600 dark:bg-rose-500/20 dark:text-rose-100"
+                    : favoriteSlugs.size > 0
+                      ? "border-gray-300 bg-white text-gray-700 hover:bg-gray-50 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100 dark:hover:bg-zinc-800"
+                      : "border-gray-200 bg-gray-50 text-gray-400 cursor-default dark:border-zinc-800 dark:bg-zinc-900/50 dark:text-zinc-600"
+                )}
+              >
+                {showFavoritesOnly ? <MdFavorite className="h-5 w-5" /> : <MdFavoriteBorder className="h-5 w-5" />}
+                <span className="sr-only">Favorites</span>
+              </button>
+              <button
+                type="button"
                 onClick={handlePlayRandomCity}
                 className={clsx(
                   "group flex items-center justify-center rounded-full border px-4 py-2.5 text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-[var(--accent-600)] dark:focus:ring-[var(--accent-400)]",
@@ -3635,6 +3682,18 @@ const SearcheableCitiesList = ({
              </div>
           ) : hasCityResults ? (
             <div className="space-y-10">
+              {!showFavoritesOnly && recentCities.length > 0 && (
+                <section>
+                  <div className="mb-4 flex items-center gap-2">
+                    <MdHistory className="h-5 w-5 text-zinc-500 dark:text-zinc-400" />
+                    <h3 className="text-lg font-semibold text-zinc-800 dark:text-zinc-100">
+                      Recently Played
+                    </h3>
+                  </div>
+                  {renderCityCollection(recentCities)}
+                  <hr className="mt-6 border-t border-zinc-200 dark:border-zinc-800" />
+                </section>
+              )}
               {groupsWithFavorites.map(({ continent, cities }, index) => {
                 const { cityCount, miniCityCount } = getDisplayedCityCounts(cities)
                 const cityGrid = renderCountryGroups(continent, cities)
@@ -3669,7 +3728,7 @@ const SearcheableCitiesList = ({
                         sectionId={sectionId}
                         title={
                           <span style={{ color: headerColor }}>
-                            {translatedContinent} · {cityCountLabel}
+                            {translatedContinent}{' \u00b7 '}{cityCountLabel}
                             {miniCityCountLabel} ({averageProgressLabel})
                           </span>
                         }
@@ -3688,8 +3747,7 @@ const SearcheableCitiesList = ({
                             style={{ color: headerColor }}
                           >
                             {translatedContinent}{' '}
-                            <span className="text-base font-normal" style={{ color: headerColor }}>
-                              · {cityCountLabel}
+                            <span className="text-base font-normal" style={{ color: headerColor }}>{' \u00b7 '}{cityCountLabel}
                               {miniCityCountLabel} ({averageProgressLabel})
                             </span>
                           </h3>
@@ -4372,7 +4430,7 @@ const Achievements = ({
                   />
                 </div>
                 <div className="mt-1 text-xs font-semibold" style={{ color: progressColor }}>
-                  {numericLabel} · {percentLabel}
+                  {numericLabel}{' \u00b7 '}{percentLabel}
                 </div>
               </div>
               )}
@@ -4454,8 +4512,7 @@ const Achievements = ({
                   title={
                     <span style={{ color: headerColor }}>
                       {translatedContinent}{' '}
-                      <span className="text-base font-normal" style={{ color: headerColor }}>
-                        · {cityCountLabel} ({progressLabel})
+                      <span className="text-base font-normal" style={{ color: headerColor }}>{' \u00b7 '}{cityCountLabel} ({progressLabel})
                       </span>
                     </span>
                   }
@@ -4486,7 +4543,7 @@ const Achievements = ({
                           sectionId={countrySectionId}
                           title={
                             <span style={{ color: countryHeaderColor }}>
-                              {countryLabel} · {countryCountLabel}{' '}
+                              {countryLabel}{' \u00b7 '}{countryCountLabel}{' '}
                               <span
                                 className="text-sm font-semibold"
                                 style={{ color: countryHeaderColor }}

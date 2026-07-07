@@ -19,7 +19,7 @@ export async function POST(request: NextRequest) {
         )
       }
     } catch {
-      // ignore body parse errors; fallback to deleting everything
+      return NextResponse.json({ error: 'Invalid request body' }, { status: 400 })
     }
 
     await prisma.progress.deleteMany({

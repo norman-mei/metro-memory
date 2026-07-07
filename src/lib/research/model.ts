@@ -173,10 +173,16 @@ export async function streamResearchModel(
     let buffer = ''
     let full = ''
 
+    const CHUNK_TIMEOUT_MS = 30_000
     for (;;) {
-      const { done, value } = await reader.read()
-      if (done) break
-      buffer += decoder.decode(value, { stream: true })
+      const result = await Promise.race([
+        reader.read(),
+        new Promise<ReadableStreamReadResult<Uint8Array>>((_, reject) =>
+          setTimeout(() => reject(new Error('Stream chunk timeout')), CHUNK_TIMEOUT_MS),
+        ),
+      ])
+      if (result.done) break
+      buffer += decoder.decode(result.value, { stream: true })
       const lines = buffer.split('\n')
       buffer = lines.pop() ?? ''
       for (const line of lines) {

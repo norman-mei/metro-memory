@@ -5,7 +5,7 @@ import Image from 'next/image'
 import { useEffect, useMemo, useState } from 'react'
 import { getCityIconPath } from '@/lib/cityAssets'
 
-export const FALLBACK_ICON_SRC = '/favicon.ico'
+export const FALLBACK_ICON_SRC = '/icon.ico'
 
 type AchievementIconProps = {
   slug?: string

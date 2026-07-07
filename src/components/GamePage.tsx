@@ -96,7 +96,7 @@ import 'mapbox-gl/dist/mapbox-gl.css'
 import { useTheme } from 'next-themes'
 import Link from 'next/link'
 import { usePathname, useRouter, useSearchParams } from 'next/navigation'
-import { MdDownload, MdLayers, MdMap, MdRestartAlt } from 'react-icons/md'
+import { MdDownload, MdLayers, MdMap, MdRestartAlt, MdShare } from 'react-icons/md'
 import {
     CSSProperties,
     ChangeEvent,
@@ -308,6 +308,37 @@ const normalizeMapStyleOverride = (style?: string | null) => {
   }
 
   return trimmed
+}
+
+const copyTextToClipboard = async (text: string) => {
+  if (typeof navigator !== 'undefined' && navigator.clipboard?.writeText) {
+    try {
+      await navigator.clipboard.writeText(text)
+      return true
+    } catch {
+      // Fall back to the legacy copy path below.
+    }
+  }
+
+  if (typeof document === 'undefined') {
+    return false
+  }
+
+  const textarea = document.createElement('textarea')
+  textarea.value = text
+  textarea.setAttribute('readonly', '')
+  textarea.style.position = 'fixed'
+  textarea.style.opacity = '0'
+  document.body.appendChild(textarea)
+  textarea.focus()
+  textarea.select()
+  textarea.setSelectionRange(0, text.length)
+
+  try {
+    return document.execCommand('copy')
+  } finally {
+    document.body.removeChild(textarea)
+  }
 }
 
 const MAP_COORDS_TOAST_DISMISS_MS = 5000
@@ -1626,6 +1657,7 @@ function GamePageContent({
   const pathname = usePathname()
   const router = useRouter()
   const searchParams = useSearchParams()
+  const searchParamsString = searchParams.toString()
   const cityPath = useMemo(
     () => ASSET_BASE_PATH ?? pathname?.replace(/^\//, '') ?? null,
     [ASSET_BASE_PATH, pathname],
@@ -1636,6 +1668,8 @@ function GamePageContent({
   )
   const miniCityLinks = useMemo(() => getMiniCityLinksForSlug(CITY_NAME), [CITY_NAME])
   const isMiniCity = useMemo(() => isMiniCitySlug(CITY_NAME), [CITY_NAME])
+  const isCustomWorldMap = useMemo(() => CITY_NAME.startsWith('custom-world-'), [CITY_NAME])
+  const isCustomGame = pathname === '/custom'
   const customParentSlug = searchParams.get('parent')?.trim() || null
   const debugMapProviderEnabled = searchParams.get('debugMapProvider') === '1'
   const progressScopeSlug = useMemo(() => {
@@ -2470,6 +2504,7 @@ function GamePageContent({
   useEffect(() => {
     if (!mapStyleModeReady || typeof window === 'undefined') return
     savedMapViewRef.current = null
+    if (isCustomWorldMap) return
     try {
       const raw = window.localStorage.getItem(mapViewStorageKey)
       if (raw) {
@@ -2483,7 +2518,7 @@ function GamePageContent({
     } catch {
       // ignore
     }
-  }, [mapStyleModeReady, mapViewStorageKey])
+  }, [isCustomWorldMap, mapStyleModeReady, mapViewStorageKey])
 
   useEffect(() => {
     if (highlightedLineId) {
@@ -2750,25 +2785,54 @@ function GamePageContent({
     if (!mapCoordsMenu) return
     const lat = mapCoordsMenu.lat.toFixed(7)
     const lng = mapCoordsMenu.lng.toFixed(7)
-    const text = `${lat}, ${lng}`
+    const text = lat + ', ' + lng
 
     try {
-      if (
-        typeof navigator !== 'undefined' &&
-        navigator.clipboard &&
-        typeof navigator.clipboard.writeText === 'function'
-      ) {
-        await navigator.clipboard.writeText(text)
-        showMapCoordsCopiedToast(`Copied ${text}`)
-      } else {
-        showMapCoordsCopiedToast(`Copy unavailable: ${text}`)
-      }
+      const copied = await copyTextToClipboard(text)
+      showMapCoordsCopiedToast(copied ? 'Copied ' + text : 'Copy unavailable: ' + text)
     } catch {
-      showMapCoordsCopiedToast(`Copy failed: ${text}`)
+      showMapCoordsCopiedToast('Copy failed: ' + text)
     } finally {
       closeMapCoordsMenu()
     }
   }, [closeMapCoordsMenu, mapCoordsMenu, showMapCoordsCopiedToast])
+
+  const customSharePath = useMemo(() => {
+    if (!isCustomGame) {
+      return null
+    }
+
+    return pathname + (searchParamsString ? '?' + searchParamsString : '')
+  }, [isCustomGame, pathname, searchParamsString])
+
+  const shareCustomMap = useCallback(async () => {
+    if (!customSharePath || typeof window === 'undefined') {
+      return
+    }
+
+    const shareUrl = new URL(customSharePath, window.location.origin).toString()
+    const shareTitle = document.title || 'Metro Memory custom map'
+
+    try {
+      if (navigator.share) {
+        await navigator.share({
+          title: shareTitle,
+          text: 'Play this custom map on Metro Memory.',
+          url: shareUrl,
+        })
+        showMapCoordsCopiedToast('Shared custom map')
+        return
+      }
+
+      const copied = await copyTextToClipboard(shareUrl)
+      showMapCoordsCopiedToast(copied ? 'Copied custom map link' : 'Copy unavailable: ' + shareUrl)
+    } catch (error) {
+      if ((error as DOMException)?.name === 'AbortError') {
+        return
+      }
+      showMapCoordsCopiedToast('Copy failed: ' + shareUrl)
+    }
+  }, [customSharePath, showMapCoordsCopiedToast])
 
   useEffect(() => {
     if (!mapCoordsMenu) return
@@ -3174,6 +3238,7 @@ function GamePageContent({
   }, [clusterMembersById, idMap, localFound, setStoredFound])
 
   const syncTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
+  const initialSyncDoneRef = useRef(false)
   const legacyMiniCityMigrationRef = useRef<string | null>(null)
 
   const submitProgress = useCallback(
@@ -3292,6 +3357,8 @@ function GamePageContent({
         if (process.env.NODE_ENV !== 'production') {
           console.warn('Unable to load synced progress', error)
         }
+      } finally {
+        initialSyncDoneRef.current = true
       }
     })()
 
@@ -3308,7 +3375,7 @@ function GamePageContent({
   ])
 
   useEffect(() => {
-    if (!user) {
+    if (!user || !initialSyncDoneRef.current) {
       return
     }
     void submitProgress(scopeFound, foundTimestamps)
@@ -4071,14 +4138,14 @@ function GamePageContent({
 
   const handleToggleMapNames = useCallback(() => {
     handleProtectedAction(() => {
-      const currentMapView = map ? getStoredMapViewFromMap(map) : null
+      const currentMapView = !isCustomWorldMap && map ? getStoredMapViewFromMap(map) : null
       if (currentMapView) {
         savedMapViewRef.current = currentMapView
       }
       setShowMapNames((prev) => !prev)
       registerMapNamesToggle()
     }, 'mapNames')
-  }, [handleProtectedAction, map, registerMapNamesToggle])
+  }, [handleProtectedAction, isCustomWorldMap, map, registerMapNamesToggle])
 
   useEffect(() => {
     if (!achievementsHydratedRef.current || lineMasterSyncRef.current) return
@@ -4426,9 +4493,10 @@ function GamePageContent({
 
     let baseStyle: string | undefined
     if (typeof MAP_CONFIG.style === 'string') {
-      baseStyle = MAP_CONFIG.style.includes('mapbox://styles/benjamintd/')
+      const configuredStyle = normalizeMapStyleOverride(MAP_CONFIG.style)
+      baseStyle = configuredStyle?.includes('mapbox://styles/benjamintd/')
         ? fallbackLightStyle
-        : MAP_CONFIG.style
+        : configuredStyle ?? undefined
     }
 
     const darkStyle =
@@ -4502,6 +4570,7 @@ function GamePageContent({
     let contextLostHandler: (() => void) | null = null
     let fallbackPreviewTimeout: number | null = null
     let chinaSafeRetryTimeout: number | null = null
+    let customLoadRecoveryTimeout: number | null = null
 
     const clearMapFallbackTimeouts = () => {
       if (typeof window === 'undefined') {
@@ -4515,13 +4584,24 @@ function GamePageContent({
         window.clearTimeout(chinaSafeRetryTimeout)
         chinaSafeRetryTimeout = null
       }
+      if (customLoadRecoveryTimeout !== null) {
+        window.clearTimeout(customLoadRecoveryTimeout)
+        customLoadRecoveryTimeout = null
+      }
     }
 
     let initialBounds: [number, number, number, number] | undefined
-    const restoredMapView = savedMapViewRef.current
+    const restoredMapView = isCustomWorldMap ? null : savedMapViewRef.current
+    const initialBoundsSource = MAP_FROM_DATA
+      ? renderDisplayRoutes?.features.length
+        ? renderDisplayRoutes
+        : renderFeatureCollection.features.length
+          ? renderFeatureCollection
+          : null
+      : null
 
-    if (MAP_FROM_DATA && renderDisplayRoutes) {
-      const box = bbox(renderDisplayRoutes)
+    if (initialBoundsSource) {
+      const box = bbox(initialBoundsSource)
       if (
         box.length === 4 &&
         box.every((n) => Number.isFinite(n)) &&
@@ -4696,8 +4776,9 @@ function GamePageContent({
     let persistMapView: (() => void) | null = null
     let refreshVisibleMapData: (() => void) | null = null
 
-    mapboxMap.on('load', () => {
+    const initializeLoadedMap = () => {
       if (!mapboxMap || mapFailed) return
+      if (mapReady) return
       mapReady = true
       clearMapFallbackTimeouts()
       setShowMapFallbackPreview(false)
@@ -4957,8 +5038,14 @@ function GamePageContent({
           },
         })
 
-        if (renderDisplayRoutes) {
-          const box = bbox(renderDisplayRoutes)
+        const mapBoundsSource = renderDisplayRoutes?.features.length
+          ? renderDisplayRoutes
+          : renderFeatureCollection.features.length
+            ? renderFeatureCollection
+            : null
+
+        if (mapBoundsSource) {
+          const box = bbox(mapBoundsSource)
           const [minLng, minLat, maxLng, maxLat] = box
           const hasValidBox =
             Number.isFinite(minLng) &&
@@ -5161,10 +5248,13 @@ function GamePageContent({
         const zoom = mapboxMap.getZoom()
         const view = { zoom, center: [center.lng, center.lat] as [number, number] }
         if (!isStoredMapView(view)) return
-        savedMapViewRef.current = view
-        if (typeof window !== 'undefined') {
-          window.localStorage.setItem(mapViewStorageKey, JSON.stringify(view))
+        if (!isCustomWorldMap) {
+          savedMapViewRef.current = view
+          if (typeof window !== 'undefined') {
+            window.localStorage.setItem(mapViewStorageKey, JSON.stringify(view))
+          }
         }
+        if (isCustomWorldMap) return
         const now = Date.now()
         if (now - lastPersistTsRef.current > 1000) {
           lastPersistTsRef.current = now
@@ -5183,14 +5273,25 @@ function GamePageContent({
 
       mapboxMap.on('moveend', persistMapView)
       mapboxMap.on('zoomend', persistMapView)
-    })
+    }
+
+    mapboxMap.on('load', initializeLoadedMap)
+    if (mapboxMap.loaded()) {
+      initializeLoadedMap()
+    } else if (isCustomWorldMap && typeof window !== 'undefined') {
+      customLoadRecoveryTimeout = window.setTimeout(() => {
+        if (mapboxMap?.loaded()) {
+          initializeLoadedMap()
+        }
+      }, 500)
+    }
 
     return () => {
       clearMapFallbackTimeouts()
       if (!mapboxMap) {
         return
       }
-      const currentMapView = getStoredMapViewFromMap(mapboxMap)
+      const currentMapView = isCustomWorldMap ? null : getStoredMapViewFromMap(mapboxMap)
       if (currentMapView) {
         savedMapViewRef.current = currentMapView
         if (typeof window !== 'undefined') {
@@ -5209,6 +5310,7 @@ function GamePageContent({
       if (contextLostHandler) {
         mapboxMap.off('webglcontextlost', contextLostHandler)
       }
+      mapboxMap.off('load', initializeLoadedMap)
       mapboxMap.off('error', handleMapError)
       if (persistMapView) {
         mapboxMap.off('moveend', persistMapView)
@@ -5221,7 +5323,7 @@ function GamePageContent({
       mapboxMap.remove()
       setMap(null)
     }
-  }, [setMap, displayLines, mapOptions, MAP_FROM_DATA, renderDisplayRoutes, renderFeatureCollection, renderCullingEnabled, getRenderedCollections, refreshRenderedSources, resolvedTheme, CITY_NAME, updateUiPreferences, usingAmapMapStyle, prefersChineseCopy, mapRetryNonce, mapStyleModeReady, mapViewStorageKey])
+  }, [setMap, displayLines, mapOptions, MAP_FROM_DATA, renderDisplayRoutes, renderFeatureCollection, renderCullingEnabled, getRenderedCollections, refreshRenderedSources, resolvedTheme, CITY_NAME, updateUiPreferences, usingAmapMapStyle, prefersChineseCopy, mapRetryNonce, mapStyleModeReady, mapViewStorageKey, isCustomWorldMap])
 
   useEffect(() => {
     if (!map) {
@@ -5873,6 +5975,19 @@ function GamePageContent({
                 showMapNames={showMapNames}
                 onToggleMapNames={handleToggleMapNames}
               />
+              {customSharePath ? (
+                <button
+                  type="button"
+                  onClick={() => void shareCustomMap()}
+                  className="group inline-flex h-12 min-w-[3rem] items-center justify-center overflow-hidden rounded-full bg-white px-3 text-zinc-700 shadow-lg transition hover:bg-zinc-100 focus:outline-none focus:ring-2 focus:ring-[var(--accent-ring)] dark:bg-zinc-800 dark:text-zinc-100 dark:hover:bg-zinc-700"
+                  aria-label="Share custom map"
+                  title="Share custom map"
+                >
+                  <MdShare className="h-5 w-5 shrink-0" aria-hidden="true" />
+                  <ControlHoverLabel>Share custom map</ControlHoverLabel>
+                  <span className="sr-only">Share custom map</span>
+                </button>
+              ) : null}
 
             </div>
             {showAds && INLINE_AD_SLOT ? (

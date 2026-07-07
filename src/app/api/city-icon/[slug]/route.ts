@@ -40,6 +40,7 @@ const LEGACY_ICON_ROOT = pickExistingPath(LEGACY_ICON_ROOT_CANDIDATES)
 const FALLBACK_CANDIDATES = [
   path.join(IMAGES_ROOT, '_default', 'icon.ico'),
   path.join(LEGACY_ICON_ROOT, '_default.ico'),
+  path.join(process.cwd(), 'src', 'app', 'icon.ico'),
   path.join(process.cwd(), 'public', 'favicon.ico'),
 ]
 

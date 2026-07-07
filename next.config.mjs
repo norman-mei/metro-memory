@@ -31,6 +31,11 @@ const nextConfig = {
   staticPageGenerationTimeout: 30,
   outputFileTracingIncludes: {
     '/api/city-icon/[slug]': ['./public/city-icons/*.ico'],
+    '/api/custom/city-lines/[slug]': [
+      './public/city-data/*.json',
+      './src/app/(game)/**/data/lines.json',
+      './src/app/(game)/**/config.ts',
+    ],
   },
   outputFileTracingExcludes: {
     '*': ['./prisma/**/*.db', './prisma/**/*.sqlite'],
@@ -50,6 +55,7 @@ const nextConfig = {
     NEXT_PUBLIC_APP_VERSION: process.env.npm_package_version ?? '0.1.0',
   },
   images: {
+    qualities: [75, 100],
     localPatterns: [
       {
         pathname: '/favicon.ico',
