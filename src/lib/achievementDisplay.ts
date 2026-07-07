@@ -50,22 +50,6 @@ const SIMPLIFIED_GLOBAL_COPY: Record<string, AchievementCopy> = {
     title: '终极探索者',
     description: '完成 50 座不同城市。',
   },
-  'streak-7': {
-    title: '连续打卡 I',
-    description: '保持 7 天连续游玩记录。',
-  },
-  'streak-30': {
-    title: '连续打卡 II',
-    description: '保持 30 天连续游玩记录。',
-  },
-  'streak-90': {
-    title: '连续打卡 III',
-    description: '保持 90 天连续游玩记录。',
-  },
-  'streak-180': {
-    title: '连续打卡 IV',
-    description: '保持 180 天连续游玩记录。',
-  },
   'twin-city': {
     title: '双城记',
     description: '在同一天完成两座来自不同洲的城市。',
@@ -105,10 +89,6 @@ const SIMPLIFIED_GLOBAL_COPY: Record<string, AchievementCopy> = {
   'never-repeat': {
     title: '不重不漏',
     description: '完成一座城市且不重复猜测已找到的车站。',
-  },
-  'weekend-warrior': {
-    title: '周末战士',
-    description: '连续 8 个周末游玩。',
   },
   'monthly-commuter': {
     title: '月度通勤者',
@@ -167,22 +147,6 @@ const TRADITIONAL_GLOBAL_COPY: Record<string, AchievementCopy> = {
     title: '終極探索者',
     description: '完成 50 座不同城市。',
   },
-  'streak-7': {
-    title: '連續打卡 I',
-    description: '保持 7 天連續遊玩紀錄。',
-  },
-  'streak-30': {
-    title: '連續打卡 II',
-    description: '保持 30 天連續遊玩紀錄。',
-  },
-  'streak-90': {
-    title: '連續打卡 III',
-    description: '保持 90 天連續遊玩紀錄。',
-  },
-  'streak-180': {
-    title: '連續打卡 IV',
-    description: '保持 180 天連續遊玩紀錄。',
-  },
   'twin-city': {
     title: '雙城記',
     description: '在同一天完成兩座來自不同洲的城市。',
@@ -222,10 +186,6 @@ const TRADITIONAL_GLOBAL_COPY: Record<string, AchievementCopy> = {
   'never-repeat': {
     title: '不重不漏',
     description: '完成一座城市且不重複猜測已找到的車站。',
-  },
-  'weekend-warrior': {
-    title: '週末戰士',
-    description: '連續 8 個週末遊玩。',
   },
   'monthly-commuter': {
     title: '月度通勤者',

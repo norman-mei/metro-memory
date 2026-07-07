@@ -7,8 +7,12 @@ import {
   normalizeFoundIds,
   normalizeFoundTimestamps,
 } from '@/lib/miniCityProgressServer'
-import { prisma } from '@/lib/prisma'
 import { mergeProgressPayloads } from '@/lib/progressMerge'
+import { persistMergedProgress } from '@/lib/progressPersistence'
+
+// Cap in-flight transactions so a 250-record sync doesn't exhaust the pool,
+// while still avoiding the old one-slug-at-a-time serial round trips.
+const SYNC_CONCURRENCY = 8
 
 const syncRecordSchema = z.object({
   citySlug: z.string().min(1),
@@ -56,52 +60,25 @@ export async function POST(request: NextRequest) {
     })
   }
 
-  const records = []
   const syncedAt = new Date().toISOString()
+  const entries = Array.from(inputBySlug.entries())
+  const records: Array<{
+    citySlug: string
+    foundIds: number[]
+    foundTimestamps: Record<string, string>
+  }> = []
 
-  for (const [citySlug, incoming] of inputBySlug.entries()) {
-    const existing = await prisma.progress.findUnique({
-      where: {
-        userId_citySlug: {
-          userId: user.id,
+  for (let start = 0; start < entries.length; start += SYNC_CONCURRENCY) {
+    const batch = entries.slice(start, start + SYNC_CONCURRENCY)
+    const merged = await Promise.all(
+      batch.map(([citySlug, incoming]) =>
+        persistMergedProgress(user.id, citySlug, incoming).then((result) => ({
           citySlug,
-        },
-      },
-    })
-    const merged = mergeProgressPayloads(
-      existing
-        ? {
-            foundIds: normalizeFoundIds(existing.foundIds),
-            foundTimestamps: normalizeFoundTimestamps(existing.foundTimestamps),
-          }
-        : null,
-      incoming,
+          ...result,
+        })),
+      ),
     )
-
-    await prisma.progress.upsert({
-      where: {
-        userId_citySlug: {
-          userId: user.id,
-          citySlug,
-        },
-      },
-      update: {
-        foundIds: merged.foundIds,
-        foundTimestamps: merged.foundTimestamps ?? {},
-      },
-      create: {
-        userId: user.id,
-        citySlug,
-        foundIds: merged.foundIds,
-        foundTimestamps: merged.foundTimestamps ?? {},
-      },
-    })
-
-    records.push({
-      citySlug,
-      foundIds: merged.foundIds,
-      foundTimestamps: merged.foundTimestamps,
-    })
+    records.push(...merged)
   }
 
   return NextResponse.json({ ok: true, syncedAt, records })

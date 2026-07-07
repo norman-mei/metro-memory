@@ -129,6 +129,7 @@ export async function callResearchModelJson(messages: ModelMessage[]): Promise<J
 export async function streamResearchModel(
   messages: ModelMessage[],
   onDelta: (text: string) => void,
+  options: { signal?: AbortSignal } = {},
 ): Promise<string | null> {
   const config = getModelConfig()
   if (!config.enabled) {
@@ -142,6 +143,15 @@ export async function streamResearchModel(
 
   const controller = new AbortController()
   const timeout = setTimeout(() => controller.abort(), config.timeoutMs)
+  // Abort the upstream request as soon as the caller (e.g. a disconnected
+  // client) aborts, so we stop reading the model stream instead of running it
+  // to the timeout ceiling.
+  const external = options.signal
+  const onExternalAbort = () => controller.abort()
+  if (external) {
+    if (external.aborted) controller.abort()
+    else external.addEventListener('abort', onExternalAbort, { once: true })
+  }
   try {
     const response = await fetch(`${config.baseUrl}/chat/completions`, {
       method: 'POST',
@@ -192,5 +202,6 @@ export async function streamResearchModel(
     return null
   } finally {
     clearTimeout(timeout)
+    external?.removeEventListener('abort', onExternalAbort)
   }
 }

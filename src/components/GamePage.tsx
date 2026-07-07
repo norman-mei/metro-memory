@@ -68,15 +68,6 @@ import {
 import { downloadCityForOffline } from '@/lib/offlineCityManager'
 import { repairMojibakeArray, repairMojibakeString } from '@/lib/repairMojibake'
 import {
-    DEFAULT_RANKED_RULESET,
-    DEFAULT_RANKED_SOURCE,
-    RANKED_REVEAL_REASON,
-    formatRankedRuleset,
-    formatRankedRunSource,
-    parseRankedRuleset,
-    parseRankedRunSource,
-} from '@/lib/ranked'
-import {
     clearAutoRevealSuppressionForCity,
     readSolutionsAccess,
     shouldAutoRevealSolutions,
@@ -275,17 +266,8 @@ const extractMetadataTitle = (title: unknown): string | undefined => {
 }
 
 const EMPTY_TIMESTAMPS: Record<string, string> = {}
-const EM_DASH = '\u2014'
-const BULLET = '\u2022'
 const RETURN_SYMBOL = '\u23ce'
 
-const formatMs = (ms: number | null | undefined) => {
-  if (!Number.isFinite(ms ?? NaN)) return EM_DASH
-  const totalSeconds = Math.max(0, Math.round((ms ?? 0) / 1000))
-  const minutes = Math.floor(totalSeconds / 60)
-  const seconds = totalSeconds % 60
-  return `${minutes}:${seconds.toString().padStart(2, '0')}`
-}
 const GLOBAL_SATELLITE_STORAGE_KEY = 'global-satellite-enabled'
 const GLOBAL_MAP_NAMES_STORAGE_KEY = 'global-map-names-enabled'
 const getMapStyleModeStorageKey = (cityName: string) => `map-style-mode-${cityName}`
@@ -294,9 +276,6 @@ const getMapStylePreferenceStorageKey = (cityName: string) =>
 type MapStyleMode = 'default' | 'amap'
 const getMapViewStorageKey = (cityName: string, mapStyleMode: MapStyleMode) =>
   mapStyleMode === 'amap' ? `map-view-${cityName}-amap` : `map-view-${cityName}`
-const RANKED_COMPLETION_TARGET = 0.9999
-
-const toMutedLineColor = () => '#94a3b8'
 
 type RenderBounds = [number, number, number, number]
 
@@ -1668,22 +1647,6 @@ function GamePageContent({
     }
     return CITY_NAME
   }, [CITY_NAME, customParentSlug, miniCityLinks, pathname])
-  const rankedMode = searchParams.get('ranked') === '1'
-  const rankedRuleset = useMemo(
-    () =>
-      rankedMode
-        ? parseRankedRuleset(searchParams.get('ruleset') ?? DEFAULT_RANKED_RULESET)
-        : DEFAULT_RANKED_RULESET,
-    [rankedMode, searchParams],
-  )
-  const rankedSource = useMemo(
-    () =>
-      rankedMode
-        ? parseRankedRunSource(searchParams.get('source') ?? DEFAULT_RANKED_SOURCE)
-        : DEFAULT_RANKED_SOURCE,
-    [rankedMode, searchParams],
-  )
-  const rankedSeed = searchParams.get('seed')?.trim() || `${CITY_NAME}-${rankedRuleset}`
   const { t } = useTranslation()
   const { resolvedTheme } = useTheme()
   const { settings, requestInMainlandChina } = useSettings()
@@ -2297,38 +2260,12 @@ function GamePageContent({
     }
   }, [CITY_NAME, fc, normalizeString, settings.language])
 
-  const displayLines = useMemo(() => {
-    if (rankedRuleset !== 'no-line-colors') {
-      return LINES
-    }
-    return Object.fromEntries(
-      Object.entries(LINES ?? {}).map(([lineId, line]) => [
-        lineId,
-        {
-          ...line,
-          color: toMutedLineColor(),
-          backgroundColor: '#475569',
-        },
-      ]),
-    )
-  }, [LINES, rankedRuleset])
+  const displayLines = LINES
 
-  const displayRoutes = useMemo(() => {
-    const baseRoutes = applyCityRouteOverrides(routes, CITY_NAME)
-    if (!baseRoutes || rankedRuleset !== 'no-line-colors') {
-      return baseRoutes
-    }
-    return {
-      ...baseRoutes,
-      features: baseRoutes.features.map((feature) => ({
-        ...feature,
-        properties: {
-          ...feature.properties,
-          color: toMutedLineColor(),
-        },
-      })),
-    }
-  }, [routes, CITY_NAME, rankedRuleset])
+  const displayRoutes = useMemo(
+    () => applyCityRouteOverrides(routes, CITY_NAME),
+    [routes, CITY_NAME],
+  )
 
   const [mapStyleMode, setMapStyleMode] = useState<MapStyleMode>('default')
   const usingAmapMapStyle = mapStyleMode === 'amap'
@@ -2337,8 +2274,8 @@ function GamePageContent({
     [CITY_NAME, cityPath, settings.language],
   )
   const amapRouteCacheKey = useMemo(
-    () => `routes:${cityPath ?? CITY_NAME}:${rankedRuleset}`,
-    [CITY_NAME, cityPath, rankedRuleset],
+    () => `routes:${cityPath ?? CITY_NAME}`,
+    [CITY_NAME, cityPath],
   )
 
   const renderFeatureCollection = useMemo(
@@ -2479,24 +2416,6 @@ function GamePageContent({
   const inputRef = useRef<HTMLInputElement | null>(null)
   const { hideLabels, setHideLabels } = useHideLabels(map)
   const { user, updateProgressSummary, uiPreferences, updateUiPreferences } = useAuth()
-  const [rankedSessionId, setRankedSessionId] = useState<string | null>(null)
-  const [rankedDisqualificationReason, setRankedDisqualificationReason] = useState<string | null>(null)
-  const [rankedFinishSummary, setRankedFinishSummary] = useState<{
-    completionMs: number | null
-    rankedEligible: boolean
-    disqualificationReason: string | null
-  } | null>(null)
-  const [sessionFoundState, setSessionFoundState] = useState<number[]>([])
-  const [sessionFoundTimestampsState, setSessionFoundTimestampsState] = useState<Record<string, string>>({})
-  const [sessionIsNewPlayerState, setSessionIsNewPlayerState] = useState(true)
-  const [rankedHintCount, setRankedHintCount] = useState(0)
-  const rankedCorrectGuessCountRef = useRef(0)
-  const rankedCorrectStationCountRef = useRef(0)
-  const rankedWrongGuessCountRef = useRef(0)
-  const rankedRepeatedGuessCountRef = useRef(0)
-  const rankedFirstCorrectAtRef = useRef<number | null>(null)
-  const rankedFirst50MsRef = useRef<number | null>(null)
-  const rankedRunFinishedRef = useRef(false)
   const [solutionsPromptOpen, setSolutionsPromptOpen] = useState(false)
   const [solutionsPassword, setSolutionsPassword] = useState('')
   const [solutionsAccessPassword, setSolutionsAccessPassword] = useState('')
@@ -2984,22 +2903,16 @@ function GamePageContent({
 
   const setFound = useCallback(
     (nextFound: number[]) => {
-      if (rankedMode) {
-        setSessionFoundState(nextFound)
-        return
-      }
       if (nextFound.length === 0) {
         setStoredFound([])
         return
       }
       setStoredFound(mergeScopeFoundIds(nextFound))
     },
-    [mergeScopeFoundIds, rankedMode, setStoredFound],
+    [mergeScopeFoundIds, setStoredFound],
   )
 
-  const foundTimestamps = rankedMode
-    ? sessionFoundTimestampsState
-    : storedFoundTimestamps ?? EMPTY_TIMESTAMPS
+  const foundTimestamps = storedFoundTimestamps ?? EMPTY_TIMESTAMPS
 
   const [siblingMiniCityStationIds, setSiblingMiniCityStationIds] = useState<
     Record<string, Set<number>>
@@ -3007,35 +2920,27 @@ function GamePageContent({
 
   const setFoundTimestamps = useCallback(
     (updater: (prev: Record<string, string>) => Record<string, string>) => {
-      if (rankedMode) {
-        setSessionFoundTimestampsState((prev) => updater(prev ?? {}))
-        return
-      }
       setStoredFoundTimestamps((prev) => updater(prev ?? {}))
     },
-    [rankedMode, setStoredFoundTimestamps],
+    [setStoredFoundTimestamps],
   )
 
-  const isNewPlayer = rankedMode ? sessionIsNewPlayerState : storedIsNewPlayer
+  const isNewPlayer = storedIsNewPlayer
 
   const setIsNewPlayer = useCallback(
     (nextValue: boolean) => {
-      if (rankedMode) {
-        setSessionIsNewPlayerState(nextValue)
-        return
-      }
       setStoredIsNewPlayer(nextValue)
     },
-    [rankedMode, setStoredIsNewPlayer],
+    [setStoredIsNewPlayer],
   )
 
   const found: number[] = useMemo(() => {
-    const activeFound = rankedMode ? sessionFoundState : localFound || []
+    const activeFound = localFound || []
     return activeFound.filter((f) => idMap.has(f))
-  }, [idMap, localFound, rankedMode, sessionFoundState])
+  }, [idMap, localFound])
   const scopeFound: number[] = useMemo(
-    () => (rankedMode ? sessionFoundState : localFound || []),
-    [localFound, rankedMode, sessionFoundState],
+    () => localFound || [],
+    [localFound],
   )
 
   useEffect(() => {
@@ -3043,7 +2948,7 @@ function GamePageContent({
   }, [found])
 
   useEffect(() => {
-    if (rankedMode || miniCityLinks?.mode !== 'child') {
+    if (miniCityLinks?.mode !== 'child') {
       setSiblingMiniCityStationIds({})
       return
     }
@@ -3079,7 +2984,7 @@ function GamePageContent({
     return () => {
       cancelled = true
     }
-  }, [CITY_NAME, miniCityLinks, rankedMode])
+  }, [CITY_NAME, miniCityLinks])
 
   const reapplyFoundFeatureState = useCallback(
     (targetMap: mapboxgl.Map) => {
@@ -3233,79 +3138,6 @@ function GamePageContent({
   }, [storedFoundTimestamps])
 
   useEffect(() => {
-    setRankedSessionId(null)
-    setRankedDisqualificationReason(null)
-    setRankedFinishSummary(null)
-    setRankedHintCount(0)
-    setSessionFoundState([])
-    setSessionFoundTimestampsState({})
-    setSessionIsNewPlayerState(true)
-    rankedCorrectGuessCountRef.current = 0
-    rankedCorrectStationCountRef.current = 0
-    rankedWrongGuessCountRef.current = 0
-    rankedRepeatedGuessCountRef.current = 0
-    rankedFirstCorrectAtRef.current = null
-    rankedFirst50MsRef.current = null
-    rankedRunFinishedRef.current = false
-  }, [
-    CITY_NAME,
-    rankedMode,
-    rankedRuleset,
-    rankedSeed,
-    rankedSource,
-  ])
-
-  useEffect(() => {
-    if (!rankedMode || !user || !cityPath || rankedSessionId) {
-      return
-    }
-
-    let cancelled = false
-    ;(async () => {
-      try {
-        const response = await fetch('/api/runs/start', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            citySlug: CITY_NAME,
-            cityPath: `/${cityPath}`,
-            ruleset: rankedRuleset,
-            source: rankedSource,
-            seed: rankedSeed,
-          }),
-        })
-        if (!response.ok) {
-          return
-        }
-        const data = await response.json()
-        if (!cancelled && data?.session?.id) {
-          setRankedSessionId(data.session.id)
-        }
-      } catch (error) {
-        if (process.env.NODE_ENV !== 'production') {
-          console.warn('Unable to start ranked session', error)
-        }
-      }
-    })()
-
-    return () => {
-      cancelled = true
-    }
-  }, [
-    CITY_NAME,
-    cityPath,
-    rankedMode,
-    rankedRuleset,
-    rankedSeed,
-    rankedSessionId,
-    rankedSource,
-    user,
-  ])
-
-  useEffect(() => {
-    if (rankedMode) {
-      return
-    }
     if (!Array.isArray(localFound)) {
       return
     }
@@ -3339,7 +3171,7 @@ function GamePageContent({
     if (hasDifference) {
       setStoredFound(expanded)
     }
-  }, [clusterMembersById, idMap, localFound, rankedMode, setStoredFound])
+  }, [clusterMembersById, idMap, localFound, setStoredFound])
 
   const syncTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
   const legacyMiniCityMigrationRef = useRef<string | null>(null)
@@ -3350,9 +3182,6 @@ function GamePageContent({
       timestamps: Record<string, string>,
       immediate = false,
     ) => {
-      if (rankedMode) {
-        return
-      }
       const localRecord = writeLocalProgress(
         progressScopeSlug,
         {
@@ -3403,7 +3232,7 @@ function GamePageContent({
         void send()
       }, 1200)
     },
-    [progressScopeSlug, rankedMode, updateProgressSummary, user],
+    [progressScopeSlug, updateProgressSummary, user],
   )
 
   useEffect(() => {
@@ -3415,9 +3244,6 @@ function GamePageContent({
   }, [])
 
   useEffect(() => {
-    if (rankedMode) {
-      return
-    }
     if (!user) {
       return
     }
@@ -3479,21 +3305,17 @@ function GamePageContent({
     submitProgress,
     updateProgressSummary,
     user,
-    rankedMode,
   ])
 
   useEffect(() => {
-    if (rankedMode) {
-      return
-    }
     if (!user) {
       return
     }
     void submitProgress(scopeFound, foundTimestamps)
-  }, [foundTimestamps, rankedMode, scopeFound, submitProgress, user])
+  }, [foundTimestamps, scopeFound, submitProgress, user])
 
   useEffect(() => {
-    if (rankedMode || progressScopeSlug === CITY_NAME) {
+    if (progressScopeSlug === CITY_NAME) {
       return
     }
     if (typeof window === 'undefined') {
@@ -3561,14 +3383,13 @@ function GamePageContent({
     localFound,
     mergeScopeFoundIds,
     progressScopeSlug,
-    rankedMode,
     setStoredFound,
     setStoredFoundTimestamps,
     setStoredIsNewPlayer,
   ])
 
   useEffect(() => {
-    if (rankedMode || typeof window === 'undefined') {
+    if (typeof window === 'undefined') {
       return
     }
 
@@ -3646,7 +3467,6 @@ function GamePageContent({
     isNewPlayer,
     miniCityLinks,
     progressScopeSlug,
-    rankedMode,
     siblingMiniCityStationIds,
     scopeFound,
     updateProgressSummary,
@@ -3716,16 +3536,6 @@ function GamePageContent({
     setMobileSidebarOpen(false)
     setHoveredId(null)
     setActiveFoundId(null)
-    setRankedDisqualificationReason(null)
-    setRankedFinishSummary(null)
-    setRankedHintCount(0)
-    rankedCorrectGuessCountRef.current = 0
-    rankedCorrectStationCountRef.current = 0
-    rankedWrongGuessCountRef.current = 0
-    rankedRepeatedGuessCountRef.current = 0
-    rankedFirstCorrectAtRef.current = null
-    rankedFirst50MsRef.current = null
-    rankedRunFinishedRef.current = false
     setMistakes(0)
     perfectStartEligibleRef.current = true
     perfectStartCountRef.current = 0
@@ -3733,10 +3543,8 @@ function GamePageContent({
     typoFreeRef.current = true
     comebackArmedRef.current = false
     comebackTriggeredRef.current = false
-    if (!rankedMode) {
-      clearStoredProgress()
-      void submitProgress([], {}, true)
-    }
+    clearStoredProgress()
+    void submitProgress([], {}, true)
     if (shouldAutoFocus()) {
       setTimeout(() => {
         inputRef.current?.focus()
@@ -3755,7 +3563,6 @@ function GamePageContent({
     setHoveredId,
     setActiveFoundId,
     clearStoredProgress,
-    rankedMode,
     submitProgress,
     inputRef,
     CITY_NAME,
@@ -3862,35 +3669,7 @@ function GamePageContent({
     settings.stopConfettiAfterCompletion,
   ])
 
-  const markRankedRunDisqualified = useCallback(
-    async (reason: string = RANKED_REVEAL_REASON) => {
-      if (!rankedMode) {
-        return
-      }
-      setRankedDisqualificationReason(reason)
-      if (!rankedSessionId) {
-        return
-      }
-      try {
-        await fetch('/api/runs/event', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            sessionId: rankedSessionId,
-            type: reason === RANKED_REVEAL_REASON ? 'reveal' : 'mapNames',
-          }),
-        })
-      } catch (error) {
-        if (process.env.NODE_ENV !== 'production') {
-          console.warn('Unable to record ranked disqualification', error)
-        }
-      }
-    },
-    [rankedMode, rankedSessionId],
-  )
-
   const revealAllStations = useCallback(() => {
-    void markRankedRunDisqualified(RANKED_REVEAL_REASON)
     setFound(allStationIds)
     setIsNewPlayer(false)
     setHideLabels(false)
@@ -3913,7 +3692,6 @@ function GamePageContent({
     setHideLabels,
     setFoundTimestamps,
     launchCompletionConfetti,
-    markRankedRunDisqualified,
   ])
 
   const handleProtectedAction = useCallback(
@@ -4297,11 +4075,10 @@ function GamePageContent({
       if (currentMapView) {
         savedMapViewRef.current = currentMapView
       }
-      void markRankedRunDisqualified('MAP_NAMES_USED')
       setShowMapNames((prev) => !prev)
       registerMapNamesToggle()
     }, 'mapNames')
-  }, [handleProtectedAction, map, markRankedRunDisqualified, registerMapNamesToggle])
+  }, [handleProtectedAction, map, registerMapNamesToggle])
 
   useEffect(() => {
     if (!achievementsHydratedRef.current || lineMasterSyncRef.current) return
@@ -4344,9 +4121,6 @@ function GamePageContent({
     if (typeof window === 'undefined') return
     const today = new Date()
     const todayStr = today.toISOString().slice(0, 10)
-    const yesterday = new Date(today)
-    yesterday.setDate(today.getDate() - 1)
-    const yStr = yesterday.toISOString().slice(0, 10)
 
     let playDays = new Set<string>()
     try {
@@ -4363,26 +4137,8 @@ function GamePageContent({
     playDays.add(todayStr)
     window.localStorage.setItem('mm-play-days', JSON.stringify(Array.from(playDays)))
 
-    let streak = 1
-    if (lastPlayDateRef.current === todayStr) {
-      streak = Number(window.localStorage.getItem('mm-streak-count') || '1')
-    } else if (lastPlayDateRef.current === yStr) {
-      streak = Number(window.localStorage.getItem('mm-streak-count') || '1') + 1
-    } else {
-      streak = 1
-    }
     lastPlayDateRef.current = todayStr
     window.localStorage.setItem('mm-last-play-date', todayStr)
-    window.localStorage.setItem('mm-streak-count', String(streak))
-
-    if (streak >= 180)
-      awardAchievement('streak-180', 'Streak Saver IV', 'Maintained a 180-day streak.')
-    else if (streak >= 90)
-      awardAchievement('streak-90', 'Streak Saver III', 'Maintained a 90-day streak.')
-    else if (streak >= 30)
-      awardAchievement('streak-30', 'Streak Saver II', 'Maintained a 30-day streak.')
-    else if (streak >= 7)
-      awardAchievement('streak-7', 'Streak Saver I', 'Maintained a 7-day streak.')
 
     const monthKey = today.toISOString().slice(0, 7)
     try {
@@ -4400,66 +4156,19 @@ function GamePageContent({
     } catch {
       // ignore
     }
-
-    const dayOfWeek = today.getDay()
-    const isWeekend = dayOfWeek === 0 || dayOfWeek === 6
-    if (isWeekend) {
-      const weekStart = new Date(today)
-      const offset = (dayOfWeek + 6) % 7
-      weekStart.setDate(weekStart.getDate() - offset)
-      weekStart.setHours(0, 0, 0, 0)
-      const weekKey = weekStart.toISOString().slice(0, 10)
-      const lastWeekendKey = window.localStorage.getItem('mm-weekend-last')
-      let weekendStreak = Number(window.localStorage.getItem('mm-weekend-streak') || '0')
-      if (lastWeekendKey !== weekKey) {
-        const prevWeek = new Date(weekStart)
-        prevWeek.setDate(prevWeek.getDate() - 7)
-        const prevKey = prevWeek.toISOString().slice(0, 10)
-        weekendStreak = lastWeekendKey === prevKey ? weekendStreak + 1 : 1
-        window.localStorage.setItem('mm-weekend-last', weekKey)
-        window.localStorage.setItem('mm-weekend-streak', String(weekendStreak))
-      }
-      if (weekendStreak >= 8) {
-        awardAchievement('weekend-warrior', 'Weekend Warrior', 'Play on 8 consecutive weekends.')
-      }
-    }
   }, [awardAchievement])
 
   const handleGuessResult = useCallback(
     (result: { type: 'correct' | 'already' | 'wrong'; addedIds?: number[] }) => {
       if (result.type === 'wrong') {
-        rankedWrongGuessCountRef.current += 1
         setMistakes((m) => m + 1)
-        if (rankedMode && rankedRuleset === 'one-life' && !rankedRunFinishedRef.current) {
-          rankedRunFinishedRef.current = true
-          setRankedFinishSummary({
-            completionMs: null,
-            rankedEligible: false,
-            disqualificationReason: 'ONE_LIFE_FAILED',
-          })
-        }
         if (perfectStartEligibleRef.current) {
           perfectStartEligibleRef.current = false
         }
       }
       if (result.type === 'correct') {
-        rankedCorrectGuessCountRef.current += 1
-        rankedCorrectStationCountRef.current += result.addedIds?.length ?? 0
         if (settings.zoomToNewStations && result.addedIds && result.addedIds.length > 0) {
           zoomToFeatures(result.addedIds)
-        }
-        if (rankedFirstCorrectAtRef.current === null) {
-          rankedFirstCorrectAtRef.current = performance.now()
-        }
-        if (
-          rankedFirst50MsRef.current === null &&
-          rankedCorrectStationCountRef.current >= 50 &&
-          rankedFirstCorrectAtRef.current !== null
-        ) {
-          rankedFirst50MsRef.current = Math.max(
-            1,
-            Math.round(performance.now() - rankedFirstCorrectAtRef.current),
-          )
         }
         registerPlayDay()
         if (perfectStartEligibleRef.current) {
@@ -4475,7 +4184,6 @@ function GamePageContent({
         }
       }
       if (result.type === 'already') {
-        rankedRepeatedGuessCountRef.current += 1
         neverRepeatRef.current = false
         if (perfectStartEligibleRef.current) {
           perfectStartEligibleRef.current = false
@@ -4484,11 +4192,7 @@ function GamePageContent({
       }
     },
     [
-      CITY_NAME,
       awardAchievement,
-      idMap,
-      rankedMode,
-      rankedRuleset,
       registerPlayDay,
       settings.zoomToNewStations,
       zoomToFeatures,
@@ -4701,118 +4405,6 @@ function GamePageContent({
     settings.achievementToastsEnabled,
     totalUniqueStations,
     user?.id,
-  ])
-
-  useEffect(() => {
-    if (!rankedMode || !user || !rankedSessionId) {
-      return
-    }
-    if (foundProportion < RANKED_COMPLETION_TARGET || rankedRunFinishedRef.current) {
-      return
-    }
-
-    rankedRunFinishedRef.current = true
-
-    ;(async () => {
-      try {
-        const response = await fetch('/api/runs/finish', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            sessionId: rankedSessionId,
-            completionPercent: foundProportion,
-            correctGuessCount: rankedCorrectGuessCountRef.current,
-            correctStationCount: rankedCorrectStationCountRef.current,
-            wrongGuessCount: rankedWrongGuessCountRef.current,
-            repeatedGuessCount: rankedRepeatedGuessCountRef.current,
-            hintCount: rankedHintCount,
-            first50Ms: rankedFirst50MsRef.current,
-            completionMs: null,
-          }),
-        })
-        const payload = await response.json().catch(() => ({}))
-        if (!response.ok) {
-          rankedRunFinishedRef.current = false
-          return
-        }
-        setRankedFinishSummary({
-          completionMs: payload?.result?.completionMs ?? null,
-          rankedEligible: Boolean(payload?.result?.rankedEligible),
-          disqualificationReason:
-            payload?.result?.disqualificationReason ?? rankedDisqualificationReason,
-        })
-      } catch (error) {
-        rankedRunFinishedRef.current = false
-        if (process.env.NODE_ENV !== 'production') {
-          console.warn('Unable to finish ranked run', error)
-        }
-      }
-    })()
-  }, [
-    foundProportion,
-    rankedDisqualificationReason,
-    rankedHintCount,
-    rankedMode,
-    rankedSessionId,
-    user,
-  ])
-
-  useEffect(() => {
-    const shouldSubmitOneLifeFailure =
-      rankedMode &&
-      rankedRuleset === 'one-life' &&
-      mistakes > 0 &&
-      foundProportion < RANKED_COMPLETION_TARGET
-
-    if (!rankedMode || !user || !rankedSessionId || !shouldSubmitOneLifeFailure) {
-      return
-    }
-    if (rankedFinishSummary) {
-      return
-    }
-
-    ;(async () => {
-      try {
-        const response = await fetch('/api/runs/finish', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            sessionId: rankedSessionId,
-            completionPercent: foundProportion,
-            correctGuessCount: rankedCorrectGuessCountRef.current,
-            correctStationCount: rankedCorrectStationCountRef.current,
-            wrongGuessCount: rankedWrongGuessCountRef.current,
-            repeatedGuessCount: rankedRepeatedGuessCountRef.current,
-            hintCount: rankedHintCount,
-            first50Ms: rankedFirst50MsRef.current,
-            completionMs: null,
-          }),
-        })
-        const payload = await response.json().catch(() => ({}))
-        if (!response.ok) {
-          return
-        }
-        setRankedFinishSummary({
-          completionMs: payload?.result?.completionMs ?? null,
-          rankedEligible: Boolean(payload?.result?.rankedEligible),
-          disqualificationReason:
-            payload?.result?.disqualificationReason ?? 'ONE_LIFE_FAILED',
-        })
-      } catch (error) {
-        if (process.env.NODE_ENV !== 'production') {
-          console.warn('Unable to record one-life finish', error)
-        }
-      }
-    })()
-  }, [
-    foundProportion,
-    mistakes,
-    rankedFinishSummary,
-    rankedHintCount,
-    rankedMode,
-    rankedRuleset,
-    rankedSessionId,
-    user,
   ])
 
   useEffect(() => {
@@ -5122,8 +4714,7 @@ function GamePageContent({
       const hoverHaloColor = isDarkTheme
         ? 'rgba(0, 0, 0, 0.85)'
         : 'rgb(255, 255, 255)'
-      const routeColorExpression: any =
-        rankedRuleset === 'no-line-colors' ? toMutedLineColor() : ['get', 'color']
+      const routeColorExpression: any = ['get', 'color']
       const initialRenderedCollections = renderCullingEnabled
         ? getRenderedCollections(getMapBoundsTuple(mapboxMap.getBounds()))
         : {
@@ -5961,12 +5552,6 @@ function GamePageContent({
     return { width: 0, flexBasis: 0 }
   }, [sidebarOpen])
 
-  const oneLifeFailed =
-    rankedMode &&
-    rankedRuleset === 'one-life' &&
-    mistakes > 0 &&
-    foundProportion < RANKED_COMPLETION_TARGET
-
   const showChinaMapStyleTestButton =
     isChinaCity && (requestInMainlandChina || debugMapProviderEnabled)
   const chinaMapStyleTestButtonLabel = usingAmapMapStyle
@@ -6170,32 +5755,6 @@ function GamePageContent({
         {!zenMode && (
           <div className="pointer-events-none absolute inset-x-0 top-[calc(0.75rem+env(safe-area-inset-top))] px-3 transition-all lg:top-6 lg:px-6">
             <div className="pointer-events-auto mx-auto flex w-full max-w-3xl flex-col gap-2 lg:gap-3">
-              {rankedMode && (
-                <div className="rounded-2xl border border-amber-200 bg-white/95 px-4 py-3 text-sm shadow-md backdrop-blur-sm dark:border-amber-500/40 dark:bg-zinc-900/95 dark:text-zinc-100 dark:shadow-black/40">
-                  <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
-                    <span className="font-semibold text-zinc-900 dark:text-zinc-100">
-                      {formatRankedRunSource(rankedSource)}
-                    </span>
-                    <span className="text-zinc-500 dark:text-zinc-400">{BULLET}</span>
-                    <span>{formatRankedRuleset(rankedRuleset)}</span>
-                    <span className="text-zinc-500 dark:text-zinc-400">{BULLET}</span>
-                    <span>
-                      {user
-                        ? rankedFinishSummary?.rankedEligible
-                          ? 'Ranked result recorded.'
-                        : rankedDisqualificationReason || rankedFinishSummary?.disqualificationReason
-                            ? 'Practice only after answer reveal.'
-                            : oneLifeFailed
-                              ? 'Run failed.'
-                              : 'Ranked session active.'
-                        : 'Sign in to record ranked results.'}
-                    </span>
-                  </div>
-                  <p className="mt-1 text-xs text-zinc-600 dark:text-zinc-400">
-                    Revealing answers or turning on map-name assists disqualifies the current ranked run.
-                  </p>
-                </div>
-              )}
               <div className="max-h-[60vh] overflow-y-auto rounded-lg bg-white/95 p-3 shadow-md backdrop-blur-sm dark:bg-zinc-900/95 dark:text-zinc-100 dark:shadow-black/40 lg:hidden">
                 <FoundSummary
                   foundProportion={foundProportion}
@@ -6243,18 +5802,12 @@ function GamePageContent({
                   idMap={idMap}
                   clusterGroups={clusterGroups}
                   autoFocus={!solutionsPromptOpen && !resetConfirmOpen}
-                  disabled={solutionsPromptOpen || resetConfirmOpen || oneLifeFailed}
+                  disabled={solutionsPromptOpen || resetConfirmOpen}
                   onGuessResult={handleGuessResult}
                   onInputEdit={handleInputEdit}
                   autoSubmitOnMatch={settings.autoSubmitOnMatch}
-                  strictMatching={
-                    rankedRuleset === 'strict-spelling' ||
-                    settings.stationMatchingMode === 'strict'
-                  }
-                  forgivingMatching={
-                    rankedRuleset !== 'strict-spelling' &&
-                    settings.stationMatchingMode === 'forgiving'
-                  }
+                  strictMatching={settings.stationMatchingMode === 'strict'}
+                  forgivingMatching={settings.stationMatchingMode === 'forgiving'}
                 />
               )}
               {showChinaMapStyleTestButton && (
@@ -6716,12 +6269,8 @@ function GamePageContent({
               {actionType === 'satellite'
                 ? 'Enter the password to view the satellite map.'
                 : actionType === 'mapNames'
-                  ? rankedMode
-                    ? 'Enter the password to see map labels. This will disqualify the current ranked run.'
-                    : 'Enter the password to see map labels.'
-                  : rankedMode
-                    ? 'Enter the password to reveal every station. This will disqualify the current ranked run.'
-                    : 'Enter the password to reveal every station.'}
+                  ? 'Enter the password to see map labels.'
+                  : 'Enter the password to reveal every station.'}
             </p>
             <form className="mt-4 space-y-4" onSubmit={handleSolutionsSubmit}>
               <input

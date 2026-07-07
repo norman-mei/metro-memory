@@ -25,18 +25,41 @@ export async function POST(request: Request) {
 
   const stream = new ReadableStream({
     async start(controller) {
-      const send = (obj: unknown) =>
-        controller.enqueue(encoder.encode(`data: ${JSON.stringify(obj)}\n\n`))
+      let closed = false
+      const send = (obj: unknown) => {
+        if (closed) return
+        try {
+          controller.enqueue(encoder.encode(`data: ${JSON.stringify(obj)}\n\n`))
+        } catch {
+          // Consumer already went away — stop trying to write.
+          closed = true
+        }
+      }
+      const onAbort = () => {
+        closed = true
+      }
+      request.signal.addEventListener('abort', onAbort, { once: true })
       try {
         const result = await streamChatTurn(
-          { message: parsed.data.message, sessionId: parsed.data.sessionId ?? null, reviewer },
+          {
+            message: parsed.data.message,
+            sessionId: parsed.data.sessionId ?? null,
+            reviewer,
+            signal: request.signal,
+          },
           (delta) => send({ type: 'delta', delta }),
         )
         send({ type: 'done', sessionId: result.sessionId, runId: result.runId })
       } catch (error) {
         send({ type: 'error', error: error instanceof Error ? error.message : 'Chat failed.' })
       } finally {
-        controller.close()
+        request.signal.removeEventListener('abort', onAbort)
+        closed = true
+        try {
+          controller.close()
+        } catch {
+          // Already closed/errored — nothing to do.
+        }
       }
     },
   })

@@ -256,7 +256,7 @@ const RESEARCH_MARKER = '@@RESEARCH'
  * disabled/unreachable.
  */
 export async function streamChatTurn(
-  args: { message: string; sessionId?: string | null; reviewer: string },
+  args: { message: string; sessionId?: string | null; reviewer: string; signal?: AbortSignal },
   onDelta: (text: string) => void,
 ): Promise<{ sessionId: string; runId: string | null }> {
   const existing = args.sessionId
@@ -347,10 +347,17 @@ export async function streamChatTurn(
     firstBuf = ''
   }
 
-  const full = await streamResearchModel(messages, handle)
+  const full = await streamResearchModel(messages, handle, { signal: args.signal })
   if (checking) decideFirstLine()
 
-  if (full === null && !visible) {
+  // The caller (client) went away mid-stream: don't synthesize a fallback,
+  // launch research, or persist an empty turn — just bail with whatever streamed.
+  const aborted = args.signal?.aborted ?? false
+  if (aborted && !visible.trim()) {
+    return { sessionId: session.id, runId: null }
+  }
+
+  if (!aborted && full === null && !visible) {
     const fb = isResearchModelEnabled()
       ? { reply: 'I had trouble reaching the AI just now — please try again.', action: null as AgentAction }
       : heuristicFallback(args.message)
@@ -360,7 +367,7 @@ export async function streamChatTurn(
   }
 
   let runId: string | null = null
-  if (action && action.type === 'RESEARCH') {
+  if (!aborted && action && action.type === 'RESEARCH') {
     flush('\n\n⏳ Running research…')
     const summary = await runResearch({
       citySlugs: action.citySlugs,

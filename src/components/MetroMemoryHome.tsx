@@ -50,6 +50,12 @@ export default function MetroMemoryHome() {
             </a>
             .
           </p>
+          <a
+            href="/custom/build"
+            className="mt-6 inline-flex items-center gap-2 rounded-xl bg-[var(--accent-600)] px-5 py-3 text-sm font-bold text-white transition hover:bg-[var(--accent-700)] focus:outline-none focus:ring-2 focus:ring-[var(--accent-ring)]"
+          >
+            🌍 Build a custom world map
+          </a>
         </div>
         <Suspense>
           <SearcheableCitiesList

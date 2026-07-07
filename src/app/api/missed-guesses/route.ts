@@ -48,6 +48,10 @@ type MissedGuessTableProbeRow = {
 const MISSED_GUESS_TABLE_NAME = 'MissedGuessInput'
 const MISSED_GUESS_TABLE_CACHE_MS = 60_000
 const MAX_SERVER_MISSED_GUESS_ROWS = 100_000
+// The trim is a sorted OFFSET scan, so run it only on a small fraction of
+// inserts instead of every POST. The table can drift ~1/this above the cap
+// between trims, which is negligible against a 100k ceiling.
+const MISSED_GUESS_TRIM_PROBABILITY = 0.01
 
 let missedGuessTableCache:
   | {
@@ -134,23 +138,29 @@ export async function POST(request: NextRequest) {
   }
 
   try {
-    await prisma.$transaction([
-      prisma.$executeRaw`
-        INSERT INTO "MissedGuessInput"
-          ("id", "citySlug", "rawInput", "normalizedInput", "suggestions", "createdAt")
-        VALUES
-          (${crypto.randomUUID()}, ${data.city}, ${data.rawInput}, ${data.normalizedInput}, ${JSON.stringify(data.suggestions)}::jsonb, NOW())
-      `,
-      prisma.$executeRaw`
-        DELETE FROM "MissedGuessInput"
-        WHERE "id" IN (
-          SELECT "id"
-          FROM "MissedGuessInput"
-          ORDER BY "createdAt" DESC, "id" DESC
-          OFFSET ${MAX_SERVER_MISSED_GUESS_ROWS}
-        )
-      `,
-    ])
+    const insert = prisma.$executeRaw`
+      INSERT INTO "MissedGuessInput"
+        ("id", "citySlug", "rawInput", "normalizedInput", "suggestions", "createdAt")
+      VALUES
+        (${crypto.randomUUID()}, ${data.city}, ${data.rawInput}, ${data.normalizedInput}, ${JSON.stringify(data.suggestions)}::jsonb, NOW())
+    `
+
+    if (Math.random() < MISSED_GUESS_TRIM_PROBABILITY) {
+      await prisma.$transaction([
+        insert,
+        prisma.$executeRaw`
+          DELETE FROM "MissedGuessInput"
+          WHERE "id" IN (
+            SELECT "id"
+            FROM "MissedGuessInput"
+            ORDER BY "createdAt" DESC, "id" DESC
+            OFFSET ${MAX_SERVER_MISSED_GUESS_ROWS}
+          )
+        `,
+      ])
+    } else {
+      await insert
+    }
   } catch (error) {
     if (isMissingMissedGuessTableError(error)) {
       missedGuessTableCache = {

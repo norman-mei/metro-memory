@@ -51,30 +51,6 @@ export const GLOBAL_ACHIEVEMENTS: GlobalAchievementDefinition[] = [
     order: 10_013,
   },
   {
-    slug: 'streak-7',
-    title: 'Streak Saver I',
-    description: 'Maintain a 7-day play streak.',
-    order: 10_030,
-  },
-  {
-    slug: 'streak-30',
-    title: 'Streak Saver II',
-    description: 'Maintain a 30-day play streak.',
-    order: 10_031,
-  },
-  {
-    slug: 'streak-90',
-    title: 'Streak Saver III',
-    description: 'Maintain a 90-day play streak.',
-    order: 10_032,
-  },
-  {
-    slug: 'streak-180',
-    title: 'Streak Saver IV',
-    description: 'Maintain a 180-day play streak.',
-    order: 10_033,
-  },
-  {
     slug: 'twin-city',
     title: 'Twin City',
     description: 'Complete two cities from different continents on the same day.',
@@ -133,12 +109,6 @@ export const GLOBAL_ACHIEVEMENTS: GlobalAchievementDefinition[] = [
     title: 'Never Repeat',
     description: 'Complete a city without guessing an already-found station.',
     order: 10_050,
-  },
-  {
-    slug: 'weekend-warrior',
-    title: 'Weekend Warrior',
-    description: 'Play on 8 consecutive weekends.',
-    order: 10_051,
   },
   {
     slug: 'monthly-commuter',

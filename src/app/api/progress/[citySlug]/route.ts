@@ -6,11 +6,10 @@ import {
   getMiniCityFamilyParentSlug,
   getMiniCityFamilySlugs,
   normalizeFoundIds,
-  normalizeFoundTimestamps,
   resolveProgressPayloadForSlug,
 } from '@/lib/miniCityProgressServer'
 import { prisma } from '@/lib/prisma'
-import { mergeProgressPayloads } from '@/lib/progressMerge'
+import { persistMergedProgress } from '@/lib/progressPersistence'
 
 type RouteParams = {
   params: Promise<{
@@ -87,48 +86,11 @@ export async function POST(request: NextRequest, { params }: RouteParams) {
     return NextResponse.json({ error: 'Invalid payload' }, { status: 400 })
   }
 
-  const uniqueIds = normalizeFoundIds(parsed.data.foundIds)
-  const foundTimestamps: Record<string, string> = parsed.data.foundTimestamps ?? {}
   const familyParentSlug = getMiniCityFamilyParentSlug(citySlug)
   const targetCitySlug = familyParentSlug ?? citySlug
-  const existing = await prisma.progress.findUnique({
-    where: {
-      userId_citySlug: {
-        userId: user.id,
-        citySlug: targetCitySlug,
-      },
-    },
-  })
-  const merged = mergeProgressPayloads(
-    existing
-      ? {
-          foundIds: normalizeFoundIds(existing.foundIds),
-          foundTimestamps: normalizeFoundTimestamps(existing.foundTimestamps),
-        }
-      : null,
-    {
-      foundIds: uniqueIds,
-      foundTimestamps,
-    },
-  )
-
-  await prisma.progress.upsert({
-    where: {
-      userId_citySlug: {
-        userId: user.id,
-        citySlug: targetCitySlug,
-      },
-    },
-    update: {
-      foundIds: merged.foundIds,
-      foundTimestamps: merged.foundTimestamps ?? {},
-    },
-    create: {
-      userId: user.id,
-      citySlug: targetCitySlug,
-      foundIds: merged.foundIds,
-      foundTimestamps: merged.foundTimestamps ?? {},
-    },
+  const merged = await persistMergedProgress(user.id, targetCitySlug, {
+    foundIds: normalizeFoundIds(parsed.data.foundIds),
+    foundTimestamps: parsed.data.foundTimestamps ?? {},
   })
 
   return NextResponse.json({ ok: true, foundCount: merged.foundIds.length })

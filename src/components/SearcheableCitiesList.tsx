@@ -557,9 +557,7 @@ type SearcheableCitiesListProps = {
 
 type AchievementMetrics = {
   playDays: number
-  streak: number
   playMonths: number
-  weekendStreak: number
   globalStations: number
   lineMasterKeys: number
   mapNamesToggles: number
@@ -570,9 +568,7 @@ type AchievementMetrics = {
 
 const DEFAULT_ACHIEVEMENT_METRICS: AchievementMetrics = {
   playDays: 0,
-  streak: 0,
   playMonths: 0,
-  weekendStreak: 0,
   globalStations: 0,
   lineMasterKeys: 0,
   mapNamesToggles: 0,
@@ -2432,16 +2428,12 @@ const SearcheableCitiesList = ({
         uniqueContinents = 0
       }
 
-      const streak = Number(window.localStorage.getItem('mm-streak-count') || '0')
-      const weekendStreak = Number(window.localStorage.getItem('mm-weekend-streak') || '0')
       const globalStations = Number(window.localStorage.getItem('mm-global-unique-stations') || '0')
       const mapNamesToggles = Number(window.localStorage.getItem('mm-map-names-toggles') || '0')
 
       setAchievementMetrics({
         playDays,
-        streak,
         playMonths,
-        weekendStreak,
         globalStations,
         lineMasterKeys,
         mapNamesToggles,
@@ -2486,12 +2478,7 @@ const SearcheableCitiesList = ({
       progressMap.set(slug, { current, target })
     }
 
-    addThreshold('streak-7', achievementMetrics.streak, 7)
-    addThreshold('streak-30', achievementMetrics.streak, 30)
-    addThreshold('streak-90', achievementMetrics.streak, 90)
-    addThreshold('streak-180', achievementMetrics.streak, 180)
     addThreshold('monthly-commuter', achievementMetrics.playMonths, 3)
-    addThreshold('weekend-warrior', achievementMetrics.weekendStreak, 8)
     addThreshold('station-collector', achievementMetrics.globalStations, 1000)
     addThreshold('marathoner', achievementMetrics.globalStations, 10000)
     addThreshold('line-finisher', achievementMetrics.lineMasterKeys, 5)
