@@ -63,6 +63,67 @@ export default function CityStatsPage() {
   const lineCount = useMemo(() => cityData?.routes?.features?.length ?? 0, [cityData])
   const totalStations = STATION_TOTALS[slug] ?? stationCount
 
+  const values = useMemo(() => {
+    if (!cityData) return []
+
+    const mapped = stats
+      .map(([key, value]) => {
+        const id = +key.replace(`${slug}-`, '')
+        const feature = cityData.features.features.find((f) => f.id === id)
+        if (!feature) return null
+        return {
+          id,
+          name: feature.properties.name,
+          value,
+          line: feature.properties.line,
+          geometry: feature.geometry,
+        }
+      })
+      .filter(Boolean) as Array<{
+      id: number
+      name: string
+      value: number
+      line: string
+      geometry: Point
+    }>
+
+    const grouped = mapped.reduce<Record<string, typeof mapped>>((acc, item) => {
+      acc[item.name] = acc[item.name] || []
+      acc[item.name].push(item)
+      return acc
+    }, {})
+
+    const groups = Object.values(grouped)
+
+    return groups.map((items, index) =>
+      items.reduce<{
+        lines: string[]
+        value: number
+        name: string
+        geometry: Point
+        id: number
+        percentile: number
+      }>(
+        (acc, item) => ({
+          name: item.name,
+          value: item.value,
+          geometry: item.geometry,
+          lines: [...acc.lines, item.line],
+          id: item.id,
+          percentile: index / groups.length,
+        }),
+        {
+          lines: [],
+          value: 0,
+          name: '',
+          geometry: { type: 'Point', coordinates: [0, 0] },
+          id: 0,
+          percentile: 0,
+        },
+      ),
+    )
+  }, [cityData, slug, stats])
+
   const cityName = city?.name ?? slug.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase())
   const iconPath = getCityOpenGraphImagePath(slug)
 
@@ -138,7 +199,7 @@ export default function CityStatsPage() {
             How often each station is guessed across all players.
           </p>
           <div className="mt-4 rounded-2xl border border-zinc-200 bg-white p-4 dark:border-zinc-800 dark:bg-zinc-900">
-            <StatsGraph name={cityName} slug={slug} />
+            <StatsGraph values={values} routes={cityData!.routes} slug={slug} />
           </div>
         </section>
       )}
