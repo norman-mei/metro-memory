@@ -51,7 +51,16 @@ const rawCities: CityBase[] = [
     name: 'California State, USA',
     link: '/north-america/usa/california-state',
     continent: 'North America',
-    keywords: ['San Francisco', 'Los Angeles', 'San Diego', 'Sacramento', 'BART', 'Muni', 'LA Metro', 'MTS'],
+    keywords: [
+      'San Francisco',
+      'Los Angeles',
+      'San Diego',
+      'Sacramento',
+      'BART',
+      'Muni',
+      'LA Metro',
+      'MTS',
+    ],
   },
   {
     name: 'Boston, MA',
@@ -400,6 +409,11 @@ const rawCities: CityBase[] = [
     continent: 'Europe',
   },
   {
+    name: 'Rome, IT',
+    link: '/europe/italy/rome',
+    continent: 'Europe',
+  },
+  {
     name: 'Sheffield, ENG',
     link: '/europe/uk/sheffield',
     continent: 'Europe',
@@ -431,7 +445,18 @@ const rawCities: CityBase[] = [
     name: 'Guangdong–Hong Kong–Macao Greater Bay Area (粤港澳大湾区), GD/HK/MO',
     link: '/asia/china/gba',
     continent: 'Asia',
-    keywords: ['Hong Kong', 'Shenzhen', 'Dongguan', 'Guangzhou', 'Foshan', 'Macau', 'Macao', 'Canton', 'GBA', 'Greater Bay Area'],
+    keywords: [
+      'Hong Kong',
+      'Shenzhen',
+      'Dongguan',
+      'Guangzhou',
+      'Foshan',
+      'Macau',
+      'Macao',
+      'Canton',
+      'GBA',
+      'Greater Bay Area',
+    ],
   },
   {
     name: 'Beijing (北京), BJ',
@@ -793,7 +818,7 @@ const rawCities: CityBase[] = [
     hideInStats: true,
   },
   {
-    name: 'Huai\'an (淮安), JS',
+    name: "Huai'an (淮安), JS",
     link: '/asia/china/huaian',
     continent: 'Asia',
     hideInStats: true,
@@ -888,7 +913,7 @@ const rawCities: CityBase[] = [
     link: '/asia/china/liupanshui',
     continent: 'Asia',
   },
-    {
+  {
     name: 'Guilin (桂林), GX',
     link: '/asia/china/guilin',
     continent: 'Asia',
@@ -1098,7 +1123,10 @@ const applyPlaceholderFlags = (city: CityBase): CityBase => {
   return city
 }
 
-const withImages = (city: CityBase): ICity => ({ ...city, image: getCityImagePath(city.link) })
+const withImages = (city: CityBase): ICity => ({
+  ...city,
+  image: getCityImagePath(city.link),
+})
 
 export const cities: ICity[] = rawCities
   .map(normalizeAvailability)
@@ -1115,7 +1143,8 @@ const isCityAvailable = (city: Pick<ICity, 'link'>): boolean => {
 
 export const isCityExplicitlyEnabled = (
   city: Pick<ICity, 'disabled' | 'hideInStats' | 'link'>,
-): boolean => city.disabled === false || city.hideInStats === false || isCityAvailable(city)
+): boolean =>
+  city.disabled === false || city.hideInStats === false || isCityAvailable(city)
 
 export const isCityDisabled = (
   city: Pick<ICity, 'disabled' | 'hideInStats' | 'link'>,
