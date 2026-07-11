@@ -1,0 +1,96 @@
+{
+  "city": "rome",
+  "continent": "europe",
+  "bbox": [
+    41.7914,
+    12.2342,
+    42.0094,
+    12.616
+  ],
+  "localLanguages": [
+    "it"
+  ],
+  "modes": [
+    "subway",
+    "light_rail",
+    "tram",
+    "rail"
+  ],
+  "lines": [
+    {
+      "id": "Metro A",
+      "name": "Battistini – Anagnina",
+      "keywords": [
+        "Metro A",
+        "Linea A",
+        "MetroA",
+        "Orange Line"
+      ],
+      "order": 0,
+      "icon": "europe/italy/rome/MetroA.svg"
+    },
+    {
+      "id": "Metro B",
+      "name": "Laurentina – Rebibbia",
+      "keywords": [
+        "Metro B",
+        "Linea B",
+        "MetroB",
+        "Blue Line"
+      ],
+      "order": 1,
+      "icon": "europe/italy/rome/MetroB.svg"
+    },
+    {
+      "id": "Metro B1",
+      "name": "Laurentina – Jonio",
+      "keywords": [
+        "Metro B1",
+        "Linea B1",
+        "MetroB1",
+        "Blue Line"
+      ],
+      "order": 2,
+      "icon": "europe/italy/rome/MetroB1.svg"
+    },
+    {
+      "id": "Metro C",
+      "name": "Monte Compatri-Pantano – San Giovanni",
+      "keywords": [
+        "Metro C",
+        "Linea C",
+        "MetroC",
+        "Dark Green Line"
+      ],
+      "order": 3,
+      "icon": "europe/italy/rome/MetroC.svg"
+    },
+    {
+      "id": "Roma-Viterbo",
+      "name": "Piazzale Flaminio – Viterbo",
+      "keywords": [
+        "Roma Viterbo",
+        "FL3",
+        "Ferrovia Roma Nord",
+        "Roma Nord"
+      ],
+      "order": 4,
+      "icon": "europe/italy/rome/RomaViterbo.svg"
+    },
+    {
+      "id": "Roma-Lido",
+      "name": "Roma Porta San Paolo – Cristoforo Colombo",
+      "keywords": [
+        "Roma Lido",
+        "FL8",
+        "Ferrovia Roma Lido",
+        "Lido Line"
+      ],
+      "order": 5,
+      "icon": "europe/italy/rome/RomaLido.svg"
+    }
+  ],
+  "stationAliases": {},
+  "stationLocalNames": {},
+  "manualCoords": {}
+}

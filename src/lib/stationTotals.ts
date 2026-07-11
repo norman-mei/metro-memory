@@ -142,6 +142,7 @@ export const STATION_TOTALS: Record<string, number> = {
   "potsdam": 182,
   "pyongyang": 16,
   "regional-rail": 575,
+  "rome": 121,
   "san-juan": 16,
   "sanya": 15,
   "sapporo": 103,

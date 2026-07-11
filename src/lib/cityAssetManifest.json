@@ -991,6 +991,12 @@
     "openGraphExtension": "jpg",
     "openGraphVersion": "255f9138cf5d"
   },
+  "rome": {
+    "icon": true,
+    "iconVersion": "fc0b13618501",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "14f8d2ba4faf"
+  },
   "san-juan": {
     "icon": true,
     "iconVersion": "873d44d32c91",

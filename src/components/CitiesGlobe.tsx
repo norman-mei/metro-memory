@@ -11,6 +11,11 @@ import { useTheme } from 'next-themes'
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 import { useSettings } from '@/context/SettingsContext'
+import {
+  UNAVAILABLE_CITY_ACCESS_EVENT,
+  isPreviewUnlockableCity,
+  readUnavailableCityAccess,
+} from '@/lib/unavailableCityAccess'
 import { buildChinaSafeMapStyle } from '@/lib/chinaSafeMapStyle'
 import { convertLngLatTupleForAmap } from '@/lib/amapCoordinateTransform'
 import { appConfig } from '@/lib/appConfig'
@@ -189,6 +194,34 @@ export default function CitiesGlobe({
       usingAmapMapStyle ? convertLngLatTupleForAmap(coordinate) : coordinate,
     [usingAmapMapStyle],
   )
+  const [hasUnavailableCityAccess, setHasUnavailableCityAccess] = useState(false)
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return
+
+    const refreshAccess = () => setHasUnavailableCityAccess(readUnavailableCityAccess())
+    refreshAccess()
+    window.addEventListener('storage', refreshAccess)
+    window.addEventListener(UNAVAILABLE_CITY_ACCESS_EVENT, refreshAccess)
+    return () => {
+      window.removeEventListener('storage', refreshAccess)
+      window.removeEventListener(UNAVAILABLE_CITY_ACCESS_EVENT, refreshAccess)
+    }
+  }, [])
+
+  const isPreviewCityUnlocked = useCallback(
+    (city: Pick<ICity, 'link'>) => {
+      const slug = getSlugFromLink(city.link)
+      return isPreviewUnlockableCity(slug) && hasUnavailableCityAccess
+    },
+    [hasUnavailableCityAccess],
+  )
+
+  const isCityDisabledForPreview = useCallback(
+    (city: Pick<ICity, 'disabled' | 'hideInStats' | 'link'>) =>
+      isCityDisabledFlag(city) && !isPreviewCityUnlocked(city),
+    [isPreviewCityUnlocked],
+  )
   const recommendedSet = useMemo(() => new Set(recommendedSlugs), [recommendedSlugs])
   const cityBySlug = useMemo(
     () =>
@@ -219,7 +252,7 @@ export default function CitiesGlobe({
       if (!coords) return
       const mapCoords = mapCoordinate(coords)
       const progress = cityProgress[slug] || 0
-      const isDisabled = isCityDisabledFlag(city)
+      const isDisabled = isCityDisabledForPreview(city)
       const isRecommended = recommendedSet.has(slug) && !isDisabled
       const isFavorite = favoriteSlugs.has(slug)
 
@@ -262,7 +295,7 @@ export default function CitiesGlobe({
 
       siblings.forEach((miniCity, index) => {
         const progress = cityProgress[miniCity.slug] || 0
-        const isDisabled = isCityDisabledFlag(parentCity)
+        const isDisabled = isCityDisabledForPreview(parentCity)
         const isFavorite = favoriteSlugs.has(miniCity.slug)
         const isRecommended = recommendedSet.has(miniCity.slug) && !isDisabled
         const coordinates = mapCoordinate(
@@ -295,7 +328,7 @@ export default function CitiesGlobe({
       type: 'FeatureCollection',
       features,
     }
-  }, [cities, cityBySlug, cityProgress, favoriteSlugs, mapCoordinate, recommendedSet])
+  }, [cities, cityBySlug, cityProgress, favoriteSlugs, isCityDisabledForPreview, mapCoordinate, recommendedSet])
   const mapUserLocation = useMemo(
     () => (userLocation ? mapCoordinate(userLocation) : null),
     [mapCoordinate, userLocation],

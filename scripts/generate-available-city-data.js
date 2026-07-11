@@ -6,6 +6,7 @@ const ROOT = process.cwd()
 const DATA_DIR = path.join(ROOT, 'public', 'city-data')
 const OUT_FILE = path.join(ROOT, 'src', 'lib', 'availableCityData.ts')
 const INTERNAL_CITY_DATA_RESOURCE_PATTERN = /-(features|routes)$/
+const CLOSED_CITY_SLUGS = new Set(['beijing'])
 
 const run = async () => {
   let entries = []
@@ -23,7 +24,8 @@ const run = async () => {
       (slug) =>
         slug &&
         slug !== '_placeholder' &&
-        !INTERNAL_CITY_DATA_RESOURCE_PATTERN.test(slug),
+        !INTERNAL_CITY_DATA_RESOURCE_PATTERN.test(slug) &&
+        !CLOSED_CITY_SLUGS.has(slug),
     )
     .sort((a, b) => a.localeCompare(b))
 
