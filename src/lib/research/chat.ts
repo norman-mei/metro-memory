@@ -1,8 +1,8 @@
 // Conversational research-operations agent. Holds a multi-turn conversation,
 // grounded in the live review queue, and can trigger research runs on request.
 
-import { prisma } from '@/lib/prisma'
 import { AVAILABLE_CITY_SLUGS } from '@/lib/availableCityData'
+import { prisma } from '@/lib/prisma'
 
 import {
   callResearchModelJson,
@@ -17,7 +17,11 @@ import { RESEARCH_CLAIM_TYPES } from './types'
 const CITY_SLUGS = Array.from(AVAILABLE_CITY_SLUGS).map((c) => c.toLowerCase())
 const citySet = new Set(CITY_SLUGS)
 
-type AgentAction = { type: 'RESEARCH'; citySlugs: string[]; scope: string | null } | null
+type AgentAction = {
+  type: 'RESEARCH'
+  citySlugs: string[]
+  scope: string | null
+} | null
 
 const HISTORY_LIMIT = 16
 const CONTEXT_CLAIM_LIMIT = 40
@@ -44,8 +48,11 @@ async function buildQueueContext(): Promise<string> {
   }
 
   const lines = claims.map((c) => {
-    const conf = c.confidence != null ? `${Math.round(c.confidence * 100)}%` : 'n/a'
-    const bestTier = c.evidence.length ? Math.min(...c.evidence.map((e) => e.tier)) : null
+    const conf =
+      c.confidence != null ? `${Math.round(c.confidence * 100)}%` : 'n/a'
+    const bestTier = c.evidence.length
+      ? Math.min(...c.evidence.map((e) => e.tier))
+      : null
     const summary = (c.summary || '').slice(0, 120)
     return `- [${c.id.slice(0, 6)}] ${c.citySlug} | ${c.claimType} | ${c.lane} ${conf} | ${c.evidence.length} src${
       bestTier ? ` (best tier ${bestTier})` : ''
@@ -83,7 +90,10 @@ If (and only if) the operator is asking you to run or trigger research on specif
 @@RESEARCH cities=slug1,slug2; scope=<short scope or none>
 Then continue with a normal conversational reply on the following lines. If you are not triggering research, do NOT include that line — just reply normally.`
 
-function heuristicFallback(message: string): { reply: string; action: AgentAction } {
+function heuristicFallback(message: string): {
+  reply: string
+  action: AgentAction
+} {
   const lower = message.toLowerCase()
   const cities = CITY_SLUGS.filter((slug) => {
     const name = slug.replace(/-/g, ' ')
@@ -98,7 +108,7 @@ function heuristicFallback(message: string): { reply: string; action: AgentActio
   }
   return {
     reply:
-      "The AI model isn't configured, so I can only run research commands right now. Try e.g. \"Research Tokyo for station openings.\"",
+      'The AI model isn\'t configured, so I can only run research commands right now. Try e.g. "Research Tokyo for station openings."',
     action: null,
   }
 }
@@ -108,10 +118,16 @@ function parseAction(raw: unknown): AgentAction {
   const a = raw as Record<string, unknown>
   if (a.type !== 'RESEARCH') return null
   const citySlugs = Array.isArray(a.citySlugs)
-    ? a.citySlugs.map((c) => String(c).toLowerCase()).filter((c) => citySet.has(c))
+    ? a.citySlugs
+        .map((c) => String(c).toLowerCase())
+        .filter((c) => citySet.has(c))
     : []
   if (!citySlugs.length) return null
-  return { type: 'RESEARCH', citySlugs, scope: a.scope ? String(a.scope) : null }
+  return {
+    type: 'RESEARCH',
+    citySlugs,
+    scope: a.scope ? String(a.scope) : null,
+  }
 }
 
 /**
@@ -179,9 +195,17 @@ async function generateReply(sessionId: string, reviewer: string) {
       structuredJson: { action, runId } as any,
     },
   })
-  await prisma.chatSession.update({ where: { id: sessionId }, data: { updatedAt: new Date() } })
+  await prisma.chatSession.update({
+    where: { id: sessionId },
+    data: { updatedAt: new Date() },
+  })
 
-  return { sessionId, runId, assistantContent: reply, assistantId: assistant.id }
+  return {
+    sessionId,
+    runId,
+    assistantContent: reply,
+    assistantId: assistant.id,
+  }
 }
 
 /**
@@ -192,6 +216,7 @@ export async function handleChatTurn(args: {
   message: string
   sessionId?: string | null
   reviewer: string
+  signal?: AbortSignal
 }) {
   // Bail early when the client already disconnected -- avoid wasted DB work.
   args.signal?.throwIfAborted()
@@ -235,7 +260,11 @@ export async function editAndRegenerate(args: {
     where: { id: args.messageId },
     include: { session: { select: { createdBy: true } } },
   })
-  if (!message || message.session.createdBy !== args.reviewer || message.role !== 'USER') {
+  if (
+    !message ||
+    message.session.createdBy !== args.reviewer ||
+    message.role !== 'USER'
+  ) {
     return null
   }
 
@@ -244,7 +273,10 @@ export async function editAndRegenerate(args: {
     data: { content: args.content },
   })
   await prisma.chatMessage.deleteMany({
-    where: { sessionId: message.sessionId, createdAt: { gt: message.createdAt } },
+    where: {
+      sessionId: message.sessionId,
+      createdAt: { gt: message.createdAt },
+    },
   })
 
   return generateReply(message.sessionId, args.reviewer)
@@ -259,7 +291,12 @@ const RESEARCH_MARKER = '@@RESEARCH'
  * disabled/unreachable.
  */
 export async function streamChatTurn(
-  args: { message: string; sessionId?: string | null; reviewer: string; signal?: AbortSignal },
+  args: {
+    message: string
+    sessionId?: string | null
+    reviewer: string
+    signal?: AbortSignal
+  },
   onDelta: (text: string) => void,
 ): Promise<{ sessionId: string; runId: string | null }> {
   // Bail early when the client already disconnected -- avoid wasted DB work.
@@ -273,7 +310,10 @@ export async function streamChatTurn(
   const session =
     existing ??
     (await prisma.chatSession.create({
-      data: { title: args.message.slice(0, 80) || 'New chat', createdBy: args.reviewer },
+      data: {
+        title: args.message.slice(0, 80) || 'New chat',
+        createdBy: args.reviewer,
+      },
     }))
 
   await prisma.chatMessage.create({
@@ -320,7 +360,9 @@ export async function streamChatTurn(
     const nl = firstBuf.indexOf('\n')
     const firstLine = (nl === -1 ? firstBuf : firstBuf.slice(0, nl)).trim()
     const rest = nl === -1 ? '' : firstBuf.slice(nl + 1)
-    const m = firstLine.match(/^@@RESEARCH\s+cities=([^;\n]+)(?:;\s*scope=(.*))?$/i)
+    const m = firstLine.match(
+      /^@@RESEARCH\s+cities=([^;\n]+)(?:;\s*scope=(.*))?$/i,
+    )
     if (m) {
       const slugs = m[1].split(',').map((s) => s.trim().toLowerCase())
       const scopeRaw = (m[2] || '').trim()
@@ -347,13 +389,19 @@ export async function streamChatTurn(
       return
     }
     const trimmedStart = firstBuf.replace(/^\s+/, '')
-    if (RESEARCH_MARKER.startsWith(trimmedStart) || trimmedStart.startsWith(RESEARCH_MARKER)) return
+    if (
+      RESEARCH_MARKER.startsWith(trimmedStart) ||
+      trimmedStart.startsWith(RESEARCH_MARKER)
+    )
+      return
     checking = false
     flush(firstBuf)
     firstBuf = ''
   }
 
-  const full = await streamResearchModel(messages, handle, { signal: args.signal })
+  const full = await streamResearchModel(messages, handle, {
+    signal: args.signal,
+  })
   if (checking) decideFirstLine()
 
   // The caller (client) went away mid-stream: don't synthesize a fallback,
@@ -365,7 +413,10 @@ export async function streamChatTurn(
 
   if (!aborted && full === null && !visible) {
     const fb = isResearchModelEnabled()
-      ? { reply: 'I had trouble reaching the AI just now — please try again.', action: null as AgentAction }
+      ? {
+          reply: 'I had trouble reaching the AI just now — please try again.',
+          action: null as AgentAction,
+        }
       : heuristicFallback(args.message)
     visible = fb.reply
     action = fb.action
@@ -396,7 +447,10 @@ export async function streamChatTurn(
       structuredJson: { action, runId } as any,
     },
   })
-  await prisma.chatSession.update({ where: { id: session.id }, data: { updatedAt: new Date() } })
+  await prisma.chatSession.update({
+    where: { id: session.id },
+    data: { updatedAt: new Date() },
+  })
 
   return { sessionId: session.id, runId }
 }
