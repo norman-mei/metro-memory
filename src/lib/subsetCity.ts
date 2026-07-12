@@ -17,6 +17,22 @@ const EMPTY_ROUTES: RoutesFeatureCollection = {
   features: [],
 }
 
+const INTERLINED_ROUTE_STATION_TOLERANCE = 0.0005
+const INTERLINED_ROUTE_STATION_TOLERANCE_SQ =
+  INTERLINED_ROUTE_STATION_TOLERANCE * INTERLINED_ROUTE_STATION_TOLERANCE
+
+type Coordinate = [number, number]
+
+type RouteLineMetadata = {
+  color?: string
+  order?: number
+}
+
+type FilterSubsetRoutesOptions = {
+  selectedFeatures?: DataFeatureCollection
+  lineMetadata?: Record<string, RouteLineMetadata | undefined>
+}
+
 const filterLines = (
   lines: Record<string, Line>,
   includeLines: Set<string>,
@@ -85,6 +101,133 @@ const filterLineGroups = (
     .filter((group): group is NonNullable<typeof group> => group !== null)
 }
 
+const collectSelectedStationPoints = (
+  featureCollection: DataFeatureCollection | undefined,
+  includeLines: Set<string>,
+) => {
+  if (!featureCollection) {
+    return []
+  }
+
+  const pointsByLine = new Map<string, Coordinate[]>()
+
+  featureCollection.features.forEach((feature) => {
+    if (feature.geometry?.type !== 'Point') {
+      return
+    }
+
+    const lineId = feature.properties?.line
+    if (typeof lineId !== 'string' || !includeLines.has(lineId)) {
+      return
+    }
+
+    const [lng, lat] = feature.geometry.coordinates
+    if (!Number.isFinite(lng) || !Number.isFinite(lat)) {
+      return
+    }
+
+    const points = pointsByLine.get(lineId) ?? []
+    points.push([lng, lat])
+    pointsByLine.set(lineId, points)
+  })
+
+  return Array.from(pointsByLine.entries())
+}
+
+const routeLineStrings = (
+  geometry: RoutesFeatureCollection['features'][number]['geometry'],
+): Coordinate[][] => {
+  if (geometry.type === 'LineString') {
+    return [geometry.coordinates as Coordinate[]]
+  }
+
+  if (geometry.type === 'MultiLineString') {
+    return geometry.coordinates as Coordinate[][]
+  }
+
+  return []
+}
+
+const distanceToSegmentSq = (
+  point: Coordinate,
+  start: Coordinate,
+  end: Coordinate,
+) => {
+  const dx = end[0] - start[0]
+  const dy = end[1] - start[1]
+
+  if (dx === 0 && dy === 0) {
+    const x = point[0] - start[0]
+    const y = point[1] - start[1]
+    return x * x + y * y
+  }
+
+  const t = Math.max(
+    0,
+    Math.min(
+      1,
+      ((point[0] - start[0]) * dx + (point[1] - start[1]) * dy) /
+        (dx * dx + dy * dy),
+    ),
+  )
+  const projectedLng = start[0] + t * dx
+  const projectedLat = start[1] + t * dy
+  const x = point[0] - projectedLng
+  const y = point[1] - projectedLat
+  return x * x + y * y
+}
+
+const routeTouchesAnyPoint = (
+  route: RoutesFeatureCollection['features'][number],
+  points: Coordinate[],
+) => {
+  if (points.length === 0) {
+    return false
+  }
+
+  const lineStrings = routeLineStrings(route.geometry)
+  for (const lineString of lineStrings) {
+    for (let index = 1; index < lineString.length; index += 1) {
+      const start = lineString[index - 1]
+      const end = lineString[index]
+      for (const point of points) {
+        if (distanceToSegmentSq(point, start, end) <= INTERLINED_ROUTE_STATION_TOLERANCE_SQ) {
+          return true
+        }
+      }
+    }
+  }
+
+  return false
+}
+
+const normalizeColor = (color: string | undefined) => color?.trim().toLowerCase()
+
+const routeCanRepresentLine = (
+  route: RoutesFeatureCollection['features'][number],
+  lineId: string,
+  lineMetadata: FilterSubsetRoutesOptions['lineMetadata'],
+) => {
+  const selectedColor = normalizeColor(lineMetadata?.[lineId]?.color)
+  const routeColor = normalizeColor(route.properties?.color)
+
+  return !selectedColor || !routeColor || selectedColor === routeColor
+}
+
+const findInterlinedRouteLine = (
+  route: RoutesFeatureCollection['features'][number],
+  selectedPointsByLine: Array<[string, Coordinate[]]>,
+  lineMetadata: FilterSubsetRoutesOptions['lineMetadata'],
+) => {
+  for (const [lineId, points] of selectedPointsByLine) {
+    if (routeCanRepresentLine(route, lineId, lineMetadata) && routeTouchesAnyPoint(route, points)) {
+      return lineId
+    }
+  }
+
+  return null
+}
+
 export const filterSubsetFeatures = (
   featureCollection: DataFeatureCollection,
   includeLines: string[],
@@ -102,17 +245,47 @@ export const filterSubsetFeatures = (
 export const filterSubsetRoutes = (
   routes: RoutesFeatureCollection | undefined,
   includeLines: string[],
+  options: FilterSubsetRoutesOptions = {},
 ): RoutesFeatureCollection => {
   if (!routes) {
     return EMPTY_ROUTES
   }
 
   const lineSet = new Set(includeLines)
+  const selectedPointsByLine = collectSelectedStationPoints(
+    options.selectedFeatures,
+    lineSet,
+  )
+
   return {
     ...routes,
-    features: routes.features.filter((feature) => {
+    features: routes.features.flatMap((feature) => {
       const lineId = feature.properties?.line
-      return typeof lineId === 'string' && lineSet.has(lineId)
+      if (typeof lineId === 'string' && lineSet.has(lineId)) {
+        return [feature]
+      }
+
+      const interlinedLineId = findInterlinedRouteLine(
+        feature,
+        selectedPointsByLine,
+        options.lineMetadata,
+      )
+      if (!interlinedLineId) {
+        return []
+      }
+
+      const lineMeta = options.lineMetadata?.[interlinedLineId]
+      return [
+        {
+          ...feature,
+          properties: {
+            ...feature.properties,
+            line: interlinedLineId,
+            color: lineMeta?.color ?? feature.properties.color,
+            order: lineMeta?.order ?? feature.properties.order,
+          },
+        },
+      ]
     }),
   }
 }

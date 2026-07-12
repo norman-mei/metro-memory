@@ -62,3 +62,6 @@ prisma/**/*.sqlite
 # local codex history rewrite helpers
 .codex-history/
 .codex/
+.claude/
+.agents/
+.tmp/

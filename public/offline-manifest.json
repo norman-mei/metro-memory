@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-06T00:32:50.918Z",
+  "generatedAt": "2026-07-11T03:51:51.500Z",
   "assets": [
     "/",
     "/city-data/albuquerque.json",
@@ -104,6 +104,9 @@
     "/city-data/mexico-city.json",
     "/city-data/milwaukee.json",
     "/city-data/monterrey.json",
+    "/city-data/montreal-exo.json",
+    "/city-data/montreal-metro.json",
+    "/city-data/montreal-rem.json",
     "/city-data/montreal.json",
     "/city-data/morgantown.json",
     "/city-data/munich.json",
@@ -302,6 +305,8 @@
     "/city-icons/mexico-city.ico",
     "/city-icons/milwaukee.ico",
     "/city-icons/monterrey.ico",
+    "/city-icons/montreal-metro.ico",
+    "/city-icons/montreal-rem.ico",
     "/city-icons/montreal.ico",
     "/city-icons/morgantown.ico",
     "/city-icons/munich.ico",
@@ -346,6 +351,7 @@
     "/city-icons/potsdam.ico",
     "/city-icons/pyongyang.ico",
     "/city-icons/qingdao.ico",
+    "/city-icons/rome.ico",
     "/city-icons/san-juan.ico",
     "/city-icons/sanya.ico",
     "/city-icons/sapporo.ico",
@@ -523,6 +529,9 @@
     "/city-cards/mexico-city.jpg",
     "/city-cards/milwaukee.jpg",
     "/city-cards/monterrey.jpg",
+    "/city-cards/montreal-exo.jpg",
+    "/city-cards/montreal-metro.jpg",
+    "/city-cards/montreal-rem.jpg",
     "/city-cards/montreal.jpg",
     "/city-cards/morgantown.jpg",
     "/city-cards/munich.jpg",
@@ -1426,6 +1435,16 @@
     "/images/europe/hungary/budapest/BudapestMetro4.svg",
     "/images/europe/hungary/budapest/icon.ico",
     "/images/europe/hungary/budapest/opengraph-image.jpg",
+    "/images/europe/italy/rome/A.png",
+    "/images/europe/italy/rome/ATAC.png",
+    "/images/europe/italy/rome/B.png",
+    "/images/europe/italy/rome/B1.png",
+    "/images/europe/italy/rome/C.png",
+    "/images/europe/italy/rome/icon.ico",
+    "/images/europe/italy/rome/metromare.png",
+    "/images/europe/italy/rome/opengraph-image.jpg",
+    "/images/europe/italy/rome/romaviterbo.png",
+    "/images/europe/italy/rome/romemetro.png",
     "/images/europe/spain/barcelona/FGCL12.svg",
     "/images/europe/spain/barcelona/FGCL6.svg",
     "/images/europe/spain/barcelona/FGCL7.svg",
@@ -1588,6 +1607,28 @@
     "/images/north-america/canada/montreal/STMMetroJaune.svg",
     "/images/north-america/canada/montreal/STMMetroOrange.svg",
     "/images/north-america/canada/montreal/STMMetroVerte.svg",
+    "/images/north-america/canada/montreal-exo/AMTRailExo1.svg",
+    "/images/north-america/canada/montreal-exo/AMTRailExo2.svg",
+    "/images/north-america/canada/montreal-exo/AMTRailExo3.svg",
+    "/images/north-america/canada/montreal-exo/AMTRailExo4.svg",
+    "/images/north-america/canada/montreal-exo/AMTRailExo5.svg",
+    "/images/north-america/canada/montreal-exo/exo_new.png",
+    "/images/north-america/canada/montreal-exo/ico.ico",
+    "/images/north-america/canada/montreal-exo/opengraph-image.jpg",
+    "/images/north-america/canada/montreal-metro/icon.ico",
+    "/images/north-america/canada/montreal-metro/MontrealMetro.png",
+    "/images/north-america/canada/montreal-metro/opengraph-image.jpg",
+    "/images/north-america/canada/montreal-metro/STMMetroBleue.svg",
+    "/images/north-america/canada/montreal-metro/STMMetroJaune.svg",
+    "/images/north-america/canada/montreal-metro/STMMetroOrange.svg",
+    "/images/north-america/canada/montreal-metro/STMMetroVerte.svg",
+    "/images/north-america/canada/montreal-rem/icon.ico",
+    "/images/north-america/canada/montreal-rem/MontrealREM.svg",
+    "/images/north-america/canada/montreal-rem/opengraph-image.jpg",
+    "/images/north-america/canada/montreal-rem/REMA1.png",
+    "/images/north-america/canada/montreal-rem/REMA2.png",
+    "/images/north-america/canada/montreal-rem/REMA3.png",
+    "/images/north-america/canada/montreal-rem/REMA4.png",
     "/images/north-america/canada/ottawa/icon.ico",
     "/images/north-america/canada/ottawa/opengraph-image.jpg",
     "/images/north-america/canada/ottawa/OTrainLine1.svg",
@@ -2980,6 +3021,20 @@
       "/city-icons/monterrey.ico",
       "/city-cards/monterrey.jpg"
     ],
+    "montreal-exo": [
+      "/city-data/montreal-exo.json",
+      "/city-cards/montreal-exo.jpg"
+    ],
+    "montreal-metro": [
+      "/city-data/montreal-metro.json",
+      "/city-icons/montreal-metro.ico",
+      "/city-cards/montreal-metro.jpg"
+    ],
+    "montreal-rem": [
+      "/city-data/montreal-rem.json",
+      "/city-icons/montreal-rem.ico",
+      "/city-cards/montreal-rem.jpg"
+    ],
     "montreal": [
       "/city-data/montreal.json",
       "/city-icons/montreal.ico",
@@ -3170,6 +3225,7 @@
     ],
     "rome": [
       "/city-data/rome.json",
+      "/city-icons/rome.ico",
       "/city-cards/rome.jpg"
     ],
     "san-juan": [
@@ -3659,6 +3715,7 @@
       "/images/europe/germany/munich/icon.ico",
       "/images/europe/germany/potsdam/icon.ico",
       "/images/europe/hungary/budapest/icon.ico",
+      "/images/europe/italy/rome/icon.ico",
       "/images/europe/spain/barcelona/icon.ico",
       "/images/europe/spain/madrid/icon.ico",
       "/images/europe/sweden/stockholm/icon.ico",
@@ -3675,6 +3732,8 @@
       "/images/north-america/canada/calgary/icon.ico",
       "/images/north-america/canada/edmonton/icon.ico",
       "/images/north-america/canada/montreal/icon.ico",
+      "/images/north-america/canada/montreal-metro/icon.ico",
+      "/images/north-america/canada/montreal-rem/icon.ico",
       "/images/north-america/canada/ottawa/icon.ico",
       "/images/north-america/canada/toronto/icon.ico",
       "/images/north-america/canada/toronto-waterloo/icon.ico",
@@ -3883,6 +3942,7 @@
       "/images/europe/germany/munich/opengraph-image.jpg",
       "/images/europe/germany/potsdam/opengraph-image.jpg",
       "/images/europe/hungary/budapest/opengraph-image.jpg",
+      "/images/europe/italy/rome/opengraph-image.jpg",
       "/images/europe/spain/barcelona/opengraph-image.jpg",
       "/images/europe/spain/madrid/opengraph-image.jpg",
       "/images/europe/sweden/stockholm/opengraph-image.jpg",
@@ -3899,6 +3959,9 @@
       "/images/north-america/canada/calgary/opengraph-image.jpg",
       "/images/north-america/canada/edmonton/opengraph-image.jpg",
       "/images/north-america/canada/montreal/opengraph-image.jpg",
+      "/images/north-america/canada/montreal-exo/opengraph-image.jpg",
+      "/images/north-america/canada/montreal-metro/opengraph-image.jpg",
+      "/images/north-america/canada/montreal-rem/opengraph-image.jpg",
       "/images/north-america/canada/ottawa/opengraph-image.jpg",
       "/images/north-america/canada/toronto/opengraph-image.jpg",
       "/images/north-america/canada/toronto-waterloo/opengraph-image.jpg",
@@ -5652,6 +5715,33 @@
     "BudapestMetro4": [
       "/images/europe/hungary/budapest/BudapestMetro4.svg"
     ],
+    "A": [
+      "/images/europe/italy/rome/A.png",
+      "/images/north-america/usa/nyc/A.png"
+    ],
+    "ATAC": [
+      "/images/europe/italy/rome/ATAC.png"
+    ],
+    "B": [
+      "/images/europe/italy/rome/B.png",
+      "/images/north-america/usa/nyc/B.png"
+    ],
+    "B1": [
+      "/images/europe/italy/rome/B1.png"
+    ],
+    "C": [
+      "/images/europe/italy/rome/C.png",
+      "/images/north-america/usa/nyc/C.png"
+    ],
+    "metromare": [
+      "/images/europe/italy/rome/metromare.png"
+    ],
+    "romaviterbo": [
+      "/images/europe/italy/rome/romaviterbo.png"
+    ],
+    "romemetro": [
+      "/images/europe/italy/rome/romemetro.png"
+    ],
     "FGCL12": [
       "/images/europe/spain/barcelona/FGCL12.svg"
     ],
@@ -5987,52 +6077,71 @@
       "/images/north-america/canada/edmonton/ETSValley.png"
     ],
     "AMTRailExo1": [
-      "/images/north-america/canada/montreal/AMTRailExo1.svg"
+      "/images/north-america/canada/montreal/AMTRailExo1.svg",
+      "/images/north-america/canada/montreal-exo/AMTRailExo1.svg"
     ],
     "AMTRailExo2": [
-      "/images/north-america/canada/montreal/AMTRailExo2.svg"
+      "/images/north-america/canada/montreal/AMTRailExo2.svg",
+      "/images/north-america/canada/montreal-exo/AMTRailExo2.svg"
     ],
     "AMTRailExo3": [
-      "/images/north-america/canada/montreal/AMTRailExo3.svg"
+      "/images/north-america/canada/montreal/AMTRailExo3.svg",
+      "/images/north-america/canada/montreal-exo/AMTRailExo3.svg"
     ],
     "AMTRailExo4": [
-      "/images/north-america/canada/montreal/AMTRailExo4.svg"
+      "/images/north-america/canada/montreal/AMTRailExo4.svg",
+      "/images/north-america/canada/montreal-exo/AMTRailExo4.svg"
     ],
     "AMTRailExo5": [
-      "/images/north-america/canada/montreal/AMTRailExo5.svg"
+      "/images/north-america/canada/montreal/AMTRailExo5.svg",
+      "/images/north-america/canada/montreal-exo/AMTRailExo5.svg"
     ],
     "exo_new": [
-      "/images/north-america/canada/montreal/exo_new.png"
+      "/images/north-america/canada/montreal/exo_new.png",
+      "/images/north-america/canada/montreal-exo/exo_new.png"
     ],
     "MontrealMetro": [
-      "/images/north-america/canada/montreal/MontrealMetro.png"
+      "/images/north-america/canada/montreal/MontrealMetro.png",
+      "/images/north-america/canada/montreal-metro/MontrealMetro.png"
     ],
     "MontrealREM": [
-      "/images/north-america/canada/montreal/MontrealREM.svg"
+      "/images/north-america/canada/montreal/MontrealREM.svg",
+      "/images/north-america/canada/montreal-rem/MontrealREM.svg"
     ],
     "REMA1": [
-      "/images/north-america/canada/montreal/REMA1.png"
+      "/images/north-america/canada/montreal/REMA1.png",
+      "/images/north-america/canada/montreal-rem/REMA1.png"
     ],
     "REMA2": [
-      "/images/north-america/canada/montreal/REMA2.png"
+      "/images/north-america/canada/montreal/REMA2.png",
+      "/images/north-america/canada/montreal-rem/REMA2.png"
     ],
     "REMA3": [
-      "/images/north-america/canada/montreal/REMA3.png"
+      "/images/north-america/canada/montreal/REMA3.png",
+      "/images/north-america/canada/montreal-rem/REMA3.png"
     ],
     "REMA4": [
-      "/images/north-america/canada/montreal/REMA4.png"
+      "/images/north-america/canada/montreal/REMA4.png",
+      "/images/north-america/canada/montreal-rem/REMA4.png"
     ],
     "STMMetroBleue": [
-      "/images/north-america/canada/montreal/STMMetroBleue.svg"
+      "/images/north-america/canada/montreal/STMMetroBleue.svg",
+      "/images/north-america/canada/montreal-metro/STMMetroBleue.svg"
     ],
     "STMMetroJaune": [
-      "/images/north-america/canada/montreal/STMMetroJaune.svg"
+      "/images/north-america/canada/montreal/STMMetroJaune.svg",
+      "/images/north-america/canada/montreal-metro/STMMetroJaune.svg"
     ],
     "STMMetroOrange": [
-      "/images/north-america/canada/montreal/STMMetroOrange.svg"
+      "/images/north-america/canada/montreal/STMMetroOrange.svg",
+      "/images/north-america/canada/montreal-metro/STMMetroOrange.svg"
     ],
     "STMMetroVerte": [
-      "/images/north-america/canada/montreal/STMMetroVerte.svg"
+      "/images/north-america/canada/montreal/STMMetroVerte.svg",
+      "/images/north-america/canada/montreal-metro/STMMetroVerte.svg"
+    ],
+    "ico": [
+      "/images/north-america/canada/montreal-exo/ico.ico"
     ],
     "OTrainLine1": [
       "/images/north-america/canada/ottawa/OTrainLine1.svg"
@@ -7190,9 +7299,6 @@
     "7X": [
       "/images/north-america/usa/nyc/7X.png"
     ],
-    "A": [
-      "/images/north-america/usa/nyc/A.png"
-    ],
     "AirTrainEWR": [
       "/images/north-america/usa/nyc/AirTrainEWR.png"
     ],
@@ -7204,12 +7310,6 @@
     ],
     "AirTrainJFKJamaica": [
       "/images/north-america/usa/nyc/AirTrainJFKJamaica.png"
-    ],
-    "B": [
-      "/images/north-america/usa/nyc/B.png"
-    ],
-    "C": [
-      "/images/north-america/usa/nyc/C.png"
     ],
     "CTrail": [
       "/images/north-america/usa/nyc/CTrail.png"

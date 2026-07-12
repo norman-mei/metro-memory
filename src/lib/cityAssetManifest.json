@@ -737,6 +737,22 @@
     "openGraphExtension": "jpg",
     "openGraphVersion": "4b05e2c4bff8"
   },
+  "montreal-exo": {
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "5aac6ff07776"
+  },
+  "montreal-metro": {
+    "icon": true,
+    "iconVersion": "47a895b01aa7",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "304b97a6125e"
+  },
+  "montreal-rem": {
+    "icon": true,
+    "iconVersion": "2cff7bff1714",
+    "openGraphExtension": "jpg",
+    "openGraphVersion": "c4215522f88e"
+  },
   "morgantown": {
     "icon": true,
     "iconVersion": "10a9337eaa14",

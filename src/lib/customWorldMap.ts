@@ -12,7 +12,7 @@ import { loadCityConfig } from './cityConfigRuntime'
 import { CITY_PATH_MAP } from './cityPathMap'
 import { isColorLight } from './colorUtils'
 import { repairMojibakeString } from './repairMojibake'
-import { buildSubsetConfig } from './subsetCity'
+import { buildSubsetConfig, filterSubsetRoutes } from './subsetCity'
 import type {
   Config,
   DataFeature,
@@ -414,11 +414,18 @@ export const loadCustomWorldMapAssets = async (
       namespacedIds.push(ns)
     })
 
+    const selectedCityFeatures: DataFeatureCollection = {
+      type: 'FeatureCollection',
+      features: [],
+    }
+
     payload.features.features.forEach((feature) => {
       const lineId = feature.properties?.line
       if (typeof lineId !== 'string' || !includeSet.has(lineId)) {
         return
       }
+
+      selectedCityFeatures.features.push(feature)
       const id = nextFeatureId++
       mergedFeatures.push({
         ...feature,
@@ -432,7 +439,12 @@ export const loadCustomWorldMapAssets = async (
       })
     })
 
-    payload.routes.features.forEach((feature) => {
+    const selectedRoutes = filterSubsetRoutes(payload.routes, requestedLines, {
+      selectedFeatures: selectedCityFeatures,
+      lineMetadata: configuredLines,
+    })
+
+    selectedRoutes.features.forEach((feature) => {
       const lineId = feature.properties?.line
       if (typeof lineId !== 'string' || !includeSet.has(lineId)) {
         return

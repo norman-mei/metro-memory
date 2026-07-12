@@ -1277,6 +1277,72 @@
       ]
     },
     {
+      "parentSlug": "montreal",
+      "parentName": "Montréal",
+      "parentLink": "/north-america/canada/montreal",
+      "parentPath": "north-america/canada/montreal",
+      "continent": "North America",
+      "country": "canada",
+      "children": [
+        {
+          "slug": "montreal-metro",
+          "name": "Montreal Metro",
+          "link": "/north-america/canada/montreal-metro",
+          "keywords": [
+            "Montreal Metro",
+            "STM",
+            "Metro de Montreal"
+          ],
+          "countingMode": "mini",
+          "includeLines": [
+            "STMMetroVerte",
+            "STMMetroOrange",
+            "STMMetroJaune",
+            "STMMetroBleue"
+          ],
+          "assetSourceSlug": "montreal-metro"
+        },
+        {
+          "slug": "montreal-exo",
+          "name": "Exo Commuter Rail",
+          "link": "/north-america/canada/montreal-exo",
+          "keywords": [
+            "Exo",
+            "Exo Commuter Rail",
+            "exo trains",
+            "Montreal commuter rail"
+          ],
+          "countingMode": "mini",
+          "includeLines": [
+            "AMTRailExo1",
+            "AMTRailExo2",
+            "AMTRailExo3",
+            "AMTRailExo4",
+            "AMTRailExo5"
+          ],
+          "assetSourceSlug": "montreal-exo"
+        },
+        {
+          "slug": "montreal-rem",
+          "name": "Réseau express métropolitain (REM)",
+          "link": "/north-america/canada/montreal-rem",
+          "keywords": [
+            "REM",
+            "Reseau express metropolitain",
+            "Réseau express métropolitain"
+          ],
+          "countingMode": "mini",
+          "includeLines": [
+            "MontrealREMA1",
+            "MontrealREMA2",
+            "MontrealREMA3",
+            "MontrealREMA4"
+          ],
+          "assetSourceSlug": "montreal-rem"
+        }
+      ]
+    },
+    {
       "parentSlug": "toronto-waterloo",
       "parentName": "Toronto–Waterloo",
       "parentLink": "/north-america/canada/toronto-waterloo",

@@ -195,10 +195,10 @@ export const loadCustomMiniCityAssets = async (
     parentAssets.features,
     definition.includeLines,
   )
-  const routes = filterSubsetRoutes(
-    parentAssets.routes,
-    definition.includeLines,
-  )
+  const routes = filterSubsetRoutes(parentAssets.routes, definition.includeLines, {
+    selectedFeatures: features,
+    lineMetadata: parentAssets.config.LINES,
+  })
   const config = buildSubsetConfig(parentAssets.config, definition, features, routes)
 
   return {

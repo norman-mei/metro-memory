@@ -2537,6 +2537,20 @@ function GamePageContent({
     [CITY_NAME, mapStyleMode],
   )
 
+  useEffect(() => {
+    if (solutionsPromptOpen || resetConfirmOpen || mobileSidebarOpen) {
+      return
+    }
+    if (!shouldRestoreMainInputFocus(inputRef.current)) {
+      return
+    }
+
+    const frame = window.requestAnimationFrame(() => {
+      inputRef.current?.focus()
+    })
+
+    return () => window.cancelAnimationFrame(frame)
+  }, [mobileSidebarOpen, resetConfirmOpen, solutionsPromptOpen])
   // Hydrate saved map view (local only)
   useEffect(() => {
     if (!mapStyleModeReady || typeof window === 'undefined') return
@@ -5940,11 +5954,7 @@ function GamePageContent({
                   map={map}
                   idMap={idMap}
                   clusterGroups={clusterGroups}
-                  autoFocus={
-                    !solutionsPromptOpen &&
-                    !resetConfirmOpen &&
-                    shouldRestoreMainInputFocus(inputRef.current)
-                  }
+                  autoFocus={false}
                   disabled={solutionsPromptOpen || resetConfirmOpen}
                   onGuessResult={handleGuessResult}
                   onInputEdit={handleInputEdit}
